@@ -1,6 +1,6 @@
 # odis-arch
 
-Development of the ODIS architecture.
+Repository for the development of the ODIS architecture.
 
 ## Project documents
 
