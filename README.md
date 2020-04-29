@@ -12,6 +12,7 @@ Repository for the development of the ODIS architecture.
 - Noy et al. 2019. [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem](https://research.google/pubs/pub47845/)
 - Wang et al. 2017. [Providing Research Graph Data in JSON-LD Using Schema.org](https://www.researchgate.net/publication/322413884_Providing_Research_Graph_Data_in_JSON-LD_Using_Schemaorg)
 - Koubarakis et al. 2017. [Big, Linked Geospatial Data and Its Applications in Earth Observation](https://www.researchgate.net/profile/George_Papadakis2/publication/318742949_Big_Linked_Geospatial_Data_and_Its_Applications_in_Earth_Observation/links/5a0a81a3aca272d40f413577/Big-Linked-Geospatial-Data-and-Its-Applications-in-Earth-Observation.pdf)
+- Zarate et al. 2019. [OceanGraph: Some Initial Steps Toward a Oceanographic Knowledge Graph](https://www.researchgate.net/profile/Pablo_Rosales3/publication/333200045_OceanGraph_Some_Initial_Steps_Toward_a_Oceanographic_Knowledge_Graph/links/5ced754f458515026a637bd3/OceanGraph-Some-Initial-Steps-Toward-a-Oceanographic-Knowledge-Graph.pdf)
 
 ## Books
 
