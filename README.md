@@ -14,6 +14,10 @@ Repository for the development of the ODIS architecture.
 - Koubarakis et al. 2017. [Big, Linked Geospatial Data and Its Applications in Earth Observation](https://www.researchgate.net/profile/George_Papadakis2/publication/318742949_Big_Linked_Geospatial_Data_and_Its_Applications_in_Earth_Observation/links/5a0a81a3aca272d40f413577/Big-Linked-Geospatial-Data-and-Its-Applications-in-Earth-Observation.pdf)
 - Zarate et al. 2019. [OceanGraph: Some Initial Steps Toward a Oceanographic Knowledge Graph](https://www.researchgate.net/profile/Pablo_Rosales3/publication/333200045_OceanGraph_Some_Initial_Steps_Toward_a_Oceanographic_Knowledge_Graph/links/5ced754f458515026a637bd3/OceanGraph-Some-Initial-Steps-Toward-a-Oceanographic-Knowledge-Graph.pdf)
 
+## Projects
+
+- https://github.com/ESIPFed/science-on-schema.org/
+
 ## Books
 
 - [A Developer's Guide to the Semantic Web](https://link.springer.com/book/10.1007/978-3-642-15970-1)
