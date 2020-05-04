@@ -24,3 +24,4 @@ Repository for the development of the ODIS architecture.
 - [Exploiting Linked Data and Knowledge Graphs in Large Organisations](https://www.springer.com/gp/book/9783319456522)
 - [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/)
 - [The World of Open Data - Concepts, Methods, Tools and Experiences](https://www.springer.com/gp/book/9783319908496)
+- [Springer Handbook of Geographic Information](https://www.springer.com/gp/book/9783540726784), see chapter 15. Geosemantic Interoperability and the Geospatial Semantic Web
