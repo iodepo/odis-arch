@@ -2,6 +2,10 @@
 
 Repository for the development of the ODIS architecture.
 
+## Zotero group
+
+https://www.zotero.org/groups/2509961/odis-arch
+
 ## Project documents
 
 - [The IOC Ocean InfoHub - DEVELOPMENT OF AN IOC CLEARING HOUSE MECHANISM FOR THE TRANSFER OF MARINE TECHNOLOGY POWERED BY A PROOF-OF-CONCEPT ODIS ARCHITECTURE](https://www.iode.org/components/com_oe/oe.php?task=download&id=44911&version=1.0&lang=1&format=1)
