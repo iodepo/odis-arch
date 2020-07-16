@@ -2,14 +2,18 @@
 
 Repository for the development of the ODIS architecture.
 
-## Zotero group
+## Project Drive folder
 
-https://www.zotero.org/groups/2509961/odis-arch
+https://drive.google.com/drive/u/0/folders/1QGKYq_zYqJyfrokcJuvRENK06EX_UuzP
 
 ## Project documents
 
 - [The IOC Ocean InfoHub - DEVELOPMENT OF AN IOC CLEARING HOUSE MECHANISM FOR THE TRANSFER OF MARINE TECHNOLOGY POWERED BY A PROOF-OF-CONCEPT ODIS ARCHITECTURE](https://www.iode.org/components/com_oe/oe.php?task=download&id=44911&version=1.0&lang=1&format=1)
 - [Workshop on data sharing between UN agencies as a contribution to the UN decace of ocean science for sustainable development: 5.3 ODIS](https://www.iode.org/components/com_oe/oe.php?task=download&id=45243&version=3.0&lang=1&format=15)
+
+## Zotero group
+
+https://www.zotero.org/groups/2509961/odis-arch
 
 ## Research papers
 
