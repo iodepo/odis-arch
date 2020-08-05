@@ -4,7 +4,7 @@ Repository for the development of the ODIS architecture.
 
 ## Project folder and documents
 
-- https://drive.google.com/drive/u/0/folders/1QGKYq_zYqJyfrokcJuvRENK06EX_UuzP
+- [https://drive.google.com/drive/u/0/folders/1QGKYq_zYqJyfrokcJuvRENK06EX_UuzP](Google Drive folder)
 - [Architecture documentation document](https://docs.google.com/document/d/1jWG6CwZN-ffKhF4IUFTvjb22iiYKtw8ZOqJkaVlTwqM/edit)
 - [The IOC Ocean InfoHub - DEVELOPMENT OF AN IOC CLEARING HOUSE MECHANISM FOR THE TRANSFER OF MARINE TECHNOLOGY POWERED BY A PROOF-OF-CONCEPT ODIS ARCHITECTURE](https://www.iode.org/components/com_oe/oe.php?task=download&id=44911&version=1.0&lang=1&format=1)
 - [Workshop on data sharing between UN agencies as a contribution to the UN decace of ocean science for sustainable development: 5.3 ODIS](https://www.iode.org/components/com_oe/oe.php?task=download&id=45243&version=3.0&lang=1&format=15)
