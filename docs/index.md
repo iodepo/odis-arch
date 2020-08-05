@@ -1,3 +1,5 @@
+* TOC {:toc}
+
 ## Draft Table of Contents
 
 - A short introduction to the OIH project, aims and objectives and scope.
