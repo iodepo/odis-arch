@@ -16,7 +16,7 @@ Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. 
 
 Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. Fusce eget pharetra erat. Vivamus tincidunt mauris justo, ac feugiat ipsum consequat et. Etiam rhoncus consequat luctus. In non justo eu magna semper dapibus vitae sit amet magna. Nullam quis erat ultrices, elementum turpis vel, faucibus metus. Sed dapibus odio nec accumsan egestas. Quisque iaculis rhoncus metus, eget sagittis augue luctus at. Maecenas sagittis justo id massa iaculis, ut dignissim sem pharetra. Vivamus viverra ipsum est, ac gravida ante vestibulum nec.
 
-## Tehcnical description
+## Technical description
 
 Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. Fusce eget pharetra erat. Vivamus tincidunt mauris justo, ac feugiat ipsum consequat et. Etiam rhoncus consequat luctus. In non justo eu magna semper dapibus vitae sit amet magna. Nullam quis erat ultrices, elementum turpis vel, faucibus metus. Sed dapibus odio nec accumsan egestas. Quisque iaculis rhoncus metus, eget sagittis augue luctus at. Maecenas sagittis justo id massa iaculis, ut dignissim sem pharetra. Vivamus viverra ipsum est, ac gravida ante vestibulum nec.
 
