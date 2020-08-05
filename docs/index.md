@@ -6,11 +6,11 @@
 - [Guidelines for how to adopt / implement the ODIS-architecture (possibly domain-specific)](#guidelines)
 - [Proof-of-concept: A brief introduction to the proof of concepts examples, plus links demonstrating proof of concepts; global and three regions](#proof-of-concept)
 
-![oih](images/oih.png)
-
 ## Introduction
 
 Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. Fusce eget pharetra erat. Vivamus tincidunt mauris justo, ac feugiat ipsum consequat et. Etiam rhoncus consequat luctus. In non justo eu magna semper dapibus vitae sit amet magna. Nullam quis erat ultrices, elementum turpis vel, faucibus metus. Sed dapibus odio nec accumsan egestas. Quisque iaculis rhoncus metus, eget sagittis augue luctus at. Maecenas sagittis justo id massa iaculis, ut dignissim sem pharetra. Vivamus viverra ipsum est, ac gravida ante vestibulum nec.
+
+![oih](images/oih.png)
 
 ## Architecture description
 
