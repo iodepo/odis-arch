@@ -26,7 +26,12 @@ Aligning to the ODIS Architecture is intended to be a non-invasive process. In e
 
 ## Proof-of-concept
 
-Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. Fusce eget pharetra erat. Vivamus tincidunt mauris justo, ac feugiat ipsum consequat et. Etiam rhoncus consequat luctus. In non justo eu magna semper dapibus vitae sit amet magna. Nullam quis erat ultrices, elementum turpis vel, faucibus metus. Sed dapibus odio nec accumsan egestas. Quisque iaculis rhoncus metus, eget sagittis augue luctus at. Maecenas sagittis justo id massa iaculis, ut dignissim sem pharetra. Vivamus viverra ipsum est, ac gravida ante vestibulum nec.
+In order to demonstrate the application and benefits of the ODIS Architecture, a number of technical pilots have been proposed:
+*Implementation of a discovery portal at the IODE Project Office which will aggregate discovered resources which have published metadata compliant with the ODIS Architecture Schema.org implementation
+*Publication of metadata for relevant client web sites from selected partners
+*Publication of metadata for relevant data catalogues from selected partners
+*Publication of metadata for relevant standards repsositories from selected partners
+*Publication of metadata for relevant training resources from selected partners
 
 ## Appendices
 
