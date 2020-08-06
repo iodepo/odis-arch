@@ -22,7 +22,7 @@ Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. 
 
 ## Guidelines
 
-Vestibulum id lobortis urna. Curabitur vel aliquet dolor, in ullamcorper lacus. Fusce eget pharetra erat. Vivamus tincidunt mauris justo, ac feugiat ipsum consequat et. Etiam rhoncus consequat luctus. In non justo eu magna semper dapibus vitae sit amet magna. Nullam quis erat ultrices, elementum turpis vel, faucibus metus. Sed dapibus odio nec accumsan egestas. Quisque iaculis rhoncus metus, eget sagittis augue luctus at. Maecenas sagittis justo id massa iaculis, ut dignissim sem pharetra. Vivamus viverra ipsum est, ac gravida ante vestibulum nec.
+Aligning to the ODIS Architecture is intended to be a non-invasive process. In essence, enriching exisitng metadata publication to include additional content complain with the ODIS Architecture profile for Schema.org in order to facilitate the discovery and access to resources.
 
 ## Proof-of-concept
 
