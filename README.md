@@ -1,6 +1,6 @@
 # odis-arch
 
-Repository for the development of the ODIS architecture.
+Repository for the development of the ODIS architecture. The reference documentation in the [docs](docs) folder is published to https://iodepo.github.io/odis-arch.
 
 ## Project folder and documents
 
