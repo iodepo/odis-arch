@@ -1,11 +1,5 @@
 # Notes
 
-
-
-### ODIS Cat links
-
-Maybe address this through some of the prov nanopub approaches in gleaner.
-
 ## References
 
 * [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
@@ -300,3 +294,7 @@ about the image.
   }
 }
 ```
+
+## ODIS Cat links
+
+Maybe address this through some of the prov nanopub approaches in gleaner.
