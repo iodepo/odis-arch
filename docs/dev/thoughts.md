@@ -1,19 +1,22 @@
 # Notes
 
 
-## References
 
+### ODIS Cat links
+
+Maybe address this through some of the prov nanopub approaches in gleaner.
+
+## References
 
 * [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
 * [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
 * https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping
 * https://resources.data.gov/resources/dcat-us/
 
-
-
 ## People and Institutions
 
-### Ref
+### Refs
+
 * https://schema.org/Person
 * https://schema.org/Organization
 
@@ -31,17 +34,40 @@ many specific types we can use at the bottom.
 }
 ```
 
-
 ### Ref
 * https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
   
+## Documents and Best Practices
 
-## Documents
+Thematic section on documents and best practices.  
 
-### Ref
+This would scope:
+
+* services that allow searching on these stores
+* The documents themselves
+* perhaps just the repository itself
+* when we talk DC..  are we talking DC in JSON-LD or mapped to schema.org
+
+Could use Org -> provides service
+
+### Refs
+
 * For dataset we can use [SOS Dataset](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md)
-  
-For other document these are likely going to be some https://schema.org/CreativeWork with there being many subtypes we can explore.   See also here Adam Leadbetter's work at https://github.com/adamml/ocean-best-practices-on-schema
+* OBPS group is using JericoS3 API (ref:  https://www.jerico-ri.eu/)
+  * Traditional knowledge points here
+  * sounds like they use dspace  
+* For other document these are likely going to be some [schema:CretiveWork](https://schema.org/CreativeWork) with there being many subtypes we can explore.   See also here Adam Leadbetter's work at [Ocean best practices](https://github.com/adamml/ocean-best-practices-on-schema)
+  * This is a great start and perhaps helps to highlight why SHACL shapes are useful
+  * https://irishmarineinstitute.github.io/erddap-lint/ 
+  * https://github.com/earthcubearchitecture-project418/p419dcatservices/blob/master/CHORDS/DataFeed.jsonld
+*[EMODnet](https://emodnet.eu/en)  (Coner Delaney)
+  * ERDAP also
+  * Are we talking links from schema.org that link to OGC and ERDAP services 
+  * Are these methods?  
+  * Sounds like may link to external metadata for interop they have developed in the community
+* NOAA connected as well
+  * Interested in OGC assets  
+  * ERDAP data platform
 
 ## Training
 
@@ -143,15 +169,60 @@ Sadly vessel is taken at schema.org for an entirely different "thing".
 
 ## Projects
 
+What defines a project?  From Schema.org:
 
+> An enterprise (potentially individual but typically
+> collaborative), planned to achieve a particular aim. Use properties from
+> Organization, subOrganization/parentOrganization to indicate project sub-structures.
+
+### Functional interest
+
+* find collaborators
+* find project gaps
+* who funds what (semantic grouping)
+* find duplications of funding (who is doing things already done)
+* ID regional trends (what is important where) and then compare and contrast
+
+### Notes
+
+* [EurOcean](http://www.kg.eurocean.org/)
+  * National projects in native languages
+  * Use: [SeaDataNet](https://www.seadatanet.org/Metadata)
+    * https://imdis.seadatanet.org/content/download/122068/file/2_1_IMDIS_2018_submission_61.pdf
+    * https://www.rd-alliance.org/group/research-metadata-schemas-wg/wiki/enabling-global-data-discovery-through-structured-data
+  * They have to deal with no common structure among the databases for descriptions
+  * Set of fields have been aligned on with IDs
+  * keywords to identify marine projects
+  * Relationship with CORDIS
+  * Understand the unit of knowledge being developed that can be transferred
+    * How to describe unit of knowledge (ref: http://www.kg.eurocean.org/KOs)
+* [ODIDO](http://www.ioc-africa.org/projects)
+  * Set of parameters defined
+    * Project Name
+    * Country
+    * Funds Source
+    * Executing Agency
+    * Focal Area
+    * Start Date
+    * End Date
+    * Contact
+    * Total Grant
+    * Thematic Areas
+    * Website
+    * LME Region
+    * Lead Implementing Agency
+  * Current UI is a list.  Needs a way to ensure this can be crawed as a collection
+    * Leverage https://schema.org/ItemList on a master index list page
+* How many resources have spatial coverage
+* What went in (people, funds, etc) and output (kg docs, etc)
 
 ### Ref
 
 * https://schema.org/Project
   
-
 ### Questions
-* are these reseach projects?
+
+* Are these reseach projects?
   * https://schema.org/FundingAgency
   * https://schema.org/ResearchProject
 * As distinct from institution above, correct?
