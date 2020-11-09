@@ -1,0 +1,18 @@
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <http://example.com/vocab/json> "{\"geometries\":[{\"coordinates\":[-76,-18],\"type\":\"Point\"}],\"type\":\"GeometryCollection\"}"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON> .
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <http://igsn.org/core/v1/description> "A fake ID for testing" .
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <http://www.opengis.net/ont/geosparql#hasGeometry> _:b0 .
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://igsn.org/core/v1/Sample> .
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <https://schema.org/spatialCoverage> _:b1 .
+<https://samples.earth/id/do/bqs2dn2u6s73o70jdup0> <https://schema.org/subjectOf> _:b3 .
+_:b0 <http://www.opengis.net/ont/geosparql#asWKT> "POINT(-76 -18)"^^<http://www.opengis.net/ont/geosparql#wktLiteral> .
+_:b0 <http://www.opengis.net/ont/geosparql#crs> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> .
+_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.opengis.net/ont/sf#Point> .
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Place> .
+_:b1 <https://schema.org/geo> _:b2 .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/GeoCoordinates> .
+_:b2 <https://schema.org/latitude> "-18"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:b2 <https://schema.org/longitude> "-76"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/DigitalDocument> .
+_:b3 <https://schema.org/conformsTo> "https://igsn.org/schema/spatial.schema.json" .
+_:b3 <https://schema.org/format> "application/vnd.geo+json" .
+_:b3 <https://schema.org/url> "https://samples.earth/id/do/bqs2dn2u6s73o70jdup0.geojson" .
