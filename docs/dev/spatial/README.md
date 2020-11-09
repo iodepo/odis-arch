@@ -12,7 +12,10 @@ Ocean Info Hub
 * [schema.org/GeospatialGeometry](https://schema.org/GeospatialGeometry)
 * SOS patern follows:
   * [spatialCoverage](https://schema.org/spatialCoverage) -> [Place](https://schema.org/Place) -> [geo](https://schema.org/geo) -> [GeoCoordinates](https://schema.org/GeoCoordinates) OR [GeoShape](https://schema.org/GeoShape)
-  
+* Some groups are using [GeoNode](geonode.org)
+* OIH is not a spatial server, but will attempt to:
+  * parse spatial data from the graph. This information will likely be fed into [Koop](koop.js) where it can be accessed and pulled by participants.
+  * Feed the data into a spatial aware triplestore (GeoSPARQL)
 
 ## Vocabulary Resources
 
