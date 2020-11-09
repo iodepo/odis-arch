@@ -7,7 +7,7 @@
 * https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping
 * https://resources.data.gov/resources/dcat-us/
 
-## People and Institutions
+## Experts and Institutions
 
 ### Refs
 
