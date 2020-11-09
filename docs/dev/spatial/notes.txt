@@ -4,4 +4,4 @@ rapper -i nquads -o dot issue105.nq > issue105.dot
 dot -Tsvg issue105.dot -o issue105.svg
 
 
- jsonld format -q sos.jsonld | rapper -i nquads -o dot -I https://science-on-schema.org/ - | dot -Tsvg -o sos.svg
+ jsonld format -q sos.jsonld | rapper -i nquads -o dot -I https://science-on-schema.org/ - | dot -Grankdir=TP  -Tsvg -o sos.svg

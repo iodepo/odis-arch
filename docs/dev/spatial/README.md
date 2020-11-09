@@ -36,7 +36,7 @@ Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/scie
     "@type": "Place",
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 39.3280
+      "latitude": 39.3280,
       "longitude": 120.1633
     }
   }
