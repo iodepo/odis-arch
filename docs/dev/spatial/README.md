@@ -31,7 +31,7 @@ Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/scie
     "@vocab": "https://schema.org/"
   },
   "@type": "Dataset",
-  "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
+  "name": "Data set name",
   "spatialCoverage": {
     "@type": "Place",
     "geo": {
