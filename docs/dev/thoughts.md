@@ -13,6 +13,15 @@
 
 * https://schema.org/Person
 * https://schema.org/Organization
+* https://oceanexpert.org/  (example https://oceanexpert.org/expert/17820)
+* https://geoblueplanet.org/2019/09/25/oceanscape-portal-launch/ & https://oceanscape.org/ (example https://oceanscape.org/organisation/institute-for-marine-and-antarctic-studies/)
+
+For organization we can look at the work of Science on Schema for Data Repository and
+work from there.
+
+https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
+
+
 
 For institution see also the projects section below.  Note that in Organization there 
 many specific types we can use at the bottom.
@@ -63,98 +72,8 @@ Could use Org -> provides service
   * Interested in OGC assets  
   * ERDAP data platform
 
-## Training
-
-Start with https://schema.org/Course
-
-```json
-{
-  "@context": "https://schema.org/",
-  "@type": "Course",
-  "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": ["MOOC","online"],
-    "endDate": "2019-03-21",
-    "startDate": "2019-02-15"
-  }
-}
-```
-
-```json
-{
-  "@context": "https://schema.org/",
-  "@type": "Course",
-  "courseCode": "F300",
-  "name": "Physics",
-  "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": "University of Bristol",
-    "url": {"@id": "/provider/324/university-of-bristol"}
-  }
-}
-```
 
 ## Spatial
-
-See https://github.com/ESIPFed/science-on-schema.org/issues/105
-
-```json
-{
-    "@context": {
-        "@version": 1.1,
-        "geoblob": {
-            "@id": "http://example.com/vocab/json",
-            "@type": "@json"
-        },
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "description": "http://igsn.org/core/v1/description",
-        "geosparql": "http://www.opengis.net/ont/geosparql#",
-        "schema": "https://schema.org/"
-    },
-    "@id": "https://samples.earth/id/do/bqs2dn2u6s73o70jdup0",
-    "@type": "http://igsn.org/core/v1/Sample",
-    "description": "A fake ID for testing",
-    "schema:subjectOf": [
-        {
-            "schema:url": "https://samples.earth/id/do/bqs2dn2u6s73o70jdup0.geojson",
-            "@type": "schema:DigitalDocument",
-            "schema:format": [
-                "application/vnd.geo+json"
-            ],
-            "schema:conformsTo": "https://igsn.org/schema/spatial.schema.json"
-        }
-    ],
-    "geosparql:hasGeometry": {
-        "@id": "_:N98e75cacc29f40deb555eb583cb162dc",
-        "@type": "http://www.opengis.net/ont/sf#Point",
-        "geosparql:asWKT": {
-            "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
-            "@value": "POINT(-76 -18)"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
-    "geoblob": {
-        "type": "GeometryCollection",
-        "geometries": [{
-            "type": "Point",
-            "coordinates": [-76, -18]
-        }]
-    },
-    "schema:spatialCoverage": {
-        "@type": "schema:Place",
-        "schema:geo": {
-          "@type": "schema:GeoCoordinates",
-          "schema:latitude": -18,
-          "schema:longitude": -76
-        }
-      }
-}
-```
 
 
 ## Vessels
