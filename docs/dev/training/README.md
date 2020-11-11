@@ -1,4 +1,3 @@
-
 # Training
 
 ## References
@@ -18,10 +17,10 @@
 
 * POGO shipboard training and other other groups
 
-
 ## Notes
 
-### from Schema.org site on this resource
+### Note from Schema.org site on this resource
+
 >> LearningResource is expected to be used as an addition to a primary type such as Book, Video, Product etc.
 
 >>EducationEvent serves a similar purpose for event-like things (e.g. a Trip). A LearningResource may be created as a result of an EducationEvent, for example by recording one.
