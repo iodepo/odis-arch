@@ -71,3 +71,13 @@ What defines a project?  From Schema.org:
 * As distinct from institution above, correct?
 
 I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
+
+
+<!-- embedme ./graphs/orglist.json -->
+
+```json
+
+```
+
+![org list](./graphs/orglist.svg)
+
