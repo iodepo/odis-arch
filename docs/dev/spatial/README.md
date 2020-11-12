@@ -32,11 +32,17 @@ Notes here on metadata elements of interest related to spatial (not the Createiv
 ## Notes
 
 Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#spatial-coverage)
+
+[Load in Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2Fodis-arch%2Fmaster%2Fdocs%2Fdev%2Fspatial%2Fsos.jsonld)
+
+<!-- embedme sos.json -->
+
 ```json
 {
   "@context": {
     "@vocab": "https://schema.org/"
   },
+  "@id": "https://example.org/id/XYZ",
   "@type": "Dataset",
   "name": "Data set name",
   "spatialCoverage": {
@@ -48,11 +54,15 @@ Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/scie
     }
   }
 }
+
 ```
 
-![SOS Guidance image](sos.svg)
+![SOS Guidance image](./graphs/sos.svg)
 
 From the referenced SOS issue 105:
+
+
+<!-- embedme issue105.json -->
 
 ```json
 {
@@ -111,4 +121,4 @@ From the referenced SOS issue 105:
 }
 ```
 
-![Issue 105](issue105.svg)
+![Issue 105](./graphs/issue105.svg)
