@@ -35,7 +35,7 @@ Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/scie
 
 [Load in Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2Fodis-arch%2Fmaster%2Fdocs%2Fdev%2Fspatial%2Fgraphs%2Fsos.json)
 
-<!-- embedme sos.json -->
+<!-- embedme ./graphs/sos.json -->
 
 ```json
 {
@@ -61,8 +61,7 @@ Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/scie
 
 From the referenced SOS issue 105:
 
-
-<!-- embedme issue105.json -->
+<!-- embedme ./graphs/issue105.json -->
 
 ```json
 {

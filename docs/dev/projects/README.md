@@ -76,6 +76,52 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
 <!-- embedme ./graphs/orglist.json -->
 
 ```json
+{
+     "@context": {
+    "@vocab": "https://schema.org/"
+  },
+    "@type": "ItemList",
+    "url": "http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600",
+    "numberOfItems": "315",
+    "itemListElement": [
+        {
+            "@type": [
+                "Service",
+                "ResearchProject"
+            ],
+            "legalName": "Sample Data Repository Office",
+            "name": "SDRO",
+            "url": "https://www.sample-data-repository.org",
+            "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+            "category": [
+                "Biological Oceanography",
+                "Chemical Oceanography"
+            ],
+            "provider": {
+                "@id": "https://www.sample-data-repository.org"
+            },
+            "parentOrganization": {
+                "@type": "Organization",
+                "@id": "http://www.someinstitute.edu",
+                "legalName": "Some Institute",
+                "name": "SI",
+                "url": "http://www.someinstitute.edu",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "234 Main St.",
+                    "addressLocality": "Anytown",
+                    "addressRegion": "ST",
+                    "postalCode": "12345",
+                    "addressCountry": "USA"
+                }
+            }
+        },
+        {
+            "@type": "Product",
+            "name": "Product name"
+        }
+    ]
+}
 
 ```
 
