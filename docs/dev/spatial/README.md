@@ -33,7 +33,7 @@ Notes here on metadata elements of interest related to spatial (not the Createiv
 
 Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#spatial-coverage)
 
-[Load in Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2Fodis-arch%2Fmaster%2Fdocs%2Fdev%2Fspatial%2Fgraphs%2Fsos.jsonld)
+[Load in Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2Fodis-arch%2Fmaster%2Fdocs%2Fdev%2Fspatial%2Fgraphs%2Fsos.json)
 
 <!-- embedme sos.json -->
 
