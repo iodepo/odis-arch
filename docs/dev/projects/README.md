@@ -84,7 +84,7 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
     "legalName": "Example Data Repository",
     "name": "ExDaRepo",
     "url": "https://www.example-data-repository.org",
-    "description": "The BCO-DMO resource catalog offers free and open access to publicly funded research products whose field of study are biological and chemical oceanography.",
+    "description": "Repo description ... ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.example-data-repository.org/logo.jpg"
@@ -129,7 +129,7 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
             "legalName": "Sample Data Repository Office",
             "name": "SDRO",
             "url": "https://www.sample-data-repository.org",
-            "description": "The Sample Data Repository Service provides access to data from an imaginary domain accessible from this website.",
+            "description": "The Sample Data Repository Service...",
             "category": [
                 "Biological Oceanography",
                 "Chemical Oceanography"
