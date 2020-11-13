@@ -1,4 +1,4 @@
-# XXX
+# Projects
 
 ## References
 
@@ -65,7 +65,7 @@ What defines a project?  From Schema.org:
   
 ### Questions
 
-* Are these reseach projects?
+* Are these research projects?
   * https://schema.org/FundingAgency
   * https://schema.org/ResearchProject
 * As distinct from institution above, correct?
@@ -73,11 +73,48 @@ What defines a project?  From Schema.org:
 I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
 
 
+<!-- embedme ./graphs/sosproj.json -->
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": ["Service", "ResearchProject"],
+    "legalName": "Example Data Repository",
+    "name": "ExDaRepo",
+    "url": "https://www.example-data-repository.org",
+    "description": "The BCO-DMO resource catalog offers free and open access to publicly funded research products whose field of study are biological and chemical oceanography.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.example-data-repository.org/logo.jpg"
+    },
+    "contactPoint": {
+      "@id": "https://www.example-data-repository.org/about-us",
+      "@type": "ContactPoint",
+      "name": "Support",
+      "email": "info@example-data-repository.org",
+      "url": "https://www.example-data-repository.org/about-us",
+      "contactType": "customer support"
+    },
+    "funder": {
+      "@type": "FundingAgency",
+      "@id": "https://dx.doi.org/10.13039/10000001",
+      "legalName": "National Science Foundation",
+      "alternateName": "NSF",
+      "url": "https://www.nsf.gov/"
+    }
+}
+```
+
+![org list](./graphs/sosproj.svg)
+
+
 <!-- embedme ./graphs/orglist.json -->
 
 ```json
 {
-     "@context": {
+  "@context": {
     "@vocab": "https://schema.org/"
   },
     "@type": "ItemList",

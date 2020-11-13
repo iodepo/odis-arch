@@ -1,0 +1,18 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
+    "distribution": {
+      "@type": "DataDownload"
+    },
+    "subjectOf": {
+      "@type": "DataDownload",
+      "name": "eml-metadata.xml",
+      "description": "EML metadata describing the dataset",
+      "encodingFormat": ["application/xml", "https://eml.ecoinformatics.org/eml-2.2.0"],
+      "dateModified":"2019-06-12T14:44:15Z"
+    }
+  }

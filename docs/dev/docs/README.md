@@ -1,4 +1,4 @@
-# XXX
+# Documents
 
 ## References
 
@@ -59,14 +59,18 @@ Note, how would we do a link to a SDG (sustainable development goal)?
 We could use [subjectOf](https://schema.org/subjectOf) like SOS did
 for metadata below.  
 
+<!-- embedme ./graphs/doc.json -->
+
 ```json
 {
-    "@context": "https://schema.org/",
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
     "@type": "Dataset",
-    "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
     "distribution": {
-      "@type": "DataDownload",
-      ...
+      "@type": "DataDownload"
     },
     "subjectOf": {
       "@type": "DataDownload",
@@ -76,4 +80,5 @@ for metadata below.
       "dateModified":"2019-06-12T14:44:15Z"
     }
   }
-  ```
+```
+![Doc Guidance image](./graphs/doc.svg)
