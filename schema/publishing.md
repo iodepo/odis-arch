@@ -4,7 +4,6 @@
 
 Notes for the publishing process here.. 
 
-
 ## Landing Pages
 
 ## robots.txt
@@ -12,3 +11,5 @@ Notes for the publishing process here..
 ## sitemap.xml
 
 ## Services
+
+
