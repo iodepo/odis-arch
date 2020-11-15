@@ -1,3 +1,4 @@
 #!/bin/bash
+#  Reference https://github.com/zakhenry/embedme
 
-npx embedme "docs/**/*.md"
+npx embedme "schema/**/*.md"

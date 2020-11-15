@@ -2,12 +2,15 @@
 
 ## About
 
-Need to document some approaches to working with JSON-LD files in as open
-and cross platform manner as I can.
+For many groups working with JSON will already be part of the
+various pipelines they have.  For others, this will be new.
 
-* shacl too complex :(
-* JSON schema any better?
-* Lighthouse?
+This document will evolve to hold resources for people at various
+levels to work with JSON-LD data graphs.
+
+* SHACL (worry this is too complex)
+* JSON schema any better
+* Lighthouse
 
 ## References
 
