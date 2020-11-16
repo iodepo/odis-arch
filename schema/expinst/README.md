@@ -29,16 +29,22 @@ https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataReposito
 For institution see also the projects section below.  Note that in Organization there 
 many specific types we can use at the bottom.
 
+<!-- embedme ./graphs/person.json -->
+
 ```json
 {
-  "@context": "http://schema.org/",
-  "@type": "Person",
-  "name": "Jane Doe",
-  "jobTitle": "Professor",
-  "telephone": "(425) 123-4567",
-  "url": "http://www.janedoe.com"
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Person",
+    "name": "Jane Doe",
+    "jobTitle": "Professor",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com"
 }
 ```
+
+![OIH Guidance image](./graphs/person.svg)
 
 ### Ref
 * https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
