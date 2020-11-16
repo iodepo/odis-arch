@@ -12,8 +12,13 @@ OIH project.
 
 ## Publishing and indexing notes
 
-* [Background](background.md) information on the OIH architecture
-* [Authoring](authoring.md) information on generating schema.org data graphs
+* [Authoring](authoring.md): Generating schema.org data graphs
+* [Publishing](publishing.md): Providing structured data on the web
+* [Indexing](indexers.md): How to building indexes from information published following structured data on the web practices
+
+Some [background](background.md) information on the OIH architure and some previous work.
+This document will likely be incorporated into the above three documents and removed. 
+
 
 ## Topic areas
 
@@ -33,3 +38,6 @@ OIH project.
 
 * [DCAT Schema.org mappings](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
 * [DCAT US Data.gov reference](https://resources.data.gov/resources/dcat-us/)
+* [FAIR Semantics](https://zenodo.org/record/3707985#.X7Jq2-RKjrV)
+  * [RDA group meeting notes](https://docs.google.com/document/d/18CyQ2WsOxG_0zzzteubJyPveZzr8KPH4iuvoKVxRo3o/edit)
+  * [RDA Plenary meeting](https://www.rd-alliance.org/moving-toward-fair-semantics-2)

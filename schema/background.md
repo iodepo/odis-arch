@@ -1,5 +1,11 @@
 # Background
 
+## NOTE
+
+Much of this information will be moved to the more specific
+[authoring](authoring.md) and [publishing](publishing.md)
+documents. This document will be turning into more of a
+a description of the OIH test implementation. 
 ## Overview
 
 The architecture defines a workflow for objects, a \"digital object
@@ -73,142 +79,28 @@ schema.org. Doing some exploring.
 
 ## Tooling
 
-[Gleaner:](https://gleaner.io) (
-<https://github.com/earthcubearchitecture-project418/gleaner>) A tool
-for harvesting, validating and indexing structured data on the web.
-
-[Fence:](Fence%20https://github.com/earthcubearchitecture-project418/fence)
-A testing environment leveraging SHACL, sitemaps and JSON-LD framing
-approaches in support of Gleaner development.
-
-[Tangram](https://github.com/earthcubearchitecture-project418/tangram) A
-service wrapper around PySHACL to allow web based SHACL validation of
-data graphs.
-
-[GROW](https://github.com/fils/goobjectweb) A program that implements
-the RDA Digital Object Cloud pattern on top of Amazon S3 API based
-object stores. It bridges Gleaner and Mercantile to the web.
-
-![](./images/grow1.png)
-
-![](./images/do.png)
-
-[Mercantile](https://github.com/earthcubearchitecture-project418/mercantile)
-A GraphQL server that connects to graph databases. It fronts SPARQL
-calls to a data interface defined from the schema.org type Dataset
-\"class\" (ref: https://schema.org/Dataset) or other JSON-LD schema.
-
-Other Tools for review:
-
-- [JSON-LD Playground](https://json-ld.org/playground/) at
-    [JSON-LD.org](https://json-ld.org)
-- [SHACL playground](https://shacl.org/playground/)
-- [Google Structured Data testing
-    tool](https://search.google.com/structured-data/testing-tool) (going
-    away)
-- [Google Dataset for
-    developers](https://developers.google.com/search/docs/data-types/dataset)
-- [Press
-    article](https://www.schemaapp.com/tools/say-goodbye-to-googles-structured-data-testing-tool-and-hello-to-the-alternatives/)
-- [Rich results](https://search.google.com/test/rich-results)
-- [SchemaApp.com](https://www.schemaapp.com/solutions/structured-data-health-check-diagnostic/)
-- [Linter Structured Data](http://linter.structured-data.org/)
-- [Yandex](https://webmaster.yandex.com/tools/microtest/)
-- [Schema dev](https://test.schema.dev/)
-- [Chrome
-    extension](https://chrome.google.com/webstore/detail/ryte-structured-data-help/ndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en)
-- [Google Rich Results](https://search.google.com/test/rich-results)
-- [Datashapes](http://datashapes.org/)
-
 ------------------------------------------------------------------------
 
-## Next Steps
+This material moved to [indexers](./indexers.md)
 
-- Focus on schema.org, lay groundwork for connection to other
-    vocabularies
-- Focus on the platform (based on web architecture) not any package or
-    implementation
 
-[ODIS Arch Fork](https://github.com/fils/odis-arch) [(My
-notes)](https://github.com/fils/odis-arch/blob/master/docs/dev/thoughts.md)
 
 ### Authoring
 
 ------------------------------------------------------------------------
 
-JSON-LD (as serialization)
-
-schema.org (voc)
-
-- others can be used
-- development of guidance
-- validation (SHACL?)
-- Alignment to other best practices approaches
-
-Validation (SHACL, JSON schema, other?). Validation would address PID elements as well as implementation patterns for funding and other elements
-
-Exploration ideas include: 
-
-- [Schimatos.org](https://github.com/schimatos/schimatos.org)  
-  - [demo](http://rsmsrv01.nci.org.au:8080/schimatos/)
-- [Schemarama](https://github.com/google/schemarama)
+This material moved to [authoring](authoring.md)
 
 ### Publishing
 
 ------------------------------------------------------------------------
 
-Leverage robots.txt for both crawling info and agent routes
-
-Leverage [sitemaps](https://www.sitemaps.org/) with lastmod date node
-
-HTML pages with JSON-LD with either static or dynamic payload injection. Note DataCite JS for dynamic loading of DOI metadata as JSON-LD
-
-Reviewing plugins or approach for platforms in use: 
-
-- [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
-- [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
-- [DSpace](https://journal.code4lib.org/articles/13191)
-- [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
-- [OPeNDAP (native support)](https://www.opendap.org/)
+This material moved to [publishing](./publishing.md)
 
 ### Harvesting
 
 ------------------------------------------------------------------------
 
-[Gleaner](https://gleaner.io/) will be used as it was developed by the contractor.  However, that is more
-due to it's highly adaptable and hackable nature.  There are many other tools that 
-can be used and might be leveraged in a production environment including:
+This material moved to [indexers](./indexers.md)
 
-- [LDSpider](https://github.com/ldspider/ldspider)
-- [Squirrel](https://dice-group.github.io/squirrel.github.io/overview.html)
-- [Nutch (Apache)](http://nutch.apache.org/)
-- [Laundromat](https://github.com/LOD-Laundromat/LOD-Laundromat)
-
-Work on notebooks and other tools for testing by participants. [Example](https://colab.research.google.com/drive/18RVRtgWxNtVoYug09OO4qtWVimVCTuFU?usp=sharing)
-
-### Indexing
-
-------------------------------------------------------------------------
-
-RDF graph from the collected JSON-LD (part of Gleaner default output)
-
-Full text index (for now via Lucene in Blaze. Perhaps later link in Elastic)
-
-Spatial index (and exchange formats). We have workable pipelines for this in Gleaner, however the graphs typically don't provide spatial in a format easy to work with here. The results are spotty.
-
-Connections to external graphs. Nothing done on this front, but would be great to see. Results as nanopubs to integrate. (Gleaner does basic nanopub prov now)
-
-Index the data (not the metadata) via tika pipeline. Not planned as part of this work, but was done in P418, could be leveraged if a group had interest. Likely something to do local to a data provider and expose as a generated graph.
-
-### Utilization
-
-------------------------------------------------------------------------
-
-Searching the indexes (Mercantile)
-
-Data access via the results (links to distribution nodes)
-
-Notebooks to search and then access the data or mine the metadata objects at the hub.
-
-Web components to enables inclusion at partner domains.
 

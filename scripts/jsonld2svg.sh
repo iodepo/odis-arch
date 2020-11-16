@@ -1,7 +1,19 @@
-#1/bin/bash
-
-# jsonld format -q sos.jsonld | rapper -i nquads -o dot -I https://science-on-schema.org/ - | dot -Grankdir=TP  -Tsvg -o sos.svg
-# find ./docs/dev/ -name "*.json"
+#!/bin/bash
+#
+# Note this script requires json-dl, rapper, sed and graphviz
+#  jsonld.js https://github.com/digitalbazaar/jsonld.js
+#  rapper http://librdf.org/raptor/rapper.html
+#  sed https://www.gnu.org/software/sed/manual/sed.html  (sed is ratrher standard in UNIX systems)
+#  graphviz https://graphviz.org/
+#
+# useage
+# ./jsonld2scg ./dir/to/search/from
+#
+# notes
+# there are two graph options, dot and neat.  dot gives a more
+# top down directed graph like result and neato more a "true" graph like layout.
+# I'm not sure which I like more, they each have virtues and vices. 
+#
 
 mc_cmd() {
         find $1 -name "*.json"
