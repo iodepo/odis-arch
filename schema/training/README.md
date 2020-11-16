@@ -27,30 +27,48 @@
 
 So the following examples are only for the sub-graph of the training which by guidance should hang off a higher level type like Product.  There product could then be referenced by a type Organization as a service provided.
 
-```json
-{
-  "@context": "https://schema.org/",
-  "@type": "Course",
-  "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
-  "hasCourseInstance": {
-    "@type": "CourseInstance",
-    "courseMode": ["MOOC","online"],
-    "endDate": "2019-03-21",
-    "startDate": "2019-02-15"
-  }
-}
-```
+<!-- embedme ./graphs/course1.json -->
 
 ```json
 {
-  "@context": "https://schema.org/",
-  "@type": "Course",
-  "courseCode": "F300",
-  "name": "Physics",
-  "provider": {
-    "@type": "CollegeOrUniversity",
-    "name": "University of Bristol",
-    "url": {"@id": "/provider/324/university-of-bristol"}
-  }
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Course",
+    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+            "MOOC",
+            "online"
+        ],
+        "endDate": "2019-03-21",
+        "startDate": "2019-02-15"
+    }
 }
 ```
+
+![SOS Guidance image](./graphs/course1.svg)
+
+
+<!-- embedme ./graphs/course2.json -->
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Course",
+    "courseCode": "F300",
+    "name": "Physics",
+    "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Bristol",
+        "url": {
+            "@id": "/provider/324/university-of-bristol"
+        }
+    }
+}
+```
+
+![SOS Guidance image](./graphs/course2.svg)
