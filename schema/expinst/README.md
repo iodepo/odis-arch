@@ -25,9 +25,16 @@ work from there.
 https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
 
 
-
 For institution see also the projects section below.  Note that in Organization there 
 many specific types we can use at the bottom.
+
+Notes:
+* country code for phone
+* ORCID
+* affiliated/residence/nationality country 
+* https://schema.org/Organization
+* Need a min and recommended 
+  
 
 <!-- embedme ./graphs/person.json -->
 

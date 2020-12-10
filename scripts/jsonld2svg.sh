@@ -3,7 +3,7 @@
 # Note this script requires json-dl, rapper, sed and graphviz
 #  jsonld.js https://github.com/digitalbazaar/jsonld.js
 #  rapper http://librdf.org/raptor/rapper.html
-#  sed https://www.gnu.org/software/sed/manual/sed.html  (sed is ratrher standard in UNIX systems)
+#  sed https://www.gnu.org/software/sed/manual/sed.html  (sed is rather standard in UNIX systems)
 #  graphviz https://graphviz.org/
 #
 # useage
@@ -13,6 +13,9 @@
 # there are two graph options, dot and neat.  dot gives a more
 # top down directed graph like result and neato more a "true" graph like layout.
 # I'm not sure which I like more, they each have virtues and vices. 
+#
+# refs
+# https://www.w3.org/2018/09/rdf-data-viz/ is old but has some nice information
 #
 
 mc_cmd() {

@@ -3,7 +3,7 @@
 ## References
 
 * POGO
-  * Managed by BODC
+  * BODC connection?
   * Vessel db, cruise report db and planned cruises db
   * service links to cruise report etc..  
   * Interop with SeaDataNet?
