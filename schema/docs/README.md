@@ -1,12 +1,66 @@
 # Documents
 
-## References
+For OIH documents will scope more than datasets.   Documents will include maps, reports,
+guidance and other creative works.  Due to this OIH will focus on a generic example
+of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
+for more focused creative work examples.
+
+These will include initially;
+
+* [https://schema.org/Map](https://schema.org/Map)
+* [https://schema.org/Dataset](https://schema.org/Dataset) with guidance here likely to
+  recommend following the [Science on Schema](https://science-on-schema.org) guidance under
+  development at ESIP.
+* [https://schema.org/Course](https://schema.org/Course)
+  
+Items not scoped above can be represented as a generic CreativeWork at this time. 
+An example of a minimal description of such a resource would look like the following
+
+<!-- embedme ./graphs/creativework.json -->
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "CreativeWork",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
+    "description": "Description of the creative work to aid in searching",
+    "url":  "https://www.sample-data-repository.org/creativework/report.pdf"
+}
+```
+
+![Doc Guidance image](./graphs/creativework.svg)
 
 
-## Vocabulary resources
+## Maps
 
+A map in this context would be a static file or document of some sort.  Map services like 
+those described by an OGC Catalogue Service or other GIS service would be described as a 
+service.  
 
-## Metadata elements of interest
+A link to a minimul map creative work follows.
+
+<!-- embedme ./graphs/map.json -->
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Map",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
+    "description": "Description of the map to aid in searching",
+    "url":  "https://www.sample-data-repository.org/creativework/map.pdf"
+}
+```
+
+![Doc Guidance image](./graphs/map.svg)
+
+Note that at present the schema.org type Map only offers one special property beyond
+the parent CreativeWork.  That is a [mapType](https://schema.org/Map) which is an
+enumeration of types that do not apply to OIH use cases.  However, the use of the
+Map typing itself may aid in narrowing search requests later to a specific createive work.
 
 
 ## Notes
@@ -63,22 +117,29 @@ for metadata below.
 
 ```json
 {
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@type": "Dataset",
-    "@id": "https://example.org/id/XYZ",
-    "name": "Name or title of the document",
-    "distribution": {
-      "@type": "DataDownload"
-    },
-    "subjectOf": {
-      "@type": "DataDownload",
-      "name": "eml-metadata.xml",
-      "description": "EML metadata describing the dataset",
-      "encodingFormat": ["application/xml", "https://eml.ecoinformatics.org/eml-2.2.0"],
-      "dateModified":"2019-06-12T14:44:15Z"
-    }
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Dataset",
+  "@id": "https://example.org/id/XYZ",
+  "name": "Name or title of the document",
+  "description": "Description of the dataset to aid in searching",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://www.sample-data-repository.org/dataset/472032.tsv",
+    "encodingFormat": "text/tab-separated-values"
+  },
+  "subjectOf": {
+    "@type": "DataDownload",
+    "name": "eml-metadata.xml",
+    "description": "EML metadata describing the dataset",
+    "encodingFormat": [
+      "application/xml",
+      "https://eml.ecoinformatics.org/eml-2.2.0"
+    ],
+    "dateModified": "2019-06-12T14:44:15Z"
   }
+}
 ```
+
 ![Doc Guidance image](./graphs/doc.svg)

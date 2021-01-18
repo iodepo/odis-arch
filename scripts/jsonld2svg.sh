@@ -35,8 +35,8 @@ for i in $(mc_cmd $1); do
         sed - -e 's/https:\/\/schema.org\//schema\:/g' |   \
         sed - -e 's/http:\/\/www.w3.org\/1999\/02\/22\-rdf\-syntax\-ns\#type/rdfs\:type/g' | \
         sed - -e 's/http:\/\/www.w3.org\/2001\/XMLSchema\#/XMLSchema\#/g' | \
-        # dot  -Estyle=dotted -Gsplines=true -Grankdir=TP  -Tsvg -o $2
-        neato -Goverlap=false -Estyle=dotted -Gsplines=true    -Grankdir=TP -Tsvg -o $directory/$basefilename.svg
+        dot  -Estyle=dotted -Gsplines=true -Grankdir=LR  -Tsvg -o $directory/$basefilename.svg
+        # neato -Goverlap=false -Estyle=dotted -Gsplines=true    -Grankdir=TP -Tsvg -o $directory/$basefilename.svg
 
 done
 

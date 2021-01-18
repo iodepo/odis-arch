@@ -57,7 +57,7 @@ Information on the sitemap structure can be found at sitemaps.org.
 
 A goal of this section will be to discuss the use of sitemap lastmod to provide guidance to indexers on sample updates. Additionally indexers may test ways to evaluate additions and removals from the sitemap URL set to manage create, update, delete and edit branches.
 
-```xml            
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/site0.9">
    <sitemap>
