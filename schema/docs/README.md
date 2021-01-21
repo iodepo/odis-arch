@@ -16,6 +16,10 @@ These will include initially;
 Items not scoped above can be represented as a generic CreativeWork at this time. 
 An example of a minimal description of such a resource would look like the following
 
+[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
+
+[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
+
 <!-- embedme ./graphs/creativework.json -->
 ```json
 {
@@ -39,7 +43,12 @@ A map in this context would be a static file or document of some sort.  Map serv
 those described by an OGC Catalogue Service or other GIS service would be described as a 
 service.  
 
-A link to a minimul map creative work follows.
+A link to a minimal map creative work follows.
+
+
+[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
+
+[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
 
 <!-- embedme ./graphs/map.json -->
 ```json
@@ -60,7 +69,7 @@ A link to a minimul map creative work follows.
 Note that at present the schema.org type Map only offers one special property beyond
 the parent CreativeWork.  That is a [mapType](https://schema.org/Map) which is an
 enumeration of types that do not apply to OIH use cases.  However, the use of the
-Map typing itself may aid in narrowing search requests later to a specific createive work.
+Map typing itself may aid in narrowing search requests later to a specific creative work.
 
 
 ## Notes

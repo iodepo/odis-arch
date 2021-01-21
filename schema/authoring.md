@@ -74,6 +74,3 @@ Though this workflow is rather crude and manual it exposes a route to a defined 
 * https://www.schemastore.org/json/
 * https://stedolan.github.io/jq/
 * https://github.com/tomnomnom/gron
-
-
-![basic](./images/min.png)
