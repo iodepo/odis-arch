@@ -1,0 +1,40 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://link.to/PID_like_re3_or_others",
+    "@type": "Organization",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris, France",
+        "postalCode": "F-75002",
+        "streetAddress": "38 avenue de l'Opera"
+    },
+    "email": "secretariat(at)foo.org",
+    "faxNumber": "( 33 1) 42 68 53 01",
+    "member": [
+        {
+            "@type": "Organization"
+        },
+        {
+            "@type": "Organization"
+        }
+    ],
+    "alumni": [
+        {
+            "@type": "Person",
+            "name": "Jack Dan"
+        },
+        {
+            "@type": "Person",
+            "name": "John Smith"
+        }
+    ],
+    "name": "Foo Inc.",
+    "telephone": "( 33 1) 42 68 53 00",
+    "identifier": {
+        "@id": "ID_value_string",
+        "@type": "PropertyValue",
+        "propertyID": "this can be text or URL..",
+        "url": "https://foo.org/linkToPropertyIDPage",
+        "description": "Optional description of the ID"
+    }
+}

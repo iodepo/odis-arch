@@ -1,5 +1,38 @@
 # Vessels
 
+## About
+
+Exploring using schema.org to describe research vessels. 
+
+<!-- embedme ./graphs/ship.json -->
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Vehicle",
+    "name": "JOIDES Resolution",
+    "identifier":
+    {
+      "@id": "ID_value_string",
+      "@type": "PropertyValue",
+      "propertyID": "this can be text or URL..",
+      "url": "https://foo.org/linkToPropertyIDPage",
+      "description": "Vessel ID "
+    },
+    "additionalProperty" : {
+        "@id": "ID_value_string",
+        "@type": "PropertyValue",
+        "propertyID": "this can be text or URL..",
+        "url": "https://foo.org/linkToPropertyIDPage",
+        "description": "Any additional properties for the vessel"
+    }
+}
+```
+
+![Doc Guidance image](./graphs/ship.svg)
+
 ## References
 
 * POGO
@@ -20,16 +53,3 @@ Ref: https://www.bodc.ac.uk/resources/vocabularies/vocabulary_search/C17/
 Managed by SeaDataNet
 
 NOCD Code, Call Sign, ICES Shipcode, MMSI Code, IMO Code those are the identifiers on our database 
-
-
-
-## Vocabulary resources
-
-
-
-## Metadata elements of interest
-
-
-
-## Notes
-

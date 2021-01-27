@@ -26,5 +26,61 @@
       "legalName": "National Science Foundation",
       "alternateName": "NSF",
       "url": "https://www.nsf.gov/"
+    },
+    "ethicsPolicy": {
+      "@type": "CreativeWork",
+      "@id": "https://example.org/id/XYZ",
+      "name": "Name or title of the document",
+      "description": "Description of the creative work ",
+      "url":  "https://www.foo.org/creativework/ethicsPolicy.pdf"
+    },
+    "diversityPolicy": {
+      "@type": "CreativeWork",
+      "@id": "https://example.org/id/ABC",
+      "name": "Name or title of the document",
+      "description": "Description of the creative work",
+      "url":  "https://www.foo.org/creativework/diversityPolicy.pdf"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.3280,
+        "longitude": 120.1633
+      },
+      "description": "Description of the area served"
+    },
+    "areaServed": "Textual description of area served",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.3280,
+        "longitude": 120.1633
+      },
+      "description": "Needs to be subset of Place, Review Place"
+    }, 
+    "taxID" : "text value",
+    "vatID" : "text value",
+    "parentOrganization": {
+      "@type": "Organization",
+      "@id": "http://www.someinstitute.edu",
+      "legalName": "Some Institute",
+      "name": "SI",
+      "url": "http://www.someinstitute.edu",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "234 Main St.",
+          "addressLocality": "Anytown",
+          "addressRegion": "ST",
+          "postalCode": "12345",
+          "addressCountry": "USA"
+      }
+  },
+  "knowsAbout" : "Text, Thing, URL",
+    "hasCredential" : {
+      "@type": "EducationalOccupationalCredential",
+      "description": "Description of the credential provider"
     }
+
 }
