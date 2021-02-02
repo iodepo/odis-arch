@@ -1,14 +1,5 @@
 # Experts and Institutions
 
-## References
-
-
-## Vocabulary resources
-
-
-## Metadata elements of interest
-
-
 ## Notes
 
 

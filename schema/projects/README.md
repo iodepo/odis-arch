@@ -1,15 +1,6 @@
 # Projects
 
-## References
-
-## Vocabulary resources
-
-
-## Metadata elements of interest
-
-
 ## Notes
-
 
 What defines a project?  From Schema.org:
 

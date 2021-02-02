@@ -25,13 +25,13 @@ Thematic areas represent of a set of profiles defined by the OIH community.  The
 a set of minimal elements an author should include as well as more detailed elements that can offer
 enhanced capacity.
 
-* [Documents](./docs/README.md)
-* [Projects](./projects/README.md)
-* [Training](./training/README.md)
-* [Vessels](./vessels/README.md)
-* [Experts and Institutions](./expinst/README.md)
-* [Spatial](./spatial/README.md)
-* [Services](./services/README.md)
+1. [Experts and Institutions](./expinst/README.md)
+1. [Documents](./docs/README.md)
+1. [Projects](./projects/README.md)
+1. [Training](./training/README.md)
+1. [Vessels](./vessels/README.md)
+1. [Spatial](./spatial/README.md)
+1. [Services](./services/README.md)
 
 ## References
 

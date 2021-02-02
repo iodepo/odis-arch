@@ -7,6 +7,9 @@ This may take two paths.  One would be the prov tracking indexers might do
 and the other prov that providers would encode to provide specific prov
 the community requests.
 
+## Refs
+
+[Nanopubs Gudiance](http://nanopub.org/guidelines/working_draft/)
 ## Example
 
 This is a basic prov example to begin with.  Note, this is a draft and
