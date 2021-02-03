@@ -2,8 +2,10 @@
 
 ## About
 
+See also:  [ODIS-ARCH Vocabularies](../../docs/vocabularies.md)
+
 A list of possible controlled vocabularies to use in the schema.org documents.
-Many such resources can be found by searching at [BARTOC.org](https://bartoc.org/) 
+Many such resources can be found by searching at [BARTOC.org](https://bartoc.org/)
 or the [UNESCO Thesaurus](http://vocabularies.unesco.org/browser/thesaurus/en/).
 
 Note, at present this is an exploration and there is not yet a recommendation

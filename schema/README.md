@@ -33,4 +33,7 @@ enhanced capacity.
 1. [Spatial](./thematics/spatial/README.md)
 1. [Services](./thematics/services/README.md)
 
+## Reources
 
+* [References](./docs/references.md)
+* [Controlled Vocabularies](./docs/vocabularies.md)
