@@ -1,11 +1,10 @@
 # References
 
-
-
 ## General
-
   
 * [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
+* [BioSchemas](https://bioschemas.org/liveDeploys/ )
+
 * [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
 * [PID policy for European Open Science Cloud](https://op.europa.eu/en/publication-detail/-/publication/35c5ca10-1417-11eb-b57e-01aa75ed71a1/language-en)
 * [DCAT Schema.org mappings](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
@@ -18,18 +17,37 @@
 
 [Schema.org releases](https://schema.org/docs/releases.html)
 
-https://github.com/schemaorg/schemaorg/blob/main/data/schema.ttl 
+[Schema.org RDF graph (turtle format)](https://github.com/schemaorg/schemaorg/blob/main/data/schema.ttl )
 
+[JSON-LD Playground](https://json-ld.org/playground/)
 
-https://json-ld.org/playground/
-https://developers.google.com/search/docs/guides/search-gallery
-https://developers.google.com/search/docs/data-types/factcheck 
-https://search.google.com/structured-data/testing-tool
-https://search.google.com/test/rich-results 
+[Google Developers Search Gruid](https://developers.google.com/search/docs/guides/search-gallery)
+
+[Google Developers Fact Check](https://developers.google.com/search/docs/data-types/factcheck )
+
+[Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool)
+
+[Rich Results Testing Tool](https://search.google.com/test/rich-results )
+
+[JSON-LD](https://github.com/digitalbazaar/jsonld.js/ )
+
+[Ruby JSON-LD](https://github.com/ruby-rdf/json-ld )
+
+[schema.org Java](https://github.com/google/schemaorg-java )
+
+[Perl classes for schema.org markup](https://metacpan.org/source/RRWO/SemanticWeb-Schema-v8.0.0/README.md )
+
+## Content Management and Web Server support
+
+[Drupal Support](https://www.drupal.org/project/schema_metatag  )
+
+[Wordpress Claim Review](https://wordpress.org/plugins/claim-review-schema/ )
 
 ## Organizations
 
 [Google Open Source](http://opensource.google/ )
+
+[DataCommons](http://datacommons.org/ )  & [DataCommons REST](https://docs.datacommons.org/api/rest/query.html )
 
 
 ## Indexers
@@ -37,44 +55,53 @@ https://search.google.com/test/rich-results
 [Gleaner](https://gleaner.io/)
 [BMUSE](https://github.com/HW-SWeL/BMUSE)  
 
-# Graph tools
+## Graph tools
 
-https://en.wikipedia.org/wiki/List_of_SPARQL_implementations
+[Wikipedia SPARQL implementation list](https://en.wikipedia.org/wiki/List_of_SPARQL_implementations)
+
+[RDFlib](https://rdflib.readthedocs.io/en/stable/ )
+
+
+[Any23](https://any23.apache.org/ )
+
+[rdfjs](https://github.com/rdfjs )
+
+[shemaram](https://github.com/google/schemarama )
+
+[shemarama demo](https://schemarama-demo.site/ )
+
+[validatingrdf](https://book.validatingrdf.com/ )
+
+[Structured Data Linter](http://linter.structured-data.org/)
+
+## Blogs and Press Releases
+
+[Yandex: What is Scheme.org](https://yandex.com/support/webmaster/schema-org/what-is-schema-org.html )
+
+[Bing: Fact Check Label](https://blogs.bing.com/Webmaster-Blog/September-2017/Bing-adds-Fact-Check-label-in-SERP-to-support-the-ClaimReview-markup )
+
+[Bing: Contextual Awareness](https://docs.microsoft.com/en-us/previous-versions/bing/contextual-awareness/dn632191(v=msdn.10) )
+
+[Facebook: Marketing API](https://developers.facebook.com/docs/marketing-api/catalog/guides/)
+
+[Facebook: fact checking](https://about.fb.com/news/2018/06/increasing-our-efforts-to-fight-false-news/)
+
+[Amazon: Alex skills](https://developer.amazon.com/en-US/docs/alexa/custom-skills/built-in-intent-library.html )
+
+[Google Developers mail invoice](https://developers.google.com/gmail/markup/reference/invoice )
 
 ## Not Categorized Yet
 
+[ACL Web Alexa Meaning Representation Language](https://www.aclweb.org/anthology/N18-3022.pdf )
 
-```
-https://www.imdb.com/title/tt4643084/
-https://developers.google.com/gmail/markup/reference/invoice 
-https://blogs.bing.com/Webmaster-Blog/September-2017/Bing-adds-Fact-Check-label-in-SERP-to-support-the-ClaimReview-markup 
-https://docs.microsoft.com/en-us/previous-versions/bing/contextual-awareness/dn632191(v=msdn.10) 
-https://yandex.com/support/webmaster/schema-org/what-is-schema-org.html 
-https://developers.facebook.com/docs/marketing-api/catalog/guides/
-https://developers.facebook.com/docs/marketing-api/catalog/guides/microdata-tags/ 
-https://about.fb.com/news/2018/06/increasing-our-efforts-to-fight-false-news/
-https://developer.amazon.com/en-US/docs/alexa/custom-skills/built-in-intent-library.html 
-https://www.aclweb.org/anthology/N18-3022.pdf 
-https://hash.ai/schemas/Volcano 
-https://yoast.com/structured-data-schema-ultimate-guide/
-https://www.drupal.org/project/schema_metatag  
-https://www.schemaapp.com/ 
-https://wordpress.org/plugins/claim-review-schema/ 
-https://researchdata.springernature.com/posts/45943-sn-scigraph-latest-release-patents-clinical-trials-and-many-new-features 
-http://datacommons.org/ 
-https://docs.datacommons.org/api/rest/query.html 
-https://iphylo.blogspot.com/2018/08/ozymandias-biodiversity-knowledge-graph.html
-https://ozymandias-demo.herokuapp.com/ 
-https://bioschemas.org/liveDeploys/ 
-https://github.com/google/schemaorg-java 
-https://metacpan.org/source/RRWO/SemanticWeb-Schema-v8.0.0/README.md 
-https://github.com/digitalbazaar/jsonld.js/ 
-https://github.com/ruby-rdf/json-ld 
-https://rdflib.readthedocs.io/en/stable/ 
-https://any23.apache.org/ 
-https://github.com/rdfjs 
-https://github.com/google/schemarama 
-https://schemarama-demo.site/ 
-https://book.validatingrdf.com/ 
-http://linter.structured-data.org/
-```
+[hash.aio Volcano schema](https://hash.ai/schemas/Volcano )
+
+[Yoast Structured Data Guide](https://yoast.com/structured-data-schema-ultimate-guide/)
+
+[Schema App](https://www.schemaapp.com/ )
+
+[Springer: Scigraph](https://researchdata.springernature.com/posts/45943-sn-scigraph-latest-release-patents-clinical-trials-and-many-new-features )
+
+[iPhylo Biodiversity KG](https://iphylo.blogspot.com/2018/08/ozymandias-biodiversity-knowledge-graph.html)
+
+[ozymandias](https://ozymandias-demo.herokuapp.com/ )
