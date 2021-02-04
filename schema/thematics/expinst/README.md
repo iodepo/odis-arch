@@ -1,30 +1,25 @@
 # Experts and Institutions
 
-## Notes
+## About
+
+For experts and institutions we will be leveraging the Person and Organization types from 
+schema.org.  
+
+At a minimum, for people, we would have to have name, contact information and 
+affiliation.  More detailed records would include persistent identifiers.
 
 
 ### Refs
 
-* https://schema.org/Person
-* https://schema.org/Organization
-* https://oceanexpert.org/  (example https://oceanexpert.org/expert/17820)
-* https://geoblueplanet.org/2019/09/25/oceanscape-portal-launch/ & https://oceanscape.org/ (example https://oceanscape.org/organisation/institute-for-marine-and-antarctic-studies/)
+* [schema:Person](https://schema.org/Person)
+* [scheme:Organization](https://schema.org/Organization)
+* [Science on Schema Repository](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md)
 
 For organization we can look at the work of Science on Schema for Data Repository and
 work from there.
 
-https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
-
-
 For institution see also the projects section below.  Note that in Organization there 
 many specific types we can use at the bottom.
-
-Notes:
-* country code for phone
-* ORCID
-* affiliated/residence/nationality country 
-* https://schema.org/Organization
-* Need a min and recommended 
   
 
 <!-- embedme ./graphs/person.json -->
@@ -43,7 +38,7 @@ Notes:
     {
       "@id": "ID_value_string",
       "@type": "PropertyValue",
-      "propertyID": "this can be text or URL..",
+      "propertyID": "This can be text or URL for an ID like ORCID",
       "url": "https://foo.org/linkToPropertyIDPage",
       "description": "Optional description of the ID"
     }
@@ -58,7 +53,9 @@ Notes:
 
 ```json
 {
-    "@context": "https://schema.org",
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
     "@id": "https://link.to/PID_like_re3_or_others",
     "@type": "Organization",
     "address": {
@@ -101,9 +98,7 @@ Notes:
 
 ![OIH Guidance image](./graphs/organization.svg)
 
-
-
-
-### Ref
-* https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md
+### Notes
+* https://oceanexpert.org/  (example https://oceanexpert.org/expert/17820)
+* https://geoblueplanet.org/2019/09/25/oceanscape-portal-launch/ & https://oceanscape.org/ (example https://oceanscape.org/organisation/institute-for-marine-and-antarctic-studies/)
   
