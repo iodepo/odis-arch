@@ -1,11 +1,4 @@
 # Background
-
-## NOTE
-
-Much of this information will be moved to the more specific
-[authoring](authoring.md) and [publishing](publishing.md)
-documents. This document will be turning into more of a
-a description of the OIH test implementation. 
 ## Overview
 
 The architecture defines a workflow for objects, a \"digital object
@@ -15,11 +8,6 @@ JSON-LD package in a landing page.
 The chain is the life cycle connecting; authoring, publishing,
 aggregation, indexing and searching/interfaces.
 
-### Stack
-
-The following image shows a general overview of the architecture.
-
-![](./images/stack.png)
 
 ### Flow
 
@@ -44,63 +32,3 @@ The following image shows a general overview of the architecture.
     other research graphs such as the Freya Project or others.
 
 ------------------------------------------------------------------------
-
-## P418
-
-
-[Science on Schema:](https://github.com/ESIPFed/science-on-schema.org/)
-Community guidance on best practices for employing schema.org for
-geoscience datasets
-
-[Gleaner](https://gleaner.io/)
-
-New EarthCube Office work: [GeoDex](https://geodex.org/) and [Object
-Exchange page
-DEMO](https://dx.geodex.org/?o=/iris/107b0c662fa9051d3714b0e93fef981713d2ca48.jsonld)
-This demo is driven by web components.
-
-Lessons learned
-
-- Graphs are generally ugly due to the organic nature of them. Ugly
-    graphs are harder to query, parse and display.
-- If we make it easy for publishers in their space -\> becomes hard in
-    query space
-- PIDS are important as are explicate IDs in the data graph.
-- Death by http! The http https impedance is becoming, and will
-    become, more and more an issue in a federated or distributed model.
-
-[JSON-LD structure and https
-testing](https://github.com/fils/JSON-LD_inspection) Worried about
-http/https impedance to the digital object cloud for JSON-LD and
-schema.org. Doing some exploring.
-:::
-
-------------------------------------------------------------------------
-
-## Tooling
-
-------------------------------------------------------------------------
-
-This material moved to [indexers](./indexers.md)
-
-
-
-### Authoring
-
-------------------------------------------------------------------------
-
-This material moved to [authoring](authoring.md)
-
-### Publishing
-
-------------------------------------------------------------------------
-
-This material moved to [publishing](./publishing.md)
-
-### Harvesting
-
-------------------------------------------------------------------------
-
-This material moved to [indexers](./indexers.md)
-
-
