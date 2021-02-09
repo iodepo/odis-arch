@@ -2,7 +2,7 @@
 
 ## About
 
-Some scripts to process the data grapahs and also 
+Some scripts to process the data graphs and also 
 embedd the JSON-LD into the Markdown.
 
 From the root of the repo run
