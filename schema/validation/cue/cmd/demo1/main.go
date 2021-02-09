@@ -11,23 +11,25 @@ import (
 )
 
 func main() {
-
 	fmt.Println("Cue testing")
 
-	const config = `Dimensions :: {
+	const config = `
+#Dimensions :: {
     width:  number
 	depth:  number
-	height: number }`
+	height: number
+}
+	   `
 
 	const j = `{ "width": "a string", "height": 23, "depth": 0.2  }`
 
 	var r cue.Runtime
 	i, err := r.Compile("test", config) // no result change for Compile or Parse
 	if err != nil {
-		log.Println(err)
+		log.Print(err)
 	}
 
-	dim, err := i.LookupField("Dimensions")
+	dim, err := i.LookupField("#Dimensions")
 	if err != nil {
 		log.Print(err)
 	}
