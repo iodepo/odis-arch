@@ -14,6 +14,9 @@ affiliation.  More detailed records would include persistent identifiers.
 * [schema:Person](https://schema.org/Person)
 * [scheme:Organization](https://schema.org/Organization)
 * [Science on Schema Repository](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md)
+* [https://oceanexpert.org/](https://oceanexpert.org/)
+  * [Example page expert](https://oceanexpert.org/expert/44151)
+  * [Example page institution](https://oceanexpert.org/institution/10171)
 
 For organization we can look at the work of Science on Schema for Data Repository and
 work from there.
