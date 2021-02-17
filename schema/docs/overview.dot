@@ -1,7 +1,15 @@
 digraph G {
-size ="3,3";
-"schema:CreativeWork" -> "schema:Person" [style=bold,label="schema:authoredBy"];
-"schema:CreativeWork" -> "schema:Organization";
+size ="4,4";
+overlap=false;
+layout="circo"
+splines=true
+#node [shape="circle"]
+
+
+"schema:Person" [href="https://schema.org/Person"];
+
+"schema:CreativeWork" -> "schema:Person" [href="https://foo.org", style=bold,label="schema:authoredBy"];
+"schema:CreativeWork" -> "schema:Organization"  [style=bold,label="schema:CREATEDBY"];
 "schema:CreativeWork" -> "schema:Spatial" [style=bold,label="schema:DEFINEDBY"];
 
 
@@ -17,3 +25,4 @@ size ="3,3";
 "schema:Services" -> "schema:CreativeWork"  [style=bold,label="schema:OPERATESon"];
 
  }
+

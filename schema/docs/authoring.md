@@ -2,34 +2,34 @@
 
 ## About
 
-For many groups working with JSON will already be part of the
-various pipelines they have.  For others, this will be new.
+OIH will implement a structured data on the web pattern leveraging schema.org as a
+primary vocabulary.
 
-This document will evolve to hold resources for people at various
-levels to author with JSON-LD data graphs.
+The proposed implementation will use the [JSON-LD](https://json-ld.org/) encoding placed either directly into
+a web page or dynamically placed into the page DOM client side by javascript.
 
-Primarily, this will be used to either create a single unique JSON-LD 
-based graph for a resource or to explore an approach you might use as
-a template in code.
+Additionally, content negotiation can be used to expose a direct version of the JSON-LD
+document for a given resource URI.  
 
-Note, many common publishing tools already have schema.org support in 
-them that leverages the package metadata data model.  We are compiling
-a list of those too.
+### Tools and References
+
+- [JSON-LD](https://json-ld.org/)
+  - [JSON-LD Playground](https://json-ld.org/playground/)
 
 ## Validation With SHACL or ShEx
 
-Exploring options for graph validation.  
+To help facilitate the interconnection of resource some application focused validation will be developed.
+Not, this validation does not limit what can be in the graphs.  Rather, it simply provides insight on to how
+well a given graph can be leveraged for a specific application.  Here, the application will be the OIH search portal.
 
+### Tools and References
 - [SHACL playground](https://shacl.org/playground/)
 - [Schemarama](https://github.com/google/schemarama)
 - [Schimatos.org](https://github.com/schimatos/schimatos.org)  
   - [demo](http://rsmsrv01.nci.org.au:8080/schimatos/)
-
-### Reference
-
 - [Comparing ShEx and SHACL](https://book.validatingrdf.com/bookHtml013.html)
 
-## Leveraging JSON Schema
+### Leveraging JSON Schema
 
 We have been exploring the potential to use JSON Schema combined with various on-line JSON editors (JSON Schema driven) to provide a potential approach to a more visual editing workflow. The workflow presented here is very ad hoc but exposes a potential route a group might take to develop a usable tool. Such a tool might, for example, leverage the Electron app dev environment to evolve this approach in a more dedicated tool/manner.
 

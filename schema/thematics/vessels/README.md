@@ -2,7 +2,12 @@
 
 ## About
 
-Exploring using schema.org to describe research vessels. 
+Exploring using schema.org to describe research vessels.  Note that schema.org
+is a very broad vocabulary and as such specific concepts like research vessel is
+not well algined.
+
+One approach we can use, however, is to leverage schema.org a a discovery layer
+and link more directly to detailed institutional metadata records.  
 
 <!-- embedme ./graphs/ship.json -->
 
