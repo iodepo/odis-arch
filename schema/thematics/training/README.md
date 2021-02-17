@@ -5,7 +5,7 @@
 * [http://www.marinetraining.eu/](http://www.marinetraining.eu/)
   * [Example page](http://www.marinetraining.eu/node/1001)
 * [https://oceanexpert.org/](https://oceanexpert.org/)
-  * [Example page](https://oceanexpert.org/expert/17820)
+  * [Example page](https://oceanexpert.org/event/2859)
 * [OCTO](https://www.octogroup.org/)
 
 ## Vocabulary resources
