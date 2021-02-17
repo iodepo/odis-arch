@@ -9,7 +9,7 @@ the community requests.
 
 ## Refs
 
-[Nanopubs Gudiance](http://nanopub.org/guidelines/working_draft/)
+[Nanopubs Guidance](http://nanopub.org/guidelines/working_draft/)
 
 ## Example
 
