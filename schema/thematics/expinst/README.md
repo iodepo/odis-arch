@@ -17,6 +17,7 @@ affiliation.  More detailed records would include persistent identifiers.
 * [https://oceanexpert.org/](https://oceanexpert.org/)
   * [Example page expert](https://oceanexpert.org/expert/44151)
   * [Example page institution](https://oceanexpert.org/institution/10171)
+  * [Work done by Adam Leadbetter years ago](https://gist.github.com/adamml/58ebdc7fc3f8ab8dad5d8852a28fb28c)
 
 For organization we can look at the work of Science on Schema for Data Repository and
 work from there.
