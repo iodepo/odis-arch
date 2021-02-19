@@ -62,6 +62,7 @@ many specific types we can use at the bottom.
     },
     "@id": "https://link.to/PID_like_re3_or_others",
     "@type": "Organization",
+    "name": "Foo Inc.",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Paris, France",
@@ -69,6 +70,7 @@ many specific types we can use at the bottom.
         "streetAddress": "38 avenue de l'Opera"
     },
     "email": "secretariat(at)foo.org",
+    "telephone": "( 33 1) 42 68 53 00",
     "faxNumber": "( 33 1) 42 68 53 01",
     "member": [
         {
@@ -88,8 +90,6 @@ many specific types we can use at the bottom.
             "name": "John Smith"
         }
     ],
-    "name": "Foo Inc.",
-    "telephone": "( 33 1) 42 68 53 00",
     "identifier": {
         "@id": "ID_value_string",
         "@type": "PropertyValue",
