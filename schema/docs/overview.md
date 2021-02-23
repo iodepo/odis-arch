@@ -2,7 +2,7 @@
 
 ## About
 
-Overview document placeholder.
+Overview document placeholder
 
 ### relations
 ![](./overview.svg)
