@@ -10,21 +10,11 @@ Note many software packages you might be using are already
 implementing this approach and should make adaption, in that
 case, easier.
 
-## Existing support in software
-
-Reviewing plugins or approach for platforms in use:
-
-- [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
-- [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
-- [DSpace](https://journal.code4lib.org/articles/13191)
-- [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
-- [OPeNDAP (native support)](https://www.opendap.org/)
-- [GeoNode](http://geonode.org/)
-  - [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)
-
 ## Basics
 
 The basics of the approach can be seen below.  
+
+![](./images/example1Flow.png)
 
 ### robots.txt
 
@@ -116,3 +106,16 @@ Providers may also wish to provide content negotiation for type application/ld+j
     }
 }
 ```
+
+## Existing support in software
+
+Many content management approaches and packages may already have support for this pattern.  A list of
+some of these and some links to starting points for their support follows.  
+
+- [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
+- [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
+- [DSpace](https://journal.code4lib.org/articles/13191)
+- [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
+- [OPeNDAP (native support)](https://www.opendap.org/)
+- [GeoNode](http://geonode.org/)
+  - [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)

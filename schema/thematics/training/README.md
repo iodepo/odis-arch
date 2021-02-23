@@ -6,7 +6,12 @@
   * [Example page](http://www.marinetraining.eu/node/1001)
 * [https://oceanexpert.org/](https://oceanexpert.org/)
   * [Example page](https://oceanexpert.org/expert/17820)
+  * https://oceanexpert.org/event/2859 
 * [OCTO](https://www.octogroup.org/)
+* https://oceansummerschools.iode.org/ 
+* https://www.openchannels.org/upcoming-events-list 
+* https://catalogue.odis.org/search/type=16 
+* https://clmeplus.org/
 
 ## Vocabulary resources
 
