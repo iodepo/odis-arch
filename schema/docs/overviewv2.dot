@@ -1,0 +1,63 @@
+digraph G {
+
+  graph [fontsize=10 fontname="Verdana" compound=true];
+  node [shape=record fontsize=10 fontname="Verdana"];
+
+  subgraph clusterOrg {
+    label = "Experts & Insitutions\nschema:Organization";
+    Person;
+    Organization;
+   }
+
+  subgraph clusterServices {
+    label = "Services\nschema:Services";
+    color=blue;
+    Service;
+    
+  }
+
+  subgraph clusterSpatial {
+    label = "Spatial\nschema:Spatial";
+    color=blue;
+    Spatial;
+     
+  }
+
+  subgraph clusterProj {
+    label = "Projects\nschema:Projects";
+    color=blue;
+    Project;
+  }
+
+  subgraph clusterVessel {
+    label = "Vessels\nschema:Vehicle";
+    color=blue;
+    Vessel;
+
+  }
+
+  subgraph clusterTraining {
+    label = "Training\nschema:Training";
+    color=blue;
+    Class;
+  }
+
+  subgraph clusterDoc {
+    label = "Documents\nschema:CreativeWork";
+    color=blue;
+    Document;
+    Map;
+    Data;
+  }
+
+  Document -> Spatial [lhead=clusterSpatial]
+  Map -> Spatial [lhead=clusterSpatial]
+  Data -> Spatial [lhead=clusterSpatial]
+
+  Data -> Service  
+ 
+  Vessel -> Organization
+  Person -> Organization
+
+
+}
