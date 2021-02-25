@@ -5,7 +5,7 @@
 Overview document placeholder
 
 ### relations
-![](./overview.svg)
+![](./images/overview.svg)
 
 
 ### activity diagram

@@ -18,20 +18,29 @@ and link more directly to detailed institutional metadata records.
     },
     "@type": "Vehicle",
     "name": "JOIDES Resolution",
-    "identifier":
-    {
-      "@id": "ID_value_string",
-      "@type": "PropertyValue",
-      "propertyID": "this can be text or URL..",
-      "url": "https://foo.org/linkToPropertyIDPage",
-      "description": "Vessel ID "
+    "identifier": {
+        "@id": "ID_value_string",
+        "@type": "PropertyValue",
+        "propertyID": "this can be text or URL..",
+        "url": "https://foo.org/linkToPropertyIDPage",
+        "description": "Vessel ID "
     },
-    "additionalProperty" : {
+    "additionalProperty": {
         "@id": "ID_value_string",
         "@type": "PropertyValue",
         "propertyID": "this can be text or URL..",
         "url": "https://foo.org/linkToPropertyIDPage",
         "description": "Any additional properties for the vessel"
+    },
+    "subjectOf": {
+        "@type": "DataDownload",
+        "name": "external-metadata.xml",
+        "description": "Metadata describing the vessel",
+        "encodingFormat": [
+            "application/xml",
+            "https://foo.org/ship01"
+        ],
+        "dateModified": "2019-06-12T14:44:15Z"
     }
 }
 ```

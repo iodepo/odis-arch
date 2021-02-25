@@ -4,29 +4,34 @@ digraph G {
   node [shape=record fontsize=10 fontname="Verdana"];
 
   subgraph clusterOrg {
-    label = "Experts & Insitutions\nschema:Organization";
+    label = "Experts & Insitutions\nschema:[Organization, Person]";
+    color=blue;
     Person;
     Organization;
    }
 
   subgraph clusterServices {
-    label = "Services\nschema:Services";
+    label = "Services\nschema:Action";
     color=blue;
     Service;
     
-  }
+  } 
 
   subgraph clusterSpatial {
-    label = "Spatial\nschema:Spatial";
+    label = "Spatial\nschema:spatialCoverage";
     color=blue;
-    Spatial;
+    Place;
+    subjectOf;
+    GeoSPARQL;
+    GeoBlon(JSON);
      
   }
 
   subgraph clusterProj {
-    label = "Projects\nschema:Projects";
+    label = "Projects\nschema:[Project,ResearchProject]";
     color=blue;
     Project;
+    ResearchProject;
   }
 
   subgraph clusterVessel {
@@ -37,27 +42,29 @@ digraph G {
   }
 
   subgraph clusterTraining {
-    label = "Training\nschema:Training";
+    label = "Training\nschema:[LearningResource, Course]";
     color=blue;
-    Class;
+    Course;
+    Reseource;
   }
 
   subgraph clusterDoc {
-    label = "Documents\nschema:CreativeWork";
+    label = "Documents\nschema:[CreativeWork, Dataset, Map]";
     color=blue;
-    Document;
+    CreativeWork;
     Map;
-    Data;
+    Dataset;
   }
 
-  Document -> Spatial [lhead=clusterSpatial]
+  CreativeWork -> Spatial [lhead=clusterSpatial]
   Map -> Spatial [lhead=clusterSpatial]
-  Data -> Spatial [lhead=clusterSpatial]
+  Dataset -> Spatial [lhead=clusterSpatial]
 
-  Data -> Service  
+  Dataset -> Service  
  
-  Vessel -> Organization
+  Vessel -> Organization [label="additionProperty"]
   Person -> Organization
+  Course -> Organization [label="author, creator, funder, maintainer"]
 
 
 }
