@@ -42,11 +42,9 @@ So the following examples are only for the sub-graph of the training which by gu
     "@context": {
         "@vocab": "https://schema.org/",
         "endDate": {
-            "@id": "http://purl.org/dc/terms/modified",
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
         "startDate": {
-            "@id": "http://purl.org/dc/terms/modified",
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         }
     },
