@@ -14,7 +14,6 @@ digraph G {
     label = "Services\nschema:Action";
     color=blue;
     Service;
-    
   } 
 
   subgraph clusterSpatial {
@@ -23,8 +22,7 @@ digraph G {
     Place;
     subjectOf;
     GeoSPARQL;
-    GeoBlon(JSON);
-     
+    GeoBlob;
   }
 
   subgraph clusterProj {

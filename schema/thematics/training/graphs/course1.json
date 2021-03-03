@@ -1,7 +1,16 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/"
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@id": "http://purl.org/dc/terms/modified",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@id": "http://purl.org/dc/terms/modified",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
     },
+    "@id": "https://foo.org/url/to/metadata/representation",
     "@type": "Course",
     "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
     "hasCourseInstance": {

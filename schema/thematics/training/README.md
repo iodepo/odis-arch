@@ -2,6 +2,8 @@
 
 ## References
 
+* https://www.w3.org/TR/xmlschema11-2/
+  * Use YYYY-MM-DDThh:mm:ss or YYYY-MM-DD
 * [http://www.marinetraining.eu/](http://www.marinetraining.eu/)
   * [Example page](http://www.marinetraining.eu/node/1001)
 * [https://oceanexpert.org/](https://oceanexpert.org/)
@@ -14,6 +16,7 @@
 * https://clmeplus.org/
 
 ## Vocabulary resources
+
 
 * [https://schema.org/LearningResource](https://schema.org/LearningResource) 
 * [https://schema.org/Course](https://schema.org/Course)
@@ -37,8 +40,17 @@ So the following examples are only for the sub-graph of the training which by gu
 ```json
 {
     "@context": {
-        "@vocab": "https://schema.org/"
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@id": "http://purl.org/dc/terms/modified",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@id": "http://purl.org/dc/terms/modified",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
     },
+    "@id": "https://foo.org/url/to/metadata/representation",
     "@type": "Course",
     "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
     "hasCourseInstance": {
