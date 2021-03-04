@@ -3,12 +3,12 @@
 ## About
 
 This page describes the publishing process for structured data 
-on the web we will use.  This model is what people implementing
-an approach on existing infrstructure would use.
+on the web approach OIH will use.  
 
 Note many software packages you might be using are already 
-implementing this approach and should make adaption, in that
-case, easier.
+implementing this approach and could make implementation, in that
+case, easier.  
+See the section [Existing support in software][## Existing support in software]
 
 ## Basics
 
@@ -16,13 +16,74 @@ The basics of the approach can be seen below.
 
 ![](./images/example1Flow.png)
 
+A brief overview of this elements is provide here.  For more
+detail see the [Elements in detail][## Elements in detail]
+section below.
+
+### robots.txt (optional)
+
+This is an optional step, but a robots.txt file can be used to define 
+the sitemap and even option agent names to associate with the sitemaps.
+This document is not required, but for those who use such a document
+and wish to leverage it, that is an option.
+
+### sitemap
+
+Following the approaches below an XML document that points to the 
+various resources to be indexed needs to be generated.  Of 
+particular use is the lastmod node to indicate the date of
+last modification to allow continued indexing without the need
+for a full site index each time.
+
+### JSON-LD in landing pages
+
+The last element is the creation of the JSON-LD data graphs 
+describing the resources leveraging the schema.org vocabulary. 
+These JSON-LD documents need to be placed in the pages referenced
+by the sitemap.  
+
+## Overview 
+![](./images/flow.png)
+
+The architecture defines a workflow for objects, a \"digital object
+chain\". Here, the digital object (DO) is the data graph such as the
+JSON-LD package in a landing page.
+
+The chain is the life cycle connecting; authoring, publishing,
+aggregation, indexing and searching/interfaces.
+
+1. Providers are engaged to provide structured data on the web and
+    provide robots.txt and sitemap.xml entries to facilitate indexing.
+2. Harvesting will be done using the Gleaner package developed as part
+    of NSF\'s EarthCube Project 418/419. Harvesting is simply a further
+    leveraging of the web architecture approach and it is expected that
+    other harvesters with perhaps community or interface specific goals
+    will develop.
+3. The results of the Gleaner harvest (data graphs, reports,
+    validations and generated indexes) are stored in an S3 compliant
+    object store.
+4. Generated graph is loaded into a triplestore (Blazegraph in this
+    case) for query and analysis. Future options include leveraging the
+    approach for spatial or other indexes.
+5. From there interfaces can be built such as simple web interfaces,
+    GraphQL or other interface options. Spatial, full text or other
+    indexes can be built. It\'s also possible to explore connections to
+    other research graphs such as the Freya Project or others.
+
+
+## Elements in detail 
+
 ### robots.txt
 
-OPTIONAL: Providers may decide to generate or modify their robots.txt file to provide guidance to the aggregators to be used in this sprint. The plan is to use the Gleaner software (gleaner.io) as well as some Python based notebooks and a few other approaches in this test.
+OPTIONAL: Providers may decide to generate or modify their robots.txt 
+file to provide guidance to the aggregators. 
+The plan is to use the Gleaner software (gleaner.io) as well as some 
+Python based notebooks and a few other approaches in this test.
 
-Goals here will be to provide guidance to indexers from the providers.
-
-Gleaner used an agent string of EarthCube_DataBot/1.0 and this can be used a robots.txt file to specify alternative sitemaps and guidance. This also allows you to provide guidance to Google and other potential indexers both for allow and disallow directives.
+Gleaner uses an agent string of EarthCube_DataBot/1.0 and this can be 
+used a robots.txt file to specify alternative sitemaps and guidance. 
+This also allows a provider to provide guidance to Google and other potential 
+indexers both for allow and disallow directives.
 
 ```txt
 Sitemap: http://samples.earth/sitemap.xml
@@ -41,11 +102,20 @@ Sitemap: http://samples.earth/test.
 
 ### sitemap.xml
 
-Providers in the sprint will be required to expose a set of sample landing pages using a sitemap.xml file. As noted above, providers can expose a test sitemap file to just the target agent in this sprint to avoid indexing test pages by commercial providers.
+Providers will need to expose a set of resource
+landing pages using a sitemap.xml file. As noted above, providers 
+can expose a sitemap file to just the target agent 
+to avoid indexing test pages by commercial providers.  You may wish 
+to do this during testing or for other reasons.  Otherwise, 
+a sitemap.xml file exposed in general from somewhere in your site is 
+perfectly fine.  
 
 Information on the sitemap structure can be found at sitemaps.org.
 
-A goal of this section will be to discuss the use of sitemap lastmod to provide guidance to indexers on sample updates. Additionally indexers may test ways to evaluate additions and removals from the sitemap URL set to manage create, update, delete and edit branches.
+It is encouraged to use the sitemap lastmod node 
+to provide guidance to indexers on page updates. 
+Additionally indexers may test ways to evaluate additions and 
+removals from the sitemap URL set to manage new or removed resources.  
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -63,7 +133,7 @@ A goal of this section will be to discuss the use of sitemap lastmod to provide 
 
 ### Including JSON-LD in your resource page
 
-The final tan in the tangram is the landing page. Samples will need a landing page with a JSON-LD data graph placed in it via a
+Resources  will need a landing page with a JSON-LD data graph placed in it via a
 
 ```html
 <script type="application/ld+json"></script>
@@ -71,9 +141,12 @@ The final tan in the tangram is the landing page. Samples will need a landing pa
 
 entry in the document head.
 
-An example data graph can be seen below but we will be updating this with a better example and also provide some more technical details for publishers for things like schema and validation approaches.
+An example data graph can be seen below.   However, check the various 
+thematic sections for more examples for a given thematic area.  
 
-Providers may also wish to provide content negotiation for type application/ld+json for these resources. Some indexers,  like Gleaner, will attempt to negotiate for the specific serialization and this will likely lighten the load on the servers going forward.
+Providers may also wish to provide content negotiation for type application/ld+json 
+for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
+the specific serialization and this will likely lighten the load on the servers going forward.
 
 ```json
 {
@@ -119,3 +192,5 @@ some of these and some links to starting points for their support follows.
 - [OPeNDAP (native support)](https://www.opendap.org/)
 - [GeoNode](http://geonode.org/)
   - [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)
+
+
