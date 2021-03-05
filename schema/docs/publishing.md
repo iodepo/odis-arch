@@ -5,10 +5,10 @@
 This page describes the publishing process for structured data 
 on the web approach OIH will use.  
 
-Note many software packages you might be using are already 
-implementing this approach and could make implementation, in that
-case, easier.  
-See the section: _Existing support in software_
+Note many software packages you are using might already 
+implement this approach.  See the section: 
+_Existing support in software_ at the bottom of this document.
+
 
 
 ### Including JSON-LD in your resource page
@@ -53,10 +53,11 @@ thematic sections for more examples for a given thematic area.
 }
 ```
 
-This example is from the [training and courses thematic section](../../schema/thematics/training/README.md).
+This example is from the [training and courses thematic section](../../schema/thematics/training/README.md).  To view all the types being developed reference
+the [Thematic section](../thematics/README.md).
 
-These JSON-LD documents leverage schema.org as the primary vocabulary.  The examples in the
-thematic section provide examples for the various type.  
+These JSON-LD documents leverage schema.org as the primary vocabulary.
+The examples in the thematic section provide examples for the various type.  
 
 #### JSON-LD Tools and References
 
@@ -169,39 +170,41 @@ removals from the sitemap URL set to manage new or removed resources.
 
 
 ## Full Workflow 
-![](./images/flow.png)
+![](./images/flowv2.png)
 
-The architecture defines a workflow for objects, a \"digital object
-chain\". Here, the digital object (DO) is the data graph such as the
-JSON-LD package in a landing page.
+The architecture defines a workflow for objects seen in the above diagram.
 
-The chain is the life cycle connecting; authoring, publishing,
-aggregation, indexing and searching/interfaces.
+The documents flow from; authoring, publishing and indexing to
+storage for the objects and the resulting graph.  These resources are
+then ready for use in search and other functions.
 
-1. Providers are engaged to provide structured data on the web and
-    provide robots.txt and sitemap.xml entries to facilitate indexing.
-2. Harvesting will be done using the Gleaner package developed as part
-    of NSF\'s EarthCube Project 418/419. Harvesting is simply a further
-    leveraging of the web architecture approach and it is expected that
-    other harvesters with perhaps community or interface specific goals
-    will develop.
-3. The results of the Gleaner harvest (data graphs, reports,
-    validations and generated indexes) are stored in an S3 compliant
-    object store.
-4. Generated graph is loaded into a triplestore (Blazegraph in this
-    case) for query and analysis. Future options include leveraging the
-    approach for spatial or other indexes.
-5. From there interfaces can be built such as simple web interfaces,
-    GraphQL or other interface options. Spatial, full text or other
-    indexes can be built. It\'s also possible to explore connections to
-    other research graphs such as the Freya Project or others.
+Moving left to right we can review the image.
 
+1. Providers are engaged in the process of developing the OIH example documents.  These provide a _profile_ to follow to represent the semantic metadata.  Note, these are not limiters, simply guidance on minimum and recommend elements to address the functional goals of the OIH portal. 
 
+2. Providers use these documents to generate the JSON-LD data graphs.  
+These can be either static documents or generated and placed in pages
+dynamically with Javascript or server side templates.  These are the 
+existing web pages for the resoruces, not enhanced with the 
+semantic metadata snippets in the HTML source.  
+
+3. These are published to the web and referenced in the sitemap.xml 
+document that is also made available.  At this point this material is 
+available to anyone who may wish to index it and provide discovery 
+for these resources.  
+
+4. OIH Portal will then index and validate these resources on a 
+recurring bases to maintain a current index.  This index will include 
+both the JSON-LD objects and the graph they form.  This graph can 
+be used for search, connections and other value add services for the 
+community. The graph is also directly available to the community for them
+to use in support of services they may wish to provide. 
 
 ## Existing support in software
 
-Many content management approaches and packages may already have support for this pattern.  A list of
-some of these and some links to starting points for their support follows.  
+Many content management approaches and packages may already have support for the structured data on the web pattern.  
+
+A collection of starting points for their support follows.  
 
 - [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
 - [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
