@@ -8,72 +8,107 @@ on the web approach OIH will use.
 Note many software packages you might be using are already 
 implementing this approach and could make implementation, in that
 case, easier.  
-See the section [Existing support in software][## Existing support in software]
+See the section: _Existing support in software_
+
+
+### Including JSON-LD in your resource page
+
+To provide detailed and semantically described details on a resource, OIH uses
+a [JSON-LD](https://json-ld.org/) snippet or _data graph_.  This small document
+provides details on the resource.  It can also express any explicate connections to other resources an author may wish to express.  The semantic nature of the document also means that connections may later be discovered through graph queries.
+
+Pages will need a JSON-LD data graph placed in it via a typed script tag/element in the document head element like the following.  
+
+```html
+<script type="application/ld+json"></script>
+```
+
+An example data graph can be seen below.   However, check the various
+thematic sections for more examples for a given thematic area.  
+
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+    },
+    "@id": "https://foo.org/url/to/metadata/representation",
+    "@type": "Course",
+    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+            "MOOC",
+            "online"
+        ],
+        "endDate": "2019-03-21",
+        "startDate": "2019-02-15"
+    }
+}
+```
+
+This example is from the [training and courses thematic section](../../schema/thematics/training/README.md).
+
+These JSON-LD documents leverage schema.org as the primary vocabulary.  The examples in the
+thematic section provide examples for the various type.  
+
+#### JSON-LD Tools and References
+
+A key resource for JSON-LD can be found at [JSON-LD](https://json-ld.org/).  There is also an interactive _playground_
+hosted there.  The [JSON-LD Playground](https://json-ld.org/playground/) is useful when testing or exploring approaches 
+for JSON-LD data graphs.  It will catch basic errors of syntax and use.  Note, it will not catch semantic issues such 
+as using properties on types that are out of range.  Tools like the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) are better at that.  Also the documents and validation material created here OIH will also allow for that sort of testing and feedback.  
+
+Providers may also wish to provide content negotiation for type application/ld+json 
+for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
+the specific serialization and this will likely lighten the load on the servers going forward.
+
+
+#### Validation With SHACL or ShEx
+
+To help facilitate the interconnection of resource, some application focused validation
+will be developed. Note, this validation does not limit what can be in the graphs.  
+Rather, it simply provides insight on to how well a given graph can be leveraged for a specific application.  For this project, the application will be the OIH search portal.
+
+Some initial development work for this can be found in the
+[validation directory](../validation/README.md)
+
+##### Validation Tools and References
+- [SHACL playground](https://shacl.org/playground/)
+- [Schemarama](https://github.com/google/schemarama)
+- [Schimatos.org](https://github.com/schimatos/schimatos.org)  
+  - [demo](http://rsmsrv01.nci.org.au:8080/schimatos/)
+- [Comparing ShEx and SHACL](https://book.validatingrdf.com/bookHtml013.html)
+
+
+#### Validation Leveraging JSON Schema
+
+We have been exploring the potential to use JSON Schema combined with various on-line JSON editors (JSON Schema driven) to provide a potential approach to a more visual editing workflow. The workflow presented here is very ad hoc but exposes a potential route a group might take to develop a usable tool. Such a tool might, for example, leverage the Electron app dev environment to evolve this approach in a more dedicated tool/manner.
+
+Use a JSON-LD document ([Example](./projects/graphs/sosproj.json)) one could load this into something like 
+the [JSONschema.net tool](https://jsonschema.net/).
+
+The results of the above can then been loaded into the online JSON-Editor at https://json-editor.github.io/json-editor/. (Ref: [https://github.com/json-editor/json-editor](https://github.com/json-editor/json-editor))
+
+The results of this then can be load into https://json-ld.org/playground/ to validate that we have well formed JSON-LD.
+
+Though this workflow is rather crude and manual it exposes a route to a defined workflow based around established schema that leverages other tools and software libraries to generate a workable tool.
 
 ## Basics
 
-The basics of the approach can be seen below.  
+The basic activity can be seen in the following diagram:
 
 ![](./images/example1Flow.png)
 
-A brief overview of this elements is provide here.  For more
-detail see the [Elements in detail][## Elements in detail]
-section below.
+### Elements in detail
 
-### robots.txt (optional)
-
-This is an optional step, but a robots.txt file can be used to define 
-the sitemap and even option agent names to associate with the sitemaps.
-This document is not required, but for those who use such a document
-and wish to leverage it, that is an option.
-
-### sitemap
-
-Following the approaches below an XML document that points to the 
-various resources to be indexed needs to be generated.  Of 
-particular use is the lastmod node to indicate the date of
-last modification to allow continued indexing without the need
-for a full site index each time.
-
-### JSON-LD in landing pages
-
-The last element is the creation of the JSON-LD data graphs 
-describing the resources leveraging the schema.org vocabulary. 
-These JSON-LD documents need to be placed in the pages referenced
-by the sitemap.  
-
-## Overview 
-![](./images/flow.png)
-
-The architecture defines a workflow for objects, a \"digital object
-chain\". Here, the digital object (DO) is the data graph such as the
-JSON-LD package in a landing page.
-
-The chain is the life cycle connecting; authoring, publishing,
-aggregation, indexing and searching/interfaces.
-
-1. Providers are engaged to provide structured data on the web and
-    provide robots.txt and sitemap.xml entries to facilitate indexing.
-2. Harvesting will be done using the Gleaner package developed as part
-    of NSF\'s EarthCube Project 418/419. Harvesting is simply a further
-    leveraging of the web architecture approach and it is expected that
-    other harvesters with perhaps community or interface specific goals
-    will develop.
-3. The results of the Gleaner harvest (data graphs, reports,
-    validations and generated indexes) are stored in an S3 compliant
-    object store.
-4. Generated graph is loaded into a triplestore (Blazegraph in this
-    case) for query and analysis. Future options include leveraging the
-    approach for spatial or other indexes.
-5. From there interfaces can be built such as simple web interfaces,
-    GraphQL or other interface options. Spatial, full text or other
-    indexes can be built. It\'s also possible to explore connections to
-    other research graphs such as the Freya Project or others.
-
-
-## Elements in detail 
-
-### robots.txt
+#### robots.txt
 
 OPTIONAL: Providers may decide to generate or modify their robots.txt 
 file to provide guidance to the aggregators. 
@@ -100,7 +135,7 @@ Allow: /
 Sitemap: http://samples.earth/test.
 ```
 
-### sitemap.xml
+#### sitemap.xml
 
 Providers will need to expose a set of resource
 landing pages using a sitemap.xml file. As noted above, providers 
@@ -131,54 +166,37 @@ removals from the sitemap URL set to manage new or removed resources.
 </sitemapindex>
 ```
 
-### Including JSON-LD in your resource page
 
-Resources  will need a landing page with a JSON-LD data graph placed in it via a
 
-```html
-<script type="application/ld+json"></script>
-```
+## Full Workflow 
+![](./images/flow.png)
 
-entry in the document head.
+The architecture defines a workflow for objects, a \"digital object
+chain\". Here, the digital object (DO) is the data graph such as the
+JSON-LD package in a landing page.
 
-An example data graph can be seen below.   However, check the various 
-thematic sections for more examples for a given thematic area.  
+The chain is the life cycle connecting; authoring, publishing,
+aggregation, indexing and searching/interfaces.
 
-Providers may also wish to provide content negotiation for type application/ld+json 
-for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
-the specific serialization and this will likely lighten the load on the servers going forward.
+1. Providers are engaged to provide structured data on the web and
+    provide robots.txt and sitemap.xml entries to facilitate indexing.
+2. Harvesting will be done using the Gleaner package developed as part
+    of NSF\'s EarthCube Project 418/419. Harvesting is simply a further
+    leveraging of the web architecture approach and it is expected that
+    other harvesters with perhaps community or interface specific goals
+    will develop.
+3. The results of the Gleaner harvest (data graphs, reports,
+    validations and generated indexes) are stored in an S3 compliant
+    object store.
+4. Generated graph is loaded into a triplestore (Blazegraph in this
+    case) for query and analysis. Future options include leveraging the
+    approach for spatial or other indexes.
+5. From there interfaces can be built such as simple web interfaces,
+    GraphQL or other interface options. Spatial, full text or other
+    indexes can be built. It\'s also possible to explore connections to
+    other research graphs such as the Freya Project or others.
 
-```json
-{
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@type": ["Service", "ResearchProject"],
-    "legalName": "Example Data Repository",
-    "name": "ExDaRepo",
-    "url": "https://www.example-data-repository.org",
-    "description": "The BCO-DMO resource catalog offers free and open access to publicly funded research products whose field of study are biological and chemical oceanography.",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.example-data-repository.org/logo.jpg"
-    },
-    "contactPoint": {
-      "@id": "https://www.example-data-repository.org/about-us",
-      "@type": "ContactPoint",
-      "name": "Support",
-      "email": "info@example-data-repository.org",
-      "url": "https://www.example-data-repository.org/about-us",
-      "contactType": "customer support"
-    },
-    "funder": {
-      "@type": "FundingAgency",
-      "@id": "https://dx.doi.org/10.13039/10000001",
-      "legalName": "National Science Foundation",
-      "alternateName": "NSF",
-      "url": "https://www.nsf.gov/"
-    }
-}
-```
+
 
 ## Existing support in software
 

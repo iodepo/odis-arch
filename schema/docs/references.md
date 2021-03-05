@@ -2,16 +2,20 @@
 
 ## General
   
-* [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
-* [BioSchemas](https://bioschemas.org/liveDeploys/ )
+  [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
+  
+  [BioSchemas](https://bioschemas.org/liveDeploys/ )
 
-* [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
-* [PID policy for European Open Science Cloud](https://op.europa.eu/en/publication-detail/-/publication/35c5ca10-1417-11eb-b57e-01aa75ed71a1/language-en)
-* [DCAT Schema.org mappings](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
-* [DCAT US Data.gov reference](https://resources.data.gov/resources/dcat-us/)
-* [FAIR Semantics](https://zenodo.org/record/3707985#.X7Jq2-RKjrV)
-  * [RDA group meeting notes](https://docs.google.com/document/d/18CyQ2WsOxG_0zzzteubJyPveZzr8KPH4iuvoKVxRo3o/edit)
-  * [RDA Plenary meeting](https://www.rd-alliance.org/moving-toward-fair-semantics-2)
+  [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
+  
+  [PID policy for European Open Science Cloud](https://op.europa.eu/en/publication-detail/-/publication/35c5ca10-1417-11eb-b57e-01aa75ed71a1/language-en)
+  
+  [DCAT Schema.org mappings](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
+  
+  [DCAT US Data.gov reference](https://resources.data.gov/resources/dcat-us/)
+  
+  [FAIR Semantics](https://zenodo.org/record/3707985#.X7Jq2-RKjrV)
+
 
 ## Developer References
 
@@ -92,6 +96,45 @@
 
 ## Not Categorized Yet
 
+
+[Lighthouse Plugins](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md)
+
+[Lighthouse](https://github.com/GoogleChrome/lighthouse)
+
+[Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
+ 
+[BioSchemas](http://bioschemas.org/)
+
+[CodeMeta](https://codemeta.github.io/)
+
+[Linter Structured Data](http://linter.structured-data.org/)
+
+[JSON-LD Playground](https://json-ld.org/playground/)
+
+[JSON-LD.org](https://json-ld.org)
+
+[SHACL playground](https://shacl.org/playground/)
+
+[Google Structured Data testing tool](https://search.google.com/structured-data/testing-tool) (
+
+[Google Dataset for  developers](https://developers.google.com/search/docs/data-types/dataset)
+
+[Press  article](https://www.schemaapp.com/toolssay-goodbye-to-googles-structured-data-testing-tool-and-hello-to-the-alternatives/)
+
+[Rich results](https://search.google.com/test/rich-results)
+
+[SchemaApp.com](https://www.schemaapp.com/solutions/structured-data-health-check-diagnostic/)
+
+[Yandex](https://webmaster.yandex.com/tools/microtest/)
+
+[Schema dev](https://test.schema.dev/)
+
+[Chromeextension](https://chrome.google.com/webstore/detail/ryte-structured-data-helpndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en)
+
+[Google Rich Results](https://search.google.com/test/rich-results)
+
+[Datashapes](http://datashapes.org/)
+
 [ACL Web Alexa Meaning Representation Language](https://www.aclweb.org/anthology/N18-3022.pdf )
 
 [hash.aio Volcano schema](https://hash.ai/schemas/Volcano )
@@ -105,3 +148,8 @@
 [iPhylo Biodiversity KG](https://iphylo.blogspot.com/2018/08/ozymandias-biodiversity-knowledge-graph.html)
 
 [ozymandias](https://ozymandias-demo.herokuapp.com/ )
+
+
+ [RDA group meeting notes](https://docs.google.com/document/d/18CyQ2WsOxG_0zzzteubJyPveZzr8KPH4iuvoKVxRo3o/edit)
+  
+  [RDA Plenary meeting](https://www.rd-alliance.org/moving-toward-fair-semantics-2)
