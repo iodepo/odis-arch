@@ -1,0 +1,56 @@
+
+
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+    },
+    "@id": "https://foo.org/url/to/metadata/representation",
+    "@type": "Course",
+    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+            "MOOC",
+            "online"
+        ],
+        "endDate": "2019-03-21",
+        "startDate": "2019-02-15"
+    }
+}
+
+
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Course",
+    "courseCode": "F300",
+    "name": "Physics",
+    "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Bristol",
+        "url": {
+            "@id": "/provider/324/university-of-bristol"
+        }
+    }
+}
+
+
+    {
+      "ID" : {{jsonize(cells["ID"].value)}},
+      "type" : {{jsonize(cells["type"].value)}},
+      "description" : {{jsonize(cells["description"].value)}},
+      "name" : {{jsonize(cells["name"].value)}},
+      "provider.name" : {{jsonize(cells["provider.name"].value)}},
+      "provider.url" : {{jsonize(cells["provider.url"].value)}},
+      "CourseInstance" : {{jsonize(cells["CourseInstance"].value)}},
+      "courseMode" : {{jsonize(cells["courseMode"].value)}},
+      "enddata" : {{jsonize(cells["enddata"].value)}},
+      "startdate" : {{jsonize(cells["startdate"].value)}}
+    }

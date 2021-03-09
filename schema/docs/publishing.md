@@ -9,6 +9,21 @@ Note many software packages you are using might already
 implement this approach.  See the section: 
 _Existing support in software_ at the bottom of this document.
 
+### Architecture Implementation
+
+The Ocean Info Hub (OIH) will leverage structured data on the web and web architecture patterns to expose metadata about resources of interest to the community.  The primary tasks include:
+
+* Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH guidance to express the structured metadata for a resource.  This step will require experience with using the existing metadata resources within an organization.  So any necessary skills needed to access or query existing facility data systems will be needed to assemble the information to populate the JSON-LD data graph.  The JSON-LD documents need to be generated using the tools/languages at the previous reference or through other means.  
+* Within the system architecture of the site, a JSON-LD document needs to be placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each published resource.   The SCRIPT tag pattern is:
+  
+  ```JSON
+  <script type="application/ld+json">[JSON_LD content]</script>
+  ```
+
+* Additionally these resources that are marked up with these tags and JSON-LD documents should be expressed in an XML sitemap file.  This should follow the guidance at https://www.sitemaps.org/.  It should also include a lastmod node element as described at https://www.sitemaps.org/protocol.html which should indicate the date the resource metadata was last updated and published to the web.  
+* The process of aligning the JSON-LD is iterative at this stage as the OIH profile is evolved.  To aid this we can leverage existing validation tools including JSONSchema, W3C SPARQL and more to communicate structure changes.  These tools exist and need only be implemented using knowledge of command line environments.  The results will then indicate revisions needed in the JSON-LD.  OIH will provide the necessary templates for the tools to use against the authored JSON-LD documents.  
+
+Information on the sources, standards and vocabularies to be used can be found at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs 
 
 
 ### Including JSON-LD in your resource page
@@ -206,6 +221,8 @@ Many content management approaches and packages may already have support for the
 
 A collection of starting points for their support follows.  
 
+
+- [WordPress](https://wordpress.org/plugins/schema/)
 - [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
 - [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
 - [DSpace](https://journal.code4lib.org/articles/13191)
