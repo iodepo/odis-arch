@@ -1,5 +1,19 @@
 
 
+PREFIX
+
+{
+    "@context": "https://schema.org",
+    "@type": ["ItemList", "CreativeWork"],
+    "name": "Top 5 covers of Bob Dylan Songs",
+    "author": "John Doe",
+    "about": {
+      "@type": "Course"
+    },
+    "itemListElement": [
+
+
+ROW TEMPLATE
 {
     "@context": {
         "@vocab": "https://schema.org/",
@@ -10,21 +24,38 @@
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         }
     },
-    "@id": "https://foo.org/url/to/metadata/representation",
-    "@type": "Course",
-    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "@id":  {{jsonize(cells["ID"].value)}},
+    "@type":{{jsonize(cells["type"].value)}},
+    "description":  {{jsonize(cells["description"].value)}},
+    "name" : {{jsonize(cells["name"].value)}},
     "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": [
-            "MOOC",
-            "online"
-        ],
-        "endDate": "2019-03-21",
-        "startDate": "2019-02-15"
+        "@type":  {{jsonize(cells["CourseInstance"].value)}},
+        "courseMode":  {{jsonize(cells["courseMode"].value)}},
+        "endDate":  {{jsonize(cells["enddata"].value)}},
+        "startDate":{{jsonize(cells["startdate"].value)}}
+    },
+    "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": {{jsonize(cells["provider.name"].value)}},
+        "url": {
+            "@id":  {{jsonize(cells["provider.url"].value)}}
+        }
     }
 }
 
+ROW SEPERATOR
+,
 
+
+SUFFIX
+
+]
+}
+
+
+
+
+NOTES
 {
     "@context": {
         "@vocab": "https://schema.org/"

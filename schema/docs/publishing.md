@@ -17,7 +17,7 @@ The Ocean Info Hub (OIH) will leverage structured data on the web and web archit
 * Within the system architecture of the site, a JSON-LD document needs to be placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each published resource.   The SCRIPT tag pattern is:
   
   ```JSON
-  <script type="application/ld+json">[JSON_LD content]</script>
+  <script type="application/ld+json">JSON_LD content</script>
   ```
 
 * Additionally these resources that are marked up with these tags and JSON-LD documents should be expressed in an XML sitemap file.  This should follow the guidance at https://www.sitemaps.org/.  It should also include a lastmod node element as described at https://www.sitemaps.org/protocol.html which should indicate the date the resource metadata was last updated and published to the web.  
