@@ -36,7 +36,6 @@ digraph G {
     label = "Vessels\nschema:Vehicle";
     color=blue;
     Vessel;
-
   }
 
   subgraph clusterTraining {
@@ -54,12 +53,22 @@ digraph G {
     Dataset;
   }
 
-  CreativeWork -> Spatial [lhead=clusterSpatial]
-  Map -> Spatial [lhead=clusterSpatial]
-  Dataset -> Spatial [lhead=clusterSpatial]
 
-  Dataset -> Service  
- 
+// Express all creative works express spatial
+  CreativeWork -> Place [lhead=clusterSpatial ltail=clusterDoc]
+  // Map -> Place [lhead=clusterSpatial]
+  // Dataset -> Place [lhead=clusterSpatial]
+
+  Dataset -> Service   [ltail=clusterDoc];
+  Project -> Person  
+  Service -> Organization
+
+// Express all creative works express connection to people or organizations
+  CreativeWork -> Person [ltail=clusterDoc lhead=clusterOrg  dir="both"];
+
+  // Person, Organization, Project -> CreativeWork
+  // Person, Organization, Project -> Service
+
   Vessel -> Organization [label="additionProperty"]
   Person -> Organization
   Course -> Organization [label="author, creator, funder, maintainer"]
