@@ -55,7 +55,6 @@ An example of a minimal description of such a resource would look like the follo
     "keywords": 
        {
            "@type": "DefinedTerm",
-           "inDefinedTermSet": "URL",
            "inDefinedTermSet": {
                "@type": "DefinedTermSet",
                "name": "Name of the set",

@@ -71,7 +71,7 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
         "@vocab": "https://schema.org/"
     },
     "@type": ["Service", "ResearchProject"],
-    "@id": "https://great.research.org",
+    "@id": "ID_for_this_metadata_record",
     "legalName": "Example Data Repository",
     "name": "ExDaRepo",
     "url": "https://www.example-data-repository.org",
@@ -165,6 +165,7 @@ Another test:
   "@context": {
     "@vocab": "https://schema.org/"
   },
+    "@id": "ID_for_this_metadata_record",
     "@type": "ItemList",
     "url": "http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600",
     "numberOfItems": "315",

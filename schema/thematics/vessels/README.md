@@ -16,6 +16,7 @@ and link more directly to detailed institutional metadata records.
     "@context": {
         "@vocab": "https://schema.org/"
     },
+    "@id": "ID_for_this_metadata_record",
     "@type": "Vehicle",
     "name": "JOIDES Resolution",
     "identifier": {

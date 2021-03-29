@@ -29,6 +29,7 @@ many specific types we can use at the bottom.
     "@context": {
         "@vocab": "https://schema.org/"
     },
+    "@id": "ID_for_this_metadata_record",
     "@type": "Person",
     "name": "Jane Doe",
     "jobTitle": "Professor",
@@ -56,7 +57,7 @@ many specific types we can use at the bottom.
     "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@id": "https://link.to/PID_like_re3_or_others",
+    "@id": "ID_for_this_metadata_record",
     "@type": "Organization",
     "address": {
         "@type": "PostalAddress",
