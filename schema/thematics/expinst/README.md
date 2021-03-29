@@ -14,6 +14,10 @@ affiliation.  More detailed records would include persistent identifiers.
 * [schema:Person](https://schema.org/Person)
 * [scheme:Organization](https://schema.org/Organization)
 * [Science on Schema Repository](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/DataRepository.md)
+* [https://oceanexpert.org/](https://oceanexpert.org/)
+  * [Example page expert](https://oceanexpert.org/expert/44151)
+  * [Example page institution](https://oceanexpert.org/institution/10171)
+  * [Work done by Adam Leadbetter years ago](https://gist.github.com/adamml/58ebdc7fc3f8ab8dad5d8852a28fb28c)
 
 For organization we can look at the work of Science on Schema for Data Repository and
 work from there.
@@ -59,6 +63,7 @@ many specific types we can use at the bottom.
     },
     "@id": "ID_for_this_metadata_record",
     "@type": "Organization",
+    "name": "Foo Inc.",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Paris, France",
@@ -66,6 +71,7 @@ many specific types we can use at the bottom.
         "streetAddress": "38 avenue de l'Opera"
     },
     "email": "secretariat(at)foo.org",
+    "telephone": "( 33 1) 42 68 53 00",
     "faxNumber": "( 33 1) 42 68 53 01",
     "member": [
         {
@@ -85,8 +91,6 @@ many specific types we can use at the bottom.
             "name": "John Smith"
         }
     ],
-    "name": "Foo Inc.",
-    "telephone": "( 33 1) 42 68 53 00",
     "identifier": {
         "@id": "ID_value_string",
         "@type": "PropertyValue",

@@ -2,7 +2,7 @@
 
 ## About
 
-Documentation on implementing schema.org for the Ocean Info Hub (OIH) to facilitate the indexing and discovery
+Documentation on implementing schema.org for the Ocean InfoHub (OIH) to facilitate the indexing and discovery
 of resources.  The approach leverages schema.org which is a community effort and widely
 implemented.
 
