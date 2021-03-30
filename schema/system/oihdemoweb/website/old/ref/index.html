@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Core Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/simple-grid.css">
+  <link rel="stylesheet" href="css/zc-grid.css">
+
+<script> function myFunction() 
+{ 
+var search = document.getElementById("searchtext").value; 
+    var str = '/newsite/search.html?q='+search;
+    alert(str);
+window.location.assign(str); 
+} 
+</script>
+
+</head>
+<body>
+  <div class="jumbotron" style="background-image: linear-gradient(#7391ff, #625354);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 center">
+          <img style="height:100px" src="./img/logo22small.png">
+          <h3 style="margin:5px;color:white">Open Core Data</h3>
+            <!-- 
+          <div class="img img-logo center"></div>
+          <h1>Simple Grid is a CSS grid for your website.</h1>
+          <h2 class="font-light">Responsive, light, simple.</h2>
+          <a href="simple-grid.zip" download>
+            <button>Download</button>
+          </a>
+            -->
+        </div>
+        <div class="col-12 center">
+        <form action="search.html" method="GET">
+          <img src="./img/search.svg" style="height:25px">
+            <input style="font-size:120%"  type="search" id="q" name="q" aria-label="Search for samples">
+            <button id="update">Search</button> 
+        </form>
+            <!--   <div class="img img-website-mock"></div>  -->
+        </div>
+ 
+      </div>
+      <div class="row">
+        <div class="col-2 hidden-sm"></div>
+      </div>
+     </div>
+  </div>
+    
+  <div class="body-content">
+    <div style="padding-top:0px;top:0px" class="container">
+
+      <div class="row">
+        <div class="col-6 center">
+          <!-- <div class="img img-responsive center"></div> -->
+          <img src="./img/csdcologo.png" style="height:75px">
+          <h3>CSDCO</h3>
+          <p>
+           Continental Scientific Drilling Coordination Office
+          </p>
+        </div>
+        <!-- <div class="col-4 center">
+          <img src="./img/JRSO_logo.svg" style="height:75px">
+          <h3>JRSO</h3>
+          <p>
+          JOIDES Resolution Science Operator (JRSO) manages and operates the riserless drillship, JOIDES Resolution, for the International Ocean Discovery Program (IODP). 
+          </p>
+        </div> -->
+        <div class="col-6 center">
+          <img src="./img/aggregate.svg" style="height:75px">
+          <!-- <div class="img img-simple center"></div> -->
+          <h3>Open Data</h3>
+          <p>
+            The digital objects are hosted following RDA Digital Object Cloud
+            patterns.  They are accessible through the web and can be integrated into 
+            various workflows including notebooks. 
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 hidden-sm"></div>
+        <div class="col-8">
+          <h3 class="center m-bottom">FAIR Data</h3>
+          <p>
+            The FAIR principles are typically applied to data but 
+            they have very close parallels to goals with physical samples. 
+          </p>
+          <p>
+            
+          </p>
+        </div>
+        <div class="col-2 hidden-sm"></div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4 hidden-sm"></div>
+        <div class="col-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-4 hidden-sm"></div>
+      </div>
+      <div class="row">
+        <div class="col-2 hidden-sm"></div>
+        <div class="col-8">
+          <h3 class="center m-bottom">Simple Architecture</h3>
+          <p>
+         This architecture leverages basic web architecture and structured data on the web to 
+          scale its services.
+          </p>
+          <p>
+          Schema.org is a collaborative, community activity with a mission to create, maintain, 
+          and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
+          Schema.org can be extended with vocabularies such as DCAT, SOSA, etc.  
+          </p>
+          <p>
+            This approach leverages the rich ecosystem of tools developers currently
+            leverage for JSON.  Additionally a growing suite of tools and guides specifically for geosciences and 
+            structured data on the web are under development.  
+          </p>
+        </div>
+        <div class="col-2 hidden-sm"></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <pre>
+            <code>
+              {
+                "@context": {
+                  "@vocab": "https://schema.org/"
+                },
+                "@type": "Dataset",
+                "name": "Removal of organic carbon by natural bacterioplankton 
+                communities as a function of pCO2 from laboratory 
+                experiments between 2012 and 2016",
+                "description": "This dataset includes results of laboratory experiments which measured 
+                dissolved organic carbon (DOC) usage by natural bacteria in seawater at different pCO2 
+                levels.Included in this dataset are; bacterial abundance, total organic
+                carbon (TOC), what DOC was added to the experiment, target pCO2 level.The 
+                experiments were conducted between 2012 and 2016 during the R/V Kilo Moana cruise
+                KM1416, at the Bermuda Institute for Ocean Sciences (BIOS), and the University of 
+                Santa Barbara."
+                "url": "https://www.example-data-repository.org/dataset/472032",
+                "version": "2013-11-21",
+                "keywords": ["ocean acidification", "OA", "Dissolved Organic Carbon",
+                "DOC", "bacterioplankton respiration", "pCO2", "carbon dioxide",
+                "elevated pCO2", "oceans"],
+                "license": "CC-BY-4.0"
+              }
+  </code>
+          </pre>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-4 hidden-sm"></div>
+        <div class="col-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-4 hidden-sm"></div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+  <footer style="padding-bottom:5px;background-image: linear-gradient(#7391ff, #625354);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h6 style="color:white">Open Core Data was funded by the National Science Foundation </h6>
+          <h6 style="color:grey">Simple Grid by <a style="color:grey" href="http://zcole.me" target="_blank">Zach Cole</a>
+            Open source under the <a style="color:grey" href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+          </h6>
+          <h6>Powered by GROW</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
