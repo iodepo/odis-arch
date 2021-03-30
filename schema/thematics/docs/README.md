@@ -31,6 +31,19 @@ An example of a minimal description of such a resource would look like the follo
     "name": "Name or title of the document",
     "description": "Description of the creative work to aid in searching",
     "url":  "https://www.sample-data-repository.org/creativework/report.pdf",
+    "contributor": {
+      "@type": "Organization",
+      "@id": "http://www.foo.org/orgID",
+      "legalName": "Some Institute"
+    },
+    "author": {
+      "@id": "https://www.sample-data-repository.org/person/51317",
+      "@type": "Person",
+      "name": "Dr Uta Passow",
+      "givenName": "Uta",
+      "familyName": "Passow",
+      "url": "https://www.sample-data-repository.org/person/51317"
+    },
     "identifier":
       {
         "@id": "https://doi.org/10.5066/F7VX0DMQ",
@@ -42,7 +55,6 @@ An example of a minimal description of such a resource would look like the follo
     "keywords": 
        {
            "@type": "DefinedTerm",
-           "inDefinedTermSet": "URL",
            "inDefinedTermSet": {
                "@type": "DefinedTermSet",
                "name": "Name of the set",

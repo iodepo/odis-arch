@@ -2,11 +2,15 @@
 
 ## About
 
-The OIH implementation can be viewed as a more horizontal effort vs a depth effort like BioSchemas or
-Science on Schema.  Given that it is good to explore the cross cutting "things" early to ensure they 
-are both expressed and provide good recovery during query.  
+This document provides an overview of potential connections between the 
+various thematic types in OIH.  These are not _all_ the relations but simply 
+some to demonstrate the concept as well as give some guidance on the 
+connection of value in query results.
+
+![relations](./images/relations.svg)
+
+## Points of Interest
 
 
-```
-dot  -Estyle=dotted -Gsplines=true -Grankdir=LR  -Tsvg -o $directory/$basefilename.svg
-```
+### Documents to Spatial
+

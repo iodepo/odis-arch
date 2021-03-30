@@ -26,11 +26,8 @@ versioning the profiles to provide stable implementations providers can reliably
 
 The stages of the data flow include the authoring, publishing and harvesting or indexing of the published resources. The following sections break these out and provide guidance.
 
-* [Authoring](./docs/authoring.md): Guidance on the creation of the JSON-LD data graphs.  Links to documentation
-  and tools to validate.
 * [Publishing](./docs/publishing.md):  Notes for leveraging the web architecture to publish and expose your described resources.
 * [Indexing](./docs/indexers.md): How to building indexes from information published following structured data on the web practices.  The approaches used by OIH can be leveraged both by commercial indexing services as well as community managed resources.
-* [Background](./docs/background.md) A brief overview of the stages and flows that will be implemented in the OIH search portal
 
 ## Additional Resources
 
