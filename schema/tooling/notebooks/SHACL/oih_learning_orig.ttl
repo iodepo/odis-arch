@@ -21,17 +21,7 @@ oihval:DatasetCommonShape
         oihval:urlResourceProperty,
         oihval:descriptionResourceProperty,
         oihval:keywordsResourceProperty,
-        oihval:identifierProviderProperty ,
-        oihval:characterProperty ;
-    .
-
-oihval:characterProperty
-    a shacl::PropertyShape ;
-    shacl::path schema:name ;
-    shacl::nodeKind shacl::Literal ;
-    shacl::minCount 1 ;
-    shacl::message "Character is required "@en ;
-    shacl::description "https://foo.org" ;
+        oihval:identifierResourceProperty ;
     .
 
 oihval:nameResourceProperty
@@ -62,12 +52,29 @@ oihval:descriptionResourceProperty
     shacl::description "https://foo.org" ;
     .
 
-
-oihval:identifierProviderProperty
+oihval:keywordsResourceProperty
     a shacl::PropertyShape ;
-    shacl::path schema:provider;
+    shacl::path schema:keywords ;
     shacl::minCount 1 ;
-    shacl::message "A provider must be noted"@en ;
-    shacl::description "https://foo.org" ;
+    shacl::nodeKind shacl::Literal ;
+    shacl::message "A resource should include descriptive keywords" ;
+    .
+
+oihval:identifierResourceProperty
+    a shacl::PropertyShape ;
+    shacl::path schema:identifier;
+    shacl::minCount 1 ;
+    shacl::or (
+        [
+            shacl::nodeKind shacl::Literal ;
+        ]
+        [
+            shacl::class schema:URL ;
+        ]
+        [
+            shacl::class schema:PropertyValue ;
+        ]
+    );
+    shacl::message "Resource identifiers must be a URL, Text or PropertyValue"@en ;
     .
 
