@@ -38,3 +38,10 @@ Thoughts:
 How to cross link between things like orgs referenced by datasets.
 
 Examples being OBIS links to OE orgs.  
+
+
+## Type hiearcy
+
+address type hoerarchy for type in graphs...
+
+
