@@ -98,3 +98,98 @@ Also talked about: https://catalogue.odis.org/search/type=13
 ```
 
 https://schema.org/AlignmentObject
+
+
+
+## Old notes to incorporate above
+
+# Notes
+
+## About
+
+These notes are based on OIH meetings.  Out of context they are likely of little use. 
+
+## Notes
+
+### Documents
+
+* For "Docs" focus on base CreativeWork type
+* do a schema.org/Map example
+* How can we leverage the "auto" work in schema.org for vessels
+* DKAN and  CKAN are popular to exploring how to help people leverage 
+those in OIH patterns is important
+* Need a notebook to maintain and inspect the sources sitemaps and 
+provide an assessment approach for the various parties. 
+* Explore leveraging WikiData linkage with geo -> Place(WikiData) for 
+example for things like "Gulf of Mexico"
+* Project
+  * hasCredentials
+  * potentialAction
+  * knowsAbout
+
+### Indexing
+
+* Need to ensure a provenance for the graph documents collected.
+This will be both the object URN in the object store.  It will 
+also be something like a nanopub prov.
+
+
+## Pacific
+
+SPC: https://www.spc.int/ 
+Interested in: documents, spatial, vessels, training, people, org
+CKAN
+
+Other main partner: SPREP https://www.sprep.org/ 
+Interested in: documents and spatial, training,
+DCAN
+
+Pacific Data Hub (https://pacificdata.org)
+Pacific Environment Portal (https://pacific-data.sprep.org)
+
+
+## EU
+
+Peter (SeaDataNet)
+Sandra (EurOcean)
+Julie (EMODnet)
+
+Kevin:  erdap needs to be leveraged (which is good since it support schema.org well)
+CF conventions (netcdf format)   attributes for dataset discovery (in netcdf?)
+darwin core (for bio)  (bioschemas.org)
+Kevin is working on netcdf profiles
+
+Addressing ambiguity in the graphs (shacl, json-ld parsing, https hell)
+
+Sandra (eurocean):
+use seadata cloud (work to match to standards (which ones?))
+
+Julie & Conner (EMODnet):
+Inspire standards (metadata and interop)
+https://ec-jrc.github.io/dcat-ap-to-schema-org/
+https://inspire.ec.europa.eu/metadata-codelist
+
+Multi-lingual and Leveraging https://en.wikipedia.org/wiki/IETF_language_tag
+
+Is there an OAI-PMH to schame.org graph mapping / tool
+
+
+
+## Notes on training
+
+20 minute video stack:
+
+1. High-level concepts of OIH/ODIS
+2. General introduction to our use of schema.org 
+3. One video per pattern, walking through filling them in with correct data (implementation agnostic) 
+4. Setting up the standard publishing/contribution environment 
+5. Harvesting patterns in JSON/RDF 
+6. Querying harvested material Additionally, some walkthroughs of how partners have set up their publishing/harvesting environments.
+
+Each one perhaps 4-5 mins but trying to speak slowly so that we can translate them later :slightly_smiling_face:. I’m not sure what the best split would be, but perhaps following each of the headings on the Architecture page, but also one video per pattern.
+We could load these videos on to this resources page as well, in addition to using them for training / awareness raising courses.
+
+* 1 on Authoring (plus 6, one for each theme)
+* 1 on Publishing
+* 1 on Indexing
+* 1 on Interfaces and Services
