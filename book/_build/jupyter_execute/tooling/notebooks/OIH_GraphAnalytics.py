@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Graph Analytics Exploration
+# # Graph Analytics Exploration
 # 
 # * https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python
 # * https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html
 # 
-# ### Steps
+# ## Steps
 # 
 # * Pull in the OIH RDF graph and load 
 # 
@@ -40,7 +40,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import gzip
 
-with gzip.open('./OIH/oceanexperts_graph.nq.gz', 'rb') as f:
+with gzip.open('oceanexperts_graph.nq.gz', 'rb') as f:
     file_content = f.read()
 
 g = rdflib.Graph()
@@ -57,7 +57,7 @@ G = rdflib_to_networkx_digraph(g)
 # nx.draw(G, with_labels=True)
 
 
-# In[17]:
+# In[3]:
 
 
 pr = nx.pagerank(G,alpha=0.9)
@@ -65,40 +65,40 @@ pr = nx.pagerank(G,alpha=0.9)
 #     print(key, ' : ', value)
 
 
-# In[18]:
+# In[4]:
 
 
 import pandas as pd
 prdf = pd.DataFrame.from_dict(pr, orient='index')
 
 
-# In[19]:
+# In[5]:
 
 
 prdf.dtypes
 
 
-# In[20]:
+# In[6]:
 
 
 prdf.sort_values(by=0,ascending=False, inplace=True,)
 prdf.head(20)
 
 
-# In[26]:
+# In[7]:
 
 
 nx.draw_circular(G, with_labels = False)
 plt.show() # display
 
 
-# In[24]:
+# In[8]:
 
 
 plt.hist([v for k,v in nx.degree(G)])
 
 
-# In[25]:
+# In[9]:
 
 
 plt.hist(nx.centrality.betweenness_centrality(G).values())

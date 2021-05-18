@@ -5,7 +5,7 @@
 # 
 # For more background on the larger ODIS Ocean Info Hub and related referneces please visit out GitHub repository.
 
-# # Some package and imports
+# ## Some package and imports
 
 # ### pip installs
 
@@ -182,7 +182,7 @@ get_ipython().system('curl --remote-name      --location https://raw.githubuserc
 }
 
 
-# # Introduction to JSON-LD files
+# ## Introduction to JSON-LD files
 # 
 
 # In[ ]:
@@ -356,10 +356,10 @@ for row in test.iterrows():
     print('---\nTerm:{} \nURL:{} \ndescription:{}'.format(row[1]['term'], row[1]['topic'],  entity.description))
 
 
-# # Validation
+# ## Validation
 # 
 
-# ## About
+# ### About
 # The code below invokes pySHACL on some data and shape graphs out of GitHub. Note, we could edit these local to this notebook too. The human output is a bit hard to read since some of the encoding is off.
 # 
 # It might actually work to use the graph output and route it through the graph package and into Pandas too. It might let us parse and present the results a bit better.
@@ -399,9 +399,9 @@ conforms, v_graph, v_text = validate(dr, shacl_graph=sr,
 print('{} {}'.format(conforms, v_text))
 
 
-# # Thematic topic: Documents
+# ## Thematic topic: Documents
 
-# ## About
+# ### About
 # 
 # A testing area for the work on type Document
 # 

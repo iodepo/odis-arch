@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../publishing/content.html">
+  <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
   </a>
  </li>
@@ -142,11 +142,6 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="README.html">
      OpenRefine
@@ -189,13 +184,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notebooks/geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../notebooks/SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/index.html">
-   Appendex
+   Appendix
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -208,6 +213,16 @@
      Controlled Lists
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/referenceclient.html">
+     Reference Client
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -215,10 +230,22 @@
    Prov
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../validation/README.html">
    Validation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../annoyances.html">
@@ -352,6 +379,11 @@
    SUFFIX
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   NOTES
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -373,65 +405,68 @@ export template command.</p>
 </div>
 <div class="section" id="prefix">
 <h2>PREFIX<a class="headerlink" href="#prefix" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ItemList&quot;</span><span class="p">,</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">],</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Top 5 covers of Bob Dylan Songs&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ItemList&quot;</span><span class="p">,</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Top 5 covers of Bob Dylan Songs&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;itemListElement&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;itemListElement&quot;</span><span class="p">:</span> <span class="p">[</span>
+
 </pre></div>
 </div>
 </div>
 <div class="section" id="row-template">
 <h2>ROW TEMPLATE<a class="headerlink" href="#row-template" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;,
-        &quot;endDate&quot;: {
-            &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;
-        },
-        &quot;startDate&quot;: {
-            &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;
-        }
-    },
-    &quot;@id&quot;:  {{jsonize(cells[&quot;ID&quot;].value)}},
-    &quot;@type&quot;:{{jsonize(cells[&quot;type&quot;].value)}},
-    &quot;description&quot;:  {{jsonize(cells[&quot;description&quot;].value)}},
-    &quot;name&quot; : {{jsonize(cells[&quot;name&quot;].value)}},
-    &quot;hasCourseInstance&quot;: {
-        &quot;@type&quot;:  {{jsonize(cells[&quot;CourseInstance&quot;].value)}},
-        &quot;courseMode&quot;:  {{jsonize(cells[&quot;courseMode&quot;].value)}},
-        &quot;endDate&quot;:  {{jsonize(cells[&quot;enddata&quot;].value)}},
-        &quot;startDate&quot;:{{jsonize(cells[&quot;startdate&quot;].value)}}
-    },
-    &quot;provider&quot;: {
-        &quot;@type&quot;: &quot;CollegeOrUniversity&quot;,
-        &quot;name&quot;: {{jsonize(cells[&quot;provider.name&quot;].value)}},
-        &quot;url&quot;: {
-            &quot;@id&quot;:  {{jsonize(cells[&quot;provider.url&quot;].value)}}
-        }
-    }
-}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+    <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+    <span class="s2">&quot;hasCourseInstance&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;CourseInstance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+        <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;courseMode&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;enddata&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+        <span class="s2">&quot;startDate&quot;</span><span class="p">:{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;startdate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CollegeOrUniversity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;provider.name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}},</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;@id&quot;</span><span class="p">:</span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;provider.url&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
 </pre></div>
 </div>
 </div>
 <div class="section" id="row-sep">
 <h2>ROW SEP<a class="headerlink" href="#row-sep" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-JOSN notranslate"><div class="highlight"><pre><span></span>,
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">,</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="suffix">
 <h2>SUFFIX<a class="headerlink" href="#suffix" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span> ]
-}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>NOTES</p>
+</div>
+<div class="section" id="notes">
+<h2>NOTES<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 
 <span class="p">{</span>

@@ -105,7 +105,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="publishing/content.html">
+  <a class="reference internal" href="publishing/publishing.html">
    Publishing patterns for OIH
   </a>
  </li>
@@ -141,11 +141,6 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tooling/graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="tooling/openRefine/README.html">
      OpenRefine
@@ -188,13 +183,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tooling/notebooks/geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tooling/notebooks/SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="appendix/index.html">
-   Appendex
+   Appendix
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -207,6 +212,16 @@
      Controlled Lists
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="appendix/graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="appendix/referenceclient.html">
+     Reference Client
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -214,10 +229,22 @@
    Prov
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="validation/README.html">
    Validation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="annoyances.html">
@@ -321,6 +348,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ocean-info-hub">
+   Ocean Info Hub
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-details">
+   Further Details
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -331,39 +381,97 @@
                 
   <div class="section" id="the-ocean-info-hub">
 <h1>The Ocean Info Hub<a class="headerlink" href="#the-ocean-info-hub" title="Permalink to this headline">¶</a></h1>
-<p>Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the <a class="reference external" href="http://schema.org">schema.org</a> vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.</p>
-<p>Ocean Info Hub (OIH) is an implementation of this approach for the UN ODIS community.  OIH is providing guidance on the various stages of such an architecture including authoring, publishing, indexing and interfaces.</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Organizations are increasingly exposing data and resources on the Web.   A
+popular approach to this is using web architecture to expose structured data on
+the web using the <a class="reference external" href="http://schema.org">schema.org</a> vocabulary.   Doing this makes resources
+discoverable by a range of organizations leveraging this architecture to build
+indexes.  These include major commercial indexes, large domain focused groups
+and community focused services.</p>
+</div>
+<div class="section" id="ocean-info-hub">
+<h2>Ocean Info Hub<a class="headerlink" href="#ocean-info-hub" title="Permalink to this headline">¶</a></h2>
+<p>Ocean Info Hub (OIH) is an implementation of this approach for the UN ODIS
+community.  OIH is providing guidance on the various stages of such an
+architecture including authoring, publishing, indexing and interfaces.</p>
 <p>The basics of this approach can be described as:</p>
 <ul class="simple">
-<li><p>Providers publish HTML pages for a resource.  This may be a publication, course description, research instrument or other.   The core themes for OIH are described in the Authoring section below.</p></li>
-<li><p>A HTML page then has a small JSON based snippet added to the HTML.  This is described in the Including JSON-LD in your resource page in the Publishing resource below.</p></li>
-<li><p>If you wish a resource to be included in the OIH index, then you need to include it in a sitemap file.  This is a small XML document that lists links to the resources you wish to be part of the index.  This approach is shown in the sitemap.xml section of the Publishing resource.</p></li>
-<li><p>Once the above is done the publishing phase is over.  At this point, OIH or other groups can now access and index your resources.   OIH is using some existing software to index and generate the graph and expose a simple reference interface to them.  This software is open and available and others are free to implement the approach with other software.  Links to other software are at the repository.</p></li>
-<li><p>The OIH index/graph and a simple interface is current at a development site and in a later phase of OIH a production interface will be developed.</p></li>
+<li><p>Providers publish HTML pages for a resource.  This may be a publication,
+course description, research instrument or other.   The core themes for OIH
+are described in the Authoring section below.</p></li>
+<li><p>A HTML page then has a small JSON based snippet added to the HTML.  This is
+described in the Including JSON-LD in your resource page in the Publishing
+resource below.</p></li>
+<li><p>If you wish a resource to be included in the OIH index, then you need to
+include it in a sitemap file.  This is a small XML document that lists links
+to the resources you wish to be part of the index.  This approach is shown in
+the sitemap.xml section of the Publishing resource.</p></li>
+<li><p>Once the above is done the publishing phase is over.  At this point, OIH or
+other groups can now access and index your resources.   OIH is using some
+existing software to index and generate the graph and expose a simple
+reference interface to them.  This software is open and available and others
+are free to implement the approach with other software.  Links to other
+software are at the repository.</p></li>
+<li><p>The OIH index/graph and a simple interface is current at a development site
+and in a later phase of OIH a production interface will be developed.</p></li>
 </ul>
 <p><img alt="image1" src="_images/intro1.png" /></p>
-<p>Additionally, software to aid in validating and checking the resources is under development and will be available at the repository.   This will aid providers in expressing the information needed to address interfaces and services of interest to the community.</p>
-<p>The result is a sustainable architecture to address discovery and access to various resources published by the community and a shared graph of these resources.  That shared graph can be used by all members to link and discover across groups.</p>
-<p>Groups interested can review material addressing these stages at the OIH GitHub repository.  Links and descriptions of these stages are described below.</p>
+<p>Additionally, software to aid in validating and checking the resources is under
+development and will be available at the repository.   This will aid providers
+in expressing the information needed to address interfaces and services of
+interest to the community.</p>
+<p>The result is a sustainable architecture to address discovery and access to
+various resources published by the community and a shared graph of these
+resources.  That shared graph can be used by all members to link and discover
+across groups.</p>
+</div>
+<div class="section" id="further-details">
+<h2>Further Details<a class="headerlink" href="#further-details" title="Permalink to this headline">¶</a></h2>
+<p>Interested groups can review material addressing these stages at the OIH GitHub
+repository.  Links and descriptions of these stages are described below.</p>
 <p>Authoring
 <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/schema/thematics">https://github.com/iodepo/odis-arch/tree/schema-dev/schema/thematics</a>
-The ODIS OIH is working across five major thematic areas; Experts and Institutions, Documents, Projects, Training, Vessels.   Examples of these thematic concepts are being hosted and developed with input from the community.   Additionally, methods for validation and simple tooling for authoring and testing are hosted at this repository.  Alongside these five thematic topics guidance on connecting services and spatial context on resources.</p>
+The ODIS OIH is working across five major thematic areas; Experts and
+Institutions, Documents, Projects, Training, Vessels.   Examples of these
+thematic concepts are being hosted and developed with input from the community.
+Additionally, methods for validation and simple tooling for authoring and
+testing are hosted at this repository.  Alongside these five thematic topics
+guidance on connecting services and spatial context on resources.</p>
 <p>Publishing
 <a class="reference external" href="https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/publishing.md">https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/publishing.md</a>
-Guidance on implementation the web architecture approach is also available.   This includes approaches on leveraging robots.txt and sitemaps.xml file for expressing hosted resources to the net.</p>
+Guidance on implementation the web architecture approach is also available.
+This includes approaches on leveraging robots.txt and sitemaps.xml file for
+expressing hosted resources to the net.</p>
 <p>Indexing
 <a class="reference external" href="https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/indexers.md">https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/indexers.md</a>
-The architecture approach is open and standards based.  As such, many organizations will be able to leverage the authoring and publishing approaches above to index a providers resources.  OIH will be providing reference implementations of software that can generate the index</p>
+The architecture approach is open and standards based.  As such, many
+organizations will be able to leverage the authoring and publishing approaches
+above to index a providers resources.  OIH will be providing reference
+implementations of software that can generate the index</p>
 <p>Interfaces and Services
 <a class="reference external" href="https://oceans.collaborium.io/">https://oceans.collaborium.io/</a>
-During the development of the OIH a basic reference implementation for an interface has been generated.  This is a development site meant to test and exercise the above elements.   It serves to demonstrate how others could also implement this approach and how future interfaces could be developed.</p>
-<p>An example of the value of implementing a lightweight can be seen with the Government of Canada:</p>
+During the development of the OIH a basic reference implementation for an
+interface has been generated.  This is a development site meant to test and
+exercise the above elements.   It serves to demonstrate how others could also
+implement this approach and how future interfaces could be developed.</p>
+<p>An example of the value of implementing a lightweight can be seen with the
+Government of Canada:</p>
 <ul class="simple">
-<li><p>The Federal Geospatial Platform is a intra-governmental data catalogue implementing the Harmonized North American Profile of ISO 19115 (HNAP), with content exposed externally via OGC CSW (Catalogue Services Web).</p></li>
-<li><p>This content is harvested by the public facing Open Maps platform, which includes a catalogue component that is fed in part by the Federal Geospatial Platform. DCAT-based metadata is derived from the original ISO 19115 based metadata. As this markup is recognized by web crawlers such as those hosted by Google, content is harvested and is subsequently visible through Google Dataset Search. Furthermore, the cited publication for the data is also link via a complementary link to Google Scholar.</p></li>
+<li><p>The Federal Geospatial Platform is a intra-governmental data catalogue
+implementing the Harmonized North American Profile of ISO 19115 (HNAP), with
+content exposed externally via OGC CSW (Catalogue Services Web).</p></li>
+<li><p>This content is harvested by the public facing Open Maps platform, which
+includes a catalogue component that is fed in part by the Federal Geospatial
+Platform. DCAT-based metadata is derived from the original ISO 19115 based
+metadata. As this markup is recognized by web crawlers such as those hosted by
+Google, content is harvested and is subsequently visible through Google
+Dataset Search. Furthermore, the cited publication for the data is also link
+via a complementary link to Google Scholar.</p></li>
 </ul>
 <p><img alt="image1" src="_images/intro2.png" /></p>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 

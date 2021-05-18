@@ -2,7 +2,7 @@
 
 ## About
 
-See also:  [ODIS-ARCH Vocabularies](../../docs/vocabularies.md)
+See also:  [ODIS-ARCH Vocabularies](https://github.com/iodepo/odis-arch/blob/master/docs/vocabularies.md)
 
 A list of possible controlled vocabularies to use in the schema.org documents.
 Many such resources can be found by searching at [BARTOC.org](https://bartoc.org/)

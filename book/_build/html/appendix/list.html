@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Prov" href="../prov/README.html" />
-    <link rel="prev" title="Appendex" href="index.html" />
+    <link rel="next" title="Graph first approaches" href="graphpub.html" />
+    <link rel="prev" title="Appendix" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../publishing/content.html">
+  <a class="reference internal" href="../publishing/publishing.html">
    Publishing patterns for OIH
   </a>
  </li>
@@ -142,11 +142,6 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tooling/graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../tooling/openRefine/README.html">
      OpenRefine
@@ -189,13 +184,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Appendex
+   Appendix
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -208,6 +213,16 @@
      Controlled Lists
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="referenceclient.html">
+     Reference Client
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -215,10 +230,22 @@
    Prov
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../validation/README.html">
    Validation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../annoyances.html">
@@ -322,6 +349,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -332,8 +372,36 @@
                 
   <div class="section" id="controlled-lists">
 <h1>Controlled Lists<a class="headerlink" href="#controlled-lists" title="Permalink to this headline">¶</a></h1>
-<p>There are many ways to write content in Jupyter Book. This short section
-covers a few tips for how to do so.</p>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>Examples for <a class="reference external" href="https://schema.org/DefinedTerm">schema.org/DefinedTerm</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+        <span class="p">{</span>
+                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span><span class="s2">&quot;Book&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+        <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -361,8 +429,8 @@ covers a few tips for how to do so.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Appendex</a>
-    <a class='right-next' id="next-link" href="../prov/README.html" title="next page">Prov</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Appendix</a>
+    <a class='right-next' id="next-link" href="graphpub.html" title="next page">Graph first approaches</a>
 
         </div>
         

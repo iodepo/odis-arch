@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../publishing/content.html">
+  <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
   </a>
  </li>
@@ -142,11 +142,6 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../openRefine/README.html">
      OpenRefine
@@ -189,13 +184,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../appendix/index.html">
-   Appendex
+   Appendix
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -208,6 +213,16 @@
      Controlled Lists
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/referenceclient.html">
+     Reference Client
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -215,10 +230,22 @@
    Prov
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../validation/README.html">
    Validation
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../annoyances.html">
@@ -402,7 +429,7 @@
 
 <span class=" -Color -Color-Red">We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.</span>
 
-<span class=" -Color -Color-Red">aiobotocore 1.2.2 requires botocore&lt;1.19.53,&gt;=1.19.52, but you&#39;ll have botocore 1.20.74 which is incompatible.</span>
+<span class=" -Color -Color-Red">aiobotocore 1.2.2 requires botocore&lt;1.19.53,&gt;=1.19.52, but you&#39;ll have botocore 1.20.75 which is incompatible.</span>
 </pre></div>
 </div>
 </div>
@@ -416,7 +443,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">gzip</span>
 
-<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./OIH/oceanexperts_graph.nq.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;oceanexperts_graph.nq.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
@@ -431,34 +458,6 @@
 <span class="c1"># #nx.draw_networkx_edge_labels(G, pos, labels=edge_labels)</span>
 <span class="c1"># nx.draw_networkx_edge_labels(G, pos)</span>
 <span class="c1"># nx.draw(G, with_labels=True)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">b16c88757127</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">gzip</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./OIH/oceanexperts_graph.nq.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-
-<span class="nn">/usr/lib64/python3.9/gzip.py</span> in <span class="ni">open</span><span class="nt">(filename, mode, compresslevel, encoding, errors, newline)</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">gz_mode</span> <span class="o">=</span> <span class="n">mode</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">)):</span>
-<span class="ne">---&gt; </span><span class="mi">58</span>         <span class="n">binary_file</span> <span class="o">=</span> <span class="n">GzipFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">gz_mode</span><span class="p">,</span> <span class="n">compresslevel</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;read&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;write&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span>         <span class="n">binary_file</span> <span class="o">=</span> <span class="n">GzipFile</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">gz_mode</span><span class="p">,</span> <span class="n">compresslevel</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-
-<span class="nn">/usr/lib64/python3.9/gzip.py</span> in <span class="ni">__init__</span><span class="nt">(self, filename, mode, compresslevel, fileobj, mtime)</span>
-<span class="g g-Whitespace">    </span><span class="mi">171</span>             <span class="n">mode</span> <span class="o">+=</span> <span class="s1">&#39;b&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">172</span>         <span class="k">if</span> <span class="n">fileobj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">173</span>             <span class="n">fileobj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">myfileobj</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span> <span class="ow">or</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">174</span>         <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">175</span>             <span class="n">filename</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fileobj</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./OIH/oceanexperts_graph.nq.gz&#39;
 </pre></div>
 </div>
 </div>
@@ -568,11 +567,11 @@ dtype: object
       <td>0.001830</td>
     </tr>
     <tr>
-      <th>Instituto de Investigaciones Marinas y Costeras José Benito Vives de AndreisCalle 25 No. 2-55, Playa Salguero, Rodadero  Santa Marta , Magdalena, Colombia</th>
+      <th>&amp;quot;Ocean Valley&amp;quot;, Pragathi Nagar (BO), Nizampet (SO) Hyderabad 500 090 Telangana India</th>
       <td>0.001812</td>
     </tr>
     <tr>
-      <th>&amp;quot;Ocean Valley&amp;quot;, Pragathi Nagar (BO), Nizampet (SO) Hyderabad 500 090 Telangana India</th>
+      <th>Instituto de Investigaciones Marinas y Costeras José Benito Vives de AndreisCalle 25 No. 2-55, Playa Salguero, Rodadero  Santa Marta , Magdalena, Colombia</th>
       <td>0.001812</td>
     </tr>
     <tr>
@@ -588,19 +587,19 @@ dtype: object
       <td>0.001271</td>
     </tr>
     <tr>
-      <th>Institute of Oceanography and Environment Universiti Malaysia Terengganu (UMT), Mengabang Telipot 21030 Kuala Terengganu Terengganu Malaysia</th>
-      <td>0.001271</td>
-    </tr>
-    <tr>
       <th>, Colombia</th>
       <td>0.001271</td>
     </tr>
     <tr>
-      <th>Wandelaarkaai 7 Oostende Belgium</th>
-      <td>0.001018</td>
+      <th>Institute of Oceanography and Environment Universiti Malaysia Terengganu (UMT), Mengabang Telipot 21030 Kuala Terengganu Terengganu Malaysia</th>
+      <td>0.001271</td>
     </tr>
     <tr>
       <th>Qingdao China</th>
+      <td>0.001018</td>
+    </tr>
+    <tr>
+      <th>Wandelaarkaai 7 Oostende Belgium</th>
       <td>0.001018</td>
     </tr>
   </tbody>

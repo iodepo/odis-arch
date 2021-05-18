@@ -11,7 +11,7 @@ There are four sections
 
 ## PREFIX
 
-```JSON
+``` 
 {
     "@context": "https://schema.org",
     "@type": ["ItemList", "CreativeWork"],
@@ -26,7 +26,7 @@ There are four sections
 
 ## ROW TEMPLATE
 
-```JSON
+``` 
 {
     "@context": {
         "@vocab": "https://schema.org/",
@@ -60,22 +60,19 @@ There are four sections
 
 ## ROW SEP
 
-```JOSN
+``` 
 ,
 ```
 
 
 ## SUFFIX
 
-```JSON
+``` 
  ]
 }
 ```
 
-
-
-
-NOTES
+## NOTES
 
 ``` 
 

@@ -21,27 +21,3 @@ versioning the profiles to provide stable implementations providers can reliably
 5. [Vessels](./vessels/README.md)
 6. [Spatial](./spatial/README.md)
 7. [Services](./services/README.md)
-
-
-
-    ```
-    {
-  "@context": {
-    "@vocab": "https://schema.org/"
-  },
-  "@type": "Dataset",
-  "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
-  ...
-"provider": {
-    "@id": "https://www.sample-data-repository.org",
-    "@type": "Organization",
-    "legalName": "Sample Data Repository Office",
-    "name": "SDRO",
-    "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
-    "url": "https://www.sample-data-repository.org"
-  },
-  "publisher": {
-    "@id": "https://www.sample-data-repository.org"
-  }
-}
-    ```
