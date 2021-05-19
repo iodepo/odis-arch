@@ -101,11 +101,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../authoring/content.html">
-   Authoring Metadata for OIH
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../publishing/publishing.html">
    Publishing patterns for OIH
   </a>
@@ -134,7 +129,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../tooling/index.html">
-   Tooling Index
+   Tooling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -210,12 +205,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/list.html">
-     Controlled Lists
+     Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/graphpub.html">
      Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/languages.html">
+     Languages
     </a>
    </li>
    <li class="toctree-l2">
@@ -359,6 +359,11 @@
    About
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -375,13 +380,13 @@
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>This section contains some initial work on developing some validation
-approaches for OIH.  The focus initially is not on validating approaches
-with the full publishing guidance.  Rather the focuses is on the
-the “info hub” as a search application and develops validation to
-support that.</p>
+approaches for OIH.  The focus initially is not on validating approaches with
+the full publishing guidance.  Rather the focuses is on the the “info hub” as a
+search application and develops validation to support that.</p>
 <p>Initial approach:</p>
 <ul class="simple">
-<li><p>Develop a base SHACL document that assess a data graph based on elements needed to support search</p></li>
+<li><p>Develop a base SHACL document that assess a data graph based on elements
+needed to support search</p></li>
 <li><p>Leverage <a class="reference external" href="https://shacl.org/playground/">SHACL Playground</a></p></li>
 </ul>
 <p>To support this will need an initial data graph to work with.  The type is not
@@ -394,6 +399,11 @@ important.  All types will need to satisfy the search needs.</p>
 <li><p>Have a Distribution and contentURL</p></li>
 <li><p>Reference authority</p></li>
 </ul>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>Work this implementation can be found in the notebooks section
+<a class="reference internal" href="../tooling/notebooks/SHACL/pySHACL.html"><span class="doc std std-doc">pySHACL testing</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

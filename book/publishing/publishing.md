@@ -11,28 +11,54 @@ _Existing support in software_ at the bottom of this document.
 
 ### Architecture Implementation
 
-The Ocean Info Hub (OIH) will leverage structured data on the web and web architecture patterns to expose metadata about resources of interest to the community.  The primary tasks include:
+The Ocean Info Hub (OIH) will leverage structured data on the web and web
+architecture patterns to expose metadata about resources of interest to the
+community.  The primary tasks include:
 
-* Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH guidance to express the structured metadata for a resource.  This step will require experience with using the existing metadata resources within an organization.  So any necessary skills needed to access or query existing facility data systems will be needed to assemble the information to populate the JSON-LD data graph.  The JSON-LD documents need to be generated using the tools/languages at the previous reference or through other means.  
-* Within the system architecture of the site, a JSON-LD document needs to be placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each published resource.   The SCRIPT tag pattern is:
+* Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH
+  guidance to express the structured metadata for a resource.  This step will
+  require experience with using the existing metadata resources within an
+  organization.  So any necessary skills needed to access or query existing
+  facility data systems will be needed to assemble the information to populate
+  the JSON-LD data graph.  The JSON-LD documents need to be generated using the
+  tools/languages at the previous reference or through other means.  
+* Within the system architecture of the site, a JSON-LD document needs to be
+  placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each
+  published resource.   The SCRIPT tag pattern is:
   
-  ```JSON
+  ``` 
   <script type="application/ld+json">JSON_LD content</script>
   ```
 
-* Additionally these resources that are marked up with these tags and JSON-LD documents should be expressed in an XML sitemap file.  This should follow the guidance at https://www.sitemaps.org/.  It should also include a lastmod node element as described at https://www.sitemaps.org/protocol.html which should indicate the date the resource metadata was last updated and published to the web.  
-* The process of aligning the JSON-LD is iterative at this stage as the OIH profile is evolved.  To aid this we can leverage existing validation tools including JSONSchema, W3C SPARQL and more to communicate structure changes.  These tools exist and need only be implemented using knowledge of command line environments.  The results will then indicate revisions needed in the JSON-LD.  OIH will provide the necessary templates for the tools to use against the authored JSON-LD documents.  
+* Additionally these resources that are marked up with these tags and JSON-LD
+  documents should be expressed in an XML sitemap file.  This should follow the
+  guidance at https://www.sitemaps.org/.  It should also include a lastmod node
+  element as described at https://www.sitemaps.org/protocol.html which should
+  indicate the date the resource metadata was last updated and published to the
+  web.  
+* The process of aligning the JSON-LD is iterative at this stage as the OIH
+  profile is evolved.  To aid this we can leverage existing validation tools
+  including JSONSchema, W3C SPARQL and more to communicate structure changes.
+  These tools exist and need only be implemented using knowledge of command
+  line environments.  The results will then indicate revisions needed in the
+  JSON-LD.  OIH will provide the necessary templates for the tools to use
+  against the authored JSON-LD documents.  
 
-Information on the sources, standards and vocabularies to be used can be found at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs 
+Information on the sources, standards and vocabularies to be used can be found
+at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs 
 
 
 ### Including JSON-LD in your resource page
 
 To provide detailed and semantically described details on a resource, OIH uses
 a [JSON-LD](https://json-ld.org/) snippet or _data graph_.  This small document
-provides details on the resource.  It can also express any explicate connections to other resources an author may wish to express.  The semantic nature of the document also means that connections may later be discovered through graph queries.
+provides details on the resource.  It can also express any explicate
+connections to other resources an author may wish to express.  The semantic
+nature of the document also means that connections may later be discovered
+through graph queries.
 
-Pages will need a JSON-LD data graph placed in it via a typed script tag/element in the document head element like the following.  
+Pages will need a JSON-LD data graph placed in it via a typed script
+tag/element in the document head element like the following.  
 
 ```html
 <script type="application/ld+json"></script>
@@ -68,18 +94,25 @@ thematic sections for more examples for a given thematic area.
 }
 ```
 
-This example is from the [training and courses thematic section](../../schema/thematics/training/README.md).  To view all the types being developed reference
-the [Thematic section](../thematics/README.md).
+This example is from the [training and courses thematic
+section](https://github.com/iodepo/odis-arch/tree/master/schema/thematics/training).  To view all the types
+being developed reference
+the [Thematic section](https://github.com/iodepo/odis-arch/tree/master/schema/thematics).
 
 These JSON-LD documents leverage schema.org as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.  
 
 #### JSON-LD Tools and References
 
-A key resource for JSON-LD can be found at [JSON-LD](https://json-ld.org/).  There is also an interactive _playground_
-hosted there.  The [JSON-LD Playground](https://json-ld.org/playground/) is useful when testing or exploring approaches 
-for JSON-LD data graphs.  It will catch basic errors of syntax and use.  Note, it will not catch semantic issues such 
-as using properties on types that are out of range.  Tools like the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) are better at that.  Also the documents and validation material created here OIH will also allow for that sort of testing and feedback.  
+A key resource for JSON-LD can be found at [JSON-LD](https://json-ld.org/).
+There is also an interactive _playground_ hosted there.  The [JSON-LD
+Playground](https://json-ld.org/playground/) is useful when testing or
+exploring approaches for JSON-LD data graphs.  It will catch basic errors of
+syntax and use.  Note, it will not catch semantic issues such as using
+properties on types that are out of range.  Tools like the [Structured Data
+Testing Tool](https://search.google.com/structured-data/testing-tool) are
+better at that.  Also the documents and validation material created here OIH
+will also allow for that sort of testing and feedback.  
 
 Providers may also wish to provide content negotiation for type application/ld+json 
 for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
@@ -90,7 +123,9 @@ the specific serialization and this will likely lighten the load on the servers 
 
 To help facilitate the interconnection of resource, some application focused validation
 will be developed. Note, this validation does not limit what can be in the graphs.  
-Rather, it simply provides insight on to how well a given graph can be leveraged for a specific application.  For this project, the application will be the OIH search portal.
+Rather, it simply provides insight on to how well a given graph can be
+leveraged for a specific application.  For this project, the application will
+be the OIH search portal.
 
 Some initial development work for this can be found in the
 [validation directory](../validation/README.md)
@@ -105,16 +140,27 @@ Some initial development work for this can be found in the
 
 #### Validation Leveraging JSON Schema
 
-We have been exploring the potential to use JSON Schema combined with various on-line JSON editors (JSON Schema driven) to provide a potential approach to a more visual editing workflow. The workflow presented here is very ad hoc but exposes a potential route a group might take to develop a usable tool. Such a tool might, for example, leverage the Electron app dev environment to evolve this approach in a more dedicated tool/manner.
+We have been exploring the potential to use JSON Schema combined with various
+on-line JSON editors (JSON Schema driven) to provide a potential approach to a
+more visual editing workflow. The workflow presented here is very ad hoc but
+exposes a potential route a group might take to develop a usable tool. Such a
+tool might, for example, leverage the Electron app dev environment to evolve
+this approach in a more dedicated tool/manner.
 
-Use a JSON-LD document ([Example](./projects/graphs/sosproj.json)) one could load this into something like 
+Use a JSON-LD document ([Example](https://github.com/iodepo/odis-arch/blob/master/schema/thematics/docs/graphs/creativework.json)) one could
+load this into something like 
 the [JSONschema.net tool](https://jsonschema.net/).
 
-The results of the above can then been loaded into the online JSON-Editor at https://json-editor.github.io/json-editor/. (Ref: [https://github.com/json-editor/json-editor](https://github.com/json-editor/json-editor))
+The results of the above can then been loaded into the online JSON-Editor at
+https://json-editor.github.io/json-editor/. (Ref:
+[https://github.com/json-editor/json-editor](https://github.com/json-editor/json-editor))
 
-The results of this then can be load into https://json-ld.org/playground/ to validate that we have well formed JSON-LD.
+The results of this then can be load into https://json-ld.org/playground/ to
+validate that we have well formed JSON-LD.
 
-Though this workflow is rather crude and manual it exposes a route to a defined workflow based around established schema that leverages other tools and software libraries to generate a workable tool.
+Though this workflow is rather crude and manual it exposes a route to a defined
+workflow based around established schema that leverages other tools and
+software libraries to generate a workable tool.
 
 ## Basics
 
@@ -136,7 +182,7 @@ used a robots.txt file to specify alternative sitemaps and guidance.
 This also allows a provider to provide guidance to Google and other potential 
 indexers both for allow and disallow directives.
 
-```txt
+```
 Sitemap: http://samples.earth/sitemap.xml
 
 User-agent: *
@@ -195,7 +241,10 @@ then ready for use in search and other functions.
 
 Moving left to right we can review the image.
 
-1. Providers are engaged in the process of developing the OIH example documents.  These provide a _profile_ to follow to represent the semantic metadata.  Note, these are not limiters, simply guidance on minimum and recommend elements to address the functional goals of the OIH portal. 
+1. Providers are engaged in the process of developing the OIH example
+   documents.  These provide a _profile_ to follow to represent the semantic
+   metadata.  Note, these are not limiters, simply guidance on minimum and
+   recommend elements to address the functional goals of the OIH portal. 
 
 2. Providers use these documents to generate the JSON-LD data graphs.  
 These can be either static documents or generated and placed in pages
@@ -217,7 +266,8 @@ to use in support of services they may wish to provide.
 
 ## Existing support in software
 
-Many content management approaches and packages may already have support for the structured data on the web pattern.  
+Many content management approaches and packages may already have support for
+the structured data on the web pattern.  
 
 A collection of starting points for their support follows.  
 

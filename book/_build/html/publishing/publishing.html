@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Thematic Types" href="../thematics/index.html" />
-    <link rel="prev" title="Authoring Metadata for OIH" href="../authoring/content.html" />
+    <link rel="prev" title="Structured Data on the Web" href="../content.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -100,11 +100,6 @@
    Structured Data on the Web
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../authoring/content.html">
-   Authoring Metadata for OIH
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Publishing patterns for OIH
@@ -134,7 +129,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../tooling/index.html">
-   Tooling Index
+   Tooling
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -210,12 +205,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/list.html">
-     Controlled Lists
+     Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../appendix/graphpub.html">
      Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/languages.html">
+     Languages
     </a>
    </li>
    <li class="toctree-l2">
@@ -451,25 +451,51 @@ implement this approach.  See the section:
 <em>Existing support in software</em> at the bottom of this document.</p>
 <div class="section" id="architecture-implementation">
 <h3>Architecture Implementation<a class="headerlink" href="#architecture-implementation" title="Permalink to this headline">¶</a></h3>
-<p>The Ocean Info Hub (OIH) will leverage structured data on the web and web architecture patterns to expose metadata about resources of interest to the community.  The primary tasks include:</p>
+<p>The Ocean Info Hub (OIH) will leverage structured data on the web and web
+architecture patterns to expose metadata about resources of interest to the
+community.  The primary tasks include:</p>
 <ul>
-<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH guidance to express the structured metadata for a resource.  This step will require experience with using the existing metadata resources within an organization.  So any necessary skills needed to access or query existing facility data systems will be needed to assemble the information to populate the JSON-LD data graph.  The JSON-LD documents need to be generated using the tools/languages at the previous reference or through other means.</p></li>
-<li><p>Within the system architecture of the site, a JSON-LD document needs to be placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each published resource.   The SCRIPT tag pattern is:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>&lt;script type=&quot;application/ld+json&quot;&gt;JSON_LD content&lt;/script&gt;
+<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH
+guidance to express the structured metadata for a resource.  This step will
+require experience with using the existing metadata resources within an
+organization.  So any necessary skills needed to access or query existing
+facility data systems will be needed to assemble the information to populate
+the JSON-LD data graph.  The JSON-LD documents need to be generated using the
+tools/languages at the previous reference or through other means.</p></li>
+<li><p>Within the system architecture of the site, a JSON-LD document needs to be
+placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each
+published resource.   The SCRIPT tag pattern is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="o">&gt;</span><span class="n">JSON_LD</span> <span class="n">content</span><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>Additionally these resources that are marked up with these tags and JSON-LD documents should be expressed in an XML sitemap file.  This should follow the guidance at <a class="reference external" href="https://www.sitemaps.org/">https://www.sitemaps.org/</a>.  It should also include a lastmod node element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should indicate the date the resource metadata was last updated and published to the web.</p></li>
-<li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH profile is evolved.  To aid this we can leverage existing validation tools including JSONSchema, W3C SPARQL and more to communicate structure changes.  These tools exist and need only be implemented using knowledge of command line environments.  The results will then indicate revisions needed in the JSON-LD.  OIH will provide the necessary templates for the tools to use against the authored JSON-LD documents.</p></li>
+<li><p>Additionally these resources that are marked up with these tags and JSON-LD
+documents should be expressed in an XML sitemap file.  This should follow the
+guidance at <a class="reference external" href="https://www.sitemaps.org/">https://www.sitemaps.org/</a>.  It should also include a lastmod node
+element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should
+indicate the date the resource metadata was last updated and published to the
+web.</p></li>
+<li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH
+profile is evolved.  To aid this we can leverage existing validation tools
+including JSONSchema, W3C SPARQL and more to communicate structure changes.
+These tools exist and need only be implemented using knowledge of command
+line environments.  The results will then indicate revisions needed in the
+JSON-LD.  OIH will provide the necessary templates for the tools to use
+against the authored JSON-LD documents.</p></li>
 </ul>
-<p>Information on the sources, standards and vocabularies to be used can be found at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
+<p>Information on the sources, standards and vocabularies to be used can be found
+at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
 </div>
 <div class="section" id="including-json-ld-in-your-resource-page">
 <h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Permalink to this headline">¶</a></h3>
 <p>To provide detailed and semantically described details on a resource, OIH uses
 a <a class="reference external" href="https://json-ld.org/">JSON-LD</a> snippet or <em>data graph</em>.  This small document
-provides details on the resource.  It can also express any explicate connections to other resources an author may wish to express.  The semantic nature of the document also means that connections may later be discovered through graph queries.</p>
-<p>Pages will need a JSON-LD data graph placed in it via a typed script tag/element in the document head element like the following.</p>
+provides details on the resource.  It can also express any explicate
+connections to other resources an author may wish to express.  The semantic
+nature of the document also means that connections may later be discovered
+through graph queries.</p>
+<p>Pages will need a JSON-LD data graph placed in it via a typed script
+tag/element in the document head element like the following.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -500,16 +526,23 @@ thematic sections for more examples for a given thematic area.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This example is from the <span class="xref myst">training and courses thematic section</span>.  To view all the types being developed reference
-the <span class="xref myst">Thematic section</span>.</p>
+<p>This example is from the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/schema/thematics/training">training and courses thematic
+section</a>.  To view all the types
+being developed reference
+the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/schema/thematics">Thematic section</a>.</p>
 <p>These JSON-LD documents leverage <a class="reference external" href="http://schema.org">schema.org</a> as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.</p>
 <div class="section" id="json-ld-tools-and-references">
 <h4>JSON-LD Tools and References<a class="headerlink" href="#json-ld-tools-and-references" title="Permalink to this headline">¶</a></h4>
-<p>A key resource for JSON-LD can be found at <a class="reference external" href="https://json-ld.org/">JSON-LD</a>.  There is also an interactive <em>playground</em>
-hosted there.  The <a class="reference external" href="https://json-ld.org/playground/">JSON-LD Playground</a> is useful when testing or exploring approaches
-for JSON-LD data graphs.  It will catch basic errors of syntax and use.  Note, it will not catch semantic issues such
-as using properties on types that are out of range.  Tools like the <a class="reference external" href="https://search.google.com/structured-data/testing-tool">Structured Data Testing Tool</a> are better at that.  Also the documents and validation material created here OIH will also allow for that sort of testing and feedback.</p>
+<p>A key resource for JSON-LD can be found at <a class="reference external" href="https://json-ld.org/">JSON-LD</a>.
+There is also an interactive <em>playground</em> hosted there.  The <a class="reference external" href="https://json-ld.org/playground/">JSON-LD
+Playground</a> is useful when testing or
+exploring approaches for JSON-LD data graphs.  It will catch basic errors of
+syntax and use.  Note, it will not catch semantic issues such as using
+properties on types that are out of range.  Tools like the <a class="reference external" href="https://search.google.com/structured-data/testing-tool">Structured Data
+Testing Tool</a> are
+better at that.  Also the documents and validation material created here OIH
+will also allow for that sort of testing and feedback.</p>
 <p>Providers may also wish to provide content negotiation for type application/ld+json
 for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
 the specific serialization and this will likely lighten the load on the servers going forward.</p>
@@ -518,7 +551,9 @@ the specific serialization and this will likely lighten the load on the servers 
 <h4>Validation With SHACL or ShEx<a class="headerlink" href="#validation-with-shacl-or-shex" title="Permalink to this headline">¶</a></h4>
 <p>To help facilitate the interconnection of resource, some application focused validation
 will be developed. Note, this validation does not limit what can be in the graphs.<br />
-Rather, it simply provides insight on to how well a given graph can be leveraged for a specific application.  For this project, the application will be the OIH search portal.</p>
+Rather, it simply provides insight on to how well a given graph can be
+leveraged for a specific application.  For this project, the application will
+be the OIH search portal.</p>
 <p>Some initial development work for this can be found in the
 <a class="reference internal" href="../validation/README.html"><span class="doc std std-doc">validation directory</span></a></p>
 <div class="section" id="validation-tools-and-references">
@@ -537,12 +572,23 @@ Rather, it simply provides insight on to how well a given graph can be leveraged
 </div>
 <div class="section" id="validation-leveraging-json-schema">
 <h4>Validation Leveraging JSON Schema<a class="headerlink" href="#validation-leveraging-json-schema" title="Permalink to this headline">¶</a></h4>
-<p>We have been exploring the potential to use JSON Schema combined with various on-line JSON editors (JSON Schema driven) to provide a potential approach to a more visual editing workflow. The workflow presented here is very ad hoc but exposes a potential route a group might take to develop a usable tool. Such a tool might, for example, leverage the Electron app dev environment to evolve this approach in a more dedicated tool/manner.</p>
-<p>Use a JSON-LD document (<span class="xref myst">Example</span>) one could load this into something like
+<p>We have been exploring the potential to use JSON Schema combined with various
+on-line JSON editors (JSON Schema driven) to provide a potential approach to a
+more visual editing workflow. The workflow presented here is very ad hoc but
+exposes a potential route a group might take to develop a usable tool. Such a
+tool might, for example, leverage the Electron app dev environment to evolve
+this approach in a more dedicated tool/manner.</p>
+<p>Use a JSON-LD document (<a class="reference external" href="https://github.com/iodepo/odis-arch/blob/master/schema/thematics/docs/graphs/creativework.json">Example</a>) one could
+load this into something like
 the <a class="reference external" href="https://jsonschema.net/">JSONschema.net tool</a>.</p>
-<p>The results of the above can then been loaded into the online JSON-Editor at <a class="reference external" href="https://json-editor.github.io/json-editor/">https://json-editor.github.io/json-editor/</a>. (Ref: <a class="reference external" href="https://github.com/json-editor/json-editor">https://github.com/json-editor/json-editor</a>)</p>
-<p>The results of this then can be load into <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a> to validate that we have well formed JSON-LD.</p>
-<p>Though this workflow is rather crude and manual it exposes a route to a defined workflow based around established schema that leverages other tools and software libraries to generate a workable tool.</p>
+<p>The results of the above can then been loaded into the online JSON-Editor at
+<a class="reference external" href="https://json-editor.github.io/json-editor/">https://json-editor.github.io/json-editor/</a>. (Ref:
+<a class="reference external" href="https://github.com/json-editor/json-editor">https://github.com/json-editor/json-editor</a>)</p>
+<p>The results of this then can be load into <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a> to
+validate that we have well formed JSON-LD.</p>
+<p>Though this workflow is rather crude and manual it exposes a route to a defined
+workflow based around established schema that leverages other tools and
+software libraries to generate a workable tool.</p>
 </div>
 </div>
 </div>
@@ -562,18 +608,18 @@ Python based notebooks and a few other approaches in this test.</p>
 used a robots.txt file to specify alternative sitemaps and guidance.
 This also allows a provider to provide guidance to Google and other potential
 indexers both for allow and disallow directives.</p>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Sitemap: http://samples.earth/sitemap.xml
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sitemap</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
 
-User-agent: *
-Crawl-delay: 4
-Allow: /
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="o">*</span>
+<span class="n">Crawl</span><span class="o">-</span><span class="n">delay</span><span class="p">:</span> <span class="mi">4</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="o">/</span>
 
-User-agent: Googlebot
-Disallow: /id
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="n">Googlebot</span>
+<span class="n">Disallow</span><span class="p">:</span> <span class="o">/</span><span class="nb">id</span>
 
-User-agent: EarthCube_DataBot/1.0
-Allow: /
-Sitemap: http://samples.earth/test.
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="n">EarthCube_DataBot</span><span class="o">/</span><span class="mf">1.0</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="o">/</span>
+<span class="n">Sitemap</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">test</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -616,7 +662,10 @@ storage for the objects and the resulting graph.  These resources are
 then ready for use in search and other functions.</p>
 <p>Moving left to right we can review the image.</p>
 <ol class="simple">
-<li><p>Providers are engaged in the process of developing the OIH example documents.  These provide a <em>profile</em> to follow to represent the semantic metadata.  Note, these are not limiters, simply guidance on minimum and recommend elements to address the functional goals of the OIH portal.</p></li>
+<li><p>Providers are engaged in the process of developing the OIH example
+documents.  These provide a <em>profile</em> to follow to represent the semantic
+metadata.  Note, these are not limiters, simply guidance on minimum and
+recommend elements to address the functional goals of the OIH portal.</p></li>
 <li><p>Providers use these documents to generate the JSON-LD data graphs.<br />
 These can be either static documents or generated and placed in pages
 dynamically with Javascript or server side templates.  These are the
@@ -636,7 +685,8 @@ to use in support of services they may wish to provide.</p></li>
 </div>
 <div class="section" id="existing-support-in-software">
 <h2>Existing support in software<a class="headerlink" href="#existing-support-in-software" title="Permalink to this headline">¶</a></h2>
-<p>Many content management approaches and packages may already have support for the structured data on the web pattern.</p>
+<p>Many content management approaches and packages may already have support for
+the structured data on the web pattern.</p>
 <p>A collection of starting points for their support follows.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wordpress.org/plugins/schema/">WordPress</a></p></li>
@@ -679,7 +729,7 @@ to use in support of services they may wish to provide.</p></li>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../authoring/content.html" title="previous page">Authoring Metadata for OIH</a>
+    <a class='left-prev' id="prev-link" href="../content.html" title="previous page">Structured Data on the Web</a>
     <a class='right-next' id="next-link" href="../thematics/index.html" title="next page">Thematic Types</a>
 
         </div>

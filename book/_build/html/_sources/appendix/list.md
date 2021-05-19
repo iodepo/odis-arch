@@ -1,4 +1,4 @@
-# Controlled Lists
+# Defined Terms
 
 ## About
 

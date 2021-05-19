@@ -101,11 +101,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../authoring/content.html">
-   Authoring Metadata for OIH
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
   </a>
@@ -134,7 +129,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Tooling Index
+   Tooling
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -210,12 +205,17 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/list.html">
-     Controlled Lists
+     Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../appendix/graphpub.html">
      Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/languages.html">
+     Languages
     </a>
    </li>
    <li class="toctree-l2">
@@ -431,8 +431,8 @@ From Marine Regions (<a class="reference external" href="https://www.marineregio
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">  ERROR: Command errored out with exit status 1:</span>
-<span class=" -Color -Color-Red">   command: /usr/bin/python3 /usr/lib/python3.9/site-packages/pip/_vendor/pep517/_in_process.py build_wheel /tmp/tmpf2_kik3l</span>
-<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-zrbv9z0o/cartopy</span>
+<span class=" -Color -Color-Red">   command: /usr/bin/python3 /usr/lib/python3.9/site-packages/pip/_vendor/pep517/_in_process.py build_wheel /tmp/tmppcrzv401</span>
+<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-_f2_8p28/cartopy</span>
 <span class=" -Color -Color-Red">  Complete output (236 lines):</span>
 <span class=" -Color -Color-Red">  setup.py:117: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
 <span class=" -Color -Color-Red">    warnings.warn(</span>
@@ -664,7 +664,7 @@ From Marine Regions (<a class="reference external" href="https://www.marineregio
 <span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9</span>
 <span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/lib</span>
 <span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/lib/cartopy</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 -I/usr/include -I./lib/cartopy -I/tmp/pip-build-env-aw3l5u5q/overlay/lib64/python3.9/site-packages/numpy/core/include -I/usr/include/python3.9 -c lib/cartopy/trace.cpp -o build/temp.linux-x86_64-3.9/lib/cartopy/trace.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1 -I/usr/include -I./lib/cartopy -I/tmp/pip-build-env-hm_kqr1w/overlay/lib64/python3.9/site-packages/numpy/core/include -I/usr/include/python3.9 -c lib/cartopy/trace.cpp -o build/temp.linux-x86_64-3.9/lib/cartopy/trace.o</span>
 <span class=" -Color -Color-Red">  lib/cartopy/trace.cpp:633:10: fatal error: geos_c.h: No such file or directory</span>
 <span class=" -Color -Color-Red">    633 | #include &quot;geos_c.h&quot;</span>
 <span class=" -Color -Color-Red">        |          ^~~~~~~~~~</span>
