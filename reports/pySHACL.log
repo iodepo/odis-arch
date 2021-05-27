@@ -32,8 +32,14 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# Create the Dask tasks..   created..  not run..  ', 'import json', 'import dask, boto3', 'import dask.dataframe as dd', '']
-...
-['', "#filenames = oss.cat('gleaner/summoned/opentopo', recursive=True)", 'output = [read_a_file(f) for f in filenames]', 'print(len(filenames))', '# print(filenames)']
+%%capture
+!pip install pyshacl
+!pip install 'PyLD>=2.0.3'
+!pip install flatten_json
+!pip install 'fsspec>=0.3.3'
+!pip install s3fs
+!pip install boto3
+!pip install seaborn
+!pip install dask
 -------------------
 
