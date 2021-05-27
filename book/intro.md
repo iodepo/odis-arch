@@ -1,6 +1,8 @@
 The Ocean Info Hub
 ============================
 
+Testing GitHub pages deployment.
+
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
 Ocean Info Hub (OIH) is an implementation of this approach for the UN ODIS community.  OIH is providing guidance on the various stages of such an architecture including authoring, publishing, indexing and interfaces.
