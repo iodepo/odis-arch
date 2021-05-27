@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo KG Completion testing &#8212; OIH Reference</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OIH Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../intro.html">
+   The Ocean Info Hub
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../infographic.html">
+   The Ocean Info Hub InfoGraphic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../authoring/content.html">
+   Authoring Metadata for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/content.html">
+   Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../thematics/index.html">
+   Thematic Types
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/overview.html">
+     Connection Overview
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/content.html">
+   Indexing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../index.html">
+   Tooling Index
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../graphpub/index.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../openRefine/README.html">
+     OpenRefine
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../openRefine/template.html">
+       Template
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../README.html">
+     OIH Notebooks
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_GraphAnalytics.html">
+       Graph Analytics Exploration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Graphs.html">
+       OIH Graph testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Editor.html">
+       OIH Editor Playground
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../appendix/index.html">
+   Appendex
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/list.html">
+     Controlled Lists
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../prov/README.html">
+   Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../validation/README.html">
+   Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../annoyances.html">
+   Annoyances
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../references.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../registries.html">
+   Registries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../vocabularies.html">
+   Controlled Vocabularies
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/tooling/notebooks/geokgcomplete/geocomplete.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Ftooling/notebooks/geokgcomplete/geocomplete.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/geokgcomplete/geocomplete.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="geo-kg-completion-testing">
+<h1>Geo KG Completion testing<a class="headerlink" href="#geo-kg-completion-testing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>This is a simple test notebook to explore approachs to associating geometries in the OIH graph with named ocean regions.
+From Marine Regions (<a class="reference external" href="https://www.marineregions.org/">https://www.marineregions.org/</a>) we downloaded the IHO Sea Areas dataset.  This is a shapefile that is converted to WKT and loaded into a geopandas dataframe.</p>
+<p>We then create a few points to compare against this.   In this test we are only comparing points to the polygons.  So this is what is called a “point in polygon” test.   Later revisions to this could do polygon intersection or other tests.  This is only a proof of concept notebook.</p>
+<p>We then generate a new dataframe based on the matches.   These matches could then be fed back into the graph as a sort of “Knowledge Graph Completion” workflow.  Alternatively we can do gepsparql calls based on the sea WKT strings and do the search in the geosparql aware triple store.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/set_operations.html">https://geopandas.org/docs/user_guide/set_operations.html</a></p></li>
+<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/geocoding.html">https://geopandas.org/docs/user_guide/geocoding.html</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff">https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<span class="c1"># !apt-get install libproj-dev proj-data proj-bin</span>
+<span class="c1"># !apt-get install libgeos-dev</span>
+<span class="o">!</span>pip install -q cython
+<span class="o">!</span>pip install -q cartopy
+<span class="o">!</span>pip install -q SPARQLWrapper
+<span class="o">!</span>pip install -q rdflib
+<span class="o">!</span>pip install -q geopandas
+<span class="o">!</span>pip install -q <span class="nv">contextily</span><span class="o">==</span><span class="m">1</span>.0rc2
+<span class="o">!</span>pip install -q rtree
+<span class="o">!</span>pip install -q pygeos
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">  ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">   command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python /opt/hostedtoolcache/Python/3.7.10/x64/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py get_requires_for_build_wheel /tmp/tmpwsaxnxmn</span>
+<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-d32nclx3/cartopy_f1efeee701c846f498529985fd5dcd93</span>
+<span class=" -Color -Color-Red">  Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">  setup.py:120: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">    &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">  Proj 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">  ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/ed/ca/524ce33692df3faeaa56852fb6a33b0b410be94cc288417565b96fef3f64/Cartopy-0.19.0.post1.tar.gz#sha256=4b8b4773a98ed7009fe17d9b6ec87ac3ac62b7d14634d7768c190eadc647d576 (from https://pypi.org/simple/cartopy/) (requires-python:&gt;=3.5). Command errored out with exit status 1: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python /opt/hostedtoolcache/Python/3.7.10/x64/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py get_requires_for_build_wheel /tmp/tmpwsaxnxmn Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_2ee8aa6555d4429ab87a797fb5f5347e/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_2ee8aa6555d4429ab87a797fb5f5347e/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-fy2a_5tw</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_2ee8aa6555d4429ab87a797fb5f5347e/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_2ee8aa6555d4429ab87a797fb5f5347e/setup.py:107: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/46/c1/04e50c9986842f00f7db0e7a65caa896840050d7328f74e5b7437aa01179/Cartopy-0.18.0.tar.gz#sha256=7ffa317e8f8011e0d965a3ef1179e57a049f77019867ed677d49dcc5c0744434 (from https://pypi.org/simple/cartopy/) (requires-python:&gt;=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">  ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">   command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python /opt/hostedtoolcache/Python/3.7.10/x64/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py get_requires_for_build_wheel /tmp/tmpqmi3x1kc</span>
+<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-d32nclx3/cartopy_09c756f2626a47029cb7eef203fb7a2c</span>
+<span class=" -Color -Color-Red">  Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">  setup.py:171: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">    &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">  Proj 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">  ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/e5/92/fe8838fa8158931906dfc4f16c5c1436b3dd2daf83592645b179581403ad/Cartopy-0.17.0.tar.gz#sha256=424bd9e9ddef6e48cbdee694ce589ec431be8591f15b6cb93cb2b333a29b2c61 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python /opt/hostedtoolcache/Python/3.7.10/x64/lib/python3.7/site-packages/pip/_vendor/pep517/in_process/_in_process.py get_requires_for_build_wheel /tmp/tmpqmi3x1kc Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_0fb4d3f922dd4354ad9a220c568edce8/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_0fb4d3f922dd4354ad9a220c568edce8/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-md3jsbvh</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_0fb4d3f922dd4354ad9a220c568edce8/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_0fb4d3f922dd4354ad9a220c568edce8/setup.py:178: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/f5/7a/4a16db7c81f11b3c5889c5b913d9a5724c704a6947c5a87ec59c4a8985ac/Cartopy-0.16.0.tar.gz#sha256=f23dffa101f43dd91e866a49ebb5f5048be2a24ab8a921a5c07edabde746d9a4 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_1b8ea6c80cfa457b8befc2ea285dbbd3/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_1b8ea6c80cfa457b8befc2ea285dbbd3/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-ad44gy0z</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_1b8ea6c80cfa457b8befc2ea285dbbd3/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_1b8ea6c80cfa457b8befc2ea285dbbd3/setup.py:187: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/ee/6c/992e03af5a93c1b81d644a3fa0b0c43c4f8ccc9bc69837de46490f8dc3da/Cartopy-0.15.1.tar.gz#sha256=bb8a084055c38bc895b2fe094262753813e6fc7221ef2c1fc87ec1ff302f3c09 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_82fcac3b3c1248a7b130908cfc847277/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_82fcac3b3c1248a7b130908cfc847277/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-qxd98o36</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_82fcac3b3c1248a7b130908cfc847277/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_82fcac3b3c1248a7b130908cfc847277/setup.py:174: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/00/30/be768605774919e7571b72520b332f61fd307490923283292836872cb7a1/Cartopy-0.14.2.tar.gz#sha256=a7059587b91989ac42649f3d02aefbb4d3fd53ebb10ada34c007235820a000e7 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_61acd41e42a64e45805d5d82a6c153b2/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_61acd41e42a64e45805d5d82a6c153b2/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-m7__axhg</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_61acd41e42a64e45805d5d82a6c153b2/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_61acd41e42a64e45805d5d82a6c153b2/setup.py:174: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.9.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/ec/31/22528383a32ae03e31cee883173db7a5bcaa9452b0eeb94d6fd2cfa0fbde/Cartopy-0.14.0.tar.gz#sha256=2a3d26cb9c3af237209f9b3a3b0f50920dad9ab5ac4def0c468004c02f725df8 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_48d901697db54afdab0b69cbde11ca1a/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_48d901697db54afdab0b69cbde11ca1a/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-1vexpacr</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_48d901697db54afdab0b69cbde11ca1a/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_48d901697db54afdab0b69cbde11ca1a/setup.py:168: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.8.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/57/42/ceb8bc7120998fcbeab9563f947ec3f334a0585afda6273a60e94e8d0792/Cartopy-0.13.1.tar.gz#sha256=779a75cd4a5553489cd71e4506685247d6ac94017a7979a50d09306b43e8d7ff (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_fe2470ea27494db98aa9bafd21786cb3/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_fe2470ea27494db98aa9bafd21786cb3/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-93p7kn3h</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_fe2470ea27494db98aa9bafd21786cb3/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_fe2470ea27494db98aa9bafd21786cb3/setup.py:165: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.8.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/32/81/8da9f2307971b5ae0c2e32763267814a91dcb3f0762432befcf37df7d16d/Cartopy-0.13.0.tar.gz#sha256=e8301460c5b5f9e57fa8de91772cfdf0360a04bbcd77ab102c3e678ad81a5474 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_f2d07446981949049be881248631ee0c/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_f2d07446981949049be881248631ee0c/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-u61om_0u</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_f2d07446981949049be881248631ee0c/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_f2d07446981949049be881248631ee0c/setup.py:165: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.8.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/9a/b1/9723f24ddc542b14c86e233a93fdc2c1cf424c57b526160eeb45f454edc4/Cartopy-0.12.0.5.tar.gz#sha256=2c19a14f788fda4b6648995de3b38e02fc4fe46ee0156d01ddacfb32594a980c (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_f2d87edcdaa34dc68ad7dc9e993c5bea/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-d32nclx3/cartopy_f2d87edcdaa34dc68ad7dc9e993c5bea/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; egg_info --egg-base /tmp/pip-pip-egg-info-wtezgf7b</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-d32nclx3/cartopy_f2d87edcdaa34dc68ad7dc9e993c5bea/</span>
+<span class=" -Color -Color-Red">    Complete output (3 lines):</span>
+<span class=" -Color -Color-Red">    /tmp/pip-install-d32nclx3/cartopy_f2d87edcdaa34dc68ad7dc9e993c5bea/setup.py:165: UserWarning: Unable to determine GEOS version. Ensure you have 3.3.3 or later installed, or installation may fail.</span>
+<span class=" -Color -Color-Red">      &#39;.&#39;.join(str(v) for v in GEOS_MIN_VERSION), ))</span>
+<span class=" -Color -Color-Red">    Proj4 4.8.0 must be installed.</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/6c/fa/e4c45bd9c78e43f78d30b8d5e6fb884c045b017af51499f0b919ed8ce72c/Cartopy-0.12.0.4.tar.gz#sha256=f2796874bd1d8abf6b65324acd38f15f731a4ad1b0e9a806bf14036c946c4c87 (from https://pypi.org/simple/cartopy/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SPARQLWrapper</span> <span class="kn">import</span> <span class="n">SPARQLWrapper</span><span class="p">,</span> <span class="n">JSON</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">shapely</span>
+
+<span class="c1">#dbsparql = &quot;http://dbpedia.org/sparql&quot;</span>
+<span class="c1"># ufokn = &quot;http://graph.collaborium.io/blazegraph/namespace/oihdev/sparql&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Point in Polygon function from the cited Vidhya reference.  A few small changes</span>
+<span class="c1"># to align with our dataframes here</span>
+
+<span class="k">def</span> <span class="nf">get_pip</span> <span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">regions</span><span class="p">):</span>
+    <span class="n">r_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">regions</span><span class="o">.</span><span class="n">NAME</span><span class="p">)</span>
+    <span class="c1">#create empty dataframe</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span><span class="o">.</span><span class="n">reindex_like</span><span class="p">(</span><span class="n">gdf</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">r_list</span><span class="p">:</span>
+        <span class="c1">#get geometry for specific region</span>
+        <span class="n">pol</span> <span class="o">=</span> <span class="p">(</span><span class="n">regions</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">regions</span><span class="o">.</span><span class="n">NAME</span><span class="o">==</span><span class="n">r</span><span class="p">])</span>
+        <span class="n">pol</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="c1">#identify those records from gdf that are intersecting with the region polygon</span>
+        <span class="n">pip_mask</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">within</span><span class="p">(</span><span class="n">pol</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;WKT&#39;</span><span class="p">])</span>
+        <span class="c1">#filter gdf to keep only the intersecting records</span>
+        <span class="n">pip_data</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pip_mask</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="c1">#create a new column and assign the region name as the value</span>
+        <span class="n">pip_data</span><span class="p">[</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">r</span>
+        <span class="c1">#append region data to empty dataframe</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pip_data</span><span class="p">)</span>
+    <span class="c1">#checking there are no more than one region assigned to an event    </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Original dataframe count=&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf</span><span class="p">),</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">New dataframe count=&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are id&#39;s with more than one region&quot;</span><span class="p">)</span>
+    <span class="c1">#checking all events have a region</span>
+    <span class="k">elif</span> <span class="n">gdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">gdf</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">id</span><span class="p">)]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are id&#39;s without an assigned region&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No discrepancies in results!&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load CSV into pandas that holds the WKT strings for the world seas dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./World_Seas_IHO_v3/out.wkt/World_Seas_IHO_v3.csv&#39;</span><span class="p">)</span>  
+<span class="c1"># df.head(2)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert the WKT strings to WKT geometry</span>
+<span class="kn">from</span> <span class="nn">shapely</span> <span class="kn">import</span> <span class="n">wkt</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;WKT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;WKT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">wkt</span><span class="o">.</span><span class="n">loads</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load and plot the ocean regions</span>
+<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
+
+<span class="c1"># Make geopandas from df</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="s1">&#39;WKT&#39;</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;init&quot;</span><span class="p">:</span> <span class="s2">&quot;epsg:3857&quot;</span><span class="p">})</span> <span class="c1"># contextily requires 3875?</span>
+<span class="c1"># gdf.head(2)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make geopandas from GeoJSON of the world for plot</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json&quot;</span>
+<span class="n">dftx</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># plot</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">dftx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/geocomplete_8_1.png" src="../../../_images/geocomplete_8_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make test datarame with some lat long pairs to test</span>
+<span class="c1"># Later these will come from SPARQL calls to the OIH graph</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="o">-</span><span class="mi">37</span><span class="p">,</span>  <span class="o">-</span><span class="mi">22</span><span class="p">,</span><span class="mi">14</span><span class="p">],</span>
+                   <span class="s1">&#39;Longitude&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">146</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">129</span><span class="p">,</span>  <span class="mi">37</span><span class="p">,</span><span class="mi">85</span><span class="p">],</span> 
+                   <span class="s1">&#39;id&#39;</span><span class="p">:[</span><span class="s2">&quot;Off US West Coast&quot;</span><span class="p">,</span><span class="s2">&quot;Atlantic&quot;</span><span class="p">,</span><span class="s2">&quot;South of Australia&quot;</span><span class="p">,</span> <span class="s2">&quot;Africa&quot;</span><span class="p">,</span><span class="s2">&quot;Near India&quot;</span><span class="p">]})</span>
+
+<span class="n">testdf</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geopandas</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Longitude</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">Latitude</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call the function and do pip calculations</span>
+<span class="n">eq_df</span> <span class="o">=</span> <span class="n">get_pip</span><span class="p">(</span><span class="n">testdf</span><span class="p">,</span> <span class="n">gdf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original dataframe count= 5 
+New dataframe count= 5
+No discrepancies in results!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The generated dataframe holds the matches of the test Lat Long pairs to the named seas from the reference shape file.
+These results couild be fed back into the graph as keywords or items from a known list of terms for more explicate relation mapping.</p>
+<p>Specifically,  someting like <a class="reference external" href="https://schema.org/DefinedTerm">https://schema.org/DefinedTerm</a> where the property <a class="reference external" href="https://schema.org/DefinedTermSet">https://schema.org/DefinedTermSet</a> would point back to the Marine Regions source documents and URL.   Similarly these resources could be connected up to WikiData in a similar manner.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://geonetwork.vliz.be/geonetwork/srv/eng/catalog.search#/metadata/f4cfa278-730f-4646-b6cc-a3dceaa3a1e5&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;IHO Sea Areas&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bay of Bengal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;IHO Sea Area Bay of Bengal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://geonetwork.vliz.be/geonetwork/srv/eng/catalog.search#/metadata/f4cfa278-730f-4646-b6cc-a3dceaa3a1e5&quot;</span>
+        <span class="p">},</span>
+</pre></div>
+</div>
+<p>For reference the WikiData resource is: <a class="reference external" href="https://www.wikidata.org/wiki/Q38684">https://www.wikidata.org/wiki/Q38684</a> which is an instance of “body of water”.  So leveraging this type and the IHO names should allow relatively reliable link detection.   Leveraging the top level Thing class in <a class="reference external" href="http://schema.org">schema.org</a> we would be looking at a simple</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q38684&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>in the DefinedTerm type.</p>
+<p>In the final listing below the “id” is the just the random string I associated with the test lat longs. I used a simple online map to just pick some random locations and gave them names.   The “region” cames from the offical Marine Regions file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eq_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>id</th>
+      <th>region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-37.0</td>
+      <td>129.0</td>
+      <td>South of Australia</td>
+      <td>Great Australian Bight</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-22.0</td>
+      <td>37.0</td>
+      <td>Africa</td>
+      <td>Mozambique Channel</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.0</td>
+      <td>0.0</td>
+      <td>Atlantic</td>
+      <td>South Atlantic Ocean</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14.0</td>
+      <td>85.0</td>
+      <td>Near India</td>
+      <td>Bay of Bengal</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>38.0</td>
+      <td>-146.0</td>
+      <td>Off US West Coast</td>
+      <td>North Pacific Ocean</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tooling/notebooks/geokgcomplete"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By IODEPO<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
