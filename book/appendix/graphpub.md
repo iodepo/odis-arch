@@ -8,7 +8,6 @@ This approach is not ideal since it is a non-standard pattern and makes the data
 
 As such, we are making some changes to allow for this pattern.  This means documenting the published graph structure based on the existing thematic patterns and some updates in the indexing workflow to obtain and integrate these graphs into the OIH graph.  
 
-
 > WARNING
 > Using approaches here is not in alignment with 
 > Google guidance nor with W3C patterns for structured
