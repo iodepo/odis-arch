@@ -1,0 +1,119 @@
+prefix schema: <http://schema.org/> 
+prefix sschema: <https://schema.org/> 
+SELECT ?g ?subj ?disurl ?score  ?name ?description  
+WHERE {    
+  ?lit bds:search "cldp project: corelyzer archive file " .   
+  ?lit bds:matchAllTerms "false" .  
+  ?lit bds:relevance ?score .  
+  ?subj ?p ?lit .  
+  BIND (?subj as ?s)   
+  {     	
+    OPTIONAL { 
+    SELECT  ?s (MIN(?url) as ?disurl) {      
+        graph ?g {
+      ?s a sschema:Dataset .        
+      ?s schema:distribution|sschema:distribution ?dis .    	
+      ?dis schema:contentUrl |sschema:contentUrl  ?url .    	 
+        }
+    } GROUP BY ?s  
+    }
+  }    
+  ?s schema:name|sschema:name ?name .  
+  ?s schema:description|sschema:description ?description .  
+} ORDER BY DESC(?score)
+LIMIT 20
+OFFSET 0
+
+
+
+
+Lac Patricia temperature and precipitation data
+
+prefix schema: <http://schema.org/> 
+prefix sschema: <https://schema.org/> 
+SELECT ?s ?g ?url ?score  ?name ?description  ?rrs
+WHERE {    
+  ?lit bds:search "BPP project: Corelyzer archive file " .   
+  ?lit bds:matchAllTerms "false" .  
+  ?lit bds:relevance ?score .  
+  ?s ?p ?lit .      
+  
+  VALUES (?dataset) { ( schema:Dataset ) ( sschema:Dataset ) }
+  ?s a ?dataset .  
+  ?s schema:name|sschema:name ?name .  
+
+  graph ?g {
+  ?s schema:description|sschema:description ?description . 
+  }
+
+  OPTIONAL {
+    ?s schema:distribution|sschema:distribution ?dis .    	
+    ?dis schema:contentUrl |sschema:contentUrl  ?url .    	    
+  }
+
+  # OPTIONAL {
+  #      ?s  schema:additionalType|sschema:additionalType ?type .
+  
+  #     BIND (str(?type) as ?label)
+  #  SERVICE <http://132.249.238.169:8080/fuseki/ecrr/query> {
+  #      GRAPH <http://earthcube.org/gleaner-summoned> 
+  #      {               
+  #        ?rrs schema:supportingData/schema:encodingFormat  ?label .
+  #        ?rrs schema:name ?rrname.
+  #       }
+  #   }  
+  # }
+
+} 
+ORDER BY DESC(?score)
+LIMIT 20
+OFFSET 0
+
+
+
+
+
+
+PREFIX sdo:  <http://schema.org/>
+ 
+ASK
+WHERE
+{
+  graph <urn:gleaner:milled:ocd:917529917c29eae1fcab0618f8f85f5587c771bb> {
+    
+   ?s  <https://schema.org/additionType> ?type .
+    }
+      BIND (str(?type) as ?label)
+   SERVICE <http://132.249.238.169:8080/fuseki/ecrr/query> {
+       GRAPH <http://earthcube.org/gleaner-summoned> 
+       {               
+         ?rrs sdo:supportingData/sdo:encodingFormat  ?label .
+         ?rrs sdo:name ?rrname.
+        }
+    }    
+ }
+
+
+ PREFIX schema:  <https://schema.org/>
+  PREFIX schemaold:  <http://schema.org/>
+
+select *
+WHERE
+{
+  graph <urn:gleaner:milled:lipdverse:0073922a12adbc1073c93ea0b4c9424e39f29897> {
+    
+   ?s  schema:encodingFormat ?type .
+   
+ }
+        
+         BIND (str(?type) as ?label)
+   SERVICE <http://132.249.238.169:8080/fuseki/ecrr/query> {
+       GRAPH <http://earthcube.org/gleaner-summoned> 
+       {               
+         ?rrs schemaold:supportingData/schemaold:encodingFormat  ?label .
+         ?rrs schemaold:name ?rrname.
+        }
+    }    
+        
+        
+  }
