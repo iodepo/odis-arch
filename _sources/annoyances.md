@@ -3,8 +3,7 @@
 ## About
 
 This document will collect some of the various issues we have encounter in publishing
-the JSON-LD documents.  It is a document to reference if you have any issues during
-publishing.  
+the JSON-LD documents.  
 
 ### control characters in URL string for sitemap or in the JSON-LD documents
 

@@ -84,30 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../authoring/content.html">
-   Authoring Metadata for OIH
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../publishing/content.html">
+  <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -127,14 +122,9 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../indexing/content.html">
-   Indexing
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Tooling Index
+   Tooling
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -142,11 +132,6 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../openRefine/README.html">
      OpenRefine
@@ -189,13 +174,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/index.html">
-   Appendex
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -204,21 +199,48 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/list.html">
-     Controlled Lists
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prov/README.html">
-   Prov
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../validation/README.html">
-   Validation
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/list.html">
+     Defined Terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/languages.html">
+     Languages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/referenceclient.html">
+     Reference Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/prov/README.html">
+     Prov
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../annoyances.html">
@@ -322,13 +344,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/OIH_Graphs.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/OIH_Graphs.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/OIH_Graphs.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -363,7 +390,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=Nfd706ee79d914fda99af4da42cba1d33 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N5e808fc06924424d880b2e05e96e3715 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
 </pre></div>
 </div>
 </div>
@@ -385,16 +412,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nf5b28a08a06c41c8a1b5636c3702c687 Course Name: OTGA-POGO-AWI: Ocean Data Management Training Course
-Nefd6d93934c04fdda60dd534be810da9 Course Name:  International Phytoplankton Intercomparison (IPI)
-N96ba3e7af5fc410389b09cf3aa0dfbbc Course Name: First ODINAFRICA-IV training course on Coastal and Marine Atlas development
-Nff5e55a4c2ee4947bc10bde7b2b2812d Course Name: Baltic Floating University Cruise, 2004 - Leg 1
-Nb703b42394c14c21a979ba7de6a6f5ae Course Name: Training Course on the establishment of IODE Ocean Data Portal data providers
-N9702ae3a3a774d5584f0d4f0d2283bd0 Course Name: IOI Training Programme on OCEAN GOVERNANCE: POLICY, LAW AND MANAGEMENT
-N24e5b47201ed469083c794c1b5e4d5b0 Course Name: (ONLINE) OTGA/INVEMAR Training Course: Estandarización de las mediciones analíticas requeridas para la estimación del índice de Calidad de Aguas Marinas y Costeras (ICAM)
-Naa8b6390f135492d9e789cfd5aadbe20 Course Name: OTGA Training Course: Discovery and Use of Operational Ocean Data Products and Services
-N3a4e1e3e3db743d4ba6b4b5bae10d30b Course Name: OceanTeacher Academy Course DM: Basic Marine Data Management: (i) ocean data collection development; (ii) intro to marine metadata; (iii) Ocean data products and synthesis
-Na59414389c634d1da7ada691f5db1d8e Course Name: Accredited OTA Course: University Curriculum in Marine Data Management (2011)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N601404b4f0c84867a4bec91d94f31e46 Course Name: [ONLINE] EUMETSAT/CMEMS/OTGA Train the Trainers: tools &amp;amp; techniques for teaching about Sentinel-3 marine data
+Ne7e6196da37f4d9b85b62ba7633f402e Course Name: Baltic Floating University Cruise, 2001 - Leg 2
+Nf4e5309109854682831dd9ee432f7c0f Course Name: Workshop on Capacity Development to Improve the Management of Marine Areas beyond National Jurisdiction (ABNJ):  Needs, Experiences, Options, and Opportunities
+Nee50a890fb024f079d3688b292c2ed4b Course Name: Identification Qualification in Harmful Marine Microalgae 2015
+Ne385dd8f0a0d4ed582c847835b93ef9e Course Name: Training-Through-Research Cruise (1999)
+Nf8cbfbfa2040497abf3307136c75263d Course Name: TALLER DE ELABORACION DE MAPAS DE EVACUACION CON EQUIPOS DE ACCION TSUNAMI Y ACTORES INSTITUCIONALES DE HAINA, NIGUA Y PALENQUE
+N870234e3c6de432ebec4ad26cc5c99ce Course Name: Ocean Data Portal training-of-trainers course
+Nf923835f9f2d4ee3bf06ecc6faaff802 Course Name: 10th Advanced Phytoplankton Course: Taxonomy and Systematics
+N46ae1c150d97403e862518a02f449170 Course Name: TALLER LOCAL DE FORTALECIMIENTO DE LA PLANIFICACION DE LA RESPUESTA ANTE TSUNAMI Y DE EJERCICIOS DE EVACUACION
+Nd148bcbbbc524eaa9c9d9db3481e200a Course Name: II Baltic Floating University Cruise, 1994
 </pre></div>
 </div>
 </div>

@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Appendex" href="../../appendix/index.html" />
+    <link rel="next" title="Geo KG Completion testing" href="geocomplete.html" />
     <link rel="prev" title="OIH Graph testing" href="OIH_Graphs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -84,30 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../authoring/content.html">
-   Authoring Metadata for OIH
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../publishing/content.html">
+  <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -127,14 +122,9 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../indexing/content.html">
-   Indexing
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
-   Tooling Index
+   Tooling
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -142,11 +132,6 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../graphpub/index.html">
-     Graph first approaches
-    </a>
-   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../openRefine/README.html">
      OpenRefine
@@ -189,13 +174,23 @@
        OIH Editor Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="geocomplete.html">
+       Geo KG Completion testing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="SHACL/pySHACL.html">
+       pySHACL testing
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/index.html">
-   Appendex
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -204,21 +199,48 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/list.html">
-     Controlled Lists
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prov/README.html">
-   Prov
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../validation/README.html">
-   Validation
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/list.html">
+     Defined Terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/graphpub.html">
+     Graph first approaches
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/languages.html">
+     Languages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/referenceclient.html">
+     Reference Client
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/prov/README.html">
+     Prov
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../annoyances.html">
@@ -322,13 +344,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -344,90 +371,81 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   OIH Editor Playground
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#some-package-and-imports">
    Some package and imports
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pip-installs">
      pip installs
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
      imports
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions">
      functions
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#editor-playground">
-     Editor playground
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#editor-playground">
+   Editor playground
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-json-ld-files">
    Introduction to JSON-LD files
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#framing">
-     Framing
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#framing">
+   Framing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse-out-the-keywords">
+     Parse out the keywords
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#parse-out-the-keywords">
-       Parse out the keywords
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#wikidata">
-       Wikidata
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wikidata">
+     Wikidata
+    </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#validation">
    Validation
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#about">
      About
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#thematic-topic-documents">
    Thematic topic: Documents
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      About
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dev-note">
-       Dev note
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dev-note">
+     Dev note
+    </a>
    </li>
   </ul>
  </li>
@@ -445,11 +463,10 @@
   <div class="section" id="oih-editor-playground">
 <h1>OIH Editor Playground<a class="headerlink" href="#oih-editor-playground" title="Permalink to this headline">¶</a></h1>
 <p>For more background on the larger ODIS Ocean Info Hub and related referneces please visit out GitHub repository.</p>
-</div>
 <div class="section" id="some-package-and-imports">
-<h1>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h1>
+<h2>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pip-installs">
-<h2>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>
+<h3>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%%quiet</span>
@@ -467,16 +484,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-<span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="imports">
-<h2>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h3>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
@@ -527,7 +538,7 @@
 </div>
 </div>
 <div class="section" id="functions">
-<h2>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h3>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
@@ -642,6 +653,7 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="editor-playground">
 <h2>Editor playground<a class="headerlink" href="#editor-playground" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -671,9 +683,8 @@
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="introduction-to-json-ld-files">
-<h1>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Google Data Set Required+</span>
@@ -767,6 +778,7 @@ Descriptive text of the dataset.
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/OIH_Editor_15_0.svg" src="../../_images/OIH_Editor_15_0.svg" /></div>
+</div>
 </div>
 <div class="section" id="framing">
 <h2>Framing<a class="headerlink" href="#framing" title="Permalink to this headline">¶</a></h2>
@@ -949,11 +961,10 @@ description:science that applies chemistry to geological systems
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="validation">
-<h1>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h1>
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<h3>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h3>
 <p>The code below invokes pySHACL on some data and shape graphs out of GitHub. Note, we could edit these local to this notebook too. The human output is a bit hard to read since some of the encoding is off.</p>
 <p>It might actually work to use the graph output and route it through the graph package and into Pandas too. It might let us parse and present the results a bit better.</p>
 <p>The imaage below is just a test of putting images into this document.  We can also upload and associate a document with the notebook and use it locally too.</p>
@@ -999,9 +1010,9 @@ Conforms: True
 </div>
 </div>
 <div class="section" id="thematic-topic-documents">
-<h1>Thematic topic: Documents<a class="headerlink" href="#thematic-topic-documents" title="Permalink to this headline">¶</a></h1>
+<h2>Thematic topic: Documents<a class="headerlink" href="#thematic-topic-documents" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h2>About<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>About<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>A testing area for the work on type Document</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1030,6 +1041,7 @@ Conforms: True
 
 <span class="c1"># could I %load the file via magic commands?  see all via %lsmagic</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1180,7 +1192,7 @@ Conforms: True
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="OIH_Graphs.html" title="previous page">OIH Graph testing</a>
-    <a class='right-next' id="next-link" href="../../appendix/index.html" title="next page">Appendex</a>
+    <a class='right-next' id="next-link" href="geocomplete.html" title="next page">Geo KG Completion testing</a>
 
         </div>
         
