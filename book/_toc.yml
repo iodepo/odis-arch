@@ -1,18 +1,15 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro
-- file: infographic
+- file: index
 - file: content
-- file: authoring/content
-- file: publishing/content
+- file: publishing/publishing
+- file: indexing/harvesting
 - file: thematics/index
   sections:
     - file: thematics/overview
-- file: indexing/content
 - file: tooling/index
   sections:
-    - file: tooling/graphpub/index.md
     - file: tooling/openRefine/README.md
       sections:
         - file: tooling/openRefine/template.md
@@ -21,11 +18,18 @@
         - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
         - file: tooling/notebooks/OIH_Graphs.ipynb
         - file: tooling/notebooks/OIH_Editor.ipynb
+        - file: tooling/notebooks/geocomplete.ipynb
+        - file: tooling/notebooks/SHACL/pySHACL.ipynb
+- file: validation/README   
+  sections:
+  - file: validation/cue/README.md
 - file: appendix/index
   sections:
     - file: appendix/list
-- file: prov/README
-- file: validation/README   
+    - file: appendix/graphpub
+    - file: appendix/languages
+    - file: appendix/referenceclient
+    - file: appendix/prov/README
 - file: annoyances
 - file: references
 - file: registries

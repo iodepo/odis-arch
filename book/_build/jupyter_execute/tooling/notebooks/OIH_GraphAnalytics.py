@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Graph Analytics Exploration
+# # Graph Analytics Exploration
 # 
 # * https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python
 # * https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html
 # 
-# ### Steps
+# ## Steps
 # 
 # * Pull in the OIH RDF graph and load 
 # 
 
-# In[1]:
+# In[15]:
 
 
 get_ipython().system('pip -q install pydotplus')
@@ -30,7 +30,7 @@ get_ipython().system('pip -q install rdflib-jsonld')
 get_ipython().system('pip -q install PyLD==2.0.2')
 
 
-# In[2]:
+# In[16]:
 
 
 import rdflib
@@ -40,7 +40,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import gzip
 
-with gzip.open('./OIH/oceanexperts_graph.nq.gz', 'rb') as f:
+with gzip.open('oceanexperts_graph.nq.gz', 'rb') as f:
     file_content = f.read()
 
 g = rdflib.Graph()

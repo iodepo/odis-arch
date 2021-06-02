@@ -1,19 +1,21 @@
 # References
 
+A broad collection of references.  
+
 ## General
-  
+
   [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
-  
+
   [BioSchemas](https://bioschemas.org/liveDeploys/ )
 
   [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
-  
+
   [PID policy for European Open Science Cloud](https://op.europa.eu/en/publication-detail/-/publication/35c5ca10-1417-11eb-b57e-01aa75ed71a1/language-en)
-  
+
   [DCAT Schema.org mappings](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
-  
+
   [DCAT US Data.gov reference](https://resources.data.gov/resources/dcat-us/)
-  
+
   [FAIR Semantics](https://zenodo.org/record/3707985#.X7Jq2-RKjrV)
 
 
@@ -102,7 +104,7 @@
 [Lighthouse](https://github.com/GoogleChrome/lighthouse)
 
 [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
- 
+
 [BioSchemas](http://bioschemas.org/)
 
 [CodeMeta](https://codemeta.github.io/)
@@ -151,5 +153,5 @@
 
 
  [RDA group meeting notes](https://docs.google.com/document/d/18CyQ2WsOxG_0zzzteubJyPveZzr8KPH4iuvoKVxRo3o/edit)
-  
+
   [RDA Plenary meeting](https://www.rd-alliance.org/moving-toward-fair-semantics-2)

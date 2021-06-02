@@ -9,8 +9,3 @@ connection of value in query results.
 
 ![relations](./images/relations.svg)
 
-## Points of Interest
-
-
-### Documents to Spatial
-
