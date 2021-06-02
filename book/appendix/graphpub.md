@@ -10,7 +10,7 @@ As such, we are making some changes to allow for this pattern.  This means docum
 
  ```{warning}
  Anti-pattern:
- Using the approache here is not in alignment with 
+ Using the approach here is not in alignment with 
  Google guidance nor with W3C patterns for structured
  data on the web.  
  
