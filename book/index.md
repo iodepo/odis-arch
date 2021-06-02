@@ -1,14 +1,9 @@
-The Ocean Info Hub
+Ocean Info Hub
 ============================
 
 ## Introduction
 
-Organizations are increasingly exposing data and resources on the Web.   A
-popular approach to this is using web architecture to expose structured data on
-the web using the schema.org vocabulary.   Doing this makes resources
-discoverable by a range of organizations leveraging this architecture to build
-indexes.  These include major commercial indexes, large domain focused groups
-and community focused services.
+Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
 ## Ocean Info Hub
 
@@ -18,9 +13,7 @@ architecture including authoring, publishing, indexing and interfaces.
 
 The basics of this approach can be described as:
 
-* Providers publish HTML pages for a resource.  This may be a publication,
-  course description, research instrument or other.   The core themes for OIH
-  are described in the Authoring section below.
+* Providers publish HTML pages for a resource.  This may be a publication, course description, research instrument or other.   The core themes for OIH are described in the Authoring section below.
 * A HTML page then has a small JSON based snippet added to the HTML.  This is
   described in the Including JSON-LD in your resource page in the Publishing
   resource below. 
@@ -98,3 +91,9 @@ Government of Canada:
   via a complementary link to Google Scholar.
 
 ![image1](./images/intro2.png)
+
+## Info-graphic
+
+The following is a simple overview info-graphic of the Ocean Info Hub activity flow.  
+
+![image1](./images/OIHInfoGraphic.png)

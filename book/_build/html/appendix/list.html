@@ -84,25 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -121,11 +121,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/content.html">
-   Indexing
-  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../tooling/index.html">
@@ -193,12 +188,29 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../validation/README.html">
+   Validation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
    Appendix
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,26 +235,9 @@
      Reference Client
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../prov/README.html">
-   Prov
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../validation/README.html">
-   Validation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../validation/cue/README.html">
-     Cue
+    <a class="reference internal" href="prov/README.html">
+     Prov
     </a>
    </li>
   </ul>
@@ -359,6 +354,11 @@
    About
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -374,7 +374,29 @@
 <h1>Defined Terms<a class="headerlink" href="#defined-terms" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Examples for <a class="reference external" href="https://schema.org/DefinedTerm">schema.org/DefinedTerm</a></p>
+<p>During generation of the structured data a provide may wish to
+either use or publish a set of controlled vocabulary terms or
+a similar set.</p>
+<p>Within <a class="reference external" href="http://schema.org">schema.org</a> this could be done by leveraging the “DefinedTerm”
+amd “DefinedTermSet” types.</p>
+<p>These types allow us both to define a set of terms and
+use a set of terms in describing a thing.</p>
+<p>Note that DefinedTerm is an intangible and can connect to most
+types in <a class="reference external" href="http://Schema.org">Schema.org</a>.  So we can use them in places such as:</p>
+<ul class="simple">
+<li><p>CreativeWork -&gt; keyword</p></li>
+<li><p>LearningResource -&gt; teaches</p></li>
+<li><p>PropertyValue -&gt; valueReference</p></li>
+<li><p>LearningResource -&gt; competencyRequired</p></li>
+<li><p>CreativeWork -&gt; learningResourceType</p></li>
+</ul>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/DefinedTerm">schema.org/DefinedTerm</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/DefinedTermSet">schema.org/DefinedTermSet</a></p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
         <span class="p">{</span>
                 <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>

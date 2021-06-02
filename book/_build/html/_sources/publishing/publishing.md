@@ -118,7 +118,6 @@ Providers may also wish to provide content negotiation for type application/ld+j
 for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
 the specific serialization and this will likely lighten the load on the servers going forward.
 
-
 #### Validation With SHACL or ShEx
 
 To help facilitate the interconnection of resource, some application focused validation
@@ -131,12 +130,11 @@ Some initial development work for this can be found in the
 [validation directory](../validation/README.md)
 
 ##### Validation Tools and References
-- [SHACL playground](https://shacl.org/playground/)
-- [Schemarama](https://github.com/google/schemarama)
-- [Schimatos.org](https://github.com/schimatos/schimatos.org)  
-  - [demo](http://rsmsrv01.nci.org.au:8080/schimatos/)
-- [Comparing ShEx and SHACL](https://book.validatingrdf.com/bookHtml013.html)
-
+* [SHACL playground](https://shacl.org/playground/)
+* [Schemarama](https://github.com/google/schemarama)
+* [Schimatos.org](https://github.com/schimatos/schimatos.org)  
+  * [demo](http://rsmsrv01.nci.org.au:8080/schimatos/)
+* [Comparing ShEx and SHACL](https://book.validatingrdf.com/bookHtml013.html)
 
 #### Validation Leveraging JSON Schema
 
@@ -228,8 +226,6 @@ removals from the sitemap URL set to manage new or removed resources.
 </sitemapindex>
 ```
 
-
-
 ## Full Workflow 
 ![](./images/flowv2.png)
 
@@ -271,14 +267,11 @@ the structured data on the web pattern.
 
 A collection of starting points for their support follows.  
 
-
-- [WordPress](https://wordpress.org/plugins/schema/)
-- [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
-- [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
-- [DSpace](https://journal.code4lib.org/articles/13191)
-- [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
-- [OPeNDAP (native support)](https://www.opendap.org/)
-- [GeoNode](http://geonode.org/)
-  - [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)
-
-
+* [WordPress](https://wordpress.org/plugins/schema/)
+* [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
+* [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
+* [DSpace](https://journal.code4lib.org/articles/13191)
+* [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
+* [OPeNDAP (native support)](https://www.opendap.org/)
+* [GeoNode](http://geonode.org/)
+  * [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)

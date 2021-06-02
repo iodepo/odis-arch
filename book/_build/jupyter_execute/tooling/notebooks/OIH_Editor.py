@@ -9,7 +9,7 @@
 
 # ### pip installs
 
-# In[1]:
+# In[3]:
 
 
 #%%quiet
@@ -28,7 +28,7 @@ get_ipython().system('pip install -q rdflib')
 
 # ### imports
 
-# In[2]:
+# In[4]:
 
 
 #@title

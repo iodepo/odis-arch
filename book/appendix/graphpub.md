@@ -8,12 +8,16 @@ This approach is not ideal since it is a non-standard pattern and makes the data
 
 As such, we are making some changes to allow for this pattern.  This means documenting the published graph structure based on the existing thematic patterns and some updates in the indexing workflow to obtain and integrate these graphs into the OIH graph.  
 
-> WARNING
-> Using approaches here is not in alignment with 
-> Google guidance nor with W3C patterns for structured
-> data on the web.  It is documented here for edge cases
-> where this is the minimum viable approach.  The hope is it 
-> could act as a gateway to a more standards aligned implementation.
+ ```{warning}
+ Anti-pattern:
+ Using the approache here is not in alignment with 
+ Google guidance nor with W3C patterns for structured
+ data on the web.  
+ 
+ It is documented here for edge cases
+ where this is the minimum viable approach.  The hope is it 
+ could act as a gateway to a more standards aligned implementation later.
+```
 
 ## Graph Only
 
@@ -23,6 +27,14 @@ data into the pages is not supportable.
 
 For this case the goal is to create a simple graph in JSON-LD.  To do this we need a collection 
 approach that is valid for a range of Things.  
+
+For this it is proposed to use ItemList which can be used on a list of type Thing, ie anything 
+type in the Schema.org vocabulary.  
+
+This would define a ListItem with item of any type.  Below is an example for a CreativeWork (map)
+and a Course.  Once you are in a "item" any of the details from the other thematic type descriptions 
+can be used.  
+
 
 ```JSON
 {

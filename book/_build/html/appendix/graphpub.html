@@ -84,25 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -121,11 +121,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/content.html">
-   Indexing
-  </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../tooling/index.html">
@@ -193,12 +188,29 @@
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../validation/README.html">
+   Validation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
    Appendix
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,26 +235,9 @@
      Reference Client
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../prov/README.html">
-   Prov
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../validation/README.html">
-   Validation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../validation/cue/README.html">
-     Cue
+    <a class="reference internal" href="prov/README.html">
+     Prov
     </a>
    </li>
   </ul>
@@ -397,14 +392,16 @@
 <p>During the early adopters meetings and in discussion with others an alternative publication pattern came up.  This is the pattern where it is not possible to update the web resources with the metadata content.  This may be due to access or technical issues.  Regardless, what was possible was to generate the metadata in bulk locally and make the resulting document available.</p>
 <p>This approach is not ideal since it is a non-standard pattern and makes the data and information more obscure to other users.  However, it is one the OIH architecture can adapt to and is preferable to the option of excluding those partners in this activity.</p>
 <p>As such, we are making some changes to allow for this pattern.  This means documenting the published graph structure based on the existing thematic patterns and some updates in the indexing workflow to obtain and integrate these graphs into the OIH graph.</p>
-<blockquote>
-<div><p>WARNING
-Using approaches here is not in alignment with
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Anti-pattern:
+Using the approache here is not in alignment with
 Google guidance nor with W3C patterns for structured
-data on the web.  It is documented here for edge cases
+data on the web.</p>
+<p>It is documented here for edge cases
 where this is the minimum viable approach.  The hope is it
-could act as a gateway to a more standards aligned implementation.</p>
-</div></blockquote>
+could act as a gateway to a more standards aligned implementation later.</p>
+</div>
 </div>
 <div class="section" id="graph-only">
 <h2>Graph Only<a class="headerlink" href="#graph-only" title="Permalink to this headline">¶</a></h2>
@@ -413,6 +410,11 @@ based on the metadata.  Access to the HTML pages is either difficult or the proc
 data into the pages is not supportable.</p>
 <p>For this case the goal is to create a simple graph in JSON-LD.  To do this we need a collection
 approach that is valid for a range of Things.</p>
+<p>For this it is proposed to use ItemList which can be used on a list of type Thing, ie anything
+type in the <a class="reference external" href="http://Schema.org">Schema.org</a> vocabulary.</p>
+<p>This would define a ListItem with item of any type.  Below is an example for a CreativeWork (map)
+and a Course.  Once you are in a “item” any of the details from the other thematic type descriptions
+can be used.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
   <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ItemList&quot;</span><span class="p">,</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">],</span>

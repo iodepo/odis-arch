@@ -51,7 +51,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Appendix" href="../../../appendix/index.html" />
+    <link rel="next" title="Validation" href="../../../validation/README.html" />
     <link rel="prev" title="Geo KG Completion testing" href="../geocomplete.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -84,25 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../../../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -121,11 +121,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../indexing/content.html">
-   Indexing
-  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../index.html">
@@ -194,11 +189,28 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../appendix/index.html">
-   Appendix
+  <a class="reference internal" href="../../../validation/README.html">
+   Validation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,26 +235,9 @@
      Reference Client
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../prov/README.html">
-   Prov
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../validation/README.html">
-   Validation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../../validation/cue/README.html">
-     Cue
+    <a class="reference internal" href="../../../appendix/prov/README.html">
+     Prov
     </a>
    </li>
   </ul>
@@ -349,13 +344,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/SHACL/pySHACL.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/SHACL/pySHACL.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/SHACL/pySHACL.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -490,9 +490,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>indexing gleaner/summoned/oceanexperts
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>481
+480
 </pre></div>
 </div>
 </div>
@@ -577,8 +575,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 7.22 s, sys: 1.5 s, total: 8.72 s
-Wall time: 24.8 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 16.1 s, sys: 546 ms, total: 16.6 s
+Wall time: 34.5 s
 </pre></div>
 </div>
 </div>
@@ -592,13 +590,13 @@ Wall time: 24.8 s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 481 entries, 0 to 480
+RangeIndex: 480 entries, 0 to 479
 Data columns (total 3 columns):
  #   Column  Non-Null Count  Dtype 
 ---  ------  --------------  ----- 
- 0   id      481 non-null    object
- 1   status  481 non-null    object
- 2   shape   481 non-null    object
+ 0   id      480 non-null    object
+ 1   status  480 non-null    object
+ 2   shape   480 non-null    object
 dtypes: object(3)
 memory usage: 11.4+ KB
 </pre></div>
@@ -668,7 +666,7 @@ memory usage: 11.4+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AllPassed    481
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AllPassed    480
 Name: shape, dtype: int64
 </pre></div>
 </div>
@@ -724,7 +722,7 @@ Name: shape, dtype: int64
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../geocomplete.html" title="previous page">Geo KG Completion testing</a>
-    <a class='right-next' id="next-link" href="../../../appendix/index.html" title="next page">Appendix</a>
+    <a class='right-next' id="next-link" href="../../../validation/README.html" title="next page">Validation</a>
 
         </div>
         

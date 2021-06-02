@@ -8,6 +8,8 @@ Ocean Info Hub
 ## References
 * [Science on Schema Issue 105](https://github.com/ESIPFed/science-on-schema.org/issues/105)
   * Leverages [subjectOf](https://schema.org/subjectOf) to connect to a Thing / CreativeWork
+* [https://www.unsalb.org/](https://www.unsalb.org/)
+* [https://www.un.org/geospatial/](https://www.un.org/geospatial/)
 * [schema.org/spatial](https://schema.org/spatial)
 * [schema.org/GeospatialGeometry](https://schema.org/GeospatialGeometry)
 * SOS patern follows:

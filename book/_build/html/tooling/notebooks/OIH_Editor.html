@@ -84,25 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -121,11 +121,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../indexing/content.html">
-   Indexing
-  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
@@ -194,11 +189,28 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/index.html">
-   Appendix
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,26 +235,9 @@
      Reference Client
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prov/README.html">
-   Prov
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../validation/README.html">
-   Validation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../validation/cue/README.html">
-     Cue
+    <a class="reference internal" href="../../appendix/prov/README.html">
+     Prov
     </a>
    </li>
   </ul>
@@ -349,13 +344,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/OIH_Editor.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -484,539 +484,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">  ERROR: Command errored out with exit status 1:</span>
-<span class=" -Color -Color-Red">   command: /usr/bin/python3 -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;;f=getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__);code=f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; bdist_wheel -d /tmp/pip-wheel-axakwnd7</span>
-<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-99zap_hu/marisa-trie/</span>
-<span class=" -Color -Color-Red">  Complete output (256 lines):</span>
-<span class=" -Color -Color-Red">  running bdist_wheel</span>
-<span class=" -Color -Color-Red">  running build</span>
-<span class=" -Color -Color-Red">  running build_clib</span>
-<span class=" -Color -Color-Red">  building &#39;libmarisa-trie&#39; library</span>
-<span class=" -Color -Color-Red">  creating build</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/keyset.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/agent.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/mapper.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/writer.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/reader.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/tail.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/louds-trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/vector/bit-vector.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
-<span class=" -Color -Color-Red">  ar rcs build/temp.linux-x86_64-3.9/liblibmarisa-trie.a build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
-<span class=" -Color -Color-Red">  running build_ext</span>
-<span class=" -Color -Color-Red">  building &#39;marisa_trie&#39; extension</span>
-<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/src</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/agent.cpp -o build/temp.linux-x86_64-3.9/src/agent.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/base.cpp -o build/temp.linux-x86_64-3.9/src/base.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/iostream.cpp -o build/temp.linux-x86_64-3.9/src/iostream.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/key.cpp -o build/temp.linux-x86_64-3.9/src/key.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/keyset.cpp -o build/temp.linux-x86_64-3.9/src/keyset.o</span>
-<span class=" -Color -Color-Red">  gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/marisa_trie.cpp -o build/temp.linux-x86_64-3.9/src/marisa_trie.o</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘int __Pyx_modinit_type_init_code()’:</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17944:34: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  17944 |   __pyx_type_11marisa_trie__Trie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                  ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17968:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  17968 |   __pyx_type_11marisa_trie_BinaryTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                       ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17981:46: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  17981 |   __pyx_type_11marisa_trie__UnicodeKeyedTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                              ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17995:33: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  17995 |   __pyx_type_11marisa_trie_Trie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                 ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18014:38: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18014 |   __pyx_type_11marisa_trie_BytesTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                      ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18039:40: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18039 |   __pyx_type_11marisa_trie__UnpackTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                        ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18052:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18052 |   __pyx_type_11marisa_trie_RecordTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                       ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18070:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18070 |   __pyx_type_11marisa_trie___pyx_scope_struct____init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18076:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18076 |   __pyx_type_11marisa_trie___pyx_scope_struct_1_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18082:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18082 |   __pyx_type_11marisa_trie___pyx_scope_struct_2_iterkeys.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18088:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18088 |   __pyx_type_11marisa_trie___pyx_scope_struct_3_iter_prefixes.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                               ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18094:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18094 |   __pyx_type_11marisa_trie___pyx_scope_struct_4_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18100:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18100 |   __pyx_type_11marisa_trie___pyx_scope_struct_5_iter_prefixes.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                               ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18106:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18106 |   __pyx_type_11marisa_trie___pyx_scope_struct_6_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18112:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18112 |   __pyx_type_11marisa_trie___pyx_scope_struct_7___init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18118:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18118 |   __pyx_type_11marisa_trie___pyx_scope_struct_8_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18124:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18124 |   __pyx_type_11marisa_trie___pyx_scope_struct_9_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18130:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18130 |   __pyx_type_11marisa_trie___pyx_scope_struct_10_iterkeys.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18136:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18136 |   __pyx_type_11marisa_trie___pyx_scope_struct_11___init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18142:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18142 |   __pyx_type_11marisa_trie___pyx_scope_struct_12_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18148:60: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18148 |   __pyx_type_11marisa_trie___pyx_scope_struct_13_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                            ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18154:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">  18154 |   __pyx_type_11marisa_trie___pyx_scope_struct_14_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">  In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                   from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘int __Pyx_ParseOptionalKeywords(PyObject*, PyObject***, PyObject*, PyObject**, Py_ssize_t, const char*)’:</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">        |                                                    ^</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">        |                                                    ^</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">        |                                                    ^</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">        |                                                    ^</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">        |                                                                           ^</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘PyObject* __Pyx_PyUnicode_Substring(PyObject*, Py_ssize_t, Py_ssize_t)’:</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">  20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
-<span class=" -Color -Color-Red">        |                                             ^</span>
-<span class=" -Color -Color-Red">  In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                   from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
-<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
-<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘PyObject* __Pyx_decode_c_string(const char*, Py_ssize_t, Py_ssize_t, const char*, const char*, PyObject* (*)(const char*, Py_ssize_t, const char*))’:</span>
-<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">  20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
-<span class=" -Color -Color-Red">        |                                             ^</span>
-<span class=" -Color -Color-Red">  In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                   from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">  /usr/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
-<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
-<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">  error: command &#39;/usr/bin/gcc&#39; failed with exit code 1</span>
-<span class=" -Color -Color-Red">  ----------------------------------------</span>
-<span class=" -Color -Color-Red">  ERROR: Failed building wheel for marisa-trie</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">DEPRECATION: Could not build wheels for marisa-trie which do not use PEP 517. pip will fall back to legacy &#39;setup.py install&#39; for these. pip 21.0 will remove support for this functionality. A possible replacement is to fix the wheel build issue reported above. You can find discussion regarding this at https://github.com/pypa/pip/issues/8368.</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
-<span class=" -Color -Color-Red">     command: /usr/bin/python3 -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;;f=getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__);code=f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; install --record /tmp/pip-record-7v4xvaw2/install-record.txt --single-version-externally-managed --user --prefix= --compile --install-headers /home/fils/.local/include/python3.9/marisa-trie</span>
-<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-99zap_hu/marisa-trie/</span>
-<span class=" -Color -Color-Red">    Complete output (256 lines):</span>
-<span class=" -Color -Color-Red">    running install</span>
-<span class=" -Color -Color-Red">    running build</span>
-<span class=" -Color -Color-Red">    running build_clib</span>
-<span class=" -Color -Color-Red">    building &#39;libmarisa-trie&#39; library</span>
-<span class=" -Color -Color-Red">    creating build</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/keyset.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/agent.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/mapper.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/writer.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/reader.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/tail.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/louds-trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/vector/bit-vector.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
-<span class=" -Color -Color-Red">    ar rcs build/temp.linux-x86_64-3.9/liblibmarisa-trie.a build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
-<span class=" -Color -Color-Red">    running build_ext</span>
-<span class=" -Color -Color-Red">    building &#39;marisa_trie&#39; extension</span>
-<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/src</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/agent.cpp -o build/temp.linux-x86_64-3.9/src/agent.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/base.cpp -o build/temp.linux-x86_64-3.9/src/base.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/iostream.cpp -o build/temp.linux-x86_64-3.9/src/iostream.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/key.cpp -o build/temp.linux-x86_64-3.9/src/key.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/keyset.cpp -o build/temp.linux-x86_64-3.9/src/keyset.o</span>
-<span class=" -Color -Color-Red">    gcc -pthread -Wno-unused-result -Wsign-compare -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DNDEBUG -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -O2 -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fstack-protector-strong -m64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -D_GNU_SOURCE -fPIC -fwrapv -fPIC -Imarisa-trie/include -I/usr/include/python3.9 -c src/marisa_trie.cpp -o build/temp.linux-x86_64-3.9/src/marisa_trie.o</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘int __Pyx_modinit_type_init_code()’:</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17944:34: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    17944 |   __pyx_type_11marisa_trie__Trie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                  ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17968:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    17968 |   __pyx_type_11marisa_trie_BinaryTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                       ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17981:46: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    17981 |   __pyx_type_11marisa_trie__UnicodeKeyedTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                              ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17995:33: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    17995 |   __pyx_type_11marisa_trie_Trie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                 ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18014:38: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18014 |   __pyx_type_11marisa_trie_BytesTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                      ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18039:40: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18039 |   __pyx_type_11marisa_trie__UnpackTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                        ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18052:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18052 |   __pyx_type_11marisa_trie_RecordTrie.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                       ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18070:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18070 |   __pyx_type_11marisa_trie___pyx_scope_struct____init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18076:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18076 |   __pyx_type_11marisa_trie___pyx_scope_struct_1_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18082:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18082 |   __pyx_type_11marisa_trie___pyx_scope_struct_2_iterkeys.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18088:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18088 |   __pyx_type_11marisa_trie___pyx_scope_struct_3_iter_prefixes.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                               ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18094:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18094 |   __pyx_type_11marisa_trie___pyx_scope_struct_4_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18100:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18100 |   __pyx_type_11marisa_trie___pyx_scope_struct_5_iter_prefixes.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                               ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18106:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18106 |   __pyx_type_11marisa_trie___pyx_scope_struct_6_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18112:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18112 |   __pyx_type_11marisa_trie___pyx_scope_struct_7___init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18118:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18118 |   __pyx_type_11marisa_trie___pyx_scope_struct_8_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18124:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18124 |   __pyx_type_11marisa_trie___pyx_scope_struct_9_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18130:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18130 |   __pyx_type_11marisa_trie___pyx_scope_struct_10_iterkeys.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18136:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18136 |   __pyx_type_11marisa_trie___pyx_scope_struct_11___init__.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18142:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18142 |   __pyx_type_11marisa_trie___pyx_scope_struct_12_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18148:60: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18148 |   __pyx_type_11marisa_trie___pyx_scope_struct_13_iteritems.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                            ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18154:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
-<span class=" -Color -Color-Red">    18154 |   __pyx_type_11marisa_trie___pyx_scope_struct_14_genexpr.tp_print = 0;</span>
-<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
-<span class=" -Color -Color-Red">    In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                     from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘int __Pyx_ParseOptionalKeywords(PyObject*, PyObject***, PyObject*, PyObject**, Py_ssize_t, const char*)’:</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">          |                                                    ^</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">          |                                                    ^</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">          |                                                    ^</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
-<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
-<span class=" -Color -Color-Red">          |                                                    ^</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
-<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
-<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
-<span class=" -Color -Color-Red">          |                                                                           ^</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
-<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
-<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
-<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
-<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
-<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
-<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘PyObject* __Pyx_PyUnicode_Substring(PyObject*, Py_ssize_t, Py_ssize_t)’:</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
-<span class=" -Color -Color-Red">          |                                             ^</span>
-<span class=" -Color -Color-Red">    In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                     from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
-<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
-<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘PyObject* __Pyx_decode_c_string(const char*, Py_ssize_t, Py_ssize_t, const char*, const char*, PyObject* (*)(const char*, Py_ssize_t, const char*))’:</span>
-<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
-<span class=" -Color -Color-Red">    20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
-<span class=" -Color -Color-Red">          |                                             ^</span>
-<span class=" -Color -Color-Red">    In file included from /usr/include/python3.9/unicodeobject.h:1026,</span>
-<span class=" -Color -Color-Red">                     from /usr/include/python3.9/Python.h:97,</span>
-<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
-<span class=" -Color -Color-Red">    /usr/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
-<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
-<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
-<span class=" -Color -Color-Red">    error: command &#39;/usr/bin/gcc&#39; failed with exit code 1</span>
-<span class=" -Color -Color-Red">    ----------------------------------------</span>
-<span class=" -Color -Color-Red">ERROR: Command errored out with exit status 1: /usr/bin/python3 -u -c &#39;import sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-99zap_hu/marisa-trie/setup.py&#39;&quot;&#39;&quot;&#39;;f=getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__);code=f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; install --record /tmp/pip-record-7v4xvaw2/install-record.txt --single-version-externally-managed --user --prefix= --compile --install-headers /home/fils/.local/include/python3.9/marisa-trie Check the logs for full command output.</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="imports">
@@ -1057,14 +524,14 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">05965</span><span class="n">b657363</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># concept net</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="ne">---&gt; </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">conceptnet5.uri</span> <span class="kn">import</span> <span class="n">join_uri</span><span class="p">,</span> <span class="n">split_uri</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> 
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">05965</span><span class="n">b657363</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># General imports</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">json</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">rdflib</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;conceptnet5&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;rdflib&#39;
 </pre></div>
 </div>
 </div>

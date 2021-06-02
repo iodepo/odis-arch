@@ -11,7 +11,7 @@
 # * Pull in the OIH RDF graph and load 
 # 
 
-# In[1]:
+# In[15]:
 
 
 get_ipython().system('pip -q install pydotplus')
@@ -30,7 +30,7 @@ get_ipython().system('pip -q install rdflib-jsonld')
 get_ipython().system('pip -q install PyLD==2.0.2')
 
 
-# In[2]:
+# In[16]:
 
 
 import rdflib
@@ -57,7 +57,7 @@ G = rdflib_to_networkx_digraph(g)
 # nx.draw(G, with_labels=True)
 
 
-# In[3]:
+# In[17]:
 
 
 pr = nx.pagerank(G,alpha=0.9)
@@ -65,40 +65,40 @@ pr = nx.pagerank(G,alpha=0.9)
 #     print(key, ' : ', value)
 
 
-# In[4]:
+# In[18]:
 
 
 import pandas as pd
 prdf = pd.DataFrame.from_dict(pr, orient='index')
 
 
-# In[5]:
+# In[19]:
 
 
 prdf.dtypes
 
 
-# In[6]:
+# In[20]:
 
 
 prdf.sort_values(by=0,ascending=False, inplace=True,)
 prdf.head(20)
 
 
-# In[7]:
+# In[26]:
 
 
 nx.draw_circular(G, with_labels = False)
 plt.show() # display
 
 
-# In[8]:
+# In[24]:
 
 
 plt.hist([v for k,v in nx.degree(G)])
 
 
-# In[9]:
+# In[25]:
 
 
 plt.hist(nx.centrality.betweenness_centrality(G).values())

@@ -19,7 +19,7 @@
 # * https://geopandas.org/docs/user_guide/geocoding.html
 # * https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff
 
-# In[1]:
+# In[143]:
 
 
 #@title
@@ -35,7 +35,7 @@ get_ipython().system('pip install -q rtree')
 get_ipython().system('pip install -q pygeos')
 
 
-# In[2]:
+# In[144]:
 
 
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -50,7 +50,7 @@ import shapely
 # ufokn = "http://graph.collaborium.io/blazegraph/namespace/oihdev/sparql"
 
 
-# In[3]:
+# In[166]:
 
 
 # Point in Polygon function from the cited Vidhya reference.  A few small changes
@@ -86,7 +86,7 @@ def get_pip (gdf, regions):
     return df
 
 
-# In[4]:
+# In[167]:
 
 
 # load CSV into pandas that holds the WKT strings for the world seas dataset
@@ -94,7 +94,7 @@ df = pd.read_csv('./World_Seas_IHO_v3.csv')
 # df.head(2)
 
 
-# In[5]:
+# In[168]:
 
 
 # convert the WKT strings to WKT geometry
@@ -102,7 +102,7 @@ from shapely import wkt
 df['WKT'] = df['WKT'].apply(wkt.loads)
 
 
-# In[6]:
+# In[169]:
 
 
 # Load and plot the ocean regions
@@ -113,7 +113,7 @@ gdf = geopandas.GeoDataFrame(df, geometry='WKT', crs={"init": "epsg:3857"}) # co
 # gdf.head(2)
 
 
-# In[7]:
+# In[170]:
 
 
 # Make geopandas from GeoJSON of the world for plot
@@ -125,7 +125,7 @@ ax = dftx.plot(color='white', edgecolor='black', figsize=(25,15))
 gdf.plot(ax=ax, edgecolor='black', color='grey')
 
 
-# In[8]:
+# In[171]:
 
 
 # Make test datarame with some lat long pairs to test
@@ -138,7 +138,7 @@ df = pd.DataFrame({ 'Latitude': [38, -1,  -37,  -22,14],
 testdf = geopandas.GeoDataFrame(df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))
 
 
-# In[9]:
+# In[155]:
 
 
 # Call the function and do pip calculations
@@ -176,7 +176,7 @@ eq_df = get_pip(testdf, gdf)
 # 
 # In the final listing below the "id" is the just the random string I associated with the test lat longs. I used a simple online map to just pick some random locations and gave them names.   The "region" cames from the offical Marine Regions file.  
 
-# In[10]:
+# In[142]:
 
 
 eq_df.head()

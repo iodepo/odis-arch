@@ -87,26 +87,26 @@ print(len(filenames))
 # print(filenames)
 
 
-# In[5]:
+# In[13]:
 
 
 get_ipython().run_cell_magic('time', '', 'from pyshacl import validate\nfrom os import path\nfrom pandas import json_normalize\nimport pandas as pd\nimport json\nimport rdflib\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\ngldf = pd.DataFrame(columns=["id", "status", "shape"])\n\nfor ndx in range(len(output)):\n# for ndx in range(10):\n    \n  if "/.jsonld" not in filenames[ndx] :\n    try:\n      jld = output[ndx].compute()  ## Now pull from dask..   In REAL version, move this logic into Dask!  to get the parallel approach\n    except:\n      print(filenames[ndx])\n      print("Doc has bad encoding")\n\n    jd = json.dumps(jld, sort_keys=True, indent=4)\n        \n    try:\n      conforms, v_graph, v_text = validate(jd, \n                shacl_graph=\'./oih_learning.ttl\', \n                data_graph_format="json-ld", \n                shape_graph_format="ttl", \n                inference=\'none\', \n                serialize_report_graph="json-ld")\n      \n      gd = v_graph.decode("ascii") \n      df = pd.DataFrame(json.loads(gd))\n      conforms = df["http://www.w3.org/ns/shacl#conforms"]\n      tf = conforms[0][0][\'@value\']\n\n      if "False" in str(tf):\n        df[\'http://www.w3.org/ns/shacl#resultSeverity\'] = df[\'http://www.w3.org/ns/shacl#resultSeverity\'].astype(str)\n        df[\'ID\'] = filenames[ndx] #  \'Object:{}\'.format(ndx) \n        df[\'Status\'] = df.apply (lambda row: label_status(row), axis=1)\n        df[\'Shape\'] = df.apply (lambda row: source_shape(row), axis=1)\n\n        data = [df["ID"], df["Status"], df[\'Shape\']]\n        headers = ["id", "status", "shape"]\n        df3 = pd.concat(data, axis=1, keys=headers)\n        gldf = gldf.append(df3, ignore_index=True)\n      elif "True" in str(tf):\n        df[\'ID\'] = filenames[ndx] #  \'Object:{}\'.format(ndx) \n        df[\'Status\'] = "Valid"\n        df[\'Shape\'] = "AllPassed"\n\n        data = [df["ID"], df["Status"], df[\'Shape\']]\n        headers = ["id", "status", "shape"]\n        df3 = pd.concat(data, axis=1, keys=headers)\n        gldf = gldf.append(df3, ignore_index=True)  \n    \n#       print("------------------")\n#       print(conforms)\n#       print(v_graph)\n#       print(v_text)\n\n    except:\n      print("ERROR")\n      df = pd.DataFrame()\n      df[\'ID\'] = filenames[ndx] #  \'Object:{}\'.format(ndx) \n      df[\'Status\'] = "ErrorProcessing"\n      df[\'Shape\'] = "ErrorProcessing"\n\n      data = [df["ID"], df["Status"], df[\'Shape\']]\n      headers = ["id", "status", "shape"]\n      df3 = pd.concat(data, axis=1, keys=headers)\n      gldf = gldf.append(df3, ignore_index=True)\n      print("PySHACL decode error: {}",format(filenames[ndx]))\n')
 
 
-# In[6]:
+# In[14]:
 
 
 gldf.info() 
 gldf.head(5)
 
 
-# In[7]:
+# In[15]:
 
 
 pd.value_counts(gldf['shape'])
 
 
-# In[8]:
+# In[16]:
 
 
 pd.value_counts(gldf['shape']).plot.barh()

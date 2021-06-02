@@ -84,25 +84,25 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Ocean Info Hub
+  <a class="reference internal" href="../../index.html">
+   Ocean Info Hub
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../infographic.html">
-   The Ocean Info Hub InfoGraphic
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../content.html">
-   Structured Data on the Web
+   About Structured Data on the Web
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../publishing/publishing.html">
    Publishing patterns for OIH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/harvesting.html">
+   Indexing / Harvesting
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -121,11 +121,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../indexing/content.html">
-   Indexing
-  </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
@@ -194,11 +189,28 @@
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/index.html">
-   Appendix
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../validation/cue/README.html">
+     Cue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,26 +235,9 @@
      Reference Client
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prov/README.html">
-   Prov
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../validation/README.html">
-   Validation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../validation/cue/README.html">
-     Cue
+    <a class="reference internal" href="../../appendix/prov/README.html">
+     Prov
     </a>
    </li>
   </ul>
@@ -349,13 +344,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=tree/book/tooling/notebooks/OIH_GraphAnalytics.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/OIH_GraphAnalytics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/OIH_GraphAnalytics.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -418,18 +418,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.</span>
-
-<span class=" -Color -Color-Red">We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.</span>
-
-<span class=" -Color -Color-Red">boto3 1.17.46 requires botocore&lt;1.21.0,&gt;=1.20.46, but you&#39;ll have botocore 1.19.52 which is incompatible.</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.</span>
-
-<span class=" -Color -Color-Red">We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.</span>
-
-<span class=" -Color -Color-Red">aiobotocore 1.2.2 requires botocore&lt;1.19.53,&gt;=1.19.52, but you&#39;ll have botocore 1.20.75 which is incompatible.</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">boto3 1.17.17 requires botocore&lt;1.21.0,&gt;=1.20.17, but you have botocore 1.19.52 which is incompatible.</span>
+<span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">aiobotocore 1.2.1 requires botocore&lt;1.19.53,&gt;=1.19.52, but you have botocore 1.20.24 which is incompatible.</span>
 </pre></div>
 </div>
 </div>
@@ -583,11 +575,11 @@ dtype: object
       <td>0.001542</td>
     </tr>
     <tr>
-      <th>Institute of Oceanography and Environment Universiti Malaysia Terengganu (UMT), Mengabang Telipot 21030 Kuala Terengganu Terengganu Malaysia</th>
+      <th>Australia</th>
       <td>0.001271</td>
     </tr>
     <tr>
-      <th>Australia</th>
+      <th>Institute of Oceanography and Environment Universiti Malaysia Terengganu (UMT), Mengabang Telipot 21030 Kuala Terengganu Terengganu Malaysia</th>
       <td>0.001271</td>
     </tr>
     <tr>
@@ -595,11 +587,11 @@ dtype: object
       <td>0.001271</td>
     </tr>
     <tr>
-      <th>Qingdao China</th>
+      <th>Wandelaarkaai 7 Oostende Belgium</th>
       <td>0.001018</td>
     </tr>
     <tr>
-      <th>Wandelaarkaai 7 Oostende Belgium</th>
+      <th>Qingdao China</th>
       <td>0.001018</td>
     </tr>
   </tbody>
