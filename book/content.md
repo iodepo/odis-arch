@@ -3,11 +3,32 @@
 ## About
 
 Structured data on the web is a way to provide semantics and linked data in an approachable manner.  This approach expresses concepts in JSON-LD which is a JavaScript notation popular among developers which easily expresses  concepts (terms) and links to related resources (things).   This structured data on the web approach has been popularized by the large commercial search providers like Google, Bing, Yandex and others via schema.org  As described at schema.org: "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond."
+
 The popularity of leveraging the schema.org approach in the earth sciences can be attributed to both this ease of developer adoption and also to its foundational use of web architecture. A web architecture foundation aids adoption by the operations side as well as the developer side.  It also takes advantage of the scale and resilience of the web.  
+
 The broad nature of schema.org even scopes to the concepts of Datasets.  It is the existence of schema.org/Dataset that was a focus of several EarthCube projects (Project 418, Project 419 and the Resource Registry) from which spun up the ESIP Science on Schema work.  
+
 Additionally, Google leveraged schema.org/Dataset to develop and populate the Google Data Set Search and provides guidance to developers to facilitate this.  
 
+## JSON-LD vs schema.org vs structured data on the web
+
+JSON-LD is a way to serialize RDF that uses JSON notation.  It is really no different then than RDF-XML, turtle, ntriples, etc.  There are several ways to represent the RDF data model in text files (and some emerging binary ones like CBOR and parquet patterns).
+
+Schema.org is a vocabulary for describing things similar to DCAT, FOAF, Dublin Core.  It does this by using RDF as the underlying data model to represent this "ontology".
+
+The confusion comes from the collision of outcomes.  JSON-LD came about, partly, to allow the use of the RDF data model by a broader audience.  This is done by leveraging a more popular notation for the data model, JSON, in the form of JSON-LD.  Schema.org also wanted to advance the use of structured [meta]data by making it easier to use and connecting structured data to web pages.  At the start, there were three approaches; RDFa, microformats and JSON-LD, to putting schema.org in web pages.  However, the JSON-LD approach to incorporating this structured
+data has grown in popularity far beyond the others. As the popularity of both JSON-LD and schema.org grew,  they often got conflated with each other.
+
+The term  "structured data on the web" is perhaps a more neutral way to discuss
+the use of vocabularies encoding in JSON-LD used in web pages.  However,  the phrase "schema.org" is starting to become the term for "structured data on the web using JSON-LD as a serialization".    Even in cases where you combine other
+vocabularies such as DCAT with JSON-LD with no schema.org involved, it seems the way to convey this is to say: "We will use the schema.org 'pattern' with DCAT".
+
+It is arguably not the best or most accurate communications strategy.  It 
+can conflate data models, serialization and vocabularies.  However, it is 
+concise and ubiquitous and not likely to change.
+
 ## Broader Impacts
+
 By leveraging existing technology and approaches a larger community is enabled to engage and make more samples discoverable and usable.
 
 The nature of structured data on the web also provides the ability to apply semantic context to samples.  This means richer discovery and information about samples, the past uses and potential future uses is more readily available.
