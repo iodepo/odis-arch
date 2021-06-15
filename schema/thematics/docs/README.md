@@ -76,6 +76,13 @@ A map in this context would be a static file or document of some sort.  Map serv
 those described by an OGC Catalogue Service or other GIS service would be described as a 
 service.  
 
+Note, that in the current context, schema.org Map typically references maps a document.
+Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to then 
+indicate the type of document it is through a mimetype via encoding.  
+
+If this is related to a WFS, WMS or related service, it is likely we would then use the 
+service description approach.  
+
 A link to a minimal map creative work follows.
 
 
@@ -93,7 +100,8 @@ A link to a minimal map creative work follows.
     "@id": "https://example.org/id/XYZ",
     "name": "Name or title of the document",
     "description": "Description of the map to aid in searching",
-    "url":  "https://www.sample-data-repository.org/creativework/map.pdf"
+    "url":  "https://www.sample-data-repository.org/creativework/map.pdf",
+    "encoding": "application/geopackage+sqlite3",
     "geosparql:hasGeometry": {
         "@type": "http://www.opengis.net/ont/sf#Polygon",
         "geosparql:asWKT": {
