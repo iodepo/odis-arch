@@ -3,9 +3,11 @@
       "@vocab": "https://schema.org/",
       "prov": "http://www.w3.org/ns/prov#",
       "provone": "http://purl.dataone.org/provone/2015/01/15/ontology#",
-      "geosparql": "http://www.opengis.net/ont/geosparql#"
+      "geosparql": "http://www.opengis.net/ont/geosparql#",
+      "ns1" : "http://met.org/voc/1/"
     },
     "@id": "http://metocean.io/id/dataset/c041e79a-914a-5a4e-a485-9cbc506195df",
+    "ns1:id": "my magic id",
     "identifier": {
         "@type": "PropertyValue",
         "propertyID": "https://registry.identifiers.org/registry/metocean",
@@ -86,12 +88,12 @@
           {
               "@type": "DataDownload",
               "contentUrl": "https://data-api.mdl.nws.noaa.gov/EDR-API/collections/metar",
-              "encodingFormat": "text/tab-separated-values",
+              "encodingFormat": "text/tab-separated-values"
            },
           {
             "@type": "DataDownload",
             "contentUrl": "https://www.aviationweather.gov/metar/data",
-            "encodingFormat": "text/tab-separated-values",
+            "encodingFormat": "text/tab-separated-values"
          }
       ],
       "subjectOf": [
