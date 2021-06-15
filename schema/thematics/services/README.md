@@ -1,14 +1,14 @@
 # Services
 
-## References
+This section will provide information on the service type.  This is not 
+one of the main OIH types.  However, we will provide guidance here on describing
+services using schema.org.
 
-
-## Vocabulary resources
-
-
-## Metadata elements of interest
-
-
+It should be noted that this might be a simple link to an OpenAPI or some 
+other descriptor document.  Also, schema.org is not rich enough for complex 
+descriptions and itself borrows from the [Hydra](https://www.hydra-cg.com/spec/latest/core/)
+vocabulary.  It may be required to leverage Hydra if complex descriptions are 
+needed.   
 ## Notes
 
 

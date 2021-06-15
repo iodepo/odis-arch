@@ -2,8 +2,33 @@
 
 ## About
 
-Notes and development related to spatial data for the 
-Ocean Info Hub
+The primary OIH guidance will be to use the OGC [GeoSPARQL](https://www.ogc.org/standards/geosparql)
+vocabulary.  The schema.org spatial types and propeties are not well defined and difficult at times
+to reliably translate to geometries.  
+
+```json
+{
+    "@context": {
+      "@vocab": "https://schema.org/"
+    },
+    "@id": "https://example.org/id/XYZ",
+    "@type": "Dataset",
+    "name": "Data set name",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Point",
+        "geosparql:asWKT": {
+            "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+            "@value": "POINT(-76 -18)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    }
+}
+  
+```
+
+
 
 ## References
 * [Science on Schema Issue 105](https://github.com/ESIPFed/science-on-schema.org/issues/105)
@@ -22,22 +47,11 @@ Ocean Info Hub
 * [ICAN & Schema.org](https://docs.google.com/document/d/1Ya7SNm0h6b04nIVMQ_M65LopxZ6_jojXzTxjfaX5Mxw/edit)
 * [OGC SELFIE](https://www.ogc.org/projects/initiatives/selfie)
 * [Think broad](https://docs.google.com/presentation/d/1HhuL73g1Bi_d86yT9VGfhvO0Xef9nKhJVwEeRYZ9k0c/edit#slide=id.ga724934615_3_0)
-
-## Vocabulary Resources
-
-* [GeoSPARQL](https://www.ogc.org/standards/geosparql)
-
-## Metadata elements of interest
-
-Notes here on metadata elements of interest related to spatial (not the CreateiveWork)
-
-## Notes
-
-Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#spatial-coverage)
-
-[Load in Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https%3A%2F%2Fraw.githubusercontent.com%2Ffils%2Fodis-arch%2Fmaster%2Fdocs%2Fdev%2Fspatial%2Fgraphs%2Fsos.json)
+* Science on Schema [spatial for dataset guidance](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#spatial-coverage)
 
 <!-- embedme ./graphs/sos.json -->
+
+## Schema.org spatialCoverage
 
 ```json
 {
