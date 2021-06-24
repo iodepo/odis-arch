@@ -30,23 +30,38 @@ many specific types we can use at the bottom.
 
 ```json
 {
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@id": "ID_for_this_metadata_record",
-    "@type": "Person",
-    "name": "Jane Doe",
-    "jobTitle": "Professor",
-    "telephone": "(425) 123-4567",
-    "url": "http://www.janedoe.com", 
-    "identifier":
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "ID_for_this_metadata_record",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "jobTitle": "Professor",
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com",
+  "knowsAbout": [
     {
-      "@id": "ID_value_string",
-      "@type": "PropertyValue",
-      "propertyID": "This can be text or URL for an ID like ORCID",
-      "url": "https://foo.org/linkToPropertyIDPage",
-      "description": "Optional description of the ID"
+      "@type": "Text",
+      "description": "Invasive species in brackish water"
+    },
+    {
+      "@type": "URL",
+      "url": "https://www.wikidata.org/wiki/Q183368"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/schema/thematics/training/graphs/course1.json",
+      "@type": "Course",
+      "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+      "url": "URL to the course"
     }
+  ],
+  "identifier": {
+    "@id": "ID_value_string",
+    "@type": "PropertyValue",
+    "propertyID": "This can be text or URL for an ID like ORCID",
+    "url": "https://foo.org/linkToPropertyIDPage",
+    "description": "Optional description of the ID"
+  }
 }
 ```
 
@@ -63,7 +78,6 @@ many specific types we can use at the bottom.
     },
     "@id": "ID_for_this_metadata_record",
     "@type": "Organization",
-    "name": "Foo Inc.",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Paris, France",
@@ -71,7 +85,6 @@ many specific types we can use at the bottom.
         "streetAddress": "38 avenue de l'Opera"
     },
     "email": "secretariat(at)foo.org",
-    "telephone": "( 33 1) 42 68 53 00",
     "faxNumber": "( 33 1) 42 68 53 01",
     "member": [
         {
@@ -91,6 +104,8 @@ many specific types we can use at the bottom.
             "name": "John Smith"
         }
     ],
+    "name": "Foo Inc.",
+    "telephone": "( 33 1) 42 68 53 00",
     "identifier": {
         "@id": "ID_value_string",
         "@type": "PropertyValue",

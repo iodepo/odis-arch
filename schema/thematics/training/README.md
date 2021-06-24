@@ -58,7 +58,21 @@ So the following examples are only for the sub-graph of the training which by gu
                 "online"
             ],
             "endDate": "2019-03-21",
-            "startDate": "2019-02-15"
+            "startDate": "2019-02-15",
+            "attendee":  {
+                "@type": "Person",
+                "name": "Jane Doe",
+                "jobTitle": "Professor",
+                "telephone": "(425) 123-4567",
+                "url": "http://www.janedoe.com", 
+                "identifier": {
+                         "@id": "ID_value_string",
+                        "@type": "PropertyValue",
+                        "propertyID": "This can be text or URL for an ID like ORCID",
+                        "url": "https://foo.org/linkToPropertyIDPage",
+                        "description": "Optional description of the ID"
+                    }
+            }
         },
         {
             "@type": "CourseInstance",
@@ -71,6 +85,7 @@ So the following examples are only for the sub-graph of the training which by gu
         }
     ]
 }
+
 ```
 
 ![SOS Guidance image](./graphs/course1.svg)

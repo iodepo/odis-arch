@@ -100,19 +100,9 @@ A link to a minimal map creative work follows.
     "@id": "https://example.org/id/XYZ",
     "name": "Name or title of the document",
     "description": "Description of the map to aid in searching",
-    "url":  "https://www.sample-data-repository.org/creativework/map.pdf",
-    "encoding": "application/geopackage+sqlite3",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
-            "@value": "POLYGON((19.941406249999982 42.34269037997691,30.839843749999982 42.34269037997691,30.839843749999982 26.64792437935039,19.941406249999982 26.64792437935039,19.941406249999982 42.34269037997691))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    }
+    "url":  "https://www.sample-data-repository.org/creativework/map.pdf"
 }
+
 ```
 
 ![Doc Guidance image](./graphs/map.svg)

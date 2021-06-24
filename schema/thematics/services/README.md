@@ -8,7 +8,8 @@ It should be noted that this might be a simple link to an OpenAPI or some
 other descriptor document.  Also, schema.org is not rich enough for complex 
 descriptions and itself borrows from the [Hydra](https://www.hydra-cg.com/spec/latest/core/)
 vocabulary.  It may be required to leverage Hydra if complex descriptions are 
-needed.   
+needed.
+
 ## Notes
 
 
@@ -23,7 +24,7 @@ The graph describes a service than can be invoked with
 curl --data-binary "@yourfile.jpg" -X POST https://us-central1-top-operand-112611.cloudfunctions.net/function-1
 ```
 
-This with POST a jpeg to the service and get back a simple text response with some information 
+This with POST a jpeg to the service and get back a simple text response with some information
 about the image.
 
 <!-- embedme ./graphs/action.json -->

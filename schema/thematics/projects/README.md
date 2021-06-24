@@ -67,49 +67,53 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
 
 ```json
 {
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@type": ["Service", "ResearchProject"],
-    "@id": "ID_for_this_metadata_record",
-    "legalName": "Example Data Repository",
-    "name": "ExDaRepo",
-    "url": "https://www.example-data-repository.org",
-    "description": "Repo description ... ",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.example-data-repository.org/logo.jpg"
-    },
-    "contactPoint": {
-      "@id": "https://www.example-data-repository.org/about-us",
-      "@type": "ContactPoint",
-      "name": "Support",
-      "email": "info@example-data-repository.org",
-      "url": "https://www.example-data-repository.org/about-us",
-      "contactType": "customer support"
-    },
-    "funder": {
-      "@type": "FundingAgency",
-      "@id": "https://dx.doi.org/10.13039/10000001",
-      "legalName": "National Science Foundation",
-      "alternateName": "NSF",
-      "url": "https://www.nsf.gov/"
-    },
-    "ethicsPolicy": {
-      "@type": "CreativeWork",
-      "@id": "https://example.org/id/XYZ",
-      "name": "Name or title of the document",
-      "description": "Description of the creative work ",
-      "url":  "https://www.foo.org/creativework/ethicsPolicy.pdf"
-    },
-    "diversityPolicy": {
-      "@type": "CreativeWork",
-      "@id": "https://example.org/id/ABC",
-      "name": "Name or title of the document",
-      "description": "Description of the creative work",
-      "url":  "https://www.foo.org/creativework/diversityPolicy.pdf"
-    },
-    "areaServed": {
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": [
+    "Service",
+    "ResearchProject"
+  ],
+  "@id": "ID_for_this_metadata_record",
+  "legalName": "Example Data Repository",
+  "name": "ExDaRepo",
+  "url": "https://www.example-data-repository.org",
+  "description": "Repo description ... ",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.example-data-repository.org/logo.jpg"
+  },
+  "contactPoint": {
+    "@id": "https://www.example-data-repository.org/about-us",
+    "@type": "ContactPoint",
+    "name": "Support",
+    "email": "info@example-data-repository.org",
+    "url": "https://www.example-data-repository.org/about-us",
+    "contactType": "customer support"
+  },
+  "funder": {
+    "@type": "FundingAgency",
+    "@id": "https://dx.doi.org/10.13039/10000001",
+    "legalName": "National Science Foundation",
+    "alternateName": "NSF",
+    "url": "https://www.nsf.gov/"
+  },
+  "ethicsPolicy": {
+    "@type": "CreativeWork",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
+    "description": "Description of the creative work ",
+    "url": "https://www.foo.org/creativework/ethicsPolicy.pdf"
+  },
+  "diversityPolicy": {
+    "@type": "CreativeWork",
+    "@id": "https://example.org/id/ABC",
+    "name": "Name or title of the document",
+    "description": "Description of the creative work",
+    "url": "https://www.foo.org/creativework/diversityPolicy.pdf"
+  },
+  "areaServed": [
+    {
       "@type": "Place",
       "geo": {
         "@type": "GeoCoordinates",
@@ -118,8 +122,11 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
       },
       "description": "Description of the area served"
     },
-    "areaServed": "Textual description of area served",
-    "areaServed": {
+    {
+      "@type": "Text",
+      "description": "Textual description of area served"
+    },
+    {
       "@type": "AdministrativeArea",
       "geo": {
         "@type": "GeoCoordinates",
@@ -127,30 +134,30 @@ I've used research project:  https://opencoredata.org/id/csdco/res/YUFL
         "longitude": 120.1633
       },
       "description": "Needs to be subset of Place, Review Place"
-    }, 
-    "taxID" : "text value",
-    "vatID" : "text value",
-    "parentOrganization": {
-      "@type": "Organization",
-      "@id": "http://www.someinstitute.edu",
-      "legalName": "Some Institute",
-      "name": "SI",
-      "url": "http://www.someinstitute.edu",
-      "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "234 Main St.",
-          "addressLocality": "Anytown",
-          "addressRegion": "ST",
-          "postalCode": "12345",
-          "addressCountry": "USA"
-      }
-  },
-  "knowsAbout" : "Text, Thing, URL",
-    "hasCredential" : {
-      "@type": "EducationalOccupationalCredential",
-      "description": "Description of the credential provider"
     }
-
+  ],
+  "taxID": "text value",
+  "vatID": "text value",
+  "parentOrganization": {
+    "@type": "Organization",
+    "@id": "http://www.someinstitute.edu",
+    "legalName": "Some Institute",
+    "name": "SI",
+    "url": "http://www.someinstitute.edu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "234 Main St.",
+      "addressLocality": "Anytown",
+      "addressRegion": "ST",
+      "postalCode": "12345",
+      "addressCountry": "USA"
+    }
+  },
+  "knowsAbout": "Some text, url or link to schema.org thing",
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "description": "Description of the credential provider"
+  }
 }
 ```
 
