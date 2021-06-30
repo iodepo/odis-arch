@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapping &#8212; OIH Reference</title>
+    <title>DCAT to Schema.org via SHACL AF &#8212; OIH Reference</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Validation" href="../../../validation/README.html" />
-    <link rel="prev" title="pySHACL testing" href="../SHACL/pySHACL.html" />
+    <link rel="next" title="Geo KG Completion testing" href="../geocomplete.html" />
+    <link rel="prev" title="OIH ISO 19139 to schema.org" href="../115/OIH_115Map.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../thematics/index.html">
+  <a class="reference internal" href="../../../thematics/README.html">
    Thematic Types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -118,6 +118,41 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../../thematics/overview.html">
      Connection Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/docs/README.html">
+     Documents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/expinst/README.html">
+     Experts and Institutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/projects/README.html">
+     Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/services/README.html">
+     Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/spatial/README.html">
+     Spatial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/training/README.html">
+     Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../thematics/vessels/README.html">
+     Vessels
     </a>
    </li>
   </ul>
@@ -175,6 +210,16 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../115/OIH_115Map.html">
+       OIH ISO 19139 to schema.org
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       DCAT to Schema.org via SHACL AF
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../geocomplete.html">
        Geo KG Completion testing
       </a>
@@ -186,7 +231,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Mapping
+       DCAT to Schema.org via SHACL AF
       </a>
      </li>
     </ul>
@@ -396,6 +441,11 @@
    SHACL Rules
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes-on-shacl-af-rules">
+   Notes on SHACL AF Rules
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -407,8 +457,8 @@
         
               <div>
                 
-  <div class="section" id="mapping">
-<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dcat-to-schema-org-via-shacl-af">
+<h1>DCAT to <a class="reference external" href="http://Schema.org">Schema.org</a> via SHACL AF<a class="headerlink" href="#dcat-to-schema-org-via-shacl-af" title="Permalink to this headline">¶</a></h1>
 <p>Testing approaches to mapping DCAT to <a class="reference external" href="http://schema.org">schema.org</a></p>
 <p>Current thinking</p>
 <ul class="simple">
@@ -445,6 +495,19 @@
 </li>
 <li><p>Context modification</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q kglab
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">boto3 1.17.102 requires botocore&lt;1.21.0,&gt;=1.20.102, but you have botocore 1.20.49 which is incompatible.</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span>
@@ -490,7 +553,7 @@ frame or otehrwise cast to new namespace.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N899160cb6d434f579acb591dbd0dc451 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=Nad1628ac8eb84e5881b07f2b9ac96afd (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
 </pre></div>
 </div>
 </div>
@@ -516,7 +579,7 @@ frame or otehrwise cast to new namespace.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;biota&#39;),
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;LAND-Cover&#39;),
                    &#39;p&#39;: rdflib.term.URIRef(&#39;http://www.w3.org/ns/dcat#keyword&#39;),
                    &#39;s&#39;: rdflib.term.URIRef(&#39;https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c&#39;)}
 </pre></div>
@@ -591,7 +654,7 @@ frame or otehrwise cast to new namespace.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f4524bfc100&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f702ccf86a0&gt;
 </pre></div>
 </div>
 </div>
@@ -710,7 +773,7 @@ frame or otehrwise cast to new namespace.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-b&#39;[\n  {\n    &quot;@id&quot;: &quot;_:Nde97c0fe516e4cc2a90722478b45d7d2&quot;,\n    &quot;@type&quot;: [\n      &quot;http://www.w3.org/ns/shacl#ValidationReport&quot;\n    ],\n    &quot;http://www.w3.org/ns/shacl#conforms&quot;: [\n      {\n        &quot;@value&quot;: true\n      }\n    ]\n  }\n]&#39;
+b&#39;[\n  {\n    &quot;@id&quot;: &quot;_:N8be15736f0b945d19b55b266f8475c54&quot;,\n    &quot;@type&quot;: [\n      &quot;http://www.w3.org/ns/shacl#ValidationReport&quot;\n    ],\n    &quot;http://www.w3.org/ns/shacl#conforms&quot;: [\n      {\n        &quot;@value&quot;: true\n      }\n    ]\n  }\n]&#39;
 Validation Report
 Conforms: True
 </pre></div>
@@ -733,7 +796,7 @@ Conforms: True
 <span class="n">sg</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="n">sg</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sf</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span>
 
-<span class="n">v</span> <span class="o">=</span> <span class="n">Validator</span><span class="p">(</span><span class="n">data_graph</span><span class="o">=</span><span class="n">dg</span><span class="p">,</span> <span class="n">shacl_graph</span><span class="o">=</span><span class="n">sg</span><span class="p">,</span>  <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;inference&quot;</span><span class="p">:</span> <span class="s2">&quot;rdfs&quot;</span><span class="p">,</span> <span class="s2">&quot;advanced&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">Validator</span><span class="p">(</span><span class="n">data_graph</span><span class="o">=</span><span class="n">dg</span><span class="p">,</span> <span class="n">shacl_graph</span><span class="o">=</span><span class="n">sg</span><span class="p">,</span>  <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;inference&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;advanced&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>  <span class="c1"># turn off rdfs inferencing</span>
 <span class="n">conforms</span><span class="p">,</span> <span class="n">report_graph</span><span class="p">,</span> <span class="n">report_text</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 <span class="n">expanded_graph</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">target_graph</span> 
 </pre></div>
@@ -746,117 +809,97 @@ Conforms: True
 <span class="c1"># print(v_graph)</span>
 <span class="c1"># print(&quot;------------&quot;)</span>
 <span class="c1"># print(v_text)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">expanded_graph</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[a rdfg:Graph;rdflib:storage [a rdflib:Store;rdfs:label &#39;Memory2&#39;]].
+<span class="c1"># print(expanded_graph)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">expanded_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;json-ld&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">expanded_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#width&quot;,
-    &quot;@type&quot;: [
-      &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;
-    ],
-    &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;: [
-      {
-        &quot;@id&quot;: &quot;http://example.com/ns#width&quot;
-      }
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#NonSquareRectangle&quot;,
-    &quot;@type&quot;: [
-      &quot;http://example.com/ns#Rectangle&quot;,
-      &quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;
-    ],
-    &quot;http://example.com/ns#height&quot;: [
-      {
-        &quot;@value&quot;: 2
-      }
-    ],
-    &quot;http://example.com/ns#width&quot;: [
-      {
-        &quot;@value&quot;: 3
-      }
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#height&quot;,
-    &quot;@type&quot;: [
-      &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;
-    ],
-    &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;: [
-      {
-        &quot;@id&quot;: &quot;http://example.com/ns#height&quot;
-      }
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#InvalidRectangle&quot;,
-    &quot;@type&quot;: [
-      &quot;http://example.com/ns#Rectangle&quot;,
-      &quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#SquareRectangle&quot;,
-    &quot;@type&quot;: [
-      &quot;http://example.com/ns#Rectangle&quot;,
-      &quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;,
-      &quot;http://example.com/ns#Square&quot;
-    ],
-    &quot;http://example.com/ns#height&quot;: [
-      {
-        &quot;@value&quot;: 4
-      }
-    ],
-    &quot;http://example.com/ns#width&quot;: [
-      {
-        &quot;@value&quot;: 4
-      }
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://example.com/ns#Rectangle&quot;,
-    &quot;@type&quot;: [
-      &quot;http://www.w3.org/2000/01/rdf-schema#Resource&quot;
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;,
-    &quot;@type&quot;: [
-      &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;
-    ],
-    &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;: [
-      {
-        &quot;@id&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;
-      }
-    ]
-  },
-  {
-    &quot;@id&quot;: &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&quot;,
-    &quot;@type&quot;: [
-      &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#Property&quot;
-    ],
-    &quot;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&quot;: [
-      {
-        &quot;@id&quot;: &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&quot;
-      }
-    ]
-  }
-]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@prefix ex: &lt;http://example.com/ns#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+ex:InvalidRectangle a ex:Rectangle .
+
+ex:NonSquareRectangle a ex:Rectangle ;
+    ex:height 2 ;
+    ex:width 3 .
+
+ex:SquareRectangle a ex:Rectangle,
+        ex:Square ;
+    ex:height 4 ;
+    ex:width 4 .
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="notes-on-shacl-af-rules">
+<h2>Notes on SHACL AF Rules<a class="headerlink" href="#notes-on-shacl-af-rules" title="Permalink to this headline">¶</a></h2>
+<p>We need to add in PROV triples in this process to note the generation of these triples and
+the souce IRI tht results in the product IRI and the actor (?reference)</p>
+<p>Maybe review: <a class="reference external" href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource">https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;dcat.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">dg</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">dg</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span>
+
+<span class="n">sf</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;dcatsdo.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">sg</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sf</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">Validator</span><span class="p">(</span><span class="n">data_graph</span><span class="o">=</span><span class="n">dg</span><span class="p">,</span> <span class="n">shacl_graph</span><span class="o">=</span><span class="n">sg</span><span class="p">,</span>  <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;inference&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;advanced&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>  <span class="c1"># turn off rdfs inferencing</span>
+<span class="n">conforms</span><span class="p">,</span> <span class="n">report_graph</span><span class="p">,</span> <span class="n">report_text</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">expanded_graph</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">target_graph</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">expanded_graph</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix ex: &lt;http://example.com/ns#&gt; .
+@prefix ns1: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix ns2: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix ns3: &lt;http://www.w3.org/ns/locn#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c&gt; a ns1:Dataset ;
+    ex:area2 &quot;a descriptiono of this dataset&quot; ;
+    dct:description &quot;a descriptiono of this dataset&quot; ;
+    dct:identifier &quot;67ca5de1-8774-4678-9d1b-8b1cb70ab33c&quot; ;
+    dct:issued &quot;2016-03-23T05:08:17.991412&quot;^^xsd:dateTime ;
+    dct:language &quot;eng&quot; ;
+    dct:modified &quot;2019-11-19T23:18:49.871451&quot;^^xsd:dateTime ;
+    dct:publisher &lt;https://data.gov.au/organization/69f37b4c-bdf0-4c85-bd56-82fa6d6b087a&gt; ;
+    dct:spatial [ a dct:Location ;
+            ns3:geometry &quot;POLYGON ((110.0012 -10.0012, 115.0080 -10.0012, 155.0080 -45.0036, 110.0012 -45.0036, 110.0012 -10.0012))&quot;^^&lt;http://www.opengis.net/ont/geosparql#wktLiteral&gt;,
+                &quot;{\&quot;type\&quot;: \&quot;Polygon\&quot;, \&quot;coordinates\&quot;: [[[110.0012, -10.00117], [115.008, -10.00117], [155.008, -45.00362], [110.0012, -45.00362], [110.0012, -10.00117]]]}&quot;^^&lt;https://www.iana.org/assignments/media-types/application/vnd.geo+json&gt; ] ;
+    dct:title &quot;Dynamic Land Cover Dataset&quot; ;
+    ns1:distribution &lt;https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c/resource/1f8174f8-573e-43f2-b110-3d1a13c380e8&gt; ;
+    ns1:keyword &quot;Australia&quot;,
+        &quot;Cooper subregion&quot;,
+        &quot;LAND-Cover&quot;,
+        &quot;Maranoa-Balonne-Condamine subregion&quot;,
+        &quot;biota&quot;,
+        &quot;environment&quot;,
+        &quot;planningCadastre&quot; .
+
+&lt;https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c/resource/1f8174f8-573e-43f2-b110-3d1a13c380e8&gt; a ns1:Distribution ;
+    dct:description &quot;Data File&quot; ;
+    dct:format &quot;ZIP&quot; ;
+    dct:title &quot;Dynamic Land Cover Dataset&quot; ;
+    ns1:accessURL &lt;https://datagovau.s3.amazonaws.com/bioregionalassessments/BA_ALL/ALL/DATA/Geography/LandCoverNDLC/1556b944-731c-4b7f-a03e-14577c7e68db.zip&gt; ;
+    ns1:byteSize 186838338.0 .
+
+&lt;https://data.gov.au/organization/69f37b4c-bdf0-4c85-bd56-82fa6d6b087a&gt; a ns2:Organization ;
+    ns2:name &quot;Bioregional Assessment Program&quot; .
 </pre></div>
 </div>
 </div>
@@ -889,8 +932,8 @@ Conforms: True
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../SHACL/pySHACL.html" title="previous page">pySHACL testing</a>
-    <a class='right-next' id="next-link" href="../../../validation/README.html" title="next page">Validation</a>
+    <a class='left-prev' id="prev-link" href="../115/OIH_115Map.html" title="previous page">OIH ISO 19139 to schema.org</a>
+    <a class='right-next' id="next-link" href="../geocomplete.html" title="next page">Geo KG Completion testing</a>
 
         </div>
         

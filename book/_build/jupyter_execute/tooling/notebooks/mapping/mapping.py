@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Mapping
+# # DCAT to Schema.org via SHACL AF
 # 
 # Testing approaches to mapping DCAT to schema.org
 # 
@@ -33,7 +33,13 @@
 #     * https://w3c.github.io/json-ld-framing/#omit-default-flag
 # * Context modification
 
-# In[113]:
+# In[1]:
+
+
+get_ipython().system('pip install -q kglab')
+
+
+# In[2]:
 
 
 import kglab
@@ -41,7 +47,7 @@ import json
 import rdflib
 
 
-# In[122]:
+# In[3]:
 
 
 # load our JSON into a var to use later
@@ -62,7 +68,7 @@ f.close()
 # Refs:
 # * https://derwen.ai/docs/kgl/ex4_0/
 
-# In[123]:
+# In[4]:
 
 
 from icecream import ic
@@ -74,7 +80,7 @@ g = rdflib.Graph()
 g.parse(data=txt, format="json-ld")
 
 
-# In[124]:
+# In[5]:
 
 
 sparql = """
@@ -86,14 +92,14 @@ sparql = """
 """
 
 
-# In[125]:
+# In[6]:
 
 
 for row in g.query(sparql):
     ic(row.asdict())
 
 
-# In[126]:
+# In[7]:
 
 
 sparqlc = """
@@ -123,7 +129,7 @@ print(qres.serialize(format='json-ld', context=context, indent=4))
 #     print(row)
 
 
-# In[127]:
+# In[8]:
 
 
 import kglab
@@ -154,7 +160,7 @@ kg = kglab.KnowledgeGraph(
 kg.load_jsonld("dcatEx.json")
 
 
-# In[128]:
+# In[9]:
 
 
 sparql2 = """
@@ -165,7 +171,7 @@ sparql2 = """
 """
 
 
-# In[129]:
+# In[10]:
 
 
 import pandas as pd
@@ -175,7 +181,7 @@ df = kg.query_as_df(sparql2)
 df.head(20)
 
 
-# In[130]:
+# In[11]:
 
 
 pyvis_graph = kg.visualize_query(sparql2, notebook=True)
@@ -186,13 +192,13 @@ pyvis_graph.show("tmp.fig06.html")
 
 # ## SHACL Rules
 
-# In[131]:
+# In[12]:
 
 
 import pyshacl
 
 
-# In[181]:
+# In[13]:
 
 
 from pyshacl import validate
@@ -205,7 +211,7 @@ conforms, v_graph, v_text = validate(data_graph="./learning.jsonld",
                 serialize_report_graph="json-ld")
 
 
-# In[182]:
+# In[14]:
 
 
 print(conforms)
@@ -213,7 +219,7 @@ print(v_graph)
 print(v_text)
 
 
-# In[198]:
+# In[15]:
 
 
 from pyshacl import Validator
@@ -230,25 +236,50 @@ sf = Path('shape.ttl').read_text()
 sg = rdflib.Graph()
 sg.parse(data=sf, format="ttl")
 
-v = Validator(data_graph=dg, shacl_graph=sg,  options={"inference": "rdfs", "advanced": True})
+v = Validator(data_graph=dg, shacl_graph=sg,  options={"inference": "none", "advanced": True})  # turn off rdfs inferencing
 conforms, report_graph, report_text = v.run()
 expanded_graph = v.target_graph 
 
 
-# In[199]:
+# In[16]:
 
 
 # print(conforms)
 # print(v_graph)
 # print("------------")
 # print(v_text)
-print(expanded_graph)
+# print(expanded_graph)
 
 
-# In[201]:
+# In[17]:
 
 
-print(expanded_graph.serialize(format="json-ld").decode("utf-8"))
+print(expanded_graph.serialize(format="ttl").decode("utf-8"))
+
+
+# ## Notes on SHACL AF Rules
+# 
+# We need to add in PROV triples in this process to note the generation of these triples and
+# the souce IRI tht results in the product IRI and the actor (?reference)
+# 
+# Maybe review: https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource
+
+# In[18]:
+
+
+df = Path('dcat.ttl').read_text()
+dg = rdflib.Graph()
+dg.parse(data=df, format="ttl")
+
+sf = Path('dcatsdo.ttl').read_text()
+sg = rdflib.Graph()
+sg.parse(data=sf, format="ttl")
+
+v = Validator(data_graph=dg, shacl_graph=sg,  options={"inference": "none", "advanced": True})  # turn off rdfs inferencing
+conforms, report_graph, report_text = v.run()
+expanded_graph = v.target_graph 
+
+print(expanded_graph.serialize(format="ttl").decode("utf-8"))
 
 
 # In[ ]:

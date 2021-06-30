@@ -4,7 +4,7 @@
 # # OIH Graph testing
 # 
 
-# In[21]:
+# In[1]:
 
 
 import rdflib
@@ -17,7 +17,7 @@ g = rdflib.Graph()
 g.parse(data = file_content, format="nquads")
 
 
-# In[22]:
+# In[2]:
 
 
 qres = g.query(
