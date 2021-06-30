@@ -1,45 +1,43 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: index
+format: jb-article
+root: index
+sections:
 - file: content
 - file: publishing/publishing
 - file: indexing/harvesting
 - file: thematics/README.md
   sections:
-    - file: thematics/overview
-    - file: thematics/docs/README.md
-    - file: thematics/expinst/README.md
-    - file: thematics/projects/README.md
-    - file: thematics/services/README.md
-    - file: thematics/spatial/README.md
-    - file: thematics/training/README.md
-    - file: thematics/vessels/README.md
+  - file: thematics/overview
+  - file: thematics/docs/README.md
+  - file: thematics/expinst/README.md
+  - file: thematics/projects/README.md
+  - file: thematics/services/README.md
+  - file: thematics/spatial/README.md
+  - file: thematics/training/README.md
+  - file: thematics/vessels/README.md
 - file: tooling/index
   sections:
-    - file: tooling/openRefine/README.md
-      sections:
-        - file: tooling/openRefine/template.md
-    - file: tooling/notebooks/README.md
-      sections:
-        - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
-        - file: tooling/notebooks/OIH_Graphs.ipynb
-        - file: tooling/notebooks/OIH_Editor.ipynb
-        - file: tooling/notebooks/115/OIH_115Map.ipynb
-        - file: tooling/notebooks/mapping/mapping.ipynb
-        - file: tooling/notebooks/geocomplete.ipynb
-        - file: tooling/notebooks/SHACL/pySHACL.ipynb
-        - file: tooling/notebooks/mapping/mapping.ipynb
-- file: validation/README   
+  - file: tooling/openRefine/README.md
+    sections:
+    - file: tooling/openRefine/template.md
+  - file: tooling/notebooks/README.md
+    sections:
+    - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
+    - file: tooling/notebooks/OIH_Graphs.ipynb
+    - file: tooling/notebooks/OIH_Editor.ipynb
+    - file: tooling/notebooks/115/OIH_115Map.ipynb
+    - file: tooling/notebooks/mapping/mapping.ipynb
+    - file: tooling/notebooks/geocomplete.ipynb
+    - file: tooling/notebooks/SHACL/pySHACL.ipynb
+- file: validation/README
   sections:
   - file: validation/cue/README.md
 - file: appendix/index
   sections:
-    - file: appendix/list
-    - file: appendix/graphpub
-    - file: appendix/languages
-    - file: appendix/referenceclient
-    - file: appendix/prov/README
+  - file: appendix/list
+  - file: appendix/graphpub
+  - file: appendix/languages
+  - file: appendix/referenceclient
+  - file: appendix/prov/README
 - file: annoyances
 - file: references
 - file: registries
