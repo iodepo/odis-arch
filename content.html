@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="thematics/index.html">
+  <a class="reference internal" href="thematics/README.html">
    Thematic Types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -118,6 +118,41 @@
    <li class="toctree-l2">
     <a class="reference internal" href="thematics/overview.html">
      Connection Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/docs/README.html">
+     Documents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/expinst/README.html">
+     Experts and Institutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/projects/README.html">
+     Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/services/README.html">
+     Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/spatial/README.html">
+     Spatial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/training/README.html">
+     Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="thematics/vessels/README.html">
+     Vessels
     </a>
    </li>
   </ul>
@@ -172,6 +207,16 @@
      <li class="toctree-l3">
       <a class="reference internal" href="tooling/notebooks/OIH_Editor.html">
        OIH Editor Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tooling/notebooks/115/OIH_115Map.html">
+       OIH ISO 19139 to schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tooling/notebooks/mapping/mapping.html">
+       DCAT to Schema.org via SHACL AF
       </a>
      </li>
      <li class="toctree-l3">
@@ -355,6 +400,11 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json-ld-vs-schema-org-vs-structured-data-on-the-web">
+   JSON-LD vs schema.org vs structured data on the web
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#broader-impacts">
    Broader Impacts
   </a>
@@ -379,10 +429,23 @@
 <h1>About Structured Data on the Web<a class="headerlink" href="#about-structured-data-on-the-web" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Structured data on the web is a way to provide semantics and linked data in an approachable manner.  This approach expresses concepts in JSON-LD which is a JavaScript notation popular among developers which easily expresses  concepts (terms) and links to related resources (things).   This structured data on the web approach has been popularized by the large commercial search providers like Google, Bing, Yandex and others via <a class="reference external" href="http://schema.org">schema.org</a>  As described at <a class="reference external" href="http://schema.org">schema.org</a>: “<a class="reference external" href="http://Schema.org">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.”
-The popularity of leveraging the <a class="reference external" href="http://schema.org">schema.org</a> approach in the earth sciences can be attributed to both this ease of developer adoption and also to its foundational use of web architecture. A web architecture foundation aids adoption by the operations side as well as the developer side.  It also takes advantage of the scale and resilience of the web.<br />
-The broad nature of <a class="reference external" href="http://schema.org">schema.org</a> even scopes to the concepts of Datasets.  It is the existence of <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a> that was a focus of several EarthCube projects (Project 418, Project 419 and the Resource Registry) from which spun up the ESIP Science on Schema work.<br />
-Additionally, Google leveraged <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a> to develop and populate the Google Data Set Search and provides guidance to developers to facilitate this.</p>
+<p>Structured data on the web is a way to provide semantics and linked data in an approachable manner.  This approach expresses concepts in JSON-LD which is a JavaScript notation popular among developers which easily expresses  concepts (terms) and links to related resources (things).   This structured data on the web approach has been popularized by the large commercial search providers like Google, Bing, Yandex and others via <a class="reference external" href="http://schema.org">schema.org</a>  As described at <a class="reference external" href="http://schema.org">schema.org</a>: “<a class="reference external" href="http://Schema.org">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.”</p>
+<p>The popularity of leveraging the <a class="reference external" href="http://schema.org">schema.org</a> approach in the earth sciences can be attributed to both this ease of developer adoption and also to its foundational use of web architecture. A web architecture foundation aids adoption by the operations side as well as the developer side.  It also takes advantage of the scale and resilience of the web.</p>
+<p>The broad nature of <a class="reference external" href="http://schema.org">schema.org</a> even scopes to the concepts of Datasets.  It is the existence of <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a> that was a focus of several EarthCube projects (Project 418, Project 419 and the Resource Registry) from which spun up the ESIP Science on Schema work.</p>
+<p>Additionally, Google leveraged <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a> to develop and populate the Google Data Set Search and provides guidance to developers to facilitate this.</p>
+</div>
+<div class="section" id="json-ld-vs-schema-org-vs-structured-data-on-the-web">
+<h2>JSON-LD vs <a class="reference external" href="http://schema.org">schema.org</a> vs structured data on the web<a class="headerlink" href="#json-ld-vs-schema-org-vs-structured-data-on-the-web" title="Permalink to this headline">¶</a></h2>
+<p>JSON-LD is a way to serialize RDF that uses JSON notation.  It is really no different then than RDF-XML, turtle, ntriples, etc.  There are several ways to represent the RDF data model in text files (and some emerging binary ones like CBOR and parquet patterns).</p>
+<p><a class="reference external" href="http://Schema.org">Schema.org</a> is a vocabulary for describing things similar to DCAT, FOAF, Dublin Core.  It does this by using RDF as the underlying data model to represent this “ontology”.</p>
+<p>The confusion comes from the collision of outcomes.  JSON-LD came about, partly, to allow the use of the RDF data model by a broader audience.  This is done by leveraging a more popular notation for the data model, JSON, in the form of JSON-LD.  <a class="reference external" href="http://Schema.org">Schema.org</a> also wanted to advance the use of structured [meta]data by making it easier to use and connecting structured data to web pages.  At the start, there were three approaches; RDFa, microformats and JSON-LD, to putting <a class="reference external" href="http://schema.org">schema.org</a> in web pages.  However, the JSON-LD approach to incorporating this structured
+data has grown in popularity far beyond the others. As the popularity of both JSON-LD and <a class="reference external" href="http://schema.org">schema.org</a> grew,  they often got conflated with each other.</p>
+<p>The term  “structured data on the web” is perhaps a more neutral way to discuss
+the use of vocabularies encoding in JSON-LD used in web pages.  However,  the phrase “<a class="reference external" href="http://schema.org">schema.org</a>” is starting to become the term for “structured data on the web using JSON-LD as a serialization”.    Even in cases where you combine other
+vocabularies such as DCAT with JSON-LD with no <a class="reference external" href="http://schema.org">schema.org</a> involved, it seems the way to convey this is to say: “We will use the <a class="reference external" href="http://schema.org">schema.org</a> ‘pattern’ with DCAT”.</p>
+<p>It is arguably not the best or most accurate communications strategy.  It
+can conflate data models, serialization and vocabularies.  However, it is
+concise and ubiquitous and not likely to change.</p>
 </div>
 <div class="section" id="broader-impacts">
 <h2>Broader Impacts<a class="headerlink" href="#broader-impacts" title="Permalink to this headline">¶</a></h2>
@@ -438,7 +501,7 @@ Additionally, Google leveraged <a class="reference external" href="http://schema
         
           By IODEPO<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>

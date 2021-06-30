@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Geo KG Completion testing" href="geocomplete.html" />
+    <link rel="next" title="OIH ISO 19139 to schema.org" href="115/OIH_115Map.html" />
     <link rel="prev" title="OIH Graph testing" href="OIH_Graphs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -106,7 +106,7 @@
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../thematics/index.html">
+  <a class="reference internal" href="../../thematics/README.html">
    Thematic Types
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -118,6 +118,41 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../thematics/overview.html">
      Connection Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/docs/README.html">
+     Documents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/expinst/README.html">
+     Experts and Institutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/projects/README.html">
+     Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/services/README.html">
+     Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/spatial/README.html">
+     Spatial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/training/README.html">
+     Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/vessels/README.html">
+     Vessels
     </a>
    </li>
   </ul>
@@ -172,6 +207,16 @@
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        OIH Editor Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="115/OIH_115Map.html">
+       OIH ISO 19139 to schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mapping/mapping.html">
+       DCAT to Schema.org via SHACL AF
       </a>
      </li>
      <li class="toctree-l3">
@@ -371,81 +416,90 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   OIH Editor Playground
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#some-package-and-imports">
    Some package and imports
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pip-installs">
      pip installs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
      imports
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#functions">
      functions
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#editor-playground">
+     Editor playground
+    </a>
+   </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#editor-playground">
-   Editor playground
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-json-ld-files">
    Introduction to JSON-LD files
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#framing">
-   Framing
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#parse-out-the-keywords">
-     Parse out the keywords
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#framing">
+     Framing
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#wikidata">
-     Wikidata
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parse-out-the-keywords">
+       Parse out the keywords
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wikidata">
+       Wikidata
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#validation">
    Validation
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#about">
      About
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#thematic-topic-documents">
    Thematic topic: Documents
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      About
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dev-note">
-     Dev note
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dev-note">
+       Dev note
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -463,10 +517,11 @@
   <div class="section" id="oih-editor-playground">
 <h1>OIH Editor Playground<a class="headerlink" href="#oih-editor-playground" title="Permalink to this headline">¶</a></h1>
 <p>For more background on the larger ODIS Ocean Info Hub and related referneces please visit out GitHub repository.</p>
+</div>
 <div class="section" id="some-package-and-imports">
-<h2>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h2>
+<h1>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="pip-installs">
-<h3>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h3>
+<h2>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%%quiet</span>
@@ -484,10 +539,838 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">  ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">   command: /opt/conda/bin/python3.9 -u -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; bdist_wheel -d /tmp/pip-wheel-6b4m_5t_</span>
+<span class=" -Color -Color-Red">       cwd: /tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/</span>
+<span class=" -Color -Color-Red">  Complete output (406 lines):</span>
+<span class=" -Color -Color-Red">  running bdist_wheel</span>
+<span class=" -Color -Color-Red">  running build</span>
+<span class=" -Color -Color-Red">  running build_clib</span>
+<span class=" -Color -Color-Red">  building &#39;libmarisa-trie&#39; library</span>
+<span class=" -Color -Color-Red">  creating build</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/agent.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/keyset.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/reader.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/mapper.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/writer.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/tail.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/louds-trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/vector/bit-vector.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
+<span class=" -Color -Color-Red">  ar rcs build/temp.linux-x86_64-3.9/liblibmarisa-trie.a build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
+<span class=" -Color -Color-Red">  running build_ext</span>
+<span class=" -Color -Color-Red">  building &#39;marisa_trie&#39; extension</span>
+<span class=" -Color -Color-Red">  creating build/temp.linux-x86_64-3.9/src</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/agent.cpp -o build/temp.linux-x86_64-3.9/src/agent.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/base.cpp -o build/temp.linux-x86_64-3.9/src/base.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/iostream.cpp -o build/temp.linux-x86_64-3.9/src/iostream.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/key.cpp -o build/temp.linux-x86_64-3.9/src/key.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/keyset.cpp -o build/temp.linux-x86_64-3.9/src/keyset.o</span>
+<span class=" -Color -Color-Red">  gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/marisa_trie.cpp -o build/temp.linux-x86_64-3.9/src/marisa_trie.o</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘int __Pyx_modinit_type_init_code()’:</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17944:34: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  17944 |   __pyx_type_11marisa_trie__Trie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                  ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17968:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  17968 |   __pyx_type_11marisa_trie_BinaryTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                       ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17981:46: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  17981 |   __pyx_type_11marisa_trie__UnicodeKeyedTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                              ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:17995:33: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  17995 |   __pyx_type_11marisa_trie_Trie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                 ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18014:38: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18014 |   __pyx_type_11marisa_trie_BytesTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                      ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18039:40: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18039 |   __pyx_type_11marisa_trie__UnpackTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                        ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18052:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18052 |   __pyx_type_11marisa_trie_RecordTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                       ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18070:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18070 |   __pyx_type_11marisa_trie___pyx_scope_struct____init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18076:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18076 |   __pyx_type_11marisa_trie___pyx_scope_struct_1_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18082:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18082 |   __pyx_type_11marisa_trie___pyx_scope_struct_2_iterkeys.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18088:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18088 |   __pyx_type_11marisa_trie___pyx_scope_struct_3_iter_prefixes.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                               ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18094:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18094 |   __pyx_type_11marisa_trie___pyx_scope_struct_4_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18100:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18100 |   __pyx_type_11marisa_trie___pyx_scope_struct_5_iter_prefixes.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                               ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18106:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18106 |   __pyx_type_11marisa_trie___pyx_scope_struct_6_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18112:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18112 |   __pyx_type_11marisa_trie___pyx_scope_struct_7___init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18118:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18118 |   __pyx_type_11marisa_trie___pyx_scope_struct_8_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18124:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18124 |   __pyx_type_11marisa_trie___pyx_scope_struct_9_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18130:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18130 |   __pyx_type_11marisa_trie___pyx_scope_struct_10_iterkeys.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18136:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18136 |   __pyx_type_11marisa_trie___pyx_scope_struct_11___init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18142:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18142 |   __pyx_type_11marisa_trie___pyx_scope_struct_12_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18148:60: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18148 |   __pyx_type_11marisa_trie___pyx_scope_struct_13_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                            ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18154:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">  18154 |   __pyx_type_11marisa_trie___pyx_scope_struct_14_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">        |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">  In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                   from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘int __Pyx_ParseOptionalKeywords(PyObject*, PyObject***, PyObject*, PyObject**, Py_ssize_t, const char*)’:</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">        |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">        |                                                    ^</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">    580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">        |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">        |                                                                           ^</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">    264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">        |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">  18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">        |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">    446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">        |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘PyObject* __Pyx_PyUnicode_Substring(PyObject*, Py_ssize_t, Py_ssize_t)’:</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">  20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">        |                                             ^</span>
+<span class=" -Color -Color-Red">  In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                   from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">  20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">        |                                             ^</span>
+<span class=" -Color -Color-Red">  In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                   from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp: In function ‘PyObject* __Pyx_decode_c_string(const char*, Py_ssize_t, Py_ssize_t, const char*, const char*, PyObject* (*)(const char*, Py_ssize_t, const char*))’:</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">  20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">        |                                             ^</span>
+<span class=" -Color -Color-Red">  In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                   from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">  20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">        |                                             ^</span>
+<span class=" -Color -Color-Red">  In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                   from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                   from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">  /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">    551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">        |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">  error: command &#39;/usr/bin/gcc&#39; failed with exit code 1</span>
+<span class=" -Color -Color-Red">  ----------------------------------------</span>
+<span class=" -Color -Color-Red">  ERROR: Failed building wheel for marisa-trie</span>
+<span class=" -Color -Color-Red">    ERROR: Command errored out with exit status 1:</span>
+<span class=" -Color -Color-Red">     command: /opt/conda/bin/python3.9 -u -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; install --record /tmp/pip-record-zgrqbimv/install-record.txt --single-version-externally-managed --compile --install-headers /opt/conda/include/python3.9/marisa-trie</span>
+<span class=" -Color -Color-Red">         cwd: /tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/</span>
+<span class=" -Color -Color-Red">    Complete output (406 lines):</span>
+<span class=" -Color -Color-Red">    running install</span>
+<span class=" -Color -Color-Red">    running build</span>
+<span class=" -Color -Color-Red">    running build_clib</span>
+<span class=" -Color -Color-Red">    building &#39;libmarisa-trie&#39; library</span>
+<span class=" -Color -Color-Red">    creating build</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/agent.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/keyset.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/reader.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/mapper.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/io/writer.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/tail.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/trie/louds-trie.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/lib -Imarisa-trie/include -c marisa-trie/lib/marisa/grimoire/vector/bit-vector.cc -o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
+<span class=" -Color -Color-Red">    ar rcs build/temp.linux-x86_64-3.9/liblibmarisa-trie.a build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/agent.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/keyset.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/reader.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/mapper.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/io/writer.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/tail.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/trie/louds-trie.o build/temp.linux-x86_64-3.9/marisa-trie/lib/marisa/grimoire/vector/bit-vector.o</span>
+<span class=" -Color -Color-Red">    running build_ext</span>
+<span class=" -Color -Color-Red">    building &#39;marisa_trie&#39; extension</span>
+<span class=" -Color -Color-Red">    creating build/temp.linux-x86_64-3.9/src</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/agent.cpp -o build/temp.linux-x86_64-3.9/src/agent.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/base.cpp -o build/temp.linux-x86_64-3.9/src/base.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/iostream.cpp -o build/temp.linux-x86_64-3.9/src/iostream.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/key.cpp -o build/temp.linux-x86_64-3.9/src/key.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/keyset.cpp -o build/temp.linux-x86_64-3.9/src/keyset.o</span>
+<span class=" -Color -Color-Red">    gcc -pthread -B /opt/conda/compiler_compat -Wl,--sysroot=/ -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /opt/conda/include -fPIC -O2 -isystem /opt/conda/include -fPIC -Imarisa-trie/include -I/opt/conda/include/python3.9 -c src/marisa_trie.cpp -o build/temp.linux-x86_64-3.9/src/marisa_trie.o</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘int __Pyx_modinit_type_init_code()’:</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17944:34: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    17944 |   __pyx_type_11marisa_trie__Trie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                  ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17968:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    17968 |   __pyx_type_11marisa_trie_BinaryTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                       ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17981:46: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    17981 |   __pyx_type_11marisa_trie__UnicodeKeyedTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                              ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:17995:33: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    17995 |   __pyx_type_11marisa_trie_Trie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                 ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18014:38: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18014 |   __pyx_type_11marisa_trie_BytesTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                      ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18039:40: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18039 |   __pyx_type_11marisa_trie__UnpackTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                        ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18052:39: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18052 |   __pyx_type_11marisa_trie_RecordTrie.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                       ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18070:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18070 |   __pyx_type_11marisa_trie___pyx_scope_struct____init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18076:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18076 |   __pyx_type_11marisa_trie___pyx_scope_struct_1_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18082:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18082 |   __pyx_type_11marisa_trie___pyx_scope_struct_2_iterkeys.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18088:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18088 |   __pyx_type_11marisa_trie___pyx_scope_struct_3_iter_prefixes.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                               ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18094:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18094 |   __pyx_type_11marisa_trie___pyx_scope_struct_4_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18100:63: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18100 |   __pyx_type_11marisa_trie___pyx_scope_struct_5_iter_prefixes.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                               ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18106:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18106 |   __pyx_type_11marisa_trie___pyx_scope_struct_6_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18112:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18112 |   __pyx_type_11marisa_trie___pyx_scope_struct_7___init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18118:57: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18118 |   __pyx_type_11marisa_trie___pyx_scope_struct_8_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                         ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18124:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18124 |   __pyx_type_11marisa_trie___pyx_scope_struct_9_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18130:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18130 |   __pyx_type_11marisa_trie___pyx_scope_struct_10_iterkeys.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18136:59: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18136 |   __pyx_type_11marisa_trie___pyx_scope_struct_11___init__.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18142:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18142 |   __pyx_type_11marisa_trie___pyx_scope_struct_12_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18148:60: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18148 |   __pyx_type_11marisa_trie___pyx_scope_struct_13_iteritems.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                            ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18154:58: error: ‘PyTypeObject’ {aka ‘struct _typeobject’} has no member named ‘tp_print’</span>
+<span class=" -Color -Color-Red">    18154 |   __pyx_type_11marisa_trie___pyx_scope_struct_14_genexpr.tp_print = 0;</span>
+<span class=" -Color -Color-Red">          |                                                          ^~~~~~~~</span>
+<span class=" -Color -Color-Red">    In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                     from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘int __Pyx_ParseOptionalKeywords(PyObject*, PyObject***, PyObject*, PyObject**, Py_ssize_t, const char*)’:</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:22: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                      ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18940:52: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18940 |                     (PyUnicode_GET_SIZE(**name) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                    ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:26: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:261:7: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      261 |       PyUnicode_WSTR_LENGTH(op) :                    \</span>
+<span class=" -Color -Color-Red">          |       ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:262:52: warning: ‘Py_UNICODE* PyUnicode_AsUnicode(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      262 |       ((void)PyUnicode_AsUnicode(_PyObject_CAST(op)),\</span>
+<span class=" -Color -Color-Red">          |                                                    ^</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:580:45: note: declared here</span>
+<span class=" -Color -Color-Red">      580 | Py_DEPRECATED(3.3) PyAPI_FUNC(Py_UNICODE *) PyUnicode_AsUnicode(</span>
+<span class=" -Color -Color-Red">          |                                             ^~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:451:75: warning: ‘Py_ssize_t _PyUnicode_get_wstr_length(PyObject*)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">      451 | #define PyUnicode_WSTR_LENGTH(op) _PyUnicode_get_wstr_length((PyObject*)op)</span>
+<span class=" -Color -Color-Red">          |                                                                           ^</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:264:8: note: in expansion of macro ‘PyUnicode_WSTR_LENGTH’</span>
+<span class=" -Color -Color-Red">      264 |        PyUnicode_WSTR_LENGTH(op)))</span>
+<span class=" -Color -Color-Red">          |        ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:18956:59: note: in expansion of macro ‘PyUnicode_GET_SIZE’</span>
+<span class=" -Color -Color-Red">    18956 |                         (PyUnicode_GET_SIZE(**argname) != PyUnicode_GET_SIZE(key)) ? 1 :</span>
+<span class=" -Color -Color-Red">          |                                                           ^~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:446:26: note: declared here</span>
+<span class=" -Color -Color-Red">      446 | static inline Py_ssize_t _PyUnicode_get_wstr_length(PyObject *op) {</span>
+<span class=" -Color -Color-Red">          |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘PyObject* __Pyx_PyUnicode_Substring(PyObject*, Py_ssize_t, Py_ssize_t)’:</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">          |                                             ^</span>
+<span class=" -Color -Color-Red">    In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                     from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20109:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    20109 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">          |                                             ^</span>
+<span class=" -Color -Color-Red">    In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                     from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp: In function ‘PyObject* __Pyx_decode_c_string(const char*, Py_ssize_t, Py_ssize_t, const char*, const char*, PyObject* (*)(const char*, Py_ssize_t, const char*))’:</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">          |                                             ^</span>
+<span class=" -Color -Color-Red">    In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                     from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    src/marisa_trie.cpp:20142:45: warning: ‘PyObject* PyUnicode_FromUnicode(const Py_UNICODE*, Py_ssize_t)’ is deprecated [-Wdeprecated-declarations]</span>
+<span class=" -Color -Color-Red">    20142 |         return PyUnicode_FromUnicode(NULL, 0);</span>
+<span class=" -Color -Color-Red">          |                                             ^</span>
+<span class=" -Color -Color-Red">    In file included from /opt/conda/include/python3.9/unicodeobject.h:1026,</span>
+<span class=" -Color -Color-Red">                     from /opt/conda/include/python3.9/Python.h:97,</span>
+<span class=" -Color -Color-Red">                     from src/marisa_trie.cpp:4:</span>
+<span class=" -Color -Color-Red">    /opt/conda/include/python3.9/cpython/unicodeobject.h:551:42: note: declared here</span>
+<span class=" -Color -Color-Red">      551 | Py_DEPRECATED(3.3) PyAPI_FUNC(PyObject*) PyUnicode_FromUnicode(</span>
+<span class=" -Color -Color-Red">          |                                          ^~~~~~~~~~~~~~~~~~~~~</span>
+<span class=" -Color -Color-Red">    error: command &#39;/usr/bin/gcc&#39; failed with exit code 1</span>
+<span class=" -Color -Color-Red">    ----------------------------------------</span>
+<span class=" -Color -Color-Red">ERROR: Command errored out with exit status 1: /opt/conda/bin/python3.9 -u -c &#39;import io, os, sys, setuptools, tokenize; sys.argv[0] = &#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;; __file__=&#39;&quot;&#39;&quot;&#39;/tmp/pip-install-u2r_bu8s/marisa-trie_1d36873853dd40b6a8f9b670c86a37e7/setup.py&#39;&quot;&#39;&quot;&#39;;f = getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__) if os.path.exists(__file__) else io.StringIO(&#39;&quot;&#39;&quot;&#39;from setuptools import setup; setup()&#39;&quot;&#39;&quot;&#39;);code = f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; install --record /tmp/pip-record-zgrqbimv/install-record.txt --single-version-externally-managed --compile --install-headers /opt/conda/include/python3.9/marisa-trie Check the logs for full command output.</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="imports">
-<h3>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<h2>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
@@ -525,20 +1408,20 @@
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">05965</span><span class="n">b657363</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># General imports</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">json</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">rdflib</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">requests</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> 
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="c1"># concept net</span>
+<span class="ne">---&gt; </span><span class="mi">26</span> <span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">conceptnet5.uri</span> <span class="kn">import</span> <span class="n">join_uri</span><span class="p">,</span> <span class="n">split_uri</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rdflib&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;graphviz&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="functions">
-<h3>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<h2>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
@@ -608,6 +1491,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">b348409f0077</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">conceptnet5.uri</span> <span class="kn">import</span> <span class="n">join_uri</span><span class="p">,</span> <span class="n">split_uri</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;graphviz&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,9 +1544,8 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100 10129  100 10129    0     0  49896      0 --:--:-- --:--:-- --:--:-- 49651
+100  9241  100  9241    0     0  48894      0 --:--:-- --:--:-- --:--:-- 48894
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -673,18 +1569,19 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;@context&#39;: {&#39;@vocab&#39;: &#39;https://schema.org/&#39;},
- &#39;@id&#39;: &#39;https://example.org/id/XYZ&#39;,
  &#39;@type&#39;: &#39;CreativeWork&#39;,
- &#39;description&#39;: &#39;Description of the creative work to aid in searching&#39;,
+ &#39;@id&#39;: &#39;https://example.org/id/XYZ&#39;,
  &#39;name&#39;: &#39;Name or title of the document&#39;,
+ &#39;description&#39;: &#39;Description of the creative work to aid in searching&#39;,
  &#39;url&#39;: &#39;https://www.sample-data-repository.org/creativework/report.pdf&#39;}
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="introduction-to-json-ld-files">
-<h2>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h2>
+<h1>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Google Data Set Required+</span>
@@ -777,7 +1674,14 @@ Descriptive text of the dataset.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Editor_15_0.svg" src="../../_images/OIH_Editor_15_0.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">aef8eaa8fa4e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;show_graph&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="framing">
@@ -961,10 +1865,11 @@ description:science that applies chemistry to geological systems
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="validation">
-<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<h1>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
-<h3>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h3>
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>The code below invokes pySHACL on some data and shape graphs out of GitHub. Note, we could edit these local to this notebook too. The human output is a bit hard to read since some of the encoding is off.</p>
 <p>It might actually work to use the graph output and route it through the graph package and into Pandas too. It might let us parse and present the results a bit better.</p>
 <p>The imaage below is just a test of putting images into this document.  We can also upload and associate a document with the notebook and use it locally too.</p>
@@ -1010,9 +1915,9 @@ Conforms: True
 </div>
 </div>
 <div class="section" id="thematic-topic-documents">
-<h2>Thematic topic: Documents<a class="headerlink" href="#thematic-topic-documents" title="Permalink to this headline">¶</a></h2>
+<h1>Thematic topic: Documents<a class="headerlink" href="#thematic-topic-documents" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h3>About<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2>About<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>A testing area for the work on type Document</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1041,7 +1946,6 @@ Conforms: True
 
 <span class="c1"># could I %load the file via magic commands?  see all via %lsmagic</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1192,7 +2096,7 @@ Conforms: True
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="OIH_Graphs.html" title="previous page">OIH Graph testing</a>
-    <a class='right-next' id="next-link" href="geocomplete.html" title="next page">Geo KG Completion testing</a>
+    <a class='right-next' id="next-link" href="115/OIH_115Map.html" title="next page">OIH ISO 19139 to schema.org</a>
 
         </div>
         
@@ -1204,7 +2108,7 @@ Conforms: True
         
           By IODEPO<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
