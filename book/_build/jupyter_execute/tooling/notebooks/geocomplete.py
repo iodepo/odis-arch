@@ -19,7 +19,7 @@
 # * https://geopandas.org/docs/user_guide/geocoding.html
 # * https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff
 
-# In[143]:
+# In[ ]:
 
 
 #@title
@@ -35,7 +35,7 @@ get_ipython().system('pip install -q rtree')
 get_ipython().system('pip install -q pygeos')
 
 
-# In[144]:
+# In[2]:
 
 
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -50,7 +50,7 @@ import shapely
 # ufokn = "http://graph.collaborium.io/blazegraph/namespace/oihdev/sparql"
 
 
-# In[166]:
+# In[3]:
 
 
 # Point in Polygon function from the cited Vidhya reference.  A few small changes
@@ -86,7 +86,7 @@ def get_pip (gdf, regions):
     return df
 
 
-# In[167]:
+# In[4]:
 
 
 # load CSV into pandas that holds the WKT strings for the world seas dataset
