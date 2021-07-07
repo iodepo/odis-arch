@@ -1,105 +1,137 @@
-# Indexing / Harvesting
+# Indexing Quick Start  
 
-OIH employs an activity flow is entirely based on web architecture.  This means
-and implementing a harvesting pattern for OIH is an application of these standards.
+![](./images/composeOptions.png)
 
-Once publishers are aligned with this approach any party can implement a indexing 
-service through the further use of these web architecture principles.  
+## Gleaner (app)
 
-The current manner in which information by providers is placed on the net is 
-detailed more in the [Publishing patterns for OIH](../../publishing/publishing.md)
-section.
+Gleaner the app is the Go based program that performs the actual retrieval and loading of JSON-LD documents from the web.  Essentially a basic ELT workflow.   Gleaner is a Go based program that compiles down to a single binary (app).  It can be compiled into releases that can be run on Linux, Mac OS X and Windows.  
 
-The basics are:
+While Gleaner is a stand alone app, it is designed to interact with, at a minimum, an object store to support data storage.  These dependencies can be met with the Gleaner Indexing Services compose file.
 
-* resources containg JSON-LD records are identified by a sitemap by a known provider
-* web based method GET access for those resources
-* page content read or optionally rendered via headless browser for those cases
-where client side javascript based inclusion of the JSON-LD is done
-* JSON-LD is parsed from the static or rendered HTML
-* The JSON-LD is leverage for generation of an index
-
-## Tools Used in OIH
+### Quick Start steps
 
 
-In the case of the OIH architecture the following image defines the set up.
-The key initial points here are that OIH employs an object store to hold
-the JSON-LD objects while they are leveraged to generate the index.
+#### Grab Gleaner and the support files we need
 
-This approach has several benefits
+* Gleaner
+* Gleaner config template
+* JSON-LD context
 
-* Facilitate easier incremental indexing to lighten the network load on
-  provider systems.
-* Allows multiple processing workflows on the objects without further network
-traffic (validation, generation of new triples, etc).
-* Provides an additional route to the data beyond the graph.  For some workflows
-  such as ML or analytics an object based store has benefits.  For other tasks
-  such as user interface queries, graphs tend to provide better functionality.
 
-![](./images/searcharchv2.png)
+####  Obtain the compose file(s) you need
 
-### Object store pattern
+This will be the Gleaner Indexing Services (IS) file or the Gleaner Data Services (DS) compose files.   Why pick one over the other?
 
-Within in the object store the following digital object pattern is used.  
-This is based on the work of the RDA Digital Fabric working group.  
+> Choose Gleaner IS if you simply wish to retrieve the JSON-LD into a data warehouse to use in your own workflows
 
-![](./images/do.png)
+> Choose Gleaner DS if you wish to build out a graph and want to use the default contains used by Gleaner.  
 
-### References for key elements
 
-[Glenaer Compose](https://github.com/gleanerio/gleaner-compose) is a 
-repository for the Docker (Open Container) configurations used for the 
-current OIH portal.  
+* Gleaner DS compose file
+* Gleaner DS environment setup script
 
-[Gleaner:](https://gleaner.io) (
-<https://github.com/earthcubearchitecture-project418/gleaner>) A tool
-for harvesting, validating and indexing structured data on the web.
+####  Edit environment variables setup script
 
-[GROW](https://github.com/fils/goobjectweb) A program that implements
-the RDA Digital Object Cloud pattern on top of Amazon S3 API based
-object stores. It bridges Gleaner and Mercantile to the web.
+```bash
+#!/bin/bash
 
-## Options
+# domains 
+export GLEANER_ADMIN_DOMAIN=admin.local.dev
+export GLEANER_OSS_DOMAIN=oss.local.dev
+export GLEANER_GRAPH_DOMAIN=graph.local.dev
+export GLEANER_WEB_DOMAIN=web.local.dev
+export GLEANER_WEB2_DOMAIN=web2.local.dev
 
-While [Gleaner](https://gleaner.io/) will be used during initial OIH development it is not
-the only approach.   There are many other tools that 
-can be used and might be leveraged in a production environment including:
+# Object store keys
+export MINIO_ACCESS_KEY=worldsbestaccesskey
+export MINIO_SECRET_KEY=worldsbestsecretkey
 
-* [LDSpider](https://github.com/ldspider/ldspider)
-* [Squirrel](https://dice-group.github.io/squirrel.github.io/overview.html)
-* [Nutch (Apache)](http://nutch.apache.org/)
-* [Laundromat](https://github.com/LOD-Laundromat/LOD-Laundromat)
-* [DataArchiver](https://github.com/websi96/datasetarchiver)
-* [OD Archiver](https://archiver.ai.wu.ac.at/)
+# local data volumes
+export GLEANER_BASE=/tmp/gleaner/
+export GLEANER_TRAEFIK=${GLEANER_BASE}/config
+export GLEANER_OBJECTS=${GLEANER_BASE}/datavol/s3
+export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
+```
 
-These different tools may better fit into the workflow and available skill sets for a
-group.
 
-## Indexing
+#### Spin up the containers
 
-At present we index into a graph store.  Note the JSON-LD is a graph and what we are
-doing mostly is collecting, validating and aggregating these graph elements into a 
-usable collection.  
+```bash
+docker-compose -f gleaner-ds.yml up -d
+```
 
-There are various potential indexes:
 
-* RDF graph from the collected JSON-LD (the default index goal)
-* Full text index either on the metadata or potentially the associated 
-  described resources if available
-* Spatial index; this can also be done as part of the "graph" if using things like 
-  geoSPARQL to encode and search the spatial elements.  Alternatively this could be 
-  done be extracting those into a geoserver, geohash or other external spatial service
-* KG completion graph where connections to external graphs are made. Only basic tesdting has been
-  done on this front
+#### Edit Gleaner config file
 
-## Utilization
 
-In the end the goal is to provide use of the generated index.  There are several
-possible used for an index.
+```yaml
+---
+minio:
+  address: 192.168.86.45
+  port: 32773
+  accessKey: worldsbestaccesskey      
+  secretKey: worldsbestsecretkey  
+  ssl: false
+  bucket: gleaner
+gleaner:
+  runid: oih # this will be the bucket the output is placed in...
+  summon: true # do we want to visit the web sites and pull down the files
+  mill: true
+context:
+  cache: true
+contextmaps:
+- prefix: "https://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+- prefix: "http://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+summoner:
+  after: ""      # "21 May 20 10:00 UTC"   
+  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  threads: 1
+  delay: 0  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
+  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
+millers:
+  graph: true
+  shacl: false
+sitegraphs:
+- name: aquadocs
+  url: https://oih.aquadocs.org/aquadocs.json 
+  headless: false
+  pid: https://www.re3data.org/repository/aquadocs
+  properName: AquaDocs
+  domain: https://aquadocs.org 
+sources:
+- name: marinetraining
+  url: https://www.marinetraining.eu/sitemap.xml
+  headless: false
+  pid: https://www.re3data.org/repository/marinetraining
+  properName: Marine Training EU
+  domain: https://marinetraining.eu/
+- name: oceanexperts
+  url: https://oceanexpert.org/assets/sitemaps/sitemapTraining.xml
+  headless: false
+  pid: https://www.re3data.org/repository/oceanexpert
+  properName: OceanExpert UNESCO/IOC Project Office for IODE 
+  domain: https://oceanexpert.org/
+- name: obis
+  url: https://obis.org/sitemap/sitemap_datasets.xml
+  headless: false
+  pid: https://www.re3data.org/repository/obis
+  properName: Ocean Biodiversity Information System
+  domain: https://obis.org
+```
+#### Run gleaner
 
-* Web UI such as the reference client at [oceans.collaborium.io](oceans.collaborium.io)
-  * A variation on this is the development of web components that can be easily included in 
-    domain sites to perform operations on the OIH index
-* graph access via SPARQL
-* access to the graph and objects via workflows like Jupyter notebooks
-  
+
+### I want a graph in the end, what do I do?
+
+You have set up the server environment and Gleaner and done your run.  Things look good
+but you don't have a graph you can work with yet.    You need to load the JSON-LD into
+the triplestore in order to start playing.
+
+  * Simple script loading 
+  * Nabu
+
+
+### Try out a simple SPARQL query.
+

@@ -1,4 +1,4 @@
-# About Structured Data on the Web
+# Structured Data on the Web
 
 ## About
 
@@ -10,7 +10,42 @@ The broad nature of schema.org even scopes to the concepts of Datasets.  It is t
 
 Additionally, Google leveraged schema.org/Dataset to develop and populate the Google Data Set Search and provides guidance to developers to facilitate this.  
 
-## JSON-LD vs schema.org vs structured data on the web
+
+## Personas
+
+The OIH system can be viewed as involving three personas.  These are
+briefly presented here with details on the aggregation persona following. 
+
+
+```{panels}
+:column: col-4
+:card: border-2
+![](./images/personna.svg) 
+Publisher
+^^^
+A key persona whose activities are covered in detail in [Publishing patterns for OIH](../publishing/publishing.md)
+---
+![](./images/personna.svg) 
+Aggregator
+^^^
+Leverages web architecture to retrieve structured data on the web and generate usable indexes.
+---
+![](./images/personna.svg) 
+User
+^^^
+The end user of the publishing and aggregation activities.  May leverage 
+the web for discovery or tools such as Jupyter for analytics and visualization.  
+```
+
+## Terminology
+
+A CSV file is a text file containing spreadsheet information 
+following a data model that is encoded using a convention of 
+rows and commas defining columns.  
+
+A JSON-LD fle is a text file containing graph 
+information following the RDF data model that is 
+encoded using a convention based on JSON syntax.
 
 JSON-LD is a way to serialize RDF that uses JSON notation.  It is really no different then than RDF-XML, turtle, ntriples, etc.  There are several ways to represent the RDF data model in text files (and some emerging binary ones like CBOR and parquet patterns).
 
@@ -34,6 +69,10 @@ By leveraging existing technology and approaches a larger community is enabled t
 The nature of structured data on the web also provides the ability to apply semantic context to samples.  This means richer discovery and information about samples, the past uses and potential future uses is more readily available.
 
 Simplified architecture also means easier development of tools and interfaces to present the data.  Allowing the presentation of samples and their information in a manner aligned with a given community's needs.    A simplified architecture aids sustainability from both a technical and financial perspective.  
+
+
+## Intellectual Merritt
+
 
 ## Web architecture approach
 

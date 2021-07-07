@@ -1,4 +1,4 @@
-# Publishing patterns for OIH
+# Publisher
 
 ## About
 
@@ -8,6 +8,11 @@ on the web approach OIH will use.
 Note many software packages you are using might already 
 implement this approach.  See the section: 
 _Existing support in software_ at the bottom of this document.
+
+```{seealso}
+We also recommend reviewing the document: 
+[Schema.org for Research Data Managers: A Primer](https://docs.google.com/document/d/1fay3uIqIO2rljVBTk6Sk6i1I3yRnVecn-UTl3JKXLnw/edit#heading=h.lmmgh7hw0ebd)
+```
 
 ### Architecture Implementation
 
@@ -26,7 +31,7 @@ community.  The primary tasks include:
   placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each
   published resource.   The SCRIPT tag pattern is:
   
-  ``` 
+  ```html
   <script type="application/ld+json">JSON_LD content</script>
   ```
 
@@ -47,7 +52,6 @@ community.  The primary tasks include:
 Information on the sources, standards and vocabularies to be used can be found
 at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs 
 
-
 ### Including JSON-LD in your resource page
 
 To provide detailed and semantically described details on a resource, OIH uses
@@ -66,7 +70,6 @@ tag/element in the document head element like the following.
 
 An example data graph can be seen below.   However, check the various
 thematic sections for more examples for a given thematic area.  
-
 
 ```json
 {
