@@ -3,17 +3,26 @@ root: index
 sections:
 - file: content
 - file: publishing/publishing
-- file: indexing/harvesting
 - file: thematics/README.md
   sections:
-  - file: thematics/overview
-  - file: thematics/docs/README.md
   - file: thematics/expinst/README.md
+  - file: thematics/docs/README.md
   - file: thematics/projects/README.md
-  - file: thematics/services/README.md
-  - file: thematics/spatial/README.md
   - file: thematics/training/README.md
   - file: thematics/vessels/README.md
+  - file: thematics/spatial/README.md
+  - file: thematics/services/README.md
+  - file: thematics/list
+  - file: thematics/languages
+  - file: thematics/prov/README
+- file: indexing/index.md
+  sections:
+  - file: indexing/harvesting.md
+  - file: indexing/indexingservices.md
+  - file: indexing/dataservices.md
+  - file: indexing/user.md
+  - file: indexing/graphpub
+  - file: indexing/alternatives.md
 - file: tooling/index
   sections:
   - file: tooling/openRefine/README.md
@@ -22,23 +31,21 @@ sections:
   - file: tooling/notebooks/README.md
     sections:
     - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
-    - file: tooling/notebooks/OIH_Graphs.ipynb
+    - file: tooling/notebooks/OIH_Queries.ipynb
     - file: tooling/notebooks/OIH_Editor.ipynb
-    - file: tooling/notebooks/115/OIH_115Map.ipynb
-    - file: tooling/notebooks/mapping/mapping.ipynb
-    - file: tooling/notebooks/geocomplete.ipynb
-    - file: tooling/notebooks/SHACL/pySHACL.ipynb
+    - file: tooling/notebooks/validation/OIH_SHACL.ipynb
+    - file: tooling/notebooks/ISO19139mapping/ISOMap.ipynb
+    - file: tooling/notebooks/DCATmapping/dcatmapping.ipynb
+    - file: tooling/notebooks/geoKGComplete/README.md
+      sections:
+      - file: tooling/notebooks/geoKGComplete/geocomplete.ipynb
 - file: validation/README
-  sections:
-  - file: validation/cue/README.md
+- file: users/referenceclient
 - file: appendix/index
   sections:
-  - file: appendix/list
-  - file: appendix/graphpub
-  - file: appendix/languages
-  - file: appendix/referenceclient
-  - file: appendix/prov/README
-- file: annoyances
-- file: references
-- file: registries
-- file: vocabularies
+  - file: appendix/annoyances
+  - file: appendix/references
+  - file: appendix/registries
+  - file: appendix/vocabularies
+
+ 
