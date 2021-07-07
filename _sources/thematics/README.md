@@ -1,4 +1,4 @@
-# Thematic Types
+# Thematic Patterns
 
 ## About
 
@@ -19,5 +19,34 @@ versioning the profiles to provide stable implementations providers can reliably
 3. [Projects](./projects/README.md)
 4. [Training](./training/README.md)
 5. [Vessels](./vessels/README.md)
-6. [Spatial](./spatial/README.md)
-7. [Services](./services/README.md)
+
+In support of these five thematic types two additional types were also documented. 
+
+1. [Spatial](./spatial/README.md)
+2. [Services](./services/README.md)
+3. [Term Lists](./list.md)
+4. [Languages](./languages.md)
+5. [Prov](./prov/README.md)
+
+```{seealso}
+For OIH the focus is on generic documents which can scope reports, data and other resources.
+In those cases where the resources being described are of type Dataset you may wish to review
+patterns developed for GeoScience Datasets by the ESIP
+[Science on Schema](https://github.com/ESIPFed/science-on-schema.org/) community.
+
+```
+
+```{seealso}
+For OIH the focus is on generic documents which can scope reports, data and other resources.
+In those cases where the resources being described are life sciences resources such as datasets, software, and training materials. we recommend following 
+patterns developed by [Bioschemas](https://bioschemas.org/). 
+
+```
+
+## Connections
+This document provides an overview of potential connections between the 
+various thematic types in OIH.  These are not _all_ the relations but simply 
+some to demonstrate the concept as well as give some guidance on the 
+connection of value in query results.
+
+![relations](./images/relations.svg)

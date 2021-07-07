@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggregator &#8212; OIH Reference</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Indexing Quick Start" href="harvesting.html" />
+    <link rel="prev" title="Prov" href="../thematics/prov/README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OIH Reference</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Ocean Info Hub
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../thematics/README.html">
+   Thematic Patterns
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/expinst/README.html">
+     Experts and Institutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/docs/README.html">
+     Documents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/projects/README.html">
+     Projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/training/README.html">
+     Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/vessels/README.html">
+     Vessels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/spatial/README.html">
+     Spatial
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/services/README.html">
+     Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/list.html">
+     Defined Terms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/languages.html">
+     Languages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../thematics/prov/README.html">
+     Prov
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Aggregator
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="harvesting.html">
+     Indexing Quick Start
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="indexingservices.html">
+     Indexing Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dataservices.html">
+     Data Services
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="user.html">
+     Interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="graphpub.html">
+     Graph first approach
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alternatives.html">
+     Alternatives
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tooling/index.html">
+   Tooling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tooling/openRefine/README.html">
+     OpenRefine
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/openRefine/template.html">
+       Template
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tooling/notebooks/README.html">
+     OIH Notebooks
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
+       Graph Analytics Exploration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_Queries.html">
+       OIH Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_Editor.html">
+       OIH Editor Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
+       SHACL validation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/ISO19139mapping/ISOMap.html">
+       ISO 19139 To Schema.org
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
+       Mapping
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../tooling/notebooks/geoKGComplete/README.html">
+       Georeference KG completion example
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+      <label for="toctree-checkbox-6">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/geoKGComplete/geocomplete.html">
+         Geospatial KG Completion
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../validation/README.html">
+   Validation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/referenceclient.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/annoyances.html">
+     Annoyances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/indexing/index.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intoduction">
+   Intoduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleaner">
+   Gleaner
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleaner-indexing-services-is">
+   Gleaner Indexing Services (IS)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleaner-data-services-ds">
+   Gleaner Data Services (DS)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object-store-pattern">
+     Object store pattern
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleaner-web-ui-wui">
+   Gleaner Web UI (WUI)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="aggregator">
+<h1>Aggregator<a class="headerlink" href="#aggregator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intoduction">
+<h2>Intoduction<a class="headerlink" href="#intoduction" title="Permalink to this headline">¶</a></h2>
+<p>This section introduces the the OIH approach to indexing. At this stage OIH is
+using the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner">Gleaner</a> software to do the indexing and leverages the Gleaner IO
+<a class="reference external" href="https://github.com/gleanerio/gleaner-compose">gleaner-compose</a> Docker
+compose files for the server side architecture. The gleaner-compose repository holds Docker compose files that can set up three environments
+that Gleaner can leverage.</p>
+<p>Gleaner the app is a Go based single file binary<br />
+with a required configuration file.  However, it expects at a minimum an object store and
+and optional headless chrome server (for dyanmic/reactive site indexing).</p>
+<p>The figure below gives a quick overview of the various compose options for setting up
+the supporting architecture for Gleaner.</p>
+<div class="figure align-default" id="compose-options-for-gleaner">
+<img alt="../_images/composeOptions.png" src="../_images/composeOptions.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The various compose options for Gleaner</span><a class="headerlink" href="#compose-options-for-gleaner" title="Permalink to this image">¶</a></p>
+</div>
+<p>Note, the Gleaner ecosystem is not a requirement.  OIH follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the <a class="reference internal" href="alternatives.html"><span class="doc std std-doc">Alternative Approaches</span></a> section for more on this.</p>
+<p>What follows is a bit more detail on the setup used by Gleaner.  Experienced users will
+see where they can swap out elements for their own preference.  Like a different
+triplestore, or wish to leverage a commercial object store?  Simply modify the architecture
+to do so.</p>
+</div>
+<div class="section" id="gleaner">
+<h2>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned Gleaner is simply an app.  It can be run on Linux, Mac OS X or Windows.  It does
+not need to be run on the same machine as the supporting services.  You can download and
+compile the code from the previously mentioned github repository or
+the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">releases page</a>.</p>
+<p>A single configuration file provides the settings Gleaner needs.  Additionally, a local
+copy of the current <a class="reference external" href="http://schema.org">schema.org</a> context file should be downloaded locally.  This file is needed
+for many operations and access it over the net is slow and often rate limited depending on the
+source.   You can download the file at the <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> page.</p>
+</div>
+<div class="section" id="gleaner-indexing-services-is">
+<h2>Gleaner Indexing Services (IS)<a class="headerlink" href="#gleaner-indexing-services-is" title="Permalink to this headline">¶</a></h2>
+<p>IS represent the minimum required services to support Gleaner.  With IS you have an object
+store in the form of <a class="reference external" href="https://min.io/">Minio</a> and a headless chrome server in the form of
+<a class="reference external" href="https://hub.docker.com/r/chromedp/headless-shell">chromedp/headless-shell</a>.</p>
+<p>As shown in the figure below, and support the basic harvesting of resources with Gleaner
+and loading the JSON-LD objects into Minio.</p>
+<p>It does not result in these objects ending up in a graph / triplestore.   You would use
+this option if you intend to work on the JSON-LD objects yourself.  Perhaps loading
+them into a alternative graphdb like Janus or working on them with python tooling.</p>
+<div class="figure align-default" id="gleaner-is">
+<img alt="../_images/gleaner1.png" src="../_images/gleaner1.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Basic Gleaner Indexing Service Activity Workflow</span><a class="headerlink" href="#gleaner-is" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="gleaner-data-services-ds">
+<h2>Gleaner Data Services (DS)<a class="headerlink" href="#gleaner-data-services-ds" title="Permalink to this headline">¶</a></h2>
+<p>If you wish to work with a triplestore and wish to use the default app used by OIH
+you can use the compose file that sets up the Gleaner Data Services environment.</p>
+<p>This adds the Blazegraph triplestore to the configuration along with the object store.</p>
+<p>The details of the OIH data services are found in the
+<a class="reference internal" href="dataservices.html"><span class="doc std std-doc">Data Services</span></a> section.</p>
+<div class="figure align-default" id="gleaner-ds">
+<img alt="../_images/gleaner2.png" src="../_images/gleaner2.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Gleaner Data Service Activity Workflow</span><a class="headerlink" href="#gleaner-ds" title="Permalink to this image">¶</a></p>
+</div>
+<p>Typically, a user would wish to run the full Gleaner DS stack which supports
+both the indexing process and the serving of the resulting data warehouse and graph
+database capacity.</p>
+<p>Combined, these would then look like the following where the indexing and
+data services shared a common object store.</p>
+<div class="figure align-default" id="gleaner-isds">
+<img alt="../_images/gleaner3.png" src="../_images/gleaner3.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Gleaner Indexing and Data Service Combined</span><a class="headerlink" href="#gleaner-isds" title="Permalink to this image">¶</a></p>
+</div>
+<p>This setup show in the above figure is the typical setup for Gleaner and is
+detailed in the <a class="reference internal" href="harvesting.html"><span class="doc std std-doc">Quick Start</span></a> section.</p>
+<div class="section" id="object-store-pattern">
+<h3>Object store pattern<a class="headerlink" href="#object-store-pattern" title="Permalink to this headline">¶</a></h3>
+<p>Within in the object store the following digital object pattern is used.<br />
+This is based on the work of the RDA Digital Fabric working group.</p>
+<div class="figure align-default" id="gleaner-do">
+<img alt="../_images/do1.png" src="../_images/do1.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Gleaner Digital Object Pattern</span><a class="headerlink" href="#gleaner-do" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="gleaner-web-ui-wui">
+<h2>Gleaner Web UI (WUI)<a class="headerlink" href="#gleaner-web-ui-wui" title="Permalink to this headline">¶</a></h2>
+<p>The user of the index may take several forms.  A user may be a software developer creating a web based
+interface to the generated index.  It may also be an end user accessing the index (indexes) through notebooks
+or special clients.</p>
+<p>Those wishing to run a web site can augemnt the compose files to run their
+preferred web server, object server (to serve files from the object store) or
+software such as node or others to support their deployment pattern.</p>
+<div class="figure align-default" id="gleaner-wui">
+<img alt="../_images/gleaner4.png" src="../_images/gleaner4.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Gleaner Optional Web UI</span><a class="headerlink" href="#gleaner-wui" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./indexing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../thematics/prov/README.html" title="previous page">Prov</a>
+    <a class='right-next' id="next-link" href="harvesting.html" title="next page">Indexing Quick Start</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By IODEPO<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
