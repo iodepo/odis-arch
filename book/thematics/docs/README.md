@@ -20,51 +20,9 @@ An example of a minimal description of such a resource would look like the follo
 
 [Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
 
-<!-- embedme ./graphs/creativework.json -->
-```json
-{
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@type": "CreativeWork",
-    "@id": "https://example.org/id/XYZ",
-    "name": "Name or title of the document",
-    "description": "Description of the creative work to aid in searching",
-    "url":  "https://www.sample-data-repository.org/creativework/report.pdf",
-    "contributor": {
-      "@type": "Organization",
-      "@id": "http://www.foo.org/orgID",
-      "legalName": "Some Institute"
-    },
-    "author": {
-      "@id": "https://www.sample-data-repository.org/person/51317",
-      "@type": "Person",
-      "name": "Dr Uta Passow",
-      "givenName": "Uta",
-      "familyName": "Passow",
-      "url": "https://www.sample-data-repository.org/person/51317"
-    },
-    "identifier":
-      {
-        "@id": "https://doi.org/10.5066/F7VX0DMQ",
-        "@type": "PropertyValue",
-        "propertyID": "https://registry.identifiers.org/registry/doi",
-        "value": "doi:10.5066/F7VX0DMQ",
-        "url": "https://doi.org/10.5066/F7VX0DMQ"
-      },
-    "keywords": 
-       {
-           "@type": "DefinedTerm",
-           "inDefinedTermSet": {
-               "@type": "DefinedTermSet",
-               "name": "Name of the set",
-               "description": "Description of the set",
-               "url": "url for the set"
-           },
-           "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
-       }
-}
 
+```{literalinclude} ./graphs/creativework.json
+:linenos:
 ```
 
 ![Doc Guidance image](./graphs/creativework.svg)

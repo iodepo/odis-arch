@@ -1,0 +1,54 @@
+---
+minio:
+  address: 192.168.86.45
+  port: 32773
+  accessKey: worldsbestaccesskey      
+  secretKey: worldsbestsecretkey  
+  ssl: false
+  bucket: gleaner
+gleaner:
+  runid: oih # this will be the bucket the output is placed in...
+  summon: true # do we want to visit the web sites and pull down the files
+  mill: true
+context:
+  cache: true
+contextmaps:
+- prefix: "https://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+- prefix: "http://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+summoner:
+  after: ""      # "21 May 20 10:00 UTC"   
+  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  threads: 1
+  delay: 0  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
+  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
+millers:
+  graph: true
+  shacl: false
+sitegraphs:
+- name: aquadocs
+  url: https://oih.aquadocs.org/aquadocs.json 
+  headless: false
+  pid: https://www.re3data.org/repository/aquadocs
+  properName: AquaDocs
+  domain: https://aquadocs.org 
+sources:
+- name: marinetraining
+  url: https://www.marinetraining.eu/sitemap.xml
+  headless: false
+  pid: https://www.re3data.org/repository/marinetraining
+  properName: Marine Training EU
+  domain: https://marinetraining.eu/
+- name: oceanexperts
+  url: https://oceanexpert.org/assets/sitemaps/sitemapTraining.xml
+  headless: false
+  pid: https://www.re3data.org/repository/oceanexpert
+  properName: OceanExpert UNESCO/IOC Project Office for IODE 
+  domain: https://oceanexpert.org/
+- name: obis
+  url: https://obis.org/sitemap/sitemap_datasets.xml
+  headless: false
+  pid: https://www.re3data.org/repository/obis
+  properName: Ocean Biodiversity Information System
+  domain: https://obis.org
