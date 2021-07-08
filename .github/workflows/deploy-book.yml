@@ -26,6 +26,12 @@ jobs:
       run: |
         jupyter-book build book
 
+    - name: Create cname file
+      uses: finnp/create-file-action@master
+      env:
+        FILE_NAME: "./book/_build/html/CNAME"
+        FILE_DATA: "book.oceaninfohub.org"
+
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
