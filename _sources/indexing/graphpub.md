@@ -1,4 +1,4 @@
-# Graph first approach
+# Graph First Approach
 
 ## About
 

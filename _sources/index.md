@@ -1,14 +1,17 @@
-Ocean Info Hub
+The Ocean InfoHub Project
 ============================
 
 ## Introduction
 
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
-## Ocean Info Hub
+The Ocean Data and Information System (ODIS) will provide a schema.org based interoperability layer and supporting technology to allow existing and emerging ocean data and information systems, from any stakeholder, to interoperate with one another. This will enable and accelerate more effective development and dissemination of digital technology and sharing of ocean data, information, and knowledge. As such, ODIS will not be a new portal or centralised system, but will provide a collaborative solution to interlink distributed systems for common goals. Together with global project partners and partners in the three regions, a process of co-design will enable a number of global and regional nodes to test the proof of concept for the ODIS.
 
-Ocean Info Hub (OIH) is an implementation of this approach for the UN ODIS
-community.  OIH is providing guidance on the various stages of such an
+The ODIS-architecture development is being supported by the Ocean InfoHub Project, and it has been tested initially on IOC and partner databases. However, the system and standards are open for any institution or initiative that is interested in accessing the global data ecosystem to adopt and implement.
+
+## Guidance for the implementation of the ODIS-architecture
+
+OIH is providing guidance on the various stages of such an
 architecture including authoring, publishing, indexing and interfaces.
 
 The basics of this approach can be described as:
@@ -42,13 +45,13 @@ various resources published by the community and a shared graph of these
 resources.  That shared graph can be used by all members to link and discover
 across groups.  
 
-## Further Details
+## Key links to the OIH GitHub repository
 
 Interested groups can review material addressing these stages at the OIH GitHub
 repository.  Links and descriptions of these stages are described below.  
 
-Authoring
-https://github.com/iodepo/odis-arch/tree/schema-dev/schema/thematics
+### [Authoring Thematic Patterns](./thematics/README.md)
+
 The ODIS OIH is working across five major thematic areas; Experts and
 Institutions, Documents, Projects, Training, Vessels.   Examples of these
 thematic concepts are being hosted and developed with input from the community.
@@ -56,21 +59,21 @@ Additionally, methods for validation and simple tooling for authoring and
 testing are hosted at this repository.  Alongside these five thematic topics
 guidance on connecting services and spatial context on resources. 
 
-Publishing
-https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/publishing.md 
+### [Publishing](./publishing/publishing.md)
+
 Guidance on implementation the web architecture approach is also available.
 This includes approaches on leveraging robots.txt and sitemaps.xml file for
 expressing hosted resources to the net.  
 
-Indexing
-https://github.com/iodepo/odis-arch/blob/schema-dev/schema/docs/indexers.md 
+### [Indexing](./indexing/index.md)
+
 The architecture approach is open and standards based.  As such, many
 organizations will be able to leverage the authoring and publishing approaches
 above to index a providers resources.  OIH will be providing reference
-implementations of software that can generate the index 
+implementations of software that can generate the index.
 
-Interfaces and Services
-https://oceans.collaborium.io/ 
+### [Interfaces and Services](./users/referenceclient.md)
+
 During the development of the OIH a basic reference implementation for an
 interface has been generated.  This is a development site meant to test and
 exercise the above elements.   It serves to demonstrate how others could also
