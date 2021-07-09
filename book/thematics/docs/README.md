@@ -48,19 +48,10 @@ A link to a minimal map creative work follows.
 
 [Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
 
-<!-- embedme ./graphs/map.json -->
-```json
-{
-    "@context": {
-        "@vocab": "https://schema.org/"
-    },
-    "@type": "Map",
-    "@id": "https://example.org/id/XYZ",
-    "name": "Name or title of the document",
-    "description": "Description of the map to aid in searching",
-    "url":  "https://www.sample-data-repository.org/creativework/map.pdf"
-}
 
+
+```{literalinclude} ./graphs/map.json
+:linenos:
 ```
 
 ![Doc Guidance image](./graphs/map.svg)
@@ -121,38 +112,9 @@ Note, how would we do a link to a SDG (sustainable development goal)?
 We could use [subjectOf](https://schema.org/subjectOf) like SOS did
 for metadata below.  
 
-<!-- embedme ./graphs/doc.json -->
 
-```json
-{
-  "@context": {
-    "@vocab": "https://schema.org/"
-  },
-  "@type": "Dataset",
-  "@id": "https://example.org/id/XYZ",
-  "name": "Name or title of the document",
-  "description": "Description of the dataset to aid in searching",
-  "distribution": {
-    "@type": "DataDownload",
-    "contentUrl": "https://www.sample-data-repository.org/dataset/472032.tsv",
-    "encodingFormat": "text/tab-separated-values"
-  },
-  "subjectOf": {
-    "@type": "DataDownload",
-    "name": "eml-metadata.xml",
-    "description": "EML metadata describing the dataset",
-    "encodingFormat": [
-      "application/xml",
-      "https://eml.ecoinformatics.org/eml-2.2.0"
-    ],
-    "dateModified": "2019-06-12T14:44:15Z"
-  },
-  "maintainer" : {
-     "@type" : "Organization",
-     "@id": "https://link.to/PID_like_re3_or_others",
-     "description": "Organization or Person who maintains the creative work"
-  }
-}
+```{literalinclude} ./graphs/doc.json
+:linenos:
 ```
 
 ![Doc Guidance image](./graphs/doc.svg)

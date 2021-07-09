@@ -4,13 +4,12 @@
 
 ## Gleaner (app)
 
-Gleaner the app performs the actual retrieval and loading of JSON-LD documents 
-from the web.  Gleaner is available for Linux, Mac OS X and Windows.  
+The Gleaner applications performs the retrieval and loading of JSON-LD documents 
+from the web following structured data on the web patterns.  Gleaner is available for Linux, Mac OS X and Windows.  
 
-While Gleaner is a stand alone app, needs to interact with
-an object store to support data storage.  
-These dependencies can be met with the Gleaner Indexing Services or Data Service compose files.
-These files are Docker compose files which allow the required services to be run. 
+While Gleaner is a stand alone app, it needs to interact with
+an object store to support data storage and other operations.  These dependencies are met within the 
+Gleaner Indexing Services or Data Service Docker compose files.
 
 ```{note}
 This documentation is in development.  The primary testing environments are Linux and other UNIX based platforms
@@ -20,10 +19,32 @@ you may experience better results.  We will test with Windows eventually and upd
 
 ### Quick Start steps
 
+This quick start guide is focused on setting up and testing Gleaner in a local environnement.  It is similar to
+how you might run Gleaner in a production environment but lacks the routing and other features likely desired for 
+such a situation.
+
+
 ```{note}
 This documentation assumes a basic understanding of Docker and experience with basic Docker activities like
 starting and stopping containers.  It also assumes an understanding of using a command line interface and 
 editing configuration files in the YAML format. 
+```
+
+In the end, this is the table of applications and config files you will need.  In this guide we will go through 
+downloading, setting them up and running Gleaner to index documents from the web.  
+
+```{list-table} Required Applications and Config Files
+:header-rows: 1
+
+* - Gleaner
+  - Docker
+  - Minio Client
+* - config.yaml
+  - setenv.sh 
+  - load2blaze.sh 
+* - schemaorg-current-https.jsonld
+  - gleaner-DS-NoRouter.yml
+  - 
 ```
 
 #### Grab Gleaner and the support files we need
