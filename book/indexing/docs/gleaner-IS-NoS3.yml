@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  headless:
+    image: chromedp/headless-shell:latest
+    labels:
+      - "traefik.backend=headlesschrome"
+      - "traefik.port=9222"
+    ports:
+      - 9222:9222
+    environment:
+     - SERVICE_PORTS=9222
+    networks:
+     - traefik_default
+
+networks:
+  traefik_default:
+

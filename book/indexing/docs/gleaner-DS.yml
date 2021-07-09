@@ -1,0 +1,138 @@
+version: '3'
+
+# ${GLEANER_ADMIN_DOMAIN}
+# ${GLEANER_OSS_DOMAIN}
+# ${GLEANER_GRAPH_DOMAIN}
+# ${GLEANER_WEB_DOMAIN}  
+# ${GLEANER_WEB2_DOMAIN}
+# ${MINIO_ACCESS_KEY}  
+# ${MINIO_SECRET_KEY}
+#
+# ${GLEANER_TRAEFIK}
+# ${GLEANER_OBJECTS}
+# ${GLEANER_GRAPH}
+
+services:
+  traefik:
+    image: traefik:v2.0.2
+    container_name: traefik
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - traefik_default
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${GLEANER_TRAEFIK}/logs:/logs
+      - ${GLEANER_TRAEFIK}/traefik.yml:/traefik.yml:ro
+      - ${GLEANER_TRAEFIK}/acme/acme.json:/acme.json
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.entrypoints=http"
+      - "traefik.http.routers.traefik.rule=Host(`${GLEANER_ADMIN_DOMAIN}`)"
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=admin:SpiffyAdminPasswordHere"
+      - "traefik.http.middlewares.traefik-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.middlewares=traefik-https-redirect"
+      - "traefik.http.routers.traefik-secure.entrypoints=https"
+      - "traefik.http.routers.traefik-secure.rule=Host(`${GLEANER_ADMIN_DOMAIN}`)"
+      - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
+      - "traefik.http.routers.traefik-secure.tls=true"
+      - "traefik.http.routers.traefik-secure.tls.certresolver=http"
+      - "traefik.http.routers.traefik-secure.service=api@internal"
+
+  triplestore:
+    image: nawer/blazegraph 
+    environment:
+      JAVA_XMS: 2g
+      JAVA_XMX: 8g
+      JAVA_OPTS: -Xmx6g -Xms2g --XX:+UseG1GC
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.triplestore.entrypoints=http"
+      - "traefik.http.routers.triplestore.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)"
+      - "traefik.http.middlewares.triplestore-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.triplestore.middlewares=triplestore-https-redirect"
+      - "traefik.http.routers.triplestore-secure.entrypoints=https"
+      - "traefik.http.routers.triplestore-secure.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)"
+      - "traefik.http.routers.triplestore-secure.tls=true"
+      - "traefik.http.routers.triplestore-secure.tls.certresolver=http"
+      - "traefik.http.routers.triplestore-secure.service=triplestore"
+      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST"
+      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolalloworigin=*"
+      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolmaxage=200"
+      - "traefik.http.middlewares.triplestore-secure.headers.addvaryheader=true"
+      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowcredentials=true"
+      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowheaders=Authorization,Origin,Content-Type,Accept"
+      - "traefik.http.middlewares.triplestore-secure.headers.customresponseheaders.Access-Control-Allow-Headers=Authorization,Origin,Content-Type,Accept"
+      - "traefik.http.routers.triplestore-secure.middlewares=triplestore-secure@docker" 
+      - "traefik.http.services.triplestore.loadbalancer.server.port=9999"
+      - "traefik.docker.network=traefik_default"
+    volumes:
+      - ${GLEANER_GRAPH}:/var/lib/blazegraph
+    networks:
+      - traefik_default
+
+  s3system:
+    image: minio/minio:latest
+    ports:
+      - 9000:9000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.s3system.entrypoints=http"
+      - "traefik.http.routers.s3system.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
+      - "traefik.http.middlewares.s3system-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.s3system.middlewares=s3system-https-redirect"
+      - "traefik.http.routers.s3system-secure.entrypoints=https"
+      - "traefik.http.routers.s3system-secure.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
+      - "traefik.http.routers.s3system-secure.tls=true"
+      - "traefik.http.routers.s3system-secure.tls.certresolver=http"
+      - "traefik.http.routers.s3system-secure.service=s3system"
+      - "traefik.http.services.s3system.loadbalancer.server.port=9000"
+      - "traefik.docker.network=traefik_default"
+    volumes:
+      - ${GLEANER_OBJECTS}:/data
+    environment:
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+    networks:
+      - traefik_default
+    command: ["server", "/data"]
+
+  features:
+    image: fils/grow-general:latest
+    environment:
+      - S3ADDRESS=s3system:9000
+      - S3BUCKET=sites
+      - S3PREFIX=domain
+      - DOMAIN=https://${GLEANER_WEB_DOMAIN}/
+      - S3KEY=${MINIO_ACCESS_KEY}
+      - S3SECRET=${MINIO_SECRET_KEY}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.features.entrypoints=http"
+      - "traefik.http.routers.features.rule=Host(`${GLEANER_WEB_DOMAIN}`, `${GLEANER_WEB2_DOMAIN}`)"
+      - "traefik.http.middlewares.features-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.features.middlewares=features-https-redirect"
+      - "traefik.http.routers.features-secure.entrypoints=https"
+      - "traefik.http.routers.features-secure.rule=Host(`${GLEANER_WEB_DOMAIN}`,`${GLEANER_WEB2_DOMAIN}`)"
+      - "traefik.http.routers.features-secure.tls=true"
+      - "traefik.http.routers.features-secure.tls.certresolver=http"
+      - "traefik.http.routers.features-secure.service=features"
+      - "traefik.http.services.features.loadbalancer.server.port=8080"
+      - "traefik.docker.network=traefik_default"
+      - "traefik.http.middlewares.features.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST"
+      - "traefik.http.middlewares.features.headers.accesscontrolalloworigin=*"
+      - "traefik.http.middlewares.features.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.features.headers.addvaryheader=true"
+      - "traefik.http.middlewares.features-secure.headers.accesscontrolallowheaders=*"
+      - "traefik.http.middlewares.features-secure.headers.customresponseheaders.Access-Control-Allow-Headers=*"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+
