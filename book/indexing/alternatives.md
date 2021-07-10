@@ -6,6 +6,7 @@ While [Gleaner](https://gleaner.io/) will be used during initial OIH development
 the only approach.   There are many other tools that
 can be used and might be leveraged in a production environment including:
 
+* [Extrunct](https://github.com/scrapinghub/extruct)
 * [LDSpider](https://github.com/ldspider/ldspider)
 * [Squirrel](https://dice-group.github.io/squirrel.github.io/overview.html)
 * [Nutch (Apache)](http://nutch.apache.org/)
