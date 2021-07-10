@@ -1,5 +1,41 @@
 # Notes
 
+
+### Notes
+
+* [EurOcean](http://www.kg.eurocean.org/)
+  * National projects in native languages
+  * Use: [SeaDataNet](https://www.seadatanet.org/Metadata)
+    * https://imdis.seadatanet.org/content/download/122068/file/2_1_IMDIS_2018_submission_61.pdf
+    * https://www.rd-alliance.org/group/research-metadata-schemas-wg/wiki/enabling-global-data-discovery-through-structured-data
+  * They have to deal with no common structure among the databases for descriptions
+  * Set of fields have been aligned on with IDs
+  * keywords to identify marine projects
+  * Relationship with CORDIS
+  * Understand the unit of knowledge being developed that can be transferred
+    * How to describe unit of knowledge (ref: http://www.kg.eurocean.org/KOs)
+* [ODIDO](http://www.ioc-africa.org/projects)
+  * Set of parameters defined
+    * Project Name
+    * Country
+    * Funds Source
+    * Executing Agency
+    * Focal Area
+    * Start Date
+    * End Date
+    * Contact
+    * Total Grant
+    * Thematic Areas
+    * Website
+    * LME Region
+    * Lead Implementing Agency
+  * Current UI is a list.  Needs a way to ensure this can be crawed as a collection
+    * Leverage https://schema.org/ItemList on a master index list page
+* How many resources have spatial coverage
+* What went in (people, funds, etc) and output (kg docs, etc)
+
+
+
 ## Wanted to provide a brief update on the three meetings held this week.
 
 Meeting 1
@@ -345,3 +381,11 @@ We cab push the xsd:dateTime through context via
 This is needed in order to support proper SPARQL date range queries. 
 
 
+
+Notes that were in experts and institutions
+
+
+### Notes
+* https://oceanexpert.org/  (example https://oceanexpert.org/expert/17820)
+* https://geoblueplanet.org/2019/09/25/oceanscape-portal-launch/ & https://oceanscape.org/ (example https://oceanscape.org/organisation/institute-for-marine-and-antarctic-studies/)
+  
