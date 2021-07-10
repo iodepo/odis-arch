@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Defined Terms" href="../list.html" />
+    <link rel="next" title="Defined Terms" href="../terms/list.html" />
     <link rel="prev" title="Spatial" href="../spatial/README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -158,18 +158,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../list.html">
+    <a class="reference internal" href="../terms/list.html">
      Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../languages.html">
+    <a class="reference internal" href="../languages/languages.html">
      Languages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prov/README.html">
      Prov
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sdg/index.html">
+     SDG Linking
     </a>
    </li>
   </ul>
@@ -434,8 +439,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -451,6 +461,8 @@
                 
   <div class="section" id="services">
 <h1>Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>This section will provide information on the service type.  This is not
 one of the main OIH types.  However, we will provide guidance here on describing
 services using <a class="reference external" href="http://schema.org">schema.org</a>.</p>
@@ -459,46 +471,67 @@ other descriptor document.  Also, <a class="reference external" href="http://sch
 descriptions and itself borrows from the <a class="reference external" href="https://www.hydra-cg.com/spec/latest/core/">Hydra</a>
 vocabulary.  It may be required to leverage Hydra if complex descriptions are
 needed.</p>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>The graph describes a service than can be invoked with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data-binary <span class="s2">&quot;@yourfile.jpg&quot;</span> -X POST https://us-central1-top-operand-112611.cloudfunctions.net/function-1
+</pre></div>
+</div>
+<p>This with POST a jpeg to the service and get back a simple text response with some information
+about the image.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+      <span class="p">},</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;a simple text result for the RGB counts&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;EntryPoint&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;urlTemplate&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A JPEG or PNG to analyze the RGB counts&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p><img alt="service" src="../../_images/action.svg" /></p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://schema.org/docs/actions.html">https://schema.org/docs/actions.html</a></p></li>
 <li><p><a class="reference external" href="https://schema.org/Action">https://schema.org/Action</a></p></li>
 <li><p><a class="reference external" href="https://www.w3.org/TR/web-share/">https://www.w3.org/TR/web-share/</a></p></li>
 <li><p><a class="reference external" href="https://www.hydra-cg.com/spec/latest/core/">https://www.hydra-cg.com/spec/latest/core/</a></p></li>
 </ul>
-<p>The graph describes a service than can be invoked with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data-binary <span class="s2">&quot;@yourfile.jpg&quot;</span> -X POST https://us-central1-top-operand-112611.cloudfunctions.net/function-1
-</pre></div>
-</div>
-<p>This with POST a jpeg to the service and get back a simple text response with some information
-about the image.</p>
-<!-- embedme ./graphs/action.json -->
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-      <span class="p">},</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;a simple text result for the RGB counts&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;EntryPoint&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;urlTemplate&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;contentType&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A JPEG or PNG to analyze the RGB counts&quot;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-</pre></div>
-</div>
-<p><img alt="SOS Guidance image" src="../../_images/action.svg" /></p>
 </div>
 </div>
 
@@ -528,7 +561,7 @@ about the image.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../spatial/README.html" title="previous page">Spatial</a>
-    <a class='right-next' id="next-link" href="../list.html" title="next page">Defined Terms</a>
+    <a class='right-next' id="next-link" href="../terms/list.html" title="next page">Defined Terms</a>
 
         </div>
         

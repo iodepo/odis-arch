@@ -1,25 +1,29 @@
 # Documents
 
-For OIH documents will scope more than datasets.   Documents will include maps, reports,
-guidance and other creative works.  Due to this OIH will focus on a generic example
-of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
-for more focused creative work examples.
+## About
 
-These will include initially;
+Documents: These include datasets, reports or other documents
 
-* [https://schema.org/Map](https://schema.org/Map)
-* [https://schema.org/Dataset](https://schema.org/Dataset) with guidance here likely to
-  recommend following the [Science on Schema](https://science-on-schema.org) guidance under
-  development at ESIP.
-* [https://schema.org/Course](https://schema.org/Course)
-  
-Items not scoped above can be represented as a generic CreativeWork at this time. 
-An example of a minimal description of such a resource would look like the following
+Maps: A map represented by a static file or document
+
+```{seealso}
+For OIH the focus is on generic documents which can scope reports, data and other resources.
+In those cases where the resources being described are of type Dataset you may wish to review
+patterns developed for GeoScience Datasets by the ESIP
+[Science on Schema](https://github.com/ESIPFed/science-on-schema.org/) community.
+
+```
 
 [Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
 
 [Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
 
+## Creative works (documents)
+
+ Documents will include maps, reports,
+guidance and other creative works.  Due to this OIH will focus on a generic example
+of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
+for more focused creative work examples.
 
 ```{literalinclude} ./graphs/creativework.json
 :linenos:
@@ -27,27 +31,26 @@ An example of a minimal description of such a resource would look like the follo
 
 ![Doc Guidance image](./graphs/creativework.svg)
 
-
 ## Maps
 
 A map in this context would be a static file or document of some sort.  Map services like 
 those described by an OGC Catalogue Service or other GIS service would be described as a 
 service.  
 
-Note, that in the current context, schema.org Map typically references maps a document.
+```{note}
+In the current context, schema.org Map typically references maps a document.
 Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to then 
 indicate the type of document it is through a mimetype via encoding.  
+```
 
-If this is related to a WFS, WMS or related service, it is likely we would then use the 
-service description approach.  
-
-A link to a minimal map creative work follows.
-
+The schema.org type Map only offers one special property beyond
+the parent CreativeWork.  That is a [mapType](https://schema.org/Map) which is an
+enumeration of types that do not apply to OIH use cases.  However, the use of the
+Map typing itself may aid in narrowing search requests later to a specific creative work.
 
 [Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
 
 [Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
-
 
 
 ```{literalinclude} ./graphs/map.json
@@ -56,27 +59,8 @@ A link to a minimal map creative work follows.
 
 ![Doc Guidance image](./graphs/map.svg)
 
-Note that at present the schema.org type Map only offers one special property beyond
-the parent CreativeWork.  That is a [mapType](https://schema.org/Map) which is an
-enumeration of types that do not apply to OIH use cases.  However, the use of the
-Map typing itself may aid in narrowing search requests later to a specific creative work.
 
-
-## Notes
-
-
-Thematic section on documents and best practices.  
-
-This would scope:
-
-* services that allow searching on these stores
-* The documents themselves
-* perhaps just the repository itself
-* when we talk DC..  are we talking DC in JSON-LD or mapped to schema.org
-
-Could use Org -> provides service
-
-### Refs
+### References
 
 * For dataset we can use [SOS Dataset](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md)
 * OBPS group is using JericoS3 API (ref:  https://www.jerico-ri.eu/)
@@ -97,24 +81,3 @@ Could use Org -> provides service
 
 
 
-
-### SDG Linking
-
-#### Refs
-
-* [SDGs](http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000000_)
-* [SDG targets](http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000001)
-* [SDG indicators](http://www.ontobee.org/ontology/SDGIO?iri=http%3A%2F%2Fpurl.unep.org%2Fsdg%2FSDGIO_00000003)
-
-
-
-Note, how would we do a link to a SDG (sustainable development goal)?
-We could use [subjectOf](https://schema.org/subjectOf) like SOS did
-for metadata below.  
-
-
-```{literalinclude} ./graphs/doc.json
-:linenos:
-```
-
-![Doc Guidance image](./graphs/doc.svg)

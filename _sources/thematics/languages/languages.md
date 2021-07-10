@@ -11,21 +11,8 @@ This will allow the use of standard language codes (fr, es, en, de, etc) to
 be used when describing these properties. 
 
 
-```
-{
-  "@context": {
-    "vocab": "http://example.com/vocab/",
-    "label": {
-      "@id": "vocab:label",
-      "@container": "@language"
-    }
-  },
-  "@id": "http://example.com/queen",
-  "label": {
-    "en": "The Queen",
-    "de": [ "Die Königin", "Ihre Majestät" ]
-  }
-}
+```{literalinclude} ./graphs/language.json
+:linenos:
 ```
 
 In graph space the resulting triples from the above are:

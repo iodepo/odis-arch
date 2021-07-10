@@ -158,18 +158,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../list.html">
+    <a class="reference internal" href="../terms/list.html">
      Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../languages.html">
+    <a class="reference internal" href="../languages/languages.html">
      Languages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prov/README.html">
      Prov
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sdg/index.html">
+     SDG Linking
     </a>
    </li>
   </ul>
@@ -460,67 +465,88 @@
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>Exploring using <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.  Note that <a class="reference external" href="http://schema.org">schema.org</a>
 is a very broad vocabulary and as such specific concepts like research vessel is
-not well algined.</p>
+not well aligned.</p>
 <p>One approach we can use, however, is to leverage <a class="reference external" href="http://schema.org">schema.org</a> a a discovery layer
 and link more directly to detailed institutional metadata records.</p>
-<!-- embedme ./graphs/ship.json -->
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vehicle&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JOIDES Resolution&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;this can be text or URL..&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Vessel ID &quot;</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vehicle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JOIDES Resolution&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;this can be text or URL..&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Vessel ID &quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;this can be text or URL..&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Any additional properties for the vessel&quot;</span>
+    <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;this can be text or URL..&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Any additional properties for the vessel&quot;</span>
     <span class="p">},</span>
-    <span class="nt">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;external-metadata.xml&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Metadata describing the vessel&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;external-metadata.xml&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Metadata describing the vessel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s2">&quot;application/xml&quot;</span><span class="p">,</span>
             <span class="s2">&quot;https://foo.org/ship01&quot;</span>
         <span class="p">],</span>
-        <span class="nt">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-06-12T14:44:15Z&quot;</span>
+        <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-06-12T14:44:15Z&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p><img alt="Doc Guidance image" src="../../_images/ship.svg" /></p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>POGO</p>
-<ul>
-<li><p>BODC connection?</p></li>
-<li><p>Vessel db, cruise report db and planned cruises db</p></li>
-<li><p>service links to cruise report etc..</p></li>
-<li><p>Interop with SeaDataNet?</p></li>
-</ul>
-</li>
+<li><p><a class="reference external" href="https://ocean.ices.dk/codes/ShipCodes.aspx">ICES</a></p></li>
+<li><p>POGO</p></li>
 <li><p>EurOcean</p></li>
+<li><p><a class="reference external" href="https://vocab.nerc.ac.uk/search_nvs/C17/">https://vocab.nerc.ac.uk/search_nvs/C17/</a></p></li>
 <li><p><a class="reference external" href="https://www.seadatanet.org/">SeaDataNet</a></p></li>
 <li><p><a class="reference external" href="https://www.marinefacilitiesplanning.com/">Marine Facilities Planner</a></p></li>
 <li><p><a class="reference external" href="https://www.eurofleets.eu/">EuroFleets</a></p></li>
+<li><p>Identifiers to use include NOCD Code, Call Sign, ICES Shipcode, MMSI Code, IMO Code</p></li>
 </ul>
-<p>ICES ref: <a class="reference external" href="https://ocean.ices.dk/codes/ShipCodes.aspx">https://ocean.ices.dk/codes/ShipCodes.aspx</a>
-DataCite can do DOIs for cruises..   (need reference)  This is done as an Event in DataCite K4  (DataCite is cross referenced to <a class="reference external" href="http://schema.org">schema.org</a> already (?) so look for event mapping)
-Ref: <a class="reference external" href="https://www.bodc.ac.uk/resources/vocabularies/vocabulary_search/C17/">https://www.bodc.ac.uk/resources/vocabularies/vocabulary_search/C17/</a></p>
-<p>Managed by SeaDataNet</p>
-<p>NOCD Code, Call Sign, ICES Shipcode, MMSI Code, IMO Code those are the identifiers on our database</p>
 </div>
 </div>
 

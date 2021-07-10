@@ -158,18 +158,23 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../list.html">
+    <a class="reference internal" href="../terms/list.html">
      Defined Terms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../languages.html">
+    <a class="reference internal" href="../languages/languages.html">
      Languages
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prov/README.html">
      Prov
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../sdg/index.html">
+     SDG Linking
     </a>
    </li>
   </ul>
@@ -434,28 +439,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#research-project">
+   Research Project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organization-in-list">
+   Organization in List
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functional-interest">
-     Functional interest
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Notes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ref">
-     Ref
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#questions">
-     Questions
+    <a class="reference internal nav-link" href="#references">
+     References
     </a>
    </li>
   </ul>
@@ -473,244 +473,306 @@
                 
   <div class="section" id="projects">
 <h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<p>What defines a project?  From <a class="reference external" href="http://Schema.org">Schema.org</a>:</p>
-<blockquote>
-<div><p>An enterprise (potentially individual but typically
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>Project: An enterprise (potentially individual but typically
 collaborative), planned to achieve a particular aim. Use properties from
 Organization, subOrganization/parentOrganization to indicate project sub-structures.</p>
-</div></blockquote>
-<div class="section" id="functional-interest">
-<h3>Functional interest<a class="headerlink" href="#functional-interest" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>find collaborators</p></li>
-<li><p>find project gaps</p></li>
-<li><p>who funds what (semantic grouping)</p></li>
-<li><p>find duplications of funding (who is doing things already done)</p></li>
-<li><p>ID regional trends (what is important where) and then compare and contrast</p></li>
-</ul>
 </div>
-<div class="section" id="id1">
-<h3>Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="http://www.kg.eurocean.org/">EurOcean</a></p>
-<ul>
-<li><p>National projects in native languages</p></li>
-<li><p>Use: <a class="reference external" href="https://www.seadatanet.org/Metadata">SeaDataNet</a></p>
-<ul>
-<li><p><a class="reference external" href="https://imdis.seadatanet.org/content/download/122068/file/2_1_IMDIS_2018_submission_61.pdf">https://imdis.seadatanet.org/content/download/122068/file/2_1_IMDIS_2018_submission_61.pdf</a></p></li>
-<li><p><a class="reference external" href="https://www.rd-alliance.org/group/research-metadata-schemas-wg/wiki/enabling-global-data-discovery-through-structured-data">https://www.rd-alliance.org/group/research-metadata-schemas-wg/wiki/enabling-global-data-discovery-through-structured-data</a></p></li>
-</ul>
-</li>
-<li><p>They have to deal with no common structure among the databases for descriptions</p></li>
-<li><p>Set of fields have been aligned on with IDs</p></li>
-<li><p>keywords to identify marine projects</p></li>
-<li><p>Relationship with CORDIS</p></li>
-<li><p>Understand the unit of knowledge being developed that can be transferred</p>
-<ul>
-<li><p>How to describe unit of knowledge (ref: <a class="reference external" href="http://www.kg.eurocean.org/KOs">http://www.kg.eurocean.org/KOs</a>)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference external" href="http://www.ioc-africa.org/projects">ODIDO</a></p>
-<ul>
-<li><p>Set of parameters defined</p>
-<ul>
-<li><p>Project Name</p></li>
-<li><p>Country</p></li>
-<li><p>Funds Source</p></li>
-<li><p>Executing Agency</p></li>
-<li><p>Focal Area</p></li>
-<li><p>Start Date</p></li>
-<li><p>End Date</p></li>
-<li><p>Contact</p></li>
-<li><p>Total Grant</p></li>
-<li><p>Thematic Areas</p></li>
-<li><p>Website</p></li>
-<li><p>LME Region</p></li>
-<li><p>Lead Implementing Agency</p></li>
-</ul>
-</li>
-<li><p>Current UI is a list.  Needs a way to ensure this can be crawed as a collection</p>
-<ul>
-<li><p>Leverage <a class="reference external" href="https://schema.org/ItemList">https://schema.org/ItemList</a> on a master index list page</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>How many resources have spatial coverage</p></li>
-<li><p>What went in (people, funds, etc) and output (kg docs, etc)</p></li>
-</ul>
-</div>
-<div class="section" id="ref">
-<h3>Ref<a class="headerlink" href="#ref" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://schema.org/Project">https://schema.org/Project</a></p></li>
-</ul>
-</div>
-<div class="section" id="questions">
-<h3>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Are these research projects?</p>
-<ul>
-<li><p><a class="reference external" href="https://schema.org/FundingAgency">https://schema.org/FundingAgency</a></p></li>
-<li><p><a class="reference external" href="https://schema.org/ResearchProject">https://schema.org/ResearchProject</a></p></li>
-</ul>
-</li>
-<li><p>As distinct from institution above, correct?</p></li>
-</ul>
-<p>I’ve used research project:  <a class="reference external" href="https://opencoredata.org/id/csdco/res/YUFL">https://opencoredata.org/id/csdco/res/YUFL</a></p>
-<!-- embedme ./graphs/sosproj.json -->
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<div class="section" id="research-project">
+<h2>Research Project<a class="headerlink" href="#research-project" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
     <span class="s2">&quot;ResearchProject&quot;</span>
   <span class="p">],</span>
-  <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Data Repository&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ExDaRepo&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Repo description ... &quot;</span><span class="p">,</span>
-  <span class="nt">&quot;logo&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/logo.jpg&quot;</span>
+  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Data Repository&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ExDaRepo&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Repo description ... &quot;</span><span class="p">,</span>
+  <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/logo.jpg&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;contactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ContactPoint&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Support&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;info@example-data-repository.org&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;contactType&quot;</span><span class="p">:</span> <span class="s2">&quot;customer support&quot;</span>
+  <span class="s2">&quot;contactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ContactPoint&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Support&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;info@example-data-repository.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;contactType&quot;</span><span class="p">:</span> <span class="s2">&quot;customer support&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;funder&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;FundingAgency&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.13039/10000001&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;NSF&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nsf.gov/&quot;</span>
+  <span class="s2">&quot;funder&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;FundingAgency&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.13039/10000001&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;NSF&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nsf.gov/&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;ethicsPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work &quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/ethicsPolicy.pdf&quot;</span>
+  <span class="s2">&quot;ethicsPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work &quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/ethicsPolicy.pdf&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;diversityPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/ABC&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/diversityPolicy.pdf&quot;</span>
+  <span class="s2">&quot;diversityPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/ABC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/diversityPolicy.pdf&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
-        <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
       <span class="p">},</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the area served&quot;</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the area served&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Textual description of area served&quot;</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Textual description of area served&quot;</span>
     <span class="p">},</span>
     <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;AdministrativeArea&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
-        <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;AdministrativeArea&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
       <span class="p">},</span>
-      <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Needs to be subset of Place, Review Place&quot;</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Needs to be subset of Place, Review Place&quot;</span>
     <span class="p">}</span>
   <span class="p">],</span>
-  <span class="nt">&quot;taxID&quot;</span><span class="p">:</span> <span class="s2">&quot;text value&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;vatID&quot;</span><span class="p">:</span> <span class="s2">&quot;text value&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
+  <span class="s2">&quot;taxID&quot;</span><span class="p">:</span> <span class="s2">&quot;text value&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;vatID&quot;</span><span class="p">:</span> <span class="s2">&quot;text value&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
     <span class="p">}</span>
   <span class="p">},</span>
-  <span class="nt">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="s2">&quot;Some text, url or link to schema.org thing&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;hasCredential&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;EducationalOccupationalCredential&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the credential provider&quot;</span>
+  <span class="s2">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="s2">&quot;Some text, url or link to schema.org thing&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;hasCredential&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;EducationalOccupationalCredential&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the credential provider&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p><img alt="org list" src="../../_images/sosproj.svg" /></p>
-<p>Another test:</p>
-<!-- embedme ./graphs/orglist.json -->
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+</div>
+<div class="section" id="organization-in-list">
+<h2>Organization in List<a class="headerlink" href="#organization-in-list" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
   <span class="p">},</span>
-    <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ItemList&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;numberOfItems&quot;</span><span class="p">:</span> <span class="s2">&quot;315&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;itemListElement&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ItemList&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numberOfItems&quot;</span><span class="p">:</span> <span class="s2">&quot;315&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;itemListElement&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;ResearchProject&quot;</span>
             <span class="p">],</span>
-            <span class="nt">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Sample Data Repository Service...&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Sample Data Repository Service...&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">[</span>
                 <span class="s2">&quot;Biological Oceanography&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;Chemical Oceanography&quot;</span>
             <span class="p">],</span>
-            <span class="nt">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+            <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
             <span class="p">},</span>
-            <span class="nt">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
+            <span class="s2">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="nt">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Product&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Product name&quot;</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Product&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Product name&quot;</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p><img alt="org list" src="../../_images/orglist.svg" /></p>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/Project">https://schema.org/Project</a></p></li>
+</ul>
 </div>
 </div>
 </div>

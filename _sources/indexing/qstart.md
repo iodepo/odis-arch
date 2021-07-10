@@ -64,7 +64,6 @@ It also should work to do something similar to the following:
 curl -O https://schema.org/version/latest/schemaorg-current-https.jsonld
 ```
 
-
 #### Obtain the compose file(s) you need
 
 The above steps have collected the resources for the indexer.   We now want to set up the services that
@@ -82,6 +81,8 @@ file can be found in the [Gleaner-compose deployment directory](https://github.c
 Why pick one over the other?
 
 > Choose Gleaner IS if you simply wish to retrieve the JSON-LD into a data warehouse to use in your own workflows
+
+
 > Choose Gleaner DS if you wish to build out a graph and want to use the default contains used by Gleaner.  
 
 
@@ -91,6 +92,9 @@ For this example lets select the gleaner-DS-NoRouter.yml file.
 curl -O https://github.com/gleanerio/gleaner-compose/blob/master/deployment/gleaner-DS-NoRouter.yml
 ```
 
+```{literalinclude} ./docs/gleaner-DS-NoRouter.yml
+:linenos:
+```
 
 #### Edit environment variables setup script
 
@@ -147,6 +151,12 @@ We have all the files we need and we have our support services running.  The nex
 final step is to edit our Gleaner configuration file.  This will let Gleaner know 
 the location of the support services, the JSON-LD context file and the locations 
 of the resources we wish to index.  
+
+Let's get out configuration file template for Gleaner.
+
+```bash
+curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/dev/configs/template_v2.0.yaml
+```
 
 Let's take a look at the configuration file and then break down each section.  
 
