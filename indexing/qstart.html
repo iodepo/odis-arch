@@ -454,8 +454,8 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#obtain-the-compose-file-s-you-need">
-       Obtain the compose file(s) you need
+      <a class="reference internal nav-link" href="#about-the-compose-file-s">
+       About the compose file(s)
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -484,6 +484,18 @@
     <a class="reference internal nav-link" href="#load-results-to-a-graph-and-test">
      Load results to a graph and test
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#minio-object-store">
+       Minio Object store
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-triplestore">
+       Load Triplestore
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -508,8 +520,8 @@ from the web following structured data on the web patterns.  Gleaner is availabl
 <p>While Gleaner is a stand alone app, it needs to interact with
 an object store to support data storage and other operations.  These dependencies are met within the
 Gleaner Indexing Services or Data Service Docker compose files.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>This documentation is in development.  The primary testing environments are Linux and other UNIX based platforms
 such as Mac OS X.   If you are on Windows, there may be some issues.  If you can use a Linux subsystem on Windows,
 you may experience better results.  We will test with Windows eventually and update documentation as needed.</p>
@@ -524,6 +536,11 @@ such a situation.</p>
 <p>This documentation assumes a basic understanding of Docker and experience with basic Docker activities like
 starting and stopping containers.  It also assumes an understanding of using a command line interface and
 editing configuration files in the YAML format.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<p>From this point down, the documentation will attempt to put all commands
+you should issue in this admonition style box.</p>
 </div>
 <p>In the end, this is the table of applications and config files you will need.  In this guide we will go through
 downloading, setting them up and running Gleaner to index documents from the web.</p>
@@ -555,24 +572,52 @@ downloading, setting them up and running Gleaner to index documents from the web
 <h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Permalink to this headline">¶</a></h4>
 <p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file
 template.  To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
-and pick the release <em>OIH Reference 1</em>.  Under the <em>Assets</em> drop down you should see the files we need.  Get:</p>
+and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> drop down you should see the files we need.  Get:</p>
 <ul class="simple">
 <li><p>Gleaner for your platform</p></li>
-<li><p>Gleaner config template</p></li>
+<li><p>Gleaner config template: template_v2.0.yaml</p></li>
+<li><p>Gleaner indexing service compose file: gleaner-IS.yml</p></li>
+<li><p>Helper environment setup script: <a class="reference external" href="http://setenvIS.sh">setenvIS.sh</a></p></li>
 </ul>
+<p>For this demonstration, we will be running on linux, so this would look something like:</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner-IS.yml
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/setenvIS.sh
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/template_v2.0.yaml
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can download these with any tool you wish or through the browser.  Above we downloaded used the command
+line curl tool.  For GitHub, be sure to add the -L to inform curl to follow redirects to the object to download.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<p>You may need to change the permission on your gleaner file to ensure it can be run.   On Linux this would
+look something like the following.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> gleaner
+</pre></div>
+</div>
+</div>
 <p>We then need to visit <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> to pull down the
 appropriate JSON-LD context.  For this work we will want to pull down the <em>schemaorg-current-https</em> in JSON-LD format.<br />
 It also should work to do something similar to the following:</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://schema.org/version/latest/schemaorg-current-https.jsonld
 </pre></div>
 </div>
 </div>
-<div class="section" id="obtain-the-compose-file-s-you-need">
-<h4>Obtain the compose file(s) you need<a class="headerlink" href="#obtain-the-compose-file-s-you-need" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="about-the-compose-file-s">
+<h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this headline">¶</a></h4>
 <p>The above steps have collected the resources for the indexer.   We now want to set up the services that
 Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
 Podman or others.   For this example, we will assume you are using the Docker client.</p>
-<p>As noted, a basic understanding of docker and the ability to issue docker cli commands to start and stop
+<p>As noted, a basic understanding of Docker and the ability to issue Docker cli commands to start and stop
 containers is required. If you are new do Docker, we recommend you visit and read:
 <a class="reference external" href="https://www.docker.com/get-started">Get Started with Docker</a>.</p>
 <p>We need to select the type of services we wish to run.  The various versions of these Docker compose
@@ -584,245 +629,23 @@ file can be found in the <a class="reference external" href="https://github.com/
 <blockquote>
 <div><p>Choose Gleaner DS if you wish to build out a graph and want to use the default contains used by Gleaner.</p>
 </div></blockquote>
-<p>For this example lets select the gleaner-DS-NoRouter.yml file.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://github.com/gleanerio/gleaner-compose/blob/master/deployment/gleaner-DS-NoRouter.yml
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We wont look at this file in detail here since there will hopefully be no
+required edits.  You can see the file in detail in the Index Services
+section.</p>
 </div>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
-<span class="normal">  2</span>
-<span class="normal">  3</span>
-<span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>version: &#39;3&#39;
-
-# ${GLEANER_ADMIN_DOMAIN}
-# ${GLEANER_OSS_DOMAIN}
-# ${GLEANER_GRAPH_DOMAIN}
-# ${GLEANER_WEB_DOMAIN}  
-# ${GLEANER_WEB2_DOMAIN}
-# ${MINIO_ACCESS_KEY}  
-# ${MINIO_SECRET_KEY}
-#
-# ${GLEANER_TRAEFIK}
-# ${GLEANER_OBJECTS}
-# ${GLEANER_GRAPH}
-
-services:
-  triplestore:
-    image: nawer/blazegraph 
-    environment:
-      JAVA_XMS: 2g
-      JAVA_XMX: 8g
-      JAVA_OPTS: -Xmx6g -Xms2g --XX:+UseG1GC
-    ports:
-      - 9999:9999
-    labels:
-      - &quot;traefik.enable=true&quot;
-      - &quot;traefik.http.routers.triplestore.entrypoints=http&quot;
-      - &quot;traefik.http.routers.triplestore.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)&quot;
-      - &quot;traefik.http.middlewares.triplestore-https-redirect.redirectscheme.scheme=https&quot;
-      - &quot;traefik.http.routers.triplestore.middlewares=triplestore-https-redirect&quot;
-      - &quot;traefik.http.routers.triplestore-secure.entrypoints=https&quot;
-      - &quot;traefik.http.routers.triplestore-secure.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)&quot;
-      - &quot;traefik.http.routers.triplestore-secure.tls=true&quot;
-      - &quot;traefik.http.routers.triplestore-secure.tls.certresolver=http&quot;
-      - &quot;traefik.http.routers.triplestore-secure.service=triplestore&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolalloworigin=*&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolmaxage=200&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.addvaryheader=true&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowcredentials=true&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowheaders=Authorization,Origin,Content-Type,Accept&quot;
-      - &quot;traefik.http.middlewares.triplestore-secure.headers.customresponseheaders.Access-Control-Allow-Headers=Authorization,Origin,Content-Type,Accept&quot;
-      - &quot;traefik.http.routers.triplestore-secure.middlewares=triplestore-secure@docker&quot; 
-      - &quot;traefik.http.services.triplestore.loadbalancer.server.port=9999&quot;
-      - &quot;traefik.docker.network=traefik_default&quot;
-    volumes:
-      - ${GLEANER_GRAPH}:/var/lib/blazegraph
-    networks:
-      - traefik_default
-
-  s3system:
-    image: minio/minio:latest
-    ports:
-      - 9000:9000
-    labels:
-      - &quot;traefik.enable=true&quot;
-      - &quot;traefik.http.routers.s3system.entrypoints=http&quot;
-      - &quot;traefik.http.routers.s3system.rule=Host(`${GLEANER_OSS_DOMAIN}`)&quot;
-      - &quot;traefik.http.middlewares.s3system-https-redirect.redirectscheme.scheme=https&quot;
-      - &quot;traefik.http.routers.s3system.middlewares=s3system-https-redirect&quot;
-      - &quot;traefik.http.routers.s3system-secure.entrypoints=https&quot;
-      - &quot;traefik.http.routers.s3system-secure.rule=Host(`${GLEANER_OSS_DOMAIN}`)&quot;
-      - &quot;traefik.http.routers.s3system-secure.tls=true&quot;
-      - &quot;traefik.http.routers.s3system-secure.tls.certresolver=http&quot;
-      - &quot;traefik.http.routers.s3system-secure.service=s3system&quot;
-      - &quot;traefik.http.services.s3system.loadbalancer.server.port=9000&quot;
-      - &quot;traefik.docker.network=traefik_default&quot;
-    volumes:
-      - ${GLEANER_OBJECTS}:/data
-    environment:
-      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
-      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
-    networks:
-      - traefik_default
-    command: [&quot;server&quot;, &quot;/data&quot;]
-
-  features:
-    image: fils/grow-general:latest
-    ports:
-      - 8080:8080
-    environment:
-      - S3ADDRESS=s3system:9000
-      - S3BUCKET=sites
-      - S3PREFIX=domain
-      - DOMAIN=https://${GLEANER_WEB_DOMAIN}/
-      - S3KEY=${MINIO_ACCESS_KEY}
-      - S3SECRET=${MINIO_SECRET_KEY}
-    labels:
-      - &quot;traefik.enable=true&quot;
-      - &quot;traefik.http.routers.features.entrypoints=http&quot;
-      - &quot;traefik.http.routers.features.rule=Host(`${GLEANER_WEB_DOMAIN}`, `${GLEANER_WEB2_DOMAIN}`)&quot;
-      - &quot;traefik.http.middlewares.features-https-redirect.redirectscheme.scheme=https&quot;
-      - &quot;traefik.http.routers.features.middlewares=features-https-redirect&quot;
-      - &quot;traefik.http.routers.features-secure.entrypoints=https&quot;
-      - &quot;traefik.http.routers.features-secure.rule=Host(`${GLEANER_WEB_DOMAIN}`,`${GLEANER_WEB2_DOMAIN}`)&quot;
-      - &quot;traefik.http.routers.features-secure.tls=true&quot;
-      - &quot;traefik.http.routers.features-secure.tls.certresolver=http&quot;
-      - &quot;traefik.http.routers.features-secure.service=features&quot;
-      - &quot;traefik.http.services.features.loadbalancer.server.port=8080&quot;
-      - &quot;traefik.docker.network=traefik_default&quot;
-      - &quot;traefik.http.middlewares.features.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST&quot;
-      - &quot;traefik.http.middlewares.features.headers.accesscontrolalloworigin=*&quot;
-      - &quot;traefik.http.middlewares.features.headers.accesscontrolmaxage=100&quot;
-      - &quot;traefik.http.middlewares.features.headers.addvaryheader=true&quot;
-      - &quot;traefik.http.middlewares.features-secure.headers.accesscontrolallowheaders=*&quot;
-      - &quot;traefik.http.middlewares.features-secure.headers.customresponseheaders.Access-Control-Allow-Headers=*&quot;
-    networks:
-      - traefik_default
-
-networks:
-  traefik_default:
-
-</pre></div>
-</td></tr></table></div>
 </div>
 <div class="section" id="edit-environment-variables-setup-script">
 <h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this headline">¶</a></h4>
 <p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
-to be populated to privde the local hosts information needed to run.  You can set these yourself or
+to be populated to provide the local hosts information needed to run.  You can set these yourself or
 use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
-<a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.</p>
-<p>Obtain the file with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://raw.githubusercontent.com/gleanerio/gleaner-compose/master/deployment/setenv.sh
-</pre></div>
-</div>
-<p>Let’s take a look at this.</p>
+<a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.
+You may also need to visit information about permissions at
+<a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Post-installation steps for Linux</a> if you are
+having permission issues.</p>
+<p>Let’s take a look at the script.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -834,21 +657,7 @@ use or reference the <a class="reference external" href="http://setenv.sh">seten
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# domains 
-export GLEANER_ADMIN_DOMAIN=admin.local.dev
-export GLEANER_OSS_DOMAIN=oss.local.dev
-export GLEANER_GRAPH_DOMAIN=graph.local.dev
-export GLEANER_WEB_DOMAIN=web.local.dev
-export GLEANER_WEB2_DOMAIN=web2.local.dev
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>#!/bin/bash
 
 # Object store keys
 export MINIO_ACCESS_KEY=worldsbestaccesskey
@@ -856,7 +665,7 @@ export MINIO_SECRET_KEY=worldsbestsecretkey
 
 # local data volumes
 export GLEANER_BASE=/tmp/gleaner/
-export GLEANER_TRAEFIK=${GLEANER_BASE}/config
+mkdir --parents ${GLEANER_BASE}
 export GLEANER_OBJECTS=${GLEANER_BASE}/datavol/s3
 export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
 
@@ -868,19 +677,31 @@ use localhost to resolve with and host local runtime data in a /tmp/gleaner dire
 <div class="section" id="spin-up-the-containers">
 <h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this headline">¶</a></h4>
 <p>Load our environment variables to the shell:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./setenv.sh
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> setenv.sh
 </pre></div>
+</div>
 </div>
 <p>Then start the containers:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f gleaner-ds.yml up -d
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f gleaner-IS.yml up -d
 </pre></div>
 </div>
+</div>
 <p>If all has gone well, you should be able to see your running containers with</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker ps
 </pre></div>
 </div>
+</div>
 <p>and see results similar to:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>stuff here
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
+c4b7097f5e06        nawer/blazegraph                 <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9999-&gt;9999/tcp   test_triplestore_1
+ca08c24963a0        minio/minio:latest               <span class="s2">&quot;/usr/bin/docker-ent…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9000-&gt;9000/tcp   test_s3system_1
+24274eba0d34        chromedp/headless-shell:latest   <span class="s2">&quot;/headless-shell/hea…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9222-&gt;9222/tcp   test_headless_1
 </pre></div>
 </div>
 </div>
@@ -890,10 +711,6 @@ use localhost to resolve with and host local runtime data in a /tmp/gleaner dire
 final step is to edit our Gleaner configuration file.  This will let Gleaner know
 the location of the support services, the JSON-LD context file and the locations
 of the resources we wish to index.</p>
-<p>Let’s get out configuration file template for Gleaner.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/dev/configs/template_v2.0.yaml
-</pre></div>
-</div>
 <p>Let’s take a look at the configuration file and then break down each section.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1009,9 +826,19 @@ of the resources we wish to index.</p>
 <h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Permalink to this headline">¶</a></h4>
 <p>For this example we are going to run Gleaner directly.  In a deployed instance you may
 run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
-<p>For now, we are ready to run Gleaner.  Try:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gleaner -cfg myconfig
+<p>We can do a quick test of the setup.</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0 -setup
 </pre></div>
+</div>
+</div>
+<p>For now, we are ready to run Gleaner.  Try:</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0
+</pre></div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1026,11 +853,32 @@ contents.</p>
 <p>You have set up the server environment and Gleaner and done your run.  Things look good
 but you don’t have a graph you can work with yet.    You need to load the JSON-LD into
 the triplestore in order to start playing.</p>
+<div class="section" id="minio-object-store">
+<h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Permalink to this headline">¶</a></h4>
+<p>To view the object store you could use your browser and point it on the default minio
+port at 9000.  S typically something like localhost:9000.</p>
+<p>If you wish to continue to use the command line you can use the Minio client at
+<a class="reference external" href="https://docs.min.io/docs/minio-client-quickstart-guide.html">Minio Client Quickstart guide</a>.</p>
+<p>Once you have it installed and working, you can write an entry for our object store with:</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./mc <span class="nb">alias</span> <span class="nb">set</span> minio http://0.0.0.0:9000 worldsbestaccesskey worldsbestsecretkey
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-triplestore">
+<h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this headline">¶</a></h4>
+<p>We now want to load these objects, which are JSON-LD files holding RDF based graph
+data, into a graph database.  We use the term, triplestore, to define a graph database
+designed to work with the RDF data model and provide SPARQL query support over that
+graph data.</p>
 <ul class="simple">
 <li><p>Simple script loading</p></li>
 <li><p>Nabu</p></li>
 <li><p>Try out a simple SPARQL query</p></li>
 </ul>
+</div>
 </div>
 </div>
 </div>

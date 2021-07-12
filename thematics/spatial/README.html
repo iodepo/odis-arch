@@ -484,7 +484,10 @@ to reliably translate to geometries.</p>
 </div>
 <div class="section" id="simple-geosparql-wkt">
 <h2>Simple GeoSPARQL WKT<a class="headerlink" href="#simple-geosparql-wkt" title="Permalink to this headline">¶</a></h2>
-<p>This is a simple example of how to embed a WKT string via GeoSPARQL into a record.</p>
+<p>This is a simple example of how to embed a WKT string via GeoSPARQL into a record.<br />
+Well Know Text (WKT) is a OGC standard referenced at: <a class="reference external" href="https://www.ogc.org/standards/wkt-crs">https://www.ogc.org/standards/wkt-crs</a>.
+A more accessible example can be found at WikiPedia:
+<a class="reference external" href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry">Well-known text representation of geometry</a>.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -502,23 +505,25 @@ to reliably translate to geometries.</p>
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-    <span class="p">},</span>
+      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll">      <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span>
+</span>    <span class="p">},</span>
     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class="hll">    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
+</span><span class="hll">        <span class="p">},</span>
+</span><span class="hll">        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span>    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -526,7 +531,12 @@ to reliably translate to geometries.</p>
 <div class="section" id="classic-schema-org">
 <h2>Classic <a class="reference external" href="http://Schema.org">Schema.org</a><a class="headerlink" href="#classic-schema-org" title="Permalink to this headline">¶</a></h2>
 <p>Is is a simple example of the existing <a class="reference external" href="http://Schema.org">Schema.org</a> pattern for a lat long value.<br />
-This pattern is of little use other than perhaps to Google.</p>
+This pattern is of little use other than perhaps to Google. There is the
+pending <a class="reference external" href="https://schema.org/GeospatialGeometry">GeospatialGeometry</a> which is a
+type Intangible (and not Place referenced by spatialCoverage).  This will be a
+subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoShape</a>.   There are inconsistencies with
+<a class="reference external" href="http://Schema.org">Schema.org</a> guidance for textual geometry representation and that of Well
+Known Text (WKT).</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -549,15 +559,15 @@ This pattern is of little use other than perhaps to Google.</p>
   <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
   <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
-      <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="hll">  <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+</span><span class="hll">      <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+</span><span class="hll">      <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p><img alt="SOS Guidance image" src="../../_images/sos.svg" /></p>
@@ -621,22 +631,22 @@ This pattern is of little use other than perhaps to Google.</p>
 <span class="normal">54</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@version&quot;</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">,</span>
-        <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/vocab/json&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;@json&quot;</span>
-        <span class="p">},</span>
+<span class="hll">        <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/vocab/json&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;@json&quot;</span>
+</span>        <span class="p">},</span>
         <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
         <span class="s2">&quot;rdfs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2000/01/rdf-schema#&quot;</span><span class="p">,</span>
         <span class="s2">&quot;xsd&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;http://igsn.org/core/v1/description&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="hll">        <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">,</span>
+</span>        <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://samples.earth/id/do/bqs2dn2u6s73o70jdup0&quot;</span><span class="p">,</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://igsn.org/core/v1/Sample&quot;</span><span class="p">,</span>
     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A fake ID for testing&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;schema:subjectOf&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
+<span class="hll">    <span class="s2">&quot;schema:subjectOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span>        <span class="p">{</span>
             <span class="s2">&quot;schema:url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://samples.earth/id/do/bqs2dn2u6s73o70jdup0.geojson&quot;</span><span class="p">,</span>
             <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:DigitalDocument&quot;</span><span class="p">,</span>
             <span class="s2">&quot;schema:format&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -645,8 +655,8 @@ This pattern is of little use other than perhaps to Google.</p>
             <span class="s2">&quot;schema:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://igsn.org/schema/spatial.schema.json&quot;</span>
         <span class="p">}</span>
     <span class="p">],</span>
-    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;_:N98e75cacc29f40deb555eb583cb162dc&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;_:N98e75cacc29f40deb555eb583cb162dc&quot;</span><span class="p">,</span>
         <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
         <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
@@ -656,15 +666,15 @@ This pattern is of little use other than perhaps to Google.</p>
             <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
         <span class="p">}</span>
     <span class="p">},</span>
-    <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeometryCollection&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span>        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeometryCollection&quot;</span><span class="p">,</span>
         <span class="s2">&quot;geometries&quot;</span><span class="p">:</span> <span class="p">[{</span>
             <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
             <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">76</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">]</span>
         <span class="p">}]</span>
     <span class="p">},</span>
-    <span class="s2">&quot;schema:spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:Place&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;schema:spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:Place&quot;</span><span class="p">,</span>
         <span class="s2">&quot;schema:geo&quot;</span><span class="p">:</span> <span class="p">{</span>
           <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:GeoCoordinates&quot;</span><span class="p">,</span>
           <span class="s2">&quot;schema:latitude&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">18</span><span class="p">,</span>
@@ -679,6 +689,7 @@ This pattern is of little use other than perhaps to Google.</p>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p><a class="reference external" href="https://github.com/opengeospatial/geoapi">GeoAPI at GitHub</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org/issues/105">Science on Schema Issue 105</a></p>
 <ul>
 <li><p>Leverages <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a> to connect to a Thing / CreativeWork</p></li>
@@ -696,12 +707,6 @@ This pattern is of little use other than perhaps to Google.</p>
 <li><p>Some groups are using <span class="xref myst">GeoNode</span></p>
 <ul>
 <li><p><a class="reference external" href="https://github.com/GeoNode/geonode/issues?q=schema.org">schema.org issues</a></p></li>
-</ul>
-</li>
-<li><p>OIH is not a spatial server, but will attempt to:</p>
-<ul>
-<li><p>parse spatial data from the graph. This information will likely be fed into <span class="xref myst">Koop</span> where it can be accessed and pulled by participants.</p></li>
-<li><p>Feed the data into a spatial aware triplestore (GeoSPARQL)</p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="https://docs.google.com/document/d/1Ya7SNm0h6b04nIVMQ_M65LopxZ6_jojXzTxjfaX5Mxw/edit">ICAN &amp; Schema.org</a></p></li>

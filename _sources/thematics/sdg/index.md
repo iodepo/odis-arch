@@ -2,19 +2,18 @@
 
 ## About
 
-Note, how would we do a link to a SDG (sustainable development goal)?
-We could use [subjectOf](https://schema.org/subjectOf) like SOS did
-for metadata below.  
 
+The following provides an example of how Sustainable Development Goals 
+(SDGs) could be linked to a Schema.org defined type using [subjectOf](https://schema.org/subjectOf).
 
 ```{literalinclude} ./graphs/doc.json
 :linenos:
+:emphasize-lines: 14-20
 ```
 
 ![Doc Guidance image](./graphs/doc.svg)
 
-
-#### Refs
+## Refs
 
 * [SDGs](http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000000_)
 * [SDG targets](http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000001)

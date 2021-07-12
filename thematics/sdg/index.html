@@ -442,13 +442,11 @@
   <a class="reference internal nav-link" href="#about">
    About
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#refs">
-     Refs
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refs">
+   Refs
+  </a>
  </li>
 </ul>
 
@@ -465,9 +463,8 @@
 <h1>SDG Linking<a class="headerlink" href="#sdg-linking" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Note, how would we do a link to a SDG (sustainable development goal)?
-We could use <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a> like SOS did
-for metadata below.</p>
+<p>The following provides an example of how Sustainable Development Goals
+(SDGs) could be linked to a <a class="reference external" href="http://Schema.org">Schema.org</a> defined type using <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a>.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -493,49 +490,43 @@ for metadata below.</p>
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
   <span class="p">},</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
   <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the dataset to aid in searching&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the resource to aid in searching&quot;</span><span class="p">,</span>
   <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
     <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/dataset/472032.tsv&quot;</span><span class="p">,</span>
     <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/tab-separated-values&quot;</span>
   <span class="p">},</span>
-  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;eml-metadata.xml&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;EML metadata describing the dataset&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;application/xml&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;https://eml.ecoinformatics.org/eml-2.2.0&quot;</span>
-    <span class="p">],</span>
-    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-06-12T14:44:15Z&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;maintainer&quot;</span> <span class="p">:</span> <span class="p">{</span>
+<span class="hll">  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll">  <span class="p">},</span>
+</span>  <span class="s2">&quot;maintainer&quot;</span> <span class="p">:</span> <span class="p">{</span>
      <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://link.to/PID_like_re3_or_others&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization or Person who maintains the creative work&quot;</span>
+     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ror.org/050bms902&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p><img alt="Doc Guidance image" src="../../_images/doc.svg" /></p>
+</div>
 <div class="section" id="refs">
-<h3>Refs<a class="headerlink" href="#refs" title="Permalink to this headline">¶</a></h3>
+<h2>Refs<a class="headerlink" href="#refs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000000_">SDGs</a></p></li>
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000001">SDG targets</a></p></li>
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http%3A%2F%2Fpurl.unep.org%2Fsdg%2FSDGIO_00000003">SDG indicators</a></p></li>
 </ul>
-</div>
 </div>
 </div>
 
