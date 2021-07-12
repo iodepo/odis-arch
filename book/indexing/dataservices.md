@@ -18,7 +18,19 @@ These can be set manually or through the command line.  A simple script to set t
 
 The actual services can be deployed via a Docker Compose file (also works with Podman).  An example of that file and details about it follow.  
 
+Let's take a look at this.
+
+```{literalinclude} ./docs/setenv.sh
+:linenos:
+```
+
+
 -- Break down the compose file here
+
+```{literalinclude} ./docs/gleaner-DS-NoRouter.yml
+:linenos:
+```
+
 
 
 NOTE:  DS also needs the object -> graph sync (via Nabu)

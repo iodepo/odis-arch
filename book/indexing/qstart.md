@@ -11,7 +11,7 @@ While Gleaner is a stand alone app, it needs to interact with
 an object store to support data storage and other operations.  These dependencies are met within the 
 Gleaner Indexing Services or Data Service Docker compose files.
 
-```{note}
+```{warning}
 This documentation is in development.  The primary testing environments are Linux and other UNIX based platforms
 such as Mac OS X.   If you are on Windows, there may be some issues.  If you can use a Linux subsystem on Windows, 
 you may experience better results.  We will test with Windows eventually and update documentation as needed. 
@@ -28,6 +28,12 @@ such a situation.
 This documentation assumes a basic understanding of Docker and experience with basic Docker activities like
 starting and stopping containers.  It also assumes an understanding of using a command line interface and 
 editing configuration files in the YAML format. 
+```
+
+```{admonition} Command
+:class: tip
+From this point down, the documentation will attempt to put all commands
+you should issue in this admonition style box. 
 ```
 
 In the end, this is the table of applications and config files you will need.  In this guide we will go through 
@@ -51,29 +57,62 @@ downloading, setting them up and running Gleaner to index documents from the web
 
 We will need to get the Gleaner binary for your platform and also the Gleaner configuration file 
 template.  To do this, visit the [Gleaner Releases page ](https://github.com/earthcubearchitecture-project418/gleaner/releases) 
-and pick the release _OIH Reference 1_.  Under the _Assets_ drop down you should see the files we need.  Get:
+and pick the release _Ocean InfoHubdev rc1_.  Under the _Assets_ drop down you should see the files we need.  Get:
 
 * Gleaner for your platform
-* Gleaner config template
+* Gleaner config template: template_v2.0.yaml
+* Gleaner indexing service compose file: gleaner-IS.yml
+* Helper environment setup script: setenvIS.sh
+
+For this demonstration, we will be running on linux, so this would look something like:
+
+:::{admonition} Command
+:class: tip
+```bash
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner-IS.yml
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/setenvIS.sh
+curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/template_v2.0.yaml
+```
+:::
+
+```{note}
+You can download these with any tool you wish or through the browser.  Above we downloaded used the command
+line curl tool.  For GitHub, be sure to add the -L to inform curl to follow redirects to the object to download.
+```
+
+:::{admonition} Command
+:class: tip
+
+You may need to change the permission on your gleaner file to ensure it can be run.   On Linux this would 
+look something like the following.  
+
+```bash
+chmod 755 gleaner
+```
+:::
+
 
 We then need to visit [Schema.org for Developers](https://schema.org/docs/developers.html) to pull down the 
 appropriate JSON-LD context.  For this work we will want to pull down the _schemaorg-current-https_ in JSON-LD format.  
 It also should work to do something similar to the following:
 
+:::{admonition} Command
+:class: tip
 ```bash
 curl -O https://schema.org/version/latest/schemaorg-current-https.jsonld
 ```
+:::
 
-#### Obtain the compose file(s) you need
+#### About the compose file(s)
 
 The above steps have collected the resources for the indexer.   We now want to set up the services that
 Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
 Podman or others.   For this example, we will assume you are using the Docker client. 
 
-As noted, a basic understanding of docker and the ability to issue docker cli commands to start and stop
+As noted, a basic understanding of Docker and the ability to issue Docker cli commands to start and stop
 containers is required. If you are new do Docker, we recommend you visit and read: 
 [Get Started with Docker](https://www.docker.com/get-started).
-
 
 We need to select the type of services we wish to run.  The various versions of these Docker compose
 file can be found in the [Gleaner-compose deployment directory](https://github.com/gleanerio/gleaner-compose/tree/master/deployment).
@@ -86,32 +125,26 @@ Why pick one over the other?
 > Choose Gleaner DS if you wish to build out a graph and want to use the default contains used by Gleaner.  
 
 
-For this example lets select the gleaner-DS-NoRouter.yml file.
+```{note}
+We wont look at this file in detail here since there will hopefully be no
+required edits.  You can see the file in detail in the Index Services
+section.
+```  
 
-```bash
-curl -O https://github.com/gleanerio/gleaner-compose/blob/master/deployment/gleaner-DS-NoRouter.yml
-```
-
-```{literalinclude} ./docs/gleaner-DS-NoRouter.yml
-:linenos:
-```
 
 #### Edit environment variables setup script
 
 We have Docker and the appropriate compose file.  The compose files require a set of environment variables
-to be populated to privde the local hosts information needed to run.  You can set these yourself or
+to be populated to provide the local hosts information needed to run.  You can set these yourself or
 use or reference the setenv.sh file in the Gleaner-compose repository in the  
 [Gleaner-compose deployment directory](https://github.com/gleanerio/gleaner-compose/tree/master/deployment). 
+You may also need to visit information about permissions at 
+[Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/) if you are
+having permission issues.   
 
-Obtain the file with:
+Let's take a look at the script.
 
-```bash
-curl -O https://raw.githubusercontent.com/gleanerio/gleaner-compose/master/deployment/setenv.sh
-```
-
-Let's take a look at this.
-
-```{literalinclude} ./docs/setenv.sh
+```{literalinclude} ./docs/setenvIS.sh
 :linenos:
 ```
 
@@ -122,41 +155,46 @@ use localhost to resolve with and host local runtime data in a /tmp/gleaner dire
 
 Load our environment variables to the shell:
 
+:::{admonition} Command
+:class: tip
 ```bash
-./setenv.sh
+source setenv.sh
 ```
+:::
 
 Then start the containers:
 
+:::{admonition} Command
+:class: tip
 ```bash
-docker-compose -f gleaner-ds.yml up -d
+docker-compose -f gleaner-IS.yml up -d
 ```
+:::
 
 If all has gone well, you should be able to see your running containers with 
 
+:::{admonition} Command
+:class: tip
 ```bash
 docker ps
 ```
+:::
 
 and see results similar to:
 
 ```bash
-stuff here
+CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
+c4b7097f5e06        nawer/blazegraph                 "docker-entrypoint.s…"   8 seconds ago       Up 7 seconds        0.0.0.0:9999->9999/tcp   test_triplestore_1
+ca08c24963a0        minio/minio:latest               "/usr/bin/docker-ent…"   8 seconds ago       Up 7 seconds        0.0.0.0:9000->9000/tcp   test_s3system_1
+24274eba0d34        chromedp/headless-shell:latest   "/headless-shell/hea…"   8 seconds ago       Up 7 seconds        0.0.0.0:9222->9222/tcp   test_headless_1
 ```
-
 
 #### Edit Gleaner config file
 
-We have all the files we need and we have our support services running.  The next and 
-final step is to edit our Gleaner configuration file.  This will let Gleaner know 
-the location of the support services, the JSON-LD context file and the locations 
+We have all the files we need and we have our support services running.  The next and
+final step is to edit our Gleaner configuration file.  This will let Gleaner know
+the location of the support services, the JSON-LD context file and the locations
 of the resources we wish to index.  
-
-Let's get out configuration file template for Gleaner.
-
-```bash
-curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/dev/configs/template_v2.0.yaml
-```
 
 Let's take a look at the configuration file and then break down each section.  
 
@@ -169,11 +207,25 @@ Let's take a look at the configuration file and then break down each section.
 For this example we are going to run Gleaner directly.  In a deployed instance you may 
 run Gleaner via a script or cron style service.  We will document that elsewhere.
 
+We can do a quick test of the setup.
+
+:::{admonition} Command
+:class: tip
+```bash
+ ./gleaner -cfg template_v2.0 -setup
+```
+:::
+
+
 For now, we are ready to run Gleaner.  Try:
 
+:::{admonition} Command
+:class: tip
 ```bash
-gleaner -cfg myconfig
+ ./gleaner -cfg template_v2.0
 ```
+:::
+
 
 ```{note}
 Leave the suffix like .yaml off the name of the config file.  The config system can also read
@@ -181,13 +233,35 @@ json and other formats.  So simply leave the suffix off and let the config code 
 contents. 
 ```
 
-
-
 ### Load results to a graph and test
 
 You have set up the server environment and Gleaner and done your run.  Things look good
 but you don't have a graph you can work with yet.    You need to load the JSON-LD into
 the triplestore in order to start playing.
+
+#### Minio Object store
+
+To view the object store you could use your browser and point it on the default minio 
+port at 9000.  S typically something like localhost:9000.  
+
+If you wish to continue to use the command line you can use the Minio client at
+[Minio Client Quickstart guide](https://docs.min.io/docs/minio-client-quickstart-guide.html).
+
+Once you have it installed and working, you can write an entry for our object store with:
+
+:::{admonition} Command
+:class: tip
+```bash
+ ./mc alias set minio http://0.0.0.0:9000 worldsbestaccesskey worldsbestsecretkey
+```
+:::
+
+#### Load Triplestore
+
+We now want to load these objects, which are JSON-LD files holding RDF based graph
+data, into a graph database.  We use the term, triplestore, to define a graph database
+designed to work with the RDF data model and provide SPARQL query support over that
+graph data.  
 
 * Simple script loading
 * Nabu
