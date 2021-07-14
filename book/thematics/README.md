@@ -29,8 +29,8 @@ describing their resources.
 
 1. [Spatial](./spatial/README.md)
 2. [Services](./services/README.md)
-3. [Term Lists](./list.md)
-4. [Languages](./languages.md)
+3. [Term Lists](./terms/list.md)
+4. [Languages](./languages/languages.md)
 5. [Prov](./prov/README.md)
 6. [Linking SDGs](./sdg/index.md)
 

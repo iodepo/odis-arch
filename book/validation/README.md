@@ -27,5 +27,5 @@ Examples of these needs include:
 ## Implementation
 
 Work this implementation can be found in the notebooks section
-[pySHACL testing](../tooling/notebooks/SHACL/pySHACL.ipynb).
+[pySHACL testing](../tooling/notebooks/validation/OIH_SHACL.ipynb).
 

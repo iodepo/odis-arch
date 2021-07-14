@@ -98,7 +98,7 @@ Gleaner Indexing and Data Service Combined
 ```
 
 This setup show in the above figure is the typical setup for Gleaner and is 
-detailed in the [Quick Start](./harvesting.md) section.
+detailed in the [Quick Start](./qstart.md) section.
 
 
 ### Object store pattern
