@@ -3,7 +3,7 @@
 ## About
 
 The primary OIH guidance will be to use the OGC [GeoSPARQL](https://www.ogc.org/standards/geosparql)
-vocabulary.  The schema.org spatial types and propeties are not well defined and difficult at times
+vocabulary.  The schema.org spatial types and properties are not well defined and difficult at times
 to reliably translate to geometries.  
 
 ```json
