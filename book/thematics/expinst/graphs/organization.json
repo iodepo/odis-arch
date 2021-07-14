@@ -2,7 +2,7 @@
     "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@id": "ID_for_this_metadata_record",
+    "@id": "https://example.org/id/org/x",
     "@type": "Organization",
     "address": {
         "@type": "PostalAddress",
@@ -10,33 +10,22 @@
         "postalCode": "F-75002",
         "streetAddress": "38 avenue de l'Opera"
     },
-    "email": "secretariat(at)foo.org",
-    "faxNumber": "( 33 1) 42 68 53 01",
+    "email": "secretariat(at)example.org",
+    "name": "Organization X",
+    "description": "Description of org ...",
+    "telephone": "( 33 1) 42 68 53 00",
     "member": [
         {
-            "@type": "Organization"
-        },
-        {
-            "@type": "Organization"
+            "@type": "Organization",
+            "name": "Organization A",
+            "description": "Org A is a potential parent organization of Org X"
         }
     ],
-    "alumni": [
-        {
-            "@type": "Person",
-            "name": "Jack Dan"
-        },
-        {
-            "@type": "Person",
-            "name": "John Smith"
-        }
-    ],
-    "name": "Foo Inc.",
-    "telephone": "( 33 1) 42 68 53 00",
     "identifier": {
-        "@id": "ID_value_string",
+        "@id": "https://grid.ac/institutes/grid.475727.4",
         "@type": "PropertyValue",
-        "propertyID": "this can be text or URL..",
-        "url": "https://foo.org/linkToPropertyIDPage",
-        "description": "Optional description of the ID"
+        "description": "UN Department of Economic and Social Affairs Sustainable Development",
+        "propertyID": "https://registry.identifiers.org/registry/grid",
+        "url": "https://grid.ac/institutes/grid.475727.4"    
     }
 }

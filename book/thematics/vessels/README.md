@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Vessels
 
 ## About
@@ -15,8 +29,67 @@ and link more directly to detailed institutional metadata records.
 ```
 
 
+```{code-cell}
+:tags: [hide-input]
 
-![Doc Guidance image](./graphs/ship.svg)
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/ship.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
+
+### Details: Authoritative Reference
+
+For each profile there are a few key elements we need to know about.  One
+key element is what the authoritative reference or canonical identifier is for 
+a resource.  
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/ship.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@requireAll": "true",
+  "@type":     "Vehicle",
+  "identifier": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
 
 ## References
 

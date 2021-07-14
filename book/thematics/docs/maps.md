@@ -12,78 +12,12 @@ execution:
   allow_errors: true
 ---
 
-# Maps
+# Spatial Maps
 
 ## About
 
-Documents: These include datasets, reports or other documents
-
 Maps: A map represented by a static file or document
 
-```{seealso}
-For OIH the focus is on generic documents which can scope reports, data and other resources.
-In those cases where the resources being described are of type Dataset you may wish to review
-patterns developed for GeoScience Datasets by the ESIP
-[Science on Schema](https://github.com/ESIPFed/science-on-schema.org/) community.
-
-```
-
-## Creative works (documents)
-
- Documents will include maps, reports,
-guidance and other creative works.  Due to this OIH will focus on a generic example
-of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
-for more focused creative work examples.
-
-[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
-
-[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
-
-```{literalinclude} ./graphs/creativework.json
-:linenos:
-```
-
-## Frame on author type Person
-
-Our JSON-LD documents are graphs that can use framing to subset.  In this 
-case we can look closer at the author property which points to a type Person. 
-
-
-```{code-cell}
-:tags: [hide-input]
-
-import json
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
-from pyld import jsonld
-import graphviz
-import jbutils
-
-with open("./graphs/creativework.json") as dgraph:
-    doc = json.load(dgraph)
-
-frame = {
-  "@context": {"@vocab": "https://schema.org/"},
-  "@explicit": "true",
-  "@type":     "CreativeWork",
-  "author": ""
-}
-
-context = {
-    "@vocab": "https://schema.org/",
-}
-
-compacted = jsonld.compact(doc, context)
-
-framed = jsonld.frame(compacted, frame)
-jd = json.dumps(framed, indent=4)
-print(jd)
-
-jbutils.show_graph(framed)
-
-```
-
-## Maps
 
 A map in this context would be a static file or document of some sort.  Map services like 
 those described by an OGC Catalogue Service or other GIS service would be described as a 
@@ -129,6 +63,49 @@ jbutils.show_graph(compacted)
 
 ```
 
+
+
+
+### Details: Authoritative Reference
+
+For each profile there are a few key elements we need to know about.  One
+key element is what the authoritative reference or canonical identifier is for 
+a resource.  
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/map.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@requireAll": "true",
+  "@type":     "Map",
+  "identifier": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
 
 ### References
 

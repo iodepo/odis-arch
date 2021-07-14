@@ -1,17 +1,34 @@
 {
-    "@context": {
-        "@vocab": "https://schema.org/"
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "ID_for_this_metadata_record",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "jobTitle": "Professor",
+  "telephone": "(425) 123-4567",
+  "url": "http://www.janedoe.com",
+  "knowsAbout": [
+    {
+      "@type": "Text",
+      "description": "Invasive species in brackish water"
     },
-    "@id": "http://cooldata.io/id/doc/1",
-    "@type": "http://schema.org/Dataset",
-    "http://schema.org/keywords": [
-        "geochemistry",
-        "Earth System Modeling",
-        "climate change"
-    ],
-    "description": "Descriptive text of the dataset.",
-    "license": "CC-BY-4.0",
-    "name": "Data Set Name one",
-    "url": "http://foo.org/data/distribution",
-    "version": "version"
+    {
+      "@type": "URL",
+      "url": "https://www.wikidata.org/wiki/Q183368"
+    },
+    {
+      "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/schema/thematics/training/graphs/course1.json",
+      "@type": "Course",
+      "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+      "url": "URL to the course"
+    }
+  ],
+  "identifier": {
+    "@id": "ID_value_string",
+    "@type": "PropertyValue",
+    "propertyID": "This can be text or URL for an ID like ORCID",
+    "url": "https://foo.org/linkToPropertyIDPage",
+    "description": "Optional description of the ID"
+  }
 }

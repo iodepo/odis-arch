@@ -2,11 +2,8 @@
   "@context": {
     "@vocab": "https://schema.org/"
   },
-  "@type": [
-    "Service",
-    "ResearchProject"
-  ],
-  "@id": "ID_for_this_metadata_record",
+  "@type":     "ResearchProject",
+  "@id": "https://example.org/id/resproj/X",
   "legalName": "Example Data Repository",
   "name": "ExDaRepo",
   "url": "https://www.example-data-repository.org",
@@ -14,6 +11,13 @@
   "logo": {
     "@type": "ImageObject",
     "url": "https://www.example-data-repository.org/logo.jpg"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Re3data DOI: 10.17616/R37P4C",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "doi:10.17616/R37P4C",
+    "url": "https://doi.org/10.17616/R37P4C"
   },
   "contactPoint": {
     "@id": "https://www.example-data-repository.org/about-us",
@@ -68,8 +72,6 @@
       "description": "Needs to be subset of Place, Review Place"
     }
   ],
-  "taxID": "text value",
-  "vatID": "text value",
   "parentOrganization": {
     "@type": "Organization",
     "@id": "http://www.someinstitute.edu",
@@ -84,10 +86,5 @@
       "postalCode": "12345",
       "addressCountry": "USA"
     }
-  },
-  "knowsAbout": "Some text, url or link to schema.org thing",
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "description": "Description of the credential provider"
   }
 }

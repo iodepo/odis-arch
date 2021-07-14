@@ -32,6 +32,23 @@ see where they can swap out elements for their own preference.  Like a different
 triplestore, or wish to leverage a commercial object store?  Simply modify the architecture
 to do so.  
 
+## ODIS Catalog as Index Source
+
+Before we discuss indexing source a key question is what source will be index.
+OIH is not a web crawl in that is doesn't move from source to source based on 
+the content of those sources. 
+
+Rather, the OIH index is based on a list of sources selected ahead of time.  At
+this time that set of sources if based on those partners engaged in the 
+development phase of OIH.  As the work moves to a more routine operation 
+the sources will come fro the [ODIS Catalog](https://catalogue.odis.org/).  
+
+The ODIS Catalog will then act as a curated source of domains for inclusion 
+in the Ocean InfoHub.   This will provide a level of curation and vetted of sources
+and ensure sources are aware of the technical requirements for inclusion in the 
+OIH index.  
+
+
 ## Gleaner
 
 As mentioned Gleaner is simply an app.  It can be run on Linux, Mac OS X or Windows.  It does

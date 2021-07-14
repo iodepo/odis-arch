@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Defined Terms
 
 ## About
@@ -24,6 +38,35 @@ types in Schema.org.  So we can use them in places such as:
 
 ```{literalinclude} ./graphs/term.json
 :linenos:
+```
+
+
+
+
+## Organization in List
+
+```{literalinclude} ./graphs/orglist.json
+:linenos:
+```
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/orglist.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
 ```
 
 

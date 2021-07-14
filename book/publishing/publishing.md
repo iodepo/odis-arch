@@ -195,7 +195,7 @@ Disallow: /id
 
 User-agent: EarthCube_DataBot/1.0
 Allow: /
-Sitemap: http://samples.earth/test.
+Sitemap: https://example.org/sitemap.xml
 ```
 
 #### sitemap.xml

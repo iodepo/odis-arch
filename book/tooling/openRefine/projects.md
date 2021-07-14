@@ -1,13 +1,17 @@
 # Sargassum Project Template 
 
-## About
+## About 
 
-When looking at the [Sargassum Projects](https://sargassumhub.org/sargassumexperts/) page we 
-can see some map interfaces.  In the first we are able to view and export the data in 
-a table.  If we pull this data out as a .csv file we can load it into 
-[OpenRefine](https://openrefine.org/) and from there use the 
-[templating exporter](https://docs.openrefine.org/manual/exporting#templating-exporter) to 
-generate a valid JSON-LD document.   
+The following is a simple proof of concept page.   It uses data from the 
+[Sargassum Projects](https://sargassumhub.org/sargassumexperts/)  page and is 
+presented here simply as an example of this workflow.
+
+If we visit the page referenced above, we can see some map interfaces. 
+In the first, we are able to view and export the data in the map as a table.   This will 
+be downloaded as a CSV file.  We can load this  .csv file directly 
+into  [OpenRefine](https://openrefine.org/)  and from there use 
+the  [templating exporter](https://docs.openrefine.org/manual/exporting#templating-exporter)  
+to generate a valid JSON-LD document.
 
 
 ```{figure} ./images/sargassumtemplate.png

@@ -2,7 +2,7 @@
   "@context": {
     "@vocab": "https://schema.org/"
   },
-  "@id": "ID_for_this_metadata_record",
+  "@id": "https://example.org/id/x",
   "@type": "Person",
   "name": "Jane Doe",
   "jobTitle": "Professor",
@@ -18,17 +18,17 @@
       "url": "https://www.wikidata.org/wiki/Q183368"
     },
     {
-      "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/schema/thematics/training/graphs/course1.json",
+      "@id": "https://example.org/id/course/x",
       "@type": "Course",
-      "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+      "description": "In this course ...",
       "url": "URL to the course"
     }
   ],
   "identifier": {
-    "@id": "ID_value_string",
+    "@id": "https://orcid.org/0000-0002-2257-9127",
     "@type": "PropertyValue",
-    "propertyID": "This can be text or URL for an ID like ORCID",
-    "url": "https://foo.org/linkToPropertyIDPage",
-    "description": "Optional description of the ID"
+    "propertyID": "https://registry.identifiers.org/registry/orcid",
+    "url": "https://orcid.org/0000-0002-2257-9127",
+    "description": "Optional description of this record..."
   }
 }

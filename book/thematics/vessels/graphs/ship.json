@@ -2,20 +2,20 @@
     "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@id": "ID_for_this_metadata_record",
+    "@id": "https://example.org/id/X",
     "@type": "Vehicle",
     "name": "JOIDES Resolution",
     "identifier": {
-        "@id": "ID_value_string",
+        "@id": "https://example.org/id/vessel/X",
         "@type": "PropertyValue",
-        "propertyID": "this can be text or URL..",
-        "url": "https://foo.org/linkToPropertyIDPage",
+        "propertyID": "https://en.wikipedia.org/wiki/IMO_number",
+        "url": "https://example.org/id/vessel/X",
         "description": "Vessel ID "
     },
     "additionalProperty": {
         "@id": "ID_value_string",
         "@type": "PropertyValue",
-        "propertyID": "this can be text or URL..",
+        "propertyID": "https://en.wikipedia.org/wiki/IMO_number",
         "url": "https://foo.org/linkToPropertyIDPage",
         "description": "Any additional properties for the vessel"
     },

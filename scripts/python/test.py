@@ -5,14 +5,14 @@ from pyld import jsonld
 import graphviz
 import jbutils
 
-with open("./creativework.json") as dgraph:
+with open("./doc1.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
   "@context": {"@vocab": "https://schema.org/"},
   "@explicit": "true",
-  "@type":     "CreativeWork",
-  "author": ""
+  "@type":     "Person",
+  "identifier": ""
 }
 
 context = {

@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Experts and Institutions
 
 ## About
@@ -6,23 +20,193 @@ Expert:  A person who has a deep understanding of a particular subject area.
 
 Institution: A group of people working together to provide a particular service.
   
-## Example Person Graph
+## Example: Person Graph
+
+The following graph present a basic record we might present about a person.  
+We can break down some of the key attributes of this record.
+
+OIH is using [schema.org/Person](https://schema.org/Person) for this type.
+Any of the properties of Person seen there are valid to use in such a record.
+
+At the core though there are a few key items OIH is looking for in a Person record.
+
 
 ```{literalinclude} ./graphs/person.json
 :linenos:
+:emphasize-lines: 5-7, 10, 27-32
 ```
 
-![OIH Guidance image](./graphs/person.svg)
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/person.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
 
 
-## Example Institution Graph
+### Details: Authoritative Reference
+
+For each profile there are a few key elements we need to know about.  One
+key element is what the authoritative reference or canonical identifier is for 
+a resource.  
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/person.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "Person",
+  "identifier": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
+### Details: Knows About
+
+Knows about provide connections to resources a person is
+connected with.  
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/person.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "Person",
+  "knowsAbout": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
+## Example: Institution Graph
 
 ```{literalinclude} ./graphs/organization.json
 :linenos:
 ```
 
 
-![OIH Guidance image](./graphs/organization.svg)
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/organization.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
+
+### Details: Authoritative Reference
+
+For each profile there are a few key elements we need to know about.  One
+key element is what the authoritative reference or canonical identifier is for 
+a resource.  
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/organization.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@requireAll": "true",
+  "@type":     "Organization",
+  "identifier": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
 
 
 ## References
