@@ -11,6 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install graphviz
+      run: sudo apt-get update && sudo apt-get install graphviz
+
     # Install dependencies
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
