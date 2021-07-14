@@ -3,7 +3,7 @@ import graphviz
 
 API_ROOT = 'https://schema.org/'
 
-def short_name(value, max_length=40):
+def short_name(value, max_length=20):
     """
     Convert an RDF value (given as a dictionary) to a reasonable label.
     """
@@ -37,9 +37,10 @@ def short_name(value, max_length=40):
     
 def show_graph(doc, size=10):
     rdf = jsonld.normalize(doc)['@default']
-    graph = graphviz.Digraph(
-        strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}
-    )
+    graph = graphviz.Digraph(strict=False, graph_attr={'rankdir': 'LR'})
+    # graph = graphviz.Digraph(
+    #     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}
+    # )
     for edge in rdf:
         subj = short_name(edge['subject'])
         obj = short_name(edge['object'])
