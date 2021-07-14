@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Graph Analytics Exploration
+# # Graph Analytics Exploration
 # 
 # * https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python
 # * https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html
 # 
-# ### Steps
+# ## Steps
 # 
 # * Pull in the OIH RDF graph and load 
 # 

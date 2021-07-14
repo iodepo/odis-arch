@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Documents
 
 ## About
@@ -14,10 +28,6 @@ patterns developed for GeoScience Datasets by the ESIP
 
 ```
 
-[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
-
-[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
-
 ## Creative works (documents)
 
  Documents will include maps, reports,
@@ -25,11 +35,53 @@ guidance and other creative works.  Due to this OIH will focus on a generic exam
 of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 for more focused creative work examples.
 
+[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
+
+[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
+
 ```{literalinclude} ./graphs/creativework.json
 :linenos:
 ```
 
-![Doc Guidance image](./graphs/creativework.svg)
+## Frame on author type Person
+
+Our JSON-LD documents are graphs that can use framing to subset.  In this 
+case we can look closer at the author property which points to a type Person. 
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import jbutils
+
+with open("./graphs/creativework.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "CreativeWork",
+  "author": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
 
 ## Maps
 
@@ -57,7 +109,25 @@ Map typing itself may aid in narrowing search requests later to a specific creat
 :linenos:
 ```
 
-![Doc Guidance image](./graphs/map.svg)
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/map.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
 
 
 ### References
