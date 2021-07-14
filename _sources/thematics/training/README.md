@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Training
 
 ## About
@@ -12,16 +26,52 @@ Course: A description of an educational course which may be offered as distinct 
 :linenos:
 ```
 
-![SOS Guidance image](./graphs/course1.svg)
+```{code-cell}
+:tags: [hide-input]
 
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/course1.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
+ 
 ## Simple Course
 
 ```{literalinclude} ./graphs/course2.json
 :linenos:
 ```
 
-![SOS Guidance image](./graphs/course2.svg)
+```{code-cell}
+:tags: [hide-input]
 
+import json
+from pyld import jsonld
+import jbutils
+
+with open("./graphs/course2.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
+ 
 
 ## References
 

@@ -118,8 +118,18 @@ It is arguably not the best or most accurate communications strategy.  It can
  conflate data models, serialization and vocabularies.  However, it is concise
  and ubiquitous and not likely to change.
 
-## Intellectual Merritt
+## Intellectual Merit
 
+OIH leverages structured data o the web patterns in the form of of
+Schema.org and JSON-LD encoding.  This means that much of what is done
+to address OIH implementation by providers also is available both to existing
+commercial indexing approaches as well as emerging community practices  
+
+Additionally, both the publishing and indexing approaches are based
+on several web architecture patterns.  Meaning that existing organization skills
+are leveraged and staff experience is enhanced.   This helps to address both 
+the sustainability of the OIH connection and the efficiency of 
+organizational operation.   
 
 ## Broader Impacts
 
