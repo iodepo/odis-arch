@@ -1,4 +1,4 @@
-# Template
+# Generic Template
 
 ## About
 
@@ -13,10 +13,12 @@ There are four sections
 
 ``` 
 {
-    "@context": "https://schema.org",
+    "@context": {
+        "@vocab": "https://schema.org/" 
+    },
     "@type": ["ItemList", "CreativeWork"],
-    "name": "Top 5 covers of Bob Dylan Songs",
-    "author": "John Doe",
+    "name": "Creative work list",
+    "author": "Author of the list",
     "about": {
       "@type": "Course"
     },
