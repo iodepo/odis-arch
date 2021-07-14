@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Generic Template &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OIH Notebooks" href="../notebooks/README.html" />
+    <link rel="next" title="Sargassum Project Template" href="projects.html" />
     <link rel="prev" title="OpenRefine" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -133,6 +133,11 @@
     </ul>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/docs/maps.html">
+     Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../thematics/projects/README.html">
      Projects
     </a>
@@ -191,7 +196,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../indexing/qstart.html">
-     Indexing Quick Start
+     Indexing with Gleaner
     </a>
    </li>
    <li class="toctree-l2">
@@ -243,7 +248,12 @@
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Template
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="projects.html">
+       Sargassum Project Template
       </a>
      </li>
     </ul>
@@ -479,8 +489,8 @@
         
               <div>
                 
-  <div class="section" id="template">
-<h1>Template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="generic-template">
+<h1>Generic Template<a class="headerlink" href="#generic-template" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>The following are the templates sections for the OpenRefine
@@ -490,10 +500,12 @@ export template command.</p>
 <div class="section" id="prefix">
 <h2>PREFIX<a class="headerlink" href="#prefix" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span> 
+    <span class="p">},</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ItemList&quot;</span><span class="p">,</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Top 5 covers of Bob Dylan Songs&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Creative work list&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Author of the list&quot;</span><span class="p">,</span>
     <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span>
     <span class="p">},</span>
@@ -615,7 +627,7 @@ export template command.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="README.html" title="previous page">OpenRefine</a>
-    <a class='right-next' id="next-link" href="../notebooks/README.html" title="next page">OIH Notebooks</a>
+    <a class='right-next' id="next-link" href="projects.html" title="next page">Sargassum Project Template</a>
 
         </div>
         

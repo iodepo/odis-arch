@@ -12,7 +12,7 @@ execution:
   allow_errors: true
 ---
 
-# Documents
+# Maps
 
 ## About
 

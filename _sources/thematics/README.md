@@ -17,20 +17,27 @@ identified ODIS thematic areas.  They provide a set of minimal elements and note
 These are not final and will evolve with community input.  As this process moves forward we will implement
 versioning the profiles to provide stable implementations providers can reliably leverage in their workflows.
 
+### Core Profiles
+
+Six key categories of interest:
+
 1. [Experts and Institutions](./expinst/README.md)
 2. [Documents](./docs/README.md)
-3. [Projects](./projects/README.md)
-4. [Training](./training/README.md)
-5. [Vessels](./vessels/README.md)
+3. [Spatial Maps](./docs/README.md)
+4. [Projects](./projects/README.md)
+5. [Training](./training/README.md)
+6. [Vessels](./vessels/README.md)
 
+
+### Supporting Profiles
 In support of these five thematic types above, these cross cutting types and properties were 
 selected for attention.  They represent some key patterns people may wish to leverage when 
 describing their resources.  
 
-1. [Spatial](./spatial/README.md)
+1. [Spatial Geometry](./spatial/README.md)
 2. [Services](./services/README.md)
-3. [Term Lists](./list.md)
-4. [Languages](./languages.md)
+3. [Term Lists](./terms/list.md)
+4. [Languages](./languages/languages.md)
 5. [Prov](./prov/README.md)
 6. [Linking SDGs](./sdg/index.md)
 

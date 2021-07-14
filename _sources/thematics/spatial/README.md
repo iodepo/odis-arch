@@ -62,7 +62,7 @@ From the referenced SOS issue 105:
 * [schema.org/GeospatialGeometry](https://schema.org/GeospatialGeometry)
 * SOS patern follows:
   * [spatialCoverage](https://schema.org/spatialCoverage) -> [Place](https://schema.org/Place) -> [geo](https://schema.org/geo) -> [GeoCoordinates](https://schema.org/GeoCoordinates) OR [GeoShape](https://schema.org/GeoShape)
-* Some groups are using [GeoNode](geonode.org)
+* Some groups are using [GeoNode](https://geonode.org)
   * [schema.org issues](https://github.com/GeoNode/geonode/issues?q=schema.org)
 * [ICAN & Schema.org](https://docs.google.com/document/d/1Ya7SNm0h6b04nIVMQ_M65LopxZ6_jojXzTxjfaX5Mxw/edit)
 * [OGC SELFIE](https://www.ogc.org/projects/initiatives/selfie)

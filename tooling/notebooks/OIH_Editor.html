@@ -133,6 +133,11 @@
     </ul>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../thematics/docs/maps.html">
+     Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../thematics/projects/README.html">
      Projects
     </a>
@@ -191,7 +196,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../indexing/qstart.html">
-     Indexing Quick Start
+     Indexing with Gleaner
     </a>
    </li>
    <li class="toctree-l2">
@@ -243,7 +248,12 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../openRefine/template.html">
-       Template
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../openRefine/projects.html">
+       Sargassum Project Template
       </a>
      </li>
     </ul>
@@ -464,26 +474,28 @@
   <a class="reference internal nav-link" href="#">
    OIH Editor Playground
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-package-and-imports">
-   Some package and imports
-  </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pip-installs">
-     pip installs
+    <a class="reference internal nav-link" href="#some-package-and-imports">
+     Some package and imports
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#imports">
-     imports
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     functions
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pip-installs">
+       pip installs
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#imports">
+       imports
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#functions">
+       functions
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#editor-playground">
@@ -561,25 +573,24 @@
   <div class="section" id="oih-editor-playground">
 <h1>OIH Editor Playground<a class="headerlink" href="#oih-editor-playground" title="Permalink to this headline">¶</a></h1>
 <p>For more background on the larger ODIS Ocean Info Hub and related referneces please visit out GitHub repository.</p>
-</div>
 <div class="section" id="some-package-and-imports">
-<h1>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h1>
+<h2>Some package and imports<a class="headerlink" href="#some-package-and-imports" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pip-installs">
-<h2>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h2>
+<h3>pip installs<a class="headerlink" href="#pip-installs" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%%quiet</span>
-<span class="c1">#!pip install -q gastrodon</span>
-<span class="c1">#!pip install -q ontospy</span>
-<span class="o">!</span>pip install -q anytree
-<span class="o">!</span>pip install -q PyJSONViewer
-<span class="o">!</span>pip install -q ConceptNet
-<span class="o">!</span>pip install -q qwikidata
-<span class="o">!</span>pip install -q SPARQLWrapper
-<span class="o">!</span>pip install -q Wikidata
-<span class="o">!</span>pip install -q pySHACL
-<span class="o">!</span>pip install -q <span class="s1">&#39;PyLD&gt;=2.0.3&#39;</span>
-<span class="o">!</span>pip install -q rdflib
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>#%%quiet
+#!pip install -q gastrodon
+#!pip install -q ontospy
+!pip install -q anytree
+!pip install -q PyJSONViewer
+!pip install -q ConceptNet
+!pip install -q qwikidata
+!pip install -q SPARQLWrapper
+!pip install -q Wikidata
+!pip install -q pySHACL
+!pip install -q &#39;PyLD&gt;=2.0.3&#39;
+!pip install -q rdflib
 </pre></div>
 </div>
 </div>
@@ -1414,10 +1425,10 @@
 </div>
 </div>
 <div class="section" id="imports">
-<h2>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h3>imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
 <span class="c1"># General imports</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">rdflib</span>
@@ -1445,6 +1456,7 @@
 <span class="kn">import</span> <span class="nn">graphviz</span>
 <span class="kn">from</span> <span class="nn">conceptnet5.uri</span> <span class="kn">import</span> <span class="n">join_uri</span><span class="p">,</span> <span class="n">split_uri</span>
 <span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
+
 </pre></div>
 </div>
 </div>
@@ -1465,10 +1477,10 @@
 </div>
 </div>
 <div class="section" id="functions">
-<h2>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h3>functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
 <span class="kn">from</span> <span class="nn">conceptnet5.uri</span> <span class="kn">import</span> <span class="n">join_uri</span><span class="p">,</span> <span class="n">split_uri</span>
 <span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
 
@@ -1552,7 +1564,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
 <span class="k">def</span> <span class="nf">get_sparql_dataframe</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Helper function to convert SPARQL results into a Pandas data frame.</span>
@@ -1579,7 +1591,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Fetch a single &lt;1MB file using the raw GitHub URL.
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Fetch a single &lt;1MB file using the raw GitHub URL.
 !curl --remote-name \
      --location https://raw.githubusercontent.com/ESIPFed/science-on-schema.org/master/examples/dataset/full.jsonld
 </pre></div>
@@ -1594,11 +1606,12 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="editor-playground">
 <h2>Editor playground<a class="headerlink" href="#editor-playground" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
     <span class="p">},</span>
@@ -1628,7 +1641,7 @@
 <h1>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Google Data Set Required+</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Google Data Set Required+</span>
 
 <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Data Set Name one&#39;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="n">sdotype</span> <span class="o">=</span> <span class="s1">&#39;http://schema.org/Dataset&#39;</span> <span class="c1">#@param [&quot;http://schema.org/Dataset&quot;, &quot;http://schema.org/DataCatalog&quot;]</span>
@@ -1653,7 +1666,7 @@ Descriptive text of the dataset.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
 <span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -1713,7 +1726,7 @@ Descriptive text of the dataset.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1734,7 +1747,7 @@ Descriptive text of the dataset.
 <p>Let’s make a frame that allows us to view only the elements of the JSON-LD data graph that we are interested in.   In this case let’s target the keywords.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urlf</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/ESIPFed/science-on-schema.org/master/examples/dataset/minimal.jsonld&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">urlf</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/ESIPFed/science-on-schema.org/master/examples/dataset/minimal.jsonld&quot;</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span><span class="p">},</span>
@@ -1762,7 +1775,7 @@ Descriptive text of the dataset.
 <p>At this point we can now take out resulting JSON-LD graph and extract the items we are interested int.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#g = framed[&#39;@graph&#39;]  # get the graph</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#g = framed[&#39;@graph&#39;]  # get the graph</span>
 <span class="c1">#kw = g[0][&#39;keywords&#39;]  # get the keywords (you could do this in 1 line, 2 here for exposition)</span>
 
 
@@ -1793,7 +1806,7 @@ climate change
 <p>Reference also: <a class="reference external" href="https://www.wikidata.org/wiki/Wikidata:WikidataCon_2019/Program/Sessions/Lightning_talks_2">https://www.wikidata.org/wiki/Wikidata:WikidataCon_2019/Program/Sessions/Lightning_talks_2</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SPARQLWrapper</span> <span class="kn">import</span> <span class="n">SPARQLWrapper</span><span class="p">,</span> <span class="n">JSON</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SPARQLWrapper</span> <span class="kn">import</span> <span class="n">SPARQLWrapper</span><span class="p">,</span> <span class="n">JSON</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -1807,7 +1820,7 @@ climate change
 <p>In the example below we can BIND in keywords like geochemistry but also other terms we may extract from the name, keywords and description.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;SELECT ?term ?topic WHERE {{ BIND ( &quot;</span><span class="si">{var}</span><span class="s1">&quot; as ?term ) ?topic wdt:P3827 ?term . }}&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="o">=</span><span class="s2">&quot;geochemistry&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rq</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;SELECT ?term ?topic WHERE {{ BIND ( &quot;</span><span class="si">{var}</span><span class="s1">&quot; as ?term ) ?topic wdt:P3827 ?term . }}&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var</span><span class="o">=</span><span class="s2">&quot;geochemistry&quot;</span><span class="p">)</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">wikidata</span><span class="p">,</span> <span class="n">rq</span><span class="p">)</span>
 <span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -1848,7 +1861,7 @@ climate change
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df = pd.DataFrame(columns=[&#39;term&#39;, &#39;topic&#39;])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#df = pd.DataFrame(columns=[&#39;term&#39;, &#39;topic&#39;])</span>
 
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kw</span><span class="p">)):</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">kw</span><span class="p">[</span><span class="n">w</span><span class="p">])</span>
@@ -1885,7 +1898,7 @@ Index: []
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wikidata.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wikidata.client</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span> 
@@ -1920,7 +1933,7 @@ description:science that applies chemistry to geological systems
 <p><img alt="alt text" src="https://gleaner.io/images/tangram.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyshacl</span> <span class="kn">import</span> <span class="n">validate</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyshacl</span> <span class="kn">import</span> <span class="n">validate</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">rdflib</span>
 <span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
@@ -1965,7 +1978,7 @@ Conforms: True
 <p>A testing area for the work on type Document</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Load examples from ODIS-Arch
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Load examples from ODIS-Arch
 !curl --remote-name \
      --location https://raw.githubusercontent.com/iodepo/odis-arch/master/schema/thematics/docs/graphs/doc.json
 </pre></div>
@@ -1981,7 +1994,7 @@ Conforms: True
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read into var</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># read into var</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/content/doc.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">docstring</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
@@ -1998,7 +2011,7 @@ Conforms: True
 <p>During development  it would good to edit in the notebook and process the results through testing and viz.  So we have to edit the JSON in the notebook, which is hideous.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
     <span class="p">},</span>
@@ -2054,7 +2067,8 @@ Conforms: True
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
@@ -2103,7 +2117,7 @@ Conforms: True
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_graph</span><span class="p">(</span><span class="n">docjson</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">show_graph</span><span class="p">(</span><span class="n">docjson</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

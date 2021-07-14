@@ -1,4 +1,4 @@
-# Indexing Quick Start  
+# Indexing with Gleaner 
 
 ![compose options](./images/composeOptions.png)
 

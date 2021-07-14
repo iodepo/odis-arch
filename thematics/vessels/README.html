@@ -133,6 +133,11 @@
     </ul>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../docs/maps.html">
+     Maps
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../projects/README.html">
      Projects
     </a>
@@ -191,7 +196,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../indexing/qstart.html">
-     Indexing Quick Start
+     Indexing with Gleaner
     </a>
    </li>
    <li class="toctree-l2">
@@ -243,7 +248,12 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../tooling/openRefine/template.html">
-       Template
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tooling/openRefine/projects.html">
+       Sargassum Project Template
       </a>
      </li>
     </ul>
@@ -390,10 +400,7 @@
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../../_sources/thematics/vessels/README.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+        
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../../_sources/thematics/vessels/README.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
@@ -430,23 +437,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/thematics/vessels/README.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -567,52 +557,6 @@ and link more directly to detailed institutional metadata records.</p>
 <li><p><a class="reference external" href="https://www.eurofleets.eu/">EuroFleets</a></p></li>
 <li><p>Identifiers to use include NOCD Code, Call Sign, ICES Shipcode, MMSI Code, IMO Code</p></li>
 </ul>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">pyld</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">SO_CONTEXT</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;http://schema.org&quot;</span><span class="p">:</span> <span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;http://schema.org/&quot;</span><span class="p">:</span> <span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;https://schema.org&quot;</span><span class="p">:</span> <span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">:</span> <span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;jsonldcontext.jsonld&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outf</span><span class="p">:</span>
-        <span class="n">outf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://schema.org/docs/jsonldcontext.jsonld&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">localDocumentLoader</span><span class="p">(</span><span class="n">context_map</span><span class="o">=</span><span class="p">{}):</span>
-
-    <span class="k">def</span> <span class="nf">localDocumentLoaderImpl</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{}):</span>
-        <span class="n">_url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="n">doc</span> <span class="o">=</span> <span class="n">context_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">_url</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">doc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s2">&quot;contextUrl&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-                <span class="s2">&quot;documentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/docs/jsonldcontext.jsonld&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="s2">&quot;application/ld+json&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;document&quot;</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)),</span>
-            <span class="p">}</span>
-            <span class="k">return</span> <span class="n">res</span>
-        <span class="n">loader</span> <span class="o">=</span> <span class="n">pyld</span><span class="o">.</span><span class="n">jsonld</span><span class="o">.</span><span class="n">requests_document_loader</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">loader</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">localDocumentLoaderImpl</span>
-    
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test1.jsonld&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">inf</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">inf</span><span class="p">)</span>
-<span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;documentLoader&quot;</span><span class="p">:</span> <span class="n">localDocumentLoader</span><span class="p">(</span><span class="n">context_map</span><span class="o">=</span><span class="n">SO_CONTEXT</span><span class="p">)}</span>
-<span class="n">expanded</span> <span class="o">=</span> <span class="n">pyld</span><span class="o">.</span><span class="n">jsonld</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">expanded</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
