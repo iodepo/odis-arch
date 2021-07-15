@@ -32,7 +32,12 @@ Organization, subOrganization/parentOrganization to indicate project sub-structu
 
 import json
 from pyld import jsonld
-import jbutils
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
 
 with open("./graphs/proj.json") as dgraph:
     doc = json.load(dgraph)
@@ -62,7 +67,12 @@ from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
 from pyld import jsonld
 import graphviz
-import jbutils
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
 
 with open("./graphs/proj.json") as dgraph:
     doc = json.load(dgraph)

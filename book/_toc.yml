@@ -1,54 +1,78 @@
-format: jb-article
+format: jb-book
 root: index
-sections:
-- file: content
-- file: publishing/publishing
-- file: thematics/README.md
-  sections:
-  - file: thematics/expinst/README.md
-  - file: thematics/docs/README.md
-  - file: thematics/docs/maps.md 
-  - file: thematics/projects/README.md
-  - file: thematics/training/README.md
-  - file: thematics/vessels/README.md
-  - file: thematics/spatial/README.md
-  - file: thematics/services/README.md
-  - file: thematics/terms/list
-  - file: thematics/languages/languages
-  - file: thematics/prov/README
-  - file: thematics/sdg/index.md
-- file: indexing/index.md
-  sections:
-  - file: indexing/qstart.md
-  - file: indexing/indexingservices.md
-  - file: indexing/dataservices.md
-  - file: indexing/user.md
-  - file: indexing/graphpub
-  - file: indexing/alternatives.md
-- file: tooling/index
-  sections:
-  - file: tooling/openRefine/README.md
-    sections:
-    - file: tooling/openRefine/template.md
-    - file: tooling/openRefine/projects.md
-  - file: tooling/notebooks/README.md
-    sections:
-    - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
-    - file: tooling/notebooks/OIH_Queries.ipynb
-    - file: tooling/notebooks/OIH_Editor.ipynb
-    - file: tooling/notebooks/validation/OIH_SHACL.ipynb
-    - file: tooling/notebooks/ISO19139mapping/ISOMap.ipynb
-    - file: tooling/notebooks/DCATmapping/dcatmapping.ipynb
-    - file: tooling/notebooks/geoKGComplete/README.md
+parts:
+  - caption: Ocean InfoHub
+    numbered: False
+    chapters:
+    - file: content
+    - file: publishing/publishing
+      title: "Persona: Publisher"
+  - caption: Ocean InfoHub Profiles
+    numbered: False
+    chapters:
+    - file: thematics/README.md
+  - caption: Ocean InfoHub Core Profiles
+    numbered: 1
+    chapters:
+    - file: thematics/expinst/README.md
+    - file: thematics/docs/README.md
+    - file: thematics/docs/maps.md 
+    - file: thematics/projects/README.md
+    - file: thematics/training/README.md
+    - file: thematics/vessels/README.md
+  - caption: Ocean InfoHub Support Profiles
+    numbered: 1
+    chapters:
+    - file: thematics/spatial/README.md
+    - file: thematics/services/README.md
+    - file: thematics/terms/list
+    - file: thematics/languages/languages
+    - file: thematics/prov/README
+    - file: thematics/sdg/index.md
+  - caption: "Persona: Aggregator"
+    numbered: False
+    chapters:
+    - file: indexing/index.md
+    - file: indexing/qstart.md
+    - file: indexing/indexingservices.md
+    - file: indexing/dataservices.md
+    - file: indexing/user.md
+    - file: indexing/graphpub
+    - file: indexing/alternatives.md
+  - caption: "Tooling"
+    numbered: False
+    chapters:
+    - file: tooling/index
       sections:
-      - file: tooling/notebooks/geoKGComplete/geocomplete.ipynb
-- file: validation/README
-- file: users/referenceclient
-- file: appendix/index
-  sections:
-  - file: appendix/annoyances
-  - file: appendix/references
-  - file: appendix/registries
-  - file: appendix/vocabularies
-
- 
+      - file: tooling/openRefine/README.md
+        sections:
+        - file: tooling/openRefine/template.md
+        - file: tooling/openRefine/projects.md
+      - file: tooling/notebooks/README.md
+        sections:
+        - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
+        - file: tooling/notebooks/OIH_Queries.ipynb
+        - file: tooling/notebooks/OIH_Editor.ipynb
+        - file: tooling/notebooks/validation/OIH_SHACL.ipynb
+        - file: tooling/notebooks/ISO19139mapping/ISOMap.ipynb
+        - file: tooling/notebooks/DCATmapping/dcatmapping.ipynb
+        - file: tooling/notebooks/geoKGComplete/README.md
+          sections:
+          - file: tooling/notebooks/geoKGComplete/geocomplete.ipynb
+  - caption: "Validation"
+    numbered: False
+    chapters:
+    - file: validation/README
+  - caption: "Testing Client"
+    numbered: False
+    chapters:
+    - file: users/referenceclient
+  - caption: "Appendix"
+    numbered: False
+    chapters:   
+    - file: appendix/index
+      sections: 
+      - file: appendix/annoyances
+      - file: appendix/references
+      - file: appendix/registries
+      - file: appendix/vocabularies

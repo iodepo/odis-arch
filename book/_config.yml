@@ -14,8 +14,9 @@ execute:
 
 # Define the name of the latex output file for PDF builds
 latex:
+  latex_engine: "xelatex"
   latex_documents:
-    targetname: book.tex
+    targetname: oceaninfohub.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -37,3 +38,8 @@ launch_buttons:
 html:
   use_issues_button: true
   use_repository_button: true
+
+sphinx:
+  config:
+    html_theme_options:
+      show_navbar_depth: 0
