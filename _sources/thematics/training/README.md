@@ -31,7 +31,12 @@ Course: A description of an educational course which may be offered as distinct 
 
 import json
 from pyld import jsonld
-import jbutils
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
 
 with open("./graphs/course1.json") as dgraph:
     doc = json.load(dgraph)
@@ -57,7 +62,12 @@ jbutils.show_graph(compacted)
 
 import json
 from pyld import jsonld
-import jbutils
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
 
 with open("./graphs/course2.json") as dgraph:
     doc = json.load(dgraph)

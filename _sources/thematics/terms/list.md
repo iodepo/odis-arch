@@ -55,7 +55,12 @@ types in Schema.org.  So we can use them in places such as:
 
 import json
 from pyld import jsonld
-import jbutils
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
 
 with open("./graphs/orglist.json") as dgraph:
     doc = json.load(dgraph)
