@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
 # SDG Linking
 
 ## About
@@ -9,10 +22,32 @@ The following provides an example of how Sustainable Development Goals
 ```{literalinclude} ./graphs/doc.json
 :linenos:
 :emphasize-lines: 14-20
+
 ```
 
-![Doc Guidance image](./graphs/doc.svg)
+```{code-cell}
+:tags: [hide-input]
 
+import json
+from pyld import jsonld
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/doc.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
 ## Refs
 
 * [SDGs](http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000000_)

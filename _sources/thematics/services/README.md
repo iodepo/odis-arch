@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
 # Services
 
 
@@ -29,9 +42,29 @@ about the image.
 ```
 
 
+```{code-cell}
+:tags: [hide-input]
 
+import json
+from pyld import jsonld
+import os, sys
 
-![service](./graphs/action.svg)
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/action.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
 
 ## References
 

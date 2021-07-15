@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Spatial Geoemetry &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Spatial Geoemetry &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Services" href="../services/README.html" />
-    <link rel="prev" title="6. Vessels" href="../vessels/README.html" />
+    <link rel="next" title="Services" href="../services/README.html" />
+    <link rel="prev" title="Vessels" href="../vessels/README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -84,7 +84,7 @@
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
-  Ocean InfoHub
+  Introduction
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -101,93 +101,79 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Ocean InfoHub Profiles
+  Profiles
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../README.html">
    Thematic Patterns
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Ocean InfoHub Core Profiles
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../expinst/README.html">
-   1. Experts and Institutions
+   Core 1: Experts and Institutions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/README.html">
-   2. Documents
+   Core 2: Documents
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/maps.html">
-   3. Spatial Maps
+   Core 3: Spatial Maps
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../projects/README.html">
-   4. Projects
+   Core 4: Projects
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../training/README.html">
-   5. Training
+   Core 5: Training
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../vessels/README.html">
-   6. Vessels
+   Core 6: Vessels
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Ocean InfoHub Support Profiles
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Spatial Geoemetry
+   Support 1: Spatial Geometry
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../services/README.html">
-   2. Services
+   Support 2: Services
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../terms/list.html">
-   3. Defined Terms
+   Support 3: Lists
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../languages/languages.html">
-   4. Languages
+   Support 4: Languages
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../prov/README.html">
-   5. Prov
+   Support 5: Authority
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sdg/index.html">
-   6. SDG Linking
+   Support 6: Linking To Principles
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Persona: Aggregator
+  Aggregation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -341,7 +327,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Testing Client
+  Interfaces
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -497,7 +483,7 @@
               <div>
                 
   <div class="section" id="spatial-geoemetry">
-<h1><span class="section-number">1. </span>Spatial Geoemetry<a class="headerlink" href="#spatial-geoemetry" title="Permalink to this headline">¶</a></h1>
+<h1>Spatial Geoemetry<a class="headerlink" href="#spatial-geoemetry" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>The primary OIH guidance will be to use the OGC <a class="reference external" href="https://www.ogc.org/standards/geosparql">GeoSPARQL</a>
@@ -549,6 +535,32 @@ A more accessible example can be found at WikiPedia:
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/basic.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/README_1_05.svg" src="../../_images/README_1_05.svg" /></div>
+</div>
 </div>
 <div class="section" id="classic-schema-org">
 <h2>Classic <a class="reference external" href="http://Schema.org">Schema.org</a><a class="headerlink" href="#classic-schema-org" title="Permalink to this headline">¶</a></h2>
@@ -592,7 +604,32 @@ Known Text (WKT).</p>
 </span><span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p><img alt="SOS Guidance image" src="../../_images/sos.svg" /></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/sos.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/README_3_0.svg" src="../../_images/README_3_0.svg" /></div>
+</div>
 </div>
 <div class="section" id="option-review-sos-issue-105">
 <h2>Option review, SOS Issue 105<a class="headerlink" href="#option-review-sos-issue-105" title="Permalink to this headline">¶</a></h2>
@@ -706,7 +743,32 @@ Known Text (WKT).</p>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p><img alt="Issue 105" src="../../_images/issue105.svg" /></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/issue105.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/README_5_0.svg" src="../../_images/README_5_0.svg" /></div>
+</div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
@@ -764,8 +826,8 @@ Known Text (WKT).</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../vessels/README.html" title="previous page"><span class="section-number">6. </span>Vessels</a>
-    <a class='right-next' id="next-link" href="../services/README.html" title="next page"><span class="section-number">2. </span>Services</a>
+    <a class='left-prev' id="prev-link" href="../vessels/README.html" title="previous page">Vessels</a>
+    <a class='right-next' id="next-link" href="../services/README.html" title="next page">Services</a>
 
         </div>
         
