@@ -42,7 +42,6 @@ types in Schema.org.  So we can use them in places such as:
 
 
 
-
 ## Organization in List
 
 ```{literalinclude} ./graphs/orglist.json

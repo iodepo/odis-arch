@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
 # Languages
 
 ## About
@@ -13,6 +26,31 @@ be used when describing these properties.
 
 ```{literalinclude} ./graphs/language.json
 :linenos:
+```
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/language.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
 ```
 
 In graph space the resulting triples from the above are:

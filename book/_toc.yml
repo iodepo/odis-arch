@@ -1,35 +1,41 @@
 format: jb-book
 root: index
 parts:
-  - caption: Ocean InfoHub
+  - caption: Introduction
     numbered: False
     chapters:
     - file: content
     - file: publishing/publishing
       title: "Persona: Publisher"
-  - caption: Ocean InfoHub Profiles
+  - caption: Profiles
     numbered: False
     chapters:
     - file: thematics/README.md
-  - caption: Ocean InfoHub Core Profiles
-    numbered: 1
-    chapters:
     - file: thematics/expinst/README.md
+      title: "Core 1: Experts and Institutions"
     - file: thematics/docs/README.md
+      title: "Core 2: Documents"
     - file: thematics/docs/maps.md 
+      title: "Core 3: Spatial Maps"
     - file: thematics/projects/README.md
+      title: "Core 4: Projects"
     - file: thematics/training/README.md
+      title: "Core 5: Training"
     - file: thematics/vessels/README.md
-  - caption: Ocean InfoHub Support Profiles
-    numbered: 1
-    chapters:
+      title: "Core 6: Vessels"
     - file: thematics/spatial/README.md
+      title: "Support 1: Spatial Geometry"
     - file: thematics/services/README.md
+      title: "Support 2: Services"
     - file: thematics/terms/list
+      title: "Support 3: Lists"
     - file: thematics/languages/languages
+      title: "Support 4: Languages"
     - file: thematics/prov/README
+      title: "Support 5: Authority"
     - file: thematics/sdg/index.md
-  - caption: "Persona: Aggregator"
+      title: "Support 6: Linking To Principles"
+  - caption: "Aggregation"
     numbered: False
     chapters:
     - file: indexing/index.md
@@ -63,7 +69,7 @@ parts:
     numbered: False
     chapters:
     - file: validation/README
-  - caption: "Testing Client"
+  - caption: "Interfaces"
     numbered: False
     chapters:
     - file: users/referenceclient

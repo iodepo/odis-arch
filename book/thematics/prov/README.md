@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
 # Prov
 
 ## About
@@ -19,9 +32,30 @@ the ID connections and examples have not been made yet.
 :linenos:
 ```
 
+```{code-cell}
+:tags: [hide-input]
 
+import json
+from pyld import jsonld
+import os, sys
 
-![Doc Guidance image](./graphs/nanoprov.svg)
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/nanoprov.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
 
 
 ## Refs

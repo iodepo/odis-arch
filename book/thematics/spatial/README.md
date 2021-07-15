@@ -1,3 +1,17 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+execution:
+  allow_errors: true
+---
+
 # Spatial Geoemetry
 
 ## About
@@ -17,6 +31,32 @@ A more accessible example can be found at WikiPedia:
 :linenos:
 :emphasize-lines: 4, 9-17
 ```
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/basic.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
 ## Classic Schema.org
 
 
@@ -33,7 +73,29 @@ Known Text (WKT).
 :emphasize-lines: 8-15
 ```
 
-![SOS Guidance image](./graphs/sos.svg)
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from pyld import jsonld
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/sos.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
 
 
 ## Option review, SOS Issue 105
@@ -47,8 +109,30 @@ From the referenced SOS issue 105:
 ```
 
 
+```{code-cell}
+:tags: [hide-input]
 
-![Issue 105](./graphs/issue105.svg)
+import json
+from pyld import jsonld
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/issue105.json") as dgraph:
+    doc = json.load(dgraph)
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+jbutils.show_graph(compacted)
+
+```
+
 
 
 ## References
