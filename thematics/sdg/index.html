@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SDG Linking &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Linking to documents and resources &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Aggregator" href="../../indexing/index.html" />
-    <link rel="prev" title="Prov" href="../prov/README.html" />
+    <link rel="next" title="Identifier" href="../identifier/id.html" />
+    <link rel="prev" title="Languages" href="../languages/languages.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -160,14 +160,14 @@
    Support 4: Languages
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../prov/README.html">
-   Support 5: Authority
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Support 6: Linking To Principles
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../identifier/id.html">
+   Support 6: Identifier pattern
   </a>
  </li>
 </ul>
@@ -205,6 +205,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/graphpub.html">
    Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/prov/README.html">
+   Indexing Activity Prov
   </a>
  </li>
  <li class="toctree-l1">
@@ -336,6 +341,11 @@
    Users
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/sparql.html">
+   Querying SPARQL
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -447,8 +457,30 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#about">
-   About
+  <a class="reference internal nav-link" href="#organization-link-options">
+   Organization link options
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subjectof">
+     subjectOf
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publishingprinciples">
+     publishingPrinciples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sdg-linkage">
+   SDG Linkage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creative-work-link-options">
+   Creative work link options
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -467,10 +499,279 @@
         
               <div>
                 
-  <div class="section" id="sdg-linking">
-<h1>SDG Linking<a class="headerlink" href="#sdg-linking" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="linking-to-documents-and-resources">
+<h1>Linking to documents and resources<a class="headerlink" href="#linking-to-documents-and-resources" title="Permalink to this headline">¶</a></h1>
+<p>Leveraging the ability to link between resources can serve many goals.  We may
+wish to demonstrate connections between people and courses they have taken or
+or organizations they are connected with.   We may be wishing to link documents
+to people or organizations.</p>
+<p>This section will review two key thematic profiles and some examples of how to
+express links from them to other resources.   Or goal will be different in
+cases.  The two profiles are type CreativeWork and type Organization.</p>
+<p>In the case of CreativeWork we are looking to express connections to the
+publisher and provider of the creative work.   This is mostly to connect these
+works with the responsible party associated with them.</p>
+<p>In the case of Organization our purpose may be to express alignment to various
+principles and policies.  These might provide people with an understanding of
+the goals of an organization when they are searching for or assessing them.</p>
+<div class="section" id="organization-link-options">
+<h2>Organization link options<a class="headerlink" href="#organization-link-options" title="Permalink to this headline">¶</a></h2>
+<p>In the following section we will look at three different options for expressing
+links between an organization and resources that describe the policy and
+principles of the subject organization.</p>
+<p>First we will see the full data graph.  We have highlighted the sections we
+we will review here.  Namely the subjectOF and publishingPrinciples
+predicates.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/org/x&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+    <span class="p">},</span>
+<span class="hll">    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll">    <span class="p">},</span>
+</span><span class="hll">    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR data principles&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/index_1_0.svg" src="../../_images/index_1_0.svg" /></div>
+</div>
+<div class="section" id="subjectof">
+<h3>subjectOf<a class="headerlink" href="#subjectof" title="Permalink to this headline">¶</a></h3>
+<p>Lets take a look at subjectOf.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;subjectOf&quot;: {
+        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
+        &quot;@type&quot;: &quot;CreativeWork&quot;,
+        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
+        &quot;name&quot;: [
+            &quot;FAIR data principles&quot;,
+            &quot;UNSD SDG indicator code:C140c01&quot;
+        ],
+        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_3_1.svg" src="../../_images/index_3_1.svg" /></div>
+</div>
+</div>
+<div class="section" id="publishingprinciples">
+<h3>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">¶</a></h3>
+<p>Lets take a look at publishingPrinciples.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;publishingPrinciples&quot;: {
+        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
+        &quot;@type&quot;: &quot;CreativeWork&quot;,
+        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
+        &quot;name&quot;: [
+            &quot;FAIR data principles&quot;,
+            &quot;UNSD SDG indicator code:C140c01&quot;
+        ],
+        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_5_1.svg" src="../../_images/index_5_1.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="sdg-linkage">
+<h2>SDG Linkage<a class="headerlink" href="#sdg-linkage" title="Permalink to this headline">¶</a></h2>
 <p>The following provides an example of how Sustainable Development Goals
 (SDGs) could be linked to a <a class="reference external" href="http://Schema.org">Schema.org</a> defined type using <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a>.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -550,7 +851,129 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_1_0.svg" src="../../_images/index_1_0.svg" /></div>
+<img alt="../../_images/index_7_0.svg" src="../../_images/index_7_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="creative-work-link-options">
+<h2>Creative work link options<a class="headerlink" href="#creative-work-link-options" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR data principles&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/index_9_0.svg" src="../../_images/index_9_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="refs">
@@ -588,8 +1011,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../prov/README.html" title="previous page">Prov</a>
-    <a class='right-next' id="next-link" href="../../indexing/index.html" title="next page">Aggregator</a>
+    <a class='left-prev' id="prev-link" href="../languages/languages.html" title="previous page">Languages</a>
+    <a class='right-next' id="next-link" href="../identifier/id.html" title="next page">Identifier</a>
 
         </div>
         
