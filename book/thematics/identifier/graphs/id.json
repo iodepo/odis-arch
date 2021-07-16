@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Map",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Name or title of the document",
+    "description": "Description of the map to aid in searching",
+    "url": "https://www.sample-data-repository.org/creativework/map.pdf",
+    "identifier": {
+        "@id": "https://doi.org/10.5066/F7VX0DMQ",
+        "@type": "PropertyValue",
+        "propertyID": "https://registry.identifiers.org/registry/doi",
+        "value": "doi:10.5066/F7VX0DMQ",
+        "url": "https://doi.org/10.5066/F7VX0DMQ"
+    },
+    "keywords": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Name of the set",
+            "description": "Description of the set",
+            "url": "url for the set"
+        },
+        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
+    }
+}

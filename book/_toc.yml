@@ -31,10 +31,10 @@ parts:
       title: "Support 3: Lists"
     - file: thematics/languages/languages
       title: "Support 4: Languages"
-    - file: thematics/prov/README
-      title: "Support 5: Authority"
     - file: thematics/sdg/index.md
-      title: "Support 6: Linking To Principles"
+      title: "Support 5: Linking To Principles"
+    - file: thematics/identifier/id.md
+      title: "Support 6: Identifier pattern"
   - caption: "Aggregation"
     numbered: False
     chapters:
@@ -44,6 +44,8 @@ parts:
     - file: indexing/dataservices.md
     - file: indexing/user.md
     - file: indexing/graphpub
+    - file: indexing/prov/README.md
+      title: Indexing Activity Prov
     - file: indexing/alternatives.md
   - caption: "Tooling"
     numbered: False
@@ -72,7 +74,8 @@ parts:
   - caption: "Interfaces"
     numbered: False
     chapters:
-    - file: users/referenceclient
+    - file: users/referenceclient.md
+    - file: users/sparql.md
   - caption: "Appendix"
     numbered: False
     chapters:   

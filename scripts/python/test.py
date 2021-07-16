@@ -9,10 +9,13 @@ with open("./doc1.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
-  "@context": {"@vocab": "https://schema.org/"},
-  "@explicit": "true",
-  "@type":     "Person",
-  "identifier": ""
+  "@context": {"@vocab": "https://schema.org/",
+  "prov": "http://www.w3.org/ns/prov#",},
+  "@explicit": "false",
+  "@type":     "prov:Activity",
+   "prov:generated": {},
+   "prov:endedAtTime": {},
+   "prov:used": {}
 }
 
 context = {

@@ -1,34 +1,50 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/"
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "prov": "http://www.w3.org/ns/prov#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "rdf": "http://www.w3.org/TR/rdf-syntax-grammar"
   },
-  "@id": "ID_for_this_metadata_record",
-  "@type": "Person",
-  "name": "Jane Doe",
-  "jobTitle": "Professor",
-  "telephone": "(425) 123-4567",
-  "url": "http://www.janedoe.com",
-  "knowsAbout": [
-    {
-      "@type": "Text",
-      "description": "Invasive species in brackish water"
-    },
-    {
-      "@type": "URL",
-      "url": "https://www.wikidata.org/wiki/Q183368"
-    },
-    {
-      "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/schema/thematics/training/graphs/course1.json",
-      "@type": "Course",
-      "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
-      "url": "URL to the course"
-    }
-  ],
-  "identifier": {
-    "@id": "ID_value_string",
-    "@type": "PropertyValue",
-    "propertyID": "This can be text or URL for an ID like ORCID",
-    "url": "https://foo.org/linkToPropertyIDPage",
-    "description": "Optional description of the ID"
-  }
+  "@graph": [
+      {
+          "@id": "https://www.re3data.org/repository/obis",
+          "@type": "prov:Organization",
+          "rdf:name": "Ocean Biodiversity Information System",
+          "rdfs:seeAlso": "https://obis.org"
+      },
+      {
+          "@id": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2",
+          "@type": "prov:Entity",
+          "prov:wasAttributedTo": {
+              "@id": "https://www.re3data.org/repository/obis"
+          },
+          "prov:value": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"
+      },
+      {
+          "@id": "https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55",
+          "@type": "prov:Collection",
+          "prov:hadMember": {
+              "@id": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"
+          }
+      },
+      {
+          "@id": "urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55",
+          "@type": "prov:Entity",
+          "prov:value": "7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld"
+      },
+      {
+          "@id": "https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55",
+          "@type": "prov:Activity",
+          "prov:endedAtTime": {
+              "@value": "2021-04-20",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+          },
+          "prov:generated": {
+              "@id": "urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55"
+          },
+          "prov:used": {
+              "@id": "https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55"
+          }
+      }
+  ]
 }
