@@ -1,23 +1,28 @@
 version: '3'
 
+# ${MINIO_ACCESS_KEY}  
+# ${MINIO_SECRET_KEY}
+# ${GLEANER_OBJECTS}
+# ${GLEANER_GRAPH}
+
 services:
+  triplestore:
+    image: nawer/blazegraph 
+    environment:
+      JAVA_XMS: 2g
+      JAVA_XMX: 8g
+      JAVA_OPTS: -Xmx6g -Xms2g --XX:+UseG1GC
+    ports:
+      - 9999:9999
+    volumes:
+      - ${GLEANER_GRAPH}:/var/lib/blazegraph
+    networks:
+      - traefik_default
+
   s3system:
     image: minio/minio:latest
     ports:
       - 9000:9000
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.s3system.entrypoints=http"
-      - "traefik.http.routers.s3system.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
-      - "traefik.http.middlewares.s3system-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.s3system.middlewares=s3system-https-redirect"
-      - "traefik.http.routers.s3system-secure.entrypoints=https"
-      - "traefik.http.routers.s3system-secure.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
-      - "traefik.http.routers.s3system-secure.tls=true"
-      - "traefik.http.routers.s3system-secure.tls.certresolver=http"
-      - "traefik.http.routers.s3system-secure.service=s3system"
-      - "traefik.http.services.s3system.loadbalancer.server.port=9000"
-      - "traefik.docker.network=traefik_default"
     volumes:
       - ${GLEANER_OBJECTS}:/data
     environment:
@@ -37,8 +42,7 @@ services:
     environment:
      - SERVICE_PORTS=9222
     networks:
-      - traefik_default
+      - traefik_default    
 
 networks:
   traefik_default:
-

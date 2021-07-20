@@ -20,7 +20,7 @@ Exploring using schema.org to describe research vessels.  Note that schema.org
 is a very broad vocabulary and as such specific concepts like research vessel is
 not well aligned.
 
-One approach we can use, however, is to leverage schema.org a a discovery layer
+One approach we can use, however, is to leverage schema.org a discovery layer
 and link more directly to detailed institutional metadata records.  
 
 

@@ -19,16 +19,19 @@ or organizations they are connected with.   We may be wishing to link documents
 to people or organizations.   
 
 This section will review two key thematic profiles and some examples of how to
-express links from them to other resources.   Or goal will be different in
+express links from them to other resources.   Our goal will be different in various
 cases.  The two profiles are type CreativeWork and type Organization. 
 
-In the case of CreativeWork we are looking to express connections to the
-publisher and provider of the creative work.   This is mostly to connect these
-works with the responsible party associated with them.   
-
-In the case of Organization our purpose may be to express alignment to various
-principles and policies.  These might provide people with an understanding of
+In the case of _Organization our purpose may be to express alignment to various
+principles and policies_.  These might provide people with an understanding of
 the goals of an organization when they are searching for or assessing them.
+
+In the case of _CreativeWork we are looking to express connections to the
+publisher and provider of the creative work_.   This is mostly to connect these
+works with the responsible party associated with them but may also serve to
+connect to the principles they are associated with. 
+
+
 
 ## Organization link options
 
@@ -43,7 +46,7 @@ predicates.
 
 ```{literalinclude} ./graphs/org.json
 :linenos:
-:emphasize-lines: 31-44
+:emphasize-lines: 31-53
 ```
 
 ```{code-cell}

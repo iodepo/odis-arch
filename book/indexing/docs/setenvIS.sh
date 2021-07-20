@@ -6,7 +6,6 @@ export MINIO_SECRET_KEY=worldsbestsecretkey
 
 # local data volumes
 export GLEANER_BASE=/tmp/gleaner/
-mkdir --parents ${GLEANER_BASE}
+mkdir -p ${GLEANER_BASE}
 export GLEANER_OBJECTS=${GLEANER_BASE}/datavol/s3
 export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
-

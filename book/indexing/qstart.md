@@ -39,15 +39,15 @@ you should issue in this admonition style box.
 In the end, this is the table of applications and config files you will need.  In this guide we will go through 
 downloading, setting them up and running Gleaner to index documents from the web.  
 
-```{list-table} Required Applications and Config Files
+```{list-table} Required Applications and Their Config Files
 :header-rows: 1
 
 * - Gleaner
   - Docker
   - Minio Client
 * - config.yaml
-  - setenv.sh 
-  - load2blaze.sh 
+  - ```setenv.sh ``` 
+  - ```load2blaze.sh``` 
 * - schemaorg-current-https.jsonld
   - gleaner-DS-NoRouter.yml
   - 
@@ -137,10 +137,10 @@ section.
 We have Docker and the appropriate compose file.  The compose files require a set of environment variables
 to be populated to provide the local hosts information needed to run.  You can set these yourself or
 use or reference the setenv.sh file in the Gleaner-compose repository in the  
-[Gleaner-compose deployment directory](https://github.com/gleanerio/gleaner-compose/tree/master/deployment). 
-You may also need to visit information about permissions at 
+[Gleaner-compose deployment directory](https://github.com/gleanerio/gleaner-compose/tree/master/deployment).
+You may also need to visit information about permissions at
 [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/) if you are
-having permission issues.   
+having permission issues.
 
 Let's take a look at the script.
 
@@ -196,11 +196,85 @@ final step is to edit our Gleaner configuration file.  This will let Gleaner kno
 the location of the support services, the JSON-LD context file and the locations
 of the resources we wish to index.  
 
-Let's take a look at the configuration file and then break down each section.  
+Let's take a look at the full configuration file first and then break down each section.  
 
 ```{literalinclude} ./docs/gleaner-cfg.yml
 :linenos:
 ```
+
+
+##### Object store
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 2-8
+```
+
+The minio section defines the IP and port of the object store.  For this case, we are 
+using minio and these are the IP and port from our docker compose steps above.  Note,
+if you were to use Ceph or AWS S3, this section is still labeled minio.  You simply
+need to update the property values.
+
+##### Gleaner
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 9-12
+```
+
+This passes a few high level concpets.
+
+* runid:
+* summon
+* mill
+
+##### Context sections
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 13-19
+```
+
+Comments for the context sections
+
+##### Summoner section
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 20-25
+```
+
+Comments for the summoner sections
+
+##### Millers section
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 26-28
+```
+
+Comments for the miller sections
+
+
+##### Site graphs section
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 29-35
+```
+
+Comments for the sitegrpah sections
+
+
+##### Sources section
+
+```{literalinclude} ./docs/gleaner-cfg.yml
+:linenos:
+:lines: 36-66
+```
+
+Comments for the sources sections
+
 
 #### Run gleaner
 
@@ -242,7 +316,7 @@ the triplestore in order to start playing.
 #### Minio Object store
 
 To view the object store you could use your browser and point it on the default minio 
-port at 9000.  S typically something like localhost:9000.  
+port at 9000.  This typically something like localhost:9000.  
 
 If you wish to continue to use the command line you can use the Minio client at
 [Minio Client Quickstart guide](https://docs.min.io/docs/minio-client-quickstart-guide.html).
@@ -266,3 +340,15 @@ graph data.
 * Simple script loading
 * Nabu
 * Try out a simple SPARQL query
+
+## References
+
+The following are some reference which may provide more information on the various
+technologies used in this approach.
+
+* [Google: Understanding how structured data works](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data)
+* [Google Dataset Search By the Numbers](https://arxiv.org/abs/2006.06894) 
+* [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem](https://research.google/pubs/pub47845/)
+* [W3C SPARQL](https://www.w3.org/TR/sparql11-query/)
+* [SHACL](https://www.w3.org/TR/shacl/)
+* [Triplestores](https://en.wikipedia.org/wiki/Triplestore)
