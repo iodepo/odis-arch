@@ -118,7 +118,7 @@ better at that.  Also the documents and validation material created here OIH
 will also allow for that sort of testing and feedback.  
 
 Providers may also wish to provide content negotiation for type application/ld+json 
-for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
+for these resources. Some indexers,  like Gleaner, will attempt to negotiate for
 the specific serialization and this will likely lighten the load on the servers going forward.
 
 #### Validation With SHACL or ShEx
@@ -156,7 +156,7 @@ The results of the above can then been loaded into the online JSON-Editor at
 https://json-editor.github.io/json-editor/. (Ref:
 [https://github.com/json-editor/json-editor](https://github.com/json-editor/json-editor))
 
-The results of this then can be load into https://json-ld.org/playground/ to
+The results of this then can be loaded into https://json-ld.org/playground/ to
 validate that we have well formed JSON-LD.
 
 Though this workflow is rather crude and manual it exposes a route to a defined

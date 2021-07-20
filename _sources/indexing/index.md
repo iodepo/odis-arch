@@ -85,13 +85,13 @@ to do so.
 ## ODIS Catalog as Index Source
 
 Before we discuss indexing source a key question is what source will be indexed.
-OIH is not a web crawl in that is doesn't move from source to source based on 
+OIH is not a web crawl in that it doesn't move from source to source based on 
 the content of those sources. 
 
 Rather, the OIH index is based on a list of sources selected ahead of time.  At
 this time that set of sources if based on those partners engaged in the 
 development phase of OIH.  As the work moves to a more routine operation 
-the sources will come fro the [ODIS Catalog](https://catalogue.odis.org/).  
+the sources will come from the [ODIS Catalog](https://catalogue.odis.org/).  
 
 The ODIS Catalog will then act as a curated source of domains for inclusion 
 in the Ocean InfoHub.   This will provide a level of curation and vetted of sources
