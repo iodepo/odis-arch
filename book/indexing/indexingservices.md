@@ -7,6 +7,28 @@ Gleaner can not run alone and relies on a couple of Open Container Initiative (O
 * Headless Chrome (technically optional) \
   This is only needed where you expect the sources you index to use Javascript to include the JSON-LD in the pages.  If you know your sources do not use this publishing pattern and rather include the JSON-LD in the static page, then you don't need this container running.  
 
+
+IS represent the minimum required services to support Gleaner.  With IS you have an object
+store in the form of [Minio](https://min.io/) and a headless chrome server in the form of 
+[chromedp/headless-shell](https://hub.docker.com/r/chromedp/headless-shell).  
+
+As shown in the figure below, and support the basic harvesting of resources with Gleaner
+and loading the JSON-LD objects into Minio.
+
+It does not result in these objects ending up in a graph / triplestore.   You would use
+this option if you intend to work on the JSON-LD objects yourself.  Perhaps loading 
+them into a alternative graphdb like Janus or working on them with python tooling. 
+
+
+```{figure} ./images/gleaner1.png
+---
+name: gleaner-IS
+---
+Basic Gleaner Indexing Service Activity Workflow
+```
+
+
+
 Gleaner Indexing Services (IS) Environment Variables
 The Docker Compose file used to launch the Gleaner IS has a set of configurable elements that can be set and passed to the orchestration system with environment variables.  
 

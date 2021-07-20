@@ -85,6 +85,9 @@ jbutils.show_graph(compacted)
 
 ## References
 
+* [RDA Education and Training on handling of research data IG
+](https://www.rd-alliance.org/groups/education-and-training-handling-research-data.html)
+* [DC Tabular Application Profiles (DC TAP) - Primer](https://www.dublincore.org/groups/application_profiles_ig/dctap_primer/)
 * https://www.w3.org/TR/xmlschema11-2/
   * Use YYYY-MM-DDThh:mm:ss or YYYY-MM-DD
 * [http://www.marinetraining.eu/](http://www.marinetraining.eu/)

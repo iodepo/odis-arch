@@ -7,6 +7,55 @@ An S3 compliant object store supporting S3 APIs including S3Select.  For open so
 * Graph Database
 * Web Router (technically optional)
 
+
+
+## Gleaner Data Services (DS)
+
+If you wish to work with a triplestore and wish to use the default app used by OIH
+you can use the compose file that sets up the Gleaner Data Services environment.  
+
+This adds the Blazegraph triplestore to the configuration along with the object store. 
+
+The details of the OIH data services are found in the
+ [Data Services](dataservices.md) section.
+
+```{figure} ./images/gleaner2.png
+---
+name: gleaner-DS
+---
+Gleaner Data Service Activity Workflow
+```
+
+Typically, a user would wish to run the full Gleaner DS stack which supports
+both the indexing process and the serving of the resulting data warehouse and graph 
+database capacity.  
+
+Combined, these would then look like the following where the indexing and
+data services shared a common object store.  
+
+```{figure} ./images/gleaner3.png
+---
+name: gleaner-ISDS
+---
+Gleaner Indexing and Data Service Combined
+```
+
+### Object store pattern
+
+Within in the object store the following digital object pattern is used.  
+This is based on the work of the RDA Digital Fabric working group.  
+
+```{figure} ./images/do.png
+---
+name: gleaner-do
+---
+Gleaner Digital Object Pattern
+```
+
+
+
+
+
 At this point the graph and data warehouse (object store) can be exposed to the net for use by clients such as jupyter notebooks or direct client calls to the S3 object APIs and SPARQL endpoint.
 
 Gleaner Data Services (DS) Environment Variables

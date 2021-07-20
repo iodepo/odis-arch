@@ -26,30 +26,6 @@ the ESIP Science on Schema work.
 Additionally, Google leveraged schema.org/Dataset to develop and populate the
 Google Data Set Search and provides guidance to developers to facilitate this.  
 
-## Personas
-
-The OIH system can be viewed as involving three personas.  These are
-briefly presented here with details on the aggregation persona following. 
-
-```{panels}
-:column: col-4
-:card: border-2
-![](./images/personna.svg) 
-Publisher
-^^^
-A key persona whose activities are covered in detail in [Publishing patterns for OIH](../publishing/publishing.md)
----
-![](./images/personna.svg) 
-Aggregator
-^^^
-Leverages web architecture to retrieve structured data on the web and generate usable indexes.
----
-![](./images/personna.svg) 
-User
-^^^
-The end user of the publishing and aggregation activities.  May leverage 
-the web for discovery or tools such as Jupyter for analytics and visualization.  
-```
 
 ## Web architecture approach
 
