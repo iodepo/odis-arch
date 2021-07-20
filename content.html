@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Publisher" href="publishing/publishing.html" />
+    <link rel="next" title="Personas" href="personas/persona.html" />
     <link rel="prev" title="The Ocean InfoHub Project" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -79,10 +79,17 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Introduction
  </span>
@@ -94,8 +101,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="publishing/publishing.html">
-   Persona: Publisher
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="foundation/foundation.html">
+   JSON-LD Foundation
   </a>
  </li>
 </ul>
@@ -391,7 +408,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -437,6 +454,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fcontent.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -459,11 +492,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about">
    About
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#personas">
-   Personas
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -521,49 +549,6 @@ projects (Project 418, Project 419 and the Resource Registry) from which spun up
 the ESIP Science on Schema work.</p>
 <p>Additionally, Google leveraged <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a> to develop and populate the
 Google Data Set Search and provides guidance to developers to facilitate this.</p>
-</div>
-<div class="section" id="personas">
-<h2>Personas<a class="headerlink" href="#personas" title="Permalink to this headline">¶</a></h2>
-<p>The OIH system can be viewed as involving three personas.  These are
-briefly presented here with details on the aggregation persona following.</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-4 docutils">
-<div class="card w-100 border-2 docutils">
-<div class="card-header docutils">
-<p class="card-text"><img alt="" src="_images/personna.svg" />
-Publisher</p>
-</div>
-<div class="card-body docutils">
-<p class="card-text">A key persona whose activities are covered in detail in <a class="reference internal" href="publishing/publishing.html"><span class="doc std std-doc">Publishing patterns for OIH</span></a></p>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 docutils">
-<div class="card w-100 border-2 docutils">
-<div class="card-header docutils">
-<p class="card-text"><img alt="" src="_images/personna.svg" />
-Aggregator</p>
-</div>
-<div class="card-body docutils">
-<p class="card-text">Leverages web architecture to retrieve structured data on the web and generate usable indexes.</p>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 docutils">
-<div class="card w-100 border-2 docutils">
-<div class="card-header docutils">
-<p class="card-text"><img alt="" src="_images/personna.svg" />
-User</p>
-</div>
-<div class="card-body docutils">
-<p class="card-text">The end user of the publishing and aggregation activities.  May leverage
-the web for discovery or tools such as Jupyter for analytics and visualization.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="web-architecture-approach">
 <h2>Web architecture approach<a class="headerlink" href="#web-architecture-approach" title="Permalink to this headline">¶</a></h2>
@@ -674,7 +659,7 @@ aids sustainability from both a technical and financial perspective.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">The Ocean InfoHub Project</a>
-    <a class='right-next' id="next-link" href="publishing/publishing.html" title="next page">Publisher</a>
+    <a class='right-next' id="next-link" href="personas/persona.html" title="next page">Personas</a>
 
         </div>
         

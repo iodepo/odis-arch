@@ -11,3 +11,22 @@ possible used for an index.
 * graph access via SPARQL
 * access to the graph and objects via workflows like Jupyter notebooks
   
+## Gleaner Web UI (WUI)
+
+The user of the index may take several forms.  A user may be a software developer creating a web based 
+interface to the generated index.  It may also be an end user accessing the index (indexes) through notebooks
+or special clients.  
+
+Those wishing to run a web site can augemnt the compose files to run their 
+preferred web server, object server (to serve files from the object store) or 
+software such as node or others to support their deployment pattern.  
+
+
+
+```{figure} ./images/gleaner4.png
+---
+name: gleaner-WUI
+---
+Gleaner Optional Web UI
+```
+

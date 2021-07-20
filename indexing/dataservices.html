@@ -79,10 +79,17 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Introduction
  </span>
@@ -94,8 +101,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../publishing/publishing.html">
-   Persona: Publisher
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../foundation/foundation.html">
+   JSON-LD Foundation
   </a>
  </li>
 </ul>
@@ -391,7 +408,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -437,6 +454,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/dataservices.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -451,6 +484,26 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleaner-data-services-ds">
+   Gleaner Data Services (DS)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object-store-pattern">
+     Object store pattern
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -468,6 +521,34 @@ An S3 compliant object store supporting S3 APIs including S3Select.  For open so
 <li><p>Graph Database</p></li>
 <li><p>Web Router (technically optional)</p></li>
 </ul>
+<div class="section" id="gleaner-data-services-ds">
+<h2>Gleaner Data Services (DS)<a class="headerlink" href="#gleaner-data-services-ds" title="Permalink to this headline">¶</a></h2>
+<p>If you wish to work with a triplestore and wish to use the default app used by OIH
+you can use the compose file that sets up the Gleaner Data Services environment.</p>
+<p>This adds the Blazegraph triplestore to the configuration along with the object store.</p>
+<p>The details of the OIH data services are found in the
+<a class="reference internal" href="#"><span class="doc std std-doc">Data Services</span></a> section.</p>
+<div class="figure align-default" id="gleaner-ds">
+<img alt="../_images/gleaner2.png" src="../_images/gleaner2.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Gleaner Data Service Activity Workflow</span><a class="headerlink" href="#gleaner-ds" title="Permalink to this image">¶</a></p>
+</div>
+<p>Typically, a user would wish to run the full Gleaner DS stack which supports
+both the indexing process and the serving of the resulting data warehouse and graph
+database capacity.</p>
+<p>Combined, these would then look like the following where the indexing and
+data services shared a common object store.</p>
+<div class="figure align-default" id="gleaner-isds">
+<img alt="../_images/gleaner3.png" src="../_images/gleaner3.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Gleaner Indexing and Data Service Combined</span><a class="headerlink" href="#gleaner-isds" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="object-store-pattern">
+<h3>Object store pattern<a class="headerlink" href="#object-store-pattern" title="Permalink to this headline">¶</a></h3>
+<p>Within in the object store the following digital object pattern is used.<br />
+This is based on the work of the RDA Digital Fabric working group.</p>
+<div class="figure align-default" id="gleaner-do">
+<img alt="../_images/do.png" src="../_images/do.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Gleaner Digital Object Pattern</span><a class="headerlink" href="#gleaner-do" title="Permalink to this image">¶</a></p>
+</div>
 <p>At this point the graph and data warehouse (object store) can be exposed to the net for use by clients such as jupyter notebooks or direct client calls to the S3 object APIs and SPARQL endpoint.</p>
 <p>Gleaner Data Services (DS) Environment Variables
 The Docker Compose file used to launch the Gleaner DS has a set of configurable elements that can be set and passed to the orchestration system with environment variables.</p>
@@ -740,7 +821,9 @@ networks:
 </td></tr></table></div>
 <p>NOTE:  DS also needs the object -&gt; graph sync (via Nabu)
 NOTE:  Should also add in (here or to the side) the ELT local Data Lake to Data Warehouse path (ala CSDCO VaultWalker)</p>
-<p><img alt="" src="../_images/do.png" /></p>
+<p><img alt="" src="../_images/do1.png" /></p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -12,7 +12,7 @@ execution:
   allow_errors: true
 ---
 
-# Spatial Geoemetry
+# Spatial Geometry
 
 ## About
 

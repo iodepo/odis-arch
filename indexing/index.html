@@ -79,10 +79,17 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
  <span class="caption-text">
   Introduction
  </span>
@@ -94,8 +101,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../publishing/publishing.html">
-   Persona: Publisher
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../foundation/foundation.html">
+   JSON-LD Foundation
   </a>
  </li>
 </ul>
@@ -391,7 +408,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </div>
 
 </div>
@@ -437,6 +454,22 @@
 
             <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/index.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -460,37 +493,42 @@
   <a class="reference internal nav-link" href="#intoduction">
    Intoduction
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#odis-catalog-as-index-source">
-   ODIS Catalog as Index Source
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gleaner">
-   Gleaner
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gleaner-indexing-services-is">
-   Gleaner Indexing Services (IS)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gleaner-data-services-ds">
-   Gleaner Data Services (DS)
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#object-store-pattern">
-     Object store pattern
+    <a class="reference internal nav-link" href="#container-overview">
+     Container overview
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gleaner">
+     Gleaner
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-services">
+     Indexing Services
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-services">
+     Data Services
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#web-ui">
+     Web UI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alternatives">
+     Alternatives
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gleaner-web-ui-wui">
-   Gleaner Web UI (WUI)
+  <a class="reference internal nav-link" href="#odis-catalog-as-index-source">
+   ODIS Catalog as Index Source
   </a>
  </li>
 </ul>
@@ -508,29 +546,80 @@
 <h1>Aggregator<a class="headerlink" href="#aggregator" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="intoduction">
 <h2>Intoduction<a class="headerlink" href="#intoduction" title="Permalink to this headline">¶</a></h2>
-<p>This section introduces the the OIH approach to indexing. At this stage OIH is
+<p>This section introduces the the OIH approach to indexing. Currently,  OIH is
 using the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner">Gleaner</a> software to do the indexing and leverages the Gleaner IO
 <a class="reference external" href="https://github.com/gleanerio/gleaner-compose">gleaner-compose</a> Docker
-compose files for the server side architecture. The gleaner-compose repository holds Docker compose files that can set up three environments
-that Gleaner can leverage.</p>
-<p>Gleaner the app is a Go based single file binary<br />
-with a required configuration file.  However, it expects at a minimum an object store and
-and optional headless chrome server (for dyanmic/reactive site indexing).</p>
+Compose files for the server side architecture.  For more information on Docker Compose files visit the
+<a class="reference external" href="https://docs.docker.com/compose/">Overiew of Docker Compose</a>.  The gleaner-compose repository holds Docker compose files that can set up
+various environments that Gleaner needs.</p>
 <p>The figure below gives a quick overview of the various compose options for setting up
-the supporting architecture for Gleaner.</p>
+the supporting architecture for Gleaner. A fully configured system where all the indexing
+and data services are running and exposing services to the net, a total of five containers are run.  In many case
+you may run fewer than this.</p>
 <div class="figure align-default" id="compose-options-for-gleaner">
 <img alt="../_images/composeOptions.png" src="../_images/composeOptions.png" />
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">The various compose options for Gleaner</span><a class="headerlink" href="#compose-options-for-gleaner" title="Permalink to this image">¶</a></p>
 </div>
+<div class="section" id="container-overview">
+<h3>Container overview<a class="headerlink" href="#container-overview" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>S3 (Minio / AWS): This is the only container that is required in all cases to run.  Gleaner needs an S3 compatible object store.  By default
+we use the <a class="reference external" href="https://min.io/">Minio</a> object store</p></li>
+<li><p>Chrome Headless: In cases where providers place the JSON-LD documents into the pages with Javascript, we need to render the page before
+reading and accessing the DOM.  This is done using Chrome Headless</p></li>
+<li><p>Graph data base:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
+queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For OIH we
+use the <a class="reference external" href="https://github.com/blazegraph/database">Blazgraph triplestore</a>.</p></li>
+<li><p>Router: If we wish to deploy this setup onto the net, we will route to route all the services through a single domain.  To do this network routing
+we use <a class="reference external" href="https://traefik.io/">Traefik</a>.  This router is not required for local use and alternative routers like <a class="reference external" href="https://caddyserver.com/">Caffdy</a>
+or <a class="reference external" href="https://www.nginx.com">nginx</a> are also valid options.</p></li>
+<li><p>Web Server: If you wish to serve a web UI for the index, then you can also leverage this setup to serve that.  Again, this is optional and your web site
+may be hosted elswhere and simply call to the index in compliance with CORS settings.  There is an example web server that leverages the object store
+available in this setup.</p></li>
+</ul>
+</div>
+<div class="section" id="gleaner">
+<h3>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned Gleaner is a single binary app (ie, one file).  It can be run on Linux, Mac OS X or Windows.  It does
+not need to be run on the same machine as the supporting services as it can connect to them
+over the network.  So, for example, they could be hosted in commercial cloud services or
+on remote servers.</p>
+<p>You can download and compile the code from the previously mentioned github repository or
+the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">releases page</a>.</p>
+<p>A single configuration file provides the settings Gleaner needs.  Additionally, a local
+copy of the current <a class="reference external" href="http://schema.org">schema.org</a> context file should be downloaded and available to the app.  This file is needed
+for many operations and access it over the net is slow and often rate limited depending on the
+source.   You can download the file at the <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> page.</p>
+<p>This setup show in the above figure is the typical setup for Gleaner and is
+detailed in the <a class="reference internal" href="qstart.html"><span class="doc std std-doc">Quick Start</span></a> section.</p>
+</div>
+<div class="section" id="indexing-services">
+<h3>Indexing Services<a class="headerlink" href="#indexing-services" title="Permalink to this headline">¶</a></h3>
+<p>This is the basic indexing service requirements.  At a minimum we need the object store and the Chrome headless containers
+scoped in the <em>Indexing Sevices</em> box above. More details on this set can be found in <a class="reference internal" href="indexingservices.html"><span class="doc std std-doc">Indexing Servives</span></a>.</p>
+</div>
+<div class="section" id="data-services">
+<h3>Data Services<a class="headerlink" href="#data-services" title="Permalink to this headline">¶</a></h3>
+<p>A more expanded set of services is defined in the <a class="reference internal" href="dataservices.html"><span class="doc std std-doc">Data Services</span></a> section.  This section discussion a setup more
+designed to address a server setup tht will support indexing and also present the resulting indexes to the broader internet.</p>
+</div>
+<div class="section" id="web-ui">
+<h3>Web UI<a class="headerlink" href="#web-ui" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned, if you wish to serve a web UI for the index, then you can leverage this setup to serve that.  Again, this is optional and your web site
+can be hosted elsewhere and simply call to the index in compliance with CORS settings. Some tailes on this can be found in the <a class="reference internal" href="user.html"><span class="doc std std-doc">Interfaces</span></a> section.</p>
+</div>
+<div class="section" id="alternatives">
+<h3>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">¶</a></h3>
 <p>Note, the Gleaner ecosystem is not a requirement.  OIH follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the <a class="reference internal" href="alternatives.html"><span class="doc std std-doc">Alternative Approaches</span></a> section for more on this.</p>
 <p>What follows is a bit more detail on the setup used by Gleaner.  Experienced users will
 see where they can swap out elements for their own preference.  Like a different
 triplestore, or wish to leverage a commercial object store?  Simply modify the architecture
 to do so.</p>
 </div>
+</div>
 <div class="section" id="odis-catalog-as-index-source">
 <h2>ODIS Catalog as Index Source<a class="headerlink" href="#odis-catalog-as-index-source" title="Permalink to this headline">¶</a></h2>
-<p>Before we discuss indexing source a key question is what source will be index.
+<p>Before we discuss indexing source a key question is what source will be indexed.
 OIH is not a web crawl in that is doesn’t move from source to source based on
 the content of those sources.</p>
 <p>Rather, the OIH index is based on a list of sources selected ahead of time.  At
@@ -541,77 +630,6 @@ the sources will come fro the <a class="reference external" href="https://catalo
 in the Ocean InfoHub.   This will provide a level of curation and vetted of sources
 and ensure sources are aware of the technical requirements for inclusion in the
 OIH index.</p>
-</div>
-<div class="section" id="gleaner">
-<h2>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">¶</a></h2>
-<p>As mentioned Gleaner is simply an app.  It can be run on Linux, Mac OS X or Windows.  It does
-not need to be run on the same machine as the supporting services.  You can download and
-compile the code from the previously mentioned github repository or
-the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">releases page</a>.</p>
-<p>A single configuration file provides the settings Gleaner needs.  Additionally, a local
-copy of the current <a class="reference external" href="http://schema.org">schema.org</a> context file should be downloaded locally.  This file is needed
-for many operations and access it over the net is slow and often rate limited depending on the
-source.   You can download the file at the <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> page.</p>
-</div>
-<div class="section" id="gleaner-indexing-services-is">
-<h2>Gleaner Indexing Services (IS)<a class="headerlink" href="#gleaner-indexing-services-is" title="Permalink to this headline">¶</a></h2>
-<p>IS represent the minimum required services to support Gleaner.  With IS you have an object
-store in the form of <a class="reference external" href="https://min.io/">Minio</a> and a headless chrome server in the form of
-<a class="reference external" href="https://hub.docker.com/r/chromedp/headless-shell">chromedp/headless-shell</a>.</p>
-<p>As shown in the figure below, and support the basic harvesting of resources with Gleaner
-and loading the JSON-LD objects into Minio.</p>
-<p>It does not result in these objects ending up in a graph / triplestore.   You would use
-this option if you intend to work on the JSON-LD objects yourself.  Perhaps loading
-them into a alternative graphdb like Janus or working on them with python tooling.</p>
-<div class="figure align-default" id="gleaner-is">
-<img alt="../_images/gleaner1.png" src="../_images/gleaner1.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Basic Gleaner Indexing Service Activity Workflow</span><a class="headerlink" href="#gleaner-is" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="gleaner-data-services-ds">
-<h2>Gleaner Data Services (DS)<a class="headerlink" href="#gleaner-data-services-ds" title="Permalink to this headline">¶</a></h2>
-<p>If you wish to work with a triplestore and wish to use the default app used by OIH
-you can use the compose file that sets up the Gleaner Data Services environment.</p>
-<p>This adds the Blazegraph triplestore to the configuration along with the object store.</p>
-<p>The details of the OIH data services are found in the
-<a class="reference internal" href="dataservices.html"><span class="doc std std-doc">Data Services</span></a> section.</p>
-<div class="figure align-default" id="gleaner-ds">
-<img alt="../_images/gleaner2.png" src="../_images/gleaner2.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Gleaner Data Service Activity Workflow</span><a class="headerlink" href="#gleaner-ds" title="Permalink to this image">¶</a></p>
-</div>
-<p>Typically, a user would wish to run the full Gleaner DS stack which supports
-both the indexing process and the serving of the resulting data warehouse and graph
-database capacity.</p>
-<p>Combined, these would then look like the following where the indexing and
-data services shared a common object store.</p>
-<div class="figure align-default" id="gleaner-isds">
-<img alt="../_images/gleaner3.png" src="../_images/gleaner3.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Gleaner Indexing and Data Service Combined</span><a class="headerlink" href="#gleaner-isds" title="Permalink to this image">¶</a></p>
-</div>
-<p>This setup show in the above figure is the typical setup for Gleaner and is
-detailed in the <a class="reference internal" href="qstart.html"><span class="doc std std-doc">Quick Start</span></a> section.</p>
-<div class="section" id="object-store-pattern">
-<h3>Object store pattern<a class="headerlink" href="#object-store-pattern" title="Permalink to this headline">¶</a></h3>
-<p>Within in the object store the following digital object pattern is used.<br />
-This is based on the work of the RDA Digital Fabric working group.</p>
-<div class="figure align-default" id="gleaner-do">
-<img alt="../_images/do1.png" src="../_images/do1.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Gleaner Digital Object Pattern</span><a class="headerlink" href="#gleaner-do" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="gleaner-web-ui-wui">
-<h2>Gleaner Web UI (WUI)<a class="headerlink" href="#gleaner-web-ui-wui" title="Permalink to this headline">¶</a></h2>
-<p>The user of the index may take several forms.  A user may be a software developer creating a web based
-interface to the generated index.  It may also be an end user accessing the index (indexes) through notebooks
-or special clients.</p>
-<p>Those wishing to run a web site can augemnt the compose files to run their
-preferred web server, object server (to serve files from the object store) or
-software such as node or others to support their deployment pattern.</p>
-<div class="figure align-default" id="gleaner-wui">
-<img alt="../_images/gleaner4.png" src="../_images/gleaner4.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Gleaner Optional Web UI</span><a class="headerlink" href="#gleaner-wui" title="Permalink to this image">¶</a></p>
-</div>
 </div>
 </div>
 
