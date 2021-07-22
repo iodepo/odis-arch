@@ -83,7 +83,7 @@ for JSON-LD data graphs.  It will catch basic errors of syntax and use.  Note, i
 as using properties on types that are out of range.  Tools like the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) are better at that.  Also the documents and validation material created here OIH will also allow for that sort of testing and feedback.  
 
 Providers may also wish to provide content negotiation for type application/ld+json 
-for these resources. Some indexers,  like Gleaner, will attempt to negotiate for i
+for these resources. Some indexers,  like Gleaner, will attempt to negotiate for
 the specific serialization and this will likely lighten the load on the servers going forward.
 
 
@@ -113,7 +113,7 @@ the [JSONschema.net tool](https://jsonschema.net/).
 
 The results of the above can then been loaded into the online JSON-Editor at https://json-editor.github.io/json-editor/. (Ref: [https://github.com/json-editor/json-editor](https://github.com/json-editor/json-editor))
 
-The results of this then can be load into https://json-ld.org/playground/ to validate that we have well formed JSON-LD.
+The results of this then can be loaded into https://json-ld.org/playground/ to validate that we have well formed JSON-LD.
 
 Though this workflow is rather crude and manual it exposes a route to a defined workflow based around established schema that leverages other tools and software libraries to generate a workable tool.
 

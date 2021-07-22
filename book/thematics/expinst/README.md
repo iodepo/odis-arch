@@ -155,6 +155,10 @@ jbutils.show_graph(framed)
 
 ## Example: Institution Graph
 
+Here we have an example of an data graph for type [schema.org/Organization](https://schema.org/Organization).  
+For the identifier we are using the a GRID, but this could also be something like a ROR.  
+
+
 ```{literalinclude} ./graphs/organization.json
 :linenos:
 ```

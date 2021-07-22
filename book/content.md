@@ -120,3 +120,5 @@ Simplified architecture also means easier development of tools and interfaces to
 present the data.  Allowing the presentation of samples and their information in
 a manner aligned with a given community's needs.    A simplified architecture
 aids sustainability from both a technical and financial perspective.  
+
+
