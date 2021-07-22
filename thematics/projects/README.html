@@ -169,7 +169,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../terms/list.html">
-   Support 3: Lists
+   Support 3: Keywords &amp; Defined Terms
   </a>
  </li>
  <li class="toctree-l1">
@@ -524,6 +524,13 @@
      Details: Authoritative Reference
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#full-research-project">
+   Full Research Project
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#references">
      References
@@ -552,6 +559,145 @@ Organization, subOrganization/parentOrganization to indicate project sub-structu
 </div>
 <div class="section" id="research-project">
 <h2>Research Project<a class="headerlink" href="#research-project" title="Permalink to this headline">¶</a></h2>
+<p>This is what a basic research project data graph might look like.  We have
+the full record below, but this shows some of the basics we would be
+looking for.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;ResearchProject&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{}</span> 
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/resproj/X&quot;,
+    &quot;@type&quot;: &quot;ResearchProject&quot;,
+    &quot;description&quot;: &quot;Repo description ... &quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
+        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
+    },
+    &quot;legalName&quot;: &quot;Example Data Repository&quot;,
+    &quot;name&quot;: &quot;ExDaRepo&quot;,
+    &quot;url&quot;: &quot;https://www.example-data-repository.org&quot;
+}
+</pre></div>
+</div>
+<img alt="../../_images/README_1_1.svg" src="../../_images/README_1_1.svg" /></div>
+</div>
+<div class="section" id="details-authoritative-reference">
+<h3>Details: Authoritative Reference<a class="headerlink" href="#details-authoritative-reference" title="Permalink to this headline">¶</a></h3>
+<p>For each profile there are a few key elements we need to know about.  One
+key element is what the authoritative reference or canonical identifier is for
+a resource.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;ResearchProject&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/resproj/X&quot;,
+    &quot;@type&quot;: &quot;ResearchProject&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
+        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/README_3_12.svg" src="../../_images/README_3_12.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="full-research-project">
+<h2>Full Research Project<a class="headerlink" href="#full-research-project" title="Permalink to this headline">¶</a></h2>
+<p>Here is what our full record looks like.  We have added in several
+more nodes to cover things like funding source, policy connections,
+spatial area served and parent organization.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -656,11 +802,11 @@ Organization, subOrganization/parentOrganization to indicate project sub-structu
     <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/logo.jpg&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Re3data DOI: 10.17616/R37P4C&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.17616/R37P4C&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.17616/R37P4C&quot;</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
   <span class="p">},</span>
   <span class="s2">&quot;contactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
@@ -757,71 +903,7 @@ Organization, subOrganization/parentOrganization to indicate project sub-structu
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/README_1_02.svg" src="../../_images/README_1_02.svg" /></div>
-</div>
-<div class="section" id="details-authoritative-reference">
-<h3>Details: Authoritative Reference<a class="headerlink" href="#details-authoritative-reference" title="Permalink to this headline">¶</a></h3>
-<p>For each profile there are a few key elements we need to know about.  One
-key element is what the authoritative reference or canonical identifier is for
-a resource.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;ResearchProject&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
-
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/id/resproj/X&quot;,
-    &quot;@type&quot;: &quot;ResearchProject&quot;,
-    &quot;identifier&quot;: {
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;name&quot;: &quot;Re3data DOI: 10.17616/R37P4C&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/doi&quot;,
-        &quot;url&quot;: &quot;https://doi.org/10.17616/R37P4C&quot;,
-        &quot;value&quot;: &quot;doi:10.17616/R37P4C&quot;
-    }
-}
-</pre></div>
-</div>
-<img alt="../../_images/README_3_12.svg" src="../../_images/README_3_12.svg" /></div>
-</div>
+<img alt="../../_images/README_5_0.svg" src="../../_images/README_5_0.svg" /></div>
 </div>
 <div class="section" id="references">
 <h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>

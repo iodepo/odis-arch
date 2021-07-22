@@ -169,7 +169,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../terms/list.html">
-   Support 3: Lists
+   Support 3: Keywords &amp; Defined Terms
   </a>
  </li>
  <li class="toctree-l1">
@@ -520,6 +520,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords">
+     Keywords
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#references">
      References
     </a>
@@ -583,7 +588,13 @@ Map typing itself may aid in narrowing search requests later to a specific creat
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
     <span class="p">},</span>
@@ -599,16 +610,22 @@ Map typing itself may aid in narrowing search requests later to a specific creat
         <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
         <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
     <span class="p">},</span>
-    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
+    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
         <span class="p">},</span>
-        <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
-    <span class="p">}</span>
+        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;North Atlantic Ocean&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -700,6 +717,77 @@ a resource.</p>
 </pre></div>
 </div>
 <img alt="../../_images/maps_3_1.svg" src="../../_images/maps_3_1.svg" /></div>
+</div>
+</div>
+<div class="section" id="keywords">
+<h3>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h3>
+<p>We can see three different approaches here to defining keywords.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;Map&quot;,
+    &quot;keywords&quot;: [
+        {
+            &quot;@id&quot;: &quot;http://purl.org/dc/dcmitype/Image&quot;,
+            &quot;@type&quot;: &quot;DefinedTerm&quot;,
+            &quot;inDefinedTermSet&quot;: &quot;http://purl.org/dc/terms/DCMIType&quot;,
+            &quot;name&quot;: &quot;Image&quot;,
+            &quot;termCode&quot;: &quot;Image&quot;
+        },
+        &quot;Region X&quot;,
+        {
+            &quot;@id&quot;: &quot;https://www.wikidata.org/wiki/Q350134&quot;,
+            &quot;@type&quot;: &quot;URL&quot;,
+            &quot;name&quot;: &quot;North Atlantic Ocean&quot;,
+            &quot;url&quot;: &quot;https://www.wikidata.org/wiki/Q350134&quot;
+        }
+    ]
+}
+</pre></div>
+</div>
+<img alt="../../_images/maps_5_1.svg" src="../../_images/maps_5_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="references">

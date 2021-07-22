@@ -169,7 +169,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../terms/list.html">
-   Support 3: Lists
+   Support 3: Keywords &amp; Defined Terms
   </a>
  </li>
  <li class="toctree-l1">
@@ -525,6 +525,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#frame-on-publisher-and-provider">
+     Frame on publisher and provider
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#frame-on-author-type-person">
      Frame on author type Person
     </a>
@@ -609,47 +614,65 @@ for more focused creative work examples.</p>
 <span class="normal">39</span>
 <span class="normal">40</span>
 <span class="normal">41</span>
-<span class="normal">42</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;contributor&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.foo.org/orgID&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr Uta Passow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;givenName&quot;</span><span class="p">:</span> <span class="s2">&quot;Uta&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;familyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Passow&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
     <span class="p">},</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;contributor&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.foo.org/orgID&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr Uta Passow&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;givenName&quot;</span><span class="p">:</span> <span class="s2">&quot;Uta&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;familyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Passow&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span>
-      <span class="p">{</span>
-        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
-      <span class="p">},</span>
-    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> 
-       <span class="p">{</span>
-           <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-           <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-               <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
-           <span class="p">},</span>
-           <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
-       <span class="p">}</span>
+    <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryB.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryA.org&quot;</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -742,6 +765,73 @@ a resource.</p>
 <img alt="../../_images/README_3_1.svg" src="../../_images/README_3_1.svg" /></div>
 </div>
 </div>
+<div class="section" id="frame-on-publisher-and-provider">
+<h3>Frame on publisher and provider<a class="headerlink" href="#frame-on-publisher-and-provider" title="Permalink to this headline">¶</a></h3>
+<p>Our JSON-LD documents are graphs that can use framing to subset.  In this
+case we can look closer at the author property which points to a type Person.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;provider&quot;: {
+        &quot;@id&quot;: &quot;https://www.repositoryB.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Sample Data Repository Office&quot;,
+        &quot;name&quot;: &quot;SDRO&quot;,
+        &quot;sameAs&quot;: &quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;,
+        &quot;url&quot;: &quot;https://www.sample-data-repository.org&quot;
+    },
+    &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.repositoryA.org&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/README_5_1.svg" src="../../_images/README_5_1.svg" /></div>
+</div>
+</div>
 <div class="section" id="frame-on-author-type-person">
 <h3>Frame on author type Person<a class="headerlink" href="#frame-on-author-type-person" title="Permalink to this headline">¶</a></h3>
 <p>Our JSON-LD documents are graphs that can use framing to subset.  In this
@@ -802,7 +892,7 @@ case we can look closer at the author property which points to a type Person.</p
 }
 </pre></div>
 </div>
-<img alt="../../_images/README_5_1.svg" src="../../_images/README_5_1.svg" /></div>
+<img alt="../../_images/README_7_1.svg" src="../../_images/README_7_1.svg" /></div>
 </div>
 </div>
 <div class="section" id="references">

@@ -169,7 +169,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../terms/list.html">
-   Support 3: Lists
+   Support 3: Keywords &amp; Defined Terms
   </a>
  </li>
  <li class="toctree-l1">
@@ -519,6 +519,11 @@
      Details: Authoritative Reference
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#details-subjectof">
+     Details: subjectOf
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -541,10 +546,13 @@
 <h1>Vessels<a class="headerlink" href="#vessels" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Exploring using <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.  Note that <a class="reference external" href="http://schema.org">schema.org</a>
-is a very broad vocabulary and as such specific concepts like research vessel is
-not well aligned.</p>
-<p>One approach we can use, however, is to leverage <a class="reference external" href="http://schema.org">schema.org</a> a discovery layer
+<p>OIH is exploring how we might leverage <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.<br />
+Note that schema.orgis a very broad vocabulary and as such specific concepts
+like research vessel is not well aligned.</p>
+<p>Our goal is to use <a class="reference external" href="http://schema.org">schema.org</a> as a simple upper level vocabulary that allows
+us to describe research vessels in a simple and then connect off to more
+detailed information on them.</p>
+<p>So the goal here is to show how we can use <a class="reference external" href="http://schema.org">schema.org</a> as a discovery layer
 and link more directly to detailed institutional metadata records.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -635,7 +643,7 @@ and link more directly to detailed institutional metadata records.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/README_1_06.svg" src="../../_images/README_1_06.svg" /></div>
+<img alt="../../_images/README_1_05.svg" src="../../_images/README_1_05.svg" /></div>
 </div>
 <div class="section" id="details-authoritative-reference">
 <h3>Details: Authoritative Reference<a class="headerlink" href="#details-authoritative-reference" title="Permalink to this headline">¶</a></h3>
@@ -699,6 +707,74 @@ a resource.</p>
 </pre></div>
 </div>
 <img alt="../../_images/README_3_13.svg" src="../../_images/README_3_13.svg" /></div>
+</div>
+</div>
+<div class="section" id="details-subjectof">
+<h3>Details: subjectOf<a class="headerlink" href="#details-subjectof" title="Permalink to this headline">¶</a></h3>
+<p>Like SOS, we are recommending the use of subjectOf to link a simple
+<a class="reference external" href="http://Schema.org">Schema.org</a> type to a more detailed metadata description record.  This
+allows us to use the easy discovery layer in <a class="reference external" href="http://Schema.org">Schema.org</a> but connect to
+domain specific metadata records.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Vehicle&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/X&quot;,
+    &quot;@type&quot;: &quot;Vehicle&quot;,
+    &quot;subjectOf&quot;: {
+        &quot;@type&quot;: &quot;DataDownload&quot;,
+        &quot;dateModified&quot;: &quot;2019-06-12T14:44:15Z&quot;,
+        &quot;description&quot;: &quot;Metadata describing the vessel&quot;,
+        &quot;encodingFormat&quot;: [
+            &quot;application/xml&quot;,
+            &quot;https://foo.org/ship01&quot;
+        ],
+        &quot;name&quot;: &quot;external-metadata.xml&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/README_5_12.svg" src="../../_images/README_5_12.svg" /></div>
 </div>
 </div>
 </div>

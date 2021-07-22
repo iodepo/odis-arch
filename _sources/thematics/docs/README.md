@@ -113,6 +113,54 @@ jbutils.show_graph(framed)
 
 ```
 
+
+### Frame on publisher and provider
+
+Our JSON-LD documents are graphs that can use framing to subset.  In this 
+case we can look closer at the author property which points to a type Person. 
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/creativework.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "CreativeWork",
+  "provider": {},
+  "publisher": {}
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
 ### Frame on author type Person
 
 Our JSON-LD documents are graphs that can use framing to subset.  In this 

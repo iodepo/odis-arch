@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Defined Terms &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Keywords and Defined Terms &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -169,7 +169,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Support 3: Lists
+   Support 3: Keywords &amp; Defined Terms
   </a>
  </li>
  <li class="toctree-l1">
@@ -515,8 +515,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#organization-in-list">
-   Organization in List
+  <a class="reference internal nav-link" href="#keywords">
+   Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defined-terms">
+   Defined Terms
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -535,10 +540,92 @@
         
               <div>
                 
-  <div class="section" id="defined-terms">
-<h1>Defined Terms<a class="headerlink" href="#defined-terms" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="keywords-and-defined-terms">
+<h1>Keywords and Defined Terms<a class="headerlink" href="#keywords-and-defined-terms" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>This section is looking at how the keywords could be connected
+with Defined Terms that point to external vocabularies that follow
+a vocabulary publishing patterns like at the W3C
+<a class="reference external" href="https://www.w3.org/TR/swbp-vocab-pub/">Best Practice Recipes for Publishing RDF Vocabularies</a>.</p>
+<p>The pattern breaks down a bit when attempting to connect with things like
+the <a class="reference external" href="https://earthdata.nasa.gov/earth-observation-data/find-data/idn/gcmd-keywords">Global Change Master Directory keywords</a>.</p>
+<p>A person could adapt the pattern to connect things like:
+<a class="reference external" href="https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY%3Em_scheme=Earth%20Science">EARTH SCIENCE &gt; OCEANS &gt; OCEAN CHEMISTRY</a>.  This does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.</p>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>We can see three different approaches here to defining keywords.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;Map&quot;,
+    &quot;keywords&quot;: [
+        {
+            &quot;@id&quot;: &quot;http://purl.org/dc/dcmitype/Image&quot;,
+            &quot;@type&quot;: &quot;DefinedTerm&quot;,
+            &quot;inDefinedTermSet&quot;: &quot;http://purl.org/dc/terms/DCMIType&quot;,
+            &quot;name&quot;: &quot;Image&quot;,
+            &quot;termCode&quot;: &quot;Image&quot;
+        },
+        &quot;Region X&quot;,
+        {
+            &quot;@id&quot;: &quot;https://www.wikidata.org/wiki/Q350134&quot;,
+            &quot;@type&quot;: &quot;URL&quot;,
+            &quot;name&quot;: &quot;North Atlantic Ocean&quot;,
+            &quot;url&quot;: &quot;https://www.wikidata.org/wiki/Q350134&quot;
+        }
+    ]
+}
+</pre></div>
+</div>
+<img alt="../../_images/list_1_1.svg" src="../../_images/list_1_1.svg" /></div>
+</div>
+</div>
+<div class="section" id="defined-terms">
+<h2>Defined Terms<a class="headerlink" href="#defined-terms" title="Permalink to this headline">¶</a></h2>
 <p>During generation of the structured data a provide may wish to
 either use or publish a set of controlled vocabulary terms or
 a similar set.</p>
@@ -580,16 +667,14 @@ types in <a class="reference external" href="http://Schema.org">Schema.org</a>. 
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
         <span class="p">{</span>
-                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+                <span class="p">}</span>
         <span class="p">},</span>
         <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
-                        <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;Book&quot;</span>
-                <span class="p">],</span>
+                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span>
         <span class="p">},</span>
@@ -610,130 +695,6 @@ types in <a class="reference external" href="http://Schema.org">Schema.org</a>. 
 <span class="p">]</span>
 </pre></div>
 </td></tr></table></div>
-</div>
-<div class="section" id="organization-in-list">
-<h2>Organization in List<a class="headerlink" href="#organization-in-list" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-  <span class="p">},</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_for_this_metadata_record&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ItemList&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://multivarki.ru?filters%5Bprice%5D%5BLTE%5D=39600&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numberOfItems&quot;</span><span class="p">:</span> <span class="s2">&quot;315&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;itemListElement&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ResearchProject&quot;</span>
-            <span class="p">],</span>
-            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The Sample Data Repository Service...&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">&quot;Biological Oceanography&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;Chemical Oceanography&quot;</span>
-            <span class="p">],</span>
-            <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Product&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Product name&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/orglist.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/list_1_0.svg" src="../../_images/list_1_0.svg" /></div>
-</div>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
