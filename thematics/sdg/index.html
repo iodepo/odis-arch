@@ -713,7 +713,19 @@ predicates.</p>
 </div>
 <div class="section" id="subjectof">
 <h3>subjectOf<a class="headerlink" href="#subjectof" title="Permalink to this headline">¶</a></h3>
-<p>Lets take a look at subjectOf.</p>
+<p>Lets take a look at subjectOf.  In this case we are using subjectOf to express
+a connection to a UN SDG.  This, subjectOf, could also be used to connect
+documents describing the policy and principles of an organization or additional
+metadata for a creative work.  When we look at <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a>
+we can see we are allowed are allowed to use it on any type Thing, but must point
+to a CreativeWork or Event.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
+subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
+as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the
+context of the range of subjectOf.   Refernece thematic type <a class="reference internal" href="../training/README.html"><span class="doc std std-doc">Training</span></a></p>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>

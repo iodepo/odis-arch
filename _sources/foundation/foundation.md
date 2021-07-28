@@ -61,6 +61,16 @@ jbutils.show_graph(compacted)
 ```
 
 
+```{note}
+A small note on nomenclature. In Schema.org, as in ontologies, the class or type
+names of Things will be uppercase.  So, for example, in the above JSON-LD data graph,
+this is describing a resource of type `CreativeWork`.   So the type CreativeWork will
+start with an uppercase letter.  The property `name` is a property of the type and 
+properties like this will be lowercase. 
+```
+
+
+
 ## The Context
 
 The context is where the terms used in a document are connected to definitions and identifiers for them.
@@ -70,11 +80,6 @@ If you wish to dive into the details of the context check out the
 The context part of this document is highlighted below. 
 
 
-```{note}
-This section will be the same for all
-the documents described in OIH documentation with the exception of the spatial patterns.  
-```
-
 
 
 ```{literalinclude} ./graphs/simple.json
@@ -82,9 +87,16 @@ the documents described in OIH documentation with the exception of the spatial p
 :linenos:
 ```
 
-As noted, for the spatial patterns we add in the OGC context to all us to use terms from that vocabulary.
-Below we can see the addition of the geosparql context in line 4 and the use of the vocabulary, using
-the defined geosparql: prefix in lines 9, 11 and 15.
+
+```{note}
+This @context section will be the same for all
+the documents described in OIH documentation with the exception of the spatial patterns.  
+```
+
+
+As justed noted, for the spatial patterns we add in the OGC context 
+to all us to use terms from that vocabulary.
+Below we can see the addition of the geosparql context in line 4 and the use of the vocabulary, using the defined geosparql: prefix in lines 9, 11 and 15.
 
 If we wanted to use other vocabularies like DCAT or FOAF, we would add them to the context with a 
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
@@ -167,3 +179,30 @@ this is type  [CreativeWork](https://schema.org/CreativeWork).  So any of the pr
 seen at the Schema.org site can be used.   The key properties of value to the OIH implementation can then 
 be found, for this type, in the [Documents thematic type](../thematics/docs/README.md).
 
+### Domain and range
+
+The domain of a property identifies the type of object it can be applied to.  
+So if the domain of a property like [schema.org/knowsAbout](https://schema.org/knowsAbout)
+is Person and Organization.  Then that property can only be used on those types.
+For example, it would not be correct to use knowsAbout on a resource of type Dataset.
+
+The range of a property identifies the type of object the property can point to.  In 
+the case of knowAbout, we see its range as Text, Thing or URL.  This means the property 
+can point to a Text, Thing or URL object.  
+
+In schema.org, the domain will be identified as "Used on these types", and the 
+range will be identified as "Values expected to be one of these types".  You can see
+this at the [schema.org/knowsAbout](https://schema.org/knowsAbout) page.
+
+### Thing and DataType
+
+The [Thing](https://schema.org/Thing) and [Datatype](https://schema.org/Datatype) types 
+are two special types we should mention.  Thing is the upper level and most generic
+type in schema.org.   Everything in schema.org is descended from Thing.  So when
+knowsAbout says its range includes Thing, it means you can use any type in schema.org
+as the value of that property.
+
+DataType is the basic data type Thing in schema.org and is a subclass of rdfs:Class.
+A DataType includes things like Integers, Strings, DateTime, etc.  So, using again
+knowsAbout, we see the range includes not only Thing by also the DataTypes Text 
+and URL, where URL is actually a sub-type of Text. 

@@ -75,7 +75,20 @@ jbutils.show_graph(compacted)
 
 ### subjectOf
 
-Lets take a look at subjectOf.
+Lets take a look at subjectOf.  In this case we are using subjectOf to express
+a connection to a UN SDG.  This, subjectOf, could also be used to connect 
+documents describing the policy and principles of an organization or additional 
+metadata for a creative work.  When we look at [subjectOf](https://schema.org/subjectOf)
+we can see we are allowed are allowed to use it on any type Thing, but must point
+to a CreativeWork or Event.  
+
+
+```{note}
+Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
+subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
+as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the 
+context of the range of subjectOf.   Refernece thematic type [Training](../training/README.md)
+```
 
 ```{code-cell}
 :tags: [hide-input]

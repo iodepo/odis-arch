@@ -623,7 +623,10 @@ for more focused creative work examples.</p>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
   <span class="p">},</span>
@@ -670,8 +673,11 @@ for more focused creative work examples.</p>
     <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
     <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
   <span class="p">},</span>
+  <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/CC0-1.0&quot;</span><span class="p">,</span>
   <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryA.org&quot;</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.publishingrus.org&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -824,7 +830,9 @@ case we can look closer at the author property which points to a type Person.</p
         &quot;url&quot;: &quot;https://www.sample-data-repository.org&quot;
     },
     &quot;publisher&quot;: {
-        &quot;@id&quot;: &quot;https://www.repositoryA.org&quot;
+        &quot;@id&quot;: &quot;https://www.publishingrus.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Some Institute&quot;
     }
 }
 </pre></div>

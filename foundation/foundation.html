@@ -539,6 +539,16 @@
      Other properties
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#domain-and-range">
+     Domain and range
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thing-and-datatype">
+     Thing and DataType
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -614,6 +624,14 @@ to add them.</p>
 <div class="cell_output docutils container">
 <img alt="../_images/foundation_1_0.svg" src="../_images/foundation_1_0.svg" /></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A small note on nomenclature. In Schema.org, as in ontologies, the class or type
+names of Things will be uppercase.  So, for example, in the above JSON-LD data graph,
+this is describing a resource of type <code class="docutils literal notranslate"><span class="pre">CreativeWork</span></code>.   So the type CreativeWork will
+start with an uppercase letter.  The property <code class="docutils literal notranslate"><span class="pre">name</span></code> is a property of the type and
+properties like this will be lowercase.</p>
+</div>
 </div>
 <div class="section" id="the-context">
 <h2>The Context<a class="headerlink" href="#the-context" title="Permalink to this headline">¶</a></h2>
@@ -621,11 +639,6 @@ to add them.</p>
 If you wish to dive into the details of the context check out the
 <a class="reference external" href="https://www.w3.org/TR/json-ld/#the-context">W3 JSON-LD 1.1 Recommendations Context section</a>.</p>
 <p>The context part of this document is highlighted below.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section will be the same for all
-the documents described in OIH documentation with the exception of the spatial patterns.</p>
-</div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -647,9 +660,14 @@ the documents described in OIH documentation with the exception of the spatial p
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>As noted, for the spatial patterns we add in the OGC context to all us to use terms from that vocabulary.
-Below we can see the addition of the geosparql context in line 4 and the use of the vocabulary, using
-the defined geosparql: prefix in lines 9, 11 and 15.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This &#64;context section will be the same for all
+the documents described in OIH documentation with the exception of the spatial patterns.</p>
+</div>
+<p>As justed noted, for the spatial patterns we add in the OGC context
+to all us to use terms from that vocabulary.
+Below we can see the addition of the geosparql context in line 4 and the use of the vocabulary, using the defined geosparql: prefix in lines 9, 11 and 15.</p>
 <p>If we wanted to use other vocabularies like DCAT or FOAF, we would add them to the context with a
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
 following the same prefix:term pattern.</p>
@@ -820,6 +838,31 @@ a property on the CreateWork type, starts with a lower case n.</p>
 this is type  <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>.  So any of the properties
 seen at the Schema.org site can be used.   The key properties of value to the OIH implementation can then
 be found, for this type, in the <a class="reference internal" href="../thematics/docs/README.html"><span class="doc std std-doc">Documents thematic type</span></a>.</p>
+</div>
+<div class="section" id="domain-and-range">
+<h3>Domain and range<a class="headerlink" href="#domain-and-range" title="Permalink to this headline">¶</a></h3>
+<p>The domain of a property identifies the type of object it can be applied to.<br />
+So if the domain of a property like <a class="reference external" href="https://schema.org/knowsAbout">schema.org/knowsAbout</a>
+is Person and Organization.  Then that property can only be used on those types.
+For example, it would not be correct to use knowsAbout on a resource of type Dataset.</p>
+<p>The range of a property identifies the type of object the property can point to.  In
+the case of knowAbout, we see its range as Text, Thing or URL.  This means the property
+can point to a Text, Thing or URL object.</p>
+<p>In schema.org, the domain will be identified as “Used on these types”, and the
+range will be identified as “Values expected to be one of these types”.  You can see
+this at the <a class="reference external" href="https://schema.org/knowsAbout">schema.org/knowsAbout</a> page.</p>
+</div>
+<div class="section" id="thing-and-datatype">
+<h3>Thing and DataType<a class="headerlink" href="#thing-and-datatype" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://schema.org/Thing">Thing</a> and <a class="reference external" href="https://schema.org/Datatype">Datatype</a> types
+are two special types we should mention.  Thing is the upper level and most generic
+type in schema.org.   Everything in schema.org is descended from Thing.  So when
+knowsAbout says its range includes Thing, it means you can use any type in schema.org
+as the value of that property.</p>
+<p>DataType is the basic data type Thing in schema.org and is a subclass of rdfs:Class.
+A DataType includes things like Integers, Strings, DateTime, etc.  So, using again
+knowsAbout, we see the range includes not only Thing by also the DataTypes Text
+and URL, where URL is actually a sub-type of Text.</p>
 </div>
 </div>
 </div>
