@@ -3,7 +3,7 @@
 ## Options
 
 While [Gleaner](https://gleaner.io/) will be used during initial OIH development it is not
-the only approach.   There are many other tools that
+the only or required approach.   The web architecture foundation means there are many other tools that
 can be used and might be leveraged in a production environment including:
 
 * [Extrunct](https://github.com/scrapinghub/extruct)
@@ -16,4 +16,4 @@ can be used and might be leveraged in a production environment including:
 * [OD Archiver](https://archiver.ai.wu.ac.at/)
 
 These different tools may better fit into the workflow and available
-skill sets for a group.
+skill sets for a group.  Distinct from these is [DataONE Plus](https://www.dataone.org/plus/) which is a "Search as a Service" offering from DataONE.  
