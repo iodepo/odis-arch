@@ -595,7 +595,7 @@ implement this approach.  See the section:
 architecture patterns to expose metadata about resources of interest to the
 community.  The primary tasks include:</p>
 <ul>
-<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH
+<li><p>Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH
 guidance to express the structured metadata for a resource.  This step will
 require experience with using the existing metadata resources within an
 organization.  So any necessary skills needed to access or query existing
@@ -611,8 +611,8 @@ published resource.   The SCRIPT tag pattern is:</p>
 </li>
 <li><p>Additionally these resources that are marked up with these tags and JSON-LD
 documents should be expressed in an XML sitemap file.  This should follow the
-guidance at <a class="reference external" href="https://www.sitemaps.org/">https://www.sitemaps.org/</a>.  It should also include a lastmod node
-element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should
+guidance at https://www.sitemaps.org/.  It should also include a lastmod node
+element as described at https://www.sitemaps.org/protocol.html which should
 indicate the date the resource metadata was last updated and published to the
 web.</p></li>
 <li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH
@@ -624,7 +624,7 @@ JSON-LD.  OIH will provide the necessary templates for the tools to use
 against the authored JSON-LD documents.</p></li>
 </ul>
 <p>Information on the sources, standards and vocabularies to be used can be found
-at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
+at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs</p>
 </div>
 <div class="section" id="including-json-ld-in-your-resource-page">
 <h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Permalink to this headline">¶</a></h3>
@@ -670,7 +670,7 @@ thematic sections for more examples for a given thematic area.</p>
 section</a>.  To view all the types
 being developed reference
 the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/schema/thematics">Thematic section</a>.</p>
-<p>These JSON-LD documents leverage <a class="reference external" href="http://schema.org">schema.org</a> as the primary vocabulary.
+<p>These JSON-LD documents leverage schema.org as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.</p>
 <div class="section" id="json-ld-tools-and-references">
 <h4>JSON-LD Tools and References<a class="headerlink" href="#json-ld-tools-and-references" title="Permalink to this headline">¶</a></h4>
@@ -722,9 +722,9 @@ this approach in a more dedicated tool/manner.</p>
 load this into something like
 the <a class="reference external" href="https://jsonschema.net/">JSONschema.net tool</a>.</p>
 <p>The results of the above can then been loaded into the online JSON-Editor at
-<a class="reference external" href="https://json-editor.github.io/json-editor/">https://json-editor.github.io/json-editor/</a>. (Ref:
+https://json-editor.github.io/json-editor/. (Ref:
 <a class="reference external" href="https://github.com/json-editor/json-editor">https://github.com/json-editor/json-editor</a>)</p>
-<p>The results of this then can be loaded into <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a> to
+<p>The results of this then can be loaded into https://json-ld.org/playground/ to
 validate that we have well formed JSON-LD.</p>
 <p>Though this workflow is rather crude and manual it exposes a route to a defined
 workflow based around established schema that leverages other tools and
@@ -742,7 +742,7 @@ software libraries to generate a workable tool.</p>
 <h4>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">¶</a></h4>
 <p>OPTIONAL: Providers may decide to generate or modify their robots.txt
 file to provide guidance to the aggregators.
-The plan is to use the Gleaner software (<a class="reference external" href="http://gleaner.io">gleaner.io</a>) as well as some
+The plan is to use the Gleaner software (gleaner.io) as well as some
 Python based notebooks and a few other approaches in this test.</p>
 <p>Gleaner uses an agent string of EarthCube_DataBot/1.0 and this can be
 used a robots.txt file to specify alternative sitemaps and guidance.
@@ -772,7 +772,7 @@ to avoid indexing test pages by commercial providers.  You may wish
 to do this during testing or for other reasons.  Otherwise,
 a sitemap.xml file exposed in general from somewhere in your site is
 perfectly fine.</p>
-<p>Information on the sitemap structure can be found at <a class="reference external" href="http://sitemaps.org">sitemaps.org</a>.</p>
+<p>Information on the sitemap structure can be found at sitemaps.org.</p>
 <p>It is encouraged to use the sitemap lastmod node
 to provide guidance to indexers on page updates.
 Additionally indexers may test ways to evaluate additions and

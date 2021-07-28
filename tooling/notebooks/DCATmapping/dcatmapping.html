@@ -549,7 +549,7 @@
                 
   <div class="section" id="mapping">
 <h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
-<p>Testing approaches to mapping DCAT to <a class="reference external" href="http://schema.org">schema.org</a></p>
+<p>Testing approaches to mapping DCAT to schema.org</p>
 <p>Current thinking</p>
 <ul class="simple">
 <li><p>JSON-LD Frame with default values</p></li>
@@ -557,30 +557,30 @@
 </ul>
 <p>Mapping references</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.w3.org/2015/spatial/wiki/ISO_19115_-">https://www.w3.org/2015/spatial/wiki/ISO_19115_-</a><em>DCAT</em>-_Schema.org_mapping</p></li>
-<li><p><a class="reference external" href="https://ec-jrc.github.io/dcat-ap-to-schema-org/">https://ec-jrc.github.io/dcat-ap-to-schema-org/</a></p></li>
-<li><p><a class="reference external" href="https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld">https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld</a></p></li>
+<li><p>https://www.w3.org/2015/spatial/wiki/ISO_19115_-<em>DCAT</em>-_Schema.org_mapping</p></li>
+<li><p>https://ec-jrc.github.io/dcat-ap-to-schema-org/</p></li>
+<li><p>https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld</p></li>
 </ul>
 <div class="section" id="methodology">
 <h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
 <p>We will load the DCAT JOSN-LD example and explore approaches to converting this to a form that can be used for
-<a class="reference external" href="http://schema.org">schema.org</a>.</p>
+schema.org.</p>
 <p>Possible approaches include</p>
 <ul class="simple">
 <li><p>Inferencing</p>
 <ul>
-<li><p>ref: <a class="reference external" href="https://derwen.ai/docs/kgl/infer/">https://derwen.ai/docs/kgl/infer/</a></p></li>
+<li><p>ref: https://derwen.ai/docs/kgl/infer/</p></li>
 </ul>
 </li>
 <li><p>SPARQL CONSTRUCT</p>
 <ul>
-<li><p><a class="reference external" href="https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html">https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html</a></p></li>
-<li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
+<li><p>https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html</p></li>
+<li><p>https://derwen.ai/docs/kgl/ex4_0/</p></li>
 </ul>
 </li>
 <li><p>JSON-LD APIs</p>
 <ul>
-<li><p><a class="reference external" href="https://w3c.github.io/json-ld-framing/#omit-default-flag">https://w3c.github.io/json-ld-framing/#omit-default-flag</a></p></li>
+<li><p>https://w3c.github.io/json-ld-framing/#omit-default-flag</p></li>
 </ul>
 </li>
 <li><p>Context modification</p></li>
@@ -628,7 +628,7 @@ frame or otehrwise cast to new namespace.</p>
 <h2>SPARQL CONSTRUCT example<a class="headerlink" href="#sparql-construct-example" title="Permalink to this headline">¶</a></h2>
 <p>Refs:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
+<li><p>https://derwen.ai/docs/kgl/ex4_0/</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -933,7 +933,7 @@ ex:SquareRectangle a ex:Rectangle,
 <h2>Notes on SHACL AF Rules<a class="headerlink" href="#notes-on-shacl-af-rules" title="Permalink to this headline">¶</a></h2>
 <p>We need to add in PROV triples in this process to note the generation of these triples and
 the souce IRI tht results in the product IRI and the actor (?reference)</p>
-<p>Maybe review: <a class="reference external" href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource">https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource</a></p>
+<p>Maybe review: https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;dcat.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>

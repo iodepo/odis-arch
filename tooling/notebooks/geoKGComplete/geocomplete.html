@@ -542,16 +542,16 @@
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>This is a simple test notebook to explore approachs to associating geometries in the OIH graph with named ocean regions.
-From Marine Regions (<a class="reference external" href="https://www.marineregions.org/">https://www.marineregions.org/</a>) we downloaded the IHO Sea Areas dataset.  This is a shapefile that is converted to WKT and loaded into a geopandas dataframe.</p>
+From Marine Regions (https://www.marineregions.org/) we downloaded the IHO Sea Areas dataset.  This is a shapefile that is converted to WKT and loaded into a geopandas dataframe.</p>
 <p>We then create a few points to compare against this.   In this test we are only comparing points to the polygons.  So this is what is called a “point in polygon” test.   Later revisions to this could do polygon intersection or other tests.  This is only a proof of concept notebook.</p>
 <p>We then generate a new dataframe based on the matches.   These matches could then be fed back into the graph as a sort of “Knowledge Graph Completion” workflow.  Alternatively we can do gepsparql calls based on the sea WKT strings and do the search in the geosparql aware triple store.</p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/set_operations.html">https://geopandas.org/docs/user_guide/set_operations.html</a></p></li>
-<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/geocoding.html">https://geopandas.org/docs/user_guide/geocoding.html</a></p></li>
-<li><p><a class="reference external" href="https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff">https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff</a></p></li>
+<li><p>https://geopandas.org/docs/user_guide/set_operations.html</p></li>
+<li><p>https://geopandas.org/docs/user_guide/geocoding.html</p></li>
+<li><p>https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -706,7 +706,7 @@ No discrepancies in results!
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>The generated dataframe holds the matches of the test Lat Long pairs to the named seas from the reference shape file.
 These results couild be fed back into the graph as keywords or items from a known list of terms for more explicate relation mapping.</p>
-<p>Specifically,  someting like <a class="reference external" href="https://schema.org/DefinedTerm">https://schema.org/DefinedTerm</a> where the property <a class="reference external" href="https://schema.org/DefinedTermSet">https://schema.org/DefinedTermSet</a> would point back to the Marine Regions source documents and URL.   Similarly these resources could be connected up to WikiData in a similar manner.</p>
+<p>Specifically,  someting like https://schema.org/DefinedTerm where the property https://schema.org/DefinedTermSet would point back to the Marine Regions source documents and URL.   Similarly these resources could be connected up to WikiData in a similar manner.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="p">{</span>
                 <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://geonetwork.vliz.be/geonetwork/srv/eng/catalog.search#/metadata/f4cfa278-730f-4646-b6cc-a3dceaa3a1e5&quot;</span><span class="p">,</span>
@@ -720,7 +720,7 @@ These results couild be fed back into the graph as keywords or items from a know
         <span class="p">},</span>
 </pre></div>
 </div>
-<p>For reference the WikiData resource is: <a class="reference external" href="https://www.wikidata.org/wiki/Q38684">https://www.wikidata.org/wiki/Q38684</a> which is an instance of “body of water”.  So leveraging this type and the IHO names should allow relatively reliable link detection.   Leveraging the top level Thing class in <a class="reference external" href="http://schema.org">schema.org</a> we would be looking at a simple</p>
+<p>For reference the WikiData resource is: https://www.wikidata.org/wiki/Q38684 which is an instance of “body of water”.  So leveraging this type and the IHO names should allow relatively reliable link detection.   Leveraging the top level Thing class in schema.org we would be looking at a simple</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q38684&quot;</span><span class="p">,</span>
 </pre></div>
 </div>

@@ -514,6 +514,16 @@
    About
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-interest">
+   Properties of interest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#frame-and-view-identifier-section">
+   Frame and view “identifier” section
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -529,6 +539,8 @@
 <h1>Identifier<a class="headerlink" href="#identifier" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>When using an <a class="reference external" href="https://schema.org/identifier">identifier</a> section, we are suggesting to use a <a class="reference external" href="https://schema.org/PropertyValue">PropertyValue</a> node.  In this we can
+then present several elements in context.  These are highlighted below.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -564,14 +576,14 @@
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
     <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="hll">    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+</span><span class="hll">    <span class="p">},</span>
+</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
         <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
@@ -584,6 +596,21 @@
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="properties-of-interest">
+<h2>Properties of interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this headline">¶</a></h2>
+<dl class="simple myst">
+<dt>propertyID</dt><dd><p>A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be (1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific id of the property), or (3) a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry). Standards bodies should promote a standard prefix for the identifiers of properties from their standards.</p>
+</dd>
+<dt>value</dt><dd><p>The value of the quantitative value or property value node. For PropertyValue,
+it can be ‘Text;’, ‘Number’, ‘Boolean’, or ‘StructuredValue’.</p>
+</dd>
+<dt>url (technically type URL)</dt><dd><p>URL of the item.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="frame-and-view-identifier-section">
+<h2>Frame and view “identifier” section<a class="headerlink" href="#frame-and-view-identifier-section" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>

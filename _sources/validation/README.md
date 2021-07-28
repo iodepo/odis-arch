@@ -9,8 +9,8 @@ search application and develops validation to support that.
 
 Initial approach:
 
-* Develop a base SHACL document that assess a data graph based on elements
-  needed to support search
+* Develop a base SHACL document that assess a data graph based on elements needed to support search
+* [SHACL](https://www.w3.org/TR/shacl/)
 * Leverage [SHACL Playground](https://shacl.org/playground/)
   
 To support this will need an initial data graph to work with.  The type is not
@@ -28,4 +28,3 @@ Examples of these needs include:
 
 Work this implementation can be found in the notebooks section
 [pySHACL testing](../tooling/notebooks/validation/OIH_SHACL.ipynb).
-

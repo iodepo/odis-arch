@@ -570,8 +570,8 @@ export template command.</p>
 </div>
 <div class="section" id="row-template">
 <h2>ROW TEMPLATE<a class="headerlink" href="#row-template" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Note</p>
+<p>:::{admonition} Note
+:class: tip</p>
 <p>In the following row template the entries such as:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="p">{{</span><span class="n">jsonize</span><span class="p">(</span><span class="n">cells</span><span class="p">[</span><span class="s2">&quot;Organization Description&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)}}</span>
 </pre></div>
@@ -584,7 +584,7 @@ export template command.</p>
 <p>will present the value from the noted colum, x, with no quotes around it.</p>
 <p>When generating the JSON we may or may not need to include quotes depending
 on where we are in the serialization.</p>
-</div>
+<p>:::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span> 
