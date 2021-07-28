@@ -17,8 +17,16 @@ execution:
 ## About
 
 OIH is exploring how we might leverage schema.org to describe research vessels.  
-Note that schema.orgis a very broad vocabulary and as such specific concepts 
+Note that schema.org is a very broad vocabulary and as such specific concepts 
 like research vessel is not well aligned.
+
+In Schema.org the type Vehicle is described as a device that is designed 
+or used to transport people or cargo over land, water, air, or through space.
+We have used this broad scoping to cover research vessels.  We could go on to 
+connect this type then to a descriptive property in a concept such at 
+the WikiData entry for [Research Vessel, Q391022](https://www.wikidata.org/wiki/Q391022).
+We may wish to leverage some of the approaches in [Keywords and Defined Terms](../terms/list.md).
+
 
 Our goal is to use schema.org as a simple upper level vocabulary that allows
 us to describe research vessels in a simple and then connect off to more 

@@ -111,7 +111,8 @@ jbutils.show_graph(framed)
 ### Details: Knows About
 
 Knows about provide connections to resources a person is
-connected with.  
+connected with.  The property, [schema.org/knowsAbout](https://schema.org/knowsAbout),
+can connect a Person or Organization to Text, URL or any Thing type.  
 
 ```{code-cell}
 :tags: [hide-input]
