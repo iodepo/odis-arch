@@ -108,6 +108,112 @@ jbutils.show_graph(framed)
 ```
 
 
+### Details: nationality
+
+Nationality provide connections to languages a person is
+connected with.  The property, [schema.org/nationality](https://schema.org/nationality),
+is used to present that.  In the OIH we need to state what the semantics of 
+nationality are for our use case. 
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/person.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "Person",
+  "nationality": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
+```{note}
+The visual above demonstrates an issue that can be seen in several of the graph.  Where we 
+don't use an @id the graph will be represented as a ["blank node"](https://en.wikipedia.org/wiki/Blank_node).  
+These will be uniquely identified in the graph, however, in the construction of the visual
+this is a common blank node and results in the double arrows pointing to an underscore.
+This is a visualization issue and not a proper representation of the graph structure. 
+```
+
+
+
+### Details: knowsLanguage
+
+Knows about provide connections to languages a person is
+connected with.  The property, [schema.org/knowsLanguage](https://schema.org/knowsLanguage),
+is used to present that.   Multiple languages can be expressed using the JSON
+array [] syntax.   
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/person.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "Person",
+  "knowsLanguage": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```
+
+
+
 ### Details: Knows About
 
 Knows about provide connections to resources a person is
