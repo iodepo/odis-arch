@@ -2,7 +2,7 @@
     "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@id": "https://example.org/id/org/x",
+    "@id": "https://index.example.org/id/org/x",
     "@type": "Organization",
     "address": {
         "@type": "PostalAddress",
@@ -14,11 +14,17 @@
     "name": "Organization X",
     "description": "Description of org ...",
     "telephone": "( 33 1) 42 68 53 00",
+    "url": "https://example.org/",
     "member": [
         {
+            "@id": "https://example.org/id/org/1",
             "@type": "Organization",
             "name": "Organization A",
             "description": "Org A is a potential parent organization of Org X"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2257-9127",
+            "@type": "Person"
         }
     ],
     "identifier": {
@@ -26,6 +32,6 @@
         "@type": "PropertyValue",
         "description": "UN Department of Economic and Social Affairs Sustainable Development",
         "propertyID": "https://registry.identifiers.org/registry/grid",
-        "url": "https://grid.ac/institutes/grid.475727.4"    
+        "url": "https://grid.ac/institutes/grid.475727.4"
     }
 }

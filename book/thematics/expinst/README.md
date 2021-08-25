@@ -268,7 +268,27 @@ For the identifier we are using the a GRID, but this could also be something lik
 
 ```{literalinclude} ./graphs/organization.json
 :linenos:
+:emphasize-lines: 18-29
 ```
+
+### One the property membership
+
+Line 18-29 show the inclusion of a [schema.org/membership](https://schema.org/membership)
+property.  There are issues to note here both for consumers (aggregators) and 
+providers (publishers).   The Person type is show connected simply on a type and 
+id.  This provides the cleanest connection.  If a member is added by type and id, as 
+in the case of the "Organization A" link, there is the problem of additional triples
+being added.  Here, the name and description properties are going to add triples to the
+OIH KG.  In so doing, we run the risk or adding potentially un-authoritative information.
+The aggregator doesn't know if triples here are or are not provided by an actor
+authoritative for those properties.  This could be addresses with framing or validation 
+workflows, or ignored.  The prov elements stored could be leveraged to later track
+down sources, but don't provide further information on the issue of authority.  
+
+It is recommended that best practice is to attempt to link only on ids (with a type in 
+all cases) where possible.  If you are connecting with a type, do not provide additional 
+properties.  In cases where such an id can not be provided, you may wish to fill out 
+basic properties you can provide with confidence. 
 
 
 ```{code-cell}

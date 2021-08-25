@@ -5,7 +5,7 @@ title: The Ocean InfoHub Project and the development of the ODIS-architecture
 author: IODEPO
 logo: logo.png
 # copyright : "UN reference"  # Copyright year to be placed in the footer
-
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -48,8 +48,8 @@ repository:
 #     html_theme_options:
 #       show_navbar_depth: 0
 
-parse:
-  myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
-    - deflist
+#parse:
+  #myst_enable_extensions:
+    ## don't forget to list any other extensions you want enabled,
+    ## including those that are enabled by default!
+    #- deflist
