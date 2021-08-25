@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SHACL validation &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>SHACL Validation For Warehouses &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="ISO 19139 To Schema.org" href="../ISO19139mapping/ISOMap.html" />
-    <link rel="prev" title="OIH Editor Playground" href="../OIH_Editor.html" />
+    <link rel="prev" title="OIH Editing Playground" href="../OIH_Editor.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_GraphAnalytics.html">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../DCATmapping/dcatmapping.html">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -509,7 +514,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#flow">
@@ -532,9 +537,13 @@
         
               <div>
                 
-  <div class="section" id="shacl-validation">
-<h1>SHACL validation<a class="headerlink" href="#shacl-validation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="shacl-validation-for-warehouses">
+<h1>SHACL Validation For Warehouses<a class="headerlink" href="#shacl-validation-for-warehouses" title="Permalink to this headline">¶</a></h1>
 <p>Ocean Info Hub SHACL validation on S3(minio) objects</p>
+<p>It should be noted here that SHACL validation is not a service OIH offers.  Rather,
+the validation is a capacity that the OIH architectural approach facilities.  Further
+this validation follows W3C recommendations as describted in
+<a class="reference external" href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>.</p>
 <div class="section" id="flow">
 <h2>Flow<a class="headerlink" href="#flow" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -630,73 +639,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>indexing gleaner/summoned/oceanexperts
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ClientError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">/opt/conda/lib/python3.9/site-packages/s3fs/core.py</span> in <span class="ni">_lsdir</span><span class="nt">(self, path, refresh, max_items, delimiter, prefix)</span>
-<span class="g g-Whitespace">    </span><span class="mi">571</span>                 <span class="n">dircache</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ne">--&gt; </span><span class="mi">572</span>                 <span class="k">async</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">573</span>                     <span class="n">dircache</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CommonPrefixes&quot;</span><span class="p">,</span> <span class="p">[]))</span>
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/aiobotocore/paginate.py</span> in <span class="ni">__anext__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">32</span>             <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span><span class="n">current_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>             <span class="n">parsed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_parsed_response</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/aiobotocore/client.py</span> in <span class="ni">_make_api_call</span><span class="nt">(self, operation_name, api_params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span>             <span class="n">error_class</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">from_code</span><span class="p">(</span><span class="n">error_code</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">154</span>             <span class="k">raise</span> <span class="n">error_class</span><span class="p">(</span><span class="n">parsed_response</span><span class="p">,</span> <span class="n">operation_name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span>         <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">ClientError</span>: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: Access Denied.
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">PermissionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">775</span><span class="n">ae512ea02</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">buckets</span><span class="p">)):</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;indexing </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">buckets</span><span class="p">[</span><span class="n">d</span><span class="p">]))</span>
-<span class="ne">---&gt; </span><span class="mi">19</span>   <span class="n">f</span> <span class="o">=</span> <span class="n">oss</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">buckets</span><span class="p">[</span><span class="n">d</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>   <span class="n">filenames</span> <span class="o">+=</span> <span class="n">f</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> 
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/fsspec/asyn.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="bp">self</span> <span class="o">=</span> <span class="n">obj</span> <span class="ow">or</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">87</span>         <span class="k">return</span> <span class="n">sync</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loop</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span> 
-<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/fsspec/asyn.py</span> in <span class="ni">sync</span><span class="nt">(loop, func, timeout, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>         <span class="k">raise</span> <span class="n">FSTimeoutError</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ne">BaseException</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">68</span>         <span class="k">raise</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>     <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span> 
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/fsspec/asyn.py</span> in <span class="ni">_runner</span><span class="nt">(event, coro, result, timeout)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>         <span class="n">coro</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">coro</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">24</span>         <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">await</span> <span class="n">coro</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>         <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ex</span>
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/s3fs/core.py</span> in <span class="ni">_ls</span><span class="nt">(self, path, detail, refresh)</span>
-<span class="g g-Whitespace">    </span><span class="mi">775</span>             <span class="n">files</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lsbuckets</span><span class="p">(</span><span class="n">refresh</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">776</span>         <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">777</span>             <span class="n">files</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lsdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">refresh</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">778</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">files</span> <span class="ow">and</span> <span class="s2">&quot;/&quot;</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">779</span>                 <span class="n">files</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lsdir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">refresh</span><span class="o">=</span><span class="n">refresh</span><span class="p">)</span>
-
-<span class="nn">/opt/conda/lib/python3.9/site-packages/s3fs/core.py</span> in <span class="ni">_lsdir</span><span class="nt">(self, path, refresh, max_items, delimiter, prefix)</span>
-<span class="g g-Whitespace">    </span><span class="mi">593</span>                     <span class="n">f</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="s2">&quot;Key&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">594</span>             <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">595</span>                 <span class="k">raise</span> <span class="n">translate_boto_error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">596</span> 
-<span class="g g-Whitespace">    </span><span class="mi">597</span>             <span class="k">if</span> <span class="n">delimiter</span> <span class="ow">and</span> <span class="n">files</span><span class="p">:</span>
-
-<span class="ne">PermissionError</span>: Access Denied.
+481
 </pre></div>
 </div>
 </div>
@@ -780,6 +723,12 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 3.62 s, sys: 132 ms, total: 3.75 s
+Wall time: 23.2 s
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -789,16 +738,75 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">582109644996</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">gldf</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">gldf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;gldf&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 481 entries, 0 to 480
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   id      481 non-null    object
+ 1   status  481 non-null    object
+ 2   shape   481 non-null    object
+dtypes: object(3)
+memory usage: 11.4+ KB
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>status</th>
+      <th>shape</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>gleaner/summoned/oceanexperts/00eae339a41708c6...</td>
+      <td>Valid</td>
+      <td>AllPassed</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>gleaner/summoned/oceanexperts/014dbf631db7b122...</td>
+      <td>Valid</td>
+      <td>AllPassed</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>gleaner/summoned/oceanexperts/019224fb3174aace...</td>
+      <td>Valid</td>
+      <td>AllPassed</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>gleaner/summoned/oceanexperts/0223a997319c102b...</td>
+      <td>Valid</td>
+      <td>AllPassed</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gleaner/summoned/oceanexperts/022ac35a670a36a3...</td>
+      <td>Valid</td>
+      <td>AllPassed</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -807,12 +815,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">592</span><span class="n">d91c5781b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">gldf</span><span class="p">[</span><span class="s1">&#39;shape&#39;</span><span class="p">])</span>
-
-<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AllPassed    481
+Name: shape, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -825,15 +829,17 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">8967</span><span class="n">d9175060</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">gldf</span><span class="p">[</span><span class="s1">&#39;shape&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0., 100., 200., 300., 400., 500., 600.]),
+ [Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;),
+  Text(0, 0, &#39;&#39;)])
 </pre></div>
 </div>
+<img alt="../../../_images/OIH_SHACL_9_1.png" src="../../../_images/OIH_SHACL_9_1.png" />
 </div>
 </div>
 </div>
@@ -862,12 +868,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../OIH_Editor.html" title="previous page">OIH Editor Playground</a>
-    <a class='right-next' id="next-link" href="../ISO19139mapping/ISOMap.html" title="next page">ISO 19139 To Schema.org</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../OIH_Editor.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">OIH Editing Playground</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../ISO19139mapping/ISOMap.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">ISO 19139 To Schema.org</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

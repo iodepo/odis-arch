@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Geospatial KG Completion" href="geocomplete.html" />
-    <link rel="prev" title="Mapping" href="../DCATmapping/dcatmapping.html" />
+    <link rel="prev" title="DCAT Mapping" href="../DCATmapping/dcatmapping.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_GraphAnalytics.html">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../validation/OIH_SHACL.html">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../DCATmapping/dcatmapping.html">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 current active has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -487,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about">
@@ -525,16 +530,16 @@
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>This is a simple test notebook to explore approachs to associating geometries in the OIH graph with named ocean regions.
-From Marine Regions (https://www.marineregions.org/) we downloaded the IHO Sea Areas dataset.  This is a shapefile that is converted to WKT and loaded into a geopandas dataframe.</p>
+From Marine Regions (<a class="reference external" href="https://www.marineregions.org/">https://www.marineregions.org/</a>) we downloaded the IHO Sea Areas dataset.  This is a shapefile that is converted to WKT and loaded into a geopandas dataframe.</p>
 <p>We then create a few points to compare against this.   In this test we are only comparing points to the polygons.  So this is what is called a “point in polygon” test.   Later revisions to this could do polygon intersection or other tests.  This is only a proof of concept notebook.</p>
 <p>We then generate a new dataframe based on the matches.   These matches could then be fed back into the graph as a sort of “Knowledge Graph Completion” workflow.  Alternatively we can do gepsparql calls based on the sea WKT strings and do the search in the geosparql aware triple store.</p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>https://geopandas.org/docs/user_guide/set_operations.html</p></li>
-<li><p>https://geopandas.org/docs/user_guide/geocoding.html</p></li>
-<li><p>https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff</p></li>
+<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/set_operations.html">https://geopandas.org/docs/user_guide/set_operations.html</a></p></li>
+<li><p><a class="reference external" href="https://geopandas.org/docs/user_guide/geocoding.html">https://geopandas.org/docs/user_guide/geocoding.html</a></p></li>
+<li><p><a class="reference external" href="https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff">https://medium.com/analytics-vidhya/point-in-polygon-analysis-using-python-geopandas-27ea67888bff</a></p></li>
 </ul>
 </div>
 <div class="section" id="process">
@@ -545,7 +550,7 @@ From Marine Regions (https://www.marineregions.org/) we downloaded the IHO Sea A
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>The generated dataframe holds the matches of the test Lat Long pairs to the named seas from the reference shape file.
 These results couild be fed back into the graph as keywords or items from a known list of terms for more explicate relation mapping.</p>
-<p>Specifically,  someting like https://schema.org/DefinedTerm where the property https://schema.org/DefinedTermSet would point back to the Marine Regions source documents and URL.   Similarly these resources could be connected up to WikiData in a similar manner.</p>
+<p>Specifically,  someting like <a class="reference external" href="https://schema.org/DefinedTerm">https://schema.org/DefinedTerm</a> where the property <a class="reference external" href="https://schema.org/DefinedTermSet">https://schema.org/DefinedTermSet</a> would point back to the Marine Regions source documents and URL.   Similarly these resources could be connected up to WikiData in a similar manner.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="p">{</span>
                 <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://geonetwork.vliz.be/geonetwork/srv/eng/catalog.search#/metadata/f4cfa278-730f-4646-b6cc-a3dceaa3a1e5&quot;</span><span class="p">,</span>
@@ -559,7 +564,7 @@ These results couild be fed back into the graph as keywords or items from a know
         <span class="p">},</span>
 </pre></div>
 </div>
-<p>For reference the WikiData resource is: https://www.wikidata.org/wiki/Q38684 which is an instance of “body of water”.  So leveraging this type and the IHO names should allow relatively reliable link detection.   Leveraging the top level Thing class in schema.org we would be looking at a simple</p>
+<p>For reference the WikiData resource is: <a class="reference external" href="https://www.wikidata.org/wiki/Q38684">https://www.wikidata.org/wiki/Q38684</a> which is an instance of “body of water”.  So leveraging this type and the IHO names should allow relatively reliable link detection.   Leveraging the top level Thing class in <a class="reference external" href="http://schema.org">schema.org</a> we would be looking at a simple</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q38684&quot;</span><span class="p">,</span>
 </pre></div>
 </div>
@@ -593,12 +598,32 @@ These results couild be fed back into the graph as keywords or items from a know
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../DCATmapping/dcatmapping.html" title="previous page">Mapping</a>
-    <a class='right-next' id="next-link" href="geocomplete.html" title="next page">Geospatial KG Completion</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../DCATmapping/dcatmapping.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">DCAT Mapping</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="geocomplete.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Geospatial KG Completion</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -487,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#about">
@@ -595,7 +600,7 @@ implement this approach.  See the section:
 architecture patterns to expose metadata about resources of interest to the
 community.  The primary tasks include:</p>
 <ul>
-<li><p>Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH
+<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH
 guidance to express the structured metadata for a resource.  This step will
 require experience with using the existing metadata resources within an
 organization.  So any necessary skills needed to access or query existing
@@ -611,8 +616,8 @@ published resource.   The SCRIPT tag pattern is:</p>
 </li>
 <li><p>Additionally these resources that are marked up with these tags and JSON-LD
 documents should be expressed in an XML sitemap file.  This should follow the
-guidance at https://www.sitemaps.org/.  It should also include a lastmod node
-element as described at https://www.sitemaps.org/protocol.html which should
+guidance at <a class="reference external" href="https://www.sitemaps.org/">https://www.sitemaps.org/</a>.  It should also include a lastmod node
+element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should
 indicate the date the resource metadata was last updated and published to the
 web.</p></li>
 <li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH
@@ -624,7 +629,7 @@ JSON-LD.  OIH will provide the necessary templates for the tools to use
 against the authored JSON-LD documents.</p></li>
 </ul>
 <p>Information on the sources, standards and vocabularies to be used can be found
-at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs</p>
+at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
 </div>
 <div class="section" id="including-json-ld-in-your-resource-page">
 <h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Permalink to this headline">¶</a></h3>
@@ -670,7 +675,7 @@ thematic sections for more examples for a given thematic area.</p>
 section</a>.  To view all the types
 being developed reference
 the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/schema/thematics">Thematic section</a>.</p>
-<p>These JSON-LD documents leverage schema.org as the primary vocabulary.
+<p>These JSON-LD documents leverage <a class="reference external" href="http://schema.org">schema.org</a> as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.</p>
 <div class="section" id="json-ld-tools-and-references">
 <h4>JSON-LD Tools and References<a class="headerlink" href="#json-ld-tools-and-references" title="Permalink to this headline">¶</a></h4>
@@ -722,9 +727,9 @@ this approach in a more dedicated tool/manner.</p>
 load this into something like
 the <a class="reference external" href="https://jsonschema.net/">JSONschema.net tool</a>.</p>
 <p>The results of the above can then been loaded into the online JSON-Editor at
-https://json-editor.github.io/json-editor/. (Ref:
+<a class="reference external" href="https://json-editor.github.io/json-editor/">https://json-editor.github.io/json-editor/</a>. (Ref:
 <a class="reference external" href="https://github.com/json-editor/json-editor">https://github.com/json-editor/json-editor</a>)</p>
-<p>The results of this then can be loaded into https://json-ld.org/playground/ to
+<p>The results of this then can be loaded into <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a> to
 validate that we have well formed JSON-LD.</p>
 <p>Though this workflow is rather crude and manual it exposes a route to a defined
 workflow based around established schema that leverages other tools and
@@ -742,7 +747,7 @@ software libraries to generate a workable tool.</p>
 <h4>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">¶</a></h4>
 <p>OPTIONAL: Providers may decide to generate or modify their robots.txt
 file to provide guidance to the aggregators.
-The plan is to use the Gleaner software (gleaner.io) as well as some
+The plan is to use the Gleaner software (<a class="reference external" href="http://gleaner.io">gleaner.io</a>) as well as some
 Python based notebooks and a few other approaches in this test.</p>
 <p>Gleaner uses an agent string of EarthCube_DataBot/1.0 and this can be
 used a robots.txt file to specify alternative sitemaps and guidance.
@@ -772,7 +777,7 @@ to avoid indexing test pages by commercial providers.  You may wish
 to do this during testing or for other reasons.  Otherwise,
 a sitemap.xml file exposed in general from somewhere in your site is
 perfectly fine.</p>
-<p>Information on the sitemap structure can be found at sitemaps.org.</p>
+<p>Information on the sitemap structure can be found at <a class="reference external" href="http://sitemaps.org">sitemaps.org</a>.</p>
 <p>It is encouraged to use the sitemap lastmod node
 to provide guidance to indexers on page updates.
 Additionally indexers may test ways to evaluate additions and
@@ -867,12 +872,32 @@ the structured data on the web pattern.</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../personas/persona.html" title="previous page">Personas</a>
-    <a class='right-next' id="next-link" href="../foundation/foundation.html" title="next page">JSON-LD Foundation</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../personas/persona.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Personas</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../foundation/foundation.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">JSON-LD Foundation</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

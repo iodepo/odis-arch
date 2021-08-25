@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graph Analytics Exploration &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>OIH Graph &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="validation/OIH_SHACL.html">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="DCATmapping/dcatmapping.html">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -509,11 +514,11 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   Steps
+  <a class="reference internal nav-link" href="#some-inspection-queries-for-oih-graph">
+   Some inspection queries for OIH Graph
   </a>
  </li>
 </ul>
@@ -527,23 +532,18 @@
         
               <div>
                 
-  <div class="section" id="graph-analytics-exploration">
-<h1>Graph Analytics Exploration<a class="headerlink" href="#graph-analytics-exploration" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="oih-graph">
+<h1>OIH Graph<a class="headerlink" href="#oih-graph" title="Permalink to this headline">¶</a></h1>
+<p>Some analysis of the OIH graphs</p>
 <ul class="simple">
-<li><p>https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python</p></li>
-<li><p>https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html</p></li>
-</ul>
-<div class="section" id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Pull in the OIH RDF graph and load</p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python">https://stackoverflow.com/questions/39274216/visualize-an-rdflib-graph-in-python</a></p></li>
+<li><p><a class="reference external" href="https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html">https://networkx.org/documentation/stable/reference/algorithms/link_analysis.html</a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip -q install pydotplus
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install -q SPARQLWrapper
+<span class="o">!</span>pip -q install pydotplus
 <span class="o">!</span>pip -q install graphviz
-<span class="c1"># !pip -q install rdflib</span>
-<span class="c1"># !pip install -q -e git+https://github.com/RDFLib/rdflib.git#egg=rdflib</span>
 <span class="o">!</span>pip -q install pydotplus
 <span class="o">!</span>pip -q install mimesis
 <span class="o">!</span>pip -q install minio 
@@ -551,18 +551,311 @@
 <span class="o">!</span>pip -q install SPARQLWrapper
 <span class="o">!</span>pip -q install boto3
 <span class="o">!</span>pip -q install <span class="s1">&#39;fsspec&gt;=0.3.3&#39;</span>
-<span class="o">!</span>pip -q install rdflib
+<span class="o">!</span>pip -q install rdflib  # !pip install -q -e git+https://github.com/RDFLib/rdflib.git#egg<span class="o">=</span>rdflib
 <span class="o">!</span>pip -q install rdflib-jsonld
 <span class="o">!</span>pip -q install <span class="nv">PyLD</span><span class="o">==</span><span class="m">2</span>.0.2
+<span class="o">!</span>pip -q install kglab
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
-<span class=" -Color -Color-Red">aiobotocore 1.3.1 requires botocore&lt;1.20.50,&gt;=1.20.49, but you have botocore 1.20.102 which is incompatible.</span>
+<span class=" -Color -Color-Red">graph-notebook 2.1.4 requires networkx==2.4, but you have networkx 2.5.1 which is incompatible.</span>
+<span class=" -Color -Color-Red">aiobotocore 1.3.3 requires botocore&lt;1.20.107,&gt;=1.20.106, but you have botocore 1.21.10 which is incompatible.</span>
+<span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">graph-notebook 2.1.4 requires networkx==2.4, but you have networkx 2.5.1 which is incompatible.</span>
+<span class=" -Color -Color-Red">boto3 1.18.4 requires botocore&lt;1.22.0,&gt;=1.21.4, but you have botocore 1.20.106 which is incompatible.</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SPARQLWrapper</span> <span class="kn">import</span> <span class="n">SPARQLWrapper</span><span class="p">,</span> <span class="n">JSON</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">dask</span><span class="o">,</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">dask.dataframe</span> <span class="k">as</span> <span class="nn">dd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">shapely</span>
+<span class="kn">import</span> <span class="nn">kglab</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
+<span class="k">def</span> <span class="nf">get_sparql_dataframe</span><span class="p">(</span><span class="n">service</span><span class="p">,</span> <span class="n">query</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Helper function to convert SPARQL results into a Pandas data frame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sparql</span> <span class="o">=</span> <span class="n">SPARQLWrapper</span><span class="p">(</span><span class="n">service</span><span class="p">)</span>
+    <span class="n">sparql</span><span class="o">.</span><span class="n">setQuery</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">sparql</span><span class="o">.</span><span class="n">setReturnFormat</span><span class="p">(</span><span class="n">JSON</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">sparql</span><span class="o">.</span><span class="n">query</span><span class="p">()</span>
+
+    <span class="n">processed_results</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="n">processed_results</span><span class="p">[</span><span class="s1">&#39;head&#39;</span><span class="p">][</span><span class="s1">&#39;vars&#39;</span><span class="p">]</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">processed_results</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="s1">&#39;bindings&#39;</span><span class="p">]:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">))</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="some-inspection-queries-for-oih-graph">
+<h2>Some inspection queries for OIH Graph<a class="headerlink" href="#some-inspection-queries-for-oih-graph" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oihgraph</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oihdev/sparql&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rp3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">prefix prov: &lt;http://www.w3.org/ns/prov#&gt;</span>
+<span class="s2">PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;</span>
+<span class="s2">PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;</span>
+<span class="s2">PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;</span>
+<span class="s2">PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="s2">PREFIX schema: &lt;https://schema.org/&gt;</span>
+<span class="s2">PREFIX schemaold: &lt;http://schema.org/&gt;</span>
+<span class="s2">PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+
+<span class="s2">SELECT DISTINCT ?g  ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline</span>
+<span class="s2">WHERE</span>
+<span class="s2">{</span>
+
+<span class="s2">   ?lit bds:search &quot;coral&quot; .</span>
+<span class="s2">   ?lit bds:matchAllTerms &quot;false&quot; .</span>
+<span class="s2">   ?lit bds:relevance ?score .</span>
+<span class="s2">   ?s ?p ?lit .</span>
+
+<span class="s2">   graph ?g {</span>
+<span class="s2">    ?s ?p ?lit .</span>
+<span class="s2">    ?s rdf:type ?type . </span>
+<span class="s2">    OPTIONAL { ?s schema:name ?name .   }</span>
+<span class="s2">    OPTIONAL { ?s schema:headline ?headline .   }</span>
+<span class="s2">    OPTIONAL { ?s schema:url ?url .   }</span>
+<span class="s2">    OPTIONAL { ?s schema:description ?description .    }</span>
+<span class="s2">  }</span>
+<span class="s2">   ?sp prov:generated ?g  .</span>
+<span class="s2">   ?sp prov:used ?used .</span>
+<span class="s2">   ?used prov:hadMember ?hm .</span>
+<span class="s2">   ?hm prov:wasAttributedTo ?wat .</span>
+<span class="s2">   ?wat rdf:name ?orgname .</span>
+<span class="s2">   ?wat rdfs:seeAlso ?domain</span>
+
+
+<span class="s2">}</span>
+<span class="s2">ORDER BY DESC(?score)</span>
+<span class="s2">LIMIT 30</span>
+<span class="s2">OFFSET 0 </span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">dfrp3</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihgraph</span><span class="p">,</span> <span class="n">rp3</span><span class="p">)</span>
+<span class="n">dfrp3</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>g</th>
+      <th>s</th>
+      <th>wat</th>
+      <th>orgname</th>
+      <th>domain</th>
+      <th>type</th>
+      <th>score</th>
+      <th>name</th>
+      <th>url</th>
+      <th>lit</th>
+      <th>description</th>
+      <th>headline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>urn:gleaner:milled:obis:13392d707024cdd4e509d6...</td>
+      <td>t12576</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/b91d89db-79d6-4bd3-84...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>urn:gleaner:milled:obis:18d1180a74c200d06f9114...</td>
+      <td>t13860</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project D...</td>
+      <td>https://obis.org/dataset/46005357-02b8-4f17-b0...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>urn:gleaner:milled:obis:24bac898cda34444176ec4...</td>
+      <td>t16445</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/d4ec17b8-fc96-49b9-b7...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>urn:gleaner:milled:obis:24d453e3a4ea6d1f117e5c...</td>
+      <td>t16471</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/36bca81c-6d77-4fd4-a9...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>urn:gleaner:milled:obis:2524f94920efb8f87029bf...</td>
+      <td>t16581</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Interacciones entre Corales y CÃ©spedes algale...</td>
+      <td>https://obis.org/dataset/e39be6ef-3c91-4e97-ba...</td>
+      <td>coral</td>
+      <td>Para el componente denominado âInteracciÃ³n ...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>urn:gleaner:milled:obis:2bf98aa888d856b8706176...</td>
+      <td>t18254</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/431f96f7-521c-4182-ae...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>urn:gleaner:milled:obis:2d67f3625478df2c1520ae...</td>
+      <td>t18644</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project D...</td>
+      <td>https://obis.org/dataset/d88a91c1-2685-4afa-9a...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>urn:gleaner:milled:obis:30c1e35e0d4a09e3aafd38...</td>
+      <td>t19399</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project D...</td>
+      <td>https://obis.org/dataset/b856037f-bbdf-45da-9b...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>urn:gleaner:milled:obis:384060928d22941acabcb6...</td>
+      <td>t21027</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Nematoda from Kenya and Zanzibar</td>
+      <td>https://obis.org/dataset/aa9787d6-c4db-4fde-8e...</td>
+      <td>Coral</td>
+      <td>Data on the species and trophic composition of...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>urn:gleaner:milled:obis:3c03fa0cea67f703cdf249...</td>
+      <td>t21600</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>Ocean Biodiversity Information System</td>
+      <td>https://obis.org</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/c170a0a3-c669-436b-a1...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -573,7 +866,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">gzip</span>
 
-<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./oceanexperts_graph.nq.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;./data/oceanexperts_graph.nq.gz&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
@@ -713,10 +1006,6 @@ dtype: object
       <td>0.001542</td>
     </tr>
     <tr>
-      <th>, Colombia</th>
-      <td>0.001271</td>
-    </tr>
-    <tr>
       <th>Institute of Oceanography and Environment Universiti Malaysia Terengganu (UMT), Mengabang Telipot 21030 Kuala Terengganu Terengganu Malaysia</th>
       <td>0.001271</td>
     </tr>
@@ -725,11 +1014,15 @@ dtype: object
       <td>0.001271</td>
     </tr>
     <tr>
-      <th>Wandelaarkaai 7 Oostende Belgium</th>
-      <td>0.001018</td>
+      <th>, Colombia</th>
+      <td>0.001271</td>
     </tr>
     <tr>
       <th>Qingdao China</th>
+      <td>0.001018</td>
+    </tr>
+    <tr>
+      <th>Wandelaarkaai 7 Oostende Belgium</th>
       <td>0.001018</td>
     </tr>
   </tbody>
@@ -744,7 +1037,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_GraphAnalytics_7_0.png" src="../../_images/OIH_GraphAnalytics_7_0.png" />
+<img alt="../../_images/OIH_GraphAnalytics_13_0.png" src="../../_images/OIH_GraphAnalytics_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -761,7 +1054,7 @@ dtype: object
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/OIH_GraphAnalytics_8_1.png" src="../../_images/OIH_GraphAnalytics_8_1.png" />
+<img alt="../../_images/OIH_GraphAnalytics_14_1.png" src="../../_images/OIH_GraphAnalytics_14_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -779,7 +1072,7 @@ dtype: object
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/OIH_GraphAnalytics_9_1.png" src="../../_images/OIH_GraphAnalytics_9_1.png" />
+<img alt="../../_images/OIH_GraphAnalytics_15_1.png" src="../../_images/OIH_GraphAnalytics_15_1.png" />
 </div>
 </div>
 </div>
@@ -808,12 +1101,32 @@ dtype: object
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">OIH Notebooks</a>
-    <a class='right-next' id="next-link" href="OIH_Queries.html" title="next page">OIH Queries</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">OIH Notebooks</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="OIH_Queries.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">OIH Queries</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

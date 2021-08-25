@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alternatives &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>APIs &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tooling" href="../tooling/index.html" />
-    <link rel="prev" title="Prov" href="prov/README.html" />
+    <link rel="next" title="Appendix" href="../appendix/index.html" />
+    <link rel="prev" title="Querying SPARQL" href="sparql.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -193,44 +193,44 @@
   Aggregation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
+  <a class="reference internal" href="../indexing/index.html">
    Aggregator
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="qstart.html">
+  <a class="reference internal" href="../indexing/qstart.html">
    Indexing with Gleaner
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="indexingservices.html">
+  <a class="reference internal" href="../indexing/indexingservices.html">
    Indexing Services
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="dataservices.html">
+  <a class="reference internal" href="../indexing/dataservices.html">
    Data Services
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="user.html">
+  <a class="reference internal" href="../indexing/user.html">
    Interfaces
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="graphpub.html">
+  <a class="reference internal" href="../indexing/graphpub.html">
    Graph First Approach
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="prov/README.html">
+  <a class="reference internal" href="../indexing/prov/README.html">
    Indexing Activity Prov
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/alternatives.html">
    Alternatives
   </a>
  </li>
@@ -352,19 +352,19 @@
   Interfaces
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../users/referenceclient.html">
+  <a class="reference internal" href="referenceclient.html">
    Users
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../users/sparql.html">
+  <a class="reference internal" href="sparql.html">
    Querying SPARQL
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../users/apis.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    APIs
   </a>
  </li>
@@ -448,7 +448,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/indexing/alternatives.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/users/apis.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -468,7 +468,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/alternatives.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fusers/apis.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -495,8 +495,25 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#options">
-   Options
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sparql-http-protocol">
+   SPARQL HTTP Protocol
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphql">
+   GraphQL
   </a>
  </li>
 </ul>
@@ -510,25 +527,35 @@
         
               <div>
                 
-  <div class="section" id="alternatives">
-<h1>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<p>While <a class="reference external" href="https://gleaner.io/">Gleaner</a> will be used during initial OIH development it is not
-the only or required approach.   The web architecture foundation means there are many other tools that
-can be used and might be leveraged in a production environment including:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/scrapinghub/extruct">Extrunct</a></p></li>
-<li><p><a class="reference external" href="https://bioschemas.org/software/">BioSchemas Tools</a></p></li>
-<li><p><a class="reference external" href="https://github.com/ldspider/ldspider">LDSpider</a></p></li>
-<li><p><a class="reference external" href="https://dice-group.github.io/squirrel.github.io/overview.html">Squirrel</a></p></li>
-<li><p><a class="reference external" href="http://nutch.apache.org/">Nutch (Apache)</a></p></li>
-<li><p><a class="reference external" href="https://github.com/LOD-Laundromat/LOD-Laundromat">Laundromat</a></p></li>
-<li><p><a class="reference external" href="https://github.com/websi96/datasetarchiver">DataArchiver</a></p></li>
-<li><p><a class="reference external" href="https://archiver.ai.wu.ac.at/">OD Archiver</a></p></li>
-</ul>
-<p>These different tools may better fit into the workflow and available
-skill sets for a group.  Distinct from these is <a class="reference external" href="https://www.dataone.org/plus/">DataONE Plus</a> which is a “Search as a Service” offering from DataONE.</p>
+  <div class="section" id="apis">
+<h1>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>The Ocean InfoHub graph is accessible through several approaches.<br />
+The graph is implemented in RDF and expressed through a standards compliant triplestore.</p>
+<p>This triplestore exposes a SPARQL endpoint that can be queried using the <a class="reference external" href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL 1.1 Query Language</a>.
+To do this you can visit a web based query interface as discussed in other sections of this document.</p>
+<p>It is also possible to access this service following RESTful principles.</p>
+</div>
+<div class="section" id="sparql-http-protocol">
+<h2>SPARQL HTTP Protocol<a class="headerlink" href="#sparql-http-protocol" title="Permalink to this headline">¶</a></h2>
+<p>One approach to this RESTful approach is to use the
+<a class="reference external" href="https://www.w3.org/TR/2013/REC-sparql11-http-rdf-update-20130321/">SPARQL 1.1 Graph Store HTTP Protocol</a>.
+This is a simple HTTP protocol that allows you to query the graph using SPARQL and obtain the results in JSON.</p>
+<p>The OIH triplestore exposes the graph following this pattern for queries.</p>
+<div class="section" id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode <span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span> -H <span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="graphql">
+<h2>GraphQL<a class="headerlink" href="#graphql" title="Permalink to this headline">¶</a></h2>
+<p>GraphQL is another popular approach to the access of remote services.  A simple mapping of the
+default OIH SARQL query to GraphQL is provided.   This is not a expression of the graph mode in
+GraphQL, but rather a simple mapping of this specific query to GraphQL.   As such it is compatible with
+standard GraphQL clients but does not provide the full functionality of the OIH graph.</p>
 </div>
 </div>
 
@@ -545,7 +572,7 @@ skill sets for a group.  Distinct from these is <a class="reference external" hr
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./indexing"
+            path: "./users"
         },
         predefinedOutput: true
     }
@@ -562,19 +589,19 @@ skill sets for a group.  Distinct from these is <a class="reference external" hr
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="prov/README.html" title="previous page">
+        <a class="left-prev" href="sparql.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Prov</p>
+                <p class="prevnext-title">Querying SPARQL</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../tooling/index.html" title="next page">
+        <a class="right-next" href="../appendix/index.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Tooling</p>
+                <p class="prevnext-title">Appendix</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

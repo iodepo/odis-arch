@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -487,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gleaner-app">
@@ -670,40 +675,40 @@ and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> d
 <li><p>Gleaner for your platform</p></li>
 <li><p>Gleaner config template: template_v2.0.yaml</p></li>
 <li><p>Gleaner indexing service compose file: gleaner-IS.yml</p></li>
-<li><p>Helper environment setup script: setenvIS.sh</p></li>
+<li><p>Helper environment setup script: <a class="reference external" href="http://setenvIS.sh">setenvIS.sh</a></p></li>
 </ul>
 <p>For this demonstration, we will be running on linux, so this would look something like:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner
 curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner-IS.yml
 curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/setenvIS.sh
 curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/template_v2.0.yaml
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can download these with any tool you wish or through the browser.  Above we downloaded used the command
 line curl tool.  For GitHub, be sure to add the -L to inform curl to follow redirects to the object to download.</p>
 </div>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <p>You may need to change the permission on your gleaner file to ensure it can be run.   On Linux this would
 look something like the following.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> gleaner
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>We then need to visit <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> to pull down the
 appropriate JSON-LD context.  For this work we will want to pull down the <em>schemaorg-current-https</em> in JSON-LD format.<br />
 It also should work to do something similar to the following:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://schema.org/version/latest/schemaorg-current-https.jsonld
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 </div>
 <div class="section" id="about-the-compose-file-s">
 <h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this headline">¶</a></h4>
@@ -733,7 +738,7 @@ section.</p>
 <h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this headline">¶</a></h4>
 <p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
 to be populated to provide the local hosts information needed to run.  You can set these yourself or
-use or reference the setenv.sh file in the Gleaner-compose repository in the<br />
+use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
 <a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.
 You may also need to visit information about permissions at
 <a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Post-installation steps for Linux</a> if you are
@@ -768,26 +773,26 @@ use localhost to resolve with and host local runtime data in a /tmp/gleaner dire
 <div class="section" id="spin-up-the-containers">
 <h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this headline">¶</a></h4>
 <p>Load our environment variables to the shell:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> setenv.sh
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>Then start the containers:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f gleaner-IS.yml up -d
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>If all has gone well, you should be able to see your running containers with</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker ps
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>and see results similar to:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
 c4b7097f5e06        nawer/blazegraph                 <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9999-&gt;9999/tcp   test_triplestore_1
@@ -1115,19 +1120,19 @@ need to update the property values.</p>
 <p>For this example we are going to run Gleaner directly.  In a deployed instance you may
 run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
 <p>We can do a quick test of the setup.</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0 -setup
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <p>For now, we are ready to run Gleaner.  Try:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Leave the suffix like .yaml off the name of the config file.  The config system can also read
@@ -1148,12 +1153,12 @@ port at 9000.  This typically something like localhost:9000.</p>
 <p>If you wish to continue to use the command line you can use the Minio client at
 <a class="reference external" href="https://docs.min.io/docs/minio-client-quickstart-guide.html">Minio Client Quickstart guide</a>.</p>
 <p>Once you have it installed and working, you can write an entry for our object store with:</p>
-<p>:::{admonition} Command
-:class: tip</p>
+<div class="tip admonition">
+<p class="admonition-title">Command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./mc <span class="nb">alias</span> <span class="nb">set</span> minio http://0.0.0.0:9000 worldsbestaccesskey worldsbestsecretkey
 </pre></div>
 </div>
-<p>:::</p>
+</div>
 </div>
 <div class="section" id="load-triplestore">
 <h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this headline">¶</a></h4>
@@ -1207,12 +1212,32 @@ technologies used in this approach.</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Aggregator</a>
-    <a class='right-next' id="next-link" href="indexingservices.html" title="next page">Indexing Services</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="index.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Aggregator</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="indexingservices.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Indexing Services</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

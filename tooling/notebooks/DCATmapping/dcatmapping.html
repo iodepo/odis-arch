@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapping &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>DCAT Mapping &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -80,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -285,7 +285,7 @@
     <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_GraphAnalytics.html">
-       Graph Analytics Exploration
+       OIH Graph
       </a>
      </li>
      <li class="toctree-l3">
@@ -295,12 +295,12 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../OIH_Editor.html">
-       OIH Editor Playground
+       OIH Editing Playground
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../validation/OIH_SHACL.html">
-       SHACL validation
+       SHACL Validation For Warehouses
       </a>
      </li>
      <li class="toctree-l3">
@@ -310,7 +310,7 @@
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Mapping
+       DCAT Mapping
       </a>
      </li>
      <li class="toctree-l3 has-children">
@@ -361,6 +361,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../users/sparql.html">
    Querying SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/apis.html">
+   APIs
   </a>
  </li>
 </ul>
@@ -509,7 +514,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#methodology">
@@ -547,9 +552,9 @@
         
               <div>
                 
-  <div class="section" id="mapping">
-<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
-<p>Testing approaches to mapping DCAT to schema.org</p>
+  <div class="section" id="dcat-mapping">
+<h1>DCAT Mapping<a class="headerlink" href="#dcat-mapping" title="Permalink to this headline">¶</a></h1>
+<p>Testing approaches to mapping DCAT to <a class="reference external" href="http://schema.org">schema.org</a></p>
 <p>Current thinking</p>
 <ul class="simple">
 <li><p>JSON-LD Frame with default values</p></li>
@@ -557,30 +562,32 @@
 </ul>
 <p>Mapping references</p>
 <ul class="simple">
-<li><p>https://www.w3.org/2015/spatial/wiki/ISO_19115_-<em>DCAT</em>-_Schema.org_mapping</p></li>
-<li><p>https://ec-jrc.github.io/dcat-ap-to-schema-org/</p></li>
-<li><p>https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/2015/spatial/wiki/ISO_19115_-">https://www.w3.org/2015/spatial/wiki/ISO_19115_-</a><em>DCAT</em>-_Schema.org_mapping</p></li>
+<li><p><a class="reference external" href="https://ec-jrc.github.io/dcat-ap-to-schema-org/">https://ec-jrc.github.io/dcat-ap-to-schema-org/</a></p></li>
+<li><p><a class="reference external" href="https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld">https://data.gov.au/data/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c.jsonld</a></p></li>
 </ul>
+<p>Note:  We should consider using the subjectOf property to link the generated <a class="reference external" href="http://schema.org">schema.org</a> to
+the source DCAT record where we can.</p>
 <div class="section" id="methodology">
 <h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
 <p>We will load the DCAT JOSN-LD example and explore approaches to converting this to a form that can be used for
-schema.org.</p>
+<a class="reference external" href="http://schema.org">schema.org</a>.</p>
 <p>Possible approaches include</p>
 <ul class="simple">
 <li><p>Inferencing</p>
 <ul>
-<li><p>ref: https://derwen.ai/docs/kgl/infer/</p></li>
+<li><p>ref: <a class="reference external" href="https://derwen.ai/docs/kgl/infer/">https://derwen.ai/docs/kgl/infer/</a></p></li>
 </ul>
 </li>
 <li><p>SPARQL CONSTRUCT</p>
 <ul>
-<li><p>https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html</p></li>
-<li><p>https://derwen.ai/docs/kgl/ex4_0/</p></li>
+<li><p><a class="reference external" href="https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html">https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.html</a></p></li>
+<li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
 </ul>
 </li>
 <li><p>JSON-LD APIs</p>
 <ul>
-<li><p>https://w3c.github.io/json-ld-framing/#omit-default-flag</p></li>
+<li><p><a class="reference external" href="https://w3c.github.io/json-ld-framing/#omit-default-flag">https://w3c.github.io/json-ld-framing/#omit-default-flag</a></p></li>
 </ul>
 </li>
 <li><p>Context modification</p></li>
@@ -628,7 +635,7 @@ frame or otehrwise cast to new namespace.</p>
 <h2>SPARQL CONSTRUCT example<a class="headerlink" href="#sparql-construct-example" title="Permalink to this headline">¶</a></h2>
 <p>Refs:</p>
 <ul class="simple">
-<li><p>https://derwen.ai/docs/kgl/ex4_0/</p></li>
+<li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -933,7 +940,7 @@ ex:SquareRectangle a ex:Rectangle,
 <h2>Notes on SHACL AF Rules<a class="headerlink" href="#notes-on-shacl-af-rules" title="Permalink to this headline">¶</a></h2>
 <p>We need to add in PROV triples in this process to note the generation of these triples and
 the souce IRI tht results in the product IRI and the actor (?reference)</p>
-<p>Maybe review: https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource</p>
+<p>Maybe review: <a class="reference external" href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource">https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedPrimarySource</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;dcat.ttl&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
@@ -1020,12 +1027,32 @@ the souce IRI tht results in the product IRI and the actor (?reference)</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../ISO19139mapping/ISOMap.html" title="previous page">ISO 19139 To Schema.org</a>
-    <a class='right-next' id="next-link" href="../geoKGComplete/README.html" title="next page">Georeference KG completion example</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../ISO19139mapping/ISOMap.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">ISO 19139 To Schema.org</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../geoKGComplete/README.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Georeference KG completion example</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
