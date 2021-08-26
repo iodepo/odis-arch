@@ -61,15 +61,23 @@ parts:
         - file: tooling/openRefine/projects.md
       - file: tooling/notebooks/README.md
         sections:
-        - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
         - file: tooling/notebooks/OIH_Queries.ipynb
         - file: tooling/notebooks/OIH_Editor.ipynb
+        - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
+        - file: tooling/notebooks/validation/OIH_Simple_SHACL.ipynb
         - file: tooling/notebooks/validation/OIH_SHACL.ipynb
-        - file: tooling/notebooks/ISO19139mapping/ISOMap.ipynb
-        - file: tooling/notebooks/DCATmapping/dcatmapping.ipynb
-        - file: tooling/notebooks/geoKGComplete/README.md
+        - file: tooling/notebooks/Mapping/README.md
           sections:
-          - file: tooling/notebooks/geoKGComplete/geocomplete.ipynb
+          - file: tooling/notebooks/Mapping/ISO19139mapping/ISOMap.ipynb
+          - file: tooling/notebooks/Mapping/DCATmapping/dcatmapping.ipynb
+        - file: tooling/notebooks/Exploration/README.md
+          sections:
+          - file: tooling/notebooks/Exploration/GeoKGComplete/geocomplete.ipynb
+          - file: tooling/notebooks/Exploration/CA-DWR/CADWR.ipynb
+          - file: tooling/notebooks/Exploration/MarinePrtcAPI.ipynb
+          - file: tooling/notebooks/Exploration/SPREP.ipynb
+          - file: tooling/notebooks/Exploration/maspawio.ipynb
+          - file: tooling/notebooks/Exploration/LDFeed/LDFeed.ipynb
   - caption: "Validation"
     numbered: False
     chapters:

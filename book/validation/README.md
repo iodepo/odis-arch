@@ -7,6 +7,17 @@ approaches for OIH.  The focus initially is not on validating approaches with
 the full publishing guidance.  Rather the focuses is on the the "info hub" as a
 search application and develops validation to support that.
 
+### Well Formed JSON-LD 
+
+SDO Valdator
+
+Structure data Linter
+
+JSON-LD Playground
+
+
+### Shape Validation
+
 Initial approach:
 
 * Develop a base SHACL document that assess a data graph based on elements needed to support search
@@ -27,4 +38,4 @@ Examples of these needs include:
 ## Implementation
 
 Work this implementation can be found in the notebooks section
-[pySHACL testing](../tooling/notebooks/validation/OIH_SHACL.ipynb).
+[SHACL testing](../tooling/notebooks/validation/OIH_SHACL.ipynb).

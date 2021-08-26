@@ -1,0 +1,42 @@
+{
+"@context": {
+        "@vocab": "https://schema.org/"
+    },
+"@type": "Dataset",
+"name": "FSM Municipalities",
+"description": "The population was compiled from available census reports and validated using other available datasets. For each country, population counts from the finest resolution was trended to 2010 using a country-specific annual growth rate assumptions. Underlying vector geometry comes from regional sources, primarily SPC.\r\nPrimary Data Source(s): PopGIS, Federated States of Micronesia Division of Statistics\r\nSecondary Data Source(s): None\r\nGeographical Resolutions Available (with count):\r\n1. State (4)\r\n2. Municipality (421)\r\n3. Electoral District (373)\r\nAdditional Comments:\r\n1. The Electoral District and Municipality geographical resolutions are not related to each other and are roughly at the same level of granularity but with different defined boundaries.\r\n2. This population database is misaligned due to the source data provided in the SPC?s PopGIS data set. This misalignment is not linear and the largest measured misalignment in a significantly populated region is approximately 500 meters. After the creation of this deliverable we received updated boundary files from SPC. These boundary files have not been integrated into the delivered population database.\r\nComplied by AIR Worldwide\r\n\r\n",
+	"inLanguage": "en",
+	"dateCreated": ["09-07-2021T01:07:41.0"],
+	"dateModified": ["09-07-2021T01:07:41.0"],
+	"publisher": [{
+		"@type": "Organization",
+		"name": "Department of Environment, Climate Change \u0026 Emergency Management (DECEM), FSM",
+		"description": "Secretary: The Honorable Andrew Yatilman\r\nPalikir Station, Pohnpei State, FM 96941\r\nPhone: (691) 320-8815"
+	}],
+	"subjectOf": ["Culture and Heritage"],
+	"keywords": ["municipalities", "population"],
+	"license": "https:\/\/pacific-data.sprep.org\/dataset\/data-portal-license-agreements\/resource\/de2a56f5-a565-481a-8589-406dc40b5588",
+	"spatial": "POLYGON ((-226.42089486122 3.1551428859245, -226.42089486122 9.0948651147148, -198.53027164936 9.0948651147148, -198.53027164936 3.1551428859245))",
+	"spatialCoverage": "FSM",
+	"temporalCoverage": "",
+	"accountablePerson": {
+		"@type": "Person"
+	},
+	"distribution": [{
+		"@type": "DataDownload",
+		"contentUrl": "http:\/\/dev.d9fsm.sprep.wod.by\/system\/files\/fm_municipality.csv",
+		"fileFormat": "csv",
+		"encodingFormat": "text\/csv",
+		"contentSize": "1349510",
+		"description": "",
+		"name": "Municipalities CSV Spreadsheet",
+		"url": "http:\/\/dev.d9fsm.sprep.wod.by\/system\/files\/fm_municipality.csv"
+	}, {
+		"@type": "DataDownload",
+		"fileFormat": "geojson",
+		"description": "GeoJSON file of FSM municipalities",
+		"name": "Municipalities Map",
+		"url": "http:\/\/www.pacgeo.org\/geoserver\/wfs?srsName=EPSG%3A4326\u0026typename=geonode%3Afm_municipality\u0026outputFormat=json\u0026version=1.0.0\u0026service=WFS\u0026request=GetFeature\u0026access_token=62ccb5e3178211e8b3570a4d19063e95"
+	}],
+	"@id": "http:\/\/dev.d9fsm.sprep.wod.by\/dataset\/151"
+}

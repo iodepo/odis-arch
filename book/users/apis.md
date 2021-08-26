@@ -18,18 +18,9 @@ This is a simple HTTP protocol that allows you to query the graph using SPARQL a
 
 The OIH triplestore exposes the graph following this pattern for queries.
 
-### Examples:
+### Examples
 
 ```bash
 curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
 ```
-
-
-
-## GraphQL
-
-GraphQL is another popular approach to the access of remote services.  A simple mapping of the 
-default OIH SARQL query to GraphQL is provided.   This is not a expression of the graph mode in
-GraphQL, but rather a simple mapping of this specific query to GraphQL.   As such it is compatible with 
-standard GraphQL clients but does not provide the full functionality of the OIH graph.
 
