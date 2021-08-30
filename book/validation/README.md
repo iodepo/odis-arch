@@ -9,11 +9,11 @@ search application and develops validation to support that.
 
 ### Well Formed JSON-LD 
 
-SDO Valdator
+[SDO Validator](https://validator.schema.org/)
 
-Structure data Linter
+[Structured data Linter](http://linter.structured-data.org/)
 
-JSON-LD Playground
+[JSON-LD Playground](https://json-ld.org/playground/)
 
 
 ### Shape Validation

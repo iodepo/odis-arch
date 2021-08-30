@@ -13,7 +13,7 @@ execution:
 ---
 
 
-# Querying SPARQL
+# SPARQL
 
 ## About
 

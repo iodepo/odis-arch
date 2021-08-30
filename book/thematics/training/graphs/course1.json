@@ -8,9 +8,18 @@
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         }
     },
-    "@id": "https://example.org/id/course/1",
+    "@id": "https://example.org/id/course/2",
     "@type": "Course",
-    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "courseCode": "SD100",
+    "name": "Structured Data",
+    "description": "An introduction to authoring JSON-LD documents for OIH",
+    "teaches": "JSON-LD",
+    "provider": {
+        "@type": "Organization",
+        "name": "Example University",
+        "@id": "https://grid.ac/institutes/grid.475727.4",
+        "description": "UN Department of Economic and Social Affairs Sustainable Development"
+    },
     "hasCourseInstance": [
         {
             "@type": "CourseInstance",

@@ -16,19 +16,27 @@ execution:
 
 ## About
 
-Expert:  A person who has a deep understanding of a particular subject area.
 
-Institution: A group of people working together to provide a particular service.
+This thematic type provides a way to describe the experts and institutions. 
+In this case the following definitions are used:
   
+> Expert:  A person who has a deep understanding of a particular subject area.
+>
+> Institution: A group of people working together to provide a particular service.
+> 
 ## Example: Person Graph
 
-The following graph present a basic record we might present about a person.  
-We can break down some of the key attributes of this record.
+The following graph present a basic record we might use for a person.  
+We will break down some of the key properties used in this graph.
 
-OIH is using [schema.org/Person](https://schema.org/Person) for this type.
+As Ocean InfoHub is levergaing Schema.org we are 
+using [schema.org/Person](https://schema.org/Person) for this type.
 Any of the properties of Person seen there are valid to use in such a record.
 
-At the core though there are a few key items OIH is looking for in a Person record.
+While publishers are free to use as many elements as they wish, our goal 
+with this documentation is provide a simple example that address some of the search
+and discovery goals of OIH along with those properties most useful in the linking 
+of resources between OIH participants.   
 
 
 ```{literalinclude} ./graphs/person.json
@@ -62,7 +70,7 @@ jbutils.show_graph(compacted)
 ```
 
 
-### Details: Authoritative Reference
+### Details: Indentifier
 
 For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for 
@@ -316,7 +324,7 @@ jbutils.show_graph(compacted)
 ```
 
 
-### Details: Authoritative Reference
+### Details: Indentifier
 
 For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for 

@@ -265,15 +265,16 @@ to use in support of services they may wish to provide.
 
 ## Existing support in software
 
-Many content management approaches and packages may already have support for
-the structured data on the web pattern.  
+Many content management systems other web based data interfaces 
+may already have support for the structured data on the web pattern and
+schema.org specifically. While it is beyond the scope of this project to 
+detail each one, a few starting points for exploration are provided below
+for some of the more common ones.  
 
-A collection of starting points for their support follows.  
-
-* [WordPress](https://wordpress.org/plugins/schema/)
 * [Drupal](https://www.drupal.org/docs/contributed-modules/schemaorg-metatag)
 * [CKAN](https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/)
 * [DSpace](https://journal.code4lib.org/articles/13191)
+* [DKAN](https://dkan.readthedocs.io/en/latest/introduction/index.html)
 * [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
 * [OPeNDAP (native support)](https://www.opendap.org/)
 * [GeoNode](http://geonode.org/)

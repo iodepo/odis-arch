@@ -69,7 +69,7 @@ jbutils.show_graph(compacted)
 ```
 
 
-### Details: Authoritative Reference
+### Details: Indentifier
 
 For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for 
