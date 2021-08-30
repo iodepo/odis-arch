@@ -73,7 +73,25 @@ jbutils.show_graph(compacted)
 
 ```
 
+
 ### subjectOf
+
+
+````{panels}
+Values expected to be one of these types
+^^^
+* [Event](https://schema.org/Event)
+* [CreativeWork](https://schema.org/CreativeWork)
++++
+Range
+---
+
+Used on these types
+^^^
+* [Thing](https://schema.org/Thing)
++++
+Domain
+````
 
 Lets take a look at subjectOf.  In this case we are using subjectOf to express
 a connection to a UN SDG.  This, subjectOf, could also be used to connect 
@@ -87,7 +105,7 @@ to a CreativeWork or Event.
 Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
 subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
 as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the 
-context of the range of subjectOf.   Refernece thematic type [Training](../training/README.md)
+context of the range of subjectOf.   Reference thematic type [Training](../training/README.md)
 ```
 
 ```{code-cell}
@@ -130,10 +148,32 @@ jbutils.show_graph(framed)
 
 ```
 
-
 ### publishingPrinciples
 
-Lets take a look at publishingPrinciples. 
+````{panels}
+Values expected to be one of these types
+^^^
+* [CreativeWork](https://schema.org/CreativeWork)
+* [Organization](https://schema.org/Organization)
+* [Person](https://schema.org/Person)
++++
+Range
+---
+
+Used on these types
+^^^
+* [CreativeWork](https://schema.org/CreativeWork)
+* [URL](https://schema.org/URL)
++++
+Domain
+````
+
+Lets take a look at [publishingPrinciples](https://schema.org/publishingPrinciples).  This can be used 
+to connect CreativeWork, Organization, or Person to either of CreativeWork or URL.  So this 
+allows us to link a CreativeWork to a policy or principle statement.  This has some very useful
+use cases where resources can be grouped based on their connection to those principles and policies.  
+
+
 
 ```{code-cell}
 :tags: [hide-input]
@@ -175,11 +215,18 @@ jbutils.show_graph(framed)
 
 ```
 
-## SDG Linkage
+## Sustainable Development Goals
 
 
-The following provides an example of how Sustainable Development Goals 
-(SDGs) could be linked to a Schema.org defined type using [subjectOf](https://schema.org/subjectOf).
+The following example provides an an approach to connecting 
+Sustainable Development Goals 
+(SDGs) could be linked to via [subjectOf](https://schema.org/subjectOf).  
+
+As this is a CreateWork, we can now use one more linking property, the 
+Schema.org citation property.  By comparison, the 
+[publishingPrinciples](https://schema.org/publishingPrinciples) or 
+[subjectOf](https://schema.org/subjectOf) 
+connections carry a bit more semantic meaning. 
 
 ```{literalinclude} ./graphs/doc.json
 :linenos:
@@ -211,18 +258,42 @@ jbutils.show_graph(compacted)
 
 ```
 
-## Creative work link options
+### citation
 
+````{panels}
+Values expected to be one of these types
+^^^
+* [Text](https://schema.org/Text)
+* [CreativeWork](https://schema.org/CreativeWork)
++++
+Range
+---
 
-```{literalinclude} ./graphs/creativework.json
-:linenos:
-```
+Used on these types
+^^^
+* [CreativeWork](https://schema.org/CreativeWork)
++++
+Domain
+````
+
+Schema.org [citation](https://schema.org/citation) provides a way to link to another creative work.
+This property can be pointed to either Text or CreativeWork.  It should also be noted that citation 
+can only be used on type [CreativeWork](https://schema.org/CreativeWork).  
+
+Due to the limit to use on CreateWork only, this example is not seen in the 
+above examplewhich is of type Organization.  
+
+The actual semantics of citation is rather vague stating it is a method to 
+cite or reference another creative work.   
 
 ```{code-cell}
 :tags: [hide-input]
 
 import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
 from pyld import jsonld
+import graphviz
 import os, sys
 
 currentdir = os.path.dirname(os.path.abspath(''))
@@ -230,18 +301,30 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("./graphs/doc.json") as dgraph:
     doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@requireAll": "true",
+  "@type":     "CreativeWork",
+  "citation": ""
+}
 
 context = {
     "@vocab": "https://schema.org/",
 }
 
 compacted = jsonld.compact(doc, context)
-jbutils.show_graph(compacted)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
 
 ```
-
 
 
 ## Refs

@@ -7,20 +7,27 @@
         {
                 "@type": "DefinedTermSet",
                 "@id": "http://openjurist.org/dictionary/Ballentine",
-                "name": "Ballentine's Law Dictionary"
+                "name": "Ballentine's Law Dictionary",
+                "description": "A description of Ballentine's Law Dictionary Term Set"
         },
         {
                 "@type": "DefinedTerm",
                 "@id": "http://openjurist.org/dictionary/Ballentine/term/calendar-year",
                 "name": "calendar year",
                 "description": "The period from January 1st to December 31st, inclusive, of any year.",
-                "inDefinedTermSet": "http://openjurist.org/dictionary/Ballentine"
+                "inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://openjurist.org/dictionary/Ballentine"
+                }
         },
         {
                 "@type": "DefinedTerm",
                 "@id": "http://openjurist.org/dictionary/Ballentine/term/schema",
                 "name": "schema",
                 "description": "A representation of a plan or theory in the form of an outline or model.",
-                "inDefinedTermSet": "http://openjurist.org/dictionary/Ballentine"
+                "inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "@id": "http://openjurist.org/dictionary/Ballentine"
+                }
         }
 ]
