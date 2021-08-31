@@ -8,7 +8,6 @@ PREFIX schemaold: <http://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 SELECT DISTINCT ?g  ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline
 WHERE
-
    ?lit bds:search "coral" .
    ?lit bds:matchAllTerms "false" .
    ?lit bds:relevance ?score .

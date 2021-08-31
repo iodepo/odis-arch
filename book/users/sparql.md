@@ -29,11 +29,24 @@ This will be different for different patterns.  For example, it might
 relate to the publisher provider elements for Creativeworks, but to 
 the identity element for People and Organizations. 
 
-Also here will be a SHACL shape to help validate a record as fit
-for use with the query.  It will provide guidance on what is optional and 
-and is required. 
 
 ```{literalinclude} ./graphs/basic.rq
 :linenos:
-
+:emphasize-lines: 11-13, 17-20, 22-27, 29-31
 ```
+
+## Lines 11-13
+
+bds 
+
+## Lines 17-20
+
+OPTIONAL keyword
+
+## Lines 22-27
+
+prov
+
+## Lines 29-31
+
+ORDER LIMIT OFFSET

@@ -24,3 +24,57 @@ The OIH triplestore exposes the graph following this pattern for queries.
 curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
 ```
 
+If run this from the command line we will get something like the following.  
+
+```bash
+✗ curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
+
+{
+  "head" : {
+    "vars" : [ "s", "p", "o" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "s" : {
+        "type" : "uri",
+        "value" : "https://hdl.handle.net/1834/10030"
+      },
+      "p" : {
+        "type" : "uri",
+        "value" : "https://schema.org/propertyID"
+      },
+      "o" : {
+        "type" : "literal",
+        "value" : "https://hdl.handle.net/"
+      }
+    } ]
+  }
+}                                   
+```
+
+While this is unlikely how you will want to interact with the graph, 
+it desmonstrates the HTTP based access API that can be used in tools, notebooks
+or other applications.
+
+This is the same basic approach the used in the web client.  There the 
+axios library (https://axios-http.com/) is used with a code snippet like:
+
+```javascript
+
+ axios.get(url.toString())
+      .then(function (response) {
+        // handle success
+        console.log(response);
+        const el = document.querySelector('#container2');
+        render(showresults(response), el);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
+```
+
