@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OIH Graph" href="OIH_GraphAnalytics.html" />
+    <link rel="next" title="OIH Queries" href="OIH_Queries.html" />
     <link rel="prev" title="Sargassum Project Template" href="../openRefine/projects.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -514,10 +561,12 @@
 <h1>OIH Notebooks<a class="headerlink" href="#oih-notebooks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>Notebooks related to the OIH project.  These are early documents and they and
-this documentation will expand.  These notebooks are developed and run using
-the Jupyter Data Science notebooks server (<a class="reference external" href="https://hub.docker.com/r/jupyter/datascience-notebook">https://hub.docker.com/r/jupyter/datascience-notebook</a>).  The will likely run on Google Colab or Binder but additional installs
-may be required.   We will attempt to document all requirements in the notebooks.</p>
+<p>This section contains a collection of Notebooks related to the OIH project.
+These are early documents and they and this documentation will expand.  These
+notebooks are developed and run using the Jupyter Data Science notebooks server
+(<a class="reference external" href="https://hub.docker.com/r/jupyter/datascience-notebook">https://hub.docker.com/r/jupyter/datascience-notebook</a>).  The will likely run on
+Google Colab or Binder but additional installs may be required.   We will
+attempt to document all requirements in the notebooks and the instructions.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -562,10 +611,10 @@ may be required.   We will attempt to document all requirements in the notebooks
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="OIH_GraphAnalytics.html" title="next page">
+        <a class="right-next" href="OIH_Queries.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">OIH Graph</p>
+                <p class="prevnext-title">OIH Queries</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

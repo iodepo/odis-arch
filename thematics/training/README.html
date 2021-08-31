@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../../tooling/notebooks/OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../tooling/notebooks/OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tooling/notebooks/validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../tooling/notebooks/geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../../tooling/notebooks/Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../tooling/notebooks/geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../../tooling/notebooks/Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../tooling/notebooks/Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -520,13 +567,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-course-style">
-   Basic Course style
+  <a class="reference internal nav-link" href="#simple-course">
+   Simple Course
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simple-course">
-   Simple Course
+  <a class="reference internal nav-link" href="#detailed-course">
+   Detailed Course
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -549,11 +596,110 @@
 <h1>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>From <a class="reference external" href="https://schema.org/Course">https://schema.org/Course</a></p>
-<p>Course: A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.</p>
+<p>A thematic type to describe potential training activities.  In <a class="reference external" href="http://Schema.org">Schema.org</a> a Course
+is a subtype of <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> and <a class="reference external" href="https://schema.org/LearningResource">LearningResource</a>.</p>
+<p>As defined from <a class="reference external" href="https://schema.org/Course">https://schema.org/Course</a>:</p>
+<blockquote>
+<div><p>Course: A description of an educational course which may be offered as distinct
+instances at which take place at different times or take place at different
+locations, or be offered through different media or modes of study. An
+educational course is a sequence of one or more educational events and/or
+creative works which aims to build knowledge, competence or ability of learners.</p>
+</div></blockquote>
+<p>We can start by looking at a basic Course description.</p>
 </div>
-<div class="section" id="basic-course-style">
-<h2>Basic Course style<a class="headerlink" href="#basic-course-style" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple-course">
+<h2>Simple Course<a class="headerlink" href="#simple-course" title="Permalink to this headline">¶</a></h2>
+<p>A basic course might simply present the name and description of the course along
+with a few other key properties.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
+</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+</span><span class="hll">        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/course2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/README_1_04.svg" src="../../_images/README_1_04.svg" /></div>
+</div>
+<p>Here we can see the emphasized line 7 and lines 10-15 highlighting some
+unique types.</p>
+<p><em>courseCode</em>:
+The <a class="reference external" href="https://schema.org/courseCode">courseCode</a> is used to provide the ID used by the provider for this course.</p>
+<p><em>provider</em>:
+The <a class="reference external" href="https://schema.org/provider">provider</a> is the organization offering the course.
+This property is from the CreativeWork supertype.  In this case the provider may
+be of type Organization or Person.  For Ocean InfoHub these would be described in
+the <a class="reference internal" href="../expinst/README.html"><span class="doc std std-doc">Experts and Institutions</span></a> section.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this case you can see we use a simple &#64;id in the provider property.  You can
+see this same &#64;id used in the  <a class="reference internal" href="../expinst/README.html"><span class="doc std std-doc">Experts and Institutions</span></a> section.
+By doing this, we connect this provider to the Organization described by that document.</p>
+<p>As such these will be connected in the graph.  So there is no need to duplicate
+the information here.  This is a common graph pattern that allows us to simply
+connect resources.   If there was no existing Organization or Person resource you could
+simply create one here.   However, you may also find it useful to create a given
+resource and link to it in the graph.</p>
+</div>
+</div>
+<div class="section" id="detailed-course">
+<h2>Detailed Course<a class="headerlink" href="#detailed-course" title="Permalink to this headline">¶</a></h2>
+<p>There are a wide range of properties that can be used to describe a course.
+Many of these can be seen at the <a class="reference external" href="https://schema.org/Course">Course</a> type as
+the properties from Course and properties
+from <a class="reference external" href="https://schema.org/LearningResource">LearningResource</a>.</p>
+<p>We wont go into the details of each property here, but we will show a couple.</p>
+<p>The example below present two.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -601,54 +747,72 @@
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/1&quot;</span><span class="p">,</span>
+<span class="hll">        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+</span><span class="hll">        <span class="p">},</span>
+</span><span class="hll">        <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span>    <span class="p">},</span>
+    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/2&quot;</span><span class="p">,</span>
     <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;In this course you will get an introduction to the main tools and ideas in the data scientist&#39;s toolbox...&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;hasCourseInstance&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">&quot;MOOC1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;online&quot;</span>
-            <span class="p">],</span>
-            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-15&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;attendee&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;This can be text or URL for an ID like ORCID&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of the ID&quot;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">&quot;MOOC2&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;online&quot;</span>
-            <span class="p">],</span>
-            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-05-21&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-04-15&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
+<span class="hll">    <span class="s2">&quot;teaches&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON-LD&quot;</span><span class="p">,</span>
+</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+    <span class="p">},</span>
+<span class="hll">    <span class="s2">&quot;hasCourseInstance&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll">        <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll">                <span class="s2">&quot;MOOC1&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll">            <span class="p">],</span>
+</span><span class="hll">            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-15&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;attendee&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll">                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
+</span><span class="hll">                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll">                    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;This can be text or URL for an ID like ORCID&quot;</span><span class="p">,</span>
+</span><span class="hll">                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
+</span><span class="hll">                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of the ID&quot;</span>
+</span><span class="hll">                <span class="p">}</span>
+</span><span class="hll">            <span class="p">}</span>
+</span><span class="hll">        <span class="p">},</span>
+</span><span class="hll">        <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll">                <span class="s2">&quot;MOOC2&quot;</span><span class="p">,</span>
+</span><span class="hll">                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll">            <span class="p">],</span>
+</span><span class="hll">            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-05-21&quot;</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-04-15&quot;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">    <span class="p">]</span>
+</span><span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <div class="cell tag_hide-input docutils container">
@@ -675,70 +839,24 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/README_1_04.svg" src="../../_images/README_1_04.svg" /></div>
-</div>
-</div>
-<div class="section" id="simple-course">
-<h2>Simple Course<a class="headerlink" href="#simple-course" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/2&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F300&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Physics&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CollegeOrUniversity&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;University of Bristol&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;/provider/324/university-of-bristol&quot;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/course2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
 <img alt="../../_images/README_3_02.svg" src="../../_images/README_3_02.svg" /></div>
 </div>
+<p>Line 16 shows the <a class="reference external" href="https://schema.org/teaches"><em>teaches</em></a> property.  It
+should be noted while this propery can point to simple text, it is
+also possible to leverage <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>.  This
+means a controlled vocabulary can be used to describe what the course
+teaches.  Ocean InfoHub provides some more information and links to further
+information on defined term in
+the <a class="reference internal" href="../terms/list.html"><span class="doc std std-doc">Keywords and Defined Terms</span></a> section.</p>
+<p>Lines 23-56 show using a <a class="reference external" href="https://schema.org/hasCourseInstance">hasCourseInstance</a>
+property to show instances where this course is being taught.  Also of note
+in this example are the lines 4-9 in the context where we can type the
+endDate and startDate as type dateTime.  By doing this we must provide the
+dates in a format that is in line with the [XML Datatype] and in particular the
+<a class="reference external" href="https://www.w3.org/TR/xmlschema-2/#isoformats">ISO 8601 Data and Time Formats</a>.</p>
+<p>By doing this we can then later conduct searches on the graph that use date ranges
+to allow us to find courses, or any resources, that are being taught in a
+given time period.</p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>

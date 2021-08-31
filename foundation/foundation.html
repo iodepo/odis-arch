@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../tooling/notebooks/geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../tooling/notebooks/Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../tooling/notebooks/geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../tooling/notebooks/Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../tooling/notebooks/Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -720,9 +767,8 @@ following the same prefix:term pattern.</p>
 </div>
 <div class="section" id="graph">
 <h2>Graph<a class="headerlink" href="#graph" title="Permalink to this headline">¶</a></h2>
-<p>The next section we will discuss is the graph part of the document.  This is where the properties and
-values of our resource are described.  First though, let’s visit a couple special properties in our
-document.</p>
+<p>The next section we will discuss is the graph part of the document seen in lines 5-9 below.  This is where the properties and
+values of our resource are described.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -744,6 +790,8 @@ document.</p>
 </span><span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+<p>First though, let’s visit a couple special properties in our
+document.</p>
 <div class="section" id="node-identifiers-id">
 <h3>Node identifiers (&#64;id)<a class="headerlink" href="#node-identifiers-id" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
@@ -817,7 +865,7 @@ a property on the CreateWork type, starts with a lower case n.</p>
 </div>
 <div class="section" id="other-properties">
 <h3>Other properties<a class="headerlink" href="#other-properties" title="Permalink to this headline">¶</a></h3>
-<p>At this point we can look at the other properties for our type.</p>
+<p>At this point we can return to look at the other properties for our type.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -843,6 +891,13 @@ a property on the CreateWork type, starts with a lower case n.</p>
 this is type  <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>.  So any of the properties
 seen at the <a class="reference external" href="http://Schema.org">Schema.org</a> site can be used.   The key properties of value to the OIH implementation can then
 be found, for this type, in the <a class="reference internal" href="../thematics/docs/README.html"><span class="doc std std-doc">Documents thematic type</span></a>.</p>
+<p>For the OIH implementation, we will use the following properties as core properties we
+want all OIH documents to have.  These include:</p>
+<blockquote>
+<div><p>name:  The name of the document or item being described</p>
+<p>description:  A description of the document or item being described</p>
+<p>url: A URL for the document or item being described.</p>
+</div></blockquote>
 </div>
 <div class="section" id="domain-and-range">
 <h3>Domain and range<a class="headerlink" href="#domain-and-range" title="Permalink to this headline">¶</a></h3>

@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maspawio &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Marine Regions LD Feed" href="LDFeed/LDFeed.html" />
+    <link rel="prev" title="SPREP Data Testing" href="SPREP.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/docs/README.html">
+   Core 2: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/terms/list.html">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/identifier/id.html">
+   Support 6: Identifier and Prov
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../index.html">
+   Tooling
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../openRefine/README.html">
+     OpenRefine
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../openRefine/template.html">
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../openRefine/projects.html">
+       Sargassum Project Template
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../README.html">
+     OIH Notebooks
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Queries.html">
+       OIH Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Editor.html">
+       OIH Editing Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../validation/OIH_SHACL.html">
+       SHACL Validation on Object Store
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Mapping/README.html">
+       Mapping to Schema.org
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active has-children">
+      <a class="reference internal" href="README.html">
+       Exploration
+      </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul class="current">
+       <li class="toctree-l4">
+        <a class="reference internal" href="GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="LDFeed/LDFeed.html">
+         Marine Regions LD Feed
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/referenceclient.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/sparql.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/tooling/notebooks/Exploration/maspawio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Ftooling/notebooks/Exploration/maspawio.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/Exploration/maspawio.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/Exploration/maspawio.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dublin-core-to-schema-org-workflow-testing">
+   Dublin Core to Schema.org workflow testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#note-oih-themtic-mapping">
+   Note OIH Themtic mapping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#document-risk-pattens">
+   Document Risk Pattens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#steps-to-alignment-with-structured-data-on-the-web">
+   Steps to alignment with Structured Data on the Web
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="maspawio">
+<h1>Maspawio<a class="headerlink" href="#maspawio" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dublin-core-to-schema-org-workflow-testing">
+<h2>Dublin Core to <a class="reference external" href="http://Schema.org">Schema.org</a> workflow testing<a class="headerlink" href="#dublin-core-to-schema-org-workflow-testing" title="Permalink to this headline">¶</a></h2>
+<p>An experiment to see if we can convert a Dublin Core record to <a class="reference external" href="http://Schema.org">Schema.org</a>.  The focus will be on OIH type <a class="reference external" href="https://book.oceaninfohub.org/thematics/docs/README.html">https://book.oceaninfohub.org/thematics/docs/README.html</a></p>
+<p>The source location is: <a class="reference external" href="https://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya">https://maspawio.net/layers/geonode:locally_managed_marine_areas_kenya</a></p>
+<p>Need somethnig like documented at: <a class="reference external" href="https://book.oceaninfohub.org/thematics/docs/maps.html">https://book.oceaninfohub.org/thematics/docs/maps.html</a>   We will need to add into this a sptial geometry to scope the bounding box.</p>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206">https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206</a></p>
+</div>
+<div class="section" id="note-oih-themtic-mapping">
+<h2>Note OIH Themtic mapping<a class="headerlink" href="#note-oih-themtic-mapping" title="Permalink to this headline">¶</a></h2>
+<p>What existing (or not) patterns do we align to</p>
+</div>
+<div class="section" id="document-risk-pattens">
+<h2>Document Risk Pattens<a class="headerlink" href="#document-risk-pattens" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>URI pattern (URI governance)</p></li>
+<li><p>Sitemap update patterns</p></li>
+</ul>
+</div>
+<div class="section" id="steps-to-alignment-with-structured-data-on-the-web">
+<h2>Steps to alignment with Structured Data on the Web<a class="headerlink" href="#steps-to-alignment-with-structured-data-on-the-web" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>…</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install -q kglab</span>
+<span class="o">!</span>pip install -q graphviz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">rdflib</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="c1"># import kglab as kg</span>
+<span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
+<span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
+<span class="kn">from</span> <span class="nn">icecream</span> <span class="kn">import</span> <span class="n">ic</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Source Dubline core in XML</span>
+<span class="n">dcxml</span> <span class="o">=</span> <span class="s2">&quot;https://maspawio.net/catalogue/csw?outputschema=http%3A</span><span class="si">%2F%2F</span><span class="s2">www.opengis.net</span><span class="si">%2F</span><span class="s2">cat</span><span class="si">%2F</span><span class="s2">csw</span><span class="si">%2F</span><span class="s2">2.0.2&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;dublin.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+<span class="c1"># print(root.tag)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># id</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}identifier&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># name</span>
+<span class="c1"># This can be used to form the URL:  https://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}title&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># description</span>
+<span class="n">description</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/terms/}abstract&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">description</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># keywords</span>
+<span class="n">subjects</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}subject&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># url https://maspawio.net/layers/geonode:locally_managed_marine_areas_kenya</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3046b5fc-18e0-11eb-894f-0a735f7a740c
+locally managed marine areas Kenya
+This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net
+
+
+kenya
+LMMA
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">text</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span>   <span class="s2">&quot;http://example.org/1&quot;</span>      <span class="c1">#id.text</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">text</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">}</span>
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/maspawio_8_0.svg" src="../../../_images/maspawio_8_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;http://example.org/1&quot;,
+    &quot;description&quot;: &quot;This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net\r\n\r\n&quot;,
+    &quot;name&quot;: &quot;locally managed marine areas Kenya&quot;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">):</span>
+<span class="c1">#     print(actor)</span>
+
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">actor</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{http://purl.org/dc/elements/1.1/}identifier 3046b5fc-18e0-11eb-894f-0a735f7a740c
+{http://purl.org/dc/elements/1.1/}title locally managed marine areas Kenya
+{http://purl.org/dc/elements/1.1/}type dataset
+{http://purl.org/dc/elements/1.1/}subject kenya
+{http://purl.org/dc/elements/1.1/}subject LMMA
+{http://purl.org/dc/elements/1.1/}format vector
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/geonode/wfs
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/geonode/wms
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:locally_managed_marine_areas_kenya&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on
+{http://purl.org/dc/terms/}references http://maspawio.net/uploaded/thumbs/layer-3046b5fc-18e0-11eb-894f-0a735f7a740c-thumb.png
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/reflect?layers=geonode:locally_managed_marine_areas_kenya&amp;width=200&amp;height=150&amp;format=image/png8
+{http://purl.org/dc/terms/}references http://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/gwc/service/gmaps?layers=geonode:locally_managed_marine_areas_kenya&amp;zoom={z}&amp;x={x}&amp;y={y}&amp;format=image/png8
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=refresh
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=download
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?srsName=EPSG%3A4326&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=json&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}modified 2020-10-28
+{http://purl.org/dc/terms/}abstract This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net
+
+
+{http://purl.org/dc/elements/1.1/}date 2020-10-28
+{http://purl.org/dc/elements/1.1/}language eng
+{http://www.opengis.net/ows}BoundingBox 
+            
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for actor in root.findall(&#39;{http://www.opengis.net/ows}BoundingBox&#39;):</span>
+<span class="c1">#     for child in actor:</span>
+<span class="c1">#         print(child.tag, child.text)</span>
+
+<span class="c1"># bb = root.find(&#39;{http://www.opengis.net/ows}BoundingBox&#39;)</span>
+<span class="c1"># print(bb)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tooling/notebooks/Exploration"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="SPREP.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">SPREP Data Testing</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="LDFeed/LDFeed.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Marine Regions LD Feed</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By IODEPO<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SHACL Validation For Warehouses &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>SHACL Validation on Object Store &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="ISO 19139 To Schema.org" href="../ISO19139mapping/ISOMap.html" />
-    <link rel="prev" title="OIH Editing Playground" href="../OIH_Editor.html" />
+    <link rel="next" title="Mapping to Schema.org" href="../Mapping/README.html" />
+    <link rel="prev" title="SHACL Simple Validation" href="OIH_Simple_SHACL.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="../OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../OIH_Queries.html">
        OIH Queries
       </a>
@@ -298,24 +298,24 @@
        OIH Editing Playground
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -537,8 +584,8 @@
         
               <div>
                 
-  <div class="section" id="shacl-validation-for-warehouses">
-<h1>SHACL Validation For Warehouses<a class="headerlink" href="#shacl-validation-for-warehouses" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="shacl-validation-on-object-store">
+<h1>SHACL Validation on Object Store<a class="headerlink" href="#shacl-validation-on-object-store" title="Permalink to this headline">¶</a></h1>
 <p>Ocean Info Hub SHACL validation on S3(minio) objects</p>
 <p>It should be noted here that SHACL validation is not a service OIH offers.  Rather,
 the validation is a capacity that the OIH architectural approach facilities.  Further
@@ -875,19 +922,19 @@ Name: shape, dtype: int64
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../OIH_Editor.html" title="previous page">
+        <a class="left-prev" href="OIH_Simple_SHACL.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">OIH Editing Playground</p>
+                <p class="prevnext-title">SHACL Simple Validation</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../ISO19139mapping/ISOMap.html" title="next page">
+        <a class="right-next" href="../Mapping/README.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">ISO 19139 To Schema.org</p>
+                <p class="prevnext-title">Mapping to Schema.org</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

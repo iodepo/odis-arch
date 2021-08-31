@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="OIH Editing Playground" href="OIH_Editor.html" />
-    <link rel="prev" title="OIH Graph" href="OIH_GraphAnalytics.html" />
+    <link rel="prev" title="OIH Notebooks" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -283,11 +288,6 @@
      </i>
     </label>
     <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        OIH Queries
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -532,16 +579,38 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#functions">
-     Functions
+    <a class="reference internal nav-link" href="#support-functions">
+     Support Functions
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aquadocs-alignment-testing">
-   AquaDocs Alignment Testing
+  <a class="reference internal nav-link" href="#queries">
+   Queries
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-count">
+     Simple Count
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predicate-counts">
+     Predicate Counts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oih-base-query">
+     OIH Base Query
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oih-gleaner-query">
+     OIH Gleaner Query
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#query-for-prov">
@@ -578,20 +647,21 @@
 <h3>Installs<a class="headerlink" href="#installs" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-#@title
-!pip install -q SPARQLWrapper
-!pip install -q cython
-!pip install -q cartopy
-!pip install -q geopandas
-!pip install -q contextily==1.0rc2
-!pip install pyshacl
-!pip install &#39;PyLD&gt;=2.0.3&#39;
-!pip install flatten_json
-!pip install &#39;fsspec&gt;=0.3.3&#39;
-!pip install s3fs
-!pip install boto3
-!pip install -q kglab
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%capture</span>
+<span class="c1">#@title</span>
+<span class="o">!</span>pip install -q SPARQLWrapper
+<span class="o">!</span>pip install -q cython
+<span class="c1"># !pip install -q cartopy</span>
+<span class="o">!</span>pip install -q geopandas
+<span class="o">!</span>pip install -q <span class="nv">contextily</span><span class="o">==</span><span class="m">1</span>.0rc2
+<span class="o">!</span>pip install -q pyshacl
+<span class="o">!</span>pip install -q <span class="s1">&#39;PyLD&gt;=2.0.3&#39;</span>
+<span class="o">!</span>pip install -q flatten_json
+<span class="o">!</span>pip install -q <span class="s1">&#39;fsspec&gt;=0.3.3&#39;</span>
+<span class="o">!</span>pip install -q s3fs
+<span class="o">!</span>pip -q install SPARQLWrapper
+<span class="c1"># !pip install -q boto3</span>
+<span class="c1"># !pip install -q kglab</span>
 </pre></div>
 </div>
 </div>
@@ -610,19 +680,18 @@
 <span class="kn">import</span> <span class="nn">geopandas</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">shapely</span>
-<span class="kn">import</span> <span class="nn">kglab</span>
+<span class="c1"># import kglab as kg</span>
 
-<span class="n">oih</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oihdev/sparql&quot;</span>
+<span class="n">oih</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oih/sparql&quot;</span>
+<span class="n">oihdev</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oihdev/sparql&quot;</span>
 <span class="n">oihad</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql&quot;</span>
-<span class="n">oihobps</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/obps/sparql&quot;</span>
-<span class="n">oihlocal</span> <span class="o">=</span> <span class="s2">&quot;http://192.168.86.45:49158/blazegraph/namespace/oih/sparql&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="support-functions">
+<h3>Support Functions<a class="headerlink" href="#support-functions" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title</span>
@@ -650,9 +719,443 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="queries">
+<h2>Queries<a class="headerlink" href="#queries" title="Permalink to this headline">¶</a></h2>
+<p>What follows is a set of queries designed to provide a feel for the OIH graph</p>
+<div class="section" id="simple-count">
+<h3>Simple Count<a class="headerlink" href="#simple-count" title="Permalink to this headline">¶</a></h3>
+<p>How many triples are there?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_count</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT (COUNT(*) as ?Triples) </span>
+<span class="s2">WHERE </span>
+<span class="s2">  {</span>
+<span class="s2">      { ?s ?p ?o } </span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_count</span><span class="p">)</span>
+<span class="n">dfsc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Triples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>159766</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="predicate-counts">
+<h3>Predicate Counts<a class="headerlink" href="#predicate-counts" title="Permalink to this headline">¶</a></h3>
+<p>This gives an overview of unique predicates that connect a subject to an object.  This gives us both an idea of the properties we are using on things and count of their usage.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_pcount</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT ?p (COUNT(?p) as ?pCount)</span>
+<span class="s2">WHERE</span>
+<span class="s2">{</span>
+<span class="s2">  ?s ?p ?o .</span>
+<span class="s2">}</span>
+<span class="s2">GROUP BY ?p</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_pcount</span><span class="p">)</span>
+<span class="n">dfc</span><span class="p">[</span><span class="s1">&#39;pCount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">[</span><span class="s2">&quot;pCount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count to int</span>
+<span class="c1"># dfc.set_index(&#39;p&#39;, inplace=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfc_sorted</span> <span class="o">=</span> <span class="n">dfc</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;pCount&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">dfc_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p</th>
+      <th>pCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>33</th>
+      <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+      <td>32625</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://schema.org/keywords</td>
+      <td>17359</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>https://schema.org/url</td>
+      <td>14236</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>https://schema.org/name</td>
+      <td>12594</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>https://schema.org/provider</td>
+      <td>5136</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>https://schema.org/description</td>
+      <td>4895</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>https://schema.org/sameAs</td>
+      <td>4889</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>https://schema.org/legalName</td>
+      <td>4823</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>https://schema.org/propertyID</td>
+      <td>4265</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>https://schema.org/value</td>
+      <td>4265</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rcount</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dfc_sorted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rcount</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">dfc_sorted</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">38</span><span class="p">)[</span><span class="s1">&#39;pCount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>159766
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hs</span> <span class="o">=</span> <span class="n">dfc_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">hs</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;p&#39;</span><span class="p">:</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;pCount&#39;</span><span class="p">:</span><span class="n">ts</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+<span class="c1"># hs.set_index(&#39;p&#39;, inplace=True)</span>
+<span class="n">hs</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>p</th>
+      <th>pCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>33</th>
+      <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
+      <td>32625</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://schema.org/keywords</td>
+      <td>17359</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>https://schema.org/url</td>
+      <td>14236</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>https://schema.org/name</td>
+      <td>12594</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>https://schema.org/provider</td>
+      <td>5136</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>https://schema.org/description</td>
+      <td>4895</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>https://schema.org/sameAs</td>
+      <td>4889</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>https://schema.org/legalName</td>
+      <td>4823</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>https://schema.org/propertyID</td>
+      <td>4265</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>https://schema.org/value</td>
+      <td>4265</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">hs</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;pCount&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/OIH_Queries_19_0.svg" src="../../_images/OIH_Queries_19_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="oih-base-query">
+<h3>OIH Base Query<a class="headerlink" href="#oih-base-query" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_main</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;prefix prov: &lt;http://www.w3.org/ns/prov#&gt;</span>
+<span class="s2">        PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;</span>
+<span class="s2">        PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;</span>
+<span class="s2">        PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;</span>
+<span class="s2">        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="s2">        PREFIX schema: &lt;https://schema.org/&gt;</span>
+<span class="s2">        PREFIX schemaold: &lt;http://schema.org/&gt;</span>
+<span class="s2">        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+
+<span class="s2">        SELECT DISTINCT ?g  ?s   ?type ?score ?name ?url ?lit ?description ?headline</span>
+<span class="s2">        WHERE</span>
+<span class="s2">        {</span>
+<span class="s2">           ?lit bds:search &quot;coral&quot; .</span>
+<span class="s2">           ?lit bds:matchAllTerms &quot;false&quot; .</span>
+<span class="s2">           ?lit bds:relevance ?score .</span>
+<span class="s2">           graph ?g {</span>
+<span class="s2">            ?s ?p ?lit .</span>
+<span class="s2">            ?s rdf:type ?type . </span>
+<span class="s2">            OPTIONAL { ?s schema:name ?name .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:headline ?headline .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:url ?url .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:description ?description .    }</span>
+<span class="s2">          }</span>
+
+<span class="s2">        }</span>
+<span class="s2">        ORDER BY DESC(?score)</span>
+<span class="s2">        LIMIT 30</span>
+<span class="s2">        OFFSET 0</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_main</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>g</th>
+      <th>s</th>
+      <th>type</th>
+      <th>score</th>
+      <th>name</th>
+      <th>url</th>
+      <th>lit</th>
+      <th>description</th>
+      <th>headline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>urn:gleaner:milled:obis:13392d707024cdd4e509d6...</td>
+      <td>t670214</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/b91d89db-79d6-4bd3-84...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>urn:gleaner:milled:obis:18d1180a74c200d06f9114...</td>
+      <td>t671476</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project D...</td>
+      <td>https://obis.org/dataset/46005357-02b8-4f17-b0...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>urn:gleaner:milled:obis:24bac898cda34444176ec4...</td>
+      <td>t673848</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/d4ec17b8-fc96-49b9-b7...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>urn:gleaner:milled:obis:24d453e3a4ea6d1f117e5c...</td>
+      <td>t673875</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/36bca81c-6d77-4fd4-a9...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>urn:gleaner:milled:obis:2bf98aa888d856b8706176...</td>
+      <td>t675633</td>
+      <td>https://schema.org/Dataset</td>
+      <td>1.0</td>
+      <td>Coral Reef Evaluation and Monitoring Project F...</td>
+      <td>https://obis.org/dataset/431f96f7-521c-4182-ae...</td>
+      <td>coral</td>
+      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="oih-gleaner-query">
+<h3>OIH Gleaner Query<a class="headerlink" href="#oih-gleaner-query" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_maingl</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;prefix prov: &lt;http://www.w3.org/ns/prov#&gt;</span>
 <span class="s2">        PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;</span>
 <span class="s2">        PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;</span>
 <span class="s2">        PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;</span>
@@ -692,7 +1195,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_main</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_maingl</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -733,207 +1236,83 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>urn:gleaner:milled:obis:13392d707024cdd4e509d6...</td>
-      <td>t12576</td>
+      <td>urn:gleaner:milled:obis:c18f3c68e05fc5820e5daf...</td>
+      <td>t3333357</td>
       <td>https://www.re3data.org/repository/obis</td>
       <td>Ocean Biodiversity Information System</td>
       <td>https://obis.org</td>
       <td>https://schema.org/Dataset</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/b91d89db-79d6-4bd3-84...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Nematoda from Kenya and Zanzibar</td>
+      <td>https://obis.org/dataset/aa9787d6-c4db-4fde-8e...</td>
+      <td>Coral</td>
+      <td>Data on the species and trophic composition of...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>urn:gleaner:milled:obis:18d1180a74c200d06f9114...</td>
-      <td>t13860</td>
+      <td>urn:gleaner:milled:obis:4411c25cf985f8253c0a13...</td>
+      <td>t3323787</td>
       <td>https://www.re3data.org/repository/obis</td>
       <td>Ocean Biodiversity Information System</td>
       <td>https://obis.org</td>
       <td>https://schema.org/Dataset</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project D...</td>
-      <td>https://obis.org/dataset/46005357-02b8-4f17-b0...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Kenyan reef corals sampled in November 1990</td>
+      <td>https://obis.org/dataset/447b61a2-4a04-4394-af...</td>
+      <td>Coral</td>
+      <td>This dataset contains a taxonomic list of cora...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>urn:gleaner:milled:obis:24bac898cda34444176ec4...</td>
-      <td>t16445</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>Ocean Biodiversity Information System</td>
-      <td>https://obis.org</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
+      <td>oai:aquadocs.org:1834/1987</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>AquaDocs</td>
+      <td>https://aquadocs.org</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/d4ec17b8-fc96-49b9-b7...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Is competition for space between the encrustin...</td>
+      <td>https://www.oceandocs.org/handle/1834/1987</td>
+      <td>Coral</td>
+      <td>- Temperaturas del agua de mar por encima del...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>urn:gleaner:milled:obis:24d453e3a4ea6d1f117e5c...</td>
-      <td>t16471</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>Ocean Biodiversity Information System</td>
-      <td>https://obis.org</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
+      <td>oai:aquadocs.org:1834/10551</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>AquaDocs</td>
+      <td>https://aquadocs.org</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/36bca81c-6d77-4fd4-a9...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Study of biotic communities for artificial ree...</td>
+      <td>https://www.oceandocs.org/handle/1834/10551</td>
+      <td>Coral</td>
+      <td>- Persian Gulf waters (Hormuzgan Province) we...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>urn:gleaner:milled:obis:2524f94920efb8f87029bf...</td>
-      <td>t16581</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>Ocean Biodiversity Information System</td>
-      <td>https://obis.org</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
+      <td>oai:aquadocs.org:1834/12281</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>AquaDocs</td>
+      <td>https://aquadocs.org</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Interacciones entre Corales y CÃ©spedes algale...</td>
-      <td>https://obis.org/dataset/e39be6ef-3c91-4e97-ba...</td>
-      <td>coral</td>
-      <td>Para el componente denominado âInteracciÃ³n ...</td>
+      <td>Molecular diversity of Symbiodinium spp. withi...</td>
+      <td>https://www.oceandocs.org/handle/1834/12281</td>
+      <td>Coral</td>
+      <td>- Reef-building coral harbor communities of p...</td>
       <td>None</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="aquadocs-alignment-testing">
-<h2>AquaDocs Alignment Testing<a class="headerlink" href="#aquadocs-alignment-testing" title="Permalink to this headline">¶</a></h2>
-<p>When pulling in documents using the graph only pattern there can be issues with how the prov looks and works for one large document vs many individual ones.  This is a test of that</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_main</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>g</th>
-      <th>s</th>
-      <th>wat</th>
-      <th>orgname</th>
-      <th>domain</th>
-      <th>type</th>
-      <th>score</th>
-      <th>name</th>
-      <th>url</th>
-      <th>lit</th>
-      <th>description</th>
-      <th>headline</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>urn:gleaner:summoned:obps:466a3efb3402cd6c0b53...</td>
-      <td>oai:repository.oceanbestpractices.org:11329/1350</td>
-      <td>https://www.re3data.org/repository/obps</td>
-      <td>Ocean Best Practices</td>
-      <td>https://oih.oceanbestpractices.org</td>
-      <td>https://schema.org/CreativeWork</td>
-      <td>0.625</td>
-      <td>Next-Generation Optical Sensing Technologies f...</td>
-      <td>https://www.oceandocs.org/handle/11329/1350</td>
-      <td>Coral reefs</td>
-      <td>- We highlight three emerging NASA optical te...</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>urn:gleaner:summoned:obps:466a3efb3402cd6c0b53...</td>
-      <td>oai:repository.oceanbestpractices.org:11329/447</td>
-      <td>https://www.re3data.org/repository/obps</td>
-      <td>Ocean Best Practices</td>
-      <td>https://oih.oceanbestpractices.org</td>
-      <td>https://schema.org/CreativeWork</td>
-      <td>0.625</td>
-      <td>Standardised survey procedures for monitoring ...</td>
-      <td>https://www.oceandocs.org/handle/11329/447</td>
-      <td>Coral reefs</td>
-      <td>- This manual describes the standard Reef   L...</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>urn:gleaner:summoned:obps:466a3efb3402cd6c0b53...</td>
-      <td>oai:repository.oceanbestpractices.org:11329/445</td>
-      <td>https://www.re3data.org/repository/obps</td>
-      <td>Ocean Best Practices</td>
-      <td>https://oih.oceanbestpractices.org</td>
-      <td>https://schema.org/CreativeWork</td>
-      <td>0.625</td>
-      <td>Best practices in RNA &amp; DNA sample preparation...</td>
-      <td>https://www.oceandocs.org/handle/11329/445</td>
-      <td>Coral reefs</td>
-      <td>- When the ocean  is  dying,  the  planet  is...</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>urn:gleaner:summoned:obps:466a3efb3402cd6c0b53...</td>
-      <td>oai:repository.oceanbestpractices.org:11329/448</td>
-      <td>https://www.re3data.org/repository/obps</td>
-      <td>Ocean Best Practices</td>
-      <td>https://oih.oceanbestpractices.org</td>
-      <td>https://schema.org/CreativeWork</td>
-      <td>0.625</td>
-      <td>Systematic global assessment of reef fish comm...</td>
-      <td>https://www.oceandocs.org/handle/11329/448</td>
-      <td>Coral reefs</td>
-      <td>- Discussion of the Reef Life Survey Methods ...</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>urn:gleaner:summoned:obps:466a3efb3402cd6c0b53...</td>
-      <td>oai:repository.oceanbestpractices.org:11329/760</td>
-      <td>https://www.re3data.org/repository/obps</td>
-      <td>Ocean Best Practices</td>
-      <td>https://oih.oceanbestpractices.org</td>
-      <td>https://schema.org/CreativeWork</td>
-      <td>0.625</td>
-      <td>Recommendations for best practice in deep-sea ...</td>
-      <td>https://www.oceandocs.org/handle/11329/760</td>
-      <td>Coral gardens</td>
-      <td>- We assert that the reef framework-forming c...</td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="query-for-prov">
@@ -951,7 +1330,6 @@
 <span class="s2">        PREFIX schemaold: &lt;http://schema.org/&gt;</span>
 <span class="s2">        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
 
-<span class="s2"> </span>
 <span class="s2">       SELECT   ( COUNT(?hm) as ?count) ?wat  ?orgname ?domain</span>
 <span class="s2">        WHERE</span>
 <span class="s2">        {</span>
@@ -967,7 +1345,43 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_prov</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_prov2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;prefix prov: &lt;http://www.w3.org/ns/prov#&gt;</span>
+<span class="s2">        PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;</span>
+<span class="s2">        PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;</span>
+<span class="s2">        PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;</span>
+<span class="s2">        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="s2">        PREFIX schema: &lt;https://schema.org/&gt;</span>
+<span class="s2">        PREFIX schemaold: &lt;http://schema.org/&gt;</span>
+<span class="s2">        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+
+<span class="s2">        SELECT ( COUNT(?s) as ?count) ?wat  ?orgname ?domain</span>
+<span class="s2">        WHERE</span>
+<span class="s2">        {</span>
+<span class="s2">           graph ?g {</span>
+<span class="s2">             VALUES (?type) { ( schema:CreativeWork ) ( schema:Map )  ( schema:Person )  ( schema:Organization )  ( schema:Dataset )  ( schema:Course ) } </span>
+<span class="s2">            ?s rdf:type ?type . </span>
+<span class="s2">            OPTIONAL { ?s schema:name ?name .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:headline ?headline .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:url ?url .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:description ?description .    }</span>
+<span class="s2">          }</span>
+<span class="s2">           ?sp prov:generated ?g  .</span>
+<span class="s2">           ?sp prov:used ?used .</span>
+<span class="s2">           ?used prov:hadMember ?hm .</span>
+<span class="s2">           ?hm prov:wasAttributedTo ?wat .</span>
+<span class="s2">           ?wat rdf:name ?orgname .</span>
+<span class="s2">           ?wat rdfs:seeAlso ?domain</span>
+<span class="s2">        }</span>
+<span class="s2">                GROUP BY ?wat ?orgname ?domain</span>
+
+<span class="s2">        &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_prov2</span><span class="p">)</span>
 <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfp</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dfp</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;orgname&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dfp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1006,28 +1420,34 @@
   </thead>
   <tbody>
     <tr>
-      <th>Samples Earth (DEMO Site)</th>
-      <td>202</td>
-      <td>https://www.re3data.org/repository/samplesearth</td>
-      <td>https://samples.earth</td>
-    </tr>
-    <tr>
-      <th>Ocean Biodiversity Information System</th>
-      <td>4007</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>https://obis.org</td>
-    </tr>
-    <tr>
       <th>Marine Training EU</th>
-      <td>313</td>
+      <td>944</td>
       <td>https://www.re3data.org/repository/marinetraining</td>
       <td>https://marinetraining.eu/</td>
     </tr>
     <tr>
-      <th>IODE OceanExpert</th>
-      <td>487</td>
+      <th>Ocean Biodiversity Information System</th>
+      <td>9036</td>
+      <td>https://www.re3data.org/repository/obis</td>
+      <td>https://obis.org</td>
+    </tr>
+    <tr>
+      <th>OceanExpert UNESCO/IOC Project Office for IODE</th>
+      <td>502</td>
       <td>https://www.re3data.org/repository/oceanexpert</td>
       <td>https://oceanexpert.org/</td>
+    </tr>
+    <tr>
+      <th>Ocean Best Practices</th>
+      <td>8223</td>
+      <td>https://www.re3data.org/repository/obps</td>
+      <td>https://oih.oceanbestpractices.org</td>
+    </tr>
+    <tr>
+      <th>AquaDocs</th>
+      <td>155498</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>https://aquadocs.org</td>
     </tr>
   </tbody>
 </table>
@@ -1040,7 +1460,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_15_0.png" src="../../_images/OIH_Queries_15_0.png" />
+<img alt="../../_images/OIH_Queries_30_0.png" src="../../_images/OIH_Queries_30_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1075,7 +1495,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1107,39 +1527,33 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>4007</td>
-      <td>2021-04-20T00:00:00.000Z</td>
-      <td>Ocean Biodiversity Information System</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>202</td>
-      <td>2021-04-16T00:00:00.000Z</td>
-      <td>Samples Earth (DEMO Site)</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>202</td>
-      <td>2021-04-20T00:00:00.000Z</td>
-      <td>Samples Earth (DEMO Site)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>487</td>
-      <td>2021-04-24T00:00:00.000Z</td>
-      <td>IODE OceanExpert</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>313</td>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>314</td>
+      <td>2021-08-09T00:00:00.000Z</td>
       <td>Marine Training EU</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>485</td>
-      <td>2021-04-20T00:00:00.000Z</td>
-      <td>IODE OceanExpert</td>
+      <th>1</th>
+      <td>4214</td>
+      <td>2021-08-09T00:00:00.000Z</td>
+      <td>Ocean Biodiversity Information System</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>2021-08-09T00:00:00.000Z</td>
+      <td>Ocean Best Practices</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>502</td>
+      <td>2021-08-09T00:00:00.000Z</td>
+      <td>OceanExpert UNESCO/IOC Project Office for IODE</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>2021-08-09T00:00:00.000Z</td>
+      <td>AquaDocs</td>
     </tr>
   </tbody>
 </table>
@@ -1147,7 +1561,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfpd</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1184,29 +1598,29 @@
   </thead>
   <tbody>
     <tr>
-      <th>2021-04-16T00:00:00.000Z</th>
-      <td>202</td>
-      <td>Samples Earth (DEMO Site)</td>
-    </tr>
-    <tr>
-      <th>2021-04-20T00:00:00.000Z</th>
-      <td>202</td>
-      <td>Samples Earth (DEMO Site)</td>
-    </tr>
-    <tr>
-      <th>2021-04-20T00:00:00.000Z</th>
-      <td>4007</td>
-      <td>Ocean Biodiversity Information System</td>
-    </tr>
-    <tr>
-      <th>2021-05-12T00:00:00.000Z</th>
-      <td>313</td>
+      <th>2021-08-09T00:00:00.000Z</th>
+      <td>314</td>
       <td>Marine Training EU</td>
     </tr>
     <tr>
-      <th>2021-04-24T00:00:00.000Z</th>
-      <td>487</td>
-      <td>IODE OceanExpert</td>
+      <th>2021-08-09T00:00:00.000Z</th>
+      <td>4214</td>
+      <td>Ocean Biodiversity Information System</td>
+    </tr>
+    <tr>
+      <th>2021-07-31T00:00:00.000Z</th>
+      <td>1</td>
+      <td>AquaDocs</td>
+    </tr>
+    <tr>
+      <th>2021-07-30T00:00:00.000Z</th>
+      <td>2</td>
+      <td>Ocean Best Practices</td>
+    </tr>
+    <tr>
+      <th>2021-07-31T00:00:00.000Z</th>
+      <td>2</td>
+      <td>Ocean Best Practices</td>
     </tr>
   </tbody>
 </table>
@@ -1219,7 +1633,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_19_0.png" src="../../_images/OIH_Queries_19_0.png" />
+<img alt="../../_images/OIH_Queries_34_0.png" src="../../_images/OIH_Queries_34_0.png" />
 </div>
 </div>
 </div>
@@ -1312,81 +1726,81 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
       <th>0</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4051</td>
-      <td>Stochastic and Nonlinear Ocean Waves</td>
-      <td>Kort om emnet\n\nDet gis en introduksjon til s...</td>
+      <td>https://www.marinetraining.eu/node/4059</td>
+      <td>Coastal Benthic Ecology</td>
+      <td>Contents\n\nThe course provides a thorough int...</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/3978</td>
-      <td>Water Chemistry</td>
-      <td>Water chemistry introduces the principles and ...</td>
+      <td>https://www.marinetraining.eu/node/4191</td>
+      <td>Methods for Implementation of Surveillance Pro...</td>
+      <td>General course objectives\n\nThe course aims t...</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4394</td>
-      <td>Behavioural Ecology</td>
-      <td>Course Description:\n\nBoth undergraduates and...</td>
+      <td>https://www.marinetraining.eu/node/4347</td>
+      <td>Adaptation Planning</td>
+      <td>Course Description:\n\nThe course examines cha...</td>
     </tr>
     <tr>
       <th>3</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4338</td>
-      <td>Geographical Information System</td>
-      <td>Course Description:\n\nThe course provides an ...</td>
+      <td>https://www.marinetraining.eu/node/4158</td>
+      <td>Business Development and Innovation (Aquatic R...</td>
+      <td>General course objectives\n\nThe objective of ...</td>
     </tr>
     <tr>
       <th>4</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4116</td>
-      <td>Fisheries Ecology and Assessment</td>
-      <td>General course objectives\n\nTo provide the pa...</td>
+      <td>https://www.marinetraining.eu/node/3910</td>
+      <td>Machine Vision</td>
+      <td>Course content\n\nIntroduction to machine visi...</td>
     </tr>
     <tr>
       <th>5</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4287</td>
-      <td>Research Methods for Fish, Marine and Freshwat...</td>
-      <td>Course Description:\n\nCurrent methods in stud...</td>
+      <td>https://www.marinetraining.eu/node/4332</td>
+      <td>Arctic Ocean Governance</td>
+      <td>Course Description:\n\nThe course will discuss...</td>
     </tr>
     <tr>
       <th>6</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4089</td>
-      <td>Invasion Biology</td>
-      <td>Basic concepts in invasion biology. Overview o...</td>
+      <td>https://www.marinetraining.eu/node/4115</td>
+      <td>Mathematical Biology</td>
+      <td>General course objectives\n\nThe course is an ...</td>
     </tr>
     <tr>
       <th>7</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4330</td>
-      <td>Icelandic Society and Environment</td>
-      <td>Course Description:\n\nThe course explores the...</td>
+      <td>https://www.marinetraining.eu/node/4094</td>
+      <td>Methodology and Sampling in Environmental Mana...</td>
+      <td>Practical sampling of soil, water and bioindic...</td>
     </tr>
     <tr>
       <th>8</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4005</td>
-      <td>Marine Insurance</td>
-      <td>The Marine Insurance law deals with the rules ...</td>
+      <td>https://www.marinetraining.eu/node/4343</td>
+      <td>Global Fisheries and Seafood</td>
+      <td>Course Description:\n\nThe course offers a det...</td>
     </tr>
     <tr>
       <th>9</th>
       <td>2021-05-12T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4396</td>
-      <td>Fish Reproduction (Graduate)</td>
-      <td>Course Description:\n\nThe aim of the course i...</td>
+      <td>https://www.marinetraining.eu/node/4139</td>
+      <td>Biological Oceanography</td>
+      <td>General course objectives\n\nBiological oceano...</td>
     </tr>
   </tbody>
 </table>
@@ -1421,7 +1835,7 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_types</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_types</span><span class="p">)</span>
 <span class="n">dft</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dft</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dft</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dft</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1456,44 +1870,44 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
   </thead>
   <tbody>
     <tr>
-      <th>http://www.w3.org/ns/prov#Entity</th>
-      <td>11392</td>
-    </tr>
-    <tr>
-      <th>https://schema.org/Organization</th>
-      <td>6025</td>
-    </tr>
-    <tr>
-      <th>http://www.w3.org/ns/prov#Activity</th>
-      <td>5696</td>
-    </tr>
-    <tr>
-      <th>http://www.w3.org/ns/prov#Collection</th>
-      <td>5696</td>
-    </tr>
-    <tr>
-      <th>http://www.w3.org/ns/prov#Organization</th>
-      <td>5696</td>
-    </tr>
-    <tr>
-      <th>https://schema.org/Place</th>
-      <td>4742</td>
-    </tr>
-    <tr>
-      <th>https://schema.org/Dataset</th>
-      <td>4108</td>
+      <th>https://schema.org/Person</th>
+      <td>107563</td>
     </tr>
     <tr>
       <th>https://schema.org/PropertyValue</th>
-      <td>4068</td>
+      <td>44658</td>
     </tr>
     <tr>
-      <th>https://schema.org/DataCatalog</th>
-      <td>4007</td>
+      <th>https://schema.org/CreativeWork</th>
+      <td>40389</td>
     </tr>
     <tr>
-      <th>https://schema.org/DataDownload</th>
-      <td>4007</td>
+      <th>https://schema.org/ListItem</th>
+      <td>40387</td>
+    </tr>
+    <tr>
+      <th>https://schema.org/Organization</th>
+      <td>21224</td>
+    </tr>
+    <tr>
+      <th>http://www.w3.org/ns/prov#Entity</th>
+      <td>10064</td>
+    </tr>
+    <tr>
+      <th>http://www.w3.org/ns/prov#Activity</th>
+      <td>5032</td>
+    </tr>
+    <tr>
+      <th>http://www.w3.org/ns/prov#Collection</th>
+      <td>5032</td>
+    </tr>
+    <tr>
+      <th>http://www.w3.org/ns/prov#Organization</th>
+      <td>5032</td>
+    </tr>
+    <tr>
+      <th>https://schema.org/Place</th>
+      <td>4848</td>
     </tr>
   </tbody>
 </table>
@@ -1506,7 +1920,7 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_26_0.png" src="../../_images/OIH_Queries_26_0.png" />
+<img alt="../../_images/OIH_Queries_41_0.png" src="../../_images/OIH_Queries_41_0.png" />
 </div>
 </div>
 </div>
@@ -1542,11 +1956,11 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="OIH_GraphAnalytics.html" title="previous page">
+        <a class="left-prev" href="README.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">OIH Graph</p>
+                <p class="prevnext-title">OIH Notebooks</p>
             </div>
         </a>
     </div>

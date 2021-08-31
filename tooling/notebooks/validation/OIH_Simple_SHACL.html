@@ -1,0 +1,995 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHACL Simple Validation &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SHACL Validation on Object Store" href="OIH_SHACL.html" />
+    <link rel="prev" title="OIH Graph" href="../OIH_GraphAnalytics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/docs/README.html">
+   Core 2: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/terms/list.html">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../thematics/identifier/id.html">
+   Support 6: Identifier and Prov
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../index.html">
+   Tooling
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../openRefine/README.html">
+     OpenRefine
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../openRefine/template.html">
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../openRefine/projects.html">
+       Sargassum Project Template
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../README.html">
+     OIH Notebooks
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Queries.html">
+       OIH Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_Editor.html">
+       OIH Editing Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OIH_SHACL.html">
+       SHACL Validation on Object Store
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Mapping/README.html">
+       Mapping to Schema.org
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/referenceclient.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/sparql.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/tooling/notebooks/validation/OIH_Simple_SHACL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Ftooling/notebooks/validation/OIH_Simple_SHACL.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/validation/OIH_Simple_SHACL.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/validation/OIH_Simple_SHACL.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="shacl-simple-validation">
+<h1>SHACL Simple Validation<a class="headerlink" href="#shacl-simple-validation" title="Permalink to this headline">¶</a></h1>
+<p>Ocean Info Hub SHACL validation examples</p>
+<p>It should be noted here that SHACL validation is not a service OIH offers.  Rather,
+the validation is a capacity that the OIH architectural approach facilities.  Further
+this validation follows W3C recommendations as describted in
+<a class="reference external" href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://shacl.org/playground/">SHACL Playground</a></p></li>
+<li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex5_0/">kglab SHACL validation with pySHACL</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
+!pip install pyshacl
+!pip install &#39;PyLD&gt;=2.0.3&#39;
+!pip install flatten_json
+!pip install &#39;fsspec&gt;=0.3.3&#39;
+!pip install s3fs
+!pip install boto3
+!pip install seaborn
+!pip install dask
+!pip install rdflib-jsonld
+!pip install kglab
+!pip install numba
+!pip install pyld
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span> <span class="k">as</span> <span class="nn">kg</span>
+<span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
+<span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">138915545</span><span class="n">c57</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">kglab</span> <span class="k">as</span> <span class="nn">kg</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># see license https://github.com/DerwenAI/kglab#license-and-copyright</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">.kglab</span> <span class="kn">import</span> <span class="n">KnowledgeGraph</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">.subg</span> <span class="kn">import</span> <span class="n">Subgraph</span><span class="p">,</span> <span class="n">SubgraphMatrix</span><span class="p">,</span> <span class="n">SubgraphTensor</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="n">kglab</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">kglab.pkg_types</span> <span class="kn">import</span> <span class="n">PathLike</span><span class="p">,</span> <span class="n">IOPathLike</span><span class="p">,</span> <span class="n">GraphLike</span><span class="p">,</span> <span class="n">RDF_Node</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">kglab.gpviz</span> <span class="kn">import</span> <span class="n">GPViz</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">kglab.util</span> <span class="kn">import</span> <span class="n">get_gpu_count</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">kglab.version</span> <span class="kn">import</span> <span class="n">_check_version</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">_check_version</span><span class="p">()</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="n">util</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="k">if</span> <span class="n">get_gpu_count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">33</span>     <span class="kn">import</span> <span class="nn">cudf</span>  <span class="c1"># type: ignore # pylint: disable=E0401</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> 
+<span class="g g-Whitespace">     </span><span class="mi">35</span> 
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">rmm</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">cudf</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">testing</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">cudf._version</span> <span class="kn">import</span> <span class="n">get_versions</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">cudf.api.extensions</span> <span class="kn">import</span> <span class="p">(</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Copyright (c) 2018-2020, NVIDIA CORPORATION.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">cudf.core</span> <span class="kn">import</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">common</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">cudf.core.buffer</span> <span class="kn">import</span> <span class="n">Buffer</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">cudf.core.dataframe</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">from_pandas</span><span class="p">,</span> <span class="n">merge</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">column</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Copyright (c) 2020, NVIDIA CORPORATION.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">cudf.core.column.categorical</span> <span class="kn">import</span> <span class="n">CategoricalColumn</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">cudf.core.column.column</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">ColumnBase</span><span class="p">,</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">column</span><span class="o">/</span><span class="n">categorical</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">cudf</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">cudf</span> <span class="kn">import</span> <span class="n">_lib</span> <span class="k">as</span> <span class="n">libcudf</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">cudf._lib.transform</span> <span class="kn">import</span> <span class="n">bools_to_mask</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">cudf.core.buffer</span> <span class="kn">import</span> <span class="n">Buffer</span>
+
+<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">_lib</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">avro</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">binaryop</span><span class="p">,</span>
+
+<span class="nn">cudf/_lib/gpuarrow.pyx</span> in <span class="ni">init cudf._lib.gpuarrow</span><span class="nt">()</span>
+
+<span class="ne">AttributeError</span>: module &#39;pyarrow.lib&#39; has no attribute &#39;_CRecordBatchReader&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up the files we will use here</span>
+<span class="n">dg</span> <span class="o">=</span> <span class="s1">&#39;./datagraphs/datagraph.json&#39;</span>
+<span class="n">sg</span> <span class="o">=</span> <span class="s1">&#39;./shapes/oih_learning.ttl&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sg</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;ttl&#39;</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;shacl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
+           <span class="s2">&quot;oihval&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceans.collaborium.io/voc/validation/1.0.1/shacl#&quot;</span> 
+           <span class="p">}</span>
+
+<span class="n">sgjld</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">sgjld</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;shacl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
+           <span class="s2">&quot;oihval&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceans.collaborium.io/voc/validation/1.0.1/shacl#&quot;</span> 
+           <span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="p">{},</span>
+  <span class="s2">&quot;shacl:message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;shacl:path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># print(jd)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">88</span><span class="n">c94132ad8a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">json</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyld&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pyshack sends output to log along with the vars.  This suppresses that</span>
+<span class="kn">import</span> <span class="nn">logging</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">disable</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span>
+
+<span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;schema&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shacl&quot;</span><span class="p">:</span>   <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">kg</span> <span class="o">=</span> <span class="n">kglab</span><span class="o">.</span><span class="n">KnowledgeGraph</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Schema.org based datagraph&quot;</span><span class="p">,</span>
+    <span class="n">base_uri</span> <span class="o">=</span> <span class="s2">&quot;https://example.org/id/&quot;</span><span class="p">,</span>
+    <span class="n">namespaces</span> <span class="o">=</span> <span class="n">namespaces</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="n">kg</span><span class="o">.</span><span class="n">load_jsonld</span><span class="p">(</span><span class="n">dg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7fcd58ffa7f0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conforms</span><span class="p">,</span> <span class="n">report_graph</span><span class="p">,</span> <span class="n">report_text</span> <span class="o">=</span> <span class="n">kg</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+    <span class="n">shacl_graph</span><span class="o">=</span><span class="n">sg</span><span class="p">,</span>
+    <span class="n">shacl_graph_format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        
+<span class="n">sparql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT ?path ?value ?constraint ?message ?id ?focus </span>
+<span class="s2">  WHERE {</span>
+<span class="s2">    ?id rdf:type shacl:ValidationResult .</span>
+<span class="s2">    ?id shacl:focusNode ?focus .</span>
+<span class="s2">    ?id shacl:resultMessage ?message .</span>
+<span class="s2">    ?id shacl:sourceConstraintComponent ?constraint .</span>
+<span class="s2">    OPTIONAL {</span>
+<span class="s2">        ?id shacl:resultPath ?path .</span>
+<span class="s2">    }</span>
+<span class="s2">    OPTIONAL {</span>
+<span class="s2">        ?id shacl:value ?value .</span>
+<span class="s2">    }</span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">report_graph</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">sparql</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>path</th>
+      <th>constraint</th>
+      <th>message</th>
+      <th>id</th>
+      <th>focus</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>schema:provider</td>
+      <td>shacl:MinCountConstraintComponent</td>
+      <td>A provider must be noted</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b2</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>shacl:NodeKindConstraintComponent</td>
+      <td>Graph must have an ID</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b4</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>schema:name</td>
+      <td>shacl:MinCountConstraintComponent</td>
+      <td>Name is required</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b5</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>schema:url</td>
+      <td>shacl:MinCountConstraintComponent</td>
+      <td>URL required for the location of the resource ...</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b6</td>
+      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">VIS_STYLE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;shacl&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;_&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="n">subgraph</span> <span class="o">=</span> <span class="n">kglab</span><span class="o">.</span><span class="n">SubgraphTensor</span><span class="p">(</span><span class="n">report_graph</span><span class="p">)</span>
+<span class="n">pyvis_graph</span> <span class="o">=</span> <span class="n">subgraph</span><span class="o">.</span><span class="n">build_pyvis_graph</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">VIS_STYLE</span><span class="p">)</span>
+<span class="n">pyvis_graph</span><span class="o">.</span><span class="n">force_atlas_2based</span><span class="p">()</span>
+<span class="n">pyvis_graph</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s2">&quot;tmp.fig05.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="500px"
+    height="500px"
+    src="tmp.fig05.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tooling/notebooks/validation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../OIH_GraphAnalytics.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">OIH Graph</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="OIH_SHACL.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">SHACL Validation on Object Store</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By IODEPO<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

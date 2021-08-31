@@ -16,21 +16,30 @@ execution:
 
 ## About
 
-The primary OIH guidance will be to use the OGC [GeoSPARQL](https://www.ogc.org/standards/geosparql)
-vocabulary.  The schema.org spatial types and propeties are not well defined and difficult at times
-to reliably translate to geometries.  
+For spatial geometry Ocean InfoHub guidance will be to use the OGC [GeoSPARQL](https://www.ogc.org/standards/geosparql)
+vocabulary to express geometry using Well Known Text (WKT).  The schema.org spatial types and propeties are not well 
+defined and difficult at times to reliably translate to geometries for use in more Open Geospatial Consortium (OGC)
+environments.  
 
 ## Simple GeoSPARQL WKT
 
-This is a simple example of how to embed a WKT string via GeoSPARQL into a record.  
+The following is a simple example of how to embed a WKT string via GeoSPARQL into a JSON-LD record.  
 Well Know Text (WKT) is a OGC standard referenced at: https://www.ogc.org/standards/wkt-crs.
-A more accessible example can be found at WikiPedia:
+A more accessible description and set of examples can be found at WikiPedia:
 [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry).
+
 
 ```{literalinclude} ./graphs/basic.json
 :linenos:
 :emphasize-lines: 4, 9-17
 ```
+
+Line 4 declare the GeoSPARQL prefix for the vocabulary that we will leverage in this document.
+
+Lines 9-17 are the GeoSPARQL node and property definitions.  In this case our type is a simple 
+point geometry.  We then go on to declare the asWKT with a type and value.  The value 
+is our actual WKT string for our geometry.   We can further 
+declare the coordinate reference system (CRS) of the geometry using the crs property.
 
 
 ```{code-cell}
@@ -59,14 +68,22 @@ jbutils.show_graph(compacted)
 
 ## Classic Schema.org
 
+Ocean InfoHub only recommends the use of Schema.org spatial geometries in 
+the case where a provider wishes to be properly indexed by Google and to have the 
+spatial information used by Google for maps.  Note, the lack of spatial information will
+not prevent Google from indexing your resources.  
 
-Is is a simple example of the existing Schema.org pattern for a lat long value.  
-This pattern is of little use other than perhaps to Google. There is the 
-pending [GeospatialGeometry](https://schema.org/GeospatialGeometry) which is a 
-type Intangible (and not Place referenced by spatialCoverage).  This will be a 
-subtype of [GeoShape](https://schema.org/GeoShape).   There are inconsistencies with
+Schema.org spatial geometries are not well defined in comparison to OGC standards and 
+recommendations.  Also, converting from Schema.org spatial to geometries in WKT or GeoJSON
+can be problematic.  There are inconsistencies with
 Schema.org guidance for textual geometry representation and that of Well 
 Known Text (WKT).
+
+That said, if you desire to leverage Schema.org geometries an example follows.  This 
+is a simple example of the existing Schema.org pattern for a lat long value.   There is the 
+pending [GeospatialGeometry](https://schema.org/GeospatialGeometry) which is a 
+type Intangible (and not Place referenced by spatialCoverage).  This will be a 
+subtype of [GeoShape](https://schema.org/GeoShape).   
 
 ```{literalinclude} ./graphs/sos.json
 :linenos:
@@ -99,6 +116,23 @@ jbutils.show_graph(compacted)
 
 
 ## Option review, SOS Issue 105
+
+There are several approaches to expressing spatial geometries in JSON-LD.
+While Ocean InfoHub will recommend the use of GeoSPARQL, it is worth noting that there 
+are alternative and solid cases for using them
+
+One such case could be the case where your WKT geometry string are highly detailed and 
+as a result quite long.  These might result in both very large JSON-LD documents that are hard to 
+read and maintain.  It may also be that this imparts a performance penalty in your GeoSPARQL 
+queries.  
+
+It may be tha that you simplify your WKT geometry strings to a more basic form.  Then link out
+to the detailed geometry in a separate document.   The simplified WKT (or Schema.org spatial)
+make the documents smaller and easier to read and could help query performance.  The resource
+can then point to a dereferencable URL for the detailed geometry.
+
+ref Selfie:  When linking out to complex geometries we recommend following: https://docs.ogc.org/per/20-067.html
+
 
 From the referenced SOS issue 105:
 

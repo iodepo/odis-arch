@@ -51,7 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="SHACL Validation For Warehouses" href="validation/OIH_SHACL.html" />
+    <link rel="next" title="OIH Graph" href="OIH_GraphAnalytics.html" />
     <link rel="prev" title="OIH Queries" href="OIH_Queries.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -542,11 +589,6 @@
       </a>
      </li>
     </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#editor-playground">
-     Editor playground
-    </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#introduction-to-json-ld-files">
@@ -768,28 +810,6 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">toggle_cell</span> <span class="kn">import</span> <span class="n">toggle_code</span> <span class="k">as</span> <span class="n">hide_solution</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-    <script>
-    function code_toggle() {
-        if ($('div.cell.code_cell.rendered.selected div.input').css('display')!='none'){
-            $('div.cell.code_cell.rendered.selected div.input').hide();
-        } else {
-            $('div.cell.code_cell.rendered.selected div.input').show();
-        }
-    }
-    </script>
-
-
-<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Sloution"></form>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -801,7 +821,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current Time = 11:39:51
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current Time = 13:16:51
 </pre></div>
 </div>
 </div>
@@ -817,62 +837,10 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  9241  100  9241    0     0  35542      0 --:--:-- --:--:-- --:--:-- 35406
+100  9241  100  9241    0     0  47147      0 --:--:-- --:--:-- --:--:-- 47147
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="editor-playground">
-<h2>Editor playground<a class="headerlink" href="#editor-playground" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-
-<span class="n">titleWidget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
-    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Enter a title:&#39;</span><span class="p">,</span>
-    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span>
-<span class="p">)</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">titleWidget</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "8257f453a7bc4695a862f2dea9c5e1cd", "version_major": 2, "version_minor": 0}
-</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">titleWidget</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
-<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-
-<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span>
-
-<span class="n">interact</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Hi there!&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "86c91e941a2542269df7ac9fc0cff337", "version_major": 2, "version_minor": 0}
-</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -901,6 +869,7 @@
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="introduction-to-json-ld-files">
 <h2>Introduction to JSON-LD files<a class="headerlink" href="#introduction-to-json-ld-files" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -914,12 +883,6 @@
 <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;version&#39;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
 <span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;CC-BY-4.0&#39;</span> <span class="c1">#@param [&quot;CC-BY-4.0&quot;, &quot;CC-0&quot;]</span>
 <span class="n">keywords</span> <span class="o">=</span> <span class="s1">&#39;geochemistry, Earth System Modeling, climate change&#39;</span> <span class="c1">#@param {type:&quot;string&quot;}</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data Set Name one
-Descriptive text of the dataset.
 </pre></div>
 </div>
 </div>
@@ -991,7 +954,7 @@ Descriptive text of the dataset.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Editor_20_0.svg" src="../../_images/OIH_Editor_20_0.svg" /></div>
+<img alt="../../_images/OIH_Editor_15_0.svg" src="../../_images/OIH_Editor_15_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="framing">
@@ -1021,7 +984,7 @@ Descriptive text of the dataset.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;@context&#39;: {&#39;@vocab&#39;: &#39;http://schema.org/&#39;}, &#39;@id&#39;: &#39;http://cooldata.io/id/doc/1&#39;, &#39;@type&#39;: &#39;Dataset&#39;, &#39;keywords&#39;: [&#39;geochemistry&#39;, &#39;Earth System Modeling&#39;, &#39;climate change&#39;]}
 </pre></div>
 </div>
-<img alt="../../_images/OIH_Editor_22_1.svg" src="../../_images/OIH_Editor_22_1.svg" /></div>
+<img alt="../../_images/OIH_Editor_17_1.svg" src="../../_images/OIH_Editor_17_1.svg" /></div>
 </div>
 <div class="section" id="parse-out-the-keywords">
 <h3>Parse out the keywords<a class="headerlink" href="#parse-out-the-keywords" title="Permalink to this headline">¶</a></h3>
@@ -1441,10 +1404,10 @@ Conforms: True
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="validation/OIH_SHACL.html" title="next page">
+        <a class="right-next" href="OIH_GraphAnalytics.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">SHACL Validation For Warehouses</p>
+                <p class="prevnext-title">OIH Graph</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

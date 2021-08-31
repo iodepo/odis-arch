@@ -111,15 +111,17 @@ following the same prefix:term pattern.
 
 ## Graph
 
-The next section we will discuss is the graph part of the document.  This is where the properties and 
-values of our resource are described.  First though, let's visit a couple special properties in our 
-document.  
+The next section we will discuss is the graph part of the document seen in lines 5-9 below.  This is where the properties and 
+values of our resource are described.  
 
 
 ```{literalinclude} ./graphs/simple.json
 :emphasize-lines: 5-9
 :linenos:
 ```
+
+First though, let's visit a couple special properties in our 
+document.  
 
 ### Node identifiers (@id)
 
@@ -167,7 +169,7 @@ For OIH these type for the various thematic profiles are defined in the document
 
 ### Other properties
 
-At this point we can look at the other properties for our type.  
+At this point we can return to look at the other properties for our type.  
 
 ```{literalinclude} ./graphs/simple.json
 :emphasize-lines: 7-9
@@ -178,6 +180,16 @@ As noted, we are using Schema.org type for OIH.  In this case, as mentioned,
 this is type  [CreativeWork](https://schema.org/CreativeWork).  So any of the properties 
 seen at the Schema.org site can be used.   The key properties of value to the OIH implementation can then 
 be found, for this type, in the [Documents thematic type](../thematics/docs/README.md).
+
+For the OIH implementation, we will use the following properties as core properties we 
+want all OIH documents to have.  These include:
+
+> name:  The name of the document or item being described
+> 
+> description:  A description of the document or item being described
+> 
+> url: A URL for the document or item being described. 
+
 
 ### Domain and range
 

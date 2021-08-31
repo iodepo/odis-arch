@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Appendix" href="../appendix/index.html" />
-    <link rel="prev" title="Querying SPARQL" href="sparql.html" />
+    <link rel="prev" title="SPARQL" href="sparql.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../tooling/notebooks/geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../tooling/notebooks/Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../tooling/notebooks/geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../tooling/notebooks/Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../tooling/notebooks/Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -506,15 +553,10 @@
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#examples">
-     Examples:
+     Examples
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#graphql">
-   GraphQL
-  </a>
  </li>
 </ul>
 
@@ -544,18 +586,11 @@ To do this you can visit a web based query interface as discussed in other secti
 This is a simple HTTP protocol that allows you to query the graph using SPARQL and obtain the results in JSON.</p>
 <p>The OIH triplestore exposes the graph following this pattern for queries.</p>
 <div class="section" id="examples">
-<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode <span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span> -H <span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="graphql">
-<h2>GraphQL<a class="headerlink" href="#graphql" title="Permalink to this headline">¶</a></h2>
-<p>GraphQL is another popular approach to the access of remote services.  A simple mapping of the
-default OIH SARQL query to GraphQL is provided.   This is not a expression of the graph mode in
-GraphQL, but rather a simple mapping of this specific query to GraphQL.   As such it is compatible with
-standard GraphQL clients but does not provide the full functionality of the OIH graph.</p>
 </div>
 </div>
 
@@ -593,7 +628,7 @@ standard GraphQL clients but does not provide the full functionality of the OIH 
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Querying SPARQL</p>
+                <p class="prevnext-title">SPARQL</p>
             </div>
         </a>
     </div>

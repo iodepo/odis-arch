@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../thematics/identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tooling/notebooks/validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tooling/notebooks/DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../tooling/notebooks/geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../tooling/notebooks/Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../tooling/notebooks/geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../tooling/notebooks/Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../tooling/notebooks/Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../tooling/notebooks/Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -830,14 +877,16 @@ to use in support of services they may wish to provide.</p></li>
 </div>
 <div class="section" id="existing-support-in-software">
 <h2>Existing support in software<a class="headerlink" href="#existing-support-in-software" title="Permalink to this headline">¶</a></h2>
-<p>Many content management approaches and packages may already have support for
-the structured data on the web pattern.</p>
-<p>A collection of starting points for their support follows.</p>
+<p>Many content management systems other web based data interfaces
+may already have support for the structured data on the web pattern and
+<a class="reference external" href="http://schema.org">schema.org</a> specifically. While it is beyond the scope of this project to
+detail each one, a few starting points for exploration are provided below
+for some of the more common ones.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://wordpress.org/plugins/schema/">WordPress</a></p></li>
 <li><p><a class="reference external" href="https://www.drupal.org/docs/contributed-modules/schemaorg-metatag">Drupal</a></p></li>
 <li><p><a class="reference external" href="https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/">CKAN</a></p></li>
 <li><p><a class="reference external" href="https://journal.code4lib.org/articles/13191">DSpace</a></p></li>
+<li><p><a class="reference external" href="https://dkan.readthedocs.io/en/latest/introduction/index.html">DKAN</a></p></li>
 <li><p><a class="reference external" href="https://www.ncei.noaa.gov/erddap/index.html">ERDDAP (native support)</a></p></li>
 <li><p><a class="reference external" href="https://www.opendap.org/">OPeNDAP (native support)</a></p></li>
 <li><p><a class="reference external" href="http://geonode.org/">GeoNode</a></p>

@@ -184,7 +184,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../identifier/id.html">
-   Support 6: Identifier pattern
+   Support 6: Identifier and Prov
   </a>
  </li>
 </ul>
@@ -202,6 +202,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/qstart.html">
    Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
   </a>
  </li>
  <li class="toctree-l1">
@@ -284,11 +289,6 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/OIH_GraphAnalytics.html">
-       OIH Graph
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../../tooling/notebooks/OIH_Queries.html">
        OIH Queries
       </a>
@@ -299,23 +299,23 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../tooling/notebooks/OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../tooling/notebooks/validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../tooling/notebooks/validation/OIH_SHACL.html">
-       SHACL Validation For Warehouses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/ISO19139mapping/ISOMap.html">
-       ISO 19139 To Schema.org
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tooling/notebooks/DCATmapping/dcatmapping.html">
-       DCAT Mapping
+       SHACL Validation on Object Store
       </a>
      </li>
      <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../tooling/notebooks/geoKGComplete/README.html">
-       Georeference KG completion example
+      <a class="reference internal" href="../../tooling/notebooks/Mapping/README.html">
+       Mapping to Schema.org
       </a>
       <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
       <label for="toctree-checkbox-4">
@@ -324,8 +324,55 @@
       </label>
       <ul>
        <li class="toctree-l4">
-        <a class="reference internal" href="../../tooling/notebooks/geoKGComplete/geocomplete.html">
-         Geospatial KG Completion
+        <a class="reference internal" href="../../tooling/notebooks/Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../tooling/notebooks/Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../tooling/notebooks/Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
         </a>
        </li>
       </ul>
@@ -360,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../users/sparql.html">
-   Querying SPARQL
+   SPARQL
   </a>
  </li>
  <li class="toctree-l1">
@@ -379,8 +426,8 @@
   <a class="reference internal" href="../../appendix/index.html">
    Appendix
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -554,15 +601,16 @@
 <h1>Spatial Geometry<a class="headerlink" href="#spatial-geometry" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>The primary OIH guidance will be to use the OGC <a class="reference external" href="https://www.ogc.org/standards/geosparql">GeoSPARQL</a>
-vocabulary.  The <a class="reference external" href="http://schema.org">schema.org</a> spatial types and propeties are not well defined and difficult at times
-to reliably translate to geometries.</p>
+<p>For spatial geometry Ocean InfoHub guidance will be to use the OGC <a class="reference external" href="https://www.ogc.org/standards/geosparql">GeoSPARQL</a>
+vocabulary to express geometry using Well Known Text (WKT).  The <a class="reference external" href="http://schema.org">schema.org</a> spatial types and propeties are not well
+defined and difficult at times to reliably translate to geometries for use in more Open Geospatial Consortium (OGC)
+environments.</p>
 </div>
 <div class="section" id="simple-geosparql-wkt">
 <h2>Simple GeoSPARQL WKT<a class="headerlink" href="#simple-geosparql-wkt" title="Permalink to this headline">¶</a></h2>
-<p>This is a simple example of how to embed a WKT string via GeoSPARQL into a record.<br />
+<p>The following is a simple example of how to embed a WKT string via GeoSPARQL into a JSON-LD record.<br />
 Well Know Text (WKT) is a OGC standard referenced at: <a class="reference external" href="https://www.ogc.org/standards/wkt-crs">https://www.ogc.org/standards/wkt-crs</a>.
-A more accessible example can be found at WikiPedia:
+A more accessible description and set of examples can be found at WikiPedia:
 <a class="reference external" href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry">Well-known text representation of geometry</a>.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -603,6 +651,11 @@ A more accessible example can be found at WikiPedia:
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
+<p>Line 4 declare the GeoSPARQL prefix for the vocabulary that we will leverage in this document.</p>
+<p>Lines 9-17 are the GeoSPARQL node and property definitions.  In this case our type is a simple
+point geometry.  We then go on to declare the asWKT with a type and value.  The value
+is our actual WKT string for our geometry.   We can further
+declare the coordinate reference system (CRS) of the geometry using the crs property.</p>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -632,13 +685,20 @@ A more accessible example can be found at WikiPedia:
 </div>
 <div class="section" id="classic-schema-org">
 <h2>Classic <a class="reference external" href="http://Schema.org">Schema.org</a><a class="headerlink" href="#classic-schema-org" title="Permalink to this headline">¶</a></h2>
-<p>Is is a simple example of the existing <a class="reference external" href="http://Schema.org">Schema.org</a> pattern for a lat long value.<br />
-This pattern is of little use other than perhaps to Google. There is the
-pending <a class="reference external" href="https://schema.org/GeospatialGeometry">GeospatialGeometry</a> which is a
-type Intangible (and not Place referenced by spatialCoverage).  This will be a
-subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoShape</a>.   There are inconsistencies with
+<p>Ocean InfoHub only recommends the use of <a class="reference external" href="http://Schema.org">Schema.org</a> spatial geometries in
+the case where a provider wishes to be properly indexed by Google and to have the
+spatial information used by Google for maps.  Note, the lack of spatial information will
+not prevent Google from indexing your resources.</p>
+<p><a class="reference external" href="http://Schema.org">Schema.org</a> spatial geometries are not well defined in comparison to OGC standards and
+recommendations.  Also, converting from <a class="reference external" href="http://Schema.org">Schema.org</a> spatial to geometries in WKT or GeoJSON
+can be problematic.  There are inconsistencies with
 <a class="reference external" href="http://Schema.org">Schema.org</a> guidance for textual geometry representation and that of Well
 Known Text (WKT).</p>
+<p>That said, if you desire to leverage <a class="reference external" href="http://Schema.org">Schema.org</a> geometries an example follows.  This
+is a simple example of the existing <a class="reference external" href="http://Schema.org">Schema.org</a> pattern for a lat long value.   There is the
+pending <a class="reference external" href="https://schema.org/GeospatialGeometry">GeospatialGeometry</a> which is a
+type Intangible (and not Place referenced by spatialCoverage).  This will be a
+subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoShape</a>.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -701,6 +761,18 @@ Known Text (WKT).</p>
 </div>
 <div class="section" id="option-review-sos-issue-105">
 <h2>Option review, SOS Issue 105<a class="headerlink" href="#option-review-sos-issue-105" title="Permalink to this headline">¶</a></h2>
+<p>There are several approaches to expressing spatial geometries in JSON-LD.
+While Ocean InfoHub will recommend the use of GeoSPARQL, it is worth noting that there
+are alternative and solid cases for using them</p>
+<p>One such case could be the case where your WKT geometry string are highly detailed and
+as a result quite long.  These might result in both very large JSON-LD documents that are hard to
+read and maintain.  It may also be that this imparts a performance penalty in your GeoSPARQL
+queries.</p>
+<p>It may be tha that you simplify your WKT geometry strings to a more basic form.  Then link out
+to the detailed geometry in a separate document.   The simplified WKT (or <a class="reference external" href="http://Schema.org">Schema.org</a> spatial)
+make the documents smaller and easier to read and could help query performance.  The resource
+can then point to a dereferencable URL for the detailed geometry.</p>
+<p>ref Selfie:  When linking out to complex geometries we recommend following: <a class="reference external" href="https://docs.ogc.org/per/20-067.html">https://docs.ogc.org/per/20-067.html</a></p>
 <p>From the referenced SOS issue 105:</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
