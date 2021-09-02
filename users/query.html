@@ -704,7 +704,7 @@ found in other sections of the OIH documentation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N0ab13478b6604d5fba3237e6070b1fc7 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N9656cde6c1054a4ba02f9bbcd09d17a8 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
 </pre></div>
 </div>
 </div>
@@ -716,6 +716,7 @@ found in other sections of the OIH documentation.</p>
 <p>This is a simple query that will return all the triples in the graph.   Recall an RDF graph is make of triples defined by a subject, predicate and object.  You can review RDF at the W3C RDF Primer (<a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>).  SPARQL allows us to do a type of pattern matching on the graph by defining a pattern we a relooking for.</p>
 <p>Here we define <code class="docutils literal notranslate"><span class="pre">?s</span> <span class="pre">?p</span> <span class="pre">?o</span></code> as the pattern we are looking for.  The <code class="docutils literal notranslate"><span class="pre">?</span></code> is a variable that can be used to match any value.  In this case, we are looking for all the triples in the graph.  We have used s, p and o to as simple names for our subject, predicate, object elements of the RDF triple.</p>
 <p>Since this would match ALL the values in the graph, which would be a lot, we have added a LIMIT option to reduce the number of resutls returned.</p>
+<p>You could also try these queries at: <a class="reference external" href="https://oceans.collaborium.io/sparql.html">https://oceans.collaborium.io/sparql.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -743,15 +744,15 @@ found in other sections of the OIH documentation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {&#39;o&#39;: rdflib.term.URIRef(&#39;https://schema.org/Place&#39;),
-                   &#39;p&#39;: rdflib.term.URIRef(&#39;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;nb8eae3ca1f664b1c9bf65c29290416bfb68&#39;)}
-ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39; Wandelaarkaai 7 Oostende Belgium &#39;),
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;2014-06-02&#39;),
+                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/startDate&#39;),
+                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb236&#39;)}
+ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39; Copenhagen Denmark &#39;),
+                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/address&#39;),
+                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb496&#39;)}
+ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;Introduction to Ocean Data Management for Students of the Environment Group II&#39;),
                    &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/name&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;nb8eae3ca1f664b1c9bf65c29290416bfb1456&#39;)}
-ic| row.asdict(): {&#39;o&#39;: rdflib.term.BNode(&#39;nb8eae3ca1f664b1c9bf65c29290416bfb932&#39;),
-                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/hasCourseInstance&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;nb8eae3ca1f664b1c9bf65c29290416bfb931&#39;)}
+                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;)}
 </pre></div>
 </div>
 </div>
@@ -772,15 +773,16 @@ ic| row.asdict(): {&#39;o&#39;: rdflib.term.BNode(&#39;nb8eae3ca1f664b1c9bf65c29
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| s: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb68&#39;
-    p: &#39;&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;&#39;
-    o: &#39;&lt;https://schema.org/Place&gt;&#39;
-ic| s: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb1456&#39;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb236&#39;
+    p: &#39;&lt;https://schema.org/startDate&gt;&#39;
+    o: &#39;&quot;2014-06-02&quot;&#39;
+ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb496&#39;
+    p: &#39;&lt;https://schema.org/address&gt;&#39;
+    o: &#39;&quot; Copenhagen Denmark &quot;&#39;
+ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
     p: &#39;&lt;https://schema.org/name&gt;&#39;
-    o: &#39;&quot; Wandelaarkaai 7 Oostende Belgium &quot;&#39;
-ic| s: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb931&#39;
-    p: &#39;&lt;https://schema.org/hasCourseInstance&gt;&#39;
-    o: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb932&#39;
+    o: (&#39;&quot;Introduction to Ocean Data Management for Students of the Environment Group &#39;
+        &#39;II&quot;&#39;)
 </pre></div>
 </div>
 </div>
@@ -788,7 +790,7 @@ ic| s: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb931&#39;
 </div>
 <div class="section" id="kglab">
 <h1>KGLab<a class="headerlink" href="#kglab" title="Permalink to this headline">¶</a></h1>
-<p>As mentioned, this intro is based on the nice work done by KGLab both in their library and documentation.  We wll import kglab here and take advantage of some of their nice features.  In particular some nice functioons to load our graph and query it with results into a Dataframe.</p>
+<p>As mentioned, this intro is based on the nice work done by KGLab (<a class="reference external" href="https://derwen.ai/docs/kgl/">https://derwen.ai/docs/kgl/</a>) both in their library and documentation.  We wll import kglab here and take advantage of some of their nice features.  In particular some nice functioons to load our graph and query it with results into a Dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span>
@@ -834,7 +836,7 @@ ic| s: &#39;_:nb8eae3ca1f664b1c9bf65c29290416bfb931&#39;
   from .RestrictedDatatype import extract_faceted_datatypes
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f16ee072fa0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f470860bf40&gt;
 </pre></div>
 </div>
 </div>

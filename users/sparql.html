@@ -651,38 +651,40 @@ the identity element for People and Organizations.</p>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>prefix prov: &lt;http://www.w3.org/ns/prov#&gt;
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>prefix prov: &lt;http://www.w3.org/ns/prov#&gt;
 PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;
 PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;
 PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX schema: &lt;https://schema.org/&gt;
 PREFIX schemaold: &lt;http://schema.org/&gt;
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
 SELECT DISTINCT ?g  ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline
-WHERE
-<span class="hll">   ?lit bds:search &quot;coral&quot; .
+<span class="hll">WHERE {
+</span><span class="hll">   ?lit bds:search &quot;coral&quot; .
 </span><span class="hll">   ?lit bds:matchAllTerms &quot;false&quot; .
-</span><span class="hll">   ?lit bds:relevance ?score .
-</span>   graph ?g {
+</span>   ?lit bds:relevance ?score .
+   graph ?g {
     ?s ?p ?lit .
-    ?s rdf:type ?type . 
-<span class="hll">    OPTIONAL { ?s schema:name ?name .   }
+<span class="hll">    ?s rdf:type ?type . 
+</span><span class="hll">    OPTIONAL { ?s schema:name ?name .   }
 </span><span class="hll">    OPTIONAL { ?s schema:headline ?headline .   }
 </span><span class="hll">    OPTIONAL { ?s schema:url ?url .   }
-</span><span class="hll">    OPTIONAL { ?s schema:description ?description .    }
-</span>  }
-<span class="hll">   ?sp prov:generated ?g  .
+</span>    OPTIONAL { ?s schema:description ?description .    }
+<span class="hll">  }
+</span><span class="hll">   ?sp prov:generated ?g  .
 </span><span class="hll">   ?sp prov:used ?used .
 </span><span class="hll">   ?used prov:hadMember ?hm .
 </span><span class="hll">   ?hm prov:wasAttributedTo ?wat .
 </span><span class="hll">   ?wat rdf:name ?orgname .
-</span><span class="hll">   ?wat rdfs:seeAlso ?domai
-</span>}
-<span class="hll">ORDER BY DESC(?score)
+</span>   ?wat rdfs:seeAlso ?domai
+<span class="hll">}
+</span><span class="hll">ORDER BY DESC(?score)
 </span><span class="hll">LIMIT 30
-</span><span class="hll">OFFSET 0
-</span></pre></div>
+</span>OFFSET 0
+</pre></div>
 </td></tr></table></div>
 </div>
 <div class="section" id="lines-11-13">
