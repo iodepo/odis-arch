@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indexing Concepts &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="OIH Queries" href="OIH_Queries.html" />
+    <link rel="prev" title="OIH Notebooks" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   The Ocean InfoHub Project
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/docs/README.html">
+   Core 2: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/terms/list.html">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../thematics/identifier/id.html">
+   Support 6: Identifier and Prov
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tooling
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../openRefine/README.html">
+     OpenRefine
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../openRefine/template.html">
+       Generic Template
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../openRefine/projects.html">
+       Sargassum Project Template
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     OIH Notebooks
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Indexing Concepts
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OIH_Queries.html">
+       OIH Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OIH_Editor.html">
+       OIH Editing Playground
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="OIH_GraphAnalytics.html">
+       OIH Graph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="validation/OIH_Simple_SHACL.html">
+       SHACL Simple Validation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="validation/OIH_SHACL.html">
+       SHACL Validation on Object Store
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="Mapping/README.html">
+       Mapping to Schema.org
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Mapping/ISO19139mapping/ISOMap.html">
+         Mapping - ISO 19139
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Mapping/DCATmapping/dcatmapping.html">
+         Mapping - DCAT
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="Exploration/README.html">
+       Exploration
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/GeoKGComplete/geocomplete.html">
+         Geo KG Completion
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/CA-DWR/CADWR.html">
+         California DWR sprint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/MarinePrtcAPI.html">
+         Marine Protected Areas API exploration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/SPREP.html">
+         SPREP Data Testing
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/maspawio.html">
+         Maspawio
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="Exploration/LDFeed/LDFeed.html">
+         Marine Regions LD Feed
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/referenceclient.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/query.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/sparql.html">
+   OIH SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tooling/notebooks/OIH_IndexIntro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Ftooling/notebooks/OIH_IndexIntro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/tooling/notebooks/OIH_IndexIntro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/tooling/notebooks/OIH_IndexIntro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Indexing Concepts
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review">
+     Review
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#command-line-tooling">
+     Command Line Tooling
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports-and-defs">
+   Imports and defs
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parse-a-search-result">
+   Parse a search result
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#that-s-big">
+     That’s big
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="indexing-concepts">
+<h1>Indexing Concepts<a class="headerlink" href="#indexing-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="review">
+<h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>Before we starting pulling data lets revist the publishing overview
+presented in <a class="reference internal" href="../../publishing/publishing.html"><span class="doc std std-doc">Publisher</span></a> section.</p>
+<p><img alt="overview" src="../../_images/example1Flow.png" /></p>
+<p>Briefly, a sitemap is made available that points the resources we will
+be indexing.  This can optionally be in a robots.txt file as well.<br />
+This sitemap will provide a URL for each resource we will be indexing.<br />
+It is fine if it providers more too, those resources simply wont express
+any JSON-LD content.  You can also have multiple sitemaps we ones specificly
+focused on the resources to index.</p>
+<p>Each URL or page represented in the index are then accessed and parsed for the
+JSON-LD content.</p>
+</div>
+<div class="section" id="command-line-tooling">
+<h2>Command Line Tooling<a class="headerlink" href="#command-line-tooling" title="Permalink to this headline">¶</a></h2>
+<p>We can start exploring the indexing of data on the command line.  Here we will use the curl command which should
+be installed on all Mac OS X and Linux systems and should be found on the Linux Subsystem for Windows.</p>
+<p>This will give us a low level feel for what is going on.</p>
+<p>We will start by exploring a sitemap.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s https://samples.earth/sitemap0.xml
+</pre></div>
+</div>
+<p>We can parse out the URLs from the sitemap with the use of the UNIX grep command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s https://samples.earth/sitemap0.xml <span class="p">|</span>   grep -oP <span class="s1">&#39;&lt;loc&gt;\K[^&lt;]*&#39;</span>
+</pre></div>
+</div>
+<p>In do this we see that out sitemap is really just a feed of URLs.  The sitemap provides us with the ability to add
+some extra information for our URLs.  It also providers a machine readable XML format we can work with.  There are many
+libraries for working with XML and several for working with the sitemap data model in XML as well.</p>
+<p>Now lets pull down the URL resource and parse out the JSON-LD we find in the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag of type application/ld+json.</p>
+<p>Note, it is possible that there are many of these tags and also that this tag might be placed in by Javascript which means
+we would not see it here.  We will talk more about this as we explore.  For now we will just look for the first one and
+a static example, which we know this to be.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s  --header <span class="s2">&quot;Accept: text/html&quot;</span>   https://samples.earth/id/documents/c1pnht3h2h44frv6igfg <span class="p">|</span> sed -n <span class="s1">&#39;/&lt;script type=\&quot;application\/ld+json\&quot;&gt;/,/&lt;\/script&gt;/p&#39;</span>
+</pre></div>
+</div>
+<p>Let’s get rid of the <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span> </code> tags and then parse the JSON-LD.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s  --header <span class="s2">&quot;Accept: text/html&quot;</span>   https://samples.earth/id/documents/c1pnht3h2h44frv6igfg <span class="p">|</span> sed -n <span class="s1">&#39;/&lt;script type=\&quot;application\/ld+json\&quot;&gt;/,/&lt;\/script&gt;/p&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&lt;\/script&gt;//&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&lt;script type=\&quot;application\/ld+json\&quot;&gt;//&#39;</span>
+</pre></div>
+</div>
+<p>TODO WORK ON THIS
+At this point we could copy this JOSN-LD and visit something like the JSON-LD playground.   We could also
+visit the Structure Data Linter.   We can then play a bit with the JSON-LD there.</p>
+<p>Now, lets pass this throgh another app.  This is the jsonld.js app.  A Javascript app and library that can be found
+on GitHub at <a class="reference external" href="https://github.com/digitalbazaar/jsonld.js">digitalbazaar/jsonld.js</a>.   There are many similar libraries,
+so you can feel free to try out others.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -s  --header <span class="s2">&quot;Accept: text/html&quot;</span>   https://samples.earth/id/documents/c1pnht3h2h44frv6igfg <span class="p">|</span> sed -n <span class="s1">&#39;/&lt;script type=\&quot;application\/ld+json\&quot;&gt;/,/&lt;\/script&gt;/p&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&lt;\/script&gt;//&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&lt;script type=\&quot;application\/ld+json\&quot;&gt;//&#39;</span> <span class="p">|</span> jsonld format -q
+</pre></div>
+</div>
+<p>If all goes well we should see the following output.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">c1pnht3h2h44frv6igfg</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">1999</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="mi">22</span><span class="o">-</span><span class="n">rdf</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">ns</span><span class="c1">#type&gt; &lt;https://schema.org/Dataset&gt; .</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">c1pnht3h2h44frv6igfg</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">description</span><span class="o">&gt;</span> <span class="s2">&quot;of data assignments.&quot;</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">c1pnht3h2h44frv6igfg</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">distribution</span><span class="o">&gt;</span> <span class="n">_</span><span class="p">:</span><span class="n">b0</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">c1pnht3h2h44frv6igfg</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">maintainer</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">&gt;</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">documents</span><span class="o">/</span><span class="n">c1pnht3h2h44frv6igfg</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">name</span><span class="o">&gt;</span> <span class="s2">&quot;Fake: technical and&quot;</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">1999</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="mi">22</span><span class="o">-</span><span class="n">rdf</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">ns</span><span class="c1">#type&gt; &lt;https://schema.org/Organization&gt; .</span>
+<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">description</span><span class="o">&gt;</span> <span class="s2">&quot;DEMO SITE:  fake data for testing&quot;</span> <span class="o">.</span>
+<span class="n">_</span><span class="p">:</span><span class="n">b0</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">w3</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">1999</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="mi">22</span><span class="o">-</span><span class="n">rdf</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">ns</span><span class="c1">#type&gt; &lt;https://schema.org/DataDownload&gt; .</span>
+<span class="n">_</span><span class="p">:</span><span class="n">b0</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">contentUrl</span><span class="o">&gt;</span> <span class="s2">&quot;https://samples.earth/id/documents/c1pnht3h2h44frv6igfg.tsv&quot;</span> <span class="o">.</span>
+<span class="n">_</span><span class="p">:</span><span class="n">b0</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">schema</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">encodingFormat</span><span class="o">&gt;</span> <span class="s2">&quot;text/tab-separated-values&quot;</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>So, this was just a simple set of command line calls to give us a feel for the process.  We have seen a sitemap, the URLs
+that make it up and pulled back those URLs and parsed the JSON-LD.  We then wen ahead and converted the JSON-LD into abother
+RDF represetnatikon (triples) that make loading into a graph database easier.</p>
+<p>We could easily take these commands and roll them in a simple bash script.  This might not be a production level approach,
+but it’s a good exercise and a good way to get started.  We will explore more advanced ways of doing this later.</p>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Let’s look at how this might be done in Python.  Python is a very popular language and has many solid libraries for working with JSON-LD. Again, we will use this more to get a feel for the process.</p>
+</div>
+</div>
+<div class="section" id="imports-and-defs">
+<h1>Imports and defs<a class="headerlink" href="#imports-and-defs" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">get_ld_json</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="s2">&quot;html.parser&quot;</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;script&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;application/ld+json&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">contents</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="c1"># from conceptnet5.uri import join_uri, split_uri</span>
+<span class="n">API_ROOT</span> <span class="o">=</span> <span class="s1">&#39;http://api.conceptnet.io&#39;</span>
+
+<span class="k">def</span> <span class="nf">short_name</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert an RDF value (given as a dictionary) to a reasonable label.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;blank node&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;_&#39;</span>
+    <span class="k">elif</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;IRI&#39;</span><span class="p">:</span>    
+        <span class="n">url</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;#&#39;</span> <span class="ow">in</span> <span class="n">url</span><span class="p">:</span>
+            <span class="c1"># Show just the fragment of URLs with a fragment</span>
+            <span class="c1"># (it&#39;s probably a property name)</span>
+            <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># Give URLs relative to the root of our API</span>
+        <span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">API_ROOT</span><span class="p">):</span>
+            <span class="n">short_url</span> <span class="o">=</span> <span class="n">url</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">API_ROOT</span><span class="p">):]</span>
+            <span class="c1"># If the URL is too long, hide it</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+                <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">short_url</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;://&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Put literal values in quotes</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[:</span><span class="n">max_length</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;...&#39;</span>
+        <span class="k">return</span> <span class="s1">&#39;&quot;</span><span class="si">{}</span><span class="s1">&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">show_graph</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Show the graph structure of a ConceptNet API response.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">url</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+    <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span>
+        <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">size</span><span class="p">),</span> <span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">}</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">rdf</span><span class="p">:</span>
+        <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
+            <span class="c1"># Apply different styles to the nodes based on whether they&#39;re</span>
+            <span class="c1"># literals, ConceptNet URLs, or other URLs</span>
+            <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">):</span>
+                <span class="c1"># Literal values</span>
+                <span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">penwidth</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">):</span>
+                <span class="c1"># ConceptNet nodes</span>
+                <span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;#ddeeff&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Other URLs</span>
+                <span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#558855&quot;</span><span class="p">)</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="n">subj</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pred</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">graph</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parse-a-search-result">
+<h1>Parse a search result<a class="headerlink" href="#parse-a-search-result" title="Permalink to this headline">¶</a></h1>
+<p>Let’s do a search at the OIH test web site and then see if we can work with some of the results there.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ld</span> <span class="o">=</span> <span class="n">get_ld_json</span><span class="p">(</span><span class="s2">&quot;https://obis.org/dataset/46005357-02b8-4f17-b028-065bfc1cd384&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_formatted_str</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">ld</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_formatted_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;@context&quot;: {
+    &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+  },
+  &quot;@type&quot;: &quot;Dataset&quot;,
+  &quot;name&quot;: &quot;Coral Reef Evaluation and Monitoring Project Dry Tortugas 1999&quot;,
+  &quot;description&quot;: &quot;The purpose of the Coral Reef Evaluation and Monitoring Project (CREMP) is to monitor the status and trends of selected reefs in the Florida Keys National Marine Sanctuary(FKNMS). CREMP assessments have been conducted annually at fixed sites since 1996 and data collected provides information on the temporal changes in benthic cover and diversity of stony corals and associated marine flora and fauna. The core field methods continue to be underwater videography and timed coral species inventories. Findings presented in this report include data from 109 stations at 37 sites sampled from 1996 through 2008 in the Florida Keys and 1999 through 2008 in the Dry Tortugas. The report describes the annual differences (between 2007 and 2008) in the percent cover of major benthic taxa (stony corals, octocorals, sponges, and macroalgae), mean coral species richness and the incidence of stony coral conditions. Additionally, it examines the long-term trends of the major benthic taxa, five coral complex, Montastraea cavernosa, Colpophyllia natans, Siderastrea siderea, and Porites astreoides) and the clionaid sponge, Cliona delitrix. It is one of the longest running coral reef monitoring projects in south Florida and has been extremely important in documenting the temporal changes that have occurred in recent years&quot;,
+  &quot;url&quot;: &quot;https://obis.org/dataset/46005357-02b8-4f17-b028-065bfc1cd384&quot;,
+  &quot;sameAs&quot;: [
+    &quot;https://www1.usgs.gov/obis-usa/ipt/resource?r=crempdrytortugas1999&quot;
+  ],
+  &quot;license&quot;: &quot;To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the Public Domain (CC0 1.0)&quot;,
+  &quot;citation&quot;: null,
+  &quot;version&quot;: &quot;2020-10-07T22:52:17.000Z&quot;,
+  &quot;keywords&quot;: [
+    &quot;Samplingevent&quot;,
+    &quot;about&quot;,
+    &quot;absence&quot;,
+    &quot;accepted&quot;,
+    &quot;accepted_aphia_database_identification_number&quot;,
+    &quot;accepted_authorship_information&quot;,
+    &quot;accepted_name_usage&quot;,
+    &quot;acceptedNameAuthorship&quot;,
+    &quot;acceptedNameUsage&quot;,
+    &quot;acceptedNameUsageID&quot;,
+    &quot;aphia&quot;,
+    &quot;aphia_database_identification_number&quot;,
+    &quot;area&quot;,
+    &quot;array&quot;,
+    &quot;array-data&quot;,
+    &quot;associatedreferences&quot;,
+    &quot;authorship&quot;,
+    &quot;authorship_information&quot;,
+    &quot;basis&quot;,
+    &quot;basis of record&quot;,
+    &quot;basisOfRecord&quot;,
+    &quot;biogeographic&quot;,
+    &quot;biology&quot;,
+    &quot;class&quot;,
+    &quot;commission&quot;,
+    &quot;common&quot;,
+    &quot;comprehensive&quot;,
+    &quot;conservation&quot;,
+    &quot;coral&quot;,
+    &quot;coral monitoring&quot;,
+    &quot;coverage&quot;,
+    &quot;cremp&quot;,
+    &quot;data&quot;,
+    &quot;data_set_identification&quot;,
+    &quot;data_set_name&quot;,
+    &quot;database&quot;,
+    &quot;dataset&quot;,
+    &quot;datasetName&quot;,
+    &quot;date&quot;,
+    &quot;dry&quot;,
+    &quot;dry tortugas&quot;,
+    &quot;evaluation&quot;,
+    &quot;event&quot;,
+    &quot;eventdate&quot;,
+    &quot;eventID&quot;,
+    &quot;family&quot;,
+    &quot;fish&quot;,
+    &quot;florida&quot;,
+    &quot;florida keys&quot;,
+    &quot;fwc&quot;,
+    &quot;fwc-fwri&quot;,
+    &quot;fwri&quot;,
+    &quot;genus&quot;,
+    &quot;gulf of mexico&quot;,
+    &quot;habitatid&quot;,
+    &quot;hierarchy&quot;,
+    &quot;identification&quot;,
+    &quot;identifier&quot;,
+    &quot;information&quot;,
+    &quot;institute&quot;,
+    &quot;kingdom&quot;,
+    &quot;large&quot;,
+    &quot;latitude&quot;,
+    &quot;longitude&quot;,
+    &quot;marine&quot;,
+    &quot;meters&quot;,
+    &quot;monitoring&quot;,
+    &quot;name&quot;,
+    &quot;number&quot;,
+    &quot;obis&quot;,
+    &quot;occurrence&quot;,
+    &quot;occurrence_identification&quot;,
+    &quot;occurrenceID&quot;,
+    &quot;occurrenceStatus&quot;,
+    &quot;ocean&quot;,
+    &quot;order&quot;,
+    &quot;organism&quot;,
+    &quot;organism_per_sample_area&quot;,
+    &quot;organismQuantity&quot;,
+    &quot;organismQuantityType&quot;,
+    &quot;per&quot;,
+    &quot;percent&quot;,
+    &quot;percent_coverage&quot;,
+    &quot;phylum&quot;,
+    &quot;presence&quot;,
+    &quot;project&quot;,
+    &quot;rank&quot;,
+    &quot;record&quot;,
+    &quot;recorded&quot;,
+    &quot;recordedBy&quot;,
+    &quot;reef&quot;,
+    &quot;register&quot;,
+    &quot;research&quot;,
+    &quot;revisited&quot;,
+    &quot;sample&quot;,
+    &quot;samples&quot;,
+    &quot;scientific&quot;,
+    &quot;scientific_name&quot;,
+    &quot;scientificname&quot;,
+    &quot;scientificNameAuthorship&quot;,
+    &quot;scientificnameid&quot;,
+    &quot;set&quot;,
+    &quot;sitecode&quot;,
+    &quot;siteid&quot;,
+    &quot;species&quot;,
+    &quot;species_name&quot;,
+    &quot;specificEpithet&quot;,
+    &quot;square&quot;,
+    &quot;statement&quot;,
+    &quot;station&quot;,
+    &quot;status&quot;,
+    &quot;stewardship&quot;,
+    &quot;subregionid&quot;,
+    &quot;system&quot;,
+    &quot;taxon&quot;,
+    &quot;taxon_rank&quot;,
+    &quot;taxon_status&quot;,
+    &quot;taxonomic&quot;,
+    &quot;taxonomic_status&quot;,
+    &quot;taxonomicStatus&quot;,
+    &quot;taxonomy&quot;,
+    &quot;taxonRank&quot;,
+    &quot;time&quot;,
+    &quot;tortugas&quot;,
+    &quot;unaccepted&quot;,
+    &quot;usage&quot;,
+    &quot;v2.3&quot;,
+    &quot;value&quot;,
+    &quot;vernacular&quot;,
+    &quot;vernacular_name&quot;,
+    &quot;vernacularName&quot;,
+    &quot;wildlife&quot;,
+    &quot;world&quot;,
+    &quot;worms&quot;,
+    &quot;year&quot;
+  ],
+  &quot;variableMeasured&quot;: [],
+  &quot;includedInDataCatalog&quot;: {
+    &quot;@id&quot;: &quot;https://obis.org&quot;,
+    &quot;@type&quot;: &quot;DataCatalog&quot;,
+    &quot;url&quot;: &quot;https://obis.org&quot;
+  },
+  &quot;temporalCoverage&quot;: &quot;1999/1999&quot;,
+  &quot;distribution&quot;: {
+    &quot;@type&quot;: &quot;DataDownload&quot;,
+    &quot;contentUrl&quot;: &quot;https://www1.usgs.gov/obis-usa/ipt/archive.do?r=crempdrytortugas1999&quot;,
+    &quot;encodingFormat&quot;: &quot;application/zip&quot;
+  },
+  &quot;spatialCoverage&quot;: {
+    &quot;@type&quot;: &quot;Place&quot;,
+    &quot;geo&quot;: {
+      &quot;@type&quot;: &quot;GeoShape&quot;,
+      &quot;polygon&quot;: &quot;-83.0022 24.6117,-83.0022 24.6993,-82.8702 24.6993,-82.8702 24.6117,-83.0022 24.6117&quot;
+    },
+    &quot;additionalProperty&quot;: {
+      &quot;@type&quot;: &quot;PropertyValue&quot;,
+      &quot;propertyID&quot;: &quot;http://dbpedia.org/resource/Spatial_reference_system&quot;,
+      &quot;value&quot;: &quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;
+    }
+  },
+  &quot;provider&quot;: [
+    {
+      &quot;@id&quot;: &quot;https://oceanexpert.org/institution/5852&quot;,
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;legalName&quot;: &quot;Texas A&amp;M University, College Station \u2013 Department of Oceanography&quot;,
+      &quot;name&quot;: &quot;Texas A&amp;M University, College Station \u2013 Department of Oceanography&quot;,
+      &quot;url&quot;: &quot;https://oceanexpert.org/institution/5852&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;https://oceanexpert.org/institution/6238&quot;,
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;legalName&quot;: &quot;Florida Fish and Wildlife Conservation Commission, Fish and Wildlife Research Institute&quot;,
+      &quot;name&quot;: &quot;Florida Fish and Wildlife Conservation Commission, Fish and Wildlife Research Institute&quot;,
+      &quot;url&quot;: &quot;https://oceanexpert.org/institution/6238&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;https://oceanexpert.org/institution/12976&quot;,
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;legalName&quot;: &quot;U.S. Geological Survey HQ&quot;,
+      &quot;name&quot;: &quot;U.S. Geological Survey HQ&quot;,
+      &quot;url&quot;: &quot;https://oceanexpert.org/institution/12976&quot;
+    }
+  ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="that-s-big">
+<h2>That’s big<a class="headerlink" href="#that-s-big" title="Permalink to this headline">¶</a></h2>
+<p>There is a lot here, especially in the keywords section.  That’s great, this will give us a lot to work with the graph.  For this demo though it might be nice to parse it down a bit.  We can take advantage of a feature of JSON-LD called “framing”.  Here will make a JSON-LD frame that allows us to parse out only those elements of the document we want to work with.  Framing is vey powerful, but we will work with a simple frame for now.  One like this:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="nt">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="nt">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We will run this frame then look at the results and do a quick visualization using the defined function we placed at the beginning of this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">ld</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+
+<span class="n">json_formatted_str</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_formatted_str</span><span class="p">)</span>
+
+<span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+  &quot;@context&quot;: {
+    &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+  },
+  &quot;@type&quot;: &quot;Dataset&quot;,
+  &quot;description&quot;: &quot;The purpose of the Coral Reef Evaluation and Monitoring Project (CREMP) is to monitor the status and trends of selected reefs in the Florida Keys National Marine Sanctuary(FKNMS). CREMP assessments have been conducted annually at fixed sites since 1996 and data collected provides information on the temporal changes in benthic cover and diversity of stony corals and associated marine flora and fauna. The core field methods continue to be underwater videography and timed coral species inventories. Findings presented in this report include data from 109 stations at 37 sites sampled from 1996 through 2008 in the Florida Keys and 1999 through 2008 in the Dry Tortugas. The report describes the annual differences (between 2007 and 2008) in the percent cover of major benthic taxa (stony corals, octocorals, sponges, and macroalgae), mean coral species richness and the incidence of stony coral conditions. Additionally, it examines the long-term trends of the major benthic taxa, five coral complex, Montastraea cavernosa, Colpophyllia natans, Siderastrea siderea, and Porites astreoides) and the clionaid sponge, Cliona delitrix. It is one of the longest running coral reef monitoring projects in south Florida and has been extremely important in documenting the temporal changes that have occurred in recent years&quot;,
+  &quot;name&quot;: &quot;Coral Reef Evaluation and Monitoring Project Dry Tortugas 1999&quot;,
+  &quot;sameAs&quot;: &quot;https://www1.usgs.gov/obis-usa/ipt/resource?r=crempdrytortugas1999&quot;,
+  &quot;url&quot;: &quot;https://obis.org/dataset/46005357-02b8-4f17-b028-065bfc1cd384&quot;
+}
+</pre></div>
+</div>
+<img alt="../../_images/OIH_IndexIntro_8_1.svg" src="../../_images/OIH_IndexIntro_8_1.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
+<p>Using these approaches you could explore data from other sources you know are publishing JSON-LD.  You could improve either of the bash script or Python code to loop on the resources and store the results in files or load them directly into a triples store / graph database.</p>
+<p>As we continue, we will move on to the Gleaner package that is used by Ocean InfoHub and see some of the edge cases that can be addressed with it and how it fits into a more automated process.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tooling/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="README.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">OIH Notebooks</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="OIH_Queries.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">OIH Queries</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By IODEPO<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
