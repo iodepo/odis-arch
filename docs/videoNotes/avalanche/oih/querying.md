@@ -14,9 +14,9 @@ None at this time
 # Outline
 
 * User Experiences
+* APIs
 * The SPARQL query language
 * OIH SPARQL
-* APIs
 
 
 ---
@@ -35,6 +35,12 @@ that is behind this.
 
 .fx: smallest
 
+
+---
+# APIs
+
+Visit OceanInfoHub's API documentation:
+
 ---
 # The SPARQL query language
 
@@ -47,11 +53,6 @@ Visit references
 
 Visit references
 
-
----
-# APIs
-
-Visit references
 
 
 ---
