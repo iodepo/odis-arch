@@ -32,7 +32,7 @@ the identity element for People and Organizations.
 
 ```{literalinclude} ./graphs/basic.rq
 :linenos:
-:emphasize-lines: 11-13, 17-20, 22-27, 29-31
+:emphasize-lines: 12-14, 18-21, 23-28, 30-32
 ```
 
 ## Lines 11-13
