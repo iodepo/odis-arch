@@ -279,7 +279,7 @@ For the identifier we are using the a GRID, but this could also be something lik
 :emphasize-lines: 18-29
 ```
 
-### One the property membership
+### On the property membership
 
 Line 18-29 show the inclusion of a [schema.org/membership](https://schema.org/membership)
 property.  There are issues to note here both for consumers (aggregators) and 

@@ -25,7 +25,8 @@ Our review of the thematic types will follow this outline.
     * Vessels
 * Support types and properties
 
- 
+ .fx: smallest
+
 
 ---
 # Overview of core JSON-LD components

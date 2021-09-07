@@ -26,6 +26,8 @@ This is what a basic research project data graph might look like.  We have
 the full record below, but this shows some of the basics we would be 
 looking for.
 
+This type is based on the Schema.org type [Project](https://schema.org/Project) which 
+has a sub-type of [ResearchProject](https://schema.org/ResearchProject).
 
 ```{code-cell}
 :tags: [hide-input]
