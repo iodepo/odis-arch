@@ -20,7 +20,7 @@ OIH is exploring how we might leverage schema.org to describe research vessels.
 Note that schema.org is a very broad vocabulary and as such specific concepts 
 like research vessel is not well aligned.
 
-In Schema.org the type Vehicle is described as a device that is designed 
+In Schema.org the type [Vehicle](https://schema.org/Vehicle) is described as a device that is designed 
 or used to transport people or cargo over land, water, air, or through space.
 We have used this broad scoping to cover research vessels.  We could go on to 
 connect this type then to a descriptive property in a concept such at 

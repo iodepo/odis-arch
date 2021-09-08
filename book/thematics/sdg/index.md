@@ -154,8 +154,7 @@ jbutils.show_graph(framed)
 Values expected to be one of these types
 ^^^
 * [CreativeWork](https://schema.org/CreativeWork)
-* [Organization](https://schema.org/Organization)
-* [Person](https://schema.org/Person)
+* [URL](https://schema.org/URL)
 +++
 Range
 ---
@@ -163,7 +162,8 @@ Range
 Used on these types
 ^^^
 * [CreativeWork](https://schema.org/CreativeWork)
-* [URL](https://schema.org/URL)
+* [Organization](https://schema.org/Organization)
+* [Person](https://schema.org/Person)
 +++
 Domain
 ````

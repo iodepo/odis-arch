@@ -66,6 +66,21 @@ jbutils.show_graph(compacted)
 
 ```
 
+### WKT Bounding Box
+
+Note that WKT doesn't directly have a bounding box to in that case you 
+would need to use a polygon.  The following is an example of a WKT string:
+
+```
+POLYGON((45.066730529474505 2.6430807905900235,47.395832091974505 2.6430807905900235,47.395832091974505 0.3588601145746598,45.066730529474505 0.3588601145746598,45.066730529474505 2.6430807905900235))
+```
+
+This following the pattern:
+
+```
+'POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)'
+```
+
 ## Classic Schema.org
 
 Ocean InfoHub only recommends the use of Schema.org spatial geometries in 
