@@ -573,24 +573,41 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dublin-core-to-schema-org-workflow-testing">
-   Dublin Core to Schema.org workflow testing
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Maspawio
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dublin-core-to-schema-org-workflow-testing">
+     Dublin Core to Schema.org workflow testing
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-oih-themtic-mapping">
+     Note OIH Themtic mapping
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#document-risk-pattens">
+     Document Risk Pattens
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#steps-to-alignment-with-structured-data-on-the-web">
+     Steps to alignment with Structured Data on the Web
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#type-matching">
+   Type matching
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#note-oih-themtic-mapping">
-   Note OIH Themtic mapping
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#document-risk-pattens">
-   Document Risk Pattens
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps-to-alignment-with-structured-data-on-the-web">
-   Steps to alignment with Structured Data on the Web
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#look-to-pull-spatial-data">
+   Look to pull spatial data
   </a>
  </li>
 </ul>
@@ -631,39 +648,41 @@
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install -q kglab</span>
-<span class="o">!</span>pip install -q graphviz
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">rdflib</span>
 <span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="c1"># import kglab as kg</span>
-<span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
-<span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
-<span class="kn">from</span> <span class="nn">icecream</span> <span class="kn">import</span> <span class="n">ic</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+
+<span class="c1"># import rdflib</span>
+<span class="c1"># from rdflib import Graph, plugin</span>
+<span class="c1"># from rdflib.serializer import Serializer</span>
+<span class="c1"># from icecream import ic</span>
+<span class="c1"># from pathlib import Path</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Source Dubline core in XML</span>
-<span class="n">dcxml</span> <span class="o">=</span> <span class="s2">&quot;https://maspawio.net/catalogue/csw?outputschema=http%3A</span><span class="si">%2F%2F</span><span class="s2">www.opengis.net</span><span class="si">%2F</span><span class="s2">cat</span><span class="si">%2F</span><span class="s2">csw</span><span class="si">%2F</span><span class="s2">2.0.2&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Source Dubline core XML from net (https issue)</span>
+<span class="c1"># Groups do need to start to move to https over http.  However, when doing so, the issue of geting and installing the certificate</span>
+<span class="c1"># can be an impediment.  A popular group used by many is the Let&#39;s Encrypt group (https://letsencrypt.org/).  Reference their </span>
+<span class="c1"># documentation on CertBot (https://certbot.eff.org/)</span>
+
+<span class="c1"># dcxml = &quot;https://maspawio.net/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;</span>
+<span class="c1"># with urlopen(dcxml) as f:</span>
+<span class="c1">#     tree = ET.parse(f)</span>
+<span class="c1">#     root = tree.getroot()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;dublin.xml&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bypassing the issue of the https cert, use a local file downloaded by bypassing the warning. </span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;./data/dublin.xml&#39;</span><span class="p">)</span>
 <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 <span class="c1"># print(root.tag)</span>
 </pre></div>
@@ -677,6 +696,57 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just a loop to inspect all the elements, normall commented out and not needed in final script</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> :: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">element</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{http://purl.org/dc/elements/1.1/}identifier :: 3046b5fc-18e0-11eb-894f-0a735f7a740c
+{http://purl.org/dc/elements/1.1/}title :: locally managed marine areas Kenya
+{http://purl.org/dc/elements/1.1/}type :: dataset
+{http://purl.org/dc/elements/1.1/}subject :: kenya
+{http://purl.org/dc/elements/1.1/}subject :: LMMA
+{http://purl.org/dc/elements/1.1/}format :: vector
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/geonode/wfs
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/geonode/wms
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:locally_managed_marine_areas_kenya&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on
+{http://purl.org/dc/terms/}references :: http://maspawio.net/uploaded/thumbs/layer-3046b5fc-18e0-11eb-894f-0a735f7a740c-thumb.png
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/reflect?layers=geonode:locally_managed_marine_areas_kenya&amp;width=200&amp;height=150&amp;format=image/png8
+{http://purl.org/dc/terms/}references :: http://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/gwc/service/gmaps?layers=geonode:locally_managed_marine_areas_kenya&amp;zoom={z}&amp;x={x}&amp;y={y}&amp;format=image/png8
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=refresh
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=download
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?srsName=EPSG%3A4326&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=json&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
+{http://purl.org/dc/terms/}modified :: 2020-10-28
+{http://purl.org/dc/terms/}abstract :: This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net
+
+
+{http://purl.org/dc/elements/1.1/}date :: 2020-10-28
+{http://purl.org/dc/elements/1.1/}language :: eng
+{http://www.opengis.net/ows}BoundingBox :: 
+            
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="type-matching">
+<h1>Type matching<a class="headerlink" href="#type-matching" title="Permalink to this headline">¶</a></h1>
+<p>In this case we see the type as “dataset” so we can match this to <a class="reference external" href="http://schema.org/Dataset">schema.org/Dataset</a>.  Other types would need special
+paths.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># id</span>
@@ -697,6 +767,22 @@
 <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
+<span class="c1"># spatial data</span>
+<span class="n">bb</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}BoundingBox&#39;</span><span class="p">)</span>
+<span class="n">uc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}UpperCorner&#39;</span><span class="p">)</span>
+<span class="n">lc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}LowerCorner&#39;</span><span class="p">)</span>
+<span class="n">ucs</span> <span class="o">=</span> <span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">lcs</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># # &#39;POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)&#39;</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;POLYGON(</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">)&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span>
+
 <span class="c1"># url https://maspawio.net/layers/geonode:locally_managed_marine_areas_kenya</span>
 </pre></div>
 </div>
@@ -709,6 +795,7 @@ This resource/layer shows the spatial location of locally managed marine areas (
 
 kenya
 LMMA
+POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.674234  41.116223 -2.094547 41.116223)
 </pre></div>
 </div>
 </div>
@@ -717,9 +804,31 @@ LMMA
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
 
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;https://maspawio.net/id/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>      <span class="c1">#id.text</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;https://schema.org/Dataset&#39;</span>
+
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">text</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span>   <span class="s2">&quot;http://example.org/1&quot;</span>      <span class="c1">#id.text</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">text</span>
+
+<span class="n">aswkt</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">aswkt</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span>
+<span class="n">aswkt</span><span class="p">[</span><span class="s1">&#39;@value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+
+<span class="n">crs</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">crs</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+
+<span class="n">hg</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">hg</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Polygon&quot;</span> 
+<span class="n">hg</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#asWKT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aswkt</span>
+<span class="n">hg</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#crs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crs</span>
+
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#hasGeometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hg</span>
+
+<span class="c1"># keyword(s) loop</span>
+<span class="n">k</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/keywords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span> 
 </pre></div>
 </div>
 </div>
@@ -731,7 +840,7 @@ LMMA
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">}</span>
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span> <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">}</span>
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 
 <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
@@ -739,7 +848,7 @@ LMMA
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/maspawio_8_0.svg" src="../../../_images/maspawio_8_0.svg" /></div>
+<img alt="../../../_images/maspawio_9_0.svg" src="../../../_images/maspawio_9_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -751,73 +860,59 @@ LMMA
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;,
+        &quot;geosparql&quot;: &quot;http://www.opengis.net/ont/geosparql#&quot;
     },
-    &quot;@id&quot;: &quot;http://example.org/1&quot;,
+    &quot;@id&quot;: &quot;https://maspawio.net/id/3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;,
+    &quot;geosparql:hasGeometry&quot;: {
+        &quot;@type&quot;: &quot;http://www.opengis.net/ont/sf#Polygon&quot;,
+        &quot;geosparql:asWKT&quot;: {
+            &quot;@type&quot;: &quot;geosparql:wktLiteral&quot;,
+            &quot;@value&quot;: &quot;POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.674234  41.116223 -2.094547 41.116223)&quot;
+        }
+    },
     &quot;description&quot;: &quot;This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net\r\n\r\n&quot;,
+    &quot;keywords&quot;: [
+        &quot;kenya&quot;,
+        &quot;LMMA&quot;
+    ],
     &quot;name&quot;: &quot;locally managed marine areas Kenya&quot;
 }
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="look-to-pull-spatial-data">
+<h1>Look to pull spatial data<a class="headerlink" href="#look-to-pull-spatial-data" title="Permalink to this headline">¶</a></h1>
+<p>The above works, but we lack the spatial data we want.  So, lets see what we can do there.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">actor</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">):</span>
-<span class="c1">#     print(actor)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)&#39;</span>
 
-    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">actor</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">bb</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}BoundingBox&#39;</span><span class="p">)</span>
+<span class="n">uc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}UpperCorner&#39;</span><span class="p">)</span>
+<span class="n">lc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}LowerCorner&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+
+<span class="n">ucs</span> <span class="o">=</span> <span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">lcs</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{http://purl.org/dc/elements/1.1/}identifier 3046b5fc-18e0-11eb-894f-0a735f7a740c
-{http://purl.org/dc/elements/1.1/}title locally managed marine areas Kenya
-{http://purl.org/dc/elements/1.1/}type dataset
-{http://purl.org/dc/elements/1.1/}subject kenya
-{http://purl.org/dc/elements/1.1/}subject LMMA
-{http://purl.org/dc/elements/1.1/}format vector
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/geonode/wfs
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/geonode/wms
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:locally_managed_marine_areas_kenya&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on
-{http://purl.org/dc/terms/}references http://maspawio.net/uploaded/thumbs/layer-3046b5fc-18e0-11eb-894f-0a735f7a740c-thumb.png
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/reflect?layers=geonode:locally_managed_marine_areas_kenya&amp;width=200&amp;height=150&amp;format=image/png8
-{http://purl.org/dc/terms/}references http://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/gwc/service/gmaps?layers=geonode:locally_managed_marine_areas_kenya&amp;zoom={z}&amp;x={x}&amp;y={y}&amp;format=image/png8
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=refresh
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=download
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?srsName=EPSG%3A4326&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=json&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}references http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}modified 2020-10-28
-{http://purl.org/dc/terms/}abstract This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net
-
-
-{http://purl.org/dc/elements/1.1/}date 2020-10-28
-{http://purl.org/dc/elements/1.1/}language eng
-{http://www.opengis.net/ows}BoundingBox 
-            
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.094547 41.116223  -4.674234 39.235491
+-2.094547  41.116223  -4.674234  39.235491
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># for actor in root.findall(&#39;{http://www.opengis.net/ows}BoundingBox&#39;):</span>
-<span class="c1">#     for child in actor:</span>
-<span class="c1">#         print(child.tag, child.text)</span>
-
-<span class="c1"># bb = root.find(&#39;{http://www.opengis.net/ows}BoundingBox&#39;)</span>
-<span class="c1"># print(bb)</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>

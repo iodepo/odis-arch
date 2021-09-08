@@ -573,14 +573,21 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SPREP Data Testing
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notes">
+     Notes
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#validation-call">
-   Validation call
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#validation">
+   Validation
   </a>
  </li>
 </ul>
@@ -613,17 +620,16 @@
 <span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
 <span class="kn">import</span> <span class="nn">pyshacl</span>
 <span class="kn">import</span> <span class="nn">logging</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
@@ -640,7 +646,7 @@
 <span class="c1"># doc = json.loads(&quot;http://dev.d9fsm.sprep.wod.by/dataset/151/jsonld&quot;)</span>
 
 <span class="c1"># load file</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;./sprep1.json&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;./data/sprep1.json&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">)</span>
 <span class="n">sgjld</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">sgjld</span><span class="p">)</span>
 
@@ -661,12 +667,14 @@
 <img alt="../../../_images/SPREP_2_0.svg" src="../../../_images/SPREP_2_0.svg" /></div>
 </div>
 </div>
-<div class="section" id="validation-call">
-<h2>Validation call<a class="headerlink" href="#validation-call" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="validation">
+<h1>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h1>
+<p>Explore leveraging the SHACL patterns with this data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up the files we will use here</span>
-<span class="n">dg</span> <span class="o">=</span> <span class="s1">&#39;./sprep1.json&#39;</span>
+<span class="n">dg</span> <span class="o">=</span> <span class="s1">&#39;./data/sprep1.json&#39;</span>
 <span class="n">sg</span> <span class="o">=</span> <span class="s1">&#39;../validation/shapes/oih_dataset.ttl&#39;</span>
 </pre></div>
 </div>
@@ -700,7 +708,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f1e24730a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f68b51128e0&gt;
 </pre></div>
 </div>
 </div>
@@ -802,7 +810,7 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
       <td>schema:url</td>
       <td>shacl:MinCountConstraintComponent</td>
       <td>URL required for the location of the resource ...</td>
-      <td>_:n03a8abebbe694760844b154392a85363b2</td>
+      <td>_:nb5c18011ca3c485d8079afb18763436bb2</td>
       <td>&lt;http://dev.d9fsm.sprep.wod.by/dataset/151&gt;</td>
     </tr>
     <tr>
@@ -810,13 +818,12 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
       <td>schema:identifier</td>
       <td>shacl:MinCountConstraintComponent</td>
       <td>Resource must have an identifier node</td>
-      <td>_:n03a8abebbe694760844b154392a85363b3</td>
+      <td>_:nb5c18011ca3c485d8079afb18763436bb3</td>
       <td>&lt;http://dev.d9fsm.sprep.wod.by/dataset/151&gt;</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
-</div>
 </div>
 </div>
 

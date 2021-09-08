@@ -580,6 +580,13 @@
   <a class="reference internal nav-link" href="#simple-geosparql-wkt">
    Simple GeoSPARQL WKT
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wkt-bounding-box">
+     WKT Bounding Box
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#classic-schema-org">
@@ -691,6 +698,18 @@ declare the coordinate reference system (CRS) of the geometry using the crs prop
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/README_1_03.svg" src="../../_images/README_1_03.svg" /></div>
+</div>
+<div class="section" id="wkt-bounding-box">
+<h3>WKT Bounding Box<a class="headerlink" href="#wkt-bounding-box" title="Permalink to this headline">¶</a></h3>
+<p>Note that WKT doesn’t directly have a bounding box to in that case you
+would need to use a polygon.  The following is an example of a WKT string:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POLYGON</span><span class="p">((</span><span class="mf">45.066730529474505</span> <span class="mf">2.6430807905900235</span><span class="p">,</span><span class="mf">47.395832091974505</span> <span class="mf">2.6430807905900235</span><span class="p">,</span><span class="mf">47.395832091974505</span> <span class="mf">0.3588601145746598</span><span class="p">,</span><span class="mf">45.066730529474505</span> <span class="mf">0.3588601145746598</span><span class="p">,</span><span class="mf">45.066730529474505</span> <span class="mf">2.6430807905900235</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This following the pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="classic-schema-org">
