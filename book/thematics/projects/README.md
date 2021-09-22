@@ -75,7 +75,7 @@ jbutils.show_graph(framed)
 
 
 
-### Details: Indentifier
+### Details: Identifier
 
 For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for 
