@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../_static/logo.png" class="logo" alt="logo">
       
@@ -610,18 +614,34 @@
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
 <p>OIH is exploring how we might leverage <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.<br />
 Note that <a class="reference external" href="http://schema.org">schema.org</a> is a very broad vocabulary and as such specific concepts
-like research vessel is not well aligned.</p>
+like research vessel is not well aligned to current types.</p>
 <p>In <a class="reference external" href="http://Schema.org">Schema.org</a> the type <a class="reference external" href="https://schema.org/Vehicle">Vehicle</a> is described as a device that is designed
 or used to transport people or cargo over land, water, air, or through space.
 We have used this broad scoping to cover research vessels.  We could go on to
-connect this type then to a descriptive property in a concept such at
+connect this type then to a descriptive property in a concept such as
 the WikiData entry for <a class="reference external" href="https://www.wikidata.org/wiki/Q391022">Research Vessel, Q391022</a>.
-We may wish to leverage some of the approaches in <a class="reference internal" href="../terms/list.html"><span class="doc std std-doc">Keywords and Defined Terms</span></a>.</p>
+We may also wish to leverage some of the approaches in <a class="reference internal" href="../terms/list.html"><span class="doc std std-doc">Keywords and Defined Terms</span></a>.</p>
 <p>Our goal is to use <a class="reference external" href="http://schema.org">schema.org</a> as a simple upper level vocabulary that allows
-us to describe research vessels in a simple and then connect off to more
+us to describe research vessels in a simple manner and then connect to more
 detailed information on them.</p>
 <p>So the goal here is to show how we can use <a class="reference external" href="http://schema.org">schema.org</a> as a discovery layer
-and link more directly to detailed institutional metadata records.</p>
+and then link more directly to detailed institutional metadata records.</p>
+<p>This may also leverage the approaches similar to what is shown in
+the <a class="reference internal" href="../sdg/index.html"><span class="doc std std-doc">Publishing Principles</span></a> resources.</p>
+<p>Observing Infrastructure in general represents an interesting challenge.  A
+specified infrastructure could be referenced as a ResearchProject within <a class="reference external" href="http://Schema.org">Schema.org</a>,
+though other types would be explored.  One could also build off the base Thing class,
+parent to all <a class="reference external" href="http://Schema.org">Schema.org</a> types, then leverage the property <a class="reference external" href="http://schema.org/instrument">schema.org/instrument</a>, itself
+of type Thing.  This approach provides an initial starting point to build out the
+approach.</p>
+<p>It should be noted that <a class="reference external" href="https://schema.org/Observation">schema.org/Observation</a> also exists but can only
+currently be used with the property <a class="reference external" href="https://schema.org/diseaseSpreadStatistics">schema.org/diseaseSpreadStatistics</a>.
+However, if seen useful, there is the potential to connect Observation back to a
+type of Infrastructure that does not currently exist in <a class="reference external" href="http://Schema.org">Schema.org</a> but could be
+proposed.</p>
+<p>Addressing the challenge of Observation Infrastructure, and
+potentially revisiting the current OIH type Vessel, may involve engagement with
+<a class="reference external" href="http://Schema.org">Schema.org</a> itself, something they encourage.</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -913,7 +933,7 @@ domain specific metadata records.</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

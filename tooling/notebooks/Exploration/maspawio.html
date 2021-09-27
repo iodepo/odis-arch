@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../../_static/logo.png" class="logo" alt="logo">
       
@@ -582,32 +586,19 @@
     <a class="reference internal nav-link" href="#dublin-core-to-schema-org-workflow-testing">
      Dublin Core to Schema.org workflow testing
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#note-oih-themtic-mapping">
-     Note OIH Themtic mapping
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#document-risk-pattens">
-     Document Risk Pattens
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#steps-to-alignment-with-structured-data-on-the-web">
-     Steps to alignment with Structured Data on the Web
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#refs">
+       refs
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#type-matching">
    Type matching
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#look-to-pull-spatial-data">
-   Look to pull spatial data
   </a>
  </li>
 </ul>
@@ -627,39 +618,50 @@
 <h2>Dublin Core to <a class="reference external" href="http://Schema.org">Schema.org</a> workflow testing<a class="headerlink" href="#dublin-core-to-schema-org-workflow-testing" title="Permalink to this headline">¶</a></h2>
 <p>An experiment to see if we can convert a Dublin Core record to <a class="reference external" href="http://Schema.org">Schema.org</a>.  The focus will be on OIH type <a class="reference external" href="https://book.oceaninfohub.org/thematics/docs/README.html">https://book.oceaninfohub.org/thematics/docs/README.html</a></p>
 <p>The source location is: <a class="reference external" href="https://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya">https://maspawio.net/layers/geonode:locally_managed_marine_areas_kenya</a></p>
-<p>Need somethnig like documented at: <a class="reference external" href="https://book.oceaninfohub.org/thematics/docs/maps.html">https://book.oceaninfohub.org/thematics/docs/maps.html</a>   We will need to add into this a sptial geometry to scope the bounding box.</p>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206">https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206</a></p>
-</div>
-<div class="section" id="note-oih-themtic-mapping">
-<h2>Note OIH Themtic mapping<a class="headerlink" href="#note-oih-themtic-mapping" title="Permalink to this headline">¶</a></h2>
-<p>What existing (or not) patterns do we align to</p>
-</div>
-<div class="section" id="document-risk-pattens">
-<h2>Document Risk Pattens<a class="headerlink" href="#document-risk-pattens" title="Permalink to this headline">¶</a></h2>
+<p>Need to generate somethnig like documented at: <a class="reference external" href="https://book.oceaninfohub.org/thematics/docs/maps.html">https://book.oceaninfohub.org/thematics/docs/maps.html</a>   We will need to add into this a sptial geometry to scope the bounding box.</p>
+<div class="section" id="refs">
+<h3>refs<a class="headerlink" href="#refs" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>URI pattern (URI governance)</p></li>
-<li><p>Sitemap update patterns</p></li>
-</ul>
-</div>
-<div class="section" id="steps-to-alignment-with-structured-data-on-the-web">
-<h2>Steps to alignment with Structured Data on the Web<a class="headerlink" href="#steps-to-alignment-with-structured-data-on-the-web" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>…</p></li>
+<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206">https://docs.google.com/spreadsheets/d/1OS_DPrPppxkWR7kU3vjRJaDSCq3XFn74/edit#gid=1139001206</a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">io</span>
 <span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
 <span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
-
-
-<span class="c1"># import rdflib</span>
-<span class="c1"># from rdflib import Graph, plugin</span>
-<span class="c1"># from rdflib.serializer import Serializer</span>
-<span class="c1"># from icecream import ic</span>
-<span class="c1"># from pathlib import Path</span>
+<span class="kn">import</span> <span class="nn">ssl</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">kglab</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/__init__.py:177: UserWarning: Code: dateTimeStamp is not defined in namespace XSD
+  from . import DatatypeHandling, Closure
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: dateTimeStamp is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: length is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: maxExclusive is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: maxInclusive is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: maxLength is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: minExclusive is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: minInclusive is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: minLength is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/RDFSClosure.py:40: UserWarning: Code: pattern is not defined in namespace XSD
+  from owlrl.AxiomaticTriples import RDFS_Axiomatic_Triples, RDFS_D_Axiomatic_Triples
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/OWLRL.py:53: UserWarning: Code: dateTimeStamp is not defined in namespace XSD
+  from .XsdDatatypes import OWL_RL_Datatypes, OWL_Datatype_Subsumptions
+/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/owlrl/OWLRLExtras.py:64: UserWarning: Code: dateTimeStamp is not defined in namespace XSD
+  from .RestrictedDatatype import extract_faceted_datatypes
 </pre></div>
 </div>
 </div>
@@ -671,10 +673,18 @@
 <span class="c1"># can be an impediment.  A popular group used by many is the Let&#39;s Encrypt group (https://letsencrypt.org/).  Reference their </span>
 <span class="c1"># documentation on CertBot (https://certbot.eff.org/)</span>
 
-<span class="c1"># dcxml = &quot;https://maspawio.net/catalogue/csw?outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;</span>
-<span class="c1"># with urlopen(dcxml) as f:</span>
-<span class="c1">#     tree = ET.parse(f)</span>
-<span class="c1">#     root = tree.getroot()</span>
+<span class="c1"># fails on SSL, cert needs updated but we can ignore it for now.</span>
+
+<span class="n">ctx</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">()</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">check_hostname</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">verify_mode</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">CERT_NONE</span>
+
+<span class="n">dcxml</span> <span class="o">=</span> <span class="s2">&quot;https://maspawio.net/catalogue/csw?outputschema=http%3A</span><span class="si">%2F%2F</span><span class="s2">www.opengis.net</span><span class="si">%2F</span><span class="s2">cat</span><span class="si">%2F</span><span class="s2">csw</span><span class="si">%2F</span><span class="s2">2.0.2&amp;service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;elementsetname=full&amp;id=3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;</span>
+<span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">dcxml</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">ctx</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+    
+<span class="n">r</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -682,8 +692,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bypassing the issue of the https cert, use a local file downloaded by bypassing the warning. </span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;./data/dublin.xml&#39;</span><span class="p">)</span>
-<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+<span class="c1"># tree = ET.parse(&#39;./data/dublin.xml&#39;)</span>
+<span class="c1"># root = tree.getroot()</span>
 <span class="c1"># print(root.tag)</span>
 </pre></div>
 </div>
@@ -691,53 +701,11 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just a loop to inspect all the elements, normall commented out and not needed in final script</span>
-<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> :: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">element</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span> <span class="n">element</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
+<span class="c1"># for element in r.findall(&#39;*&#39;):</span>
+<span class="c1">#             print(&quot;{} :: {}&quot;.format(element.tag, element.text))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{http://purl.org/dc/elements/1.1/}identifier :: 3046b5fc-18e0-11eb-894f-0a735f7a740c
-{http://purl.org/dc/elements/1.1/}title :: locally managed marine areas Kenya
-{http://purl.org/dc/elements/1.1/}type :: dataset
-{http://purl.org/dc/elements/1.1/}subject :: kenya
-{http://purl.org/dc/elements/1.1/}subject :: LMMA
-{http://purl.org/dc/elements/1.1/}format :: vector
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/geonode/wfs
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/geonode/wms
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?request=GetLegendGraphic&amp;format=image/png&amp;WIDTH=20&amp;HEIGHT=20&amp;LAYER=geonode:locally_managed_marine_areas_kenya&amp;legend_options=fontAntiAliasing:true;fontSize:12;forceLabels:on
-{http://purl.org/dc/terms/}references :: http://maspawio.net/uploaded/thumbs/layer-3046b5fc-18e0-11eb-894f-0a735f7a740c-thumb.png
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/reflect?layers=geonode:locally_managed_marine_areas_kenya&amp;width=200&amp;height=150&amp;format=image/png8
-{http://purl.org/dc/terms/}references :: http://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/gwc/service/gmaps?layers=geonode:locally_managed_marine_areas_kenya&amp;zoom={z}&amp;x={x}&amp;y={y}&amp;format=image/png8
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=refresh
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms/kml?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;mode=download
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?srsName=EPSG%3A4326&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=json&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=excel&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=csv&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=gml2&amp;version=1.0.0&amp;request=GetFeature&amp;service=WFS
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wfs?format_options=charset%3AUTF-8&amp;typename=geonode%3Alocally_managed_marine_areas_kenya&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fpng&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=application%2Fpdf&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}references :: http://maspawio.net/geoserver/wms?layers=geonode%3Alocally_managed_marine_areas_kenya&amp;width=400&amp;bbox=39.235491%2C-4.674234%2C41.1162229999999%2C-2.094547&amp;service=WMS&amp;format=image%2Fjpeg&amp;srs=EPSG%3A4326&amp;request=GetMap&amp;height=550
-{http://purl.org/dc/terms/}modified :: 2020-10-28
-{http://purl.org/dc/terms/}abstract :: This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net
-
-
-{http://purl.org/dc/elements/1.1/}date :: 2020-10-28
-{http://purl.org/dc/elements/1.1/}language :: eng
-{http://www.opengis.net/ows}BoundingBox :: 
-            
-</pre></div>
 </div>
 </div>
 </div>
@@ -848,70 +816,293 @@ POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.6742
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/maspawio_9_0.svg" src="../../../_images/maspawio_9_0.svg" /></div>
+<img alt="../../../_images/maspawio_8_0.svg" src="../../../_images/maspawio_8_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># jd = json.dumps(compacted, indent=4)</span>
+<span class="c1"># print(jd)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/maspawio.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span>
+
+<span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;schema&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shacl&quot;</span><span class="p">:</span>   <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">kg</span> <span class="o">=</span> <span class="n">kglab</span><span class="o">.</span><span class="n">KnowledgeGraph</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Schema.org based datagraph&quot;</span><span class="p">,</span>
+    <span class="n">base_uri</span> <span class="o">=</span> <span class="s2">&quot;https://example.org/id/&quot;</span><span class="p">,</span>
+    <span class="n">namespaces</span> <span class="o">=</span> <span class="n">namespaces</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f = io.BytesIO(str.encode(jd))</span>
+<span class="n">kg</span><span class="o">.</span><span class="n">load_jsonld</span><span class="p">(</span><span class="s2">&quot;./data/maspawio.json&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;,
-        &quot;geosparql&quot;: &quot;http://www.opengis.net/ont/geosparql#&quot;
-    },
-    &quot;@id&quot;: &quot;https://maspawio.net/id/3046b5fc-18e0-11eb-894f-0a735f7a740c&quot;,
-    &quot;geosparql:hasGeometry&quot;: {
-        &quot;@type&quot;: &quot;http://www.opengis.net/ont/sf#Polygon&quot;,
-        &quot;geosparql:asWKT&quot;: {
-            &quot;@type&quot;: &quot;geosparql:wktLiteral&quot;,
-            &quot;@value&quot;: &quot;POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.674234  41.116223 -2.094547 41.116223)&quot;
-        }
-    },
-    &quot;description&quot;: &quot;This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net\r\n\r\n&quot;,
-    &quot;keywords&quot;: [
-        &quot;kenya&quot;,
-        &quot;LMMA&quot;
-    ],
-    &quot;name&quot;: &quot;locally managed marine areas Kenya&quot;
-}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7fb9f3ac4670&gt;
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="look-to-pull-spatial-data">
-<h1>Look to pull spatial data<a class="headerlink" href="#look-to-pull-spatial-data" title="Permalink to this headline">¶</a></h1>
-<p>The above works, but we lack the spatial data we want.  So, lets see what we can do there.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &#39;POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)&#39;</span>
-
-<span class="n">bb</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}BoundingBox&#39;</span><span class="p">)</span>
-<span class="n">uc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}UpperCorner&#39;</span><span class="p">)</span>
-<span class="n">lc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}LowerCorner&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
-
-<span class="n">ucs</span> <span class="o">=</span> <span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-<span class="n">lcs</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-
-<span class="n">x1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="n">x2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># export the graph</span>
+<span class="n">kg</span><span class="o">.</span><span class="n">save_rdf</span><span class="p">(</span><span class="s2">&quot;./data/maspawioSingle.ttl&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/maspawio.csv&quot;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">links</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.094547 41.116223  -4.674234 39.235491
--2.094547  41.116223  -4.674234  39.235491
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Resource name</th>
+      <th>Data type</th>
+      <th>Coverage</th>
+      <th>Designation</th>
+      <th>Link address</th>
+      <th>dclink</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>locally managed marine areas Kenya</td>
+      <td>Point vector</td>
+      <td>National</td>
+      <td>Kenya</td>
+      <td>https://maspawio.net/layers/geonode%3Alocally_...</td>
+      <td>https://maspawio.net/catalogue/csw?outputschem...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Sea Level Rise vulnearbility</td>
+      <td>Raster data</td>
+      <td>Sub-national</td>
+      <td>Kenya-Mombasa drfils@gmail.com</td>
+      <td>https://maspawio.net/layers/geonode%3Akwale_ki...</td>
+      <td>https://maspawio.net/catalogue/csw?outputschem...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>kwale Marine depth contours</td>
+      <td>Vector lines</td>
+      <td>Sub-national</td>
+      <td>Kenya-Kwale</td>
+      <td>https://maspawio.net/layers/geonode%3Akwale_ma...</td>
+      <td>https://maspawio.net/catalogue/csw?outputschem...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>kwale bathymetry</td>
+      <td>Raster data</td>
+      <td>Sub-national</td>
+      <td>Kenya-Kwale</td>
+      <td>https://maspawio.net/layers/geonode%3Akwale_ba...</td>
+      <td>https://maspawio.net/catalogue/csw?outputschem...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Fishing intensity Kipini</td>
+      <td>Raster data</td>
+      <td>Sub-national</td>
+      <td>Kenya-Tana River</td>
+      <td>https://maspawio.net/layers/geonode%3Akipini_f...</td>
+      <td>https://maspawio.net/catalogue/csw?outputschem...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linkcol</span> <span class="o">=</span> <span class="n">links</span><span class="p">[</span><span class="s2">&quot;dclink&quot;</span><span class="p">]</span>
+<span class="n">urls</span> <span class="o">=</span> <span class="n">linkcol</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;schema&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;shacl&quot;</span><span class="p">:</span>   <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
+    <span class="p">}</span>
+
+<span class="n">kgset</span> <span class="o">=</span> <span class="n">kglab</span><span class="o">.</span><span class="n">KnowledgeGraph</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Schema.org based datagraph&quot;</span><span class="p">,</span>
+    <span class="n">base_uri</span> <span class="o">=</span> <span class="s2">&quot;https://example.org/id/&quot;</span><span class="p">,</span>
+    <span class="n">namespaces</span> <span class="o">=</span> <span class="n">namespaces</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+    
+    <span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span><span class="mi">1</span> 
+    
+    <span class="n">dcxml</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">dcxml</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">ctx</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+        
+    <span class="n">r</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/cat/csw/2.0.2}Record&#39;</span><span class="p">)</span>
+    
+        
+    <span class="c1"># id</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}identifier&#39;</span><span class="p">)</span>
+
+    <span class="c1"># name</span>
+    <span class="c1"># This can be used to form the URL:  https://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}title&#39;</span><span class="p">)</span>
+
+    <span class="c1"># description</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/terms/}abstract&#39;</span><span class="p">)</span>
+
+    <span class="c1"># keywords</span>
+    <span class="n">subjects</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;{http://purl.org/dc/elements/1.1/}subject&#39;</span><span class="p">)</span>
+
+    <span class="c1"># spatial data</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}BoundingBox&#39;</span><span class="p">)</span>
+    <span class="n">uc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}UpperCorner&#39;</span><span class="p">)</span>
+    <span class="n">lc</span> <span class="o">=</span> <span class="n">bb</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;{http://www.opengis.net/ows}LowerCorner&#39;</span><span class="p">)</span>
+    <span class="n">ucs</span> <span class="o">=</span> <span class="n">uc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">lcs</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lcs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="c1"># # &#39;POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)&#39;</span>
+    <span class="n">poly</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;POLYGON(</span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2">  </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">)&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">))</span>
+
+    
+    
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">#     data[&#39;@id&#39;] = str(&quot;https://maspawio.net/id/{}&quot;.format(id.text))      #id.text</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;https://maspawio.net/id/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>      <span class="c1">#id.text</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;https://schema.org/Dataset&#39;</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="n">aswkt</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">aswkt</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span>
+    <span class="n">aswkt</span><span class="p">[</span><span class="s1">&#39;@value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">poly</span>
+
+    <span class="n">crs</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">crs</span><span class="p">[</span><span class="s1">&#39;@id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+
+    <span class="n">hg</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">hg</span><span class="p">[</span><span class="s1">&#39;@type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Polygon&quot;</span> 
+    <span class="n">hg</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#asWKT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aswkt</span>
+    <span class="n">hg</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#crs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">crs</span>
+
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;http://www.opengis.net/ont/geosparql#hasGeometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hg</span>
+
+    <span class="c1"># keyword(s) loop</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+        <span class="n">k</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;https://schema.org/keywords&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span> 
+    
+    
+    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span> <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">}</span>
+    <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+    <span class="c1"># need sha hash for the &quot;compacted&quot; var and then also generate the prov for this record.</span>
+    
+    <span class="n">filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;data/maspawio</span><span class="si">{}</span><span class="s2">.json&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        
+    <span class="n">kgset</span><span class="o">.</span><span class="n">load_jsonld</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kgset</span><span class="o">.</span><span class="n">save_rdf</span><span class="p">(</span><span class="s2">&quot;./data/maspawio.rdf&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -970,7 +1161,7 @@ POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.6742
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
