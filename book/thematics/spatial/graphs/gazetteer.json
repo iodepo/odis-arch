@@ -1,0 +1,37 @@
+{
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://example.org/id/XYZ",
+    "@type": "Dataset",
+    "name": "Region of Guam",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 13.45,
+          "longitude": 144.78
+        },
+        "identifier": {
+            "@id": "http://www.marineregions.org/eezdetails.php?mrgid=48957",
+            "@type": "PropertyValue",
+            "name": "Guam",
+            "sameAs" : "https://www.wikidata.org/wiki/Q16635",
+            "description" : "Guam, Sovereign: United States",
+            "propertyID": "https://www.marineregions.org/about.php",
+            "url": "http://www.marineregions.org/eezdetails.php?mrgid=48957",
+            "value": "48957"
+        }
+      },
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Point",
+        "geosparql:asWKT": {
+            "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+            "@value": "POLYGON((144.53881421418436 13.733691049156402,145.03319897980936 13.733691049156402,145.03319897980936 13.17808666423775,144.53881421418436 13.17808666423775,144.53881421418436 13.733691049156402))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    }
+}

@@ -16,28 +16,29 @@ execution:
 
 ## About
 
-Maps: A map represented by a static file or document
+Map: A map represented by a static file or document
 
 
-A map in this context would be a static file or document of some sort.  Map services like 
-those described by an OGC Catalogue Service or other GIS service would be described as a 
-service.  
-
-```{note}
-In the current context, schema.org Map typically references maps a document.
-Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to then 
-indicate the type of document it is through a mimetype via encoding.  
-```
 
 The schema.org type Map only offers one special property beyond
-the parent CreativeWork.  That is a [mapType](https://schema.org/Map) which is an
+the parent CreativeWork.  That is a [mapType](https://schema.org/mapType) which is an
 enumeration of types that do not apply to OIH use cases.  However, the use of the
 Map typing itself may aid in narrowing search requests later to a specific creative work.
 
-[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
+Schema.org type Map is a subtype of CreativeWork. As such, we can all the approaches 
+described in the [Documents](./README.md) section for this type as well.  The use 
+of type Map would be focused on documenting files such as KML, GeoJSON or others as a
+creative work that may be downloaded and used either in a workflow or directly.  
 
-[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/map.json)
+A map in this context would be a static file or document of some sort.  Map services like 
+those described by an OGC Catalogue Service or other GIS service would be described as a 
+service.  Potential approaches for doing can be seen the service type.    
 
+```{note}
+In the current context, schema.org Map typically references maps as a document.
+Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to then 
+indicate the type of document it is through a mimetype via encoding.  
+```
 
 ```{literalinclude} ./graphs/map.json
 :linenos:
