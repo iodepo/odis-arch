@@ -33,9 +33,6 @@ guidance and other creative works.  Due to this OIH will focus on a generic exam
 of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 for more focused creative work examples.
 
-[Load in JSON-LD Playground](https://json-ld.org/playground/#startTab=tab-expanded&json-ld=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
-
-[Load in Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool#url=https://raw.githubusercontent.com/fils/odis-arch/master/schema/docs/graphs/creativework.json)
 
 ```{literalinclude} ./graphs/creativework.json
 :linenos:
