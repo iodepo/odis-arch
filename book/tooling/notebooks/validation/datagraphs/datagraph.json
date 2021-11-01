@@ -8,12 +8,14 @@
             "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         }
     },
+    "@id": "https://example.org/id/datagraph/1",
     "@type": "Course",
     "name": "test",
-    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "description": "Course description",
     "hasCourseInstance": [
         {
             "@type": "CourseInstance",
+            "@id": "https://example.org/id/course/1",
             "courseMode": [
                 "MOOC1",
                 "online"
@@ -22,21 +24,23 @@
             "startDate": "2019-02-15",
             "attendee": {
                 "@type": "Person",
+                "@id": "https://example.org/id/course/1/attende/1",
                 "name": "Jane Doe",
                 "jobTitle": "Professor",
                 "telephone": "(425) 123-4567",
                 "url": "http://www.janedoe.com",
                 "identifier": {
-                    "@id": "ID_value_string",
+                    "@id": "https://orcid.org/0000-0000-0000-0000",
                     "@type": "PropertyValue",
-                    "propertyID": "This can be text or URL for an ID like ORCID",
-                    "url": "https://foo.org/linkToPropertyIDPage",
+                    "propertyID": "0000-0002-2257-9127",
+                    "url": "https://orcid.org/0000-0000-0000-0000",
                     "description": "Optional description of the ID"
                 }
             }
         },
         {
             "@type": "CourseInstance",
+            "@id": "https://example.org/id/course/2",
             "courseMode": [
                 "MOOC2",
                 "online"

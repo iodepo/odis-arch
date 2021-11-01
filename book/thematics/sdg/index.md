@@ -222,6 +222,9 @@ The following example provides an an approach to connecting
 Sustainable Development Goals 
 (SDGs) could be linked to via [subjectOf](https://schema.org/subjectOf).  
 
+Other potential links could be made to things such 
+as the [UNDRR-ISC Hazard Definition & Classification](https://www.undrr.org/publication/hazard-information-profiles-supplement-undrr-isc-hazard-definition-classification)
+
 As this is a CreateWork, we can now use one more linking property, the 
 Schema.org citation property.  By comparison, the 
 [publishingPrinciples](https://schema.org/publishingPrinciples) or 

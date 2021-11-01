@@ -20,7 +20,9 @@ oihval:DatasetCommonShape
         oihval:nameResourceProperty,
         oihval:urlResourceProperty,
         oihval:descriptionResourceProperty,
-        oihval:identifierProviderProperty    
+        oihval:identifierProviderProperty,
+        oihval:keywordsResourceProperty,
+        oihval:licenseResourceProperty
     .
 
 oihval:nameResourceProperty
@@ -29,6 +31,26 @@ oihval:nameResourceProperty
     shacl:nodeKind shacl:Literal ;
     shacl:minCount 1 ;
     shacl:message "Name is required "@en ;
+    shacl:description "https://book.oceaninfohub.org/validation/README.html" ;
+    .
+
+oihval:keywordsResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:keywords ;
+    shacl:minCount 1 ;
+    shacl:nodeKind shacl:Literal ;
+    shacl:severity shacl:Warning ;
+    shacl:message "A resource should include descriptive keywords" ;
+    shacl:description "https://book.oceaninfohub.org/validation/README.html" ;
+    .
+
+oihval:licenseResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:license ;
+    shacl:minCount 1 ;
+    shacl:nodeKind shacl:Literal ;
+    shacl:severity shacl:Info ;
+    shacl:message "Though not required, it is good practice to include a license if one exists" ;
     shacl:description "https://book.oceaninfohub.org/validation/README.html" ;
     .
 

@@ -9,6 +9,7 @@ can be used and might be leveraged in a production environment including:
 * [Extrunct](https://github.com/scrapinghub/extruct)
 * [BioSchemas Tools](https://bioschemas.org/software/)
 * [LDSpider](https://github.com/ldspider/ldspider)
+* [StormCrawler](https://github.com/DigitalPebble/storm-crawler)
 * [Squirrel](https://dice-group.github.io/squirrel.github.io/overview.html)
 * [Nutch (Apache)](http://nutch.apache.org/)
 * [Laundromat](https://github.com/LOD-Laundromat/LOD-Laundromat)
@@ -16,4 +17,4 @@ can be used and might be leveraged in a production environment including:
 * [OD Archiver](https://archiver.ai.wu.ac.at/)
 
 These different tools may better fit into the workflow and available
-skill sets for a group.  Distinct from these is [DataONE Plus](https://www.dataone.org/plus/) which is a "Search as a Service" offering from DataONE.  
+skill sets for a group.

@@ -17,6 +17,7 @@ In this section you will find some Jupyter Notebooks
 that demonstrate working with JSON-LD in various
 ways.  These can be copied and used locally to
 explore or implement workflows.
+
 ## On-line tooling
 
 [Schema.org Validator](https://validator.schema.org/)
@@ -41,3 +42,4 @@ explore or implement workflows.
 [Practical JSON at the command line using jello](https://blog.kellybrazil.com/2021/06/24/practical-json-at-the-command-line-using-jello/amp/)
 
 [Python Extruct](https://github.com/scrapinghub/extruct)
+
