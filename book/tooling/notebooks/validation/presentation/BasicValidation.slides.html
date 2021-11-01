@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>RDAValidation slides</title>
+<title>BasicValidation slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13207,8 +13207,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="RDA-Metadata-Working-Group">RDA Metadata Working Group<a class="anchor-link" href="#RDA-Metadata-Working-Group">&#182;</a></h1><h2 id="RDA-18-Session">RDA 18 Session<a class="anchor-link" href="#RDA-18-Session">&#182;</a></h2><h2 id="Validation-Breakout-Group">Validation Breakout Group<a class="anchor-link" href="#Validation-Breakout-Group">&#182;</a></h2><p>Authors:
-Adam Shepherd &amp; Doug Fils</p>
+<h1 id="Basic-Validating-with-SHACL">Basic Validating with SHACL<a class="anchor-link" href="#Basic-Validating-with-SHACL">&#182;</a></h1><h2 id="RDA-18:-Metadata-Working-Group">RDA 18: Metadata Working Group<a class="anchor-link" href="#RDA-18:-Metadata-Working-Group">&#182;</a></h2><p><a href="https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual/recommendations-publishing-structure-metadata-web">Session page</a></p>
+<p><a href="https://docs.google.com/presentation/d/1F9E1zyfhnniSQJv18RPdYCutKwSNKTzl6uml3zvDcOs/edit#slide=id.gd08e71dd0b_0_246">Slides</a></p>
+<h2 id="Validation-Breakout-Group">Validation Breakout Group<a class="anchor-link" href="#Validation-Breakout-Group">&#182;</a></h2><p>Authors:
+Adam Shepherd &amp; Douglas Fils</p>
 
 </div>
 </div>
@@ -13217,8 +13219,9 @@ Adam Shepherd &amp; Doug Fils</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Agenda-for-Session">Agenda for Session<a class="anchor-link" href="#Agenda-for-Session">&#182;</a></h1><ul>
-<li>What does our broader activity flow look like and who are the personas involved?<ul>
-<li>Author, Publisher, Indexer, User</li>
+<li>Validation Personnas and  GO FAIR Implementation Network<ul>
+<li>RDF Conceptal Model Basis</li>
+<li>Role of Validation</li>
 </ul>
 </li>
 <li>What is the basic ecosystem we are working in?<ul>
@@ -13254,13 +13257,17 @@ Adam Shepherd &amp; Doug Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Think--of-this-in-context-of-GO-FAIR-Implementation-Network">Think  of this in context of GO FAIR Implementation Network<a class="anchor-link" href="#Think--of-this-in-context-of-GO-FAIR-Implementation-Network">&#182;</a></h3><p><div>
-<img src="DDI.png"  width="400"/></p>
+<h1 id="Validation-Personnas-and--GO-FAIR-Implementation-Network">Validation Personnas and  GO FAIR Implementation Network<a class="anchor-link" href="#Validation-Personnas-and--GO-FAIR-Implementation-Network">&#182;</a></h1><p><div>
+<img src="relations.png"  width="400"/></p>
 <div>
 
 <ul>
-<li>IMPLEMENT  clearly defined plans and deliverables to implement an element of the Internet of FAIR Data and Services (IFDS) within a defined time period; </li>
-<li>FOSTER  a community of harmonized FAIR practices; </li>
+<li>IMPLEMENT  clearly defined plans and deliverables to implement an element of the Internet of FAIR Data and Services (IFDS) within a defined time period;</li>
+</ul>
+<ul>
+<li>FOSTER  a community of harmonized FAIR practices;</li>
+</ul>
+<ul>
 <li>COMMUNICATE  together on critical issues on which consensus has been reached and which are of generic importance for the community.</li>
 </ul>
 
@@ -13270,7 +13277,21 @@ Adam Shepherd &amp; Doug Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-subslide-to-provide-some-more-on-why-then">A subslide to provide some more on why then<a class="anchor-link" href="#A-subslide-to-provide-some-more-on-why-then">&#182;</a></h2>
+<h2 id="RDF-Conceptual-Model-Basis">RDF Conceptual Model Basis<a class="anchor-link" href="#RDF-Conceptual-Model-Basis">&#182;</a></h2><p>A brief tour of RDF conceptual mode, the RDF ecosystem and JSON-LD in that ecosystem.</p>
+<p><div>
+<img src="ecosystem.png"  width="400"/></p>
+<div>
+
+<p>Image credit: Pierre-Antoine Champin  <a href="https://www.w3.org/Talks/2021/09-19-ddi-cdi/?full#rdf-ecosystem">https://www.w3.org/Talks/2021/09-19-ddi-cdi/?full#rdf-ecosystem</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Role-of-Validation">Role of Validation<a class="anchor-link" href="#Role-of-Validation">&#182;</a></h2><p>why do this..   how does it affect the personnas</p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -13328,7 +13349,7 @@ Adam Shepherd &amp; Doug Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-basic-shape-graph">A basic shape graph<a class="anchor-link" href="#A-basic-shape-graph">&#182;</a></h2><h3 id="Example-from-SHACL-Playground">Example from SHACL Playground<a class="anchor-link" href="#Example-from-SHACL-Playground">&#182;</a></h3>
+<h2 id="A-quick-example">A quick example<a class="anchor-link" href="#A-quick-example">&#182;</a></h2><h3 id="Example-from-SHACL-Playground">Example from SHACL Playground<a class="anchor-link" href="#Example-from-SHACL-Playground">&#182;</a></h3>
 <pre><code>@prefix dash: &lt;http://datashapes.org/dash#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -13371,6 +13392,28 @@ schema:AddressShape
         sh:minInclusive 10000 ;
         sh:maxInclusive 99999 ;
     ] .</code></pre>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tooling">Tooling<a class="anchor-link" href="#Tooling">&#182;</a></h2><p>pySHACL examples  (<a href="https://github.com/RDFLib/pySHACL/">https://github.com/RDFLib/pySHACL/</a>)</p>
+<p><a href="https://derwen.ai/docs/kgl/">kglab</a> tutorial on <a href="https://derwen.ai/docs/kgl/ex5_0/">SHACL validation with pySHACL</a></p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyshacl</span> <span class="kn">import</span> <span class="n">validate</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">validate</span><span class="p">(</span><span class="n">data_graph</span><span class="p">,</span>
+      <span class="n">shacl_graph</span><span class="o">=</span><span class="n">sg</span><span class="p">,</span>
+      <span class="n">ont_graph</span><span class="o">=</span><span class="n">og</span><span class="p">,</span>
+      <span class="n">inference</span><span class="o">=</span><span class="s1">&#39;rdfs&#39;</span><span class="p">,</span>
+      <span class="n">abort_on_first</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">allow_warnings</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">meta_shacl</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">advanced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">js</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+      <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">conforms</span><span class="p">,</span> <span class="n">results_graph</span><span class="p">,</span> <span class="n">results_text</span> <span class="o">=</span> <span class="n">r</span>
+</pre></div>
 
 </div>
 </div>
@@ -13463,20 +13506,7 @@ schema:AddressShape
 </div>
 </div>
 </div>
-</aside>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section>
+</aside></section></section>
 </div>
 </div>
 
