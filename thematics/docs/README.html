@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -618,7 +618,7 @@
         
               <div>
                 
-  <div class="section" id="documents">
+  <div class="tex2jax_ignore mathjax_ignore section" id="documents">
 <h1>Documents<a class="headerlink" href="#documents" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
@@ -637,115 +637,62 @@ patterns developed for GeoScience Datasets by the ESIP
 guidance and other creative works.  Due to this OIH will focus on a generic example
 of <a class="reference external" href="https://schema.org/CreativeWork">schema.org/CreativeWork</a> and then provide examples
 for more focused creative work examples.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;contributor&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.foo.org/orgID&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr Uta Passow&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;givenName&quot;</span><span class="p">:</span> <span class="s2">&quot;Uta&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;familyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Passow&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryB.org&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/CC0-1.0&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.publishingrus.org&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>  <span class="p">},</span>
+<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>  <span class="s2">&quot;contributor&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.foo.org/orgID&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
+<span class="linenos">14</span>  <span class="p">},</span>
+<span class="linenos">15</span>  <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr Uta Passow&quot;</span><span class="p">,</span>
+<span class="linenos">19</span>    <span class="s2">&quot;givenName&quot;</span><span class="p">:</span> <span class="s2">&quot;Uta&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>    <span class="s2">&quot;familyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Passow&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span>
+<span class="linenos">22</span>  <span class="p">},</span>
+<span class="linenos">23</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">24</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">29</span>  <span class="p">},</span>
+<span class="linenos">30</span>  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">31</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>    <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">33</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">34</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
+<span class="linenos">35</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
+<span class="linenos">36</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
+<span class="linenos">37</span>    <span class="p">},</span>
+<span class="linenos">38</span>    <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
+<span class="linenos">39</span>  <span class="p">},</span>
+<span class="linenos">40</span>  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">41</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryB.org&quot;</span><span class="p">,</span>
+<span class="linenos">42</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">43</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+<span class="linenos">44</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+<span class="linenos">45</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="linenos">46</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+<span class="linenos">47</span>  <span class="p">},</span>
+<span class="linenos">48</span>  <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/CC0-1.0&quot;</span><span class="p">,</span>
+<span class="linenos">49</span>  <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">50</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.publishingrus.org&quot;</span><span class="p">,</span>
+<span class="linenos">51</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">52</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
+<span class="linenos">53</span>  <span class="p">}</span>
+<span class="linenos">54</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>

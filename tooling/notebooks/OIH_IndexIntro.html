@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -632,7 +632,7 @@
         
               <div>
                 
-  <div class="section" id="indexing-concepts">
+  <div class="tex2jax_ignore mathjax_ignore section" id="indexing-concepts">
 <h1>Indexing Concepts<a class="headerlink" href="#indexing-concepts" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="review">
 <h2>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
@@ -708,7 +708,7 @@ but it’s a good exercise and a good way to get started.  We will explore more 
 <p>Let’s look at how this might be done in Python.  Python is a very popular language and has many solid libraries for working with JSON-LD. Again, we will use this more to get a feel for the process.</p>
 </div>
 </div>
-<div class="section" id="imports-and-defs">
+<div class="tex2jax_ignore mathjax_ignore section" id="imports-and-defs">
 <h1>Imports and defs<a class="headerlink" href="#imports-and-defs" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -796,7 +796,7 @@ but it’s a good exercise and a good way to get started.  We will explore more 
 </div>
 </div>
 </div>
-<div class="section" id="parse-a-search-result">
+<div class="tex2jax_ignore mathjax_ignore section" id="parse-a-search-result">
 <h1>Parse a search result<a class="headerlink" href="#parse-a-search-result" title="Permalink to this headline">¶</a></h1>
 <p>Let’s do a search at the OIH test web site and then see if we can work with some of the results there.</p>
 <div class="cell docutils container">
@@ -1074,7 +1074,7 @@ but it’s a good exercise and a good way to get started.  We will explore more 
 </div>
 </div>
 </div>
-<div class="section" id="conclusion">
+<div class="tex2jax_ignore mathjax_ignore section" id="conclusion">
 <h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
 <p>Using these approaches you could explore data from other sources you know are publishing JSON-LD.  You could improve either of the bash script or Python code to loop on the resources and store the results in files or load them directly into a triples store / graph database.</p>
 <p>As we continue, we will move on to the Gleaner package that is used by Ocean InfoHub and see some of the edge cases that can be addressed with it and how it fits into a more automated process.</p>

@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -572,6 +572,39 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-few-imports-to-support-the-code-following">
+   A few imports to support the code following
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-out-files">
+   Load out files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-graph">
+   Data Graph
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-graph">
+   Shape graph
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sticks-and-balls">
+   Sticks and Balls
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -580,7 +613,7 @@
         
               <div>
                 
-  <div class="section" id="shacl-simple-validation">
+  <div class="tex2jax_ignore mathjax_ignore section" id="shacl-simple-validation">
 <h1>SHACL Simple Validation<a class="headerlink" href="#shacl-simple-validation" title="Permalink to this headline">¶</a></h1>
 <p>Ocean Info Hub SHACL validation examples</p>
 <p>It should be noted here that SHACL validation is not a service OIH offers.  Rather,
@@ -591,25 +624,8 @@ this validation follows W3C recommendations as describted in
 <li><p><a class="reference external" href="https://shacl.org/playground/">SHACL Playground</a></p></li>
 <li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex5_0/">kglab SHACL validation with pySHACL</a></p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
-!pip install pyshacl
-!pip install &#39;PyLD&gt;=2.0.3&#39;
-!pip install flatten_json
-!pip install &#39;fsspec&gt;=0.3.3&#39;
-!pip install s3fs
-!pip install boto3
-!pip install seaborn
-!pip install dask
-!pip install rdflib-jsonld
-!pip install kglab
-!pip install numba
-!pip install pyld
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="a-few-imports-to-support-the-code-following">
+<h2>A few imports to support the code following<a class="headerlink" href="#a-few-imports-to-support-the-code-following" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">kglab</span> <span class="k">as</span> <span class="nn">kg</span>
@@ -618,77 +634,13 @@ this validation follows W3C recommendations as describted in
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">138915545</span><span class="n">c57</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">kglab</span> <span class="k">as</span> <span class="nn">kg</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">rdflib</span> <span class="kn">import</span> <span class="n">Graph</span><span class="p">,</span> <span class="n">plugin</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">rdflib.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># see license https://github.com/DerwenAI/kglab#license-and-copyright</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">.kglab</span> <span class="kn">import</span> <span class="n">KnowledgeGraph</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">.subg</span> <span class="kn">import</span> <span class="n">Subgraph</span><span class="p">,</span> <span class="n">SubgraphMatrix</span><span class="p">,</span> <span class="n">SubgraphTensor</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="n">kglab</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">kglab.pkg_types</span> <span class="kn">import</span> <span class="n">PathLike</span><span class="p">,</span> <span class="n">IOPathLike</span><span class="p">,</span> <span class="n">GraphLike</span><span class="p">,</span> <span class="n">RDF_Node</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">kglab.gpviz</span> <span class="kn">import</span> <span class="n">GPViz</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">kglab.util</span> <span class="kn">import</span> <span class="n">get_gpu_count</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">kglab.version</span> <span class="kn">import</span> <span class="n">_check_version</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">_check_version</span><span class="p">()</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">kglab</span><span class="o">/</span><span class="n">util</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> 
-<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="k">if</span> <span class="n">get_gpu_count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">33</span>     <span class="kn">import</span> <span class="nn">cudf</span>  <span class="c1"># type: ignore # pylint: disable=E0401</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span> 
-<span class="g g-Whitespace">     </span><span class="mi">35</span> 
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">rmm</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">cudf</span> <span class="kn">import</span> <span class="n">core</span><span class="p">,</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">testing</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">cudf._version</span> <span class="kn">import</span> <span class="n">get_versions</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">cudf.api.extensions</span> <span class="kn">import</span> <span class="p">(</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Copyright (c) 2018-2020, NVIDIA CORPORATION.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">cudf.core</span> <span class="kn">import</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="n">common</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">cudf.core.buffer</span> <span class="kn">import</span> <span class="n">Buffer</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">cudf.core.dataframe</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">from_pandas</span><span class="p">,</span> <span class="n">merge</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">column</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Copyright (c) 2020, NVIDIA CORPORATION.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">cudf.core.column.categorical</span> <span class="kn">import</span> <span class="n">CategoricalColumn</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">cudf.core.column.column</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">ColumnBase</span><span class="p">,</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">column</span><span class="o">/</span><span class="n">categorical</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">cudf</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">cudf</span> <span class="kn">import</span> <span class="n">_lib</span> <span class="k">as</span> <span class="n">libcudf</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">cudf._lib.transform</span> <span class="kn">import</span> <span class="n">bools_to_mask</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">cudf.core.buffer</span> <span class="kn">import</span> <span class="n">Buffer</span>
-
-<span class="o">~/.</span><span class="n">conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rapids</span><span class="o">-</span><span class="mf">0.17</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cudf</span><span class="o">/</span><span class="n">_lib</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">avro</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">binaryop</span><span class="p">,</span>
-
-<span class="nn">cudf/_lib/gpuarrow.pyx</span> in <span class="ni">init cudf._lib.gpuarrow</span><span class="nt">()</span>
-
-<span class="ne">AttributeError</span>: module &#39;pyarrow.lib&#39; has no attribute &#39;_CRecordBatchReader&#39;
-</pre></div>
 </div>
 </div>
-</div>
+<div class="section" id="load-out-files">
+<h2>Load out files<a class="headerlink" href="#load-out-files" title="Permalink to this headline">¶</a></h2>
+<p>The process involves two inputs.  One is the “data graph” which will be the graph we are testing.  The other in the “shape graph” which is the graph containing our validation and constraint logic.  Both of these are RDF based but can be in any serialization.</p>
+<p>Here we have used JSON-LD for the data graph, since that is what people are using to publish structured data on the web at their web sites, so lets stick with that.</p>
+<p>For the shape graph, we use Turtle (.ttl) because it’s cleaner, compact and a bit more friendly for human reading.  Since this graph is being built by humans for computers, lets cater to the human in that equation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up the files we will use here</span>
@@ -698,6 +650,44 @@ this validation follows W3C recommendations as describted in
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="data-graph">
+<h2>Data Graph<a class="headerlink" href="#data-graph" title="Permalink to this headline">¶</a></h2>
+<p>We can visualize our data graph and get an idea of what it looks like.   For this exmaple we are looking at the <a class="reference external" href="https://schema.org/Course">Schema.org Course</a> type.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">Graph</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">dg</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">jld</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;json-ld&#39;</span><span class="p">,</span> <span class="n">context</span><span class="o">=</span><span class="n">context</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">jld</span><span class="p">)</span>
+
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/OIH_Simple_SHACL_6_0.svg" src="../../../_images/OIH_Simple_SHACL_6_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="shape-graph">
+<h2>Shape graph<a class="headerlink" href="#shape-graph" title="Permalink to this headline">¶</a></h2>
+<p>Let’s use a bit of code to visualize our shape graph.  The nature of shape graph means they don’t visualize as well, but we can still get a feel for our graph this way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -727,11 +717,13 @@ this validation follows W3C recommendations as describted in
            <span class="s2">&quot;shacl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span> <span class="p">,</span>
            <span class="s2">&quot;oihval&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceans.collaborium.io/voc/validation/1.0.1/shacl#&quot;</span> 
            <span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
   <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
   <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="p">{},</span>
-  <span class="s2">&quot;shacl:message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="c1"># &quot;shacl:message&quot;: &quot;&quot;,</span>
+  <span class="c1"># &quot;shacl:targetClass&quot;: &quot;&quot;,</span>
   <span class="s2">&quot;shacl:path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  
+  <span class="s2">&quot;shacl:nodeKind&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -745,19 +737,7 @@ this validation follows W3C recommendations as describted in
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">88</span><span class="n">c94132ad8a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">json</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyld&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../../_images/OIH_Simple_SHACL_8_0.svg" src="../../../_images/OIH_Simple_SHACL_8_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -788,7 +768,7 @@ this validation follows W3C recommendations as describted in
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7fcd58ffa7f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;kglab.kglab.KnowledgeGraph at 0x7f3e17a57700&gt;
 </pre></div>
 </div>
 </div>
@@ -809,11 +789,12 @@ this validation follows W3C recommendations as describted in
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         
 <span class="n">sparql</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT ?path ?value ?constraint ?message ?id ?focus </span>
+<span class="s2">SELECT ?path ?value ?constraint ?severity ?message ?id ?focus </span>
 <span class="s2">  WHERE {</span>
 <span class="s2">    ?id rdf:type shacl:ValidationResult .</span>
 <span class="s2">    ?id shacl:focusNode ?focus .</span>
 <span class="s2">    ?id shacl:resultMessage ?message .</span>
+<span class="s2">    ?id shacl:resultSeverity ?severity .</span>
 <span class="s2">    ?id shacl:sourceConstraintComponent ?constraint .</span>
 <span class="s2">    OPTIONAL {</span>
 <span class="s2">        ?id shacl:resultPath ?path .</span>
@@ -825,78 +806,80 @@ this validation follows W3C recommendations as describted in
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">report_graph</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">sparql</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># df.head(10)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">change_color_group</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;severity&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;shacl:Violation&quot;</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;background-color: #F89782&#39;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;severity&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;shacl:Warning&quot;</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;background-color: #F0F480&#39;</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;severity&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;shacl:Info&quot;</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;background-color: #CBFBD2&#39;</span>
+    <span class="k">return</span> <span class="n">df</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+<span class="n">pdf</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">change_color_group</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>path</th>
-      <th>constraint</th>
-      <th>message</th>
-      <th>id</th>
-      <th>focus</th>
-      <th>value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>schema:provider</td>
-      <td>shacl:MinCountConstraintComponent</td>
-      <td>A provider must be noted</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b2</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NaN</td>
-      <td>shacl:NodeKindConstraintComponent</td>
-      <td>Graph must have an ID</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b4</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>schema:name</td>
-      <td>shacl:MinCountConstraintComponent</td>
-      <td>Name is required</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b5</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>schema:url</td>
-      <td>shacl:MinCountConstraintComponent</td>
-      <td>URL required for the location of the resource ...</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b6</td>
-      <td>_:nc0c23de19cda41839d796f82d56c39b4b3</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_html"><style  type="text/css" >
+#T_27e0e_row0_col0,#T_27e0e_row0_col1,#T_27e0e_row0_col2,#T_27e0e_row0_col3,#T_27e0e_row0_col4,#T_27e0e_row0_col5{
+            background-color:  #CBFBD2;
+        }#T_27e0e_row1_col0,#T_27e0e_row1_col1,#T_27e0e_row1_col2,#T_27e0e_row1_col3,#T_27e0e_row1_col4,#T_27e0e_row1_col5,#T_27e0e_row3_col0,#T_27e0e_row3_col1,#T_27e0e_row3_col2,#T_27e0e_row3_col3,#T_27e0e_row3_col4,#T_27e0e_row3_col5{
+            background-color:  #F89782;
+        }#T_27e0e_row2_col0,#T_27e0e_row2_col1,#T_27e0e_row2_col2,#T_27e0e_row2_col3,#T_27e0e_row2_col4,#T_27e0e_row2_col5{
+            background-color:  #F0F480;
+        }</style><table id="T_27e0e_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >path</th>        <th class="col_heading level0 col1" >constraint</th>        <th class="col_heading level0 col2" >severity</th>        <th class="col_heading level0 col3" >message</th>        <th class="col_heading level0 col4" >id</th>        <th class="col_heading level0 col5" >focus</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_27e0e_level0_row0" class="row_heading level0 row0" >0</th>
+                        <td id="T_27e0e_row0_col0" class="data row0 col0" >schema:license</td>
+                        <td id="T_27e0e_row0_col1" class="data row0 col1" >shacl:MinCountConstraintComponent</td>
+                        <td id="T_27e0e_row0_col2" class="data row0 col2" >shacl:Info</td>
+                        <td id="T_27e0e_row0_col3" class="data row0 col3" >Though not required, it is good practice to include a license if one exists</td>
+                        <td id="T_27e0e_row0_col4" class="data row0 col4" >_:n8eac5e6698884d2a8264d2e300467239b2</td>
+                        <td id="T_27e0e_row0_col5" class="data row0 col5" ><https://example.org/id/datagraph/1></td>
+            </tr>
+            <tr>
+                        <th id="T_27e0e_level0_row1" class="row_heading level0 row1" >1</th>
+                        <td id="T_27e0e_row1_col0" class="data row1 col0" >schema:provider</td>
+                        <td id="T_27e0e_row1_col1" class="data row1 col1" >shacl:MinCountConstraintComponent</td>
+                        <td id="T_27e0e_row1_col2" class="data row1 col2" >shacl:Violation</td>
+                        <td id="T_27e0e_row1_col3" class="data row1 col3" >A provider must be noted</td>
+                        <td id="T_27e0e_row1_col4" class="data row1 col4" >_:n8eac5e6698884d2a8264d2e300467239b3</td>
+                        <td id="T_27e0e_row1_col5" class="data row1 col5" ><https://example.org/id/datagraph/1></td>
+            </tr>
+            <tr>
+                        <th id="T_27e0e_level0_row2" class="row_heading level0 row2" >2</th>
+                        <td id="T_27e0e_row2_col0" class="data row2 col0" >schema:keywords</td>
+                        <td id="T_27e0e_row2_col1" class="data row2 col1" >shacl:MinCountConstraintComponent</td>
+                        <td id="T_27e0e_row2_col2" class="data row2 col2" >shacl:Warning</td>
+                        <td id="T_27e0e_row2_col3" class="data row2 col3" >A resource should include descriptive keywords</td>
+                        <td id="T_27e0e_row2_col4" class="data row2 col4" >_:n8eac5e6698884d2a8264d2e300467239b4</td>
+                        <td id="T_27e0e_row2_col5" class="data row2 col5" ><https://example.org/id/datagraph/1></td>
+            </tr>
+            <tr>
+                        <th id="T_27e0e_level0_row3" class="row_heading level0 row3" >3</th>
+                        <td id="T_27e0e_row3_col0" class="data row3 col0" >schema:url</td>
+                        <td id="T_27e0e_row3_col1" class="data row3 col1" >shacl:MinCountConstraintComponent</td>
+                        <td id="T_27e0e_row3_col2" class="data row3 col2" >shacl:Violation</td>
+                        <td id="T_27e0e_row3_col3" class="data row3 col3" >URL required for the location of the resource described by this metadata</td>
+                        <td id="T_27e0e_row3_col4" class="data row3 col4" >_:n8eac5e6698884d2a8264d2e300467239b5</td>
+                        <td id="T_27e0e_row3_col5" class="data row3 col5" ><https://example.org/id/datagraph/1></td>
+            </tr>
+    </tbody></table></div></div>
 </div>
+</div>
+<div class="section" id="sticks-and-balls">
+<h2>Sticks and Balls<a class="headerlink" href="#sticks-and-balls" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">VIS_STYLE</span> <span class="o">=</span> <span class="p">{</span>
@@ -931,6 +914,7 @@ this validation follows W3C recommendations as describted in
     allowfullscreen
 ></iframe>
 </div></div>
+</div>
 </div>
 </div>
 

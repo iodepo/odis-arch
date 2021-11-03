@@ -25,10 +25,13 @@ the [Global Change Master Directory keywords](https://earthdata.nasa.gov/earth-o
 This impedance is caused by publishing approaches for the terms that don't align well with 
 the above publishing practices.  This does not mean we can not use these terms, rather that
 we may find multiple ways to connect them used by the community.  This can result in some
-ambiguity in linking in a community.
+ambiguity in linking in a community.  
 
-A person could adapt the pattern to connect things like:
-[EARTH SCIENCE > OCEANS > OCEAN CHEMISTRY](https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY&gtm_scheme=Earth%20Science).  This does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.
+
+
+A person could adapt the pattern to connect things like the [Global Change Observing System](https://public.wmo.int/en/programmes/global-climate-observing-system/essential-climate-variables)
+or 
+[EARTH SCIENCE > OCEANS > OCEAN CHEMISTRY](https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY&gtm_scheme=Earth%20Science).  The later of these does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.
 
 
 ```{note}

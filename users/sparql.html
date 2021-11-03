@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -611,7 +611,7 @@
         
               <div>
                 
-  <div class="section" id="oih-sparql">
+  <div class="tex2jax_ignore mathjax_ignore section" id="oih-sparql">
 <h1>OIH SPARQL<a class="headerlink" href="#oih-sparql" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
@@ -625,71 +625,40 @@ be looking for both Gleaner prov and the Authroitative Reference elements.</p>
 <p>This will be different for different patterns.  For example, it might
 relate to the publisher provider elements for Creativeworks, but to
 the identity element for People and Organizations.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>prefix prov: &lt;http://www.w3.org/ns/prov#&gt;
-PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;
-PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;
-PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-PREFIX schema: &lt;https://schema.org/&gt;
-PREFIX schemaold: &lt;http://schema.org/&gt;
-PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-
-SELECT DISTINCT ?g  ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline
-WHERE {
-<span class="hll">   ?lit bds:search &quot;coral&quot; .
-</span><span class="hll">   ?lit bds:matchAllTerms &quot;false&quot; .
-</span><span class="hll">   ?lit bds:relevance ?score .
-</span>   graph ?g {
-    ?s ?p ?lit .
-    ?s rdf:type ?type . 
-<span class="hll">    OPTIONAL { ?s schema:name ?name .   }
-</span><span class="hll">    OPTIONAL { ?s schema:headline ?headline .   }
-</span><span class="hll">    OPTIONAL { ?s schema:url ?url .   }
-</span><span class="hll">    OPTIONAL { ?s schema:description ?description .    }
-</span>  }
-<span class="hll">   ?sp prov:generated ?g  .
-</span><span class="hll">   ?sp prov:used ?used .
-</span><span class="hll">   ?used prov:hadMember ?hm .
-</span><span class="hll">   ?hm prov:wasAttributedTo ?wat .
-</span><span class="hll">   ?wat rdf:name ?orgname .
-</span><span class="hll">   ?wat rdfs:seeAlso ?domai
-</span>}
-<span class="hll">ORDER BY DESC(?score)
-</span><span class="hll">LIMIT 30
-</span><span class="hll">OFFSET 0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>prefix prov: &lt;http://www.w3.org/ns/prov#&gt;
+<span class="linenos"> 2</span>PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;
+<span class="linenos"> 3</span>PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;
+<span class="linenos"> 4</span>PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;
+<span class="linenos"> 5</span>PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+<span class="linenos"> 6</span>PREFIX schema: &lt;https://schema.org/&gt;
+<span class="linenos"> 7</span>PREFIX schemaold: &lt;http://schema.org/&gt;
+<span class="linenos"> 8</span>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>SELECT DISTINCT ?g  ?s  ?wat ?orgname ?domain ?type ?score ?name ?url ?lit ?description ?headline
+<span class="linenos">11</span>WHERE {
+<span class="hll"><span class="linenos">12</span>   ?lit bds:search &quot;coral&quot; .
+</span><span class="hll"><span class="linenos">13</span>   ?lit bds:matchAllTerms &quot;false&quot; .
+</span><span class="hll"><span class="linenos">14</span>   ?lit bds:relevance ?score .
+</span><span class="linenos">15</span>   graph ?g {
+<span class="linenos">16</span>    ?s ?p ?lit .
+<span class="linenos">17</span>    ?s rdf:type ?type . 
+<span class="hll"><span class="linenos">18</span>    OPTIONAL { ?s schema:name ?name .   }
+</span><span class="hll"><span class="linenos">19</span>    OPTIONAL { ?s schema:headline ?headline .   }
+</span><span class="hll"><span class="linenos">20</span>    OPTIONAL { ?s schema:url ?url .   }
+</span><span class="hll"><span class="linenos">21</span>    OPTIONAL { ?s schema:description ?description .    }
+</span><span class="linenos">22</span>  }
+<span class="hll"><span class="linenos">23</span>   ?sp prov:generated ?g  .
+</span><span class="hll"><span class="linenos">24</span>   ?sp prov:used ?used .
+</span><span class="hll"><span class="linenos">25</span>   ?used prov:hadMember ?hm .
+</span><span class="hll"><span class="linenos">26</span>   ?hm prov:wasAttributedTo ?wat .
+</span><span class="hll"><span class="linenos">27</span>   ?wat rdf:name ?orgname .
+</span><span class="hll"><span class="linenos">28</span>   ?wat rdfs:seeAlso ?domai
+</span><span class="linenos">29</span>}
+<span class="hll"><span class="linenos">30</span>ORDER BY DESC(?score)
+</span><span class="hll"><span class="linenos">31</span>LIMIT 30
+</span><span class="hll"><span class="linenos">32</span>OFFSET 0
 </span></pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="lines-12-14">
 <h2>Lines 12-14<a class="headerlink" href="#lines-12-14" title="Permalink to this headline">¶</a></h2>

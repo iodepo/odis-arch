@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -623,7 +623,7 @@
         
               <div>
                 
-  <div class="section" id="keywords-and-defined-terms">
+  <div class="tex2jax_ignore mathjax_ignore section" id="keywords-and-defined-terms">
 <h1>Keywords and Defined Terms<a class="headerlink" href="#keywords-and-defined-terms" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
@@ -637,8 +637,9 @@ This impedance is caused by publishing approaches for the terms that don’t ali
 the above publishing practices.  This does not mean we can not use these terms, rather that
 we may find multiple ways to connect them used by the community.  This can result in some
 ambiguity in linking in a community.</p>
-<p>A person could adapt the pattern to connect things like:
-<a class="reference external" href="https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY%3Em_scheme=Earth%20Science">EARTH SCIENCE &gt; OCEANS &gt; OCEAN CHEMISTRY</a>.  This does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.</p>
+<p>A person could adapt the pattern to connect things like the <a class="reference external" href="https://public.wmo.int/en/programmes/global-climate-observing-system/essential-climate-variables">Global Change Observing System</a>
+or
+<a class="reference external" href="https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY%3Em_scheme=Earth%20Science">EARTH SCIENCE &gt; OCEANS &gt; OCEAN CHEMISTRY</a>.  The later of these does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This topic of keyword linking with DefinedTerms is under review at the <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org">Science on Schema</a>
@@ -652,71 +653,40 @@ for the latest on their recommendations.</p>
 These are: <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>, <a class="reference external" href="https://schema.org/Text">Text</a> and <a class="reference external" href="https://schema.org/URL">URL</a>.</p>
 <p>We can see the three different approaches here to defining keywords.  Here, <em>Region X</em> is a classic
 text keyword.  The other two are defined as a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
-    <span class="p">},</span>
-<span class="hll">    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll">        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
-</span><span class="hll">        <span class="p">{</span>
-</span><span class="hll">            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
-</span><span class="hll">        <span class="p">},</span>
-</span><span class="hll">        <span class="p">{</span>
-</span><span class="hll">            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-</span><span class="hll">            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span>
-</span><span class="hll">        <span class="p">}</span>
-</span><span class="hll">    <span class="p">]</span>
-</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">16</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">20</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">26</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span>
+</span><span class="hll"><span class="linenos">30</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="p">]</span>
+</span><span class="linenos">32</span><span class="p">}</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -806,73 +776,41 @@ types in <a class="reference external" href="http://Schema.org">Schema.org</a>. 
 </ul>
 <p>The following example is from the <a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/DefinedTermSet">DefinedTermSet</a>
 reference.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
-        <span class="p">{</span>
-                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-                <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of Ballentine&#39;s Law Dictionary Term Set&quot;</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
-                <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
-                <span class="p">}</span>
-        <span class="p">}</span>
-<span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
+<span class="linenos"> 2</span>        <span class="p">{</span>
+<span class="linenos"> 3</span>                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 4</span>                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 5</span>                <span class="p">}</span>
+<span class="linenos"> 6</span>        <span class="p">},</span>
+<span class="linenos"> 7</span>        <span class="p">{</span>
+<span class="linenos"> 8</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of Ballentine&#39;s Law Dictionary Term Set&quot;</span>
+<span class="linenos">12</span>        <span class="p">},</span>
+<span class="linenos">13</span>        <span class="p">{</span>
+<span class="linenos">14</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">19</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">21</span>                <span class="p">}</span>
+<span class="linenos">22</span>        <span class="p">},</span>
+<span class="linenos">23</span>        <span class="p">{</span>
+<span class="linenos">24</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">29</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">31</span>                <span class="p">}</span>
+<span class="linenos">32</span>        <span class="p">}</span>
+<span class="linenos">33</span><span class="p">]</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>

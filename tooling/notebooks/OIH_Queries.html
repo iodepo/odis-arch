@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -583,11 +583,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installs">
-     Installs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#imports">
      Imports
     </a>
@@ -609,6 +604,13 @@
      Simple Count
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-org-list">
+   Simple org list
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#predicate-counts">
      Predicate Counts
@@ -641,6 +643,11 @@
    Types Breakdown
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-status-of-spatial-predicates">
+   Check status of spatial predicates
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -652,35 +659,11 @@
         
               <div>
                 
-  <div class="section" id="oih-queries">
+  <div class="tex2jax_ignore mathjax_ignore section" id="oih-queries">
 <h1>OIH Queries<a class="headerlink" href="#oih-queries" title="Permalink to this headline">¶</a></h1>
 <p>What follows are some example SPARQL queries used in OIH for the test interface</p>
 <div class="section" id="setup-and-inits">
 <h2>Setup and inits<a class="headerlink" href="#setup-and-inits" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="installs">
-<h3>Installs<a class="headerlink" href="#installs" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %%capture</span>
-<span class="c1">#@title</span>
-<span class="o">!</span>pip install -q SPARQLWrapper
-<span class="o">!</span>pip install -q cython
-<span class="c1"># !pip install -q cartopy</span>
-<span class="o">!</span>pip install -q geopandas
-<span class="o">!</span>pip install -q <span class="nv">contextily</span><span class="o">==</span><span class="m">1</span>.0rc2
-<span class="o">!</span>pip install -q pyshacl
-<span class="o">!</span>pip install -q <span class="s1">&#39;PyLD&gt;=2.0.3&#39;</span>
-<span class="o">!</span>pip install -q flatten_json
-<span class="o">!</span>pip install -q <span class="s1">&#39;fsspec&gt;=0.3.3&#39;</span>
-<span class="o">!</span>pip install -q s3fs
-<span class="o">!</span>pip -q install SPARQLWrapper
-<span class="c1"># !pip install -q boto3</span>
-<span class="c1"># !pip install -q kglab</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="imports">
 <h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -697,7 +680,7 @@
 <span class="c1"># import kglab as kg</span>
 
 <span class="n">oih</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oih/sparql&quot;</span>
-<span class="n">oihdev</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/oihdev/sparql&quot;</span>
+<span class="n">oihdev</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/development/sparql&quot;</span>
 <span class="n">oihad</span> <span class="o">=</span> <span class="s2">&quot;https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql&quot;</span>
 </pre></div>
 </div>
@@ -755,7 +738,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_count</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_count</span><span class="p">)</span>
 <span class="n">dfsc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -785,12 +768,65 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>159766</td>
+      <td>3004791</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+</div>
+</div>
+<div class="section" id="simple-org-list">
+<h2>Simple org list<a class="headerlink" href="#simple-org-list" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_orgs</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT (COUNT(*) as ?Triples) </span>
+<span class="s2">WHERE </span>
+<span class="s2">  {</span>
+<span class="s2">      { ?s ?p ?o } </span>
+<span class="s2">  }</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfsc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_orgs</span><span class="p">)</span>
+<span class="n">dfsc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Triples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3004791</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="section" id="predicate-counts">
 <h3>Predicate Counts<a class="headerlink" href="#predicate-counts" title="Permalink to this headline">¶</a></h3>
@@ -810,7 +846,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_pcount</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_pcount</span><span class="p">)</span>
 <span class="n">dfc</span><span class="p">[</span><span class="s1">&#39;pCount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">[</span><span class="s2">&quot;pCount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count to int</span>
 <span class="c1"># dfc.set_index(&#39;p&#39;, inplace=True)</span>
 </pre></div>
@@ -849,54 +885,54 @@
   </thead>
   <tbody>
     <tr>
-      <th>33</th>
+      <th>56</th>
       <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
-      <td>32625</td>
+      <td>717060</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>8</th>
       <td>https://schema.org/keywords</td>
-      <td>17359</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>https://schema.org/url</td>
-      <td>14236</td>
+      <td>398084</td>
     </tr>
     <tr>
       <th>2</th>
       <td>https://schema.org/name</td>
-      <td>12594</td>
+      <td>336036</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>https://schema.org/provider</td>
-      <td>5136</td>
+      <th>4</th>
+      <td>https://schema.org/url</td>
+      <td>181943</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://schema.org/author</td>
+      <td>157359</td>
     </tr>
     <tr>
       <th>0</th>
       <td>https://schema.org/description</td>
-      <td>4895</td>
+      <td>134582</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>https://schema.org/sameAs</td>
-      <td>4889</td>
+      <th>10</th>
+      <td>https://schema.org/itemListElement</td>
+      <td>79652</td>
     </tr>
     <tr>
-      <th>27</th>
-      <td>https://schema.org/legalName</td>
-      <td>4823</td>
+      <th>1</th>
+      <td>https://schema.org/identifier</td>
+      <td>78923</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>https://schema.org/propertyID</td>
-      <td>4265</td>
+      <th>48</th>
+      <td>https://schema.org/knowsAbout</td>
+      <td>67752</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>https://schema.org/value</td>
-      <td>4265</td>
+      <th>19</th>
+      <td>http://www.w3.org/ns/prov#value</td>
+      <td>66670</td>
     </tr>
   </tbody>
 </table>
@@ -910,7 +946,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>58
 </pre></div>
 </div>
 </div>
@@ -923,7 +959,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>159766
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>357165
 </pre></div>
 </div>
 </div>
@@ -932,8 +968,8 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hs</span> <span class="o">=</span> <span class="n">dfc_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">hs</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;p&#39;</span><span class="p">:</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span><span class="s1">&#39;pCount&#39;</span><span class="p">:</span><span class="n">ts</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
-<span class="c1"># hs.set_index(&#39;p&#39;, inplace=True)</span>
-<span class="n">hs</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">hs</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">hs</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -956,60 +992,53 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>p</th>
       <th>pCount</th>
+    </tr>
+    <tr>
+      <th>p</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>33</th>
-      <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</td>
-      <td>32625</td>
+      <th>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</th>
+      <td>717060</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>https://schema.org/keywords</td>
-      <td>17359</td>
+      <th>https://schema.org/keywords</th>
+      <td>398084</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>https://schema.org/url</td>
-      <td>14236</td>
+      <th>https://schema.org/name</th>
+      <td>336036</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>https://schema.org/name</td>
-      <td>12594</td>
+      <th>https://schema.org/url</th>
+      <td>181943</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>https://schema.org/provider</td>
-      <td>5136</td>
+      <th>https://schema.org/author</th>
+      <td>157359</td>
     </tr>
     <tr>
-      <th>0</th>
-      <td>https://schema.org/description</td>
-      <td>4895</td>
+      <th>https://schema.org/description</th>
+      <td>134582</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>https://schema.org/sameAs</td>
-      <td>4889</td>
+      <th>https://schema.org/itemListElement</th>
+      <td>79652</td>
     </tr>
     <tr>
-      <th>27</th>
-      <td>https://schema.org/legalName</td>
-      <td>4823</td>
+      <th>https://schema.org/identifier</th>
+      <td>78923</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>https://schema.org/propertyID</td>
-      <td>4265</td>
+      <th>https://schema.org/knowsAbout</th>
+      <td>67752</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>https://schema.org/value</td>
-      <td>4265</td>
+      <th>http://www.w3.org/ns/prov#value</th>
+      <td>66670</td>
     </tr>
   </tbody>
 </table>
@@ -1022,7 +1051,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_19_0.svg" src="../../_images/OIH_Queries_19_0.svg" /></div>
+<img alt="../../_images/OIH_Queries_20_0.png" src="../../_images/OIH_Queries_20_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="oih-base-query">
@@ -1064,7 +1094,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_main</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_main</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1102,62 +1132,62 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>urn:gleaner:milled:obis:13392d707024cdd4e509d6...</td>
-      <td>t670214</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/8522</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/b91d89db-79d6-4bd3-84...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Registro del coral de piedra Desmophyllum dian...</td>
+      <td>https://www.oceandocs.org/handle/1834/8522</td>
+      <td>Coral</td>
+      <td>- In this note the first finding of stone cor...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>urn:gleaner:milled:obis:18d1180a74c200d06f9114...</td>
-      <td>t671476</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/8922</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project D...</td>
-      <td>https://obis.org/dataset/46005357-02b8-4f17-b0...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Promising marine species for hatchery.</td>
+      <td>https://www.oceandocs.org/handle/1834/8922</td>
+      <td>Coral</td>
+      <td>- Published -</td>
       <td>None</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>urn:gleaner:milled:obis:24bac898cda34444176ec4...</td>
-      <td>t673848</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/3517</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/d4ec17b8-fc96-49b9-b7...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Abundance of the excavating sponge Cliona deli...</td>
+      <td>https://www.oceandocs.org/handle/1834/3517</td>
+      <td>Coral</td>
+      <td>- It is known that the encrusting and excavat...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>urn:gleaner:milled:obis:24d453e3a4ea6d1f117e5c...</td>
-      <td>t673875</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/3268</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/36bca81c-6d77-4fd4-a9...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>La existencia del coral Stephanocyathus nobili...</td>
+      <td>https://www.oceandocs.org/handle/1834/3268</td>
+      <td>Coral</td>
+      <td>- El coral Stephanocyathus nobilis (Moseley) ...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>urn:gleaner:milled:obis:2bf98aa888d856b8706176...</td>
-      <td>t675633</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/3299</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Coral Reef Evaluation and Monitoring Project F...</td>
-      <td>https://obis.org/dataset/431f96f7-521c-4182-ae...</td>
-      <td>coral</td>
-      <td>The purpose of the Coral Reef Evaluation and M...</td>
+      <td>Uber ein holozÃ¤nes Korallen- und Mangrovenvor...</td>
+      <td>https://www.oceandocs.org/handle/1834/3299</td>
+      <td>Coral</td>
+      <td>- En el mes de nov./1969 olas larga procedent...</td>
       <td>None</td>
     </tr>
   </tbody>
@@ -1209,7 +1239,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_maingl</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_maingl</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1250,77 +1280,77 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>urn:gleaner:milled:obis:c18f3c68e05fc5820e5daf...</td>
-      <td>t3333357</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>Ocean Biodiversity Information System</td>
-      <td>https://obis.org</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/35000</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>AquaDocs</td>
+      <td>https://aquadocs.org</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Nematoda from Kenya and Zanzibar</td>
-      <td>https://obis.org/dataset/aa9787d6-c4db-4fde-8e...</td>
+      <td>Promising marine species for hatchery</td>
+      <td>https://www.oceandocs.org/handle/1834/35000</td>
       <td>Coral</td>
-      <td>Data on the species and trophic composition of...</td>
+      <td></td>
       <td>None</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>urn:gleaner:milled:obis:4411c25cf985f8253c0a13...</td>
-      <td>t3323787</td>
-      <td>https://www.re3data.org/repository/obis</td>
-      <td>Ocean Biodiversity Information System</td>
-      <td>https://obis.org</td>
-      <td>https://schema.org/Dataset</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/2013</td>
+      <td>https://www.re3data.org/repository/aquadocs</td>
+      <td>AquaDocs</td>
+      <td>https://aquadocs.org</td>
+      <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Kenyan reef corals sampled in November 1990</td>
-      <td>https://obis.org/dataset/447b61a2-4a04-4394-af...</td>
+      <td>Interacciones entre corales y macroalgas: depe...</td>
+      <td>https://www.oceandocs.org/handle/1834/2013</td>
       <td>Coral</td>
-      <td>This dataset contains a taxonomic list of cora...</td>
+      <td>- Macroalgae proliferation on coral reefs has...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
-      <td>oai:aquadocs.org:1834/1987</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/20117</td>
       <td>https://www.re3data.org/repository/aquadocs</td>
       <td>AquaDocs</td>
       <td>https://aquadocs.org</td>
       <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Is competition for space between the encrustin...</td>
-      <td>https://www.oceandocs.org/handle/1834/1987</td>
+      <td>M/V CONNECTED Coral Reef Restoration Monitorin...</td>
+      <td>https://www.oceandocs.org/handle/1834/20117</td>
       <td>Coral</td>
-      <td>- Temperaturas del agua de mar por encima del...</td>
+      <td>- This document presents the results of the m...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
-      <td>oai:aquadocs.org:1834/10551</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/3262</td>
       <td>https://www.re3data.org/repository/aquadocs</td>
       <td>AquaDocs</td>
       <td>https://aquadocs.org</td>
       <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Study of biotic communities for artificial ree...</td>
-      <td>https://www.oceandocs.org/handle/1834/10551</td>
+      <td>Los corales (Anthozoa e Hidrozoa) de la bahÃ­a...</td>
+      <td>https://www.oceandocs.org/handle/1834/3262</td>
       <td>Coral</td>
-      <td>- Persian Gulf waters (Hormuzgan Province) we...</td>
+      <td>- En el presente trabajo se describe las form...</td>
       <td>None</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>urn:gleaner:summoned:aquadocs:bac548e654f7097a...</td>
-      <td>oai:aquadocs.org:1834/12281</td>
+      <td>urn:gleaner:summoned:aquadocs:5d5193e7e253bbb1...</td>
+      <td>oai:aquadocs.org:1834/7130</td>
       <td>https://www.re3data.org/repository/aquadocs</td>
       <td>AquaDocs</td>
       <td>https://aquadocs.org</td>
       <td>https://schema.org/CreativeWork</td>
       <td>1.0</td>
-      <td>Molecular diversity of Symbiodinium spp. withi...</td>
-      <td>https://www.oceandocs.org/handle/1834/12281</td>
+      <td>Informe TÃ©cnico AMERB NÂº 087/2014. EvaluaciÃ...</td>
+      <td>https://www.oceandocs.org/handle/1834/7130</td>
       <td>Coral</td>
-      <td>- Reef-building coral harbor communities of p...</td>
+      <td>- Los informes tÃ©cnicos son la respuesta adm...</td>
       <td>None</td>
     </tr>
   </tbody>
@@ -1395,7 +1425,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_prov2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfp</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_prov2</span><span class="p">)</span>
 <span class="n">dfp</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfp</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dfp</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;orgname&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dfp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1435,33 +1465,33 @@
   <tbody>
     <tr>
       <th>Marine Training EU</th>
-      <td>944</td>
+      <td>937</td>
       <td>https://www.re3data.org/repository/marinetraining</td>
       <td>https://marinetraining.eu/</td>
     </tr>
     <tr>
       <th>Ocean Biodiversity Information System</th>
-      <td>9036</td>
+      <td>9140</td>
       <td>https://www.re3data.org/repository/obis</td>
       <td>https://obis.org</td>
     </tr>
     <tr>
-      <th>OceanExpert UNESCO/IOC Project Office for IODE</th>
-      <td>502</td>
-      <td>https://www.re3data.org/repository/oceanexpert</td>
-      <td>https://oceanexpert.org/</td>
-    </tr>
-    <tr>
       <th>Ocean Best Practices</th>
-      <td>8223</td>
+      <td>8562</td>
       <td>https://www.re3data.org/repository/obps</td>
       <td>https://oih.oceanbestpractices.org</td>
     </tr>
     <tr>
       <th>AquaDocs</th>
-      <td>155498</td>
+      <td>75465</td>
       <td>https://www.re3data.org/repository/aquadocs</td>
       <td>https://aquadocs.org</td>
+    </tr>
+    <tr>
+      <th>OceanExpert UNESCO/IOC Project Office for IODE</th>
+      <td>44455</td>
+      <td>https://www.re3data.org/repository/oceanexpert</td>
+      <td>https://oceanexpert.org/</td>
     </tr>
   </tbody>
 </table>
@@ -1474,7 +1504,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_30_0.png" src="../../_images/OIH_Queries_30_0.png" />
+<img alt="../../_images/OIH_Queries_31_0.png" src="../../_images/OIH_Queries_31_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1509,7 +1539,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1541,32 +1571,32 @@
   <tbody>
     <tr>
       <th>0</th>
-      <td>314</td>
-      <td>2021-08-09T00:00:00.000Z</td>
+      <td>313</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>4214</td>
-      <td>2021-08-09T00:00:00.000Z</td>
-      <td>Ocean Biodiversity Information System</td>
-    </tr>
-    <tr>
-      <th>2</th>
       <td>1</td>
-      <td>2021-08-09T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Ocean Best Practices</td>
     </tr>
     <tr>
+      <th>2</th>
+      <td>4249</td>
+      <td>2021-09-25T00:00:00.000Z</td>
+      <td>Ocean Biodiversity Information System</td>
+    </tr>
+    <tr>
       <th>3</th>
-      <td>502</td>
-      <td>2021-08-09T00:00:00.000Z</td>
+      <td>28771</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>OceanExpert UNESCO/IOC Project Office for IODE</td>
     </tr>
     <tr>
       <th>4</th>
       <td>1</td>
-      <td>2021-08-09T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>AquaDocs</td>
     </tr>
   </tbody>
@@ -1575,7 +1605,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpd</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_provdate</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfpd</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dfpd</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -1612,29 +1642,29 @@
   </thead>
   <tbody>
     <tr>
-      <th>2021-08-09T00:00:00.000Z</th>
-      <td>314</td>
+      <th>2021-09-25T00:00:00.000Z</th>
+      <td>313</td>
       <td>Marine Training EU</td>
     </tr>
     <tr>
-      <th>2021-08-09T00:00:00.000Z</th>
-      <td>4214</td>
+      <th>2021-09-25T00:00:00.000Z</th>
+      <td>1</td>
+      <td>Ocean Best Practices</td>
+    </tr>
+    <tr>
+      <th>2021-09-25T00:00:00.000Z</th>
+      <td>4249</td>
       <td>Ocean Biodiversity Information System</td>
     </tr>
     <tr>
-      <th>2021-07-31T00:00:00.000Z</th>
+      <th>2021-09-25T00:00:00.000Z</th>
+      <td>28771</td>
+      <td>OceanExpert UNESCO/IOC Project Office for IODE</td>
+    </tr>
+    <tr>
+      <th>2021-09-25T00:00:00.000Z</th>
       <td>1</td>
       <td>AquaDocs</td>
-    </tr>
-    <tr>
-      <th>2021-07-30T00:00:00.000Z</th>
-      <td>2</td>
-      <td>Ocean Best Practices</td>
-    </tr>
-    <tr>
-      <th>2021-07-31T00:00:00.000Z</th>
-      <td>2</td>
-      <td>Ocean Best Practices</td>
     </tr>
   </tbody>
 </table>
@@ -1647,7 +1677,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_34_0.png" src="../../_images/OIH_Queries_34_0.png" />
+<img alt="../../_images/OIH_Queries_35_0.png" src="../../_images/OIH_Queries_35_0.png" />
 </div>
 </div>
 </div>
@@ -1704,7 +1734,7 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpl</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oih</span><span class="p">,</span> <span class="n">rq_provdatelist</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfpl</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_provdatelist</span><span class="p">)</span>
 <span class="n">dfpl</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1738,83 +1768,83 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
   <tbody>
     <tr>
       <th>0</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4059</td>
-      <td>Coastal Benthic Ecology</td>
-      <td>Contents\n\nThe course provides a thorough int...</td>
+      <td>https://www.marinetraining.eu/node/4349</td>
+      <td>Shipping and Offshore Activities in the Arctic</td>
+      <td>Course Description:\n\nThe reduction of Arctic...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4191</td>
-      <td>Methods for Implementation of Surveillance Pro...</td>
-      <td>General course objectives\n\nThe course aims t...</td>
+      <td>https://www.marinetraining.eu/node/4389</td>
+      <td>Methods of Scientific Research</td>
+      <td>Course Description:\n\nThe course covers the p...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4347</td>
-      <td>Adaptation Planning</td>
-      <td>Course Description:\n\nThe course examines cha...</td>
+      <td>https://www.marinetraining.eu/node/4159</td>
+      <td>Diseases and Veterinary Aspects Related to Aqu...</td>
+      <td>General course objectives\n\nThe student will ...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4158</td>
-      <td>Business Development and Innovation (Aquatic R...</td>
-      <td>General course objectives\n\nThe objective of ...</td>
+      <td>https://www.marinetraining.eu/node/3908</td>
+      <td>Navigation Technology</td>
+      <td>Course content\n\nRadio technology\n\n\n\tAnte...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/3910</td>
-      <td>Machine Vision</td>
-      <td>Course content\n\nIntroduction to machine visi...</td>
+      <td>https://www.marinetraining.eu/node/4345</td>
+      <td>Qualitative Research Methods</td>
+      <td>Course Description:\n\nThe course is designed ...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4332</td>
-      <td>Arctic Ocean Governance</td>
-      <td>Course Description:\n\nThe course will discuss...</td>
+      <td>https://www.marinetraining.eu/node/4330</td>
+      <td>Icelandic Society and Environment</td>
+      <td>Course Description:\n\nThe course explores the...</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4115</td>
-      <td>Mathematical Biology</td>
-      <td>General course objectives\n\nThe course is an ...</td>
+      <td>https://www.marinetraining.eu/node/4323</td>
+      <td>Fisheries in Iceland</td>
+      <td>Course Description:\n\nIn this course the lear...</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4094</td>
-      <td>Methodology and Sampling in Environmental Mana...</td>
-      <td>Practical sampling of soil, water and bioindic...</td>
+      <td>https://www.marinetraining.eu/node/3877</td>
+      <td>Basal and Comparative Immunology</td>
+      <td>Course content\n\nThis course aims to provide ...</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4343</td>
-      <td>Global Fisheries and Seafood</td>
-      <td>Course Description:\n\nThe course offers a det...</td>
+      <td>https://www.marinetraining.eu/node/3958</td>
+      <td>Evolutionary Genetics</td>
+      <td>Evolution is one of the central, unifying theo...</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>2021-05-12T00:00:00.000Z</td>
+      <td>2021-09-25T00:00:00.000Z</td>
       <td>Marine Training EU</td>
-      <td>https://www.marinetraining.eu/node/4139</td>
-      <td>Biological Oceanography</td>
-      <td>General course objectives\n\nBiological oceano...</td>
+      <td>https://www.marinetraining.eu/node/4326</td>
+      <td>Physical Processes of Coastal Environments</td>
+      <td>Course Description:\n\nThe course focuses on o...</td>
     </tr>
   </tbody>
 </table>
@@ -1838,7 +1868,10 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 <span class="s2">       SELECT   ( COUNT(?type) as ?count) ?type   </span>
 <span class="s2">        WHERE</span>
 <span class="s2">        {</span>
+<span class="s2">        </span>
 <span class="s2">           ?s rdf:type ?type</span>
+<span class="s2">           FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )</span>
+
 <span class="s2">        }</span>
 <span class="s2">        GROUP BY ?type  </span>
 <span class="s2">        ORDER BY DESC(?count)</span>
@@ -1849,9 +1882,84 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihad</span><span class="p">,</span> <span class="n">rq_types</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_types</span><span class="p">)</span>
 <span class="n">dft</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dft</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">dft</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dft</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2082200</span><span class="o">/</span><span class="mf">831059564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_types</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">dft</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dft</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dft</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">dft</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;rq_types&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_t</span> <span class="o">=</span> <span class="n">dft</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/OIH_Queries_42_0.png" src="../../_images/OIH_Queries_42_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_typesCHECK</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;prefix prov: &lt;http://www.w3.org/ns/prov#&gt;</span>
+<span class="s2">        PREFIX con: &lt;http://www.ontotext.com/connectors/lucene#&gt;</span>
+<span class="s2">        PREFIX luc: &lt;http://www.ontotext.com/owlim/lucene#&gt;</span>
+<span class="s2">        PREFIX con-inst: &lt;http://www.ontotext.com/connectors/lucene/instance#&gt;</span>
+<span class="s2">        PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<span class="s2">        PREFIX schema: &lt;https://schema.org/&gt;</span>
+<span class="s2">        PREFIX schemaold: &lt;http://schema.org/&gt;</span>
+<span class="s2">        PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+
+<span class="s2"> </span>
+<span class="s2">       SELECT  ( COUNT(?type) as ?count) ?type   </span>
+<span class="s2">        WHERE</span>
+<span class="s2">         {</span>
+<span class="s2">           graph ?g {</span>
+<span class="s2">            ?s ?p ?lit .</span>
+<span class="s2">            ?s rdf:type ?type . </span>
+<span class="s2">            OPTIONAL { ?s schema:name ?name .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:headline ?headline .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:url ?url .   }</span>
+<span class="s2">            OPTIONAL { ?s schema:description ?description .    }</span>
+<span class="s2">          }</span>
+<span class="s2">           ?sp prov:generated ?g  .</span>
+<span class="s2">           ?sp prov:used ?used .</span>
+<span class="s2">           ?used prov:hadMember ?hm .</span>
+<span class="s2">           ?hm prov:wasAttributedTo ?wat .</span>
+<span class="s2">           ?wat rdf:name &quot;Ocean Biodiversity Information System&quot; .</span>
+<span class="s2">        }</span>
+<span class="s2">        GROUP BY ?type  </span>
+<span class="s2">         ORDER BY DESC(?count)</span>
+<span class="s2">   </span>
+<span class="s2">        &quot;&quot;&quot;</span>
+
+<span class="c1">#      GROUP BY ?type  </span>
+<span class="c1">#         ORDER BY DESC(?count)</span>
+
+<span class="c1">#  ( COUNT(?type) as ?count) ?type   </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dft</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_typesCHECK</span><span class="p">)</span>
+<span class="c1"># dft[&#39;count&#39;] = dft[&quot;count&quot;].astype(int) # convert count c to int</span>
+<span class="c1"># dft.set_index(&#39;type&#39;, inplace=True)</span>
 <span class="n">dft</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1876,66 +1984,116 @@ The <a class="reference external" href="https://validator.w3.org/feed/docs/rss2.
     <tr style="text-align: right;">
       <th></th>
       <th>count</th>
-    </tr>
-    <tr>
       <th>type</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>https://schema.org/Person</th>
-      <td>107563</td>
+      <th>0</th>
+      <td>73093</td>
+      <td>https://schema.org/Dataset</td>
     </tr>
     <tr>
-      <th>https://schema.org/PropertyValue</th>
-      <td>44658</td>
+      <th>1</th>
+      <td>19568</td>
+      <td>https://schema.org/Organization</td>
     </tr>
     <tr>
-      <th>https://schema.org/CreativeWork</th>
-      <td>40389</td>
+      <th>2</th>
+      <td>13640</td>
+      <td>https://schema.org/PropertyValue</td>
     </tr>
     <tr>
-      <th>https://schema.org/ListItem</th>
-      <td>40387</td>
+      <th>3</th>
+      <td>12414</td>
+      <td>https://schema.org/DataDownload</td>
     </tr>
     <tr>
-      <th>https://schema.org/Organization</th>
-      <td>21224</td>
+      <th>4</th>
+      <td>10932</td>
+      <td>https://schema.org/Place</td>
     </tr>
     <tr>
-      <th>http://www.w3.org/ns/prov#Entity</th>
-      <td>10064</td>
+      <th>5</th>
+      <td>8496</td>
+      <td>https://schema.org/DataCatalog</td>
     </tr>
     <tr>
-      <th>http://www.w3.org/ns/prov#Activity</th>
-      <td>5032</td>
-    </tr>
-    <tr>
-      <th>http://www.w3.org/ns/prov#Collection</th>
-      <td>5032</td>
-    </tr>
-    <tr>
-      <th>http://www.w3.org/ns/prov#Organization</th>
-      <td>5032</td>
-    </tr>
-    <tr>
-      <th>https://schema.org/Place</th>
-      <td>4848</td>
+      <th>6</th>
+      <td>7288</td>
+      <td>https://schema.org/GeoShape</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+</div>
+<div class="section" id="check-status-of-spatial-predicates">
+<h2>Check status of spatial predicates<a class="headerlink" href="#check-status-of-spatial-predicates" title="Permalink to this headline">¶</a></h2>
+<p>We have 3500+ items with spatial data using the <a class="reference external" href="http://scheme.org">scheme.org</a> vocabulary.   No current data published using the geosparql WKT patterns.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_t</span> <span class="o">=</span> <span class="n">dft</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rq_wktcount</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT (COUNT(?s) as ?sCount)</span>
+<span class="s2">WHERE</span>
+<span class="s2">{</span>
+<span class="s2">  {</span>
+<span class="s2">  ?s &lt;http://www.opengis.net/ont/geosparql#hasGeometry&gt; ?o .</span>
+<span class="s2">}</span>
+<span class="s2">UNION</span>
+<span class="s2">{</span>
+<span class="s2">  ?s &lt;https://schema.org/spatialCoverage&gt; ?o</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfwc</span> <span class="o">=</span> <span class="n">get_sparql_dataframe</span><span class="p">(</span><span class="n">oihdev</span><span class="p">,</span> <span class="n">rq_wktcount</span><span class="p">)</span>
+<span class="n">dfwc</span><span class="p">[</span><span class="s1">&#39;sCount&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfwc</span><span class="p">[</span><span class="s2">&quot;sCount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count to int</span>
+<span class="c1"># dfc.set_index(&#39;p&#39;, inplace=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfwc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/OIH_Queries_41_0.png" src="../../_images/OIH_Queries_41_0.png" />
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sCount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3644</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 </div>

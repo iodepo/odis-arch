@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -93,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +120,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +192,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +244,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +391,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +403,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +430,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -669,7 +669,7 @@
         
               <div>
                 
-  <div class="section" id="indexing-with-gleaner">
+  <div class="tex2jax_ignore mathjax_ignore section" id="indexing-with-gleaner">
 <h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Permalink to this headline">¶</a></h1>
 <p><img alt="compose options" src="../_images/composeOptions.png" /></p>
 <div class="section" id="gleaner-app">
@@ -805,29 +805,19 @@ You may also need to visit information about permissions at
 <a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Post-installation steps for Linux</a> if you are
 having permission issues.</p>
 <p>Let’s take a look at the script.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>#!/bin/bash
-
-# Object store keys
-export MINIO_ACCESS_KEY=worldsbestaccesskey
-export MINIO_SECRET_KEY=worldsbestsecretkey
-
-# local data volumes
-export GLEANER_BASE=/tmp/gleaner/
-mkdir -p ${GLEANER_BASE}
-export GLEANER_OBJECTS=${GLEANER_BASE}/datavol/s3
-export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>#!/bin/bash
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span># Object store keys
+<span class="linenos"> 4</span>export MINIO_ACCESS_KEY=worldsbestaccesskey
+<span class="linenos"> 5</span>export MINIO_SECRET_KEY=worldsbestsecretkey
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span># local data volumes
+<span class="linenos"> 8</span>export GLEANER_BASE=/tmp/gleaner/
+<span class="linenos"> 9</span>mkdir -p ${GLEANER_BASE}
+<span class="linenos">10</span>export GLEANER_OBJECTS=${GLEANER_BASE}/datavol/s3
+<span class="linenos">11</span>export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>You may wish to edit file to work better with your environment.  By default it will attempt to
 use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
 </div>
@@ -869,156 +859,85 @@ final step is to edit our Gleaner configuration file.  This will let Gleaner kno
 the location of the support services, the JSON-LD context file and the locations
 of the resources we wish to index.</p>
 <p>Let’s take a look at the full configuration file first and then break down each section.</p>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">---</span>
-<span class="n">minio</span><span class="p">:</span>
-  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
-  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
-  <span class="n">accessKey</span><span class="p">:</span> <span class="n">worldsbestaccesskey</span>      
-  <span class="n">secretKey</span><span class="p">:</span> <span class="n">worldsbestsecretkey</span>  
-  <span class="n">ssl</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">bucket</span><span class="p">:</span> <span class="n">gleaner</span>
-<span class="n">gleaner</span><span class="p">:</span>
-  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
-  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
-  <span class="n">mill</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">context</span><span class="p">:</span>
-  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">contextmaps</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
-<span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
-  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
-<span class="n">summoner</span><span class="p">:</span>
-  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
-  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
-  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">9222</span>  <span class="c1"># URL for headless see docs/headless</span>
-<span class="n">millers</span><span class="p">:</span>
-  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
-  <span class="c1">#geojson: false</span>
-<span class="n">sitegraphs</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">aquadocs</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">AquaDocs</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span> 
-<span class="n">sources</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">samplesearth</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Samples</span> <span class="n">Earth</span> <span class="p">(</span><span class="n">DEMO</span> <span class="n">Site</span><span class="p">)</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span>  
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marinetraining</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marinetraining</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Training</span> <span class="n">EU</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marineie</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span><span class="o">/</span><span class="n">geonetwork</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">eng</span><span class="o">/</span><span class="n">portal</span><span class="o">.</span><span class="n">sitemap</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">true</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marineie</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Institute</span> <span class="n">Data</span> <span class="n">Catalogue</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">oceanexperts</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">sitemaps</span><span class="o">/</span><span class="n">sitemapTraining</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">oceanexpert</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">OceanExpert</span> <span class="n">UNESCO</span><span class="o">/</span><span class="n">IOC</span> <span class="n">Project</span> <span class="n">Office</span> <span class="k">for</span> <span class="n">IODE</span> 
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
-<span class="c1"># - name: obis</span>
-<span class="c1">#   url: https://obis.org/sitemap/sitemap_datasets.xml</span>
-<span class="c1">#   headless: false</span>
-<span class="c1">#   pid: https://www.re3data.org/repository/obis</span>
-<span class="c1">#   properName: Ocean Biodiversity Information System</span>
-<span class="c1">#   domain: https://obis.org  </span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">---</span>
+<span class="linenos"> 2</span><span class="n">minio</span><span class="p">:</span>
+<span class="linenos"> 3</span>  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
+<span class="linenos"> 4</span>  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
+<span class="linenos"> 5</span>  <span class="n">accessKey</span><span class="p">:</span> <span class="n">worldsbestaccesskey</span>      
+<span class="linenos"> 6</span>  <span class="n">secretKey</span><span class="p">:</span> <span class="n">worldsbestsecretkey</span>  
+<span class="linenos"> 7</span>  <span class="n">ssl</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos"> 8</span>  <span class="n">bucket</span><span class="p">:</span> <span class="n">gleaner</span>
+<span class="linenos"> 9</span><span class="n">gleaner</span><span class="p">:</span>
+<span class="linenos">10</span>  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
+<span class="linenos">11</span>  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
+<span class="linenos">12</span>  <span class="n">mill</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">13</span><span class="n">context</span><span class="p">:</span>
+<span class="linenos">14</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">15</span><span class="n">contextmaps</span><span class="p">:</span>
+<span class="linenos">16</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">17</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">18</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
+<span class="linenos">19</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">20</span><span class="n">summoner</span><span class="p">:</span>
+<span class="linenos">21</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
+<span class="linenos">22</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
+<span class="linenos">23</span>  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
+<span class="linenos">24</span>  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>
+<span class="linenos">25</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">9222</span>  <span class="c1"># URL for headless see docs/headless</span>
+<span class="linenos">26</span><span class="n">millers</span><span class="p">:</span>
+<span class="linenos">27</span>  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">28</span>  <span class="c1">#geojson: false</span>
+<span class="linenos">29</span><span class="n">sitegraphs</span><span class="p">:</span>
+<span class="linenos">30</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
+<span class="linenos">31</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
+<span class="linenos">32</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">33</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">aquadocs</span>
+<span class="linenos">34</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">AquaDocs</span>
+<span class="linenos">35</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span> 
+<span class="linenos">36</span><span class="n">sources</span><span class="p">:</span>
+<span class="linenos">37</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
+<span class="linenos">38</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos">39</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">40</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">samplesearth</span>
+<span class="linenos">41</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Samples</span> <span class="n">Earth</span> <span class="p">(</span><span class="n">DEMO</span> <span class="n">Site</span><span class="p">)</span>
+<span class="linenos">42</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span>  
+<span class="linenos">43</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marinetraining</span>
+<span class="linenos">44</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos">45</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">46</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marinetraining</span>
+<span class="linenos">47</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Training</span> <span class="n">EU</span>
+<span class="linenos">48</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span>
+<span class="linenos">49</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marineie</span>
+<span class="linenos">50</span>  <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span><span class="o">/</span><span class="n">geonetwork</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">eng</span><span class="o">/</span><span class="n">portal</span><span class="o">.</span><span class="n">sitemap</span>
+<span class="linenos">51</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">52</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marineie</span>
+<span class="linenos">53</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Institute</span> <span class="n">Data</span> <span class="n">Catalogue</span>
+<span class="linenos">54</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span>
+<span class="linenos">55</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">oceanexperts</span>
+<span class="linenos">56</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">sitemaps</span><span class="o">/</span><span class="n">sitemapTraining</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos">57</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">58</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">oceanexpert</span>
+<span class="linenos">59</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">OceanExpert</span> <span class="n">UNESCO</span><span class="o">/</span><span class="n">IOC</span> <span class="n">Project</span> <span class="n">Office</span> <span class="k">for</span> <span class="n">IODE</span> 
+<span class="linenos">60</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+<span class="linenos">61</span><span class="c1"># - name: obis</span>
+<span class="linenos">62</span><span class="c1">#   url: https://obis.org/sitemap/sitemap_datasets.xml</span>
+<span class="linenos">63</span><span class="c1">#   headless: false</span>
+<span class="linenos">64</span><span class="c1">#   pid: https://www.re3data.org/repository/obis</span>
+<span class="linenos">65</span><span class="c1">#   properName: Ocean Biodiversity Information System</span>
+<span class="linenos">66</span><span class="c1">#   domain: https://obis.org  </span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="section" id="object-store">
 <h5>Object store<a class="headerlink" href="#object-store" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">minio</span><span class="p">:</span>
-  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
-  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
-  <span class="n">accessKey</span><span class="p">:</span> <span class="n">worldsbestaccesskey</span>      
-  <span class="n">secretKey</span><span class="p">:</span> <span class="n">worldsbestsecretkey</span>  
-  <span class="n">ssl</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">bucket</span><span class="p">:</span> <span class="n">gleaner</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">minio</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
+<span class="linenos">3</span>  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
+<span class="linenos">4</span>  <span class="n">accessKey</span><span class="p">:</span> <span class="n">worldsbestaccesskey</span>      
+<span class="linenos">5</span>  <span class="n">secretKey</span><span class="p">:</span> <span class="n">worldsbestsecretkey</span>  
+<span class="linenos">6</span>  <span class="n">ssl</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">7</span>  <span class="n">bucket</span><span class="p">:</span> <span class="n">gleaner</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>The minio section defines the IP and port of the object store.  For this case, we are
 using minio and these are the IP and port from our docker compose steps above.  Note,
 if you were to use Ceph or AWS S3, this section is still labeled minio.  You simply
@@ -1026,15 +945,12 @@ need to update the property values.</p>
 </div>
 <div class="section" id="gleaner">
 <h5>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">gleaner</span><span class="p">:</span>
-  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
-  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
-  <span class="n">mill</span><span class="p">:</span> <span class="n">true</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">gleaner</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
+<span class="linenos">3</span>  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
+<span class="linenos">4</span>  <span class="n">mill</span><span class="p">:</span> <span class="n">true</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>This passes a few high level concpets.</p>
 <ul class="simple">
 <li><p>runid:</p></li>
@@ -1044,135 +960,86 @@ need to update the property values.</p>
 </div>
 <div class="section" id="context-sections">
 <h5>Context sections<a class="headerlink" href="#context-sections" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">context</span><span class="p">:</span>
-  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">contextmaps</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
-<span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
-  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">context</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">3</span><span class="n">contextmaps</span><span class="p">:</span>
+<span class="linenos">4</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">5</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">6</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
+<span class="linenos">7</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Comments for the context sections</p>
 </div>
 <div class="section" id="summoner-section">
 <h5>Summoner section<a class="headerlink" href="#summoner-section" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">summoner</span><span class="p">:</span>
-  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
-  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
-  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
-  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">9222</span>  <span class="c1"># URL for headless see docs/headless</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">summoner</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
+<span class="linenos">3</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
+<span class="linenos">4</span>  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
+<span class="linenos">5</span>  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>
+<span class="linenos">6</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">9222</span>  <span class="c1"># URL for headless see docs/headless</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Comments for the summoner sections</p>
 </div>
 <div class="section" id="millers-section">
 <h5>Millers section<a class="headerlink" href="#millers-section" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">millers</span><span class="p">:</span>
-  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
-  <span class="c1">#geojson: false</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">millers</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">3</span>  <span class="c1">#geojson: false</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Comments for the miller sections</p>
 </div>
 <div class="section" id="site-graphs-section">
 <h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">sitegraphs</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">aquadocs</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">AquaDocs</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sitegraphs</span><span class="p">:</span>
+<span class="linenos">2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
+<span class="linenos">3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
+<span class="linenos">4</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">5</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">aquadocs</span>
+<span class="linenos">6</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">AquaDocs</span>
+<span class="linenos">7</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span> 
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Comments for the sitegrpah sections</p>
 </div>
 <div class="section" id="sources-section">
 <h5>Sources section<a class="headerlink" href="#sources-section" title="Permalink to this headline">¶</a></h5>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">sources</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">samplesearth</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Samples</span> <span class="n">Earth</span> <span class="p">(</span><span class="n">DEMO</span> <span class="n">Site</span><span class="p">)</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span>  
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marinetraining</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marinetraining</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Training</span> <span class="n">EU</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marineie</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span><span class="o">/</span><span class="n">geonetwork</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">eng</span><span class="o">/</span><span class="n">portal</span><span class="o">.</span><span class="n">sitemap</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">true</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marineie</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Institute</span> <span class="n">Data</span> <span class="n">Catalogue</span>
-  <span class="n">domain</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span>
-<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">oceanexperts</span>
-  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">sitemaps</span><span class="o">/</span><span class="n">sitemapTraining</span><span class="o">.</span><span class="n">xml</span>
-  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">oceanexpert</span>
-  <span class="n">properName</span><span class="p">:</span> <span class="n">OceanExpert</span> <span class="n">UNESCO</span><span class="o">/</span><span class="n">IOC</span> <span class="n">Project</span> <span class="n">Office</span> <span class="k">for</span> <span class="n">IODE</span> 
-  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
-<span class="c1"># - name: obis</span>
-<span class="c1">#   url: https://obis.org/sitemap/sitemap_datasets.xml</span>
-<span class="c1">#   headless: false</span>
-<span class="c1">#   pid: https://www.re3data.org/repository/obis</span>
-<span class="c1">#   properName: Ocean Biodiversity Information System</span>
-<span class="c1">#   domain: https://obis.org  </span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">sources</span><span class="p">:</span>
+<span class="linenos"> 2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
+<span class="linenos"> 3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos"> 4</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos"> 5</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">samplesearth</span>
+<span class="linenos"> 6</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Samples</span> <span class="n">Earth</span> <span class="p">(</span><span class="n">DEMO</span> <span class="n">Site</span><span class="p">)</span>
+<span class="linenos"> 7</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span>  
+<span class="linenos"> 8</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marinetraining</span>
+<span class="linenos"> 9</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos">10</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">11</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marinetraining</span>
+<span class="linenos">12</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Training</span> <span class="n">EU</span>
+<span class="linenos">13</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">marinetraining</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span>
+<span class="linenos">14</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">marineie</span>
+<span class="linenos">15</span>  <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span><span class="o">/</span><span class="n">geonetwork</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">eng</span><span class="o">/</span><span class="n">portal</span><span class="o">.</span><span class="n">sitemap</span>
+<span class="linenos">16</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">true</span>
+<span class="linenos">17</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">marineie</span>
+<span class="linenos">18</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">Marine</span> <span class="n">Institute</span> <span class="n">Data</span> <span class="n">Catalogue</span>
+<span class="linenos">19</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">data</span><span class="o">.</span><span class="n">marine</span><span class="o">.</span><span class="n">ie</span>
+<span class="linenos">20</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">oceanexperts</span>
+<span class="linenos">21</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">sitemaps</span><span class="o">/</span><span class="n">sitemapTraining</span><span class="o">.</span><span class="n">xml</span>
+<span class="linenos">22</span>  <span class="n">headless</span><span class="p">:</span> <span class="n">false</span>
+<span class="linenos">23</span>  <span class="n">pid</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">re3data</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">oceanexpert</span>
+<span class="linenos">24</span>  <span class="n">properName</span><span class="p">:</span> <span class="n">OceanExpert</span> <span class="n">UNESCO</span><span class="o">/</span><span class="n">IOC</span> <span class="n">Project</span> <span class="n">Office</span> <span class="k">for</span> <span class="n">IODE</span> 
+<span class="linenos">25</span>  <span class="n">domain</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oceanexpert</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+<span class="linenos">26</span><span class="c1"># - name: obis</span>
+<span class="linenos">27</span><span class="c1">#   url: https://obis.org/sitemap/sitemap_datasets.xml</span>
+<span class="linenos">28</span><span class="c1">#   headless: false</span>
+<span class="linenos">29</span><span class="c1">#   pid: https://www.re3data.org/repository/obis</span>
+<span class="linenos">30</span><span class="c1">#   properName: Ocean Biodiversity Information System</span>
+<span class="linenos">31</span><span class="c1">#   domain: https://obis.org  </span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <p>Comments for the sources sections</p>
 </div>
 </div>
