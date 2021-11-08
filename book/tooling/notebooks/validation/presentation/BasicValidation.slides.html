@@ -13207,10 +13207,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Basic-Validating-with-SHACL">Basic Validating with SHACL<a class="anchor-link" href="#Basic-Validating-with-SHACL">&#182;</a></h1><h2 id="RDA-18:-Metadata-Working-Group">RDA 18: Metadata Working Group<a class="anchor-link" href="#RDA-18:-Metadata-Working-Group">&#182;</a></h2><p><a href="https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual/recommendations-publishing-structure-metadata-web">Session page</a></p>
+<h1 id="Discussions-on-Validating-Graphs">Discussions on Validating Graphs<a class="anchor-link" href="#Discussions-on-Validating-Graphs">&#182;</a></h1><h2 id="RDA-18:-Metadata-Working-Group">RDA 18: Metadata Working Group<a class="anchor-link" href="#RDA-18:-Metadata-Working-Group">&#182;</a></h2><p><a href="https://www.rd-alliance.org/plenaries/rda-18th-plenary-meeting-virtual/recommendations-publishing-structure-metadata-web">Session page</a></p>
 <p><a href="https://docs.google.com/presentation/d/1F9E1zyfhnniSQJv18RPdYCutKwSNKTzl6uml3zvDcOs/edit#slide=id.gd08e71dd0b_0_246">Slides</a></p>
 <h2 id="Validation-Breakout-Group">Validation Breakout Group<a class="anchor-link" href="#Validation-Breakout-Group">&#182;</a></h2><p>Authors:
-Adam Shepherd &amp; Douglas Fils</p>
+Adam Shepherd (0000-0003-4486-9448) &amp; Douglas Fils (0000-0002-2257-9127)</p>
 
 </div>
 </div>
@@ -13219,8 +13219,8 @@ Adam Shepherd &amp; Douglas Fils</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Agenda-for-Session">Agenda for Session<a class="anchor-link" href="#Agenda-for-Session">&#182;</a></h1><ul>
-<li>Validation Personnas and  GO FAIR Implementation Network<ul>
-<li>RDF Conceptal Model Basis</li>
+<li>Who are the Personas in Validation and relation to GO FAIR Implementation Network<ul>
+<li>RDF Conceptual Model Basis</li>
 <li>Role of Validation</li>
 </ul>
 </li>
@@ -13228,27 +13228,23 @@ Adam Shepherd &amp; Douglas Fils</p>
 <li>RDF as JSON-LD</li>
 <li>Web architectures (robots.txt, sitemaps.xml, HTML+JSON-LD, HTTP)</li>
 <li>A community (typically, though a single user exposing to the world is also fine)  <ul>
-<li>Here the logical "world" might be GDSS and general SEO more broadly</li>
+<li>Here the logical "world" might be GDSS, community indexing or general SEO more broadly</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>Why Validation?<ul>
 <li>Align to guidance or principles  <ul>
-<li>must be for a purpose like FAIR, or CARE, or regulator, etc) </li>
+<li>best when for a purpose like community index, FAIR, CARE, regulations, etc</li>
 </ul>
 </li>
 <li>Align to application <ul>
-<li>perhaps the more common or useful</li>
+<li>perhaps the more common or useful reason, to address elements of FAIR like F or I</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>How Validation<ul>
-<li>SHACL (Shex)</li>
-<li>JSON Schema</li>
-</ul>
-</li>
+<li>How Validation</li>
 </ul>
 
 </div>
@@ -13257,9 +13253,11 @@ Adam Shepherd &amp; Douglas Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Validation-Personnas-and--GO-FAIR-Implementation-Network">Validation Personnas and  GO FAIR Implementation Network<a class="anchor-link" href="#Validation-Personnas-and--GO-FAIR-Implementation-Network">&#182;</a></h1><p><div>
+<h1 id="Validation-Personas-and--GO-FAIR-Implementation-Network">Validation Personas and  GO FAIR Implementation Network<a class="anchor-link" href="#Validation-Personas-and--GO-FAIR-Implementation-Network">&#182;</a></h1><p><div>
 <img src="relations.png"  width="400"/></p>
 <div>
+
+
 
 <ul>
 <li>IMPLEMENT  clearly defined plans and deliverables to implement an element of the Internet of FAIR Data and Services (IFDS) within a defined time period;</li>
@@ -13277,7 +13275,7 @@ Adam Shepherd &amp; Douglas Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="RDF-Conceptual-Model-Basis">RDF Conceptual Model Basis<a class="anchor-link" href="#RDF-Conceptual-Model-Basis">&#182;</a></h2><p>A brief tour of RDF conceptual mode, the RDF ecosystem and JSON-LD in that ecosystem.</p>
+<h2 id="RDF-Conceptual-Model-Basis">RDF Conceptual Model Basis<a class="anchor-link" href="#RDF-Conceptual-Model-Basis">&#182;</a></h2><p>A brief tour of RDF conceptual mode, the RDF ecosystem and SHACL (and JSON-LD) in that ecosystem.</p>
 <p><div>
 <img src="ecosystem.png"  width="400"/></p>
 <div>
@@ -13290,7 +13288,10 @@ Adam Shepherd &amp; Douglas Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Role-of-Validation">Role of Validation<a class="anchor-link" href="#Role-of-Validation">&#182;</a></h2><p>why do this..   how does it affect the personnas</p>
+<h2 id="Role-of-Validation">Role of Validation<a class="anchor-link" href="#Role-of-Validation">&#182;</a></h2><p>The various personas can be seen described in <a href="https://book.oceaninfohub.org/personas/persona.html">https://book.oceaninfohub.org/personas/persona.html</a>.  These give an idea of some of the players in an implementation.  The relations between these persona are potential areas where the shape of the graph may be important for query or other functions.</p>
+<p>Validation also helps to address application.  In particular the application of query to the graph.
+<strong>If we allow anything in "author" space, then we make the query in "user" space very complex</strong> (to 
+deal with the variety).  The result can be poor performance and bad recovery.</p>
 
 </div>
 </div>
@@ -13302,7 +13303,7 @@ Adam Shepherd &amp; Douglas Fils</p>
 <li>JSON Schema</li>
 <li>ShEx</li>
 <li>SHACL</li>
-<li>Others (like Cuelang)</li>
+<li>Others (like Cue lang)</li>
 </ul>
 <h2 id="Why-SHACL?">Why SHACL?<a class="anchor-link" href="#Why-SHACL?">&#182;</a></h2><p>SHACL is on a W3C recommendation track while ShEx is a community project.  SHACL has also shown wider adoption in the JSON-LD and broader structured data on the web community including Solid.</p>
 
@@ -13329,7 +13330,7 @@ Adam Shepherd &amp; Douglas Fils</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="SHACL-Resources">SHACL Resources<a class="anchor-link" href="#SHACL-Resources">&#182;</a></h2><ul>
-<li><a href="https://www.w3.org/TR/shacl/">W3C Shacl</a>  </li>
+<li><a href="https://www.w3.org/TR/shacl/">W3C SHACL</a>  </li>
 <li><a href="https://w3c.github.io/data-shapes/shacl/">Editors Draft</a></li>
 <li><a href="https://w3c.github.io/data-shapes/data-shapes-test-suite/">Implementation Report</a></li>
 </ul>
@@ -13341,7 +13342,11 @@ Adam Shepherd &amp; Douglas Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Some-example-SHACL-Shapes">Some example SHACL Shapes<a class="anchor-link" href="#Some-example-SHACL-Shapes">&#182;</a></h1><p>Some examples of SHACL shape graph demonstrating some various aspects</p>
+<h1 id="Some-example-SHACL-Shapes">Some example SHACL Shapes<a class="anchor-link" href="#Some-example-SHACL-Shapes">&#182;</a></h1><p>Shape Graphs:</p>
+<p>The SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions. These conditions are provided as shapes and other constructs expressed in the form of an RDF graph. RDF graphs that are used in this manner are called "shapes graphs"</p>
+<p>Data Graphs:</p>
+<p>In SHACL and the RDF graphs that are validated against a shapes graph are called "data graphs".</p>
+<p>reference: <a href="https://www.w3.org/TR/shacl/#sparql-constraints-example">https://www.w3.org/TR/shacl/#sparql-constraints-example</a></p>
 
 </div>
 </div>
@@ -13349,49 +13354,92 @@ Adam Shepherd &amp; Douglas Fils</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-quick-example">A quick example<a class="anchor-link" href="#A-quick-example">&#182;</a></h2><h3 id="Example-from-SHACL-Playground">Example from SHACL Playground<a class="anchor-link" href="#Example-from-SHACL-Playground">&#182;</a></h3>
-<pre><code>@prefix dash: &lt;http://datashapes.org/dash#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix schema: &lt;http://schema.org/&gt; .
-@prefix sh: &lt;http://www.w3.org/ns/shacl#&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+<h2 id="A-quick-example">A quick example<a class="anchor-link" href="#A-quick-example">&#182;</a></h2><p>This is a basic example but it shows things like checking for node type, min and max counts, setting severity and other aspects.  We can visit the <a href="https://www.w3.org/TR/shacl/#core-components">core constraints</a> for SHACL to see some, but not, of the patterns SHACL can address.  More complex (or at least alternative) approaches include the SPARQL based on constraints or <a href="https://www.w3.org/TR/shacl-af/">SHACL Advanced Features</a>.</p>
+<p><a href="https://github.com/iodepo/odis-arch/blob/master/book/tooling/notebooks/validation/shapes/oih_search.ttl">GitHub resource link</a></p>
+<div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;https://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">shacl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">oihval:</span><span class="w"> </span><span class="nv">&lt;https://oceans.collaborium.io/voc/validation/1.0.1/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-schema:PersonShape
-    a sh:NodeShape ;
-    sh:targetClass schema:Person ;
-    sh:property [
-        sh:path schema:givenName ;
-        sh:datatype xsd:string ;
-        sh:name "given name" ;
-    ] ;
-    sh:property [
-        sh:path schema:birthDate ;
-        sh:lessThan schema:deathDate ;
-        sh:maxCount 1 ;
-    ] ;
-    sh:property [
-        sh:path schema:gender ;
-        sh:in ( "female" "male" ) ;
-    ] ;
-    sh:property [
-        sh:path schema:address ;
-        sh:node schema:AddressShape ;
-    ] .
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">IDShape</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Course</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;Graph must have an ID&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">;</span>
+    <span class="p">.</span>
 
-schema:AddressShape
-    a sh:NodeShape ;
-    sh:closed true ;
-    sh:property [
-        sh:path schema:streetAddress ;
-        sh:datatype xsd:string ;
-    ] ;
-    sh:property [
-        sh:path schema:postalCode ;
-        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype xsd:integer ] ) ;
-        sh:minInclusive 10000 ;
-        sh:maxInclusive 99999 ;
-    ] .</code></pre>
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">DatasetCommonShape</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Course</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;OIH Learning Resource validation suite&quot;</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">property</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">nameResourceProperty</span><span class="p">,</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">urlResourceProperty</span><span class="p">,</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">descriptionResourceProperty</span><span class="p">,</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">identifierProviderProperty</span><span class="p">,</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">keywordsResourceProperty</span><span class="p">,</span>
+        <span class="nn">oihval</span><span class="p">:</span><span class="nt">licenseResourceProperty</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">nameResourceProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Literal</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;Name is required &quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">keywordsResourceProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">keywords</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Literal</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">severity</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Warning</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;A resource should include descriptive keywords&quot;</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">licenseResourceProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">license</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Literal</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">severity</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Info</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;Though not required, it is good practice to include a license if one exists&quot;</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">urlResourceProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">url</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">IRIOrLiteral</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;URL required for the location of the resource described by this metadata&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">descriptionResourceProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">description</span><span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">Literal</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;Resource must have a description&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+
+<span class="nn">oihval</span><span class="p">:</span><span class="nt">identifierProviderProperty</span>
+    <span class="kt">a</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">PropertyShape</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">provider</span><span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">shacl</span><span class="p">:</span><span class="nt">IRIOrLiteral</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">message</span> <span class="s">&quot;A provider must be noted&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">shacl</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;https://book.oceaninfohub.org/validation/README.html&quot;</span> <span class="p">;</span>
+    <span class="p">.</span>
+</pre></div>
 
 </div>
 </div>
@@ -13421,7 +13469,7 @@ schema:AddressShape
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Severity">Severity<a class="anchor-link" href="#Severity">&#182;</a></h2><p>A brief note on severity levels.  SHACL defines <a href="https://www.w3.org/TR/shacl/#severity">three levels of severity</a>.</p>
+<h2 id="Severity">Severity<a class="anchor-link" href="#Severity">&#182;</a></h2><p>A brief note on severity levels.  SHACL defines <a href="https://www.w3.org/TR/shacl/#severity">three levels of severity</a>.  These can be useful to convey issues that are not violations for use, but are just warning and info related items.</p>
 <table>
 <thead><tr>
 <th>Severity</th>
@@ -13450,63 +13498,18 @@ schema:AddressShape
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Linkes-to-the-OIH-Notebooks-for-demonstration">Linkes to the OIH Notebooks for demonstration<a class="anchor-link" href="#Linkes-to-the-OIH-Notebooks-for-demonstration">&#182;</a></h1><h2 id="Examples-of-using-pySHACL">Examples of using pySHACL<a class="anchor-link" href="#Examples-of-using-pySHACL">&#182;</a></h2><p><a href="https://book.oceaninfohub.org/tooling/notebooks/validation/OIH_Simple_SHACL.html">Basic SHACL</a></p>
-<p><a href="https://book.oceaninfohub.org/tooling/notebooks/validation/OIH_SHACL.html">S3 Objectstore and SHACL</a></p>
+<h1 id="Links-to-the-OIH-Notebooks-for-demonstration">Links to the OIH Notebooks for demonstration<a class="anchor-link" href="#Links-to-the-OIH-Notebooks-for-demonstration">&#182;</a></h1><h2 id="Examples-of-using-pySHACL">Examples of using pySHACL<a class="anchor-link" href="#Examples-of-using-pySHACL">&#182;</a></h2><p><a href="https://book.oceaninfohub.org/tooling/notebooks/validation/OIH_Simple_SHACL.html">Basic SHACL</a></p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Thanks">Thanks<a class="anchor-link" href="#Thanks">&#182;</a></h1>
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Alternative-agenda-with-wider-topic-set:">Alternative agenda with wider topic set:<a class="anchor-link" href="#Alternative-agenda-with-wider-topic-set:">&#182;</a></h1><ul>
-<li>Structured Data on the web patterns<ul>
-<li>RDF foundation and JSON-LD serialization <a href="https://www.w3.org/Talks/2021/09-19-ddi-cdi/">https://www.w3.org/Talks/2021/09-19-ddi-cdi/</a> </li>
-<li>Basics of Vocabulary based Metadata</li>
-<li>Basics of the implemented architecture</li>
-</ul>
-</li>
-<li>Athoring <ul>
-<li>JSON-LD documents:</li>
-<li>What do they look like</li>
-<li>Compared to JSON</li>
-</ul>
-</li>
-<li>Tooling you can try:<ul>
-<li>JSON-LD playground</li>
-<li>SHACL playground</li>
-<li>Schema.org validator</li>
-<li>JSON-LD linter</li>
-<li>Python (and hence others)</li>
-</ul>
-</li>
-<li>Publishing<ul>
-<li>Robots.txt and sitemaps</li>
-<li>Framework driven</li>
-</ul>
-</li>
-<li>Validation<ul>
-<li>SHACL</li>
-</ul>
-</li>
-<li>Indexing<ul>
-<li>Gleaner</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
-</div>
-</aside></section></section>
+</div></section></section>
 </div>
 </div>
 
