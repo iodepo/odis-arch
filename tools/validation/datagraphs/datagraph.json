@@ -1,0 +1,48 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+    },
+    "@type": "Course",
+    "name": "test",
+    "description": "In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox...",
+    "hasCourseInstance": [
+        {
+            "@type": "CourseInstance",
+            "courseMode": [
+                "MOOC1",
+                "online"
+            ],
+            "endDate": "2019-03-21",
+            "startDate": "2019-02-15",
+            "attendee": {
+                "@type": "Person",
+                "name": "Jane Doe",
+                "jobTitle": "Professor",
+                "telephone": "(425) 123-4567",
+                "url": "http://www.janedoe.com",
+                "identifier": {
+                    "@id": "ID_value_string",
+                    "@type": "PropertyValue",
+                    "propertyID": "This can be text or URL for an ID like ORCID",
+                    "url": "https://foo.org/linkToPropertyIDPage",
+                    "description": "Optional description of the ID"
+                }
+            }
+        },
+        {
+            "@type": "CourseInstance",
+            "courseMode": [
+                "MOOC2",
+                "online"
+            ],
+            "endDate": "2019-05-21",
+            "startDate": "2019-04-15"
+        }
+    ]
+}
