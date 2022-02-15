@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://maspawio.net/id/17",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON(-10.5844533393  40.7426626187  -10.5844533393  40.4587595947 -11.2746685539  40.4587595947  -11.2746685539  40.7426626187 -10.5844533393 40.7426626187)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This raster data illustrates site/project level evaluation of marine habitats of Lalane and Quiwia in the Quirimbas Archipelago, Mozambique.\r\nThe output was produced by an independent project, but using layers collated for MOZALINK module activities.\r\nData collection and processing involved supervised image classification based Landsat-8 OLI Sensor data at 30-meter resolution utilizing the Blue, Green and Red Spectral bands for interpretation. \r\nGround control points were collected through collaborative work between Coastal Ocean Research for Development in the Indian Ocean (CORDIO EA), AMA and the Conselho Comunitário de Pesca (CCPs) of Quiwia and Lalane. \r\nAll image processing/analysis was conducted using QGIS Semi-Automatic Classification plugin to derive a benthic habitat data layer.\r\n",
+    "keywords": [
+        "benthic habitat",
+        "conservation"
+    ],
+    "name": "Quiwia Lalane habitat classification"
+}

@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "mr": "http://marineregions.org/ns/ontology#",
+    "mrt": "http://marineregions.org/ns/placetypes#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dct": "http://purl.org/dc/terms/",
+    "dcat:centroid": {
+      "@type": "gsp:wktLiteral"
+    },
+    "dcat:bbox": {
+      "@type": "gsp:wktLiteral"
+    },
+    "mr:hasGeometry": {
+      "@type": "@id"
+    },
+    "rdfs:seeAlso": {
+      "@type": "@id"
+    },
+    "dct:modified": {
+      "@type": "xsd:dateTime"
+    },
+    "dct:isVersionOf": {
+      "@type": "@id"
+    },
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "hydra:next": {
+      "@type": "@id"
+    },
+    "schema": "https://schema.org/"
+  },
+  "@id": "http://marineregions.org/mrgid/2795",
+  "@type": [
+    "mr:MRGeoObject",
+    "mrt:Town"
+  ],
+  "skos:prefLabel": [
+    {
+      "@value": "Gent",
+      "@language": "nl"
+    }
+  ],
+  "mr:isPartOf": [
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Arrondissement"
+      ],
+      "@id": "http://marineregions.org/mrgid/2484",
+      "skos:prefLabel": {
+        "@value": "Gent",
+        "@language": "nl"
+      }
+    }
+  ],
+  "mr:isRelatedTo": [
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:River"
+      ],
+      "@id": "http://marineregions.org/mrgid/2545",
+      "skos:prefLabel": {
+        "@value": "Leie",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Canal"
+      ],
+      "@id": "http://marineregions.org/mrgid/30486",
+      "skos:prefLabel": {
+        "@value": "Ringvaart",
+        "@language": "en"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Canal"
+      ],
+      "@id": "http://marineregions.org/mrgid/30597",
+      "skos:prefLabel": {
+        "@value": "Brugse vaart",
+        "@language": "en"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Stream"
+      ],
+      "@id": "http://marineregions.org/mrgid/31021",
+      "skos:prefLabel": {
+        "@value": "'t Liefken",
+        "@language": "nl"
+      }
+    }
+  ],
+  "mr:contains": [
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Canal"
+      ],
+      "@id": "http://marineregions.org/mrgid/20595",
+      "skos:prefLabel": {
+        "@value": "Watersportbaan",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Canal"
+      ],
+      "@id": "http://marineregions.org/mrgid/30598",
+      "skos:prefLabel": {
+        "@value": "Coupure",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Deelgemeente"
+      ],
+      "@id": "http://marineregions.org/mrgid/30691",
+      "skos:prefLabel": {
+        "@value": "Zwijnaarde",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Harbour"
+      ],
+      "@id": "http://marineregions.org/mrgid/30743",
+      "skos:prefLabel": {
+        "@value": "Port of Ghent",
+        "@language": "en"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Deelgemeente"
+      ],
+      "@id": "http://marineregions.org/mrgid/31022",
+      "skos:prefLabel": {
+        "@value": "Wondelgem",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Dock"
+      ],
+      "@id": "http://marineregions.org/mrgid/31344",
+      "skos:prefLabel": {
+        "@value": "Rodenhuis",
+        "@language": "nl"
+      }
+    }
+  ],
+  "mr:isAdjacentTo": [
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:Canal"
+      ],
+      "@id": "http://marineregions.org/mrgid/30605",
+      "skos:prefLabel": {
+        "@value": "Gent-Terneuzen",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:GeneralRegion"
+      ],
+      "@id": "http://marineregions.org/mrgid/30658",
+      "skos:prefLabel": {
+        "@value": "Meetjesland",
+        "@language": "nl"
+      }
+    },
+    {
+      "@type": [
+        "mr:MRGeoObject",
+        "mrt:GeneralRegion"
+      ],
+      "@id": "http://marineregions.org/mrgid/30673",
+      "skos:prefLabel": {
+        "@value": "Klein-Brabant",
+        "@language": "nl"
+      }
+    }
+  ],
+  "dct:modified": "2021-07-13T02:02:36Z",
+  "prov:hadPrimarySource": {
+    "prov:wasAttributedTo": {
+      "@id": "http://statbel.fgov.be/",
+      "rdfs:label": "Nationaal Instituut voor de Statistiek (NIS) / National Statistical Service"
+    }
+  },
+  "dcat:centroid": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Point(3.714559 51.08247)",
+  "dcat:bbox": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> Polygon(3.849331 51.18807,3.579786 51.18807,3.579786 50.97686,3.849331 50.97686,3.849331 51.18807)",
+  "mr:hasGeometry": "http://marineregions.org/mrgid/2795/geometries?source=182&attributeValue=44021"
+}
