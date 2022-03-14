@@ -120,4 +120,4 @@ jbutils.show_graph(compacted)
 
 ## Refs
 
-[Nanopubs Guidance](http://nanopub.org/guidelines/working_draft/)
+[Nanopubs Guidance](https://nanopub.org/guidelines/working_draft/)

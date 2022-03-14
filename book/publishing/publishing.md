@@ -11,7 +11,7 @@ _Existing support in software_ at the bottom of this document.
 
 ```{seealso}
 We also recommend reviewing the document: 
-[Schema.org for Research Data Managers: A Primer](https://docs.google.com/document/d/1fay3uIqIO2rljVBTk6Sk6i1I3yRnVecn-UTl3JKXLnw/edit#heading=h.lmmgh7hw0ebd)
+[Schema.org for Research Data Managers: A Primer](https://docs.google.com/document/d/1fay3uIqIO2rljVBTk6Sk6i1I3yRnVecn-UTl3JKXLnw/edit)
 ```
 
 ### Architecture Implementation
@@ -98,9 +98,9 @@ thematic sections for more examples for a given thematic area.
 ```
 
 This example is from the [training and courses thematic
-section](https://github.com/iodepo/odis-arch/tree/master/schema/thematics/training).  To view all the types
+section](https://github.com/iodepo/odis-arch/tree/master/book/thematics/training).  To view all the types
 being developed reference
-the [Thematic section](https://github.com/iodepo/odis-arch/tree/master/schema/thematics).
+the [Thematic section](https://github.com/iodepo/odis-arch/tree/master/book/thematics).
 
 These JSON-LD documents leverage schema.org as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.  
@@ -148,7 +148,7 @@ exposes a potential route a group might take to develop a usable tool. Such a
 tool might, for example, leverage the Electron app dev environment to evolve
 this approach in a more dedicated tool/manner.
 
-Use a JSON-LD document ([Example](https://github.com/iodepo/odis-arch/blob/master/schema/thematics/docs/graphs/creativework.json)) one could
+Use a JSON-LD document ([Example](https://github.com/iodepo/odis-arch/blob/master/book/thematics/sdg/graphs/creativework.json)) one could
 load this into something like 
 the [JSONschema.net tool](https://jsonschema.net/).
 
@@ -277,5 +277,5 @@ for some of the more common ones.
 * [DKAN](https://dkan.readthedocs.io/en/latest/introduction/index.html)
 * [ERDDAP (native support)](https://www.ncei.noaa.gov/erddap/index.html)
 * [OPeNDAP (native support)](https://www.opendap.org/)
-* [GeoNode](http://geonode.org/)
+* [GeoNode](https://geonode.org/)
   * [schema.org issue ref](https://github.com/GeoNode/geonode/issues?q=schema.org+)

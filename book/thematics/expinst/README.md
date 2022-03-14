@@ -281,7 +281,7 @@ For the identifier we are using the a GRID, but this could also be something lik
 
 ### On the property membership
 
-Line 18-29 show the inclusion of a [schema.org/membership](https://schema.org/membership)
+Line 18-29 show the inclusion of a [schema.org/member](https://schema.org/member)
 property.  There are issues to note here both for consumers (aggregators) and 
 providers (publishers).   The Person type is show connected simply on a type and 
 id.  This provides the cleanest connection.  If a member is added by type and id, as 

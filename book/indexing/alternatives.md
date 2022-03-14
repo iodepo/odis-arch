@@ -7,7 +7,7 @@ the only or required approach.   The web architecture foundation means there are
 can be used and might be leveraged in a production environment including:
 
 * [Extrunct](https://github.com/scrapinghub/extruct)
-* [BioSchemas Tools](https://bioschemas.org/software/)
+* [BioSchemas Tools](https://bioschemas.org/software)
 * [LDSpider](https://github.com/ldspider/ldspider)
 * [StormCrawler](https://github.com/DigitalPebble/storm-crawler)
 * [Squirrel](https://dice-group.github.io/squirrel.github.io/overview.html)

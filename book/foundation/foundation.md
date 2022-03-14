@@ -208,7 +208,7 @@ this at the [schema.org/knowsAbout](https://schema.org/knowsAbout) page.
 
 ### Thing and DataType
 
-The [Thing](https://schema.org/Thing) and [Datatype](https://schema.org/Datatype) types 
+The [Thing](https://schema.org/Thing) and [Datatype](https://schema.org/DataType) types 
 are two special types we should mention.  Thing is the upper level and most generic
 type in schema.org.   Everything in schema.org is descended from Thing.  So when
 knowsAbout says its range includes Thing, it means you can use any type in schema.org

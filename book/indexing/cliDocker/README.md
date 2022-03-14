@@ -247,6 +247,6 @@ We have attempted here to give a quick introduction to the use of Gleaner in a D
 environment.  This is a very simple example, but it should give you an idea of the approach
 used.  This approach can then be combined with other approaches documented to establish a 
 more production oriented implementation.  Most of this documentation will be located
-at the [Gleaner.io GitHub repository](https://github.com/gleanerio) and [Gleaner](https://github.com/earthcubearchitecture-project418/gleaner) repository.
+at the [Gleaner.io GitHub repository](https://github.com/gleanerio) and [Gleaner](https://github.com/gleanerio/gleaner) repository.
 
 > Note: The plan is to merge the Gleaner.io GitHub repository into the first. 
