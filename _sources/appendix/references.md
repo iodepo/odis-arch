@@ -6,7 +6,7 @@ A broad collection of references.
 
   [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
 
-  [BioSchemas](https://bioschemas.org/liveDeploys/ )
+  [BioSchemas](https://bioschemas.org/liveDeploys)
 
   [Ocean Best Practices on Schema](https://github.com/adamml/ocean-best-practices-on-schema)
 
@@ -51,9 +51,9 @@ A broad collection of references.
 
 ## Organizations
 
-[Google Open Source](http://opensource.google/ )
+[Google Open Source](https://opensource.google/ )
 
-[DataCommons](http://datacommons.org/ )  & [DataCommons REST](https://docs.datacommons.org/api/rest/query.html )
+[DataCommons](https://datacommons.org/ )  & [DataCommons REST](https://docs.datacommons.org/api/rest/query.html )
 
 
 ## Indexers
@@ -73,8 +73,6 @@ A broad collection of references.
 [rdfjs](https://github.com/rdfjs )
 
 [shemaram](https://github.com/google/schemarama )
-
-[shemarama demo](https://schemarama-demo.site/ )
 
 [validatingrdf](https://book.validatingrdf.com/ )
 
@@ -105,7 +103,7 @@ A broad collection of references.
 
 [Science on Schema](https://github.com/ESIPFed/science-on-schema.org//)
 
-[BioSchemas](http://bioschemas.org/)
+[BioSchemas](https://bioschemas.org/)
 
 [CodeMeta](https://codemeta.github.io/)
 
@@ -125,17 +123,17 @@ A broad collection of references.
 
 [Rich results](https://search.google.com/test/rich-results)
 
-[SchemaApp.com](https://www.schemaapp.com/solutions/structured-data-health-check-diagnostic/)
+[SchemaApp.com](https://www.schemaapp.com/solutions/)
 
 [Yandex](https://webmaster.yandex.com/tools/microtest/)
 
 [Schema dev](https://test.schema.dev/)
 
-[Chromeextension](https://chrome.google.com/webstore/detail/ryte-structured-data-helpndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en)
+[Chromeextension](https://chrome.google.com/webstore/detail/ryte-structured-data-help/ndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en)
 
 [Google Rich Results](https://search.google.com/test/rich-results)
 
-[Datashapes](http://datashapes.org/)
+[Datashapes](https://datashapes.org/)
 
 [ACL Web Alexa Meaning Representation Language](https://www.aclweb.org/anthology/N18-3022.pdf )
 

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>References &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -31,30 +31,35 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Registries" href="registries.html" />
     <link rel="prev" title="Known Issues" href="annoyances.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -93,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -120,7 +125,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Profiles
  </span>
@@ -192,7 +197,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Aggregation
  </span>
@@ -244,7 +249,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Tooling
  </span>
@@ -391,7 +396,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Validation
  </span>
@@ -403,7 +408,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Interfaces
  </span>
@@ -430,7 +435,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Appendix
  </span>
@@ -514,7 +519,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -548,7 +553,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -603,7 +608,65 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>References</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general">
+   General
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#developer-references">
+   Developer References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-management-and-web-server-support">
+   Content Management and Web Server support
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#organizations">
+   Organizations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexers">
+   Indexers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graph-tools">
+   Graph tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blogs-and-press-releases">
+   Blogs and Press Releases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#not-categorized-yet">
+   Not Categorized Yet
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="references">
@@ -612,7 +675,7 @@
 <div class="section" id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org//">Science on Schema</a></p>
-<p><a class="reference external" href="https://bioschemas.org/liveDeploys/">BioSchemas</a></p>
+<p><a class="reference external" href="https://bioschemas.org/liveDeploys">BioSchemas</a></p>
 <p><a class="reference external" href="https://github.com/adamml/ocean-best-practices-on-schema">Ocean Best Practices on Schema</a></p>
 <p><a class="reference external" href="https://op.europa.eu/en/publication-detail/-/publication/35c5ca10-1417-11eb-b57e-01aa75ed71a1/language-en">PID policy for European Open Science Cloud</a></p>
 <p><a class="reference external" href="https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping">DCAT Schema.org mappings</a></p>
@@ -640,8 +703,8 @@
 </div>
 <div class="section" id="organizations">
 <h2>Organizations<a class="headerlink" href="#organizations" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://opensource.google/">Google Open Source</a></p>
-<p><a class="reference external" href="http://datacommons.org/">DataCommons</a>  &amp; <a class="reference external" href="https://docs.datacommons.org/api/rest/query.html">DataCommons REST</a></p>
+<p><a class="reference external" href="https://opensource.google/">Google Open Source</a></p>
+<p><a class="reference external" href="https://datacommons.org/">DataCommons</a>  &amp; <a class="reference external" href="https://docs.datacommons.org/api/rest/query.html">DataCommons REST</a></p>
 </div>
 <div class="section" id="indexers">
 <h2>Indexers<a class="headerlink" href="#indexers" title="Permalink to this headline">¶</a></h2>
@@ -655,7 +718,6 @@
 <p><a class="reference external" href="https://any23.apache.org/">Any23</a></p>
 <p><a class="reference external" href="https://github.com/rdfjs">rdfjs</a></p>
 <p><a class="reference external" href="https://github.com/google/schemarama">shemaram</a></p>
-<p><a class="reference external" href="https://schemarama-demo.site/">shemarama demo</a></p>
 <p><a class="reference external" href="https://book.validatingrdf.com/">validatingrdf</a></p>
 <p><a class="reference external" href="http://linter.structured-data.org/">Structured Data Linter</a></p>
 </div>
@@ -674,7 +736,7 @@
 <p><a class="reference external" href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md">Lighthouse Plugins</a></p>
 <p><a class="reference external" href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a></p>
 <p><a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org//">Science on Schema</a></p>
-<p><a class="reference external" href="http://bioschemas.org/">BioSchemas</a></p>
+<p><a class="reference external" href="https://bioschemas.org/">BioSchemas</a></p>
 <p><a class="reference external" href="https://codemeta.github.io/">CodeMeta</a></p>
 <p><a class="reference external" href="http://linter.structured-data.org/">Linter Structured Data</a></p>
 <p><a class="reference external" href="https://json-ld.org/playground/">JSON-LD Playground</a></p>
@@ -684,12 +746,12 @@
 <p><a class="reference external" href="https://developers.google.com/search/docs/data-types/dataset">Google Dataset for  developers</a></p>
 <p><a class="reference external" href="https://www.schemaapp.com/toolssay-goodbye-to-googles-structured-data-testing-tool-and-hello-to-the-alternatives/">Press  article</a></p>
 <p><a class="reference external" href="https://search.google.com/test/rich-results">Rich results</a></p>
-<p><a class="reference external" href="https://www.schemaapp.com/solutions/structured-data-health-check-diagnostic/">SchemaApp.com</a></p>
+<p><a class="reference external" href="https://www.schemaapp.com/solutions/">SchemaApp.com</a></p>
 <p><a class="reference external" href="https://webmaster.yandex.com/tools/microtest/">Yandex</a></p>
 <p><a class="reference external" href="https://test.schema.dev/">Schema dev</a></p>
-<p><a class="reference external" href="https://chrome.google.com/webstore/detail/ryte-structured-data-helpndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en">Chromeextension</a></p>
+<p><a class="reference external" href="https://chrome.google.com/webstore/detail/ryte-structured-data-help/ndodccbbcdpcmabmiocobdnfiaaimgnk?hl=en">Chromeextension</a></p>
 <p><a class="reference external" href="https://search.google.com/test/rich-results">Google Rich Results</a></p>
-<p><a class="reference external" href="http://datashapes.org/">Datashapes</a></p>
+<p><a class="reference external" href="https://datashapes.org/">Datashapes</a></p>
 <p><a class="reference external" href="https://www.aclweb.org/anthology/N18-3022.pdf">ACL Web Alexa Meaning Representation Language</a></p>
 <p><a class="reference external" href="https://hash.ai/schemas/Volcano">hash.aio Volcano schema</a></p>
 <p><a class="reference external" href="https://yoast.com/structured-data-schema-ultimate-guide/">Yoast Structured Data Guide</a></p>
@@ -724,54 +786,42 @@
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="annoyances.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Known Issues</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="annoyances.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Known Issues</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="registries.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Registries</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="registries.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Registries</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By IODEPO<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By IODEPO<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

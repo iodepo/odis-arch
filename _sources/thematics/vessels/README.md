@@ -182,7 +182,7 @@ jbutils.show_graph(framed)
 
 ## References
 
-* [ICES](https://ocean.ices.dk/codes/ShipCodes.aspx)
+* [ICES](https://vocab.ices.dk/?ref=315)
 * POGO
 * EurOcean
 * https://vocab.nerc.ac.uk/search_nvs/C17/
