@@ -161,6 +161,6 @@ given time period.
 * [Example page](https://oceanexpert.org/event/2859)
 * [OCTO](https://www.octogroup.org/)
 * https://oceansummerschools.iode.org/ 
-* https://www.openchannels.org/upcoming-events-list 
+* https://octogroup.org/webinars/
 * https://catalogue.odis.org/search/type=16 
 * https://clmeplus.org/

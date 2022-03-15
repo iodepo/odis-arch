@@ -214,7 +214,7 @@ jbutils.show_graph(framed)
   * This is a great start and perhaps helps to highlight why SHACL shapes are useful
   * https://irishmarineinstitute.github.io/erddap-lint/ 
   * https://github.com/earthcubearchitecture-project418/p419dcatservices/blob/master/CHORDS/DataFeed.jsonld
-*[EMODnet](https://emodnet.eu/en)  (Coner Delaney)
+*[EMODnet](https://emodnet.ec.europa.eu/en)  (Coner Delaney)
   * ERDAP also
   * Are we talking links from schema.org that link to OGC and ERDAP services 
   * Are these methods?  
