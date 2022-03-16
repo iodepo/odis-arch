@@ -1,0 +1,64 @@
+digraph "OIH Portal Activity Diagram" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="OIH Portal Activity Diagram" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"695e9aaaa37f4755afe99fe2a07d58fc" [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/odis.png" /></TD></TR>
+    <TR><TD>ODIS OIH Profiles</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=2.0]
+	subgraph "cluster_Index and validate" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Index and validate" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"78d2870578f346698f7840c664c10599" [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/indexing.png" /></TD></TR>
+    <TR><TD>Indexing</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=2.0]
+		"46ffef8b9ca947e88831ccc6d2eea7eb" [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/validation.png" /></TD></TR>
+    <TR><TD>Validation</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=2.0]
+	}
+	"695e9aaaa37f4755afe99fe2a07d58fc" -> e916ded4e1984a628401e315292aaa8f [label="made available to" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"695e9aaaa37f4755afe99fe2a07d58fc" -> "8b3120c3398341a3ae7523bacfa0c569" [label="made available to" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"695e9aaaa37f4755afe99fe2a07d58fc" -> "6eba89af85fb4e1aa5c834a61e13e485" [label="made available to" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	e916ded4e1984a628401e315292aaa8f -> "78d2870578f346698f7840c664c10599" [label="publish to web" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"8b3120c3398341a3ae7523bacfa0c569" -> "78d2870578f346698f7840c664c10599" [label="publish to web" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6eba89af85fb4e1aa5c834a61e13e485" -> "78d2870578f346698f7840c664c10599" [label="publish to web" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"78d2870578f346698f7840c664c10599" -> "46ffef8b9ca947e88831ccc6d2eea7eb" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph "cluster_Providers author metadata records" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Providers author metadata records" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		e916ded4e1984a628401e315292aaa8f [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/facility.png" /></TD></TR>
+    <TR><TD>Facility</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=1.5]
+		"8b3120c3398341a3ae7523bacfa0c569" [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/facility.png" /></TD></TR>
+    <TR><TD>Facility</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=1.5]
+		"6eba89af85fb4e1aa5c834a61e13e485" [label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD fixedsize="true" width="100" height="100"><IMG SRC="./content/facility.png" /></TD></TR>
+    <TR><TD>Facility</TD></TR>
+    </TABLE>
+    > height=1.5 shape=plaintext width=1.5]
+	}
+	"46ffef8b9ca947e88831ccc6d2eea7eb" -> d729a817ea5f4f018680c92d4d290c9d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"46ffef8b9ca947e88831ccc6d2eea7eb" -> "80fcb533ca5e4b7a96de3cee578d92b6" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph cluster_Storage {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Storage labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		d729a817ea5f4f018680c92d4d290c9d [label="Object Store
+ (Mino, S3)" height=2.3 image="/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/resources/aws/storage/simple-storage-service-s3.png" shape=none]
+		"80fcb533ca5e4b7a96de3cee578d92b6" [label="Triplestore
+ (Graph database)" height=2.3 image="/home/fils/.conda/envs/kglab/lib/python3.8/site-packages/resources/aws/database/neptune.png" shape=none]
+	}
+	"78d2870578f346698f7840c664c10599" -> "46ffef8b9ca947e88831ccc6d2eea7eb" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

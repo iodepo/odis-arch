@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c",
+      "@type": "dcat:Dataset",
+      "dcat:distribution": {
+        "@id": "https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c/resource/1f8174f8-573e-43f2-b110-3d1a13c380e8"
+      },
+      "dcat:keyword": [
+        "biota",
+        "Australia",
+        "LAND-Cover",
+        "Maranoa-Balonne-Condamine subregion",
+        "environment",
+        "planningCadastre",
+        "Cooper subregion"
+      ],
+      "dct:description": "## **Abstract** \n\nThis dataset and its metadata statement were supplied to the Bioregional Assessment Programme by a third party and are presented here as originally supplied. \n\n\n\nThe Dynamic Land Cover Dataset of Australia is the first nationally consistent and thematically comprehensive land cover reference for Australia.  It is the result of a collaboration between Geoscience Australia and the Australian Bureau of Agriculture and Resource Economics and Sciences, and provides a base-line for identifying and reporting on change and trends in vegetation cover and extent. Land cover is the observed biophysical cover on the Earth&#xBF;s surface, including native vegetation, soils, exposed rocks and water bodies as well as anthropogenic elements such as plantations, crops and built environments.  Remote sensing data recorded over a period of time allows the observation of land cover dynamics.  Different land cover types display distinct responses due to seasonal, climatic and anthropogenic drivers.  Classifying these responses provides a robust and repeatable way of characterising land cover types.  A key aspect of land cover is vegetation greenness. The greenness of vegetation is directly related to the amount of photosynthesis occurring, and can be measured as an index such as the Enhanced Vegetation Index (EVI). The Dynamic Land Cover Dataset presents land cover information for every 250m by 250m area of the country from April 2000 to April 2008. The classification scheme used to describe land cover categories in the Dynamic Land Cover Dataset conforms to the 2007 International Standards Organisation (ISO) land cover standard (19144-2).  The Dynamic Land Cover Dataset shows Australian land covers clustered into 34 ISO classes. These reflect the structural character of vegetation, ranging from cultivated and managed land covers (crops and pastures) to natural land covers such as closed forest and sparse, open grasslands.\n\n## **Dataset History** \n\nThe source data for the Dynamic Land Cover Dataset is a time series of Enhanced Vegetation Index (EVI) data from the Moderate Resolution Imaging Spectroradiometer (MODIS) on the Terra and Aqua satellites operated by NASA. The time series includes 186 snapshots of vegetation greenness for each 250m by 250m area across the continent over an 8 year period from 2000 to 2008. Complete information on the creation of this product can be found in the following documents available from the Geoscience Australia website www.ga.gov.au/landcover.\n\n## **Dataset Citation** \n\nGeoscience Australia (2010) Dynamic Land Cover Dataset. Bioregional Assessment Source Dataset. Viewed 27 September 2017, http://data.bioregionalassessments.gov.au/dataset/1556b944-731c-4b7f-a03e-14577c7e68db.",
+      "dct:identifier": "67ca5de1-8774-4678-9d1b-8b1cb70ab33c",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2016-03-23T05:08:17.991412"
+      },
+      "dct:language": "eng",
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2019-11-19T23:18:49.871451"
+      },
+      "dct:publisher": {
+        "@id": "https://data.gov.au/organization/69f37b4c-bdf0-4c85-bd56-82fa6d6b087a"
+      },
+      "dct:spatial": {
+        "@id": "_:Nd143bafbb8304150bd1adb8c8d03cfff"
+      },
+      "dct:title": "Dynamic Land Cover Dataset"
+    },
+    {
+      "@id": "https://data.gov.au/dataset/67ca5de1-8774-4678-9d1b-8b1cb70ab33c/resource/1f8174f8-573e-43f2-b110-3d1a13c380e8",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://datagovau.s3.amazonaws.com/bioregionalassessments/BA_ALL/ALL/DATA/Geography/LandCoverNDLC/1556b944-731c-4b7f-a03e-14577c7e68db.zip"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "186838338.0"
+      },
+      "dct:description": "Data File",
+      "dct:format": "ZIP",
+      "dct:title": "Dynamic Land Cover Dataset"
+    },
+    {
+      "@id": "_:Nd143bafbb8304150bd1adb8c8d03cfff",
+      "@type": "dct:Location",
+      "locn:geometry": [
+        {
+          "@type": "gsp:wktLiteral",
+          "@value": "POLYGON ((110.0012 -10.0012, 115.0080 -10.0012, 155.0080 -45.0036, 110.0012 -45.0036, 110.0012 -10.0012))"
+        },
+        {
+          "@type": "https://www.iana.org/assignments/media-types/application/vnd.geo+json",
+          "@value": "{\"type\": \"Polygon\", \"coordinates\": [[[110.0012, -10.00117], [115.008, -10.00117], [155.008, -45.00362], [110.0012, -45.00362], [110.0012, -10.00117]]]}"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.gov.au/organization/69f37b4c-bdf0-4c85-bd56-82fa6d6b087a",
+      "@type": "foaf:Organization",
+      "foaf:name": "Bioregional Assessment Program"
+    }
+  ]
+}
