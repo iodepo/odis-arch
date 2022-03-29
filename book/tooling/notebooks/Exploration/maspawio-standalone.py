@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 """
-Standalone script to generate RDF from provided file "maspawio.csv"
+Purpose: Standalone script to generate RDF from provided file "maspawio.csv"
 
-Usage:
+Usage:   python maspawio-standalone.py
+
+Output:  saves a new file: data/maspawio.rdf
 
 Notes:
 
@@ -13,6 +15,15 @@ Notes:
        installing the certificate on Ubuntu: Let's Encrypt ( https://letsencrypt.org/ ).
 
 """
+
+# define variables
+PATH_TO_CSV = "./data/maspawio-http.csv"
+PATH_TO_GENERATE_NEW_RDF = "./data/maspawio.rdf"
+HOSTNAME = "http://maspawio.net"
+
+#########################
+# you shouldn't have to modify anything below
+#########################
 
 import json
 from pyld import jsonld
@@ -32,7 +43,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # get all Catalogue record links (actually a GetRecordById request)
 
-links = pd.read_csv("./data/maspawio-http.csv", skiprows=7)
+links = pd.read_csv(PATH_TO_CSV, skiprows=7)
 linkcol = links["dclink"]
 urls = linkcol.values
 
@@ -99,7 +110,7 @@ for x in urls:
 
     data = {}
 
-    data['@id'] = str("http://maspawio.net/id/{}".format(index))      #id.text
+    data['@id'] = str(HOSTNAME + "/id/{}".format(index))      #id.text
 
     data['@type'] = 'https://schema.org/Dataset'
 
@@ -146,11 +157,11 @@ print("\n")
 
 # save RDF file locally
 
-kgset.save_rdf("./data/maspawio.rdf", format="ttl", base=None, encoding="utf-8")
+kgset.save_rdf(PATH_TO_GENERATE_NEW_RDF, format="ttl", base=None, encoding="utf-8")
 
 print("\n")
 print("************************")
-print("File generated: data/maspawio.rdf")
+print("File generated: " + PATH_TO_GENERATE_NEW_RDF)
 print("************************")
 print("\n")
 
