@@ -49,10 +49,15 @@ kgset = kglab.KnowledgeGraph(
     namespaces = namespaces,
     )
 
-index = 0
-
 # loop through all urls, parse response, and save as 
 # local JSON file
+
+index = 0
+
+print("************************")
+print("Parsing records...")
+print("************************")
+print("\n")
 
 for x in urls:
     index = index +1 
@@ -70,6 +75,7 @@ for x in urls:
     # name
     # This can be used to form the URL:  https://maspawio.net/layers/geonode%3Alocally_managed_marine_areas_kenya
     name = r.find('{http://purl.org/dc/elements/1.1/}title')
+    print("        " + name.text)
 
     # description
     description = r.find('{http://purl.org/dc/terms/}abstract')
@@ -131,8 +137,20 @@ for x in urls:
         json.dump(compacted, f, ensure_ascii=False, indent=4)
         
     kgset.load_jsonld(filename)
+    
+print("\n")
+print("************************")
+print("Parsed " + str(index) + " records")
+print("************************")
+print("\n")
 
 # save RDF file locally
 
 kgset.save_rdf("./data/maspawio.rdf", format="ttl", base=None, encoding="utf-8")
+
+print("\n")
+print("************************")
+print("File generated: data/maspawio.rdf")
+print("************************")
+print("\n")
 
