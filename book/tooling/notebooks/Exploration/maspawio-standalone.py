@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 """
-Purpose: Standalone script to generate RDF from provided file "maspawio.csv"
+Purpose: Standalone script to generate RDF from provided CSV file
 
 Usage:   python maspawio-standalone.py
 
-Output:  saves a new file: data/maspawio.rdf
+Output:  saves a new RDF file, for all catalogue records
 
 Notes:
 
