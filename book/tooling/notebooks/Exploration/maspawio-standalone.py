@@ -157,11 +157,18 @@ print("\n")
 
 # save RDF file locally
 
-kgset.save_rdf(PATH_TO_GENERATE_NEW_RDF, format="ttl", base=None, encoding="utf-8")
-
-print("\n")
-print("************************")
-print("File generated: " + PATH_TO_GENERATE_NEW_RDF)
-print("************************")
-print("\n")
+try:
+    kgset.save_rdf(PATH_TO_GENERATE_NEW_RDF, format="ttl", base=None, encoding="utf-8")
+except:
+    print("\n")
+    print("************************")
+    print("Problem generating: " + PATH_TO_GENERATE_NEW_RDF)
+    print("************************")
+    print("\n")  
+else:    
+    print("\n")
+    print("************************")
+    print("Successfully generated: " + PATH_TO_GENERATE_NEW_RDF)
+    print("************************")
+    print("\n")
 
