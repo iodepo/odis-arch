@@ -106,7 +106,7 @@ for x in urls:
     y2 = float(lcs[1])
 
     # # 'POLYGON(x1 y1, x1 y2, x2 y2, x2 y1, x1 y1)'
-    poly = str("""POLYGON({}  {}  {}  {} {}  {}  {}  {} {} {})""".format(x1, y1, x1, y2, x2, y2, x2, y1, x1, y1))
+    poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(x1, y1, x1, y2, x2, y2, x2, y1, x1, y1))
 
     data = {}
 
