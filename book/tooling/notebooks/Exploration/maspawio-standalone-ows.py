@@ -92,7 +92,7 @@ while stop == 0:
     if csw.results['returned'] == 0: #no results
         break
 
-    print(str(len(csw.records)) + " records found...")
+    print(str(len(csw.records.keys())) + " records found...")
     totalrecs += len(csw.records)         
 
     #harvest each record layer
