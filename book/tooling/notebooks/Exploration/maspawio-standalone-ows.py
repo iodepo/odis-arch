@@ -130,7 +130,7 @@ while stop == 0:
 
         data = {}
 
-        data['@id'] = str(HOSTNAME + "/id/{}".format(index))      #id.text
+        data['@id'] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
         data['@type'] = 'https://schema.org/Dataset'
 
