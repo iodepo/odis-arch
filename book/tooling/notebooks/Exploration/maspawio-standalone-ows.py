@@ -32,6 +32,7 @@ import json
 from pyld import jsonld
 import os, sys, io
 from owslib.csw import CatalogueServiceWeb
+from owslib.fes import SortBy, SortProperty
 import ssl
 import pandas as pd
 import kglab
@@ -63,8 +64,10 @@ kgset = kglab.KnowledgeGraph(
 stop = 0
 flag = 0
 index = 0
-maxrecs = 10
+pagesize = 10
 totalrecs = 0
+sort_property = 'dc:title'  # a supported queryable of the CSW
+sort_order = 'ASC'  # should be 'ASC' or 'DESC'
 
 print("************************")
 print("Parsing records...")
@@ -78,14 +81,15 @@ while stop == 0:
         startpos = csw.results['nextrecord']
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=60)
+    sortby = SortBy([SortProperty(sort_property, sort_order)])
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
     #csw.getdomain('GetRecords.resultType')
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
-    #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
+    csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     #print(csw.results)
       #{'matches': 149, 'returned': 10, 'nextrecord': 11}
     
