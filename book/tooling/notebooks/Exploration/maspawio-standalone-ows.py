@@ -3,7 +3,7 @@
 """
 Purpose: Standalone script to generate RDF from CSW endpoint
 
-Usage:   python maspawio-standalone.py
+Usage:   python maspawio-standalone-ows.py
 
 Output:  saves a new RDF file, for all catalogue records
 
@@ -17,8 +17,9 @@ Notes:
 """
 
 # define variables
-CSW_ONLINERESOURCE = "http://maspawio.net/catalogue/csw"
-PATH_TO_GENERATE_NEW_RDF = "./data-ows/maspawio.rdf"
+CSW_ENDPOINT = "http://maspawio.net/catalogue/csw"
+PATH_TO_DATA_FOLDER = "./data-ows/"
+NEW_RDF_FILENAME = "maspawio.rdf"
 HOSTNAME = "http://maspawio.net"
 
 #########################
@@ -53,7 +54,7 @@ kgset = kglab.KnowledgeGraph(
     namespaces = namespaces,
     )
 
-# loop through all urls, parse response, and save as 
+# loop through all visible records in the endpoint, and save as 
 # local JSON file
 
 index = 0
@@ -63,7 +64,7 @@ print("Parsing records...")
 print("************************")
 #print("\n")
 
-csw = CatalogueServiceWeb(CSW_ONLINERESOURCE)
+csw = CatalogueServiceWeb(CSW_ENDPOINT)
 # print(csw.identification.type)
 #[op.name for op in csw.operations]
 #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
@@ -136,7 +137,7 @@ for rec in csw.records:
 
     # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-    filename = str("data-ows/maspawio{}.json".format(index))
+    filename = str(PATH_TO_DATA_FOLDER + "maspawio{}.json".format(index))
     
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(compacted, f, ensure_ascii=False, indent=4)
@@ -152,18 +153,17 @@ print("\n")
 # save RDF file locally
 
 try:
-    kgset.save_rdf(PATH_TO_GENERATE_NEW_RDF, format="ttl", base=None, encoding="utf-8")
+    kgset.save_rdf(PATH_TO_DATA_FOLDER + NEW_RDF_FILENAME, format="ttl", base=None, encoding="utf-8")
 except:
     print("\n")
     print("************************")
-    print("Problem generating: " + PATH_TO_GENERATE_NEW_RDF)
+    print("Problem generating: " + PATH_TO_DATA_FOLDER + NEW_RDF_FILENAME)
     print("************************")
     print("\n")  
 else:    
     print("\n")
     print("************************")
-    print("Successfully generated: " + PATH_TO_GENERATE_NEW_RDF)
+    print("Successfully generated: " + PATH_TO_DATA_FOLDER + NEW_RDF_FILENAME)
     print("************************")
     print("\n")
-
 
