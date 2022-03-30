@@ -79,7 +79,7 @@ while stop == 0:
     if flag == 0:  # first run, start from 0
         startpos = 0
     else:  # subsequent run, startposition is now paged
-        startpos += pagesize
+        startpos += pagesize + 1
         #startpos = csw.results['nextrecord']
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=60)
