@@ -98,13 +98,13 @@ while stop == 0:
         break
 
     print(str(len(csw.records)) + " records found...")
-    totalrecs += len(csw.records)
+    totalrecs += len(csw.records)  
 
-    #handle empty first record for global extents
-    if csw.records[rec].title != "":   
-
-        #harvest each record layer
-        for rec in csw.records:
+    #harvest each record layer
+    for rec in csw.records:
+    
+        #handle empty first record for global extents
+        if csw.records[rec].title != "":     
 
             index+=1
     
