@@ -79,7 +79,8 @@ while stop == 0:
     if flag == 0:  # first run, start from 0
         startpos = 0
     else:  # subsequent run, startposition is now paged
-        startpos = csw.results['nextrecord']
+        startpos += pagesize
+        #startpos = csw.results['nextrecord']
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=60)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
@@ -172,7 +173,7 @@ while stop == 0:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)
         
             kgset.load_jsonld(filename)
-      
+    
     #check if next record exists 
     if csw.results['nextrecord'] == 0 \
         or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
