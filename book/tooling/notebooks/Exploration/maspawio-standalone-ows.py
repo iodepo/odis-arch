@@ -72,7 +72,7 @@ csw = CatalogueServiceWeb(CSW_ENDPOINT)
 #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
 #csw.getdomain('GetRecords.resultType')
 #print(csw.results)
-csw.getrecords2(esn="full", resulttype="results", typenames='gmd:MD_Metadata')
+csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
 nrecords = len(csw.records)
 print(str(nrecords) + " records found...")
 index = 0
