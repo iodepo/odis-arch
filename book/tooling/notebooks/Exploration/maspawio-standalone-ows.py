@@ -86,15 +86,13 @@ while stop == 0:
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
+    
+    if csw.results['returned'] == 0: #no results
+        break
+
     nlayers = len(csw.records)
     print(str(nlayers) + " records found...")
-    totalrecs += nlayers 
-    
-    if csw.results['nextrecord'] == 0 \
-        or csw.results['returned'] == 0 \
-        or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
-        stop = 1
-        break    
+    totalrecs += nlayers         
 
     #harvest each record layer
     for rec in csw.records:
@@ -165,6 +163,11 @@ while stop == 0:
             json.dump(compacted, f, ensure_ascii=False, indent=4)
         
         kgset.load_jsonld(filename)
+        
+    if csw.results['nextrecord'] == 0 \
+        or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
+        stop = 1
+        break        
     
     #not first run, so trigger next page    
     flag = 1
