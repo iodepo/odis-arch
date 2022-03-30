@@ -83,8 +83,8 @@ while stop == 0:
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
     #csw.getdomain('GetRecords.resultType')
     #print(csw.results)
+    #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
     csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
     nlayers = len(csw.records)
     print(str(nlayers) + " records found...")
