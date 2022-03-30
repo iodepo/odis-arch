@@ -22,9 +22,11 @@ PATH_TO_DATA_FOLDER = "./data-ows/"
 NEW_RDF_FILENAME = "maspawio.rdf"
 HOSTNAME = "http://maspawio.net"
 
+"""
 #########################
 # you shouldn't have to modify anything below
 #########################
+"""
 
 import json
 from pyld import jsonld
