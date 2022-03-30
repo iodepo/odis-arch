@@ -86,7 +86,7 @@ while stop == 0:
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
+    csw.getrecords2(esn="full", startposition=startpos, maxrecords=maxrecs)
     
     if csw.results['returned'] == 0: #no results
         break
