@@ -2,97 +2,891 @@
 @prefix : <https://schema.org/> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 
-<http://maspawio.net/id/1> a :Dataset ;
+<http://maspawio.net/id/0030a210-c413-11e9-ac48-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((39.3 -4.65, 39.3 -4.19, 39.71 -4.19, 39.71 -4.65, 39.3 -4.65))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "This layer shows the  distribution and benefits accrued through  Coastal Protection in the NMC region. Distribution of  Coastal Protection value in the NMC region is measured in  million USD per year . This data was derived from the study \"Understanding and Valuing the Marine Ecosystem Services of the Northern Mozambique Channel \" by Paulo A.L.D. Nunes and Andrea Ghermandi. This study aimed to understand and value the coastal and marine ecosystem services in the Northern Mozambique Channel region (NMC)." ;
-    :keywords "coastal protection",
-        "ecosystem service" ;
-    :name "Distribution of  Coastal Protection in the NMC region" .
+    :name "Fishing intensity Gazi" .
 
-<http://maspawio.net/id/10> a :Dataset ;
+<http://maspawio.net/id/0120a498-7204-11e8-9264-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "This coverage shows spatial extent of selected Land use cover classes in 2000  for the WIO. This land cover data documents how much the WIO region within a 100 km coastal buffer is covered by Rainfed cropland, irrigated or post flooded land and Urban areas. This data coverage is a derived product from European Space Agency land-use cover class global land cover maps at 300m spatial resolution." ;
-    :keywords "land use cover",
-        "urban areas" ;
-    :name "WIO Urban areas 2000" .
+    :name "wio_reef_by_intergrated_local" .
 
-<http://maspawio.net/id/2> a :Dataset ;
+<http://maspawio.net/id/028adc56-c413-11e9-8a24-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((39.1884798881 -4.890664121, 39.1884798881 -4.04911155568, 40.2175070348 -4.04911155568, 40.2175070348 -4.890664121, 39.1884798881 -4.890664121))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((40.5 -2.9, 40.5 -2.48, 40.91 -2.48, 40.91 -2.9, 40.5 -2.9))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "Kwale marine depth contours/vector lines illustrate ocean depth in meters. The layer was derived by CORDIO from the General  Bathymetric  Chart of the Ocean (GEBCO) at a 10 meter contour interval." ;
-    :keywords "bathymetry",
-        "depth" ;
-    :name "kwale Marine depth contours" .
+    :name "Fishing intensity Kipini" .
 
-<http://maspawio.net/id/3> a :Dataset ;
+<http://maspawio.net/id/032a1d26-d4e5-11e7-9524-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.4587595947 -11.2746685539, 40.4587595947 -10.5844533393, 40.7426626187 -10.5844533393, 40.7426626187 -11.2746685539, 40.4587595947 -11.2746685539))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Quiwia Lalane habitat classification" .
+
+<http://maspawio.net/id/03be4f3c-14c1-11ea-98e8-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.2188816912 -4.71986163842, 39.2188816912 -4.11922536091, 39.6233411109 -4.11922536091, 39.6233411109 -4.71986163842, 39.2188816912 -4.71986163842))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Flood prone location kwale County" .
+
+<http://maspawio.net/id/0416d4ca-e26a-11e8-846f-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "Landscape Portal WMS" ;
-    :name "Landscape Portal" .
+    :name "MS_WIO_Fish_Diversity_survey_sites_2018.txt" .
 
-<http://maspawio.net/id/4> a :Dataset ;
+<http://maspawio.net/id/047cac4c-c413-11e9-95bc-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((40.9624453969 -2.20977676576, 40.9624453969 -1.73499674175, 41.5101674629 -1.73499674175, 41.5101674629 -2.20977676576, 40.9624453969 -2.20977676576))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((39.15 -4.8, 39.15 -4.49, 39.54 -4.49, 39.54 -4.8, 39.15 -4.8))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description """This layer shows the extent of mangrove cover of Pate Kiunga seascape in 1995. The cover map was developed by CORDIO EA through Landsat Image classification under the International Centre for Research in Agroforestry (ICRAF)-led project funded by the Inter-Governmental Authority on Development (IGAD).\r
-The project aimed to link the use and benefit of these natural resources to the local people, as well as better understand the drivers and pressures of biodiversity loss to improve management measures.""" ;
-    :keywords "Kiunga",
-        "Pate",
-        "mangrove" ;
-    :name "Pate-kiunga Mangrove extent 1995" .
+    :name "Fishing intensity Vanga Jimbo" .
 
-<http://maspawio.net/id/5> a :Dataset ;
+<http://maspawio.net/id/0532b57e-07ee-11e8-84f0-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.0239869071 -31.8342936409, 29.0239869071 11.9809999471, 63.5020828254 11.9809999471, 63.5020828254 -31.8342936409, 29.0239869071 -31.8342936409))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO 100 km coastal buffer" .
+
+<http://maspawio.net/id/06a957f6-e09c-11e7-b7b4-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((30.5822543566 -23.4538596875, 30.5822543566 -8.1220760479, 52.5550860596 -8.1220760479, 52.5550860596 -23.4538596875, 30.5822543566 -23.4538596875))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "SMC human population count at three different level" .
+
+<http://maspawio.net/id/079271b6-4301-11e9-a9dd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((18.4261768026 -55.2578787267, 18.4261768026 16.3872584652, 151.111510724 16.3872584652, 151.111510724 -55.2578787267, 18.4261768026 -55.2578787267))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "pelagic_region" .
+
+<http://maspawio.net/id/0a6840fc-79bb-11e7-97fb-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.1411325076 -29.6989089134, 29.1411325076 -0.767512223036, 53.692486706 -0.767512223036, 53.692486706 -29.6989089134, 29.1411325076 -29.6989089134))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Marine Ecoregions Of the World (MEOW)" .
+
+<http://maspawio.net/id/0b83c25e-e26a-11e8-8584-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "MS_WIO_Fish_Diversity_survey_sites_2018.txt" .
+
+<http://maspawio.net/id/0bc9bdc6-ce9e-11e7-80a1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014 and  2016 Mean Corallivores Abundance (#/ha)" .
+
+<http://maspawio.net/id/0c639c14-cf54-11e7-945c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014 and  2016 Herbivores & Detritivores Biomass kg/ha" .
+
+<http://maspawio.net/id/0d08d8b6-8ef7-11e7-9241-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "March, April, May SST mean 2003-2016" .
+
+<http://maspawio.net/id/0f54802e-4301-11e9-88b3-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((18.4261768026 -55.2578787267, 18.4261768026 16.3872584652, 151.111510724 16.3872584652, 151.111510724 -55.2578787267, 18.4261768026 -55.2578787267))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "pelagic_province" .
+
+<http://maspawio.net/id/1204fb30-b277-11e7-b97c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "March-May  Chlorophyll a Anomaly 2016 mg m^-3" .
+
+<http://maspawio.net/id/130f144e-9072-11ea-80a5-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sea leve Rise vulnearbility map" .
+
+<http://maspawio.net/id/14a3f9a4-7b4a-11e7-b623-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of Fisheries landed values in the NMC region" .
+
+<http://maspawio.net/id/157215fc-4301-11e9-a9dd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((18.4261768026 -55.2578787267, 18.4261768026 10.5357182854, 151.111510724 10.5357182854, 151.111510724 -55.2578787267, 18.4261768026 -55.2578787267))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "benthic_region" .
+
+<http://maspawio.net/id/1ae6541c-bc11-11e7-8225-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kenya Lamu Kiunga  Coral Surveys 2014/2015" .
+
+<http://maspawio.net/id/1c83137a-6bf4-11e9-a535-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.2192993198 -4.80338311214, 39.2192993198 -1.5749304189, 41.7576549477 -1.5749304189, 41.7576549477 -4.80338311214, 39.2192993198 -4.80338311214))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kenya continental shelf" .
+
+<http://maspawio.net/id/2288e7e8-acc1-11e7-ba20-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.2019941334 -25.6002807611, 34.2019941334 -10.1639776044, 50.0361352005 -10.1639776044, 50.0361352005 -25.6002807611, 34.2019941334 -25.6002807611))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Coastal Digital Elevation Model (1 m resolution) - Western Indian Ocean" .
+
+<http://maspawio.net/id/27565590-8ef7-11e7-b037-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sept, Oct, Nov SST mean 2003-2016" .
+
+<http://maspawio.net/id/28b106e0-ad15-11e9-966e-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.44500732 -4.72041702, 38.44500732 -3.56451416, 39.64458466 -3.56451416, 39.64458466 -4.72041702, 38.44500732 -4.72041702))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale County admin boundary" .
+
+<http://maspawio.net/id/29b6f86c-d9bb-11e7-bf87-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((27.441020659 -33.28806096, 27.441020659 12.415473036, 55.4127426146 12.415473036, 55.4127426146 -33.28806096, 27.441020659 -33.28806096))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Mangroves" .
+
+<http://maspawio.net/id/2b28fe1e-ad15-11e9-82ae-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.4450073242 -4.72041702271, 38.4450073242 -3.56451416016, 39.6445846558 -3.56451416016, 39.6445846558 -4.72041702271, 38.4450073242 -4.72041702271))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale county wards" .
+
+<http://maspawio.net/id/2c385c32-ad15-11e9-966e-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.44500732 -4.72041702, 38.44500732 -3.56451416, 39.64458466 -3.56451416, 39.64458466 -4.72041702, 38.44500732 -4.72041702))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale sub-county" .
+
+<http://maspawio.net/id/3046b5fc-18e0-11eb-894f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.235491 -4.674234, 39.235491 -2.094547, 41.116223 -2.094547, 41.116223 -4.674234, 39.235491 -4.674234))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "locally managed marine areas Kenya" .
+
+<http://maspawio.net/id/306aebde-6880-11e7-9bb0-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.9610089416 -2.20980409873, 40.9610089416 -1.73114006666, 41.5111111344 -1.73114006666, 41.5111111344 -2.20980409873, 40.9610089416 -2.20980409873))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate-kiunga Mangrove extent 2005" .
+
+<http://maspawio.net/id/3093ffb2-33da-11e8-823f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "MASPAWIO User manual" .
+
+<http://maspawio.net/id/31ab35e4-b277-11e7-8e86-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sept-Nov Chlorophyll a Anomaly 2016 mg m^-3" .
+
+<http://maspawio.net/id/3339cdca-5a75-11e8-a0da-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.6913526267 -2.4824234606, 40.6913526267 -1.6555906817, 41.5788494593 -1.6555906817, 41.5788494593 -2.4824234606, 40.6913526267 -2.4824234606))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kenya_coast_line" .
+
+<http://maspawio.net/id/35741c18-6880-11e7-8ed1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.9606477436 -2.2090237405, 40.9606477436 -1.74123893174, 41.5105117804 -1.74123893174, 41.5105117804 -2.2090237405, 40.9606477436 -2.2090237405))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate-kiunga Mangrove extent 2010" .
+
+<http://maspawio.net/id/38397902-6880-11e7-b1aa-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((40.9607472627 -2.20926194635, 40.9607472627 -1.73879333016, 41.5093823631 -1.73879333016, 41.5093823631 -2.20926194635, 40.9607472627 -2.20926194635))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description """This layer shows the extent of mangrove cover of Pate Kiunga seascape in 2014. The cover map was developed by CORDIO EA through Landsat Image classification under the International Centre for Research in Agroforestry (ICRAF)-led project funded by the Inter-Governmental Authority on Development (IGAD).\r
-The project aimed to link the use and benefit of these natural resources to the local people, as well as better understand the drivers and pressures of biodiversity loss to improve management measures.""" ;
-    :keywords "Kiunga",
-        "Pate",
-        "mangrove" ;
     :name "Pate-kiunga Mangrove extent 2014" .
 
-<http://maspawio.net/id/6> a :Dataset ;
+<http://maspawio.net/id/38d665c2-66d3-11e7-a458-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((32.949999559 -26.049999865, 32.949999559 -1.98, 59.45 -1.98, 59.45 -26.049999865, 32.949999559 -26.049999865))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description """This  vector layer shows the location  marine areas managed at a local level by the coastal communities through collaborative groups, organisations and government representatives who reside or are based within the immediate area.\r
-The layer also shows/contains the attributes  of the  associated coastal and marine resources""" ;
-    :keywords "LMMA",
-        "Western Indian Ocean" ;
-    :name "WIO Locally Managed Marine areas" .
+    :name "WIO Coral reef layer" .
 
-<http://maspawio.net/id/7> a :Dataset ;
+<http://maspawio.net/id/39568de8-6565-11e7-ba83-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((16.45802 -34.83514, 16.45802 11.989306, 63.5185056567 11.989306, 63.5185056567 -34.83514, 16.45802 -34.83514))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((32.6857333 -27.5280333, 32.6857333 12.4226, 104.7068889 12.4226, 104.7068889 -27.5280333, 32.6857333 -27.5280333))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description """WIO Coastal districts layer is a merged layer of national level administration 2 data/shape file  retrieved form GADM database of Global Administrative Areas (GADM ) website. \r
-Level  2  administration are  smaller units of administration  often referred to as districts.""" ;
-    :keywords "administrative",
-        "boundary" ;
-    :name "WIO Coastal districts" .
+    :name "WIO 2016 bleaching_observations" .
 
-<http://maspawio.net/id/8> a :Dataset ;
+<http://maspawio.net/id/3a75ade4-6880-11e7-8ed1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.9624453969 -2.20977676576, 40.9624453969 -1.73499674175, 41.5101674629 -1.73499674175, 41.5101674629 -2.20977676576, 40.9624453969 -2.20977676576))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate-kiunga Mangrove extent 1995" .
+
+<http://maspawio.net/id/3a808070-b308-11e7-b3c1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Dec-Feb 2016 SST Anomaly" .
+
+<http://maspawio.net/id/3b46e058-88a6-11ec-bbf1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-1.0 -1.0, -1.0 0.0, 0.0 0.0, 0.0 -1.0, -1.0 -1.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Coral Reefs Ecoregions RLE 2020" .
+
+<http://maspawio.net/id/3ec59328-6880-11e7-b1aa-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((40.9613300604 -2.20520803917, 40.9613300604 -1.73608069834, 41.500710639 -1.73608069834, 41.500710639 -2.20520803917, 40.9613300604 -2.20520803917))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate-kiunga Mangrove extent 2000" .
+
+<http://maspawio.net/id/3f87d6d4-7204-11e8-8ac4-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "wio_reef_by_marine_based_threat" .
+
+<http://maspawio.net/id/40f3d164-b308-11e7-8359-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "June-Aug 2016 SS T  Anomaly" .
+
+<http://maspawio.net/id/47d8a3c8-923e-11e7-bdd9-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Dec, Jan, Feb 2003-2016 Mean Chlorophyll a Concentration, mg m^-3" .
+
+<http://maspawio.net/id/49945dd2-6deb-11e7-9b3d-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.567 -25.9746178293, 32.567 11.5732464678, 57.5111582109 11.5732464678, 57.5111582109 -25.9746178293, 32.567 -25.9746178293))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Under sea cable landing station" .
+
+<http://maspawio.net/id/49cf4c5a-b308-11e7-bc68-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "March-May  2016 SST Anomaly" .
+
+<http://maspawio.net/id/4ada3a5e-6deb-11e7-874f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.483570508 -28.8906189448, 31.483570508 12.7767940479, 72.7161217432 12.7767940479, 72.7161217432 -28.8906189448, 31.483570508 -28.8906189448))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO undersea cables" .
+
+<http://maspawio.net/id/4bf03330-95d9-11ea-b8dd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "IKI Project site" .
+
+<http://maspawio.net/id/4c0668e6-7b4a-11e7-8f30-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of Mariculture values in the NMC region" .
+
+<http://maspawio.net/id/4c42a3c8-686d-11e7-9685-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((17.9583325415 -34.833333434, 17.9583325415 11.916666379, 51.3749990746 11.916666379, 51.3749990746 -34.833333434, 17.9583325415 -34.833333434))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Human population count (2015 estimate) within 100 km buffer" .
+
+<http://maspawio.net/id/4c891542-7902-11e7-a6ff-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.2019941335 -29.2079489845, 34.2019941335 -9.33682943726, 50.6780480294 -9.33682943726, 50.6780480294 -29.2079489845, 34.2019941335 -29.2079489845))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Crustal age of the Mozambique channel" .
+
+<http://maspawio.net/id/4cc7af9e-e097-11e7-9c09-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((16.4583325476 -34.833333434, 16.4583325476 11.9833330455, 63.4999990261 11.9833330455, 63.4999990261 -34.833333434, 16.4583325476 -34.833333434))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "NMC  human population count" .
+
+<http://maspawio.net/id/4d6a4ac2-b308-11e7-b3c1-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sep-Nov 2016 SS T  Anomaly" .
+
+<http://maspawio.net/id/4e24838a-e428-11e9-be34-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.1614002263 -4.89274717191, 39.1614002263 -4.04816825176, 40.2195900857 -4.04816825176, 40.2195900857 -4.89274717191, 39.1614002263 -4.89274717191))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale bathymetry" .
+
+<http://maspawio.net/id/506353c4-14bb-11ea-a4ee-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.2097947475 -4.67081930588, 39.2097947475 -4.09411486878, 39.6424676132 -4.09411486878, 39.6424676132 -4.67081930588, 39.2097947475 -4.67081930588))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale County Coastal ward roads" .
+
+<http://maspawio.net/id/5118373a-e428-11e9-90ff-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.1884798881 -4.890664121, 39.1884798881 -4.04911155568, 40.2175070348 -4.04911155568, 40.2175070348 -4.890664121, 39.1884798881 -4.890664121))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale Marine depth contours" .
+
+<http://maspawio.net/id/516e1404-923e-11e7-8423-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "June-Aug 2003-2016 Mean Chlorophyll a Concentration, mg m^-3" .
+
+<http://maspawio.net/id/52433800-bbba-11e7-95cc-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.2019941335 -29.1320883657, 34.2019941335 -3.5420404608, 62.4847783213 -3.5420404608, 62.4847783213 -29.1320883657, 34.2019941335 -29.1320883657))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Potential Marine Heritage Sites" .
+
+<http://maspawio.net/id/52ab0154-83b0-11ea-a913-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((13.334894579 -38.160036684, 13.334894579 13.497539365, 67.040889562 13.497539365, 67.040889562 -38.160036684, 13.334894579 -38.160036684))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Exclusive Economic Zone (EEZ)" .
+
+<http://maspawio.net/id/5783da64-906e-11ea-a8da-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.079894853 -4.999583333, 39.079894853 -3.080416667, 39.999894853 -3.080416667, 39.999894853 -4.999583333, 39.079894853 -4.999583333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sea Level Rise vulnearbility" .
+
+<http://maspawio.net/id/5a040ff6-923e-11e7-90a6-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "March- May 2003-2016 Mean Chlorophyll a Concentration, mg m^-3" .
+
+<http://maspawio.net/id/5b385402-e0ab-11e7-842d-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((35.9608764648 -17.3095092773, 35.9608764648 -7.41290283203, 49.7175292969 -7.41290283203, 49.7175292969 -17.3095092773, 35.9608764648 -17.3095092773))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Northern Mozambique 90 meter DEM" .
+
+<http://maspawio.net/id/5da2efa4-630b-11e7-a81c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-25.3605575562 -46.9697265625, -25.3605575562 37.3404121399, 63.4957580566 37.3404121399, 63.4957580566 -46.9697265625, -25.3605575562 -46.9697265625))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "African Countries" .
+
+<http://maspawio.net/id/5dac6224-14bf-11ea-86e9-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.600769043 -4.25430107117, 39.600769043 -4.15220020376, 39.6506329688 -4.15220020376, 39.6506329688 -4.25430107117, 39.600769043 -4.25430107117))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Locations of sand beaches in Kwale county" .
+
+<http://maspawio.net/id/5fec2eba-0e7d-11e8-89d7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.204065522 -4.66557963791, 39.204065522 -1.68915261152, 41.5309244238 -1.68915261152, 41.5309244238 -4.66557963791, 39.204065522 -4.66557963791))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kenya  fish landing site" .
+
+<http://maspawio.net/id/601b8244-e9d9-11e9-ae40-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale county area with elevation below 30 meters" .
+
+<http://maspawio.net/id/628e9cf4-923e-11e7-9769-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sept,Oct, Nov 2003-2016  Mean Chlorophyll a Concentration, mg m^-3" .
+
+<http://maspawio.net/id/62f726c0-bbf6-11e7-95cc-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.5385 11.510204, 42.5385 11.96846, 43.327323 11.96846, 43.327323 11.510204, 42.5385 11.510204))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014 Benthic surveys" .
+
+<http://maspawio.net/id/636c2328-8408-11e8-b3cd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.9028518353 -14.7422595074, 38.9028518353 -5.56846607415, 50.2919149134 -5.56846607415, 50.2919149134 -14.7422595074, 38.9028518353 -14.7422595074))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "ms_wio_sites_30km_buffer" .
+
+<http://maspawio.net/id/64e173be-bbf6-11e7-87d7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.5385 11.493115, 42.5385 11.961101, 43.320049 11.961101, 43.320049 11.493115, 42.5385 11.493115))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti Coral recruitment 2014" .
+
+<http://maspawio.net/id/6643bb54-bbf6-11e7-8c50-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((41.01296667 -2.2158, 41.01296667 -1.828320986, 41.44495499 -1.828320986, 41.44495499 -2.2158, 41.01296667 -2.2158))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate Kiunga Coral Genus survey 2015" .
+
+<http://maspawio.net/id/671bc2c0-67b3-11e7-b603-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((18.3749992066 -29.4166667889, 18.3749992066 9.59166638835, 47.7416657558 9.59166638835, 47.7416657558 -29.4166667889, 18.3749992066 -29.4166667889))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Human population count in major  WIO river basins  2015 estimate" .
+
+<http://maspawio.net/id/67906de0-bbf6-11e7-87d7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((41.01296667 -2.2158, 41.01296667 -1.828320986, 41.44495499 -1.828320986, 41.44495499 -2.2158, 41.01296667 -2.2158))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate Kiunga  Coral species richness 2015" .
+
+<http://maspawio.net/id/7282bd8c-79d1-11e7-b9d0-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.24054 -24.50434, 39.24054 -10.58200169, 49.19515 -10.58200169, 49.19515 -24.50434, 39.24054 -24.50434))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pelagis Observatory" .
+
+<http://maspawio.net/id/734c2e88-7b48-11e7-b261-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of Carbon Sequestration values  NMC region" .
+
+<http://maspawio.net/id/75982038-7b49-11e7-b261-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of  Coastal Protection in the NMC region" .
+
+<http://maspawio.net/id/79ec3644-7204-11e8-8c89-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "wio_reef_by_over_fishing_threat" .
+
+<http://maspawio.net/id/7b4c42a8-07ed-11e8-82a4-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((30.0734768868 -31.2227794124, 30.0734768868 11.6835277504, 51.2585487505 11.6835277504, 51.2585487505 -31.2227794124, 30.0734768868 -31.2227794124))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO high resolution coast line" .
+
+<http://maspawio.net/id/7cf94f7e-e428-11e9-be34-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.445138889 -4.72041666651, 38.445138889 -3.56458333317, 39.6445833335 -3.56458333317, 39.6445833335 -4.72041666651, 38.445138889 -4.72041666651))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Digital Elevation Model (30 m)" .
+
+<http://maspawio.net/id/8334da36-84e1-11e8-b3cd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.44500732 -4.72041702, 38.44500732 -2.3092041, 40.24152756 -2.3092041, 40.24152756 -4.72041702, 38.44500732 -4.72041702))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "EKLA study area - counties-kwale kilifi & mombasa" .
+
+<http://maspawio.net/id/849e8bde-95d7-11ea-987d-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.208266 -13.412194, 39.208266 -2.78678, 40.5807495 -2.78678, 40.5807495 -13.412194, 39.208266 -13.412194))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "IKI Project Sites: Kenya, Tanzania and, Mozambique" .
+
+<http://maspawio.net/id/866ae29e-79bc-11e7-97fb-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((39.0 -21.916667, 39.0 -10.333333, 47.75 -10.333333, 47.75 -21.916667, 39.0 -21.916667))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "This layer shows the location of underwater mountains that rise hundreds or thousands of feet from the seafloor in the WIO region. This layer was retrieved from the  World Conservation  Monitoring Centre as vector points" ;
-    :keywords "seamounts",
-        "undersea features" ;
     :name "Under sea features" .
 
-<http://maspawio.net/id/9> a :Dataset ;
+<http://maspawio.net/id/8cc963b0-92e7-11e7-9769-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "2016 Annual SST Anomaly &  2016 Bleaching Observation" .
+
+<http://maspawio.net/id/8ce7e13c-7b54-11e7-86d8-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.2019941334 -25.6002807611, 34.2019941334 -10.1639776044, 50.0361352005 -10.1639776044, 50.0361352005 -25.6002807611, 34.2019941334 -25.6002807611))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Coastal Geologic Provinces of Mozambique channel region" .
+
+<http://maspawio.net/id/919cb9ec-b956-11e7-a59f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.56 -27.19018, 32.56 -1.80927006317, 72.37311 -1.80927006317, 72.37311 -27.19018, 32.56 -27.19018))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sea turtle nesting location WIO" .
+
+<http://maspawio.net/id/931b57e2-b956-11e7-8c50-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.1666984558 -25.9167003632, 34.1666984558 -7.0, 52.7332992554 -7.0, 52.7332992554 -25.9167003632, 34.1666984558 -25.9167003632))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Shark sighting  2006" .
+
+<http://maspawio.net/id/935425aa-78f5-11e7-9661-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.2019941335 -29.1320883657, 34.2019941335 -9.33682943726, 50.753492145 -9.33682943726, 50.753492145 -29.1320883657, 34.2019941335 -29.1320883657))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Mozambique Channel Sediment thickness" .
+
+<http://maspawio.net/id/941e6470-b499-11e7-8359-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.3492 -28.507958127, 32.3492 -1.70694, 57.801719488 -1.70694, 57.801719488 -28.507958127, 32.3492 -28.507958127))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Marine Protected Area" .
+
+<http://maspawio.net/id/967694da-e427-11e9-90ff-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.201620659 -4.677960961, 39.201620659 -4.00446096, 39.64952066 -4.00446096, 39.64952066 -4.677960961, 39.201620659 -4.677960961))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "kwale mangrove extent (2010)" .
+
+<http://maspawio.net/id/980f67ce-1661-11ea-9283-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale county coastal wards roads" .
+
+<http://maspawio.net/id/9826ba10-83b1-11ea-ae73-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO GCRMN Benthic Monitoring Sites (April 2020)" .
+
+<http://maspawio.net/id/988bf56a-79be-11e7-83b0-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.0041666667 -26.9958333333, 34.0041666667 -7.00416666667, 51.9607368226 -7.00416666667, 51.9607368226 -26.9958333333, 34.0041666667 -26.9958333333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Mozambique Channel Depth Contours" .
+
+<http://maspawio.net/id/9ade6c48-f9fd-11e7-b4fa-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.5715488131 -16.2346115105, 39.5715488131 -9.13989292112, 49.7296577423 -9.13989292112, 49.7296577423 -16.2346115105, 39.5715488131 -16.2346115105))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "NMC Inner Boundary" .
+
+<http://maspawio.net/id/9bb25a3a-f9fd-11e7-a92b-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.2988085737 -19.1593448161, 38.2988085737 -7.3141297349, 50.6148462823 -7.3141297349, 50.6148462823 -19.1593448161, 38.2988085737 -19.1593448161))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "NMC outer boundary" .
+
+<http://maspawio.net/id/9bf0d354-7203-11e8-8dd7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.7755118329 -13.9421381949, 38.7755118329 -0.00307863557055, 49.657014826 -0.00307863557055, 49.657014826 -13.9421381949, 38.7755118329 -13.9421381949))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "nmc_hii_coastal_extent" .
+
+<http://maspawio.net/id/9cb06ad8-cf5c-11e7-b8a6-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.498664856 -27.5131802012, 32.498664856 12.3436799084, 71.5519592375 12.3436799084, 71.5519592375 -27.5131802012, 32.498664856 -27.5131802012))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "The Diversity and Bio-geography of Western Indian Ocean Reef Building Corals" .
+
+<http://maspawio.net/id/9da075f6-7203-11e8-8c89-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((33.999999144 -19.1166668301, 33.999999144 0.305333169856, 56.697999144 0.305333169856, 56.697999144 -19.1166668301, 33.999999144 -19.1166668301))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Number of people living within 100 km  coastal buffer in the WIO" .
+
+<http://maspawio.net/id/9e0a1e3e-1a6c-11eb-ae5a-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.079894853 -4.999583333, 39.079894853 -3.080416667, 39.999894853 -3.080416667, 39.999894853 -4.999583333, 39.079894853 -4.999583333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Stepping stones to a climate-resilient future?" .
+
+<http://maspawio.net/id/None> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Landscape Portal" .
+
+<http://maspawio.net/id/a0475c2a-655c-11e7-b9eb-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.6857333 -27.5280333, 32.6857333 12.4226, 104.7068889 12.4226, 104.7068889 -27.5280333, 32.6857333 -27.5280333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO 2016  mortality" .
+
+<http://maspawio.net/id/a8a3db64-b403-11e7-8ef3-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((16.45802 -34.83514, 16.45802 11.989306, 63.5185056567 11.989306, 63.5185056567 -34.83514, 16.45802 -34.83514))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Coastal districts" .
+
+<http://maspawio.net/id/a9076964-6876-11e7-8d52-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO human Population within 100 km buffer zone" .
+
+<http://maspawio.net/id/aa1e9362-e8e0-11e9-b680-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.204065522 -4.66557963791, 39.204065522 -4.02203189119, 39.6029883584 -4.02203189119, 39.6029883584 -4.66557963791, 39.204065522 -4.66557963791))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "fish landing site" .
+
+<http://maspawio.net/id/ab6ae57c-e8e0-11e9-9e15-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.3375217533 -4.72445484887, 39.3375217533 -4.70804406446, 39.3549380992 -4.70804406446, 39.3549380992 -4.72445484887, 39.3375217533 -4.72445484887))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "snorkelling site" .
+
+<http://maspawio.net/id/aff57546-1660-11ea-b636-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale BMU and fish Landing sites" .
+
+<http://maspawio.net/id/b01ac9e0-7b49-11e7-8f30-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of Coastal Recreation values in the NMC region" .
+
+<http://maspawio.net/id/b2a760ce-4302-11e9-88b3-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((18.4261768017 -55.2578787267, 18.4261768017 12.3805923457, 151.108992234 12.3805923457, 151.108992234 -55.2578787267, 18.4261768017 -55.2578787267))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Benthic province" .
+
+<http://maspawio.net/id/b4d57d60-e427-11e9-89d6-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.210472 -4.852026, 39.210472 -3.954112, 39.771919 -3.954112, 39.771919 -4.852026, 39.210472 -4.852026))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale reef at risk (Integrated local Threats)" .
+
+<http://maspawio.net/id/b5ed7a5e-7204-11e8-9264-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "wio_reef_by_watershed_based_pollution" .
+
+<http://maspawio.net/id/ba019c30-8f04-11e7-9175-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Sea Surface Temperature (SST) 2002-2016: Seasonal means and 2016 anomalies" .
+
+<http://maspawio.net/id/bb8524a4-b40d-11e7-bde9-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Population distribution in major drainage basins" .
+
+<http://maspawio.net/id/be4f43a4-7203-11e8-8dd7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.8671066406 -27.0173701471, 32.8671066406 12.9389764623, 72.7374771163 12.9389764623, 72.7374771163 -27.0173701471, 32.8671066406 -27.0173701471))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "wio_reef_by_coastal_development_threat" .
+
+<http://maspawio.net/id/c3d54db6-d5bc-11e7-b9ca-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((20.4789547027 -49.5210382389, 20.4789547027 9.08173175731, 133.154325709 9.08173175731, 133.154325709 -49.5210382389, 20.4789547027 -49.5210382389))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "CBD Southern Indian Ocean described EBSAs" .
+
+<http://maspawio.net/id/c7ae8252-83a4-11ea-a913-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.6036 -27.9267, 32.6036 -1.704116667, 63.47391667 -1.704116667, 63.47391667 -27.9267, 32.6036 -27.9267))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO GCRMN Benthic Monitoring Sites (April 2020)" .
+
+<http://maspawio.net/id/c87e770c-e429-11e9-a56d-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.323800002 -4.74626, 39.323800002 -3.93794, 39.64411 -3.93794, 39.64411 -4.74626, 39.323800002 -4.74626))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale Marine Protected Area" .
+
+<http://maspawio.net/id/c9368f56-9ee1-11e8-a5fd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((33.999999144 -19.1166668301, 33.999999144 0.3053331699, 56.697999144 0.3053331699, 56.697999144 -19.1166668301, 33.999999144 -19.1166668301))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Spatial outputs_Pop_EEZ Area" .
+
+<http://maspawio.net/id/c95dd8c2-6e04-11e7-874f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.5016290727 -27.5983709273, 32.5016290727 12.3400290727, 71.3564290727 12.3400290727, 71.3564290727 -27.5983709273, 32.5016290727 -27.5983709273))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO ship traffic 2014" .
+
+<http://maspawio.net/id/cbddf06e-0e8b-11e8-aa86-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((17.9666666667 -34.1833333333, 17.9666666667 11.2833333333, 63.4166666667 11.2833333333, 63.4166666667 -34.1833333333, 17.9666666667 -34.1833333333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "maritime_port_index" .
+
+<http://maspawio.net/id/cc619e62-238c-11e8-bfc4-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Urban areas 1995" .
+
+<http://maspawio.net/id/cd03acee-6586-11e7-8ac0-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.726611 -27.414917, 32.726611 -1.704116667, 63.47391667 -1.704116667, 63.47391667 -27.414917, 32.726611 -27.414917))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO GCRMN reef monitoring stations" .
+
+<http://maspawio.net/id/cd8b584a-66f0-11e7-9bb0-0a735f7a740c> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((32.9527 -26.07360176, 32.9527 -2.183833333, 55.64822 -2.183833333, 55.64822 -26.07360176, 32.9527 -26.07360176))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "This layer shows Algal cover for selected sites and years i.e. 2014-2016 as reported through the WIO  GCRMN 2015-2016 process." ;
-    :keywords "algae",
-        "coral cover" ;
     :name "WIO GCRMN sites Algal cover for selected years 2014-2016" .
+
+<http://maspawio.net/id/cdc37e64-14ea-11ea-9dc6-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((39.219852 -4.6693, 39.219852 -4.05243, 39.62925524 -4.05243, 39.62925524 -4.6693, 39.219852 -4.6693))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale BMU and Fish landing stations" .
+
+<http://maspawio.net/id/d1435a3c-238d-11e8-b48f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Urban areas 2000" .
+
+<http://maspawio.net/id/d334f7f0-8ef6-11e7-aa8c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Dec,Jan, Feb SST mean 2003-2016" .
+
+<http://maspawio.net/id/d418e0d8-238d-11e8-915c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Urban areas 2005" .
+
+<http://maspawio.net/id/d4868a5e-78eb-11e7-a08e-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((34.0 -26.0, 34.0 -10.0, 50.0 -10.0, 50.0 -26.0, 34.0 -26.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Mozambique Channel bathymetry meters" .
+
+<http://maspawio.net/id/d5910f8a-238d-11e8-b37c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Urban areas 2010" .
+
+<http://maspawio.net/id/d760d296-238d-11e8-939e-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.3770901868 -31.7504895603, 29.3770901868 6.9690694937, 63.4744133368 6.9690694937, 63.4744133368 -31.7504895603, 29.3770901868 -31.7504895603))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Urban areas 2015" .
+
+<http://maspawio.net/id/d920723e-b27d-11e7-8bdc-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "June-Aug  Chlorophyll a Anomaly 2016 mg m^-3" .
+
+<http://maspawio.net/id/d98ec300-9479-11e7-8423-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Pate-Kiunga Mangrove cover loss between 1995 and 2014" .
+
+<http://maspawio.net/id/dc7981fa-84e6-11e8-b3cd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.44500732 -4.72041702, 38.44500732 -2.3092041, 40.24152756 -2.3092041, 40.24152756 -4.72041702, 38.44500732 -4.72041702))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Digital Elevation Model" .
+
+<http://maspawio.net/id/dd82a674-6ddd-11e7-be4f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((30.6052259036 -32.1485140052, 30.6052259036 -5.33674739146, 45.5315847931 -5.33674739146, 45.5315847931 -32.1485140052, 30.6052259036 -32.1485140052))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Marine highway" .
+
+<http://maspawio.net/id/dee08692-66e1-11e7-86dd-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.9527 -26.07360176, 32.9527 -2.183833333, 55.64822 -2.183833333, 55.64822 -26.07360176, 32.9527 -26.07360176))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO GCRMN sites Live coral cover for selected years 2014-2016" .
+
+<http://maspawio.net/id/df6cfa24-b276-11e7-8e86-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.9583492279 -30.0350589752, 29.9583492279 6.03946495056, 74.9890193939 6.03946495056, 74.9890193939 -30.0350589752, 29.9583492279 -30.0350589752))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Dec-Feb  Chlorophyll a Anomaly 2016 mg m^-3" .
+
+<http://maspawio.net/id/e2c305d4-b496-11e7-8ef3-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.949999559 -26.049999865, 32.949999559 -1.98, 59.45 -1.98, 59.45 -26.049999865, 32.949999559 -26.049999865))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Locally Managed Marine areas" .
+
+<http://maspawio.net/id/e4193462-430b-11e9-979b-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Indian Ocean Bio-regions (Draft)" .
+
+<http://maspawio.net/id/e50f5274-7b49-11e7-ab76-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((31.3062989996 -26.8686949999, 31.3062989996 -3.71263799974, 63.503471 -3.71263799974, 63.503471 -26.8686949999, 31.3062989996 -26.8686949999))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of coastal tourism values in the NMC region" .
+
+<http://maspawio.net/id/e608b154-cdef-11e7-bc57-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014 and 2016 Total  Fish Abundance (individuals/ha)" .
+
+<http://maspawio.net/id/e83f0e90-bb62-11e7-8add-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((13.334894579 -38.160036684, 13.334894579 13.497539365, 67.040889562 13.497539365, 67.040889562 -38.160036684, 13.334894579 -38.160036684))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO Exclusive Economic Zones" .
+
+<http://maspawio.net/id/e8ab5fae-b406-11e7-8ef3-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180.0 -90.0, -180.0 90.0, 180.0 90.0, 180.0 -90.0, -180.0 -90.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "WIO human Population count  2015  estimates" .
+
+<http://maspawio.net/id/eae0a89a-687c-11e7-b1aa-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((16.4583325476 -34.833333434, 16.4583325476 11.9833330455, 63.4999990261 11.9833330455, 63.4999990261 -34.833333434, 16.4583325476 -34.833333434))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "National human population count in the WIO" .
+
+<http://maspawio.net/id/ec0e071c-cf56-11e7-896f-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014 and 2016 Mean Piscivores  & Omnivores Biomass kg_ha" .
+
+<http://maspawio.net/id/ef113ed2-cf53-11e7-8422-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Djibouti 2014  & 2016 Herbivores & Detritivores Abundance #Individuals/ha" .
+
+<http://maspawio.net/id/f217e79e-e427-11e9-8ad7-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.4412490923 -4.71708294515, 38.4412490923 -3.56708294975, 39.6412490875 -3.56708294975, 39.6412490875 -4.71708294515, 38.4412490923 -4.71708294515))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Kwale human population density  (Year 2000)" .
+
+<http://maspawio.net/id/f44a9926-e427-11e9-89d6-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((38.4412490923 -4.71708294515, 38.4412490923 -3.56708294975, 39.6412490875 -3.56708294975, 39.6412490875 -4.71708294515, 38.4412490923 -4.71708294515))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Projected human population density (Kwale 2020)" .
+
+<http://maspawio.net/id/f49c71fc-8ef6-11e7-bc7c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((29.958355 -40.026192, 29.958355 6.038708, 74.982005 6.038708, 74.982005 -40.026192, 29.958355 -40.026192))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "June, July, August  SST mean 2003-2016" .
+
+<http://maspawio.net/id/f72135ca-d9b5-11e7-8c6c-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((32.346837629 -28.277771101, 32.346837629 -12.301710533, 49.244946917 -12.301710533, 49.244946917 -28.277771101, 32.346837629 -28.277771101))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Distribution of Saltmarshes in the WIO" .
+
+<http://maspawio.net/id/f8983746-bbbf-11e7-8c50-0a735f7a740c> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((27.4 -43.6, 27.4 26.8, 80.2 26.8, 80.2 -43.6, 27.4 -43.6))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :name "Ocean Bathymetry" .
 
