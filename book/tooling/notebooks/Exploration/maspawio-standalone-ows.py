@@ -82,7 +82,7 @@ while stop == 0:
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
     #csw.getdomain('GetRecords.resultType')
-    #print(csw.results)
+    print(csw.results)
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
