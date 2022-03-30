@@ -164,6 +164,9 @@ while stop == 0:
             json.dump(compacted, f, ensure_ascii=False, indent=4)
         
         kgset.load_jsonld(filename)
+    
+    #not first run, so trigger next page    
+    flag = 1
 
 print("\n")
 print("************************")
