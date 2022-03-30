@@ -70,9 +70,9 @@ csw = CatalogueServiceWeb(CSW_ENDPOINT)
 # print(csw.identification.type)
 #[op.name for op in csw.operations]
 #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
-# csw.getdomain('GetRecords.resultType')
-# print(csw.results)
-csw.getrecords2()
+#csw.getdomain('GetRecords.resultType')
+#print(csw.results)
+csw.getrecords2(esn="full", resulttype="results")
 nrecords = len(csw.records)
 print(str(nrecords) + " records found...")
 index = 0
@@ -145,7 +145,7 @@ for rec in csw.records:
         json.dump(compacted, f, ensure_ascii=False, indent=4)
         
     kgset.load_jsonld(filename)
-    
+
 print("\n")
 print("************************")
 print("Parsed " + str(index) + " records")
@@ -168,4 +168,6 @@ else:
     print("Successfully generated: " + PATH_TO_DATA_FOLDER + NEW_RDF_FILENAME)
     print("************************")
     print("\n")
+
+
 
