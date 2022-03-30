@@ -89,8 +89,8 @@ while stop == 0:
     #csw.getdomain('GetRecords.resultType')
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
-    csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     #print(csw.results)
       #{'matches': 149, 'returned': 10, 'nextrecord': 11}
     
