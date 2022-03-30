@@ -163,7 +163,8 @@ while stop == 0:
             json.dump(compacted, f, ensure_ascii=False, indent=4)
         
         kgset.load_jsonld(filename)
-        
+      
+    #check if next record exists 
     if csw.results['nextrecord'] == 0 \
         or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
         stop = 1
