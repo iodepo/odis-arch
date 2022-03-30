@@ -75,7 +75,7 @@ while stop == 0:
     if flag == 0:  # first run, start from 0
         startpos = 0
     else:  # subsequent run, startposition is now paged
-        startpos = src.results['nextrecord']
+        startpos = csw.results['nextrecord']
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=60)
     # print(csw.identification.type)
@@ -89,9 +89,9 @@ while stop == 0:
     print(str(nlayers) + " records found...")
     totalrecs += nlayers 
     
-    if src.results['nextrecord'] == 0 \
-        or src.results['returned'] == 0 \
-        or src.results['nextrecord'] > src.results['matches']:  # end the loop, exhausted all records
+    if csw.results['nextrecord'] == 0 \
+        or csw.results['returned'] == 0 \
+        or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
         stop = 1
         break    
 
