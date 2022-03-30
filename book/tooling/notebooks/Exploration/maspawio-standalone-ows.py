@@ -38,7 +38,7 @@ import pandas as pd
 import kglab
 import logging
 
-LOGGER = logging.getLogger(__name__)
+logger = logging.getLogger()
 
 # generate a Context for each connection
 # disable SSL for now
@@ -95,8 +95,8 @@ while stop == 0:
     #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     #print(csw.results)
       #{'matches': 149, 'returned': 10, 'nextrecord': 11}
-    LOGGER.debug(csw.request)
-    LOGGER.debug(csw.response)
+    logger.debug(csw.request)
+    logger.debug(csw.response)
     
     if csw.results['returned'] == 0: #no results
         break
