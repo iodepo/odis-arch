@@ -1,0 +1,98 @@
+@base <https://example.org/id/> .
+@prefix : <https://schema.org/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+
+<http://maspawio.net/id/1> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(40.9624453969  -2.20977676576  40.9624453969  -1.73499674175 41.5101674629  -1.73499674175  41.5101674629  -2.20977676576 40.9624453969 -2.20977676576)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description """This layer shows the extent of mangrove cover of Pate Kiunga seascape in 1995. The cover map was developed by CORDIO EA through Landsat Image classification under the International Centre for Research in Agroforestry (ICRAF)-led project funded by the Inter-Governmental Authority on Development (IGAD).\r
+The project aimed to link the use and benefit of these natural resources to the local people, as well as better understand the drivers and pressures of biodiversity loss to improve management measures.""" ;
+    :keywords "Kiunga",
+        "Pate",
+        "mangrove" ;
+    :name "Pate-kiunga Mangrove extent 1995" .
+
+<http://maspawio.net/id/10> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(29.3770901868  -31.7504895603  29.3770901868  6.9690694937 63.4744133368  6.9690694937  63.4744133368  -31.7504895603 29.3770901868 -31.7504895603)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "This coverage shows spatial extent of selected Land use cover classes in 2000  for the WIO. This land cover data documents how much the WIO region within a 100 km coastal buffer is covered by Rainfed cropland, irrigated or post flooded land and Urban areas. This data coverage is a derived product from European Space Agency land-use cover class global land cover maps at 300m spatial resolution." ;
+    :keywords "land use cover",
+        "urban areas" ;
+    :name "WIO Urban areas 2000" .
+
+<http://maspawio.net/id/2> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(31.3062989996  -26.8686949999  31.3062989996  -3.71263799974 63.503471  -3.71263799974  63.503471  -26.8686949999 31.3062989996 -26.8686949999)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "This layer shows the  distribution and benefits accrued through  Coastal Protection in the NMC region. Distribution of  Coastal Protection value in the NMC region is measured in  million USD per year . This data was derived from the study \"Understanding and Valuing the Marine Ecosystem Services of the Northern Mozambique Channel \" by Paulo A.L.D. Nunes and Andrea Ghermandi. This study aimed to understand and value the coastal and marine ecosystem services in the Northern Mozambique Channel region (NMC)." ;
+    :keywords "coastal protection",
+        "ecosystem service" ;
+    :name "Distribution of  Coastal Protection in the NMC region" .
+
+<http://maspawio.net/id/3> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(39.1884798881  -4.890664121  39.1884798881  -4.04911155568 40.2175070348  -4.04911155568  40.2175070348  -4.890664121 39.1884798881 -4.890664121)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "Kwale marine depth contours/vector lines illustrate ocean depth in meters. The layer was derived by CORDIO from the General  Bathymetric  Chart of the Ocean (GEBCO) at a 10 meter contour interval." ;
+    :keywords "bathymetry",
+        "depth" ;
+    :name "kwale Marine depth contours" .
+
+<http://maspawio.net/id/4> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(-180.0  -90.0  -180.0  90.0 180.0  90.0  180.0  -90.0 -180.0 -90.0)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "Landscape Portal WMS" ;
+    :name "Landscape Portal" .
+
+<http://maspawio.net/id/5> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(40.9607472627  -2.20926194635  40.9607472627  -1.73879333016 41.5093823631  -1.73879333016  41.5093823631  -2.20926194635 40.9607472627 -2.20926194635)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description """This layer shows the extent of mangrove cover of Pate Kiunga seascape in 2014. The cover map was developed by CORDIO EA through Landsat Image classification under the International Centre for Research in Agroforestry (ICRAF)-led project funded by the Inter-Governmental Authority on Development (IGAD).\r
+The project aimed to link the use and benefit of these natural resources to the local people, as well as better understand the drivers and pressures of biodiversity loss to improve management measures.""" ;
+    :keywords "Kiunga",
+        "Pate",
+        "mangrove" ;
+    :name "Pate-kiunga Mangrove extent 2014" .
+
+<http://maspawio.net/id/6> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(32.949999559  -26.049999865  32.949999559  -1.98 59.45  -1.98  59.45  -26.049999865 32.949999559 -26.049999865)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description """This  vector layer shows the location  marine areas managed at a local level by the coastal communities through collaborative groups, organisations and government representatives who reside or are based within the immediate area.\r
+The layer also shows/contains the attributes  of the  associated coastal and marine resources""" ;
+    :keywords "LMMA",
+        "Western Indian Ocean" ;
+    :name "WIO Locally Managed Marine areas" .
+
+<http://maspawio.net/id/7> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(16.45802  -34.83514  16.45802  11.989306 63.5185056567  11.989306  63.5185056567  -34.83514 16.45802 -34.83514)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description """WIO Coastal districts layer is a merged layer of national level administration 2 data/shape file  retrieved form GADM database of Global Administrative Areas (GADM ) website. \r
+Level  2  administration are  smaller units of administration  often referred to as districts.""" ;
+    :keywords "administrative",
+        "boundary" ;
+    :name "WIO Coastal districts" .
+
+<http://maspawio.net/id/8> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(39.0  -21.916667  39.0  -10.333333 47.75  -10.333333  47.75  -21.916667 39.0 -21.916667)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "This layer shows the location of underwater mountains that rise hundreds or thousands of feet from the seafloor in the WIO region. This layer was retrieved from the  World Conservation  Monitoring Centre as vector points" ;
+    :keywords "seamounts",
+        "undersea features" ;
+    :name "Under sea features" .
+
+<http://maspawio.net/id/9> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON(32.9527  -26.07360176  32.9527  -2.183833333 55.64822  -2.183833333  55.64822  -26.07360176 32.9527 -26.07360176)"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "This layer shows Algal cover for selected sites and years i.e. 2014-2016 as reported through the WIO  GCRMN 2015-2016 process." ;
+    :keywords "algae",
+        "coral cover" ;
+    :name "WIO GCRMN sites Algal cover for selected years 2014-2016" .
+

@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://maspawio.net/id/7",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON(16.45802  -34.83514  16.45802  11.989306 63.5185056567  11.989306  63.5185056567  -34.83514 16.45802 -34.83514)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "WIO Coastal districts layer is a merged layer of national level administration 2 data/shape file  retrieved form GADM database of Global Administrative Areas (GADM ) website. \r\nLevel  2  administration are  smaller units of administration  often referred to as districts.",
+    "keywords": [
+        "boundary",
+        "administrative"
+    ],
+    "name": "WIO Coastal districts"
+}

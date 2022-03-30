@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://maspawio.net/id/8",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON(39.0  -21.916667  39.0  -10.333333 47.75  -10.333333  47.75  -21.916667 39.0 -21.916667)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This layer shows the location of underwater mountains that rise hundreds or thousands of feet from the seafloor in the WIO region. This layer was retrieved from the  World Conservation  Monitoring Centre as vector points",
+    "keywords": [
+        "seamounts",
+        "undersea features"
+    ],
+    "name": "Under sea features"
+}
