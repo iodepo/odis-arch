@@ -86,14 +86,14 @@ while stop == 0:
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
     csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
-    print(csw.results)
+    #print(csw.results)
+      #{'matches': 149, 'returned': 10, 'nextrecord': 11}
     
     if csw.results['returned'] == 0: #no results
         break
 
-    nlayers = len(csw.records)
-    print(str(nlayers) + " records found...")
-    totalrecs += nlayers         
+    print(str(len(csw.records)) + " records found...")
+    totalrecs += len(csw.records)         
 
     #harvest each record layer
     for rec in csw.records:
