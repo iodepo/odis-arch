@@ -104,7 +104,7 @@ for rec in csw.records:
     maxx = csw.records[rec].bbox.maxx
     maxy = csw.records[rec].bbox.maxy
 
-    poly = str("""POLYGON({}  {}  {}  {} {}  {}  {}  {} {} {})""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+    poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
 
     data = {}
 
