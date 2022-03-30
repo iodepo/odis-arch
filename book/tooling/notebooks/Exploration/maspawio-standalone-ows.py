@@ -84,7 +84,8 @@ while stop == 0:
     #csw.getdomain('GetRecords.resultType')
     #print(csw.results)
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
+    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=maxrecs)
+    csw.getrecords2(esn="full", startposition=startpos, maxrecords=maxrecs)
     nlayers = len(csw.records)
     print(str(nlayers) + " records found...")
     totalrecs += nlayers 
