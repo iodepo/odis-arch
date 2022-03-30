@@ -98,7 +98,7 @@ while stop == 0:
     #harvest each record layer
     for rec in csw.records:
 
-        index = index +1
+        index+=1
     
         #name
         name = csw.records[rec].title
