@@ -176,15 +176,16 @@ while stop == 0:
             data['http://www.opengis.net/ont/geosparql#hasGeometry'] = hg
 
             # keyword(s) loop
-            k = []
+            #k = []
             #print(*subjects)
             #print(subjects[0]['keywords'])
-            for s in subjects[0]['keywords']: #ISO
-                print(s)
-                k.append(s)                  
+            #for s in subjects[0]['keywords']: #ISO
+            #    print(s)
+             #   k.append(s) 
+            data['https://schema.org/keywords'] = subjects[0]['keywords']              
             #for s in subjects: #DublinCore
             #    k.append(s)
-            data['https://schema.org/keywords'] = k 
+            #data['https://schema.org/keywords'] = k 
     
             context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
             compacted = jsonld.compact(data, context)
