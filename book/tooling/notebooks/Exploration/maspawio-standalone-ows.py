@@ -140,13 +140,13 @@ while stop == 0:
         #subjects = csw.records[rec].subjects #DublinCore
     
         #regions
-        regions = csw.records[rec].spatial
+        #regions = csw.records[rec].spatial
 
         #spatial data
-        minx = csw.records[rec].bbox.minx
-        miny = csw.records[rec].bbox.miny
-        maxx = csw.records[rec].bbox.maxx
-        maxy = csw.records[rec].bbox.maxy
+        minx = csw.records[rec].identification.bbox.minx
+        miny = csw.records[rec].identification.bbox.miny
+        maxx = csw.records[rec].identification.bbox.maxx
+        maxy = csw.records[rec].identification.bbox.maxy
 
         poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
 
