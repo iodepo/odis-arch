@@ -205,6 +205,8 @@ while stop == 0:
 print("\n")
 print("************************")
 print("Parsed " + str(totalrecs) + " records")
+print("    " + str(index) + " exported to JSON-LD")
+print("    " + str(totalrecs - index)) + " had metadata errors")
 print("************************")
 print("\n")
 
