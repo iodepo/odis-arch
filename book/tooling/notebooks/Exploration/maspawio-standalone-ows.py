@@ -138,7 +138,7 @@ while stop == 0:
             #description = csw.records[rec].abstract #DublinCore
 
             #keywords
-            subjects = csw.records[rec].identification.keywords2
+            subjects = csw.records[rec].identification.keywords
             #subjects = csw.records[rec].subjects #DublinCore
     
             #regions
@@ -177,7 +177,8 @@ while stop == 0:
 
             # keyword(s) loop
             k = []
-            print(*subjects)
+            #print(*subjects)
+            print(subjects.type)
             for s in subjects:
                 k.append(s)
             data['https://schema.org/keywords'] = k 
