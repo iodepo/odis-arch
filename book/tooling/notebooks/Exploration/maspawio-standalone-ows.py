@@ -206,7 +206,7 @@ print("\n")
 print("************************")
 print("Parsed " + str(totalrecs) + " records")
 print("    " + str(index) + " exported to JSON-LD")
-print("    " + str(totalrecs - index) + " had metadata errors")
+print("    " + str(totalrecs - index) + " were invalid records")
 print("************************")
 print("\n")
 
