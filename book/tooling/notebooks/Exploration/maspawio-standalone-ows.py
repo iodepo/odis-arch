@@ -82,7 +82,7 @@ while stop == 0:
     else:  # subsequent run, startposition is now paged
         startpos = csw.results['nextrecord']    
 
-    csw = CatalogueServiceWeb(CSW_ENDPOINT, CSW_ENDPOINT_TIMEOUT)
+    csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
