@@ -97,6 +97,7 @@ while stop == 0:
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    logging.info('getting records %d to %d', startpos, startpos+pagesize)
     csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     logging.debug(csw.request)
     logging.debug(csw.response)
