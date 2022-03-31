@@ -88,8 +88,8 @@ while stop == 0:
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
-    csw_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
-    #csw_outputschema = 'http://www.isotc211.org/2005/gmd'
+    #csw_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
+    csw_outputschema = 'http://www.isotc211.org/2005/gmd'
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
