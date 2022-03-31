@@ -88,6 +88,8 @@ while stop == 0:
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
+    csw_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
+    #csw_outputschema = 'http://www.isotc211.org/2005/gmd'
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
@@ -96,8 +98,8 @@ while stop == 0:
     #note: esn="full" <----- causes index/range error
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     logging.info('getting records %d to %d', startpos, startpos+pagesize)
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=pagesize)
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_outputschema)
+    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=pagesize)
     logging.debug(csw.request)
     logging.debug(csw.response)
     #print(csw.results)
