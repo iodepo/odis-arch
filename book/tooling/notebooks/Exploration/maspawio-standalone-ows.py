@@ -119,12 +119,13 @@ while stop == 0:
     for rec in csw.records:
     
         #handle empty first record for global extents (with DublinCore schema)
-        #if csw.records[rec].identification.title != "":     
+        #if csw.records[rec].title != "":     
 
         index+=1
     
         #name
         name = csw.records[rec].identification.title
+        #name = csw.records[rec].title #DublinCore
         print("    " + name)
         
         #id
@@ -132,9 +133,11 @@ while stop == 0:
 
         #description
         description = csw.records[rec].identification.abstract
+        #description = csw.records[rec].abstract #DublinCore
 
         #keywords
-        subjects = csw.records[rec].subjects
+        subjects = csw.records[rec].keywords
+        #subjects = csw.records[rec].subjects #DublinCore
     
         #regions
         regions = csw.records[rec].spatial
