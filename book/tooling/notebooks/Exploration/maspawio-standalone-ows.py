@@ -123,7 +123,7 @@ while stop == 0:
         index+=1
     
         #name
-        name = csw.records[rec].identificationinfo.dataset.title
+        name = csw.records[rec].identification.title
         print("    " + name)
         
         #id
