@@ -101,7 +101,7 @@ while stop == 0:
     logging.info('getting records %d to %d', startpos, startpos+pagesize)
     #DublinCore schema request...
     #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_dublincore_outputschema)
-    #ISO schema request...
+    #ISO 19115:2003 schema request...
     csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='gmd:MD_Metadata', sortby=sortby, maxrecords=pagesize, outputschema=csw_iso_outputschema)
     logging.debug(csw.request)
     logging.debug(csw.response)
@@ -118,12 +118,12 @@ while stop == 0:
     for rec in csw.records:
     
         #handle empty first record for global extents
-        if csw.records[rec].title != "":     
+        if csw.records[rec].identification.title != "":     
 
             index+=1
     
             #name
-            name = csw.records[rec].title
+            name = csw.records[rec].identification.title
             print("    " + name)
             
             #id
