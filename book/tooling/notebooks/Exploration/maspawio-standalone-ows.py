@@ -119,77 +119,79 @@ while stop == 0:
     for rec in csw.records:
     
         #handle empty first record for global extents (with DublinCore schema)
-        #if csw.records[rec].title != "":     
+        #if csw.records[rec].title != "":
+        #handle empty record (with ISO schema)
+        if hasattr(csw.records[rec].identification, 'title'): 
 
-        index+=1
+            index+=1
     
-        #name
-        name = csw.records[rec].identification.title
-        #name = csw.records[rec].title #DublinCore
-        print("    " + name)
+            #name
+            name = csw.records[rec].identification.title
+            #name = csw.records[rec].title #DublinCore
+            print("    " + name)
         
-        #id
-        id = csw.records[rec].identifier
+            #id
+            id = csw.records[rec].identifier
 
-        #description
-        description = csw.records[rec].identification.abstract
-        #description = csw.records[rec].abstract #DublinCore
+            #description
+            description = csw.records[rec].identification.abstract
+            #description = csw.records[rec].abstract #DublinCore
 
-        #keywords
-        subjects = csw.records[rec].identification.keywords
-        #subjects = csw.records[rec].subjects #DublinCore
+            #keywords
+            subjects = csw.records[rec].identification.keywords
+            #subjects = csw.records[rec].subjects #DublinCore
     
-        #regions
-        #regions = csw.records[rec].spatial
+            #regions
+            #regions = csw.records[rec].spatial
 
-        #spatial data
-        minx = csw.records[rec].identification.bbox.minx
-        miny = csw.records[rec].identification.bbox.miny
-        maxx = csw.records[rec].identification.bbox.maxx
-        maxy = csw.records[rec].identification.bbox.maxy
+            #spatial data
+            minx = csw.records[rec].identification.bbox.minx
+            miny = csw.records[rec].identification.bbox.miny
+            maxx = csw.records[rec].identification.bbox.maxx
+            maxy = csw.records[rec].identification.bbox.maxy
 
-        poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+            poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
 
-        data = {}
+            data = {}
 
-        data['@id'] = str(HOSTNAME + "/id/{}".format(id))      #id.text
+            data['@id'] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
-        data['@type'] = 'https://schema.org/Dataset'
+            data['@type'] = 'https://schema.org/Dataset'
 
-        data['https://schema.org/name'] = name
-        data['https://schema.org/description'] = description
+            data['https://schema.org/name'] = name
+            data['https://schema.org/description'] = description
 
-        aswkt = {}
-        aswkt['@type'] = "http://www.opengis.net/ont/geosparql#wktLiteral"
-        aswkt['@value'] = poly
+            aswkt = {}
+            aswkt['@type'] = "http://www.opengis.net/ont/geosparql#wktLiteral"
+            aswkt['@value'] = poly
 
-        crs = {}
-        crs['@id'] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            crs = {}
+            crs['@id'] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
 
-        hg = {}
-        hg['@type'] = "http://www.opengis.net/ont/sf#Polygon" 
-        hg['http://www.opengis.net/ont/geosparql#asWKT'] = aswkt
-        hg['http://www.opengis.net/ont/geosparql#crs'] = crs
+            hg = {}
+            hg['@type'] = "http://www.opengis.net/ont/sf#Polygon" 
+            hg['http://www.opengis.net/ont/geosparql#asWKT'] = aswkt
+            hg['http://www.opengis.net/ont/geosparql#crs'] = crs
 
-        data['http://www.opengis.net/ont/geosparql#hasGeometry'] = hg
+            data['http://www.opengis.net/ont/geosparql#hasGeometry'] = hg
 
-        # keyword(s) loop
-        k = []
-        for s in subjects:
-            k.append(s)
-        data['https://schema.org/keywords'] = k 
+            # keyword(s) loop
+            k = []
+            for s in subjects:
+                k.append(s)
+            data['https://schema.org/keywords'] = k 
     
-        context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
-        compacted = jsonld.compact(data, context)
+            context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
+            compacted = jsonld.compact(data, context)
 
-        # need sha hash for the "compacted" var and then also generate the prov for this record.
+            # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-        filename = str(PATH_TO_DATA_FOLDER + "maspawio{}.json".format(index))
+            filename = str(PATH_TO_DATA_FOLDER + "maspawio{}.json".format(index))
     
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(compacted, f, ensure_ascii=False, indent=4)
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(compacted, f, ensure_ascii=False, indent=4)
         
-        kgset.load_jsonld(filename)
+            kgset.load_jsonld(filename)
     
     #check if next record exists 
     if csw.results['nextrecord'] == 0 \
