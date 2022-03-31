@@ -29,14 +29,20 @@ HOSTNAME = "http://maspawio.net"
 #########################
 """
 
+# +
 import json
 from pyld import jsonld
-import os, sys, io
+import os, sys, io, uuid
 from owslib.csw import CatalogueServiceWeb
 from owslib.fes import SortBy, SortProperty
 import ssl
 import pandas as pd
 import kglab
+import logging
+
+#log to a file
+logging.basicConfig(filename='owslib.log', encoding='utf-8', level=logging.DEBUG)
+# -
 
 
 # generate a Context for each connection
@@ -90,8 +96,10 @@ while stop == 0:
     #csw.getdomain('GetRecords.resultType')
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
     #note: esn="full" <----- causes index/range error
-    csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
+    logging.debug(csw.request)
+    logging.debug(csw.response)
     #print(csw.results)
       #{'matches': 149, 'returned': 10, 'nextrecord': 11}
     
