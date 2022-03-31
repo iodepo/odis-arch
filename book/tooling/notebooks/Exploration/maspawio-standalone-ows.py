@@ -131,7 +131,7 @@ while stop == 0:
         id = csw.records[rec].identifier
 
         #description
-        description = csw.records[rec].abstract
+        description = csw.records[rec].identification.abstract
 
         #keywords
         subjects = csw.records[rec].subjects
