@@ -136,7 +136,7 @@ while stop == 0:
         #description = csw.records[rec].abstract #DublinCore
 
         #keywords
-        subjects = csw.records[rec].keywords
+        subjects = csw.records[rec].identification.keywords
         #subjects = csw.records[rec].subjects #DublinCore
     
         #regions
