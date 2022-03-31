@@ -182,7 +182,7 @@ while stop == 0:
             #for s in subjects[0]['keywords']: #ISO
             #    print(s)
              #   k.append(s)
-            if subjects:             
+            if subjects: #handle case for no keywords            
               k = ", ".join(subjects[0]['keywords'])              
             #for s in subjects: #DublinCore
             #    k.append(s)
