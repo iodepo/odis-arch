@@ -88,18 +88,18 @@ while stop == 0:
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
-    #csw_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
-    csw_outputschema = 'http://www.isotc211.org/2005/gmd'
+    csw_dublincore_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
+    csw_iso_outputschema = 'http://www.isotc211.org/2005/gmd'
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
     #csw.getdomain('GetRecords.resultType')
     #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
-    #note: esn="full" <----- causes index/range error
+    #note: esn="full" <----- causes index/range error with Dublin Core schema profile
+    #                        likely because some record titles contain special characters
     #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
     logging.info('getting records %d to %d', startpos, startpos+pagesize)
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_outputschema)
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', maxrecords=pagesize)
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_dublincore_outputschema)
     logging.debug(csw.request)
     logging.debug(csw.response)
     #print(csw.results)
