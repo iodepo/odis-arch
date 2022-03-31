@@ -102,7 +102,7 @@ while stop == 0:
     #DublinCore schema request...
     #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_dublincore_outputschema)
     #ISO schema request...
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='gmd:MD_Metadata', sortby=sortby, maxrecords=pagesize, outputschema=csw_iso_outputschema
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='gmd:MD_Metadata', sortby=sortby, maxrecords=pagesize, outputschema=csw_iso_outputschema)
     logging.debug(csw.request)
     logging.debug(csw.response)
     #print(csw.results)
