@@ -16,8 +16,9 @@ Notes:
 
 """
 
-# define variables
+# define common variables
 CSW_ENDPOINT = "http://maspawio.net/catalogue/csw"
+CSW_ENDPOINT_TIMEOUT = 60 #seconds
 PATH_TO_DATA_FOLDER = "./data-ows/"
 NEW_RDF_FILENAME = "maspawio.rdf"
 HOSTNAME = "http://maspawio.net"
@@ -79,10 +80,9 @@ while stop == 0:
     if flag == 0:  # first run, start from 0
         startpos = 0
     else:  # subsequent run, startposition is now paged
-        startpos += pagesize + 1
-        #startpos = csw.results['nextrecord']
+        startpos = csw.results['nextrecord']    
 
-    csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=60)
+    csw = CatalogueServiceWeb(CSW_ENDPOINT, CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
