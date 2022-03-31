@@ -178,7 +178,7 @@ while stop == 0:
             # keyword(s) loop
             k = []
             #print(*subjects)
-            print(subjects.type)
+            print(subjects['theme']['keywords'])
             for s in subjects:
                 k.append(s)
             data['https://schema.org/keywords'] = k 
