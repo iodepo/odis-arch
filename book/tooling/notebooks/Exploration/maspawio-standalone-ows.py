@@ -142,7 +142,7 @@ while stop == 0:
             #subjects = csw.records[rec].subjects #DublinCore
     
             #regions
-            #regions = csw.records[rec].spatial
+            #regions = csw.records[rec].spatial #DublinCore
 
             #spatial data
             minx = csw.records[rec].identification.bbox.minx
@@ -178,7 +178,7 @@ while stop == 0:
             # keyword(s) loop
             k = []
             for s in subjects:
-                k.append(s)
+                k.append(s.value)
             data['https://schema.org/keywords'] = k 
     
             context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
