@@ -42,8 +42,6 @@ import logging
 
 #log to a file
 logging.basicConfig(filename='owslib.log', encoding='utf-8', level=logging.DEBUG)
-# -
-
 
 # generate a Context for each connection
 # disable SSL for now
