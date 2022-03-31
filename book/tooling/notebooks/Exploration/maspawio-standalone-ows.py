@@ -181,7 +181,7 @@ while stop == 0:
             #print(subjects[0]['keywords'])
             for s in subjects[0]['keywords']: #ISO
                 print(s)
-                k.append(str(s))                  
+                k.append(s)                  
             #for s in subjects: #DublinCore
             #    k.append(s)
             data['https://schema.org/keywords'] = k 
