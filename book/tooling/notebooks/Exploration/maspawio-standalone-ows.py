@@ -177,8 +177,8 @@ while stop == 0:
 
             # keyword(s) loop
             k = []
-            for s in subjects:
-                k.append(s.value)
+            for s in subjects.values():
+                k.append(s)
             data['https://schema.org/keywords'] = k 
     
             context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
