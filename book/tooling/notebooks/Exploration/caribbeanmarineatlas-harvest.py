@@ -177,14 +177,21 @@ while stop == 0:
             data["http://www.opengis.net/ont/geosparql#hasGeometry"] = hg
 
             # keyword(s) loop
-            #k = []
+            k = ""
             #print(*subjects)
             #print(subjects[0]["keywords"])
-            #for s in subjects[0]["keywords"]: #ISO
-            #    print(s)
-             #   k.append(s)
-            if subjects: #handle case for no keywords            
-              k = ", ".join(subjects[0]["keywords"])              
+                            
+            #handle theme and place keywords  
+            for i in range(len(subjects)):
+                #print(subjects[i])
+                if i == 0:
+                    k = ", ".join(subjects[i]["keywords"]) #theme keywords
+                else:
+                    k += ", " + ", ".join(subjects[i]["keywords"]) #place keywords
+              
+            # handle theme keywords only
+            #if subjects: #handle case for no keywords            
+                #k = ", ".join(subjects[0]["keywords"])
             #for s in subjects: #DublinCore
             #    k.append(s)
             data["https://schema.org/keywords"] = k 
