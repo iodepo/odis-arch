@@ -194,7 +194,7 @@ while stop == 0:
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-            filename = str(PATH_TO_DATA_FOLDER + "ama{}.json".format(index))
+            filename = str(PATH_TO_DATA_FOLDER + "ama_{}.json".format(id))
     
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)
