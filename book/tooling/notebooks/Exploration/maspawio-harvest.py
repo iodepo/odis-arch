@@ -30,7 +30,6 @@ LOGFILE = "maspawio-harvest.log"
 #########################
 """
 
-# +
 import json
 from pyld import jsonld
 import os, sys, io, uuid
@@ -42,7 +41,8 @@ import kglab
 import logging
 
 #log to a file
-logging.basicConfig(filename=LOGFILE, encoding='utf-8', level=logging.DEBUG)
+# create formatter
+logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG, format="%(asctime)s;%(levelname)s;%(message)s","%Y-%m-%d %H:%M:%S")
 
 # generate a Context for each connection
 # disable SSL for now
@@ -73,8 +73,8 @@ flag = 0
 index = 0
 pagesize = 10
 totalrecs = 0
-sort_property = 'dc:title'  # a supported queryable of the CSW
-sort_order = 'ASC'  # should be 'ASC' or 'DESC'
+sort_property = "dc:title"  # a supported queryable of the CSW
+sort_order = "ASC"  # should be 'ASC' or 'DESC'
 
 print("************************")
 print("Parsing records...")
@@ -85,32 +85,32 @@ while stop == 0:
     if flag == 0:  # first run, start from 0
         startpos = 0
     else:  # subsequent run, startposition is now paged
-        startpos = csw.results['nextrecord']    
+        startpos = csw.results["nextrecord"]    
 
     csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
-    csw_dublincore_outputschema = 'http://www.opengis.net/cat/csw/2.0.2'
-    csw_iso_outputschema = 'http://www.isotc211.org/2005/gmd'
+    csw_dublincore_outputschema = "http://www.opengis.net/cat/csw/2.0.2"
+    csw_iso_outputschema = "http://www.isotc211.org/2005/gmd"
     # print(csw.identification.type)
     #[op.name for op in csw.operations]
     #['GetCapabilities', 'GetRecords', 'GetRecordById', 'DescribeRecord', 'GetDomain']
-    #csw.getdomain('GetRecords.resultType')
-    #csw.getrecords2(esn="full", resulttype="hits", typenames='gmd:MD_Metadata')
+    #csw.getdomain("GetRecords.resultType")
+    #csw.getrecords2(esn="full", resulttype="hits", typenames="gmd:MD_Metadata")
     #WARNING: esn="full" FAILS <----- causes index/range error with Dublin Core schema profile
     #                        likely because some record titles contain special characters
-    #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize)
-    logging.info('getting records %d to %d', startpos, startpos+pagesize)
+    #csw.getrecords2(esn="brief", startposition=startpos, resulttype="results", typenames="csw:Record", sortby=sortby, maxrecords=pagesize)
+    logging.info("getting records %d to %d", startpos, startpos+pagesize)
     #DublinCore schema request...
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='csw:Record', sortby=sortby, maxrecords=pagesize, outputschema=csw_dublincore_outputschema)
+    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames="csw:Record", sortby=sortby, maxrecords=pagesize, outputschema=csw_dublincore_outputschema)
     #ISO 19115:2003 schema request...
-    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='gmd:MD_Metadata', sortby=sortby, maxrecords=pagesize, outputschema=csw_iso_outputschema)
-    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames='gmd:MD_Metadata', maxrecords=pagesize, outputschema=csw_iso_outputschema)
+    #csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames="gmd:MD_Metadata", sortby=sortby, maxrecords=pagesize, outputschema=csw_iso_outputschema)
+    csw.getrecords2(esn="full", startposition=startpos, resulttype="results", typenames="gmd:MD_Metadata", maxrecords=pagesize, outputschema=csw_iso_outputschema)
     logging.debug(csw.request)
     logging.debug(csw.response)
     #print(csw.results)
       #{'matches': 149, 'returned': 10, 'nextrecord': 11}
     
-    if csw.results['returned'] == 0: #no results
+    if csw.results["returned"] == 0: #no results
         break
 
     print(str(len(csw.records)) + " records found...")
@@ -122,7 +122,7 @@ while stop == 0:
         #handle empty first record for global extents (with DublinCore schema)
         #if csw.records[rec].title != "":
         #handle empty record (with ISO schema)
-        if hasattr(csw.records[rec].identification, 'title'): 
+        if hasattr(csw.records[rec].identification, "title"): 
 
             index+=1
     
@@ -155,39 +155,39 @@ while stop == 0:
 
             data = {}
 
-            data['@id'] = str(HOSTNAME + "/id/{}".format(id))      #id.text
+            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
-            data['@type'] = 'https://schema.org/Dataset'
+            data["@type"] = "https://schema.org/Dataset"
 
-            data['https://schema.org/name'] = name
-            data['https://schema.org/description'] = description
+            data["https://schema.org/name"] = name
+            data["https://schema.org/description"] = description
 
             aswkt = {}
-            aswkt['@type'] = "http://www.opengis.net/ont/geosparql#wktLiteral"
-            aswkt['@value'] = poly
+            aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
+            aswkt["@value"] = poly
 
             crs = {}
-            crs['@id'] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            crs["@id"] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
 
             hg = {}
-            hg['@type'] = "http://www.opengis.net/ont/sf#Polygon" 
-            hg['http://www.opengis.net/ont/geosparql#asWKT'] = aswkt
-            hg['http://www.opengis.net/ont/geosparql#crs'] = crs
+            hg["@type"] = "http://www.opengis.net/ont/sf#Polygon" 
+            hg["http://www.opengis.net/ont/geosparql#asWKT"] = aswkt
+            hg["http://www.opengis.net/ont/geosparql#crs"] = crs
 
-            data['http://www.opengis.net/ont/geosparql#hasGeometry'] = hg
+            data["http://www.opengis.net/ont/geosparql#hasGeometry"] = hg
 
             # keyword(s) loop
             #k = []
             #print(*subjects)
-            #print(subjects[0]['keywords'])
-            #for s in subjects[0]['keywords']: #ISO
+            #print(subjects[0]["keywords"])
+            #for s in subjects[0]["keywords"]: #ISO
             #    print(s)
              #   k.append(s)
             if subjects: #handle case for no keywords            
-              k = ", ".join(subjects[0]['keywords'])              
+              k = ", ".join(subjects[0]["keywords"])              
             #for s in subjects: #DublinCore
             #    k.append(s)
-            data['https://schema.org/keywords'] = k 
+            data["https://schema.org/keywords"] = k 
     
             context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
             compacted = jsonld.compact(data, context)
@@ -196,14 +196,14 @@ while stop == 0:
     
             filename = str(PATH_TO_DATA_FOLDER + "maspawio{}.json".format(index))
     
-            with open(filename, 'w', encoding='utf-8') as f:
+            with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)
         
             kgset.load_jsonld(filename)
     
     #check if next record exists 
-    if csw.results['nextrecord'] == 0 \
-        or csw.results['nextrecord'] > csw.results['matches']:  # end the loop, exhausted all records
+    if csw.results["nextrecord"] == 0 \
+        or csw.results["nextrecord"] > csw.results["matches"]:  # end the loop, exhausted all records
         stop = 1
         break        
     
