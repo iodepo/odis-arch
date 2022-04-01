@@ -19,7 +19,7 @@ Notes:
 # define common variables
 CSW_ENDPOINT = "http://maspawio.net/catalogue/csw"
 CSW_ENDPOINT_TIMEOUT = 60 #seconds
-PATH_TO_DATA_FOLDER = "./data-ows/"
+PATH_TO_DATA_FOLDER = "./data-maspawio/"
 NEW_RDF_FILENAME = "maspawio-catalogue.rdf"
 HOSTNAME = "http://maspawio.net"
 LOGFILE = "maspawio-harvest.log"
