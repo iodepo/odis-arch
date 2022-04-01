@@ -3,19 +3,19 @@
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#"
     },
-    "@id": "http://maspawio.net/id/49cf4c5a-b308-11e7-bc68-0a735f7a740c",
+    "@id": "http://maspawio.net/id/4ada3a5e-6deb-11e7-874f-0a735f7a740c",
     "@type": "Dataset",
     "geosparql:hasGeometry": {
         "@type": "http://www.opengis.net/ont/sf#Polygon",
         "geosparql:asWKT": {
             "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((29.958354999999997 -40.026192000000755, 29.958354999999997 6.0387079999999145, 74.98200500000064 6.0387079999999145, 74.98200500000064 -40.026192000000755, 29.958354999999997 -40.026192000000755))"
+            "@value": "POLYGON((31.4835705080237 -28.8906189448001, 31.4835705080237 12.7767940479383, 72.7161217431605 12.7767940479383, 72.7161217431605 -28.8906189448001, 31.4835705080237 -28.8906189448001))"
         },
         "geosparql:crs": {
             "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         }
     },
-    "description": "This layer shows seasonal deviation of SST in the WIO during the peak summer season. It shows general warmer than usual waters of the WIO  with the highest peak observed in the North eastern waters  around Seychelles. \nThis data was derived using raster calculator in ArcGIS 10.3 to derive the 2016 seasonal average, and subtracted from this the long-term seasonal average from the 2003-2016 data series.",
-    "keywords": "SST, anomaly",
-    "name": "March-May  2016 SST Anomaly"
+    "description": "WIO under sea cables  layer has been derived from Greg's global cable map which attempts to consolidate all the available information about the undersea communications infrastructure. The initial data was harvested from Wikipedia, and further information was gathered by simply googling and transcribing as much data as possible into a useful format, namely a rich geocoded format.",
+    "keywords": "communication, undersea cables, network",
+    "name": "WIO undersea cables"
 }
