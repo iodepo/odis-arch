@@ -126,7 +126,7 @@ while stop == 0:
             index+=1
     
             #name
-            name = csw.records[rec].identification.title
+            name = csw.records[rec].identification.title #ISO
             #name = csw.records[rec].title #DublinCore
             print("    " + name)
         
@@ -134,11 +134,11 @@ while stop == 0:
             id = csw.records[rec].identifier
 
             #description
-            description = csw.records[rec].identification.abstract
+            description = csw.records[rec].identification.abstract #ISO
             #description = csw.records[rec].abstract #DublinCore
 
             #keywords
-            subjects = csw.records[rec].identification.keywords
+            subjects = csw.records[rec].identification.keywords #ISO
             #subjects = csw.records[rec].subjects #DublinCore
     
             #regions
