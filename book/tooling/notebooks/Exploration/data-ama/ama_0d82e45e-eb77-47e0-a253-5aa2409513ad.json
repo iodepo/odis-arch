@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geonetwork.iode.org/id/0d82e45e-eb77-47e0-a253-5aa2409513ad",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((0 -34, 0 -10, 26 -10, 26 -34, 0 -34))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Coastal places in Namibia (includes lighthouses, landmarks, shipwrecks,hills, beaches, bay)\nSource: Topographic maps 1:50K, colour orthophotos Survey General, Footprint Namibia and Explorer Fishing Map\nMethod: digitised on 1:50K maps, adapted for coastline (file 1) and combined with other datasets",
+    "keywords": "Atlas",
+    "name": "Namibia: Coastal places"
+}
