@@ -183,7 +183,7 @@ while stop == 0:
                             
             #handle theme and place keywords  
             for i in range(len(subjects)):
-                print(subjects[i])
+                #print(subjects[i])
                 if i == 0:
                     k = ", ".join(subjects[i]["keywords"]) #theme keywords
                 else:
