@@ -41,8 +41,7 @@ import kglab
 import logging
 
 #log to a file
-# create formatter
-logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG, format="%(asctime)s;%(levelname)s;%(message)s",datefmt="%Y-%m-%d %H:%M")
+logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG, format="%(asctime)s;%(levelname)s;%(message)s", datefmt="%Y-%m-%d %H:%M")
 
 # generate a Context for each connection
 # disable SSL for now
