@@ -185,9 +185,9 @@ while stop == 0:
             for i in range(len(subjects)):
                 #print(subjects[i])
                 if i == 0:
-                    k = ", ".join(subjects[0]["keywords"])
+                    k = ", ".join(subjects[i]["keywords"]) #theme keywords
                 else:
-                    k += ", " + ", ".join(subjects[i]["keywords"])
+                    k += ", " + ", ".join(subjects[i]["keywords"]) #place keywords
               
             # handle theme keywords only
             #if subjects: #handle case for no keywords            
