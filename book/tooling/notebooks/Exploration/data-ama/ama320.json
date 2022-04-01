@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geonetwork.iode.org/id/a64ffcb7-45ce-4c2e-add5-23c8d229c045",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((0 -40, 0 0, 26 0, 26 -40, 0 -40))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "The UNESCO/AETFAT/UNSO (White's) Vegetation Map of Africa was published in 1983 after more than 15 years of collaboration between UNESCO and AETFAT (Association pour l'Etude Taxonomique de la Flore De l'Afrique Tropicale). The original product comprises three map sheets at a scale of 1:5,000,000. These maps were digitized by GRID in their original Miller Oblated Stereographic Projection, and later rasterized at a cell (pixel) size of 30 seconds latitude/longitude resolution (approximately one-kilometer square). The digital product distributed by GRID covers the entire continent of Africa and Madagascar in a single data file.\nThe Vegetation Map of Africa is a compendium of various existing map sources for different regions/countries, which were integrated and synthesized by the AETFAT committee responsible for creating the map (headed by Dr. F. White of Oxford University, UK). The first draft of the map was checked by extensive fieldwork and discussions with local experts. The vegetation classification used is the UNESCO standard based on physiognomy and floristic composition (not climate), and it includes a total of 80 major vegetation types and mosaics. Water is added as category 81 in the GRID legend for the digital map.\nThe UNESCO (White's) Vegetation Map for Africa data file provided by GRID consists of 8989 rows (lines, records) by 8939 columns(elements/pixels/samples) of data, and one byte/eight bits per pixel. The data file origin (upper-left or northwest corner) is located at 40 degrees, 6 minutes and 45 seconds (40 deg. 6' 45\") North latitude and 23 degrees 5 minutes (23 deg. 5') West longitude, and it extends to the southeast, covering the entire African continent. The projection is \"Geographic\" (Lat/Long reference system), and at 30 seconds latitude/longitude spatial resolution, this data file comprises 80.35 Megabytes. The complete and proper reference to this data set is as follows: \"White, Frank; 1983; Vegetation of Africa - a descriptive memoir to accompany the\nUnesco/AETFAT/UNSO vegetation map of Africa; Natural Resources Research Report XX; U. N. Educational, Scientific and Cultural Organization; 7 Place de Fontenoy, 75700 Paris, France; 356 pages.\"",
+    "keywords": "Atlas",
+    "name": "BCLME: UNESCO/AETFAT/UNSO (WHITE'S) VEGETATION MAP OF AFRICA"
+}

@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geonetwork.iode.org/id/f20e9207-d939-498a-b1a0-233393a5fdfd",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-15.08083 7.19393, -15.08083 12.6775, -7.65337 12.6775, -7.65337 7.19393, -15.08083 7.19393))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "GSHHS is a high-resolution shoreline data set amalgamated from two databases (WVS and WDB) in the public domain. The data have undergone extensive processing and are free of internal inconsistencies such as erratic points and crossing segments. The shorelines are constructed entirely from hierarchically arranged closed polygons. The data can be used to simplify data searches and data selections, or to study the statistical characteristics of shorelines and land-masses. It comes with access software and routines to facilitate decimation based on a standard line-reduction algorithm.",
+    "keywords": "OCEANS | COASTAL PROCESS | SHORELINES",
+    "name": "Guinee Global Self-consistent, Hierarchical, High-resolution Shoreline (GSHHS)"
+}
