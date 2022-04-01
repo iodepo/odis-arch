@@ -185,7 +185,8 @@ while stop == 0:
              #   k.append(s)
             if subjects: #handle case for no keywords            
               k = ", ".join(subjects[0]["keywords"])
-            print(subjects[1]["keywords"])
+              if subjects[1]["keywords"]:
+                  k += ", ".join(subjects[1]["keywords"])
             #for s in subjects: #DublinCore
             #    k.append(s)
             data["https://schema.org/keywords"] = k 
