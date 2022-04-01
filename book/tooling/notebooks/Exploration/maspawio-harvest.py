@@ -3,7 +3,7 @@
 """
 Purpose: Standalone script to generate RDF from CSW endpoint
 
-Usage:   python maspawio-standalone-ows.py
+Usage:   python maspawio-harvest.py
 
 Output:  saves a new RDF file, for all catalogue records
 
