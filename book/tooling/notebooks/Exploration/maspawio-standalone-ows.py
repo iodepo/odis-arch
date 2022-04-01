@@ -20,8 +20,9 @@ Notes:
 CSW_ENDPOINT = "http://maspawio.net/catalogue/csw"
 CSW_ENDPOINT_TIMEOUT = 60 #seconds
 PATH_TO_DATA_FOLDER = "./data-ows/"
-NEW_RDF_FILENAME = "maspawio.rdf"
+NEW_RDF_FILENAME = "maspawio-catalogue.rdf"
 HOSTNAME = "http://maspawio.net"
+LOGFILE = "maspawio-harvest.log"
 
 """
 #########################
@@ -41,7 +42,7 @@ import kglab
 import logging
 
 #log to a file
-logging.basicConfig(filename='owslib.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename=LOGFILE, encoding='utf-8', level=logging.DEBUG)
 
 # generate a Context for each connection
 # disable SSL for now
