@@ -155,18 +155,16 @@ while stop == 0:
 
             data = {}
 
-            #point id to GetRecordById response
-            #data["@id"] = str(CSW_ENDPOINT + "?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&outputschema=http://www.isotc211.org/2005/gmd&id=" + id)
-            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
-
-            #url
+            #id should point to url to dataset record
             url = csw.records[rec].distribution.online[0].url
+            data["@id"] = url
             print("        " + url)
-
+            
             data["@type"] = "https://schema.org/Dataset"
 
             data["https://schema.org/name"] = name
             data["https://schema.org/description"] = description
+            data["https://schema.org/url"] = url
 
             aswkt = {}
             aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
