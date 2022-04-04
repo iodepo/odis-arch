@@ -156,8 +156,12 @@ while stop == 0:
             data = {}
 
             #point id to GetRecordById response
-            data["@id"] = str(CSW_ENDPOINT + "?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&outputschema=http://www.isotc211.org/2005/gmd&id=" + id)
-            #data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
+            #data["@id"] = str(CSW_ENDPOINT + "?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&outputschema=http://www.isotc211.org/2005/gmd&id=" + id)
+            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
+
+            #url
+            url = csw.records[rec].distributionInfo.URL
+            print("    " + url)
 
             data["@type"] = "https://schema.org/Dataset"
 
