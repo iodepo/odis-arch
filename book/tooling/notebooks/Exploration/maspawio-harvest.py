@@ -155,7 +155,9 @@ while stop == 0:
 
             data = {}
 
-            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
+            #point id to GetRecordById response
+            data["@id"] = str(CSW_ENDPOINT + "?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&outputschema=http://www.isotc211.org/2005/gmd&id=".format(id))
+            #data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
             data["@type"] = "https://schema.org/Dataset"
 
