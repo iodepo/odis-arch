@@ -155,12 +155,16 @@ while stop == 0:
 
             data = {}
 
-            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
-
+            #id should point to url of dataset record
+            url = csw.records[rec].distribution.online[0].url
+            data["@id"] = url
+            print("        " + url)
+            
             data["@type"] = "https://schema.org/Dataset"
 
             data["https://schema.org/name"] = name
             data["https://schema.org/description"] = description
+            data["https://schema.org/url"] = url
 
             aswkt = {}
             aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
