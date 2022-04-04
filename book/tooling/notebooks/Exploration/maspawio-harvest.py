@@ -160,7 +160,7 @@ while stop == 0:
             data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
             #url
-            url = csw.records[rec]..distribution.online[onlineresource].url
+            url = csw.records[rec].distribution.online[onlineresource].url
             print("    " + url)
 
             data["@type"] = "https://schema.org/Dataset"
