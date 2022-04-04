@@ -155,7 +155,7 @@ while stop == 0:
 
             data = {}
 
-            #id should point to url to dataset record
+            #id should point to url of dataset record
             url = csw.records[rec].distribution.online[0].url
             data["@id"] = url
             print("        " + url)
