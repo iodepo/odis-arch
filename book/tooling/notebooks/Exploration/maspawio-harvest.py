@@ -160,7 +160,7 @@ while stop == 0:
             data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
 
             #url
-            url = csw.records[rec].distribution.distributor[0].online[0].url
+            url = csw.records[rec].distribution.[0].online[0].url
             print("    " + url)
             #print(*csw.records[rec].identification)
 
