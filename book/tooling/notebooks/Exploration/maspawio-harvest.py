@@ -162,7 +162,7 @@ while stop == 0:
             #url
             #url = csw.records[rec].distribution.online[onlineresource].url
             #print("    " + url)
-            print("    " + csw.records[rec].identification)
+            print("    " + str(csw.records[rec].identification))
 
             data["@type"] = "https://schema.org/Dataset"
 
