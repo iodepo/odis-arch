@@ -1,0 +1,292 @@
+@base <https://example.org/id/> .
+@prefix : <https://schema.org/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+
+<https://geonode.nodc.id/documents/156> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180,0 -90,0, -180,0 90,0, 180,0 90,0, 180,0 -90,0, -180,0 -90,0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Global" ;
+    :name "test" ;
+    :url "https://geonode.nodc.id/documents/156" .
+
+<https://geonode.nodc.id/documents/157> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-180,0 -90,0, -180,0 90,0, 180,0 90,0, 180,0 -90,0, -180,0 -90,0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Global" ;
+    :name "test\"><script>alert(/XSS/)</script>" ;
+    :url "https://geonode.nodc.id/documents/157" .
+
+<https://geonode.nodc.id/layers/BATNAS:geonode:batnas> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((90.0 -15.00000000000005, 90.0 10.0, 150.0000000000001 10.0, 150.0000000000001 -15.00000000000005, 90.0 -15.00000000000005))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "GeoTIFF, WCS, batnas, Global" ;
+    :name "National Bathymetry (BIG)" ;
+    :url "https://geonode.nodc.id/layers/BATNAS:geonode:batnas" .
+
+<https://geonode.nodc.id/layers/Bati_Palu0:geonode:Bati_Palu0> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((119.27125101401867 -0.8608031692045857, 119.27125101401867 0.03055573489691263, 119.87235327169869 0.03055573489691263, 119.87235327169869 -0.8608031692045857, 119.27125101401867 -0.8608031692045857))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Bati_Palu, GeoTIFF, WCS, Global" ;
+    :name "Bathymetry Palu" ;
+    :url "https://geonode.nodc.id/layers/Bati_Palu0:geonode:Bati_Palu0" .
+
+<https://geonode.nodc.id/layers/Batimetri_Selat_Lombok_GEBCO:geonode:Batimetri_Selat_Lombok_GEBCO> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((115.1625 -8.962500000000007, 115.1625 -7.924999999999995, 116.51666666666668 -7.924999999999995, 116.51666666666668 -8.962500000000007, 115.1625 -8.962500000000007))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Batimetri_Selat_Lombok_GEBCO, GeoTIFF, WCS, Global" ;
+    :name "Bathymetry Lombok Strait" ;
+    :url "https://geonode.nodc.id/layers/Batimetri_Selat_Lombok_GEBCO:geonode:Batimetri_Selat_Lombok_GEBCO" .
+
+<https://geonode.nodc.id/layers/GEBCO:geonode:Gebco> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((90.0 -15.0, 90.0 15.0000000024, 145.0000000044 15.0000000024, 145.0000000044 -15.0, 90.0 -15.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "GeoTIFF, WCS, gebco, Global" ;
+    :name "GEBCO Bathymetry" ;
+    :url "https://geonode.nodc.id/layers/GEBCO:geonode:Gebco" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:CTD_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((70.0 -20.0, 70.0 20.0, 160.0 20.0, 160.0 -20.0, 70.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_ctd, Global" ;
+    :name "Conductivity Temperature Depth VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:CTD_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:DRB_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((115.634895324707 13.1191539764404, 115.634895324707 16.0978469848633, 118.058906555176 16.0978469848633, 118.058906555176 13.1191539764404, 115.634895324707 13.1191539764404))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_drb, Global" ;
+    :name "Drifting Buoy VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:DRB_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:GLD_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_gld, Global" ;
+    :name "Glider VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:GLD_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:MBR_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_mbr, Global" ;
+    :name "Moored Buoy VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:MBR_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:MBT_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_mbt, Global" ;
+    :name "Mechanical Bathy Thermograph VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:MBT_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:OSD_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_osd, Global" ;
+    :name "Ocean Station VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:OSD_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:PFL_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_pfl, Global" ;
+    :name "Profiling Floats VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:PFL_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:SUR_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_sur, Global" ;
+    :name "Surface Only VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:SUR_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:UOR_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_uor, Global" ;
+    :name "Undulating Ocean Recorded VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:UOR_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:XDT_VIEW> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mv_station_xdt, Global" ;
+    :name "Expendable Bathy Thermograph VIEW" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:XDT_VIEW" .
+
+<https://geonode.nodc.id/layers/geonode:geonode:v_station_bigtides> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.0448 -10.723, 95.0448 5.8892, 140.713 5.8892, 140.713 -10.723, 95.0448 -10.723))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, v_station_bigtides, Global" ;
+    :name "Tides Observation BIG" ;
+    :url "https://geonode.nodc.id/layers/geonode:geonode:v_station_bigtides" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:Banda_1992> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((125.666667 -8.833333, 125.666667 -2.333333, 133.666667 -2.333333, 133.666667 -8.833333, 125.666667 -8.833333))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Banda_1992, features, Global" ;
+    :name "Banda_1992" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:Banda_1992" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:Batas_Laut_NKRI_2017> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((91.64043056000008 -13.942138888999978, 91.64043056000008 8.221450018000041, 141.4000000000001 8.221450018000041, 141.4000000000001 -13.942138888999978, 91.64043056000008 -13.942138888999978))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Batas_Laut_NKRI_2017, features, Global" ;
+    :name "Indonesian Sea Boundary" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:Batas_Laut_NKRI_2017" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:INDONESIA_PROP> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.009496 -11.00214, 95.009496 5.9072, 141.001 5.9072, 141.001 -11.00214, 95.009496 -11.00214))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "INDONESIA_PROP, features, Global" ;
+    :name "Batas Provinsi" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:INDONESIA_PROP" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:PELABUHAN> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.31501666679495 -10.725000000257044, 95.31501666679495 5.889444444002104, 140.7133333334156 5.889444444002104, 140.7133333334156 -10.725000000257044, 95.31501666679495 -10.725000000257044))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "PELABUHAN, features, Global" ;
+    :name "Sea Port" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:PELABUHAN" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Gempa> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.67070715200003 -11.281020240999965, 95.67070715200003 5.865885065000043, 140.32466062900005 5.865885065000043, 140.32466062900005 -11.281020240999965, 95.67070715200003 -11.281020240999965))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Rawan_Gempa, features, Global" ;
+    :name "Earthquake Prone" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Gempa" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Tsunami> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.25087775400004 -9.825664207999978, 95.25087775400004 5.618879995000043, 136.5885401690001 5.618879995000043, 136.5885401690001 -9.825664207999978, 95.25087775400004 -9.825664207999978))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "Rawan_Tsunami, features, Global" ;
+    :name "Tsunami Prone" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Tsunami" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:alur_pipa_kabel_laut> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((92.06463683552255 -13.417092574262085, 92.06463683552255 7.574724092743509, 140.94080720548925 7.574724092743509, 140.94080720548925 -13.417092574262085, 92.06463683552255 -13.417092574262085))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "alur_pipa_kabel_laut, features, Global" ;
+    :name "Sea Lines Indonesia" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:alur_pipa_kabel_laut" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:idprov_0809> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((93.65312669100005 -15.364895022999903, 93.65312669100005 12.693657332000196, 144.50965151700007 12.693657332000196, 144.50965151700007 -15.364895022999903, 93.65312669100005 -15.364895022999903))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "REQUIRED: A brief narrative summary of the data set." ;
+    :keywords "REQUIRED: Common-use word or phrase used to describe the subject of the data set., features, idprov_0809, Global" ;
+    :name "Batas Provinsi" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:idprov_0809" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:mang_gcs> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((95.63024139422507 -10.995746977003213, 95.63024139422507 5.654130460946479, 141.00001525769807 5.654130460946479, 141.00001525769807 -10.995746977003213, 95.63024139422507 -10.995746977003213))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, mang_gcs, Global" ;
+    :name "Mangrove" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:mang_gcs" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:pulau_pbb> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((94.97216899990366 -10.982222221974482, 94.97216899990366 6.0741666671562795, 140.97888888871273 6.0741666671562795, 140.97888888871273 -10.982222221974482, 94.97216899990366 -10.982222221974482))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, pulau_pbb, Global" ;
+    :name "Islands Verified by the United Nations" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:pulau_pbb" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:sriwijaya> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((106.523582 -6.124319, 106.523582 -5.963947, 106.669754 -5.963947, 106.669754 -6.124319, 106.523582 -6.124319))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "features, sriwijaya, Global" ;
+    :name "Sriwiajaya  Air Flight Line" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:sriwijaya" .
+
+<https://geonode.nodc.id/layers/geonode_data:geonode:titik_sriwijaya> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((103.3002090912377 -5.968705555555555, 103.3002090912377 1.787412509711295, 106.57045 1.787412509711295, 106.57045 -5.968705555555555, 103.3002090912377 -5.968705555555555))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "crash, sriwijaya, Global" ;
+    :name "Prediction Crash Location Sriwijaya Air" ;
+    :url "https://geonode.nodc.id/layers/geonode_data:geonode:titik_sriwijaya" .
+
+<https://geonode.nodc.id/layers/httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:1> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((92.04 -13.93, 92.04 8.05, 141.4 8.05, 141.4 -13.93, 92.04 -13.93))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "No abstract provided" ;
+    :keywords "ArcGIS REST MapServer, ESRI, Ikan Plagis, Global, Asia, East Asia, South Asia, India, Southeast Asia, Brunei Darussalam, Indonesia, Malaysia, Philippines, Singapore, Thailand, Timor-Leste, Viet Nam, Pacific, Australia, Fiji, Kiribati, Micronesia, Federated States of, Palau, Papua New Guinea" ;
+    :name "Ikan Plagis" ;
+    :url "https://geonode.nodc.id/layers/httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:1" .
+
+<https://geonode.nodc.id/layers/httpssatudatakemenkopukmgoidgeoservercitewms:mv_station_drb> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((101.58 -7.54, 101.58 16.08, 118.05 16.08, 118.05 -7.54, 101.58 -7.54))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "Layer-Group type layer: mv_station_drb" ;
+    :keywords "features, mv_station_drb, Global, Asia, East Asia, China, South Asia, Southeast Asia, Brunei Darussalam, Cambodia, Indonesia, Lao People's Democratic Republic, Malaysia, Philippines, Singapore, Thailand, Viet Nam, Pacific, Kiribati" ;
+    :name "mv_station_drb" ;
+    :url "https://geonode.nodc.id/layers/httpssatudatakemenkopukmgoidgeoservercitewms:mv_station_drb" .
+
+<https://geonode.nodc.id/maps/53> a :Dataset ;
+    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
+            geosparql:asWKT "POLYGON((-0.170704088492837 -0.120217242469793, -0.170704088492837 0.12010868491056, 0.172618665413413 0.12010868491056, 0.172618665413413 -0.120217242469793, -0.170704088492837 -0.120217242469793))"^^geosparql:wktLiteral ;
+            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
+    :description "Sriwjaya Air Crash Location" ;
+    :keywords "Global" ;
+    :name "Sriwjaya Air" ;
+    :url "https://geonode.nodc.id/maps/53" .
+
