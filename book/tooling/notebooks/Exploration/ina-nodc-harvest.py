@@ -9,6 +9,8 @@ Usage:   python ina-nodc-harvest.py
 Output:  saves a new JSON-LD file, for each catalogue record 
          exposed through the OGC:CSW service, and also a
          .RDF resource file.
+         
+Requires: Python 3.x
 
 Notes:
 
