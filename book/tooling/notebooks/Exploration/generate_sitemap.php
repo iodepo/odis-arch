@@ -26,12 +26,9 @@ function getdepth($fn){
 function printlink($fn)
 {
     $url = str_replace(JSONLD_ROOT_PATH_DIRECTORY, JSONLD_ROOT_PATH_URL, $fn);
-    echo "<url>";
-    //echo "\n";
-    echo "<loc>$url</loc>";
-    //echo "\n";
-    echo "</url>";
-    //echo "\n";
+    echo "<url>" . "\r\n";
+    echo "<loc>$url</loc>" . "\r\n";
+    echo "</url>" . "\r\n";
     return;
 
 
@@ -64,14 +61,12 @@ function listdir($basedir)
     }    
 } 
 header("Content-type: application/xml");
-echo '<?xml version="1.0" encoding="UTF-8"?>';
-//echo "\n";
-echo '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">';
-//echo "\n";
+echo '<?xml version="1.0" encoding="UTF-8"?>' . "\r\n";
+echo '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">' . "\r\n";
 
 listdir($basedir); //this line starts the ball rolling
 
-echo '</urlset>';
+echo '</urlset>' . "\r\n";
 
 ?>
 
