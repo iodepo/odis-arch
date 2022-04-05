@@ -26,9 +26,9 @@ function getdepth($fn){
 function printlink($fn)
 {
     $url = str_replace(JSONLD_ROOT_PATH_DIRECTORY, JSONLD_ROOT_PATH_URL, $fn);
-    echo "<url>" . "\r\n";
-    echo "<loc>$url</loc>" . "\r\n";
-    echo "</url>" . "\r\n";
+    echo "  <url>" . "\r\n";
+    echo "    <loc>$url</loc>" . "\r\n";
+    echo "  </url>" . "\r\n";
     return;
 
 
