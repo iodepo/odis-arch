@@ -19,7 +19,7 @@ Notes:
 # define common variables
 CSW_ENDPOINT = "https://geonode.nodc.id/catalogue/csw"
 CSW_ENDPOINT_TIMEOUT = 60 #seconds
-PATH_TO_DATA_FOLDER = "./data-ina-nodc/"
+PATH_TO_DATA_FOLDER = "./data-ina-nodc/" #directory must exist
 NEW_RDF_FILENAME = "ina-nodc-catalogue.rdf"
 HOSTNAME = "https://geonode.nodc.id"
 LOGFILE = "ina-nodc-harvest.log"
