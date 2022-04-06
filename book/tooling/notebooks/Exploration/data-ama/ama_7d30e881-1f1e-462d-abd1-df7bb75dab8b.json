@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geonetwork.iode.org/id/7d30e881-1f1e-462d-abd1-df7bb75dab8b",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((0 -34, 0 -10, 26 -10, 26 -34, 0 -34))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Surface wind speed and direction extracted from Comprehensive Ocean-Atmosphere Data Set (COADS) two-degree mean monthly climatology. Monthly summaries are averaged over 2 degree grids and data over land removed. COADS data provided by the NOAA/OAR/ESRL PSD, Boulder, Colorado, USA.\nThe BCLME (Benguela Current Large Marine Ecosystem) includes the countries Angola, Namibia and South Africa.",
+    "keywords": "Atmosphere | Atmospheric Winds | Surface Winds, Namibia, Atlas",
+    "name": "Namibia: Wind Speed and Direction"
+}

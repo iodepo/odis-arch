@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geonetwork.iode.org/id/4c97824a-e458-44f8-add8-348adc9d543d",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-12 -5, -12 13, 12 13, 12 -5, -12 -5))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This dataset have been extracted from COADS monthly Climatology at the National Virtual Ocean Data Server (NVODS). The data have been processed to obtain the relative humidity at surface for Togo Area of Interest for the development of the Mauritius National Marine Atlas",
+    "keywords": "Oceans | Specific Humidity| Humidity, Specific Humidity, Togo, Atlas",
+    "name": "TOGO AOI: Relative Humidity"
+}
