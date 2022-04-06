@@ -1,4 +1,3 @@
-import kglab
 import json
 import rdflib
 import numpy as np
@@ -12,7 +11,7 @@ from pathlib import Path
 # Need to add a new context to the data file perhaps
 # by doing a context exapansion
 
-df = Path('./data.json').read_text()
+df = Path('./dataNewCtx.json').read_text()
 # dataUrl = urllib.request.urlopen("https://pacific-data.sprep.org/sites/default/files/pod_data/data.json")
 # df = dataUrl.read()
 dg = rdflib.Graph()
