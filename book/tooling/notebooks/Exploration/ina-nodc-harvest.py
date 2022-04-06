@@ -28,7 +28,7 @@ PATH_TO_DATA_FOLDER = "./data-ina-nodc/" #directory must exist
 NEW_RDF_FILENAME = "ina-nodc-catalogue.rdf"
 HOSTNAME = "https://geonode.nodc.id"
 LOGFILE = "ina-nodc-harvest.log"
-SHORTNAME = "ina_nodc" #must be underscores
+SHORTNAME = "ina-nodc" #must be hyphen
 
 """
 #########################
@@ -211,7 +211,7 @@ while stop == 0:
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-            filename = str(PATH_TO_DATA_FOLDER + SHORTNAME + "_{}.json".format(id))
+            filename = str(PATH_TO_DATA_FOLDER + SHORTNAME + "-{}.json".format(id))
     
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)
