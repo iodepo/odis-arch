@@ -9,7 +9,7 @@ from pathlib import Path
 
 # TODO
 # Need to add a new context to the data file perhaps
-# by doing a context exapansion
+# by doing a context expansion
 
 df = Path('./dataNewCtx.json').read_text()
 # dataUrl = urllib.request.urlopen("https://pacific-data.sprep.org/sites/default/files/pod_data/data.json")
