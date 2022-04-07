@@ -1,5 +1,54 @@
 
 
+DCAT                Schema.org
+---------------     ---------------
+dcat:theme          about
+dct:modified        dateModified
+dct:issued          datePublished
+dct:description     description
+dcat:distribution   distribution
+dct:language        inLanguage
+dcat:keyword        keywords
+dct:license         license
+dct:title           name
+dct:spatial         spatial
+dct:temporal        temporal
+dcat:landingPage    url
+dcat:contactPoint   → vcard:hasEmail0provider → Person:email
+dcat:contactPoint   → vcard:fn0provider → Person:name
+dct:publisher       → org:subOrganizationOf0publisher → Organization:memberOf
+dct:publisher       → foaf:name0publisher → Organization:name
+    
+dct:identifier  n/a
+dct:rights  n/a
+dcat:accessURL  n/a
+dct:accrualPeriodicity  n/a
+dct:references  n/a
+
+
+DCAT                Schema.org
+---------------     ---------------
+n/a                 itemtype attribute
+dcat:downloadURL    contentUrl
+dcat:accessURL      contentUrl
+dcat:mediaType      n/a
+dct:format          encodingFormat
+dct:title           name
+dct:description     description
+
+
+
+Template to populate
+
+CONSTRUCT {
+    $this dct:sdodescription ?desc .
+}
+WHERE {
+    $this dct:description ?dsec .
+}
+
+--------------------------------------------------------------------------
+
 dcat:DatasetRuleShape
 	a  sh:NodeShape ;
      sh:targetClass dcat:Dataset ;

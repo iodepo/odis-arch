@@ -35,7 +35,5 @@ Examples of these needs include:
 * Have a Distribution and contentURL
 * Reference authority
 
-## Implementation
 
-Work this implementation can be found in the notebooks section
-[SHACL testing](../tooling/notebooks/validation/OIH_SHACL.ipynb).
+
