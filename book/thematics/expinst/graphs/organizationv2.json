@@ -1,0 +1,73 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://index.example.org/id/org/x",
+    "@type": "Organization",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris, France",
+        "postalCode": "F-75002",
+        "streetAddress": "38 avenue de l'Opera"
+    },
+    "email": "secretariat(at)example.org",
+    "name": "Organization X",
+    "description": "Description of org ...",
+    "telephone": "( 33 1) 42 68 53 00",
+    "url": "https://example.org/",
+    "member": [
+        {
+            "@id": "https://example.org/id/org/1",
+            "@type": "Organization",
+            "name": "Organization A",
+            "description": "Org A is a potential parent organization of Org X"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2257-9127",
+            "@type": "Person"
+        }
+    ],
+    "identifier": {
+        "@id": "https://grid.ac/institutes/grid.475727.4",
+        "@type": "PropertyValue",
+        "description": "UN Department of Economic and Social Affairs Sustainable Development",
+        "propertyID": "https://registry.identifiers.org/registry/grid",
+        "url": "https://grid.ac/institutes/grid.475727.4"
+    },
+    "publishingPrinciples": "link to the ODIS book URL",
+    "hasOfferCatalog": [
+        {
+          "@type": "OfferCatalog",
+          "name": "BCO-DMO Resource Catalog",
+          "itemListElement": [
+            {
+              "@id": "https://www.bco-dmo.org/search/dataset",
+              "@type": ["DataCatalog", "Service"],
+              "url": "https://www.bco-dmo.org/search/dataset",
+              "name": "BCO-DMO Dataset Search",
+              "audience": {
+                  "@type": "Audience",
+                  "audienceType": "public",
+                  "name": "General Public"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.bco-dmo.org/search/dataset/{query}",
+                "query": "required"
+              }
+            },
+            {
+              "@id": "https://www.bco-dmo.org/search",
+              "@type": "Service",
+              "url": "https://www.bco-dmo.org/search",
+              "name": "BCO-DMO Website Search",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.bco-dmo.org/search?&keywords={query}",
+                "query": "required"
+              }
+            }
+          ]
+        }
+      ]
+}

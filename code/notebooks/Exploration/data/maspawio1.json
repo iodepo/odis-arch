@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://maspawio.net/id/1",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON(-2.094547  41.116223  -2.094547  39.235491 -4.674234  39.235491  -4.674234  41.116223 -2.094547 41.116223)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This resource/layer shows the spatial location of locally managed marine areas (LMMA) along the Kenyan coast. The information comes from a report done by CORDIO in 2015 that sought to review a detailed history of LMMA development in Kenya. For more information, please contact jkawaka@cordioea.net\r\n\r\n",
+    "keywords": [
+        "kenya",
+        "LMMA"
+    ],
+    "name": "locally managed marine areas Kenya"
+}

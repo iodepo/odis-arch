@@ -1,0 +1,117 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "orange", "id": 0, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb7", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb7"}, {"color": "orange", "id": 1, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb8", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb8"}, {"color": "orange", "id": 2, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb5", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb5"}, {"color": "red", "id": 3, "label": "shacl:ValidationResult", "shape": "dot", "size": 20, "title": "shacl:ValidationResult"}, {"color": "orange", "id": 4, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb6", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb6"}, {"id": 5, "label": "MOOC2", "shape": "dot", "title": "MOOC2"}, {"id": 6, "label": "http://www.janedoe.com", "shape": "dot", "title": "http://www.janedoe.com"}, {"color": "green", "id": 7, "label": "schema:Person", "shape": "dot", "size": 20, "title": "schema:Person"}, {"id": 8, "label": "(425) 123-4567", "shape": "dot", "title": "(425) 123-4567"}, {"color": "orange", "id": 9, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb2", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb2"}, {"id": 10, "label": "oihval:IDShape", "shape": "dot", "title": "oihval:IDShape"}, {"id": 11, "label": "2019-03-21", "shape": "dot", "title": "2019-03-21"}, {"id": 12, "label": "online", "shape": "dot", "title": "online"}, {"color": "orange", "id": 13, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb3", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb3"}, {"id": 14, "label": "test", "shape": "dot", "title": "test"}, {"color": "orange", "id": 15, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb1", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb1"}, {"color": "red", "id": 16, "label": "shacl:ValidationReport", "shape": "dot", "size": 20, "title": "shacl:ValidationReport"}, {"id": 17, "label": "Graph must have an ID", "shape": "dot", "title": "Graph must have an ID"}, {"id": 18, "label": "2019-05-21", "shape": "dot", "title": "2019-05-21"}, {"id": 19, "label": "In this course you will get an introduction to the main tools and ideas in the data scientist\u0027s toolbox...", "shape": "dot", "title": "In this course you will get an introduction to the main tools and ideas in the data scientist\u0027s toolbox..."}, {"color": "orange", "id": 20, "label": "_:ndcb913283cfd4b85957a3a41c33076bbb4", "shape": "dot", "size": 20, "title": "_:ndcb913283cfd4b85957a3a41c33076bbb4"}, {"id": 21, "label": "A provider must be noted", "shape": "dot", "title": "A provider must be noted"}, {"id": 22, "label": "oihval:urlResourceProperty", "shape": "dot", "title": "oihval:urlResourceProperty"}, {"id": 23, "label": "\u003cfile:///home/fils/Containers/dvols/jupyter/work/Gleaner/notebooks/validation/ID_value_string\u003e", "shape": "dot", "title": "\u003cfile:///home/fils/Containers/dvols/jupyter/work/Gleaner/notebooks/validation/ID_value_string\u003e"}, {"color": "green", "id": 24, "label": "schema:CourseInstance", "shape": "dot", "size": 20, "title": "schema:CourseInstance"}, {"color": "red", "id": 25, "label": "shacl:NodeKindConstraintComponent", "shape": "dot", "size": 20, "title": "shacl:NodeKindConstraintComponent"}, {"id": 26, "label": "URL required for the location of the resource described by this metadata", "shape": "dot", "title": "URL required for the location of the resource described by this metadata"}, {"id": 27, "label": "False", "shape": "dot", "title": "False"}, {"color": "green", "id": 28, "label": "schema:Course", "shape": "dot", "size": 20, "title": "schema:Course"}, {"color": "red", "id": 29, "label": "shacl:Violation", "shape": "dot", "size": 20, "title": "shacl:Violation"}, {"color": "green", "id": 30, "label": "schema:url", "shape": "dot", "size": 20, "title": "schema:url"}, {"id": 31, "label": "2019-04-15", "shape": "dot", "title": "2019-04-15"}, {"color": "red", "id": 32, "label": "shacl:MinCountConstraintComponent", "shape": "dot", "size": 20, "title": "shacl:MinCountConstraintComponent"}, {"color": "green", "id": 33, "label": "schema:provider", "shape": "dot", "size": 20, "title": "schema:provider"}, {"id": 34, "label": "Jane Doe", "shape": "dot", "title": "Jane Doe"}, {"id": 35, "label": "Professor", "shape": "dot", "title": "Professor"}, {"id": 36, "label": "2019-02-15", "shape": "dot", "title": "2019-02-15"}, {"id": 37, "label": "MOOC1", "shape": "dot", "title": "MOOC1"}, {"id": 38, "label": "oihval:identifierProviderProperty", "shape": "dot", "title": "oihval:identifierProviderProperty"}]);
+        edges = new vis.DataSet([{"from": 0, "label": "schema:attendee", "to": 1}, {"from": 2, "label": "rdf:type", "to": 3}, {"from": 4, "label": "schema:courseMode", "to": 5}, {"from": 1, "label": "schema:url", "to": 6}, {"from": 1, "label": "rdf:type", "to": 7}, {"from": 1, "label": "schema:telephone", "to": 8}, {"from": 9, "label": "rdf:type", "to": 3}, {"from": 9, "label": "shacl:sourceShape", "to": 10}, {"from": 0, "label": "schema:endDate", "to": 11}, {"from": 4, "label": "schema:courseMode", "to": 12}, {"from": 13, "label": "schema:hasCourseInstance", "to": 0}, {"from": 13, "label": "schema:name", "to": 14}, {"from": 15, "label": "rdf:type", "to": 16}, {"from": 9, "label": "shacl:resultMessage", "to": 17}, {"from": 4, "label": "schema:endDate", "to": 18}, {"from": 13, "label": "schema:description", "to": 19}, {"from": 20, "label": "shacl:resultMessage", "to": 21}, {"from": 2, "label": "shacl:sourceShape", "to": 22}, {"from": 1, "label": "schema:identifier", "to": 23}, {"from": 4, "label": "rdf:type", "to": 24}, {"from": 15, "label": "shacl:result", "to": 20}, {"from": 9, "label": "shacl:sourceConstraintComponent", "to": 25}, {"from": 2, "label": "shacl:resultMessage", "to": 26}, {"from": 15, "label": "shacl:conforms", "to": 27}, {"from": 13, "label": "rdf:type", "to": 28}, {"from": 20, "label": "shacl:resultSeverity", "to": 29}, {"from": 2, "label": "shacl:resultPath", "to": 30}, {"from": 15, "label": "shacl:result", "to": 9}, {"from": 4, "label": "schema:startDate", "to": 31}, {"from": 9, "label": "shacl:value", "to": 13}, {"from": 20, "label": "shacl:sourceConstraintComponent", "to": 32}, {"from": 2, "label": "shacl:resultSeverity", "to": 29}, {"from": 20, "label": "shacl:resultPath", "to": 33}, {"from": 20, "label": "shacl:focusNode", "to": 13}, {"from": 2, "label": "shacl:sourceConstraintComponent", "to": 32}, {"from": 1, "label": "schema:name", "to": 34}, {"from": 1, "label": "schema:jobTitle", "to": 35}, {"from": 15, "label": "shacl:result", "to": 2}, {"from": 13, "label": "schema:hasCourseInstance", "to": 4}, {"from": 0, "label": "schema:startDate", "to": 36}, {"from": 9, "label": "shacl:resultSeverity", "to": 29}, {"from": 2, "label": "shacl:focusNode", "to": 13}, {"from": 0, "label": "schema:courseMode", "to": 37}, {"from": 20, "label": "shacl:sourceShape", "to": 38}, {"from": 0, "label": "schema:courseMode", "to": 12}, {"from": 20, "label": "rdf:type", "to": 3}, {"from": 0, "label": "rdf:type", "to": 24}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

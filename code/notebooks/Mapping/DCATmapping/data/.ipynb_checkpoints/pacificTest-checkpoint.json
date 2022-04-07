@@ -1,0 +1,123 @@
+{
+  "@context": { "@vocab" :"https://project-open-data.cio.gov/v1.1/schema/",
+   "dcat": "http://www.w3.org/ns/dcat#",
+    "dct":	"http://purl.org/dc/terms/",
+
+   "schema":  "https://schema.org/"},
+  "@id": "https://pacific-data.sprep.org/data.json",
+  "@type": "dcat:Catalog",
+  "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+  "describedBy": "https://project-open-dat…v1.1/schema/catalog.json",
+  "dataset": [
+    {
+      "@type": "dcat:Dataset",
+      "accessLevel": "public",
+      "rights": null,
+      "accrualPeriodicity": "",
+      "contactPoint": {
+        "fn": "Clark Peteru",
+        "hasEmail": "clarkp@sprep.org"
+      },
+      "describedBy": null,
+      "describedByType": "",
+      "conformsTo": "",
+      "description": "Summary table of the status of Pacific Island countries in relation to International and Regional conventions.",
+      "distribution": [
+        {
+          "downloadURL": "http://www.sprep.org/attachments/Publications/Corporate_Documents/mea-database-july-2017.pdf",
+          "mediaType": "application/pdf",
+          "format": "pdf",
+          "accessUrl": null,
+          "description": null,
+          "title": "MEA Database - July 2017"
+        }
+      ],
+      "identifier": "e698f50a-aad7-4696-b59f-17d32e719363",
+      "issued": "2021-07-21",
+      "keyword": [],
+      "landingPage": "http://www.sprep.org/Multilateral-Environmental-Agreements/pacific-regional-clearinghouse-mechanism",
+      "language": "",
+      "license": "cc-by-sa",
+      "modified": "2022-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "name": "Secretariat of the Pacific Regional Environment Programme"
+      },
+      "references": [],
+      "spatial": "POLYGON ((-217.14258670807 -30.695866237642, -217.14258670807 33.777934519888, -111.32227420807 33.777934519888, -111.32227420807 -30.695866237642))",
+      "temporal": null,
+      "isPartOf": "regional.pacificdata",
+      "theme": [
+        "Atmosphere and Climate",
+        "Land",
+        "Biodiversity",
+        "Built Environment",
+        "Coastal and Marine",
+        "Culture and Heritage",
+        "Inland Waters"
+      ],
+      "title": "MEA Database",
+      "relevantCountries": [
+        "Pacific Region"
+      ]
+    },
+    {
+      "@type": "dcat:Dataset",
+      "accessLevel": "public",
+      "rights": null,
+      "accrualPeriodicity": "",
+      "contactPoint": {
+        "fn": "pacific@dmin",
+        "hasEmail": ""
+      },
+      "describedBy": null,
+      "describedByType": "",
+      "conformsTo": "",
+      "description": "Reports on the state of the world's sea turtles",
+      "distribution": [
+        {
+          "downloadURL": "https://pacific-data.sprep.org/system/files/SWOT%20Report_13.pdf",
+          "mediaType": "application/pdf",
+          "format": "pdf",
+          "accessUrl": null,
+          "description": "In contrast to the properly grim outlook of just a few decades ago, these are pretty good times for sea turtles. In a 2017 paper titled “Global Sea Turtle Conservation Successes,” Antonio Mazaris and colleagues reported that published estimates of sea turtle populations tend to be increasing rather than decreasing globally. We have also seen the status of some species improving in recent Red List assessments led by the IUCN-SSC Marine Turtle Specialist Group, with both the leatherback and loggerhead improving to vulnerable globally (from critically endangered and endangered, respectively). Even the world’s most threatened sea turtle species—the Kemp’s ridley, which is still critically endangered— shows signs of a rebound (see pp. 32–33). Olive ridleys are smashing past abundance records at their arribada beach in Escobilla, Mexico, and SWOT Reports have shared many accounts of recovery, ranging from Michoacán black turtles (pp. 44–45), to the sea turtles of Japan (pp. 24–31) and Brazil, the Hawaiian honu, Cyprus greens, and loggerheads in Kyparissia Bay, Greece, to name a few.",
+          "title": "State of the World's Sea Turtles (SWOT) Report XIII"
+        }
+      ],
+      "identifier": "d6c3ac2a-354f-430f-89df-392914a212c4",
+      "issued": "2021-07-21",
+      "keyword": [
+        "turtle",
+        "sea",
+        "sea turtle",
+        "pacific loggerheads",
+        "french territories",
+        "bycatch solution",
+        "swot",
+        "report",
+        "world",
+        "2017"
+      ],
+      "landingPage": "https://pacific-data.sprep.org/dataset/state-worlds-sea-turtles",
+      "language": "",
+      "license": "cc-by-sa",
+      "modified": "2022-02-11",
+      "publisher": {
+        "@type": "org:Organization",
+        "name": "Secretariat of the Pacific Regional Environment Programme"
+      },
+      "references": [],
+      "spatial": null,
+      "temporal": null,
+      "isPartOf": "regional.pacificdata",
+      "theme": [
+        "Biodiversity",
+        "Coastal and Marine"
+      ],
+      "title": "The State of the World's Sea Turtles",
+      "relevantCountries": [
+        "Pacific Region"
+      ]
+    }
+  ]
+}
