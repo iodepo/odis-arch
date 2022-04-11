@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.gadm.org/country",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((8.50236 1.65417, 8.50236 13.085, 16.20701 13.085, 16.20701 1.65417, 8.50236 1.65417))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "GADM is a spatial database of the location of the world's administrative areas (or adminstrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces, departments, bibhag, bundeslander, daerah istimewa, fivondronana, krong, landsvæðun, opština, sous-préfectures, counties, and thana. GADM describes where these administrative areas are (the \"spatial features\"), and for each area it provides some attributes, foremost being the name and variant names.",
+    "keywords": "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS, HUMAN DIMENSIONS | BOUNDARIES | POLITICAL DIVISIONS, World",
+    "name": "Administrative Boundaries of Cameroon and Maritime Neigbouring Countries",
+    "url": "http://www.gadm.org/country"
+}

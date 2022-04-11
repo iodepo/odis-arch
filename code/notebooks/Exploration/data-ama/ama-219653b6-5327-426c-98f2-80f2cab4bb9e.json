@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.ims.udsm.ac.tz",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((34 -14, 34 0, 47 0, 47 -14, 34 -14))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This map shows the administative areas and the marine AOI of Tanzania",
+    "keywords": "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS, HUMAN DIMENSIONS | BOUNDARIES | POLITICAL DIVISIONS, Tanzania, United Rep of",
+    "name": "Administrative boundaries of Tanzania from GADM",
+    "url": "http://www.ims.udsm.ac.tz"
+}

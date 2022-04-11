@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://www.bodc.ac.uk/data/online_delivery/gebco/",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3 -20, 3 -2, 25 -2, 25 -20, 3 -20))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Digitised on grids and slope maps based on GEBCO bathymetric data.  Use of seamount definition 'must rise at least 1000 m above sea floor'.",
+    "keywords": "OCEANS | BATHYMETRY | WATER DEPTH | BATHYMETRIC CONTOURS, Angola, Atlas",
+    "name": "Angola AOI : Marine canyons",
+    "url": "https://www.bodc.ac.uk/data/online_delivery/gebco/"
+}

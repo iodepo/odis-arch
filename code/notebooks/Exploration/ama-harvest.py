@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
 """
-Purpose: Standalone script to generate RDF from CSW endpoint
+Purpose: Standalone script to generate individual JSON-LD files
+         and a master RDF document, live, from CSW endpoint
 
-Usage:   python ama-harvest.py
+Usage:   python ina-nodc-harvest.py
 
-Output:  saves a new RDF file, for all catalogue records
+Output:  saves a new JSON-LD file, for each catalogue record 
+         exposed through the OGC:CSW service, and also a
+         .RDF resource file.
+         
+Requires: Python 3.x
 
 Notes:
 
@@ -23,6 +28,7 @@ PATH_TO_DATA_FOLDER = "./data-ama/"
 NEW_RDF_FILENAME = "ama-catalogue.rdf"
 HOSTNAME = "http://geonetwork.iode.org"
 LOGFILE = "ama-harvest.log"
+SHORTNAME = "ama" #must be hyphen
 
 """
 #########################
@@ -122,7 +128,7 @@ while stop == 0:
         #handle empty first record for global extents (with DublinCore schema)
         #if csw.records[rec].title != "":
         #handle empty record (with ISO schema)
-        if hasattr(csw.records[rec].identification, "title"): 
+        if hasattr(csw.records[rec].identification, "title") and csw.records[rec].distribution is not None: 
 
             index+=1
     
@@ -133,7 +139,8 @@ while stop == 0:
         
             #id
             id = csw.records[rec].identifier
-
+            logging.info("record id: %s", id)
+            
             #description
             description = csw.records[rec].identification.abstract #ISO
             #description = csw.records[rec].abstract #DublinCore
@@ -156,7 +163,10 @@ while stop == 0:
             data = {}
 
             #id should point to url of dataset record
-            url = csw.records[rec].distribution.online[0].url
+            if len(csw.records[rec].distribution.online) > 0:
+                url = str(csw.records[rec].distribution.online[0].url)
+            else:
+                url = "None"
             data["@id"] = url
             print("        " + url)
             
@@ -205,7 +215,7 @@ while stop == 0:
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-            filename = str(PATH_TO_DATA_FOLDER + "ama_{}.json".format(id))
+            filename = str(PATH_TO_DATA_FOLDER + SHORTNAME + "-{}.json".format(id))
     
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)

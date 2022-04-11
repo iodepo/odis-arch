@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NODC/.WOA05/",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-12 -5, -12 13, 12 13, 12 -5, -12 -5))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "World Ocean Atlas 2005 (WOA05) is a set of objectively analyzed (1° grid) climatological fields of in situ temperature, salinity, dissolved oxygen, Apparent Oxygen Utilization (AOU), percent oxygen saturation, phosphate, silicate, and nitrate at standard depth levels for annual, seasonal, and monthly compositing periods for the World Ocean. It also includes associated statistical fields of observed oceanographic profile data interpolated to standard depth levels on both 1° and 5°\ngrids.",
+    "keywords": "Oceans | Ocean Chemistry | Phosphate, Togo, Atlas",
+    "name": "TOGO World Ocean Atlas 2005 (Phosphate)",
+    "url": "http://iridl.ldeo.columbia.edu/SOURCES/.NOAA/.NODC/.WOA05/"
+}

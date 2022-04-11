@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.vliz.be/vmdcdata/marbound/download.php",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-12 -5, -12 13, 12 13, 12 -5, -12 -5))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "The Maritime Boundaries Geodatabase (MARBOUND) is developed by the Flanders Marine Institute and bundles the boundaries of the Exclusive Economic Zones (EEZ) of all countries worldwide. The database also includes all original documents of the treaties concerning these borders (in digital format). Through a forum on the MARBOUND website users can contribute to the further development and optimization of the MARBOUND database by providing information about new border developments.",
+    "keywords": "Human Dimensions | Boundaries | Political Divisions, Togo",
+    "name": "Togo Exclusive Economic Zones",
+    "url": "http://www.vliz.be/vmdcdata/marbound/download.php"
+}
