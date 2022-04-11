@@ -139,6 +139,7 @@ while stop == 0:
         
             #id
             id = csw.records[rec].identifier
+            logging.info("record id: %s", id)
 
             #description
             description = csw.records[rec].identification.abstract #ISO
