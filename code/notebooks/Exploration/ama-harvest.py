@@ -4,7 +4,7 @@
 Purpose: Standalone script to generate individual JSON-LD files
          and a master RDF document, live, from CSW endpoint
 
-Usage:   python ina-nodc-harvest.py
+Usage:   python ama-harvest.py
 
 Output:  saves a new JSON-LD file, for each catalogue record 
          exposed through the OGC:CSW service, and also a
