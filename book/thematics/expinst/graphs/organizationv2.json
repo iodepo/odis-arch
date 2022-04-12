@@ -38,36 +38,23 @@
     "hasOfferCatalog": [
         {
           "@type": "OfferCatalog",
-          "name": "BCO-DMO Resource Catalog",
+          "name": "Org X  Resource Catalog",
           "itemListElement": [
             {
               "@id": "https://www.bco-dmo.org/search/dataset",
-              "@type": ["DataCatalog", "Service"],
-              "url": "https://www.bco-dmo.org/search/dataset",
-              "name": "BCO-DMO Dataset Search",
+              "@type": "WebContent",
+              "url": "https://www.x.org/sitemap.xml",
+              "name": "Org X sitemap",
+              "encodingFormat": "text/xml",
+              "usageInfo": "https://book.oceaninfohub.org/sitemap",
+              "publishingPrinciples": "https://book.oceaninfohub.org/sitemap",
+              "schemaVersion": "https://sitemap.org",
               "audience": {
                   "@type": "Audience",
                   "audienceType": "public",
                   "name": "General Public"
-              },
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.bco-dmo.org/search/dataset/{query}",
-                "query": "required"
-              }
-            },
-            {
-              "@id": "https://www.bco-dmo.org/search",
-              "@type": "Service",
-              "url": "https://www.bco-dmo.org/search",
-              "name": "BCO-DMO Website Search",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.bco-dmo.org/search?&keywords={query}",
-                "query": "required"
               }
             }
-          ]
         }
       ]
-}
+} 
