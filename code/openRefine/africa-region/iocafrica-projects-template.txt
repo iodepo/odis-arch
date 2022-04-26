@@ -1,0 +1,76 @@
+PREFIX
+======
+
+{
+     "@context": {
+        "@vocab": "https://schema.org/" 
+    },
+    "@type": ["ItemList", "ResearchProject"],
+    "name": "IOCAfrica Projects",
+    "author": "IOCAfrica",
+    "about": {
+      "@type": "ResearchProject"
+    },
+    "itemListElement": [
+    
+ROW TEMPLATE
+============
+  
+{
+    "@context": {
+        "@vocab": "https://schema.org/" 
+    },
+    "@id":  {{jsonize(cells["Identifier"].value)}},
+    "@type": "ResearchProject",
+    "name" : {{jsonize(cells["Project Name"].value)}},    
+    "description":  {{jsonize(cells["Context"].value)}},
+    "url":  {{jsonize(cells["Website"].value)}},
+    "logo": {{jsonize(cells["Logo"].value)}},
+    "funder": {
+      "@type": "FundingAgency",
+      "legalName": {{jsonize(cells["Funds Source"].value)}},
+    }
+}
+
+ROW SEPARATOR
+=============
+
+,
+
+SUFFIX
+======
+
+ ]
+}
+
+
+
+
+
+ALL FIELDS
+==========
+
+    {
+      "Project Name" : {{jsonize(cells["Project Name"].value)}},
+      "Website" : {{jsonize(cells["Website"].value)}},
+      "Additional Source" : {{jsonize(cells["Additional Source"].value)}},
+      "Legal Name" : {{jsonize(cells["Legal Name"].value)}},
+      "Context" : {{jsonize(cells["Context"].value)}},
+      "Identifier" : {{jsonize(cells["Identifier"].value)}},
+      "Type" : {{jsonize(cells["Type"].value)}},
+      "Country" : {{jsonize(cells["Country"].value)}},
+      "LME Region" : {{jsonize(cells["LME Region"].value)}},
+      "Funds Source" : {{jsonize(cells["Funds Source"].value)}},
+      "Executing Agency" : {{jsonize(cells["Executing Agency"].value)}},
+      "Focal Area" : {{jsonize(cells["Focal Area"].value)}},
+      "Thematic Areas" : {{jsonize(cells["Thematic Areas"].value)}},
+      "Start Date" : {{jsonize(cells["Start Date"].value)}},
+      "End Date" : {{jsonize(cells["End Date"].value)}},
+      "Contact" : {{jsonize(cells["Contact"].value)}},
+      "Total Grant" : {{jsonize(cells["Total Grant"].value)}},
+      "Lead Implementing Agency" : {{jsonize(cells["Lead Implementing Agency"].value)}},
+      "Ethic Policy" : {{jsonize(cells["Ethic Policy"].value)}},
+      "Logo" : {{jsonize(cells["Logo"].value)}}
+    }
+    
+    
