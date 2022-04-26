@@ -33,7 +33,7 @@ ROW TEMPLATE
     "url":  {{jsonize(cells["Website"].value)}},
     "logo": {{jsonize(cells["Logo"].value)}},
     "funding": {
-      "@type": "Grant",    
+      "@type": "MonetaryGrant",    
       "funder": {
         "@type": "FundingAgency",
         "legalName": {{jsonize(cells["Funds Source"].value)}}
@@ -41,7 +41,7 @@ ROW TEMPLATE
       "amount": {{jsonize(cells["Total Grant"].value)}}
     },
     "startDate" : {{jsonize(cells["Start Date"].value)}},
-    "endDate" : {{jsonize(cells["End Date"].value)}},    
+    "endDate" : {{jsonize(cells["End Date"].value)}}  
 }
 
 ROW SEPARATOR
