@@ -18,7 +18,13 @@ ROW TEMPLATE
   
 {
     "@context": {
-        "@vocab": "https://schema.org/" 
+        "@vocab": "https://schema.org/",
+        "endDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "startDate": {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        } 
     },
     "@id":  {{jsonize(cells["Identifier"].value)}},
     "@type": "ResearchProject",
@@ -26,10 +32,16 @@ ROW TEMPLATE
     "description":  {{jsonize(cells["Context"].value)}},
     "url":  {{jsonize(cells["Website"].value)}},
     "logo": {{jsonize(cells["Logo"].value)}},
-    "funder": {
-      "@type": "FundingAgency",
-      "legalName": {{jsonize(cells["Funds Source"].value)}},
-    }
+    "funding": {
+      "@type": "Grant",    
+      "funder": {
+        "@type": "FundingAgency",
+        "legalName": {{jsonize(cells["Funds Source"].value)}}
+      },
+      "amount": {{jsonize(cells["Total Grant"].value)}}
+    },
+    "startDate" : {{jsonize(cells["Start Date"].value)}},
+    "endDate" : {{jsonize(cells["End Date"].value)}},    
 }
 
 ROW SEPARATOR
