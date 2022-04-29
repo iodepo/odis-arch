@@ -57,8 +57,10 @@ def get_sparql_dataframe(service, query):
 
 
 def app():
-  st.title("OIH Graph Test 1")
-  st.sidebar.title("OIH")
+  st.title("Ocean InfoHub")
+  st.sidebar.title("Ocean InfoHub")
+  st.subheader("KW Test")
+  st.text_area("Description", "This will be a simple SPARQL query to pull keywords from the OIH graph.  We will attempt to connect the keywords with the data source to visually represent keywords used by multiple sourfces.") 
   # query_type = st.sidebar.selectbox("Quey Tpye: ", ["Q1 Test"]) # could add more stuff here later on or add other endpoints in the sidebar.
   # config = Config(height=500, width=700, nodeHighlightBehavior=True, highlightColor="#F7A7A6", directed=True,
                   # collapsible=True)

@@ -57,13 +57,14 @@ def get_inspired():
 
 
 def app():
-  st.title("OIH Graph Test 1")
-  st.sidebar.title("OIH")
-  query_type = st.sidebar.selectbox("Quey Tpye: ", ["Q1 Test"]) # could add more stuff here later on or add other endpoints in the sidebar.
+  st.title("Ocean InfoHub Graph Dashboard DEMO")
+  st.sidebar.title("OIH Query Options")
+  query_type = st.sidebar.selectbox("Quey Tpye: ", ["KW Test"]) # could add more stuff here later on or add other endpoints in the sidebar.
   config = Config(height=500, width=700, nodeHighlightBehavior=True, highlightColor="#F7A7A6", directed=True,
                   collapsible=True)
-  if query_type=="Q1 Test":
-    st.subheader("Q1 Test")
+  if query_type=="KW Test":
+    st.subheader("KW Test")
+    st.text_area("Description", "This will be a simple SPARQL query to pull keywords from the OIH graph.  We will attempt to connect the keywords with the data source to visually represent keywords used by multiple sourfces.")
     with st.spinner("Loading data"):
       store = get_inspired()
       st.write(len(store.getNodes()))
