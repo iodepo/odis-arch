@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/tuv_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((172.71256944444497 -13.240386111110979, 172.71256944444497 -3.965563888888767, 183.243352777778 -3.965563888888767, 183.243352777778 -13.240386111110979, 172.71256944444497 -13.240386111110979))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Population Raster Tuvalu 2020\r\n\r\nData Input: Household locations from 2017 Population and Housing Census conducted using Survey Solutions CAPI by Tuvalu Central Statistics Division. \r\nYear Population Growth Rate of 0.04% has been applied to update population up to 2020\r\n\r\nHousehold locations vector layer has been transformed into a 100m resolution raster.",
+    "keywords": "grid, population",
+    "name": "Tuvalu_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/tuv_population_grid_2020"
+}

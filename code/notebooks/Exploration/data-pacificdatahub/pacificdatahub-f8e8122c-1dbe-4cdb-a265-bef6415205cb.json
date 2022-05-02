@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2013_wallisfutuna_phc_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((179.50499999990473 -15.919306458226345, 179.50499999990473 -9.829646286466925, 185.73262352545555 -9.829646286466925, 185.73262352545555 -15.919306458226345, 179.50499999990473 -15.919306458226345))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Wallis and Futuna 2013 Population and Housing Census  \r\n* Village boundaries\r\n* District boundaries\r\nThese administrative boundaries have been used to build the Wallis and Futuna PopGIS3 online mapping tool https://wf.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.",
+    "keywords": "boundaries, population-census",
+    "name": "2013_WallisFutuna_PHC_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2013_wallisfutuna_phc_admin_boundaries"
+}

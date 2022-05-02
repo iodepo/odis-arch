@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/mhl_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((157.4605437804716 1.777313889000837, 157.4605437804716 17.946061498439633, 175.5217631574444 17.946061498439633, 175.5217631574444 1.777313889000837, 157.4605437804716 1.777313889000837))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Data Input: Settlement footprint from Facebook's High-Resolution Population Density Maps https://data.humdata.org/dataset/marshall-islands-high-resolution-population-density-maps-demographic-estimates\r\nPopulation allocated proportionally using 2011 census population counts at enumeration area level.\r\nYear Population Growth Rate of 0.3% has been applied to update population up to 2020\r\nThe human settlement footprint with census population allocated has been converted into a 100 m resolution raster.\r\n",
+    "keywords": "grid, population",
+    "name": "Marshal_Islands_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/mhl_population_grid_2020"
+}

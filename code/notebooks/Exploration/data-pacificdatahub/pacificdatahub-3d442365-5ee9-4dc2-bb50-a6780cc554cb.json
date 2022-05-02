@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2018_kir_hhl_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((167.8692703406989 -13.838333333516402, 167.8692703406989 7.879055555369746, 213.1834583337353 7.879055555369746, 213.1834583337353 -13.838333333516402, 167.8692703406989 -13.838333333516402))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Kiribati 2018 Household Listing  \r\n* Enumeration area boundaries: specific geographic units used for statistical data collection.\r\n* Village boundaries\r\n* Island boundaries. Layer represented with a 25km buffer from the coast to improve the data representation visibility. \r\n\r\nThese administrative boundaries have been used to build the Kiribati PopGIS3 online mapping tool https://kiribati.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.",
+    "keywords": "boundaries, population-census",
+    "name": "2018_Kiribati_HHL_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2018_kir_hhl_admin_boundaries"
+}

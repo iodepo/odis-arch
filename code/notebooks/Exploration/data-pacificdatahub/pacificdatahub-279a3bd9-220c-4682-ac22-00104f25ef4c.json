@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2016_ton_phc_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((180.91175116691318 -25.69605493118999, 180.91175116691318 -14.154640220669506, 188.69472222225298 -14.154640220669506, 188.69472222225298 -25.69605493118999, 180.91175116691318 -25.69605493118999))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Tonga 2016 Population and Housing Census  \r\n* Block boundaries: specific geographic units used for statistical data collection.\r\n* Village boundaries\r\n* District boundaries\r\n* Division boundaries\r\nThese administrative boundaries have been used to build the Tonga PopGIS3 online mapping tool https://tonga.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.\r\n",
+    "keywords": "boundaries, population-census",
+    "name": "2016_Tonga_PHC_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2016_ton_phc_admin_boundaries"
+}

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/cyclone-harold-potential-impacted-population-map",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((163.30859653600123 -21.642881857686405, 163.30859653600123 -12.28215002989981, 173.60893256515192 -12.28215002989981, 173.60893256515192 -21.642881857686405, 163.30859653600123 -21.642881857686405))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Population exposure analysis conducted to assess potential impact caused by tropical cyclone HAROLD-20.\r\nVanuatu:\r\nThe analysis is based on tropical cyclone path of wind speeds zones from Joint Research Centre (Issued on 7 April 2020 00:00 UTC) and spatially modeled population data from 2016 Population and Household Census conducted by Vanuatu National Statistics office (VNSO). Year Population Growth Rate of 2.3% has been applied to update population up to 2020. \r\nPopulation grid utilized to conduct the analysis is available on Pacific Data Hub https://pacificdata.org/data/dataset/vut_population_grid_2020\r\n\r\nTonga: \r\nThe analysis is based on tropical cyclone path of wind speeds zones from Joint Research Centre (Issued on 8 April 2020 00:00 UTC) and spatially modeled population data from 2016 Population and Household Census conducted by Tonga Statistics Department (TSD). Year Population Growth Rate of - 0.24% has been applied to update population up to 2020. \r\nPopulation grid utilized to conduct the analysis is available on Pacific Data Hub https://pacificdata.org/data/dataset/ton_population_grid_2020\r\n\r\nFiji:\r\nThe analysis is based on tropical cyclone path of wind speeds zones from Joint Research Centre (Issued on 8 April 2020 00:00 UTC) and spatially modeled population data from 2017 Population and Household Census conducted by Fiji Bureau of Statistics (FIBOS).  Year Population Growth Rate of 0.51 % has been applied to update population up to 2020. \r\n\r\n\r\n\r\n",
+    "keywords": "disaster-management, vanuatu",
+    "name": "Cyclone Harold potential impacted population maps - Vanuatu, Tonga and Fiji",
+    "url": "https://pacificdata.org/data/dataset/cyclone-harold-potential-impacted-population-map"
+}

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2015_plw_phc_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((129.50880481728905 1.621407206177707, 129.50880481728905 11.558724726465186, 136.95410021135228 11.558724726465186, 136.95410021135228 1.621407206177707, 129.50880481728905 1.621407206177707))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Palau 2015 Population and Housing Census  \r\n* Enumeration area boundaries: specific geographic units used for statistical data collection.\r\n* Hamlet boundaries\r\n* State boundaries\r\n* Group of states boundaries\r\n\r\nThese administrative boundaries have been used to build the Palau PopGIS3 online mapping tool https://palau.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.\r\n",
+    "keywords": "boundaries, population-census",
+    "name": "2015_Palau_PHC_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2015_plw_phc_admin_boundaries"
+}

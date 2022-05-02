@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/wlf_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((179.50499999990473 -15.919306458226345, 179.50499999990473 -9.829646286466925, 185.73262352545555 -9.829646286466925, 185.73262352545555 -15.919306458226345, 179.50499999990473 -15.919306458226345))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Population Raster Wallis and Futuna 2020\r\n\r\nData Input: Household locations from 2016 listing connected to 2017 Census Population data at household level. \r\nYear Population Growth Rate of - 0.51% was applied to update population up to 2020\r\n\r\nHousehold locations vector layer transformed into 100m resolution raster.\r\n",
+    "keywords": "grid, population",
+    "name": "Wallis_and_Futuna_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/wlf_population_grid_2020"
+}
