@@ -61,22 +61,26 @@ In graph space the resulting triples from the above are:
 <http://example.com/queen> <http://example.com/vocab/label> "The Queen"@en .
 ```
 
-with language encoding attributes in place.  These can be used in 
+with language encoding attributes in place.  These can be used in
 searching and result filters.
 
-Note, this can cause issues in query space since the concept of 
+Note, this can cause issues in query space since the concept of
 
 ```
-"The Queen"
+"Semua orang dilahirkan merdeka dan mempunyai martabat dan hak-hak yang sama. 
+Mereka dikaruniai akal dan hati nurani dan hendaknya bergaul satu 
+sama lain dalam semangat persaudaraan."
 ```
 
-and 
+and
  
  ```
- "The Queen"@en
+ "Semua orang dilahirkan merdeka dan mempunyai martabat 
+ dan hak-hak yang sama. Mereka dikaruniai akal dan hati nurani 
+ dan hendaknya bergaul satu sama lain dalam semangat persaudaraan."@id
  ``` 
  
- are different and so care must be taken the creation of the SPARQL 
- queries not to accidentally imposed implicate filters through the use 
- of language types. 
+are different and so care must be taken the creation of the SPARQL 
+queries not to accidentally imposed implicate filters through the use 
+of language types. 
  
