@@ -2,54 +2,6 @@
 @prefix : <https://schema.org/> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 
-<https://www.caribbeanmarineatlas.net/layers/:geonode:> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-180,0 -90,0, -180,0 90,0, 180,0 90,0, 180,0 -90,0, -180,0 -90,0))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description """Ecorregiones marinas, tal y como fueron definidas en el documento preliminar para la Política Nacional de los Oceanos. 
-Las ecorregiones marinas se definen en los siguientes documentos:
-1. Ministerio del Medio Ambiente. 2000. Política Nacional Ambiental para el Desarrollo Sostenible de los Espacios Oceánicos y las Zonas Costeras e Insulares de Colombia. Bogotá
-2. INVEMAR, 2000.  Programa Nacional de Investigación en Biodiversidad Marina y Costera PNIBM. Editado por Juan Manuel Díaz Merlano y Diana Isabel Gómez López. Santa Marta: INVEMAR, FONADE, MMA. pp 32-46.""" ;
-    :keywords "Sistema Costeros Del Caribe Colombiano - Proyecto Planificacion Ecoregional, Colombia" ;
-    :name "Ecorregiones Marinas de Colombia" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/:geonode:" .
-
-<https://www.caribbeanmarineatlas.net/layers/Carib_N_Carib_N_lov2:geonode:Carib_N_Carib_N_lov2> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-64.00959215466897 16.682948278555738, -64.00959215466897 18.05653992732509, -62.82188242137252 18.05653992732509, -62.82188242137252 16.682948278555738, -64.00959215466897 16.682948278555738))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "No abstract provided" ;
-    :keywords "Carib_N_Carib_N_lov2, GeoTIFF, WCS, Global" ;
-    :name "Carib_N_Carib_N_lov2" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/Carib_N_Carib_N_lov2:geonode:Carib_N_Carib_N_lov2" .
-
-<https://www.caribbeanmarineatlas.net/layers/carib_zuid_EL.GridCoverage_1_:geonode:carib_zuid_EL_GridCoverage_1_> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-70.6811417094985 11.480611088748612, -70.6811417094985 13.272254678857893, -67.77383223471426 13.272254678857893, -67.77383223471426 11.480611088748612, -70.6811417094985 11.480611088748612))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "No abstract provided" ;
-    :keywords "carib_zuid_EL.GridCoverage_1_, GeoTIFF, WCS, Global" ;
-    :name "carib_zuid_EL_GridCoverage_1_" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/carib_zuid_EL.GridCoverage_1_:geonode:carib_zuid_EL_GridCoverage_1_" .
-
-<https://www.caribbeanmarineatlas.net/layers/caris_south_EL.ElevationGridCoverage0:geonode:caris_south_EL_ElevationGridCoverage0> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-0,5 -0,5, -0,5 401,5, 767,5 401,5, 767,5 -0,5, -0,5 -0,5))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "No abstract provided" ;
-    :keywords "caris_south_EL.ElevationGridCoverage, WCS, WorldImage, Global" ;
-    :name "caris_south_EL_ElevationGridCoverage0" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/caris_south_EL.ElevationGridCoverage0:geonode:caris_south_EL_ElevationGridCoverage0" .
-
-<https://www.caribbeanmarineatlas.net/layers/caris_south_EL.ElevationGridCoverage:geonode:caris_south_EL_ElevationGridCoverage> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-0,5 -0,5, -0,5 401,5, 767,5 401,5, 767,5 -0,5, -0,5 -0,5))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "No abstract provided" ;
-    :keywords "caris_south_EL.ElevationGridCoverage, WCS, WorldImage, Global" ;
-    :name "caris_south_EL_ElevationGridCoverage" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/caris_south_EL.ElevationGridCoverage:geonode:caris_south_EL_ElevationGridCoverage" .
-
 <https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a__014_001_wcmc007_turtlenestingsites1999_v1_1> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((-175,134521484375 -32,1938743591309, -175,134521484375 40,4433517456055, 179,999603271484 40,4433517456055, 179,999603271484 -32,1938743591309, -175,134521484375 -32,1938743591309))"^^geosparql:wktLiteral ;
@@ -674,7 +626,7 @@ Although it is difficult to define the different lobster stock units due to thei
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((-61.622782085638775 10.682043313939916, -61.622782085638775 10.69136717198027, -61.59789214975019 10.69136717198027, -61.59789214975019 10.682043313939916, -61.622782085638775 10.682043313939916))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>The bacteriological water quality and physio&ndash;chemical parameters were measured along the popular Chaguaramas Peninsula in western Trinidad, to evaluate bathing beach water quality and identify possible sources of sewage contamination. Three bacterial indicators were chosen for this study (Escherichia coli, enterococci and faecal coliform), and were analysed by membrane filtration in accordance with the United States Environmental Protection Agency (USEPA) protocol. The physio&ndash;chemical parameters collected were pH, dissolved oxygen, temperature, salinity, and rainfall. Samples were collected at six nearshore locations during the months of July/August, 2016 (wet season) and January/February, 2017 (dry season).</p>" ;
+    :description "The bacteriological water quality and physio–chemical parameters were measured along the popular Chaguaramas Peninsula in western Trinidad, to evaluate bathing beach water quality and identify possible sources of sewage contamination. Three bacterial indicators were chosen for this study (Escherichia coli, enterococci and faecal coliform), and were analysed by membrane filtration in accordance with the United States Environmental Protection Agency (USEPA) protocol. The physio–chemical parameters collected were pH, dissolved oxygen, temperature, salinity, and rainfall. Samples were collected at six nearshore locations during the months of July/August, 2016 (wet season) and January/February, 2017 (dry season)." ;
     :keywords "bathing beach water quality, cma_1, features, water quality, Trinidad and Tobago" ;
     :name "TV_TTO_Trinidad_Chaguaramas_Bathing_Beach_Water_Quality_2016-2017" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:cma_1" .
@@ -979,9 +931,9 @@ INVEMAR. Programa holandés de asistencia para estudios en cambio climático NCC
 
 <https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:final_seagrass_2019> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-60.8374481201172 11.1662187576294, -60.8374481201172 11.1816253662109, -60.8210754394531 11.1816253662109, -60.8210754394531 11.1662187576294, -60.8374481201172 11.1662187576294))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((-60,8374481201172 11,1662187576294, -60,8374481201172 11,1816253662109, -60,8210754394531 11,1816253662109, -60,8210754394531 11,1662187576294, -60,8374481201172 11,1662187576294))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>Locations and extents of seagrasses in Buccoo, Tobago. Digitized from Google Earth Imagery captured in 2019.</p>" ;
+    :description "Locations and extents of seagrasses in Buccoo, Tobago. Digitized from Google Earth Imagery captured in 2019." ;
     :keywords "coastal ecosystems, features, final_seagrass_2019, marine ecosystems, seagrass, seagrasses, Trinidad and Tobago" ;
     :name "TV_TTO_Tobago_Buccoo_Seagrasses_2019_1000" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:final_seagrass_2019" .
@@ -1196,15 +1148,6 @@ Posada, P., Blanca Oliva u Henao P., William, 2008. Diagnóstico de la erosión 
     :name "CLME: Styrofoam and Plastic Bag Ban Status" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:gov_styropbagb_geonode0" .
 
-<https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:grenada_dem_footprint> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-62.3000030517578 11.6999998092651, -62.3000030517578 13.5000009536743, -60.9999961853027 13.5000009536743, -60.9999961853027 11.6999998092651, -62.3000030517578 11.6999998092651))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>In 2017, NOAA&rsquo;s National Centers for Environmental Information (NCEI) developed an integrated bathymetric&ndash;topographic digital elevation model of Grenada. The 1 arc-second DEM of Grenada covers approximately 28,000 sq. km of the Windward Islands of the Lesser Antilles including St. Vincent, the Grenadines, Petite Martinique, Carriacou, and Grenada.&nbsp;<br />Dataset: https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ngdc.mgg.dem:11526/html</p>" ;
-    :keywords "CARIBE-EWS, Digital elevation Model, Caribbean, Grenada, Saint Vincent and the Grenadines" ;
-    :name "Grenada DEM extent (footprint)" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:grenada_dem_footprint" .
-
 <https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:ground_water_zones_wgs842> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((-59.65117832770458 13.043586998436048, -59.65117832770458 13.337050147813157, -59.41911038449006 13.337050147813157, -59.41911038449006 13.043586998436048, -59.65117832770458 13.043586998436048))"^^geosparql:wktLiteral ;
@@ -1218,7 +1161,7 @@ Posada, P., Blanca Oliva u Henao P., William, 2008. Diagnóstico de la erosión 
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((-61.679151364082514 10.18838381723569, -61.679151364082514 10.191023856964996, -61.67027794968525 10.191023856964996, -61.67027794968525 10.18838381723569, -61.679151364082514 10.18838381723569))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>A bacteriological water quality survey was conducted during the period 14 April to 15 July, 2015 along the southwestern coastline of Trinidad, from Guapo Beach to Clifton Hill Beach, Point Fortin. Guapo Beach and Clifton Hill Beach are used for recreational activities by beachgoers.Thirteen (13) sampling stations were located nearshore along western Guapo Bay, from Guapo Beach to Clifton Hill Beach. Three (3) stations were also established at Guapo River, at a drain and at a stream which discharged into nearshore waters and were potential sources of pollution for this section of western Guapo Bay. Water samples were collected on eight (8) occasions at thirteen (13) nearshore stations. The three (3) potential sources of pollution were tested whenever available at the time of nearshore sample collection. Faecal coliforms, Escherichia coli and enterococci bacteria were used as indicators of possible contamination from sewage.</p>" ;
+    :description "A bacteriological water quality survey was conducted during the period 14 April to 15 July, 2015 along the southwestern coastline of Trinidad, from Guapo Beach to Clifton Hill Beach, Point Fortin. Guapo Beach and Clifton Hill Beach are used for recreational activities by beachgoers.Thirteen (13) sampling stations were located nearshore along western Guapo Bay, from Guapo Beach to Clifton Hill Beach. Three (3) stations were also established at Guapo River, at a drain and at a stream which discharged into nearshore waters and were potential sources of pollution for this section of western Guapo Bay. Water samples were collected on eight (8) occasions at thirteen (13) nearshore stations. The three (3) potential sources of pollution were tested whenever available at the time of nearshore sample collection. Faecal coliforms, Escherichia coli and enterococci bacteria were used as indicators of possible contamination from sewage." ;
     :keywords "Clifton Hill Beach, Guapo Beach, Point Fortin, Trinidad and Tobago" ;
     :name "TV_TTO_Trinidad_Guapo-Clifton Hill_Bathing_Beach_Water_Quality_2015" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:guapo" .
@@ -1575,9 +1518,9 @@ INVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorreg
 
 <https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:maracas> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-61.4432411193848 10.7581310272217, -61.4432411193848 10.7628650665283, -61.4362754821777 10.7628650665283, -61.4362754821777 10.7581310272217, -61.4432411193848 10.7581310272217))"^^geosparql:wktLiteral ;
+            geosparql:asWKT "POLYGON((-61,4432411193848 10,7581310272217, -61,4432411193848 10,7628650665283, -61,4362754821777 10,7628650665283, -61,4362754821777 10,7581310272217, -61,4432411193848 10,7581310272217))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>Faecal contamination of recreational waters is of major public health concern and therefore continuous monitoring of water quality is essential. The microbial water quality and physio&ndash; chemical parameters at the popular Maracas Beach, Trinidad were measured using multiple microbial indicators to determine faecal contamination levels and identify possible sources of pollution. The indicators chosen for this study were Escherichia coli, enterococci and faecal coliform and water samples were collected at five nearshore locations during the months of February/March 2017 (dry season) and July/August 2016 (wet season) at varying tidal periods.</p>" ;
+    :description "Faecal contamination of recreational waters is of major public health concern and therefore continuous monitoring of water quality is essential. The microbial water quality and physio– chemical parameters at the popular Maracas Beach, Trinidad were measured using multiple microbial indicators to determine faecal contamination levels and identify possible sources of pollution. The indicators chosen for this study were Escherichia coli, enterococci and faecal coliform and water samples were collected at five nearshore locations during the months of February/March  2017 (dry season) and July/August 2016 (wet season) at varying tidal periods." ;
     :keywords "bathing beach water quality, features, maracas, water quality, Trinidad and Tobago" ;
     :name "TV_TTO_Trinidad_Maracas_Bathing_Beach_Water_Quality_2016-2017" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:maracas" .
@@ -2435,15 +2378,6 @@ SHP generado en CENDO / IIO / UABC (2018), Sergio Larios. slarios@uabc.edu.mx"""
     :keywords "Bosque de manglar, Colombia, features, Manglar, Manglares, tm_col_manglar, Colombia" ;
     :name "tm_col_manglar" ;
     :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_col_manglar1" .
-
-<https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_colombia_ecorregiones_marinas_colombia> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((-85.992584 1.388622999954221, -85.992584 16.169444999494722, -69.491661 16.169444999494722, -69.491661 1.388622999954221, -85.992584 1.388622999954221))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "<p>Ecorregiones marinas, tal y como fueron definidas en el documento preliminar para la Pol&iacute;tica Nacional de los Oceanos. Las ecorregiones marinas se definen en los siguientes documentos: 1. Ministerio del Medio Ambiente. 2000. Pol&iacute;tica Nacional Ambiental para el Desarrollo Sostenible de los Espacios Oce&aacute;nicos y las Zonas Costeras e Insulares de Colombia. Bogot&aacute; 2. INVEMAR, 2000. Programa Nacional de Investigaci&oacute;n en Biodiversidad Marina y Costera PNIBM. Editado por Juan Manuel D&iacute;az Merlano y Diana Isabel G&oacute;mez L&oacute;pez. Santa Marta: INVEMAR, FONADE, MMA. pp 32-46.</p>" ;
-    :keywords "Colombia, Ecorregiones, Sistema Costeros Del Caribe Colombiano - Proyecto Planificacion Ecoregional, Colombia" ;
-    :name "TM_COLOMBIA_Ecorregiones Marinas (2000)" ;
-    :url "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_colombia_ecorregiones_marinas_colombia" .
 
 <https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_dom_population_coastal_municipalities_2002> a :Dataset ;
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
