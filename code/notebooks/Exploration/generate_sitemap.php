@@ -11,7 +11,7 @@
    History:         originally created for COINAtlantic catalogue in 2011
 */
 
-define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/book/tooling/notebooks/Exploration/data-maspawio');
+define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/code/notebooks/Exploration/data-maspawio');
 define ('JSONLD_ROOT_PATH_URL', 'http://maspawio.net/jsonld');
 
 $basedir = JSONLD_ROOT_PATH_DIRECTORY;

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/mnp_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((141.33110864774602 12.227880121070854, 141.33110864774602 23.895654316693594, 149.52925438398285 23.895654316693594, 149.52925438398285 12.227880121070854, 141.33110864774602 12.227880121070854))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "#Northern Mariana Islands Population Grid 2020\r\nData Input: \r\nHH locations from Broadband Survey 2014 conducted PAPI and GPS. \r\nPopulation at village level extracted from 2010 Census\r\nYear Population Growth Rate of 0.51% has been applied to update population up to 2020\r\nHH locations vector layer with population estimates calculated from 2010 Census transformed into a 100m resolution raster.",
+    "keywords": "grid, population",
+    "name": "Northern_Mariana_Islands_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/mnp_population_grid_2020"
+}

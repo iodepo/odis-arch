@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/rmi_atoll_population_2011census",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((157.4605437804716 1.777313889000837, 157.4605437804716 17.946061498439633, 175.5217631574444 17.946061498439633, 175.5217631574444 1.777313889000837, 157.4605437804716 1.777313889000837))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Atoll administrative boundaries utilized to conduct 2011 Census in Marshall Islands\r\nThe layer contains population figures from 2011 Census in the attribute table.\r\nPolygon may differ from coastal lines, land footprints and so on, this type of datasets are not responsibility of  EPPSO (Economic Policy Planning and Statistics Office).\r\n",
+    "keywords": "Marshall Islands, population-census, statistics",
+    "name": "RMI_Atoll_Population_2011Census",
+    "url": "https://pacificdata.org/data/dataset/rmi_atoll_population_2011census"
+}

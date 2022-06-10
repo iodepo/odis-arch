@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.the-eis.com/",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((0 -34, 0 -10, 26 -10, 26 -34, 0 -34))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Aggregations of orange roughy (Hoplostethus atlanticus) adapted from a map provided by the Geological Survey of Namibia for the Atlas of Namibia (Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia: A portrait of the land and its people. David Philip Publishers, Cape Town, South Africa).",
+    "keywords": "Atlas, Namibia, Oceans | Aquatic Sciences | Fisheries, Oceans | Marine Biology | Fish",
+    "name": "Namibia: Distribution of Orange Roughy",
+    "url": "http://www.the-eis.com/"
+}

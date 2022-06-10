@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
 """
-Purpose: Standalone script to generate RDF from CSW endpoint
+Purpose: Standalone script to generate individual JSON-LD files
+         and a master RDF document, live, from CSW endpoint
 
 Usage:   python caribbeanmarineatlas-harvest.py
 
-Output:  saves a new RDF file, for all catalogue records
+Output:  saves a new JSON-LD file, for each catalogue record 
+         exposed through the OGC:CSW service, and also a
+         .RDF resource file.
+         
+Requires: Python 3.x
 
 Notes:
 
@@ -23,6 +28,7 @@ PATH_TO_DATA_FOLDER = "./data-caribbeanmarineatlas/"
 NEW_RDF_FILENAME = "caribbeanmarineatlas-catalogue.rdf"
 HOSTNAME = "https://www.caribbeanmarineatlas.net"
 LOGFILE = "caribbeanmarineatlas-harvest.log"
+SHORTNAME = "caribbeanmarineatlas" #must be hyphen
 
 """
 #########################
@@ -133,6 +139,7 @@ while stop == 0:
         
             #id
             id = csw.records[rec].identifier
+            logging.info("record id: %s", id)
 
             #description
             description = csw.records[rec].identification.abstract #ISO
@@ -155,12 +162,16 @@ while stop == 0:
 
             data = {}
 
-            data["@id"] = str(HOSTNAME + "/id/{}".format(id))      #id.text
-
+            #id should point to url of dataset record
+            url = csw.records[rec].distribution.online[0].url
+            data["@id"] = url
+            print("        " + url)
+            
             data["@type"] = "https://schema.org/Dataset"
 
             data["https://schema.org/name"] = name
             data["https://schema.org/description"] = description
+            data["https://schema.org/url"] = url
 
             aswkt = {}
             aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
@@ -201,7 +212,7 @@ while stop == 0:
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-            filename = str(PATH_TO_DATA_FOLDER + "caribbeanmarineatlas_{}.json".format(id))
+            filename = str(PATH_TO_DATA_FOLDER + SHORTNAME + "-{}.json".format(id))
     
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/vanuatu-territorial-sea-12-nautical-miles",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((163.30859653600123 -21.642881857686405, 163.30859653600123 -12.28215002989981, 173.60893256515192 -12.28215002989981, 173.60893256515192 -21.642881857686405, 163.30859653600123 -21.642881857686405))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "The 12 nautical mile layer for Vanuatu was extracted from the Global Marine Regions platform (https://www.marineregions.org/) since Vanuatu has not published it officially with UNDOALOS. ",
+    "keywords": "12M, 12NM, FFA",
+    "name": "Vanuatu Territorial Sea (12 Nautical Miles)",
+    "url": "https://pacificdata.org/data/dataset/vanuatu-territorial-sea-12-nautical-miles"
+}

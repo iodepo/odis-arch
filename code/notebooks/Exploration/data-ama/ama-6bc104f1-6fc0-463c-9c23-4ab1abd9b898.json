@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.gadm.org/country",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-8 -4, -8 5, 14 5, 14 -4, -8 -4))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "GADM is a spatial database of the location of the Gabon's administrative areas (or adminstrative boundaries) for use in GIS and similar software. provides some attributes, foremost being the name and variant names.",
+    "keywords": "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS, HUMAN DIMENSIONS | BOUNDARIES | POLITICAL DIVISIONS, World",
+    "name": "Gabon Administrative Areas",
+    "url": "http://www.gadm.org/country"
+}

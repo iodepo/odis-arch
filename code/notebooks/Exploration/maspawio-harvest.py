@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
 """
-Purpose: Standalone script to generate RDF from CSW endpoint
-
+Purpose: Standalone script to generate individual JSON-LD files
+         and a master RDF document, live, from CSW endpoint
+         
 Usage:   python maspawio-harvest.py
 
-Output:  saves a new RDF file, for all catalogue records
+Output:  saves a new JSON-LD file, for each catalogue record 
+         exposed through the OGC:CSW service, and also a
+         .RDF resource file.
+         
+Requires: Python 3.x
 
 Notes:
 
@@ -23,6 +28,7 @@ PATH_TO_DATA_FOLDER = "./data-maspawio/"
 NEW_RDF_FILENAME = "maspawio-catalogue.rdf"
 HOSTNAME = "http://maspawio.net"
 LOGFILE = "maspawio-harvest.log"
+SHORTNAME = "maspawio" #must be hyphen
 
 """
 #########################
@@ -133,6 +139,7 @@ while stop == 0:
         
             #id
             id = csw.records[rec].identifier
+            logging.info("record id: %s", id)
 
             #description
             description = csw.records[rec].identification.abstract #ISO
@@ -205,7 +212,7 @@ while stop == 0:
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
     
-            filename = str(PATH_TO_DATA_FOLDER + "maspawio_{}.json".format(id))
+            filename = str(PATH_TO_DATA_FOLDER + SHORTNAME + "-{}.json".format(id))
     
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(compacted, f, ensure_ascii=False, indent=4)

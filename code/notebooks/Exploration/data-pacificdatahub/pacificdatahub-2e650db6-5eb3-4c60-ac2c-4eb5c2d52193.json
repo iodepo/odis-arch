@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2011_cok_phc_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((191.47640881731311 -25.30537679530272, 191.47640881731311 -5.800505555686755, 205.19444444445585 -5.800505555686755, 205.19444444445585 -25.30537679530272, 191.47640881731311 -25.30537679530272))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Cook Islands' 2011 Population and Housing Census  \r\n* Enumeration area boundaries: specific geographic units used for statistical data collection.\r\n* Census districts boundaries\r\n\r\nThese administrative boundaries have been used to build the Cook Islands PopGIS3 online mapping tool http://cooks.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.",
+    "keywords": "boundaries, population-census",
+    "name": "2011_Cook_Islands_PHC_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2011_cok_phc_admin_boundaries"
+}

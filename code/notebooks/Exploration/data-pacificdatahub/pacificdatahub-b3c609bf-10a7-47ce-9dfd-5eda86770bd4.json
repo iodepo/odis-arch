@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/plw_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((129.50880481728905 1.621407206177707, 129.50880481728905 11.558724726465186, 136.95410021135228 11.558724726465186, 136.95410021135228 1.621407206177707, 129.50880481728905 1.621407206177707))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Population Raster Palau  2020\r\n\r\nData Input: Household locations from 2015 Household listing and population at Enumeration Area level extracted from 2015 Population and Housing Census conducted by Palau's Bureau of Budget & Planning\r\nYear Population Growth Rate of 0.6 % has been applied to update population up to 2020\r\n\r\nHousehold locations vector layer transformed into a 100m resolution raster.\r\n",
+    "keywords": "grid, population",
+    "name": "Palau_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/plw_population_grid_2020"
+}

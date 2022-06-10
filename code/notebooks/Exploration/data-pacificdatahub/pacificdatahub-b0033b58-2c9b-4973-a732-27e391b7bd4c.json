@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/2010_kir_phc_admin_boundaries",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((167.8692703406989 -4.361697222222119, 167.8692703406989 5.617075000105842, 180.1797277777781 5.617075000105842, 180.1797277777781 -4.361697222222119, 167.8692703406989 -4.361697222222119))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "###Administrative boundaries utilized to conduct Kiribati 2010 Population and Housing Census  \r\n* Enumeration area boundaries: specific geographic units used for statistical data collection.\r\n* Village boundaries\r\n* Island boundaries. Layer represented with a 25km buffer from the coast to improve the data representation visibility. \r\n\r\nThese administrative boundaries have been used to build the Kiribati PopGIS3 online mapping tool https://kiribati.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.\r\n",
+    "keywords": "boundaries, population-census",
+    "name": "2010_Kiribati_PHC_Admin_Boundaries",
+    "url": "https://pacificdata.org/data/dataset/2010_kir_phc_admin_boundaries"
+}

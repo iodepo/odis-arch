@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://pacificdata.org/data/dataset/niu_population_grid_2020",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((187.97298022375855 -22.502371549907053, 187.97298022375855 -16.594166666258502, 193.69870385000291 -16.594166666258502, 193.69870385000291 -22.502371549907053, 187.97298022375855 -22.502371549907053))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Population Raster Niue 2020\r\nData Input: Household locations from Open Street Maps - HOSM Niue Building footprint. https://data.humdata.org/dataset/hotosm_niu_buildings\r\nPopulation allocated proportionally using 2011 census population counts at enumeration area level.\r\nYear Population Growth Rate of 0.76% has been applied to update population up to 2020\r\nThe human settlement footprint with census population allocated has been converted into a 100 m resolution raster.\r\n",
+    "keywords": "grid, population",
+    "name": "Niue_Population_Grid_2020",
+    "url": "https://pacificdata.org/data/dataset/niu_population_grid_2020"
+}
