@@ -40,6 +40,7 @@ can be used.
 {
   "@context": "https://schema.org/",
   "@type": ["ItemList", "CreativeWork"],
+  "@id": "https://example.org/id/graph/X",
   "name": "Resource collection for site X",
   "author": "Creator of the list",
   "itemListOrder": "https://schema.org/ItemListUnordered",
