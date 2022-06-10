@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Indexing with Gleaner &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -62,7 +61,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +84,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -91,14 +105,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   The Ocean InfoHub Project
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    The Ocean InfoHub Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Introduction
  </span>
@@ -143,7 +158,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../thematics/docs/README.html">
-   Core 2: Documents
+   Core 2a: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/dataset/index.html">
+   Core 2b: Datasets
   </a>
  </li>
  <li class="toctree-l1">
@@ -341,90 +361,180 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/indexing/qstart.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/iodepo/odis-arch"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/qstart.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/iodepo/odis-arch"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/qstart.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/indexing/qstart.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gleaner-app">
    Gleaner (app)
@@ -530,12 +640,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Indexing with Gleaner</h1>
@@ -657,14 +766,15 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="indexing-with-gleaner">
-<h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="indexing-with-gleaner">
+<h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Permalink to this headline">#</a></h1>
 <p><img alt="compose options" src="../_images/composeOptions.png" /></p>
-<div class="section" id="gleaner-app">
-<h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Permalink to this headline">¶</a></h2>
+<section id="gleaner-app">
+<h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Permalink to this headline">#</a></h2>
 <p>The Gleaner applications performs the retrieval and loading of JSON-LD documents
 from the web following structured data on the web patterns.  Gleaner is available for Linux, Mac OS X and Windows.</p>
 <p>While Gleaner is a stand alone app, it needs to interact with
@@ -676,8 +786,8 @@ Gleaner Indexing Services or Data Service Docker compose files.</p>
 such as Mac OS X.   If you are on Windows, there may be some issues.  If you can use a Linux subsystem on Windows,
 you may experience better results.  We will test with Windows eventually and update documentation as needed.</p>
 </div>
-<div class="section" id="quick-start-steps">
-<h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Permalink to this headline">¶</a></h3>
+<section id="quick-start-steps">
+<h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Permalink to this headline">#</a></h3>
 <p>This quick start guide is focused on setting up and testing Gleaner in a local environnement.  It is similar to
 how you might run Gleaner in a production environment but lacks the routing and other features likely desired for
 such a situation.</p>
@@ -695,7 +805,7 @@ you should issue in this admonition style box.</p>
 <p>In the end, this is the table of applications and config files you will need.  In this guide we will go through
 downloading, setting them up and running Gleaner to index documents from the web.</p>
 <table class="table" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Required Applications and Their Config Files</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Required Applications and Their Config Files</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -718,8 +828,8 @@ downloading, setting them up and running Gleaner to index documents from the web
 </tr>
 </tbody>
 </table>
-<div class="section" id="grab-gleaner-and-the-support-files-we-need">
-<h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Permalink to this headline">¶</a></h4>
+<section id="grab-gleaner-and-the-support-files-we-need">
+<h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Permalink to this headline">#</a></h4>
 <p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file
 template.  To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
 and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> drop down you should see the files we need.  Get:</p>
@@ -761,9 +871,9 @@ It also should work to do something similar to the following:</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="about-the-compose-file-s">
-<h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="about-the-compose-file-s">
+<h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this headline">#</a></h4>
 <p>The above steps have collected the resources for the indexer.   We now want to set up the services that
 Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
 Podman or others.   For this example, we will assume you are using the Docker client.</p>
@@ -785,9 +895,9 @@ file can be found in the <a class="reference external" href="https://github.com/
 required edits.  You can see the file in detail in the Index Services
 section.</p>
 </div>
-</div>
-<div class="section" id="edit-environment-variables-setup-script">
-<h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="edit-environment-variables-setup-script">
+<h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this headline">#</a></h4>
 <p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
 to be populated to provide the local hosts information needed to run.  You can set these yourself or
 use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
@@ -811,9 +921,9 @@ having permission issues.</p>
 </div>
 <p>You may wish to edit file to work better with your environment.  By default it will attempt to
 use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
-</div>
-<div class="section" id="spin-up-the-containers">
-<h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="spin-up-the-containers">
+<h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this headline">#</a></h4>
 <p>Load our environment variables to the shell:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
@@ -842,9 +952,9 @@ ca08c24963a0        minio/minio:latest               <span class="s2">&quot;/usr
 24274eba0d34        chromedp/headless-shell:latest   <span class="s2">&quot;/headless-shell/hea…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9222-&gt;9222/tcp   test_headless_1
 </pre></div>
 </div>
-</div>
-<div class="section" id="edit-gleaner-config-file">
-<h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="edit-gleaner-config-file">
+<h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Permalink to this headline">#</a></h4>
 <p>We have all the files we need and we have our support services running.  The next and
 final step is to edit our Gleaner configuration file.  This will let Gleaner know
 the location of the support services, the JSON-LD context file and the locations
@@ -918,8 +1028,8 @@ of the resources we wish to index.</p>
 <span class="linenos">66</span><span class="c1">#   domain: https://obis.org  </span>
 </pre></div>
 </div>
-<div class="section" id="object-store">
-<h5>Object store<a class="headerlink" href="#object-store" title="Permalink to this headline">¶</a></h5>
+<section id="object-store">
+<h5>Object store<a class="headerlink" href="#object-store" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">minio</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
 <span class="linenos">3</span>  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
@@ -933,9 +1043,9 @@ of the resources we wish to index.</p>
 using minio and these are the IP and port from our docker compose steps above.  Note,
 if you were to use Ceph or AWS S3, this section is still labeled minio.  You simply
 need to update the property values.</p>
-</div>
-<div class="section" id="gleaner">
-<h5>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="gleaner">
+<h5>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">gleaner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
 <span class="linenos">3</span>  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
@@ -948,9 +1058,9 @@ need to update the property values.</p>
 <li><p>summon</p></li>
 <li><p>mill</p></li>
 </ul>
-</div>
-<div class="section" id="context-sections">
-<h5>Context sections<a class="headerlink" href="#context-sections" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="context-sections">
+<h5>Context sections<a class="headerlink" href="#context-sections" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">context</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">3</span><span class="n">contextmaps</span><span class="p">:</span>
@@ -961,9 +1071,9 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the context sections</p>
-</div>
-<div class="section" id="summoner-section">
-<h5>Summoner section<a class="headerlink" href="#summoner-section" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="summoner-section">
+<h5>Summoner section<a class="headerlink" href="#summoner-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">summoner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
 <span class="linenos">3</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
@@ -973,18 +1083,18 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the summoner sections</p>
-</div>
-<div class="section" id="millers-section">
-<h5>Millers section<a class="headerlink" href="#millers-section" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="millers-section">
+<h5>Millers section<a class="headerlink" href="#millers-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">millers</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">3</span>  <span class="c1">#geojson: false</span>
 </pre></div>
 </div>
 <p>Comments for the miller sections</p>
-</div>
-<div class="section" id="site-graphs-section">
-<h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="site-graphs-section">
+<h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sitegraphs</span><span class="p">:</span>
 <span class="linenos">2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
 <span class="linenos">3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
@@ -995,9 +1105,9 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the sitegrpah sections</p>
-</div>
-<div class="section" id="sources-section">
-<h5>Sources section<a class="headerlink" href="#sources-section" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="sources-section">
+<h5>Sources section<a class="headerlink" href="#sources-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">sources</span><span class="p">:</span>
 <span class="linenos"> 2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
 <span class="linenos"> 3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
@@ -1032,10 +1142,10 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the sources sections</p>
-</div>
-</div>
-<div class="section" id="run-gleaner">
-<h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="run-gleaner">
+<h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Permalink to this headline">#</a></h4>
 <p>For this example we are going to run Gleaner directly.  In a deployed instance you may
 run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
 <p>We can do a quick test of the setup.</p>
@@ -1058,15 +1168,15 @@ run Gleaner via a script or cron style service.  We will document that elsewhere
 json and other formats.  So simply leave the suffix off and let the config code inspect the
 contents.</p>
 </div>
-</div>
-</div>
-<div class="section" id="load-results-to-a-graph-and-test">
-<h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="load-results-to-a-graph-and-test">
+<h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Permalink to this headline">#</a></h3>
 <p>You have set up the server environment and Gleaner and done your run.  Things look good
 but you don’t have a graph you can work with yet.    You need to load the JSON-LD into
 the triplestore in order to start playing.</p>
-<div class="section" id="minio-object-store">
-<h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Permalink to this headline">¶</a></h4>
+<section id="minio-object-store">
+<h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Permalink to this headline">#</a></h4>
 <p>To view the object store you could use your browser and point it on the default minio
 port at 9000.  This typically something like localhost:9000.</p>
 <p>If you wish to continue to use the command line you can use the Minio client at
@@ -1078,9 +1188,9 @@ port at 9000.  This typically something like localhost:9000.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="load-triplestore">
-<h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="load-triplestore">
+<h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this headline">#</a></h4>
 <p>We now want to load these objects, which are JSON-LD files holding RDF based graph
 data, into a graph database.  We use the term, triplestore, to define a graph database
 designed to work with the RDF data model and provide SPARQL query support over that
@@ -1090,11 +1200,11 @@ graph data.</p>
 <li><p>Nabu</p></li>
 <li><p>Try out a simple SPARQL query</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>The following are some reference which may provide more information on the various
 technologies used in this approach.</p>
 <ul class="simple">
@@ -1105,8 +1215,8 @@ technologies used in this approach.</p>
 <li><p><a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Triplestore">Triplestores</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1130,9 +1240,11 @@ technologies used in this approach.</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1148,24 +1260,28 @@ technologies used in this approach.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By IODEPO<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By IODEPO<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
