@@ -14,7 +14,7 @@ Notes:
 
          After running, you might also want to run the generated file
          through the 'jsonld-cli' node.js module
-         ( https://github.com/digitalbazaar/jsonld-cli) , 
+         ( https://github.com/digitalbazaar/jsonld-cli ) , 
          to check format, with the command:
          
              jsonld format ina-nodc-simple-graph.json > ttt.json
