@@ -88,6 +88,8 @@ for jsonldfile in glob.glob(os.path.join(PATH_TO_DATA_FOLDER, '*.json')):
             
 # Replace the target string
 filedata = filedata.replace('ttt', itemFullString)
+# update numberOfItems
+filedata = filedata.replace('"numberOfItems": 2', '"numberOfItems": ' + str(recordNum))
 
 # Write the file out again
 with open(PATH_TO_DATA_FOLDER + NEW_GRAPH_FILENAME, 'w') as outfile:
