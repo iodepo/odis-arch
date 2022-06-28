@@ -13,6 +13,7 @@ from pathlib import Path
 # by doing a context expansion
 
 source = './source_ctxUpdate.json.gz'
+# source = './2013_wallisfutuna_phc_admin_boundaries.jsonld.gz'
 output = './output.ttl.gz'
 
 with gzip.open(source, 'rb') as f:
