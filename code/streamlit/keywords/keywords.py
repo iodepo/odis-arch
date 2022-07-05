@@ -23,12 +23,12 @@ query_string = """
   PREFIX schemaold: <http://schema.org/>
   PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-  SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
+  SELECT DISTINCT  ?keyword  ( COUNT(?keyword) as ?count )
   WHERE
   {
-     ?s schema:keywords ?keywords
+     ?s schema:keywords ?keyword
   }
-  GROUP BY ?keywords
+  GROUP BY ?keyword
   ORDER BY DESC(?count)
   """
 

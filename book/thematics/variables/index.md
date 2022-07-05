@@ -21,6 +21,7 @@ execution:
 * note license pattern
 * how to define a "cross archive" action
 * Need PROV for "Person" as export, connect Person to the group publishing the info as MemberOf
+* SOSO reference for time interval:  https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time 
 
 This is the start of the EOV and related variables section.  At present this is just notes.
 
@@ -50,9 +51,25 @@ To comment on the graph:
 Notes image:
 ![notes image](./eov.png)
 
+
+
+```{literalinclude} ./graphs/obisData2.json
+:linenos:
+:emphasize-lines: 5-7, 10,
+```
+
+
 Need to:
 
 * Review [PropertyValue](https://schema.org/PropertyValue) vs [DefinedTerm](https://schema.org/DefinedTerm) and they could connect with [variableMeasured](https://schema.org/variableMeasured)
+
+
+
+```{literalinclude} ./graphs/temporalCoverage.json
+:linenos:
+:emphasize-lines: 5-7, 10,
+```
+
 
 
 

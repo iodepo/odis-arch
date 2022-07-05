@@ -2,15 +2,14 @@ import streamlit as st
 from SPARQLWrapper import SPARQLWrapper
 from streamlit_agraph import agraph, TripleStore, Config
 
-
 def get_inspired():
   sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 
   query_string = """
-  SELECT ?name_pe1_en ?rel_en ?name_pe2_en 
+  SELECT ?name_pe1_en ?rel_en ?name_pe2_en
   WHERE {
     {
-         SELECT ?name_p1 ?rel ?name_p2 
+         SELECT ?name_p1 ?rel ?name_p2
          WHERE {
              ?p1 a foaf:Person .
              ?p1 dbo:influencedBy ?p2 .
@@ -18,29 +17,29 @@ def get_inspired():
              ?p1 foaf:name ?name_p1 .
              ?p2 foaf:name ?name_p2 .
             dbo:influencedBy rdfs:label ?rel .
-            }  
+            }
          LIMIT 100
     }
     UNION
     {
-         SELECT ?name_p1 ?rel ?name_p2 
+         SELECT ?name_p1 ?rel ?name_p2
          WHERE {
             ?p1 a foaf:Person .
             ?p1 dbo:influenced ?p2 .
             ?p2 a foaf:Person .
             ?p1 foaf:name ?name_p1 .
             ?p2 foaf:name ?name_p2 .
-            dbo:influenced rdfs:label ?rel .                                
-        } 
+            dbo:influenced rdfs:label ?rel .
+        }
      LIMIT 100
     }
     FILTER ( LANG(?name_p1) = "en" && LANG(?rel) = "en" && LANG(?name_p2) = "en" )
-    BIND ( STR(?name_p1) AS ?name_pe1_en )      
+    BIND ( STR(?name_p1) AS ?name_pe1_en )
     BIND ( STR(?rel) AS ?rel_en )
-    BIND ( STR(?name_p2) AS ?name_pe2_en )    
+    BIND ( STR(?name_p2) AS ?name_pe2_en )
   }
   """
-  
+
   JSON = 'json'
 
   sparql.setQuery(query_string)
@@ -53,8 +52,6 @@ def get_inspired():
     node2 = result["name_pe2_en"]["value"]
     store.add_triple(node1,link,node2)
   return store
-
-
 
 def app():
   st.title("Ocean InfoHub Graph Dashboard DEMO")

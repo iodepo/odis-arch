@@ -42,6 +42,21 @@
         "@type": "DataCatalog",
         "url": "https://obis.org"
     },
+    "measurementTechnique": "A description in text of the measurement techniques used or a URL to an on-line description.",
+    "publishingPrinciples": [{
+        "@type": "CreativeWork",
+        "@id": "http://purl.unep.org/sdg/SDGIO_00020173",
+        "url": "http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173",
+        "name": "QA/QC reference",
+        "description": "A link to the QA/QC principles used"
+    },
+    {
+        "@type": "CreativeWork",
+        "@id": "http://purl.unep.org/sdg/SDGIO_00020173",
+        "url": "http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173",
+        "name": "URL to GOOS Spec Sheet",
+        "description": "A link to the URL to GOOS Spec Sheet"
+    }],
     "temporalCoverage": "2007/2007",
     "distribution": {
         "@type": "DataDownload",
@@ -60,6 +75,7 @@
             "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
         }
     },
+    
     "provider": [
         {
             "@id": "https://oceanexpert.org/institution/19393",
@@ -83,5 +99,8 @@
                 "description": "Sampling instrument"
             }
         }
-    }
+    },
+    "datePublished": "2018-07-29",
+    "dateModified": "2018-07-30T14:30Z",
+    "temporalCoverage": "2012-09-20/2016-01-22"
 }
