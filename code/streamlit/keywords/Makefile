@@ -1,12 +1,9 @@
-BINARY := apsu
 VERSION :=`/bin/cat VERSION`
-.DEFAULT_GOAL := apsu
 
-docker-awslambda: 
-	podman build  --tag="ufokn/apsu-lambda:$(VERSION)"  --file=./build/lambda/Dockerfile .
+docker-build: 
+	podman build  --tag="fils/oih-keywords:$(VERSION)"  --file=./Dockerfile .
 
-docker-awslambdapush: 
-	podman tag  ufokn/apsu-lambda:$(VERSION) 412361828787.dkr.ecr.us-east-1.amazonaws.com/apsu-lambda:latest
-	podman push 412361828787.dkr.ecr.us-east-1.amazonaws.com/apsu-lambda:latest
-
+docker-push: 
+	podman tag  fils/oih-keywords:$(VERSION) docker.io/fils/oih-keywords:$(VERSION)
+	podman push  docker.io/fils/oih-keywords:$(VERSION)
 

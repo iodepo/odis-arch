@@ -19,4 +19,4 @@ ENV LANG=C.UTF-8
 RUN mkdir -p /root/.streamlit
 EXPOSE 8501
 COPY . .
-CMD ["streamlit", "run", "keywords.py", "--server.baseUrlPath=/view/ohiocp"]
+CMD ["streamlit", "run", "keywords.py", "--server.baseUrlPath=/view/oihkeywords"]
