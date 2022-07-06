@@ -14,47 +14,23 @@ execution:
 
 # Variables
 
-## Notes
 
-* Move the geospatial geometry to under Coverage -> Place
-* Make a Core 0 as Dataset
-* note license pattern
-* how to define a "cross archive" action
-* Need PROV for "Person" as export, connect Person to the group publishing the info as MemberOf
-* SOSO reference for time interval:  https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time 
+## References:
 
-This is the start of the EOV and related variables section.  At present this is just notes.
-
-To comment on the graph:
-* Each EOV dataset MUST have the following components to be considered complete:
-* A qualified link to the DOI of the method used to generate that dataset
-* A qualified link to a DOI of the QA/QC processes and principles used on that dataset
-* A qualified link to to the GOOS EOV specification sheet the EOV is supposed to align to
-* A qualified link/element that points to the variables/elements in that dataset that is the EOV (if it's a complex dataset)
-  * That element should have a propertyID to an ontology term (from an ontology that can be interpreted by GOOS/IODE) that identifies which EOV it is
-* A qualified link to the measurement event(s)
-  * that can link onward to the measurement devices used
-* A qualified link to the spatial coverage of the data (can be placenames, but better if actual geospatial content like WKT)
-* A qualified link to some sort of temporal metadata that SoSo is attempting to settle a pattern for
-
-
-[GOOS reference](https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441)
-
-[Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and 
-[related PDF](file:///home/fils/Downloads/OOPC_SSH_Specification_v5.2.pdf)   
-
-[Dublin core record to map](https://repository.oceanbestpractices.org/handle/11329/1920?show=full) for different, but related, work.
+* [GOOS reference](https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441)
+* [Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and 
+   
+* [Dublin core record to map](https://repository.oceanbestpractices.org/handle/11329/1920?show=full) for different, but related, work.
 
 
 [OBIS examples](https://manual.obis.org/examples/)
 
-Notes image:
+Reference image:
 ![notes image](./eov.png)
 
 
 ```{literalinclude} ./graphs/obisData2.json
 :linenos:
-:emphasize-lines: 1-2
 ```
 
 ## measurementTechnique
@@ -71,9 +47,6 @@ Notes image:
 
 
 
-## Need to:
-
-* Review [PropertyValue](https://schema.org/PropertyValue) vs [DefinedTerm](https://schema.org/DefinedTerm) and they could connect with [variableMeasured](https://schema.org/variableMeasured)
 
 
 ```{literalinclude} ./graphs/temporalCoverage.json

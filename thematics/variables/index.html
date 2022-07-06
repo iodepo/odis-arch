@@ -605,8 +605,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#references">
+   References:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -637,11 +637,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#temporalcoverage">
    temporalCoverage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#need-to">
-   Need to:
   </a>
  </li>
 </ul>
@@ -664,8 +659,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#references">
+   References:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -698,11 +693,6 @@ title="Print to PDF"
    temporalCoverage
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#need-to">
-   Need to:
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -715,46 +705,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="variables">
 <h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h1>
-<section id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
+<section id="references">
+<h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Move the geospatial geometry to under Coverage -&gt; Place</p></li>
-<li><p>Make a Core 0 as Dataset</p></li>
-<li><p>note license pattern</p></li>
-<li><p>how to define a “cross archive” action</p></li>
-<li><p>Need PROV for “Person” as export, connect Person to the group publishing the info as MemberOf</p></li>
-<li><p>SOSO reference for time interval:  <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time">https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time</a></p></li>
+<li><p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_content&amp;view=article&amp;layout=edit&amp;id=283&amp;Itemid=441">GOOS reference</a></p></li>
+<li><p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_oe&amp;task=viewDocumentRecord&amp;docID=17465">Goos example spec sheet</a> and</p></li>
+<li><p><a class="reference external" href="https://repository.oceanbestpractices.org/handle/11329/1920?show=full">Dublin core record to map</a> for different, but related, work.</p></li>
 </ul>
-<p>This is the start of the EOV and related variables section.  At present this is just notes.</p>
-<p>To comment on the graph:</p>
-<ul class="simple">
-<li><p>Each EOV dataset MUST have the following components to be considered complete:</p></li>
-<li><p>A qualified link to the DOI of the method used to generate that dataset</p></li>
-<li><p>A qualified link to a DOI of the QA/QC processes and principles used on that dataset</p></li>
-<li><p>A qualified link to to the GOOS EOV specification sheet the EOV is supposed to align to</p></li>
-<li><p>A qualified link/element that points to the variables/elements in that dataset that is the EOV (if it’s a complex dataset)</p>
-<ul>
-<li><p>That element should have a propertyID to an ontology term (from an ontology that can be interpreted by GOOS/IODE) that identifies which EOV it is</p></li>
-</ul>
-</li>
-<li><p>A qualified link to the measurement event(s)</p>
-<ul>
-<li><p>that can link onward to the measurement devices used</p></li>
-</ul>
-</li>
-<li><p>A qualified link to the spatial coverage of the data (can be placenames, but better if actual geospatial content like WKT)</p></li>
-<li><p>A qualified link to some sort of temporal metadata that SoSo is attempting to settle a pattern for</p></li>
-</ul>
-<p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_content&amp;view=article&amp;layout=edit&amp;id=283&amp;Itemid=441">GOOS reference</a></p>
-<p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_oe&amp;task=viewDocumentRecord&amp;docID=17465">Goos example spec sheet</a> and
-[related PDF](file:///home/fils/Downloads/OOPC_SSH_Specification_v5.2.pdf)</p>
-<p><a class="reference external" href="https://repository.oceanbestpractices.org/handle/11329/1920?show=full">Dublin core record to map</a> for different, but related, work.</p>
 <p><a class="reference external" href="https://manual.obis.org/examples/">OBIS examples</a></p>
-<p>Notes image:
+<p>Reference image:
 <img alt="notes image" src="../../_images/eov.png" /></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="p">{</span>
-</span><span class="hll"><span class="linenos">  2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">  3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="p">{</span>
+<span class="linenos">  2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">  3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
 <span class="linenos">  4</span>    <span class="p">},</span>
 <span class="linenos">  5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
 <span class="linenos">  6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;</span><span class="p">,</span>
@@ -878,12 +841,6 @@ title="Print to PDF"
 </section>
 <section id="temporalcoverage">
 <h2>temporalCoverage<a class="headerlink" href="#temporalcoverage" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="need-to">
-<h2>Need to:<a class="headerlink" href="#need-to" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Review <a class="reference external" href="https://schema.org/PropertyValue">PropertyValue</a> vs <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a> and they could connect with <a class="reference external" href="https://schema.org/variableMeasured">variableMeasured</a></p></li>
-</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos"> 2</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
 <span class="linenos"> 3</span>    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2006/time#&quot;</span>
