@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Variables &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Aggregator" href="../../indexing/index.html" />
+    <link rel="prev" title="Source and Prov Approaches" href="../identifier/id.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    The Ocean InfoHub Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/README.html">
+   Core 2a: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dataset/index.html">
+   Core 2b: Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../terms/list.html">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../identifier/id.html">
+   Support 6: Identifier and Prov
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Support 7: EOVs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tooling/index.html">
+   Tooling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/referenceclient.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/query.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/sparql.html">
+   OIH SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/thematics/variables/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/thematics/variables/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/iodepo/odis-arch"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fthematics/variables/index.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/thematics/variables/index.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/thematics/variables/index.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measurementtechnique">
+   measurementTechnique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishingprinciples">
+   publishingPrinciples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variablemeasured">
+   variableMeasured
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   about
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatialcoverage">
+   spatialCoverage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temporalcoverage">
+   temporalCoverage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#need-to">
+   Need to:
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Variables</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notes">
+   Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measurementtechnique">
+   measurementTechnique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishingprinciples">
+   publishingPrinciples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variablemeasured">
+   variableMeasured
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   about
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spatialcoverage">
+   spatialCoverage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temporalcoverage">
+   temporalCoverage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#need-to">
+   Need to:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="variables">
+<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h1>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Move the geospatial geometry to under Coverage -&gt; Place</p></li>
+<li><p>Make a Core 0 as Dataset</p></li>
+<li><p>note license pattern</p></li>
+<li><p>how to define a “cross archive” action</p></li>
+<li><p>Need PROV for “Person” as export, connect Person to the group publishing the info as MemberOf</p></li>
+<li><p>SOSO reference for time interval:  <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time">https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time</a></p></li>
+</ul>
+<p>This is the start of the EOV and related variables section.  At present this is just notes.</p>
+<p>To comment on the graph:</p>
+<ul class="simple">
+<li><p>Each EOV dataset MUST have the following components to be considered complete:</p></li>
+<li><p>A qualified link to the DOI of the method used to generate that dataset</p></li>
+<li><p>A qualified link to a DOI of the QA/QC processes and principles used on that dataset</p></li>
+<li><p>A qualified link to to the GOOS EOV specification sheet the EOV is supposed to align to</p></li>
+<li><p>A qualified link/element that points to the variables/elements in that dataset that is the EOV (if it’s a complex dataset)</p>
+<ul>
+<li><p>That element should have a propertyID to an ontology term (from an ontology that can be interpreted by GOOS/IODE) that identifies which EOV it is</p></li>
+</ul>
+</li>
+<li><p>A qualified link to the measurement event(s)</p>
+<ul>
+<li><p>that can link onward to the measurement devices used</p></li>
+</ul>
+</li>
+<li><p>A qualified link to the spatial coverage of the data (can be placenames, but better if actual geospatial content like WKT)</p></li>
+<li><p>A qualified link to some sort of temporal metadata that SoSo is attempting to settle a pattern for</p></li>
+</ul>
+<p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_content&amp;view=article&amp;layout=edit&amp;id=283&amp;Itemid=441">GOOS reference</a></p>
+<p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_oe&amp;task=viewDocumentRecord&amp;docID=17465">Goos example spec sheet</a> and
+[related PDF](file:///home/fils/Downloads/OOPC_SSH_Specification_v5.2.pdf)</p>
+<p><a class="reference external" href="https://repository.oceanbestpractices.org/handle/11329/1920?show=full">Dublin core record to map</a> for different, but related, work.</p>
+<p><a class="reference external" href="https://manual.obis.org/examples/">OBIS examples</a></p>
+<p>Notes image:
+<img alt="notes image" src="../../_images/eov.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">  1</span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">  2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">  3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">  4</span>    <span class="p">},</span>
+<span class="linenos">  5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="linenos">  6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;</span><span class="p">,</span>
+<span class="linenos">  7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007&quot;</span><span class="p">,</span>
+<span class="linenos">  8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Original provider:</span><span class="se">\n</span><span class="s2">HDR Environmental, Operations and Construction, Inc.</span><span class="se">\n\n</span><span class="s2">Dataset credits:</span><span class="se">\n</span><span class="s2">The U.S. Navy Marine Species Monitoring Program</span><span class="se">\n\n</span><span class="s2">Abstract:</span><span class="se">\n</span><span class="s2">Features in this feature class represent sightings from the NAVFAC MISTCS Vessel Surveys Jan-Apr 2007.&quot;</span><span class="p">,</span>
+<span class="linenos">  9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;</span><span class="p">,</span>
+<span class="linenos"> 10</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 11</span>        <span class="s2">&quot;http://ipt.env.duke.edu/resource?r=zd_1519&quot;</span>
+<span class="linenos"> 12</span>    <span class="p">],</span>
+<span class="linenos"> 13</span>    <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License&quot;</span><span class="p">,</span>
+<span class="linenos"> 14</span>    <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="s2">&quot;Ampela, K. and G. Miller-Francisco. 2017. MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007. Data downloaded from OBIS-SEAMAP (http://seamap.env.duke.edu/dataset/1519) on yyyy-mm-dd.&quot;</span><span class="p">,</span>
+<span class="linenos"> 15</span>    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-24T06:34:56.000Z&quot;</span><span class="p">,</span>
+<span class="linenos"> 16</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 17</span>        <span class="s2">&quot;Occurrence, Mariana Islands Range Complex,Marine Animal Survey,Marine Biology, Marine mammals, Sea turtles, Visual Sighting,Vessel&quot;</span><span class="p">,</span>
+<span class="linenos"> 18</span>        <span class="s2">&quot;Observation&quot;</span><span class="p">,</span>
+<span class="linenos"> 19</span>        <span class="s2">&quot;Occurrence&quot;</span>
+<span class="linenos"> 20</span>    <span class="p">],</span>
+<span class="linenos"> 21</span>    <span class="s2">&quot;variableMeasured&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 22</span>        <span class="p">{</span>
+<span class="linenos"> 23</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Abundance&quot;</span><span class="p">,</span>
+<span class="linenos"> 25</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Abundance&quot;</span>
+<span class="linenos"> 26</span>        <span class="p">},</span>
+<span class="linenos"> 27</span>        <span class="p">{</span>
+<span class="linenos"> 28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 29</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;NetMeshSize&quot;</span><span class="p">,</span>
+<span class="linenos"> 30</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/&quot;</span><span class="p">,</span>
+<span class="linenos"> 31</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;NetMeshSize DEVNOTE:  is this technically a measured variable, or an instrument property?&quot;</span>
+<span class="linenos"> 32</span>        <span class="p">},</span>
+<span class="linenos"> 33</span>        <span class="p">{</span>
+<span class="linenos"> 34</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 35</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SamplingDeviceApertureSurfaceArea&quot;</span><span class="p">,</span>
+<span class="linenos"> 36</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/&quot;</span><span class="p">,</span>
+<span class="linenos"> 37</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;SamplingDeviceApertureSurfaceArea  DEVNOTE, I can not put PropertyValue on thing well, so going to call this a variable Measured&quot;</span>
+<span class="linenos"> 38</span>        <span class="p">}</span>
+<span class="linenos"> 39</span>    <span class="p">],</span>
+<span class="linenos"> 40</span>    <span class="s2">&quot;includedInDataCatalog&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 41</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org&quot;</span><span class="p">,</span>
+<span class="linenos"> 42</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
+<span class="linenos"> 43</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org&quot;</span>
+<span class="linenos"> 44</span>    <span class="p">},</span>
+<span class="linenos"> 45</span>    <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="s2">&quot;A description in text of the measurement techniques used or a URL to an on-line description.&quot;</span><span class="p">,</span>
+<span class="linenos"> 46</span>    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">[{</span>
+<span class="linenos"> 47</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 48</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+<span class="linenos"> 49</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+<span class="linenos"> 50</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;QA/QC reference&quot;</span><span class="p">,</span>
+<span class="linenos"> 51</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A link to the QA/QC principles used&quot;</span>
+<span class="linenos"> 52</span>    <span class="p">},</span>
+<span class="linenos"> 53</span>    <span class="p">{</span>
+<span class="linenos"> 54</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 55</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+<span class="linenos"> 56</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+<span class="linenos"> 57</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to GOOS Spec Sheet&quot;</span><span class="p">,</span>
+<span class="linenos"> 58</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A link to the URL to GOOS Spec Sheet&quot;</span>
+<span class="linenos"> 59</span>    <span class="p">}],</span>
+<span class="linenos"> 60</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2007/2007&quot;</span><span class="p">,</span>
+<span class="linenos"> 61</span>    <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 62</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+<span class="linenos"> 63</span>        <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ipt.env.duke.edu/archive.do?r=zd_1519&quot;</span><span class="p">,</span>
+<span class="linenos"> 64</span>        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;application/zip&quot;</span>
+<span class="linenos"> 65</span>    <span class="p">},</span>
+<span class="linenos"> 66</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 67</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+<span class="linenos"> 68</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 69</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
+<span class="linenos"> 70</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;</span>
+<span class="linenos"> 71</span>        <span class="p">},</span>
+<span class="linenos"> 72</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 73</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 74</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://dbpedia.org/resource/Spatial_reference_system&quot;</span><span class="p">,</span>
+<span class="linenos"> 75</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;</span>
+<span class="linenos"> 76</span>        <span class="p">}</span>
+<span class="linenos"> 77</span>    <span class="p">},</span>
+<span class="linenos"> 78</span>    
+<span class="linenos"> 79</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 80</span>        <span class="p">{</span>
+<span class="linenos"> 81</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/19393&quot;</span><span class="p">,</span>
+<span class="linenos"> 82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos"> 83</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Duke University&quot;</span><span class="p">,</span>
+<span class="linenos"> 84</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Duke University&quot;</span><span class="p">,</span>
+<span class="linenos"> 85</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/19393&quot;</span>
+<span class="linenos"> 86</span>        <span class="p">}</span>
+<span class="linenos"> 87</span>    <span class="p">],</span>
+<span class="linenos"> 88</span>    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 89</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+<span class="linenos"> 90</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;describe the activity, might include name here too.&quot;</span><span class="p">,</span>
+<span class="linenos"> 91</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the activity, p-wave velocity measurement of drill cores  DEVNOTE  really a simple measurement technique?&quot;</span><span class="p">,</span>
+<span class="linenos"> 92</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 93</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+<span class="linenos"> 94</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The instrumented action, measuring X&quot;</span><span class="p">,</span>
+<span class="linenos"> 95</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 96</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+<span class="linenos"> 97</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sampling instrument&quot;</span><span class="p">,</span>
+<span class="linenos"> 98</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/&quot;</span><span class="p">,</span>
+<span class="linenos"> 99</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Sampling instrument&quot;</span>
+<span class="linenos">100</span>            <span class="p">}</span>
+<span class="linenos">101</span>        <span class="p">}</span>
+<span class="linenos">102</span>    <span class="p">},</span>
+<span class="linenos">103</span>    <span class="s2">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+<span class="linenos">104</span>    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
+<span class="linenos">105</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-20/2016-01-22&quot;</span>
+<span class="linenos">106</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="measurementtechnique">
+<h2>measurementTechnique<a class="headerlink" href="#measurementtechnique" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="publishingprinciples">
+<h2>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="variablemeasured">
+<h2>variableMeasured<a class="headerlink" href="#variablemeasured" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="about">
+<h2>about<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="spatialcoverage">
+<h2>spatialCoverage<a class="headerlink" href="#spatialcoverage" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="temporalcoverage">
+<h2>temporalCoverage<a class="headerlink" href="#temporalcoverage" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="need-to">
+<h2>Need to:<a class="headerlink" href="#need-to" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Review <a class="reference external" href="https://schema.org/PropertyValue">PropertyValue</a> vs <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a> and they could connect with <a class="reference external" href="https://schema.org/variableMeasured">variableMeasured</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2006/time#&quot;</span>
+<span class="linenos"> 4</span><span class="p">},</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Eruptive activity at Mt. St. Helens, Washington, March 1980 - January 1981&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;1980-03-27T19:36:00/1981-01-03T00:00:00Z&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="p">{</span>
+<span class="linenos">10</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;time:ProperInterval&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">&quot;time:hasBeginning&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">12</span>                 <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;time:Instant&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>                 <span class="s2">&quot;time:inXSDDateTimeStamp&quot;</span><span class="p">:</span> <span class="s2">&quot;1980-03-27T19:36:00Z&quot;</span>
+<span class="linenos">14</span>             <span class="p">},</span>
+<span class="linenos">15</span>             <span class="s2">&quot;time:hasEnd&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">16</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;time:Instant&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>                <span class="s2">&quot;time:inXSDDateTimeStamp&quot;</span><span class="p">:</span> <span class="s2">&quot;1981-01-03T00:00:00Z&quot;</span>
+<span class="linenos">18</span>             <span class="p">}</span>
+<span class="linenos">19</span>        <span class="p">}]</span>
+<span class="linenos">20</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Example from Science on Schema recommendations:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;https://schema.org/&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gsn-quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.geoscienceontology.org/geo-lower/quantity#&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;variableMeasured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;propertyID&quot;</span><span class="p">:</span><span class="s2">&quot;http://www.geoscienceontology.org/geo-lower/quantity#latitude&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.sample-data-repository.org/dataset-parameter/665787&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Latitude where water samples were collected; north is positive.&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;unitText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;decimal degrees&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;45.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;15.0&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>via <a class="reference external" href="https://schema.org/valueReference">valueReference</a> we can get to Defined Term  (EVO)</p>
+<p>Defined Term  (not scoped in variableMeasured valid types)</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;inDefinedTermSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;termCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./thematics/variables"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../identifier/id.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Source and Prov Approaches</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../indexing/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Aggregator</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By IODEPO<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
