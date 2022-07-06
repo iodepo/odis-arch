@@ -52,22 +52,32 @@ Notes image:
 ![notes image](./eov.png)
 
 
-
 ```{literalinclude} ./graphs/obisData2.json
 :linenos:
-:emphasize-lines: 5-7, 10,
+:emphasize-lines: 1-2
 ```
 
+## measurementTechnique
 
-Need to:
+## publishingPrinciples
+
+## variableMeasured
+
+## about
+
+## spatialCoverage
+
+## temporalCoverage
+
+
+
+## Need to:
 
 * Review [PropertyValue](https://schema.org/PropertyValue) vs [DefinedTerm](https://schema.org/DefinedTerm) and they could connect with [variableMeasured](https://schema.org/variableMeasured)
 
 
-
 ```{literalinclude} ./graphs/temporalCoverage.json
 :linenos:
-:emphasize-lines: 5-7, 10,
 ```
 
 
@@ -82,7 +92,6 @@ Example from Science on Schema recommendations:
   },
   "@type": "Dataset",
   "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
-  ...
   "variableMeasured": [
     {
       "@type": "PropertyValue",
@@ -94,7 +103,6 @@ Example from Science on Schema recommendations:
       "minValue": "45.0",
       "maxValue": "15.0"
     },
-    ...
   ]
 }
 ```
@@ -113,7 +121,3 @@ Defined Term  (not scoped in variableMeasured valid types)
 ```
 
 
-```{literalinclude} ./graphs/obisData2.json
-:linenos:
-:emphasize-lines: 1-2
-```
