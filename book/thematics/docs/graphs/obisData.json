@@ -14,11 +14,29 @@
     "citation": "Ampela, K. and G. Miller-Francisco. 2017. MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007. Data downloaded from OBIS-SEAMAP (http://seamap.env.duke.edu/dataset/1519) on yyyy-mm-dd.",
     "version": "2021-04-24T06:34:56.000Z",
     "keywords": [
-        "Occurrence,Mariana Islands Range Complex,Marine Animal Survey,Marine Biology,Marine mammals,Sea turtles,Visual Sighting,Vessel",
+        "Occurrence, Mariana Islands Range Complex,Marine Animal Survey,Marine Biology, Marine mammals, Sea turtles, Visual Sighting,Vessel",
         "Observation",
         "Occurrence"
     ],
-    "variableMeasured": [],
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Abundance",
+            "description": "Abundance"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "NetMeshSize",
+            "url": "http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/",
+            "description": "NetMeshSize DEVNOTE:  is this technically a measured variable, or an instrument property?"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "SamplingDeviceApertureSurfaceArea",
+            "url": "http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/",
+            "description": "SamplingDeviceApertureSurfaceArea  DEVNOTE, I can not put PropertyValue on thing well, so going to call this a variable Measured"
+        }
+    ],
     "includedInDataCatalog": {
         "@id": "https://obis.org",
         "@type": "DataCatalog",
@@ -51,11 +69,10 @@
             "url": "https://oceanexpert.org/institution/19393"
         }
     ],
-
     "subjectOf": {
         "@type": "Event",
         "description": "describe the activity, might include name here too.",
-        "name": "Name of the activity, p-wave velocity measurement of drill cores",
+        "name": "Name of the activity, p-wave velocity measurement of drill cores  DEVNOTE  really a simple measurement technique?",
         "potentialAction": {
             "@type": "Action",
             "name": "The instrumented action, measuring X",

@@ -1,0 +1,56 @@
+format: jb-article
+root: index
+sections:
+- file: content
+- file: publishing/publishing
+- file: thematics/README.md
+  sections:
+  - file: thematics/expinst/README.md
+  - file: thematics/docs/README.md
+    sections:
+    - file: thematics/docs/OIH_Thematic_doc.ipynb
+  - file: thematics/docs/maps.md 
+  - file: thematics/projects/README.md
+  - file: thematics/training/README.md
+  - file: thematics/vessels/README.md
+  - file: thematics/spatial/README.md
+  - file: thematics/services/README.md
+  - file: thematics/terms/list
+  - file: thematics/languages/languages
+  - file: thematics/prov/README
+  - file: thematics/sdg/index.md
+- file: indexing/index.md
+  sections:
+  - file: indexing/qstart.md
+  - file: indexing/indexingservices.md
+  - file: indexing/dataservices.md
+  - file: indexing/user.md
+  - file: indexing/graphpub
+  - file: indexing/alternatives.md
+- file: tooling/index
+  sections:
+  - file: tooling/openRefine/README.md
+    sections:
+    - file: tooling/openRefine/template.md
+    - file: tooling/openRefine/projects.md
+  - file: tooling/notebooks/README.md
+    sections:
+    - file: tooling/notebooks/OIH_GraphAnalytics.ipynb
+    - file: tooling/notebooks/OIH_Queries.ipynb
+    - file: tooling/notebooks/OIH_Editor.ipynb
+    - file: tooling/notebooks/validation/OIH_SHACL.ipynb
+    - file: tooling/notebooks/ISO19139mapping/ISOMap.ipynb
+    - file: tooling/notebooks/DCATmapping/dcatmapping.ipynb
+    - file: tooling/notebooks/geoKGComplete/README.md
+      sections:
+      - file: tooling/notebooks/geoKGComplete/geocomplete.ipynb
+- file: validation/README
+- file: users/referenceclient
+- file: appendix/index
+  sections:
+  - file: appendix/annoyances
+  - file: appendix/references
+  - file: appendix/registries
+  - file: appendix/vocabularies
+
+ 

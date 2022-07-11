@@ -1,0 +1,145 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://uatweb.spc.links.com.au/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/ac8a29eb-7725-45e8-a166-cd38c3e87c4f",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://uatweb.spc.links.com.au/data/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/ac8a29eb-7725-45e8-a166-cd38c3e87c4f/download/2013_phc_wlf_vid_4326.geojson"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "1314914.0"
+      },
+      "dcat:mediaType": "application/json",
+      "dct:description": "##Village - Wallis and Futuna 2013 Population and Housing Census.\r\n###Fields:\r\n* vid: Village code\r\n* vname: Village name\r\n###Layer information\r\n* Name\t2013_PHC_WLF_vid_4326\r\n* Storage\tGeoJSON\r\n* Comment\t\r\n* Encoding\tUTF-8\r\n* Geometry\tPolygon (MultiPolygon)\r\n* CRS\tEPSG:4326 - WGS 84 - Geographic\r\n* Extent\t-178.1817668891470987,-14.3124693963594645 : -176.1619672359576327,-13.2169133113924282\r\n* Unit\tdegrees\r\n* Feature count\t34",
+      "dct:format": "GeoJSON",
+      "dct:title": "2013_PHC_WallisFutuna_village_4326",
+      "spdx:checksum": {
+        "@id": "_:N8b1af4103dc14668b29954efd009d799"
+      }
+    },
+    {
+      "@id": "_:N8b1af4103dc14668b29954efd009d799",
+      "@type": "spdx:Checksum",
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "0aba5240748588dcbb430ff589a9cb36"
+      }
+    },
+    {
+      "@id": "https://uatweb.spc.links.com.au/organization/c9a3d7ed-a5fc-4b74-b4fd-5fc1fd939cd0",
+      "@type": "foaf:Organization",
+      "foaf:name": "SPC Statistics for Development Division (SDD)"
+    },
+    {
+      "@id": "https://uatweb.spc.links.com.au/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb",
+      "@type": "dcat:Dataset",
+      "dcat:distribution": [
+        {
+          "@id": "https://uatweb.spc.links.com.au/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/ac8a29eb-7725-45e8-a166-cd38c3e87c4f"
+        },
+        {
+          "@id": "https://uatweb.spc.links.com.au/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/5ecf2c68-36df-47eb-93ee-ff14abde0b20"
+        }
+      ],
+      "dcat:keyword": [
+        "population-census",
+        "boundaries"
+      ],
+      "dct:description": "###Administrative boundaries utilized to conduct Wallis and Futuna 2013 Population and Housing Census  \r\n* Village boundaries\r\n* District boundaries\r\nThese administrative boundaries have been used to build the Wallis and Futuna PopGIS3 online mapping tool https://wf.popgis.spc.int/. To know more about the PopGIS project please see http://sdd.spc.int/mapping-popgis\r\n\r\n###Disclaimer: \r\nUpper level administrative units may slightly differ from the official boundaries. The boundaries, codes and names shown in the datasets do not imply official endorsement or acceptance by SPC.",
+      "dct:identifier": "f8e8122c-1dbe-4cdb-a265-bef6415205cb",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2020-06-29T22:30:46.964538"
+      },
+      "dct:language": "en",
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-05-03T22:23:20.950977"
+      },
+      "dct:publisher": {
+        "@id": "https://uatweb.spc.links.com.au/organization/c9a3d7ed-a5fc-4b74-b4fd-5fc1fd939cd0"
+      },
+      "dct:spatial": {
+        "@id": "_:N6f05f842f8884e4fa1463aa0cb3cf33a"
+      },
+      "dct:title": "2013_WallisFutuna_PHC_Admin_Boundaries"
+    },
+    {
+      "@id": "_:N6f05f842f8884e4fa1463aa0cb3cf33a",
+      "@type": "dct:Location",
+      "locn:geometry": [
+        {
+          "@type": "https://www.iana.org/assignments/media-types/application/vnd.geo+json",
+          "@value": "{\"type\":\"MultiPolygon\",\"coordinates\":[[[[183.21422000718448,-9.877244448899717],[183.50980284111756,-9.840902918301055],[183.79517527345334,-9.829646286466925],[184.08816923358467,-9.842299351215061],[184.38016365486732,-9.879877509099742],[185.14777181781542,-10.502322018546124],[185.73262352545555,-10.960825304544088],[185.63417879071878,-12.083709803664405],[185.48860552842245,-14.154640220669506],[183.33457641796753,-14.661068445951884],[182.61665812097576,-15.919306458226345],[182.21612304044623,-15.713423666668746],[181.26719787967878,-15.151595742849224],[181.00498042380792,-14.972268414155849],[180.81918073190562,-14.823924532191256],[180.68604618348473,-14.698353560967917],[180.55822012625822,-14.560521271639288],[179.50499999990473,-13.31777777781673],[179.5350555555559,-13.240386111110979],[181.72631666666697,-11.803113888888902],[182.28551111111122,-10.8325],[183.21422000718448,-9.877244448899717]]]]}"
+        },
+        {
+          "@type": "gsp:wktLiteral",
+          "@value": "MULTIPOLYGON (((183.2142 -9.8772, 183.5098 -9.8409, 183.7952 -9.8296, 184.0882 -9.8423, 184.3802 -9.8799, 185.1478 -10.5023, 185.7326 -10.9608, 185.6342 -12.0837, 185.4886 -14.1546, 183.3346 -14.6611, 182.6167 -15.9193, 182.2161 -15.7134, 181.2672 -15.1516, 181.0050 -14.9723, 180.8192 -14.8239, 180.6860 -14.6984, 180.5582 -14.5605, 179.5050 -13.3178, 179.5351 -13.2404, 181.7263 -11.8031, 182.2855 -10.8325, 183.2142 -9.8772)))"
+        }
+      ]
+    },
+    {
+      "@id": "https://uatweb.spc.links.com.au/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/5ecf2c68-36df-47eb-93ee-ff14abde0b20",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://uatweb.spc.links.com.au/data/dataset/f8e8122c-1dbe-4cdb-a265-bef6415205cb/resource/5ecf2c68-36df-47eb-93ee-ff14abde0b20/download/2013_phc_wlf_did_4326.geojson"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "1286373.0"
+      },
+      "dcat:mediaType": "application/json",
+      "dct:description": "##District - Wallis and Futuna 2013 Population and Housing Census.\r\n###Fields:\r\n* did: District code\r\n* dname: District name\r\n###Layer information\r\n* Name\t2013_PHC_WLF_did_4326\r\n* Storage\tGeoJSON\r\n* Comment\t\r\n* Encoding\tUTF-8\r\n* Geometry\tPolygon (MultiPolygon)\r\n* CRS\tEPSG:4326 - WGS 84 - Geographic\r\n* Extent\t-178.1817668891472408,-14.3124693963594734 : -176.1619672359575475,-13.2169133113924264\r\n* Unit\tdegrees\r\n* Feature count\t5",
+      "dct:format": "GeoJSON",
+      "dct:title": "2013_PHC_WallisFutuna_district_4326",
+      "spdx:checksum": {
+        "@id": "_:Nfaf497918ade429781af5e7d94a35c78"
+      }
+    },
+    {
+      "@id": "_:Nfaf497918ade429781af5e7d94a35c78",
+      "@type": "spdx:Checksum",
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "65dcae2d5e6f8d4f8e96cf9b011f379e"
+      }
+    }
+  ]
+}

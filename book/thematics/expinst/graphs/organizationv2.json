@@ -34,40 +34,37 @@
         "propertyID": "https://registry.identifiers.org/registry/grid",
         "url": "https://grid.ac/institutes/grid.475727.4"
     },
+    "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.108237,
+            "longitude": -80.642982
+            
+        },
+        "geoRadius": 1000
+    },
     "publishingPrinciples": "link to the ODIS book URL",
     "hasOfferCatalog": [
         {
-          "@type": "OfferCatalog",
-          "name": "BCO-DMO Resource Catalog",
-          "itemListElement": [
-            {
-              "@id": "https://www.bco-dmo.org/search/dataset",
-              "@type": ["DataCatalog", "Service"],
-              "url": "https://www.bco-dmo.org/search/dataset",
-              "name": "BCO-DMO Dataset Search",
-              "audience": {
-                  "@type": "Audience",
-                  "audienceType": "public",
-                  "name": "General Public"
-              },
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.bco-dmo.org/search/dataset/{query}",
-                "query": "required"
-              }
-            },
-            {
-              "@id": "https://www.bco-dmo.org/search",
-              "@type": "Service",
-              "url": "https://www.bco-dmo.org/search",
-              "name": "BCO-DMO Website Search",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.bco-dmo.org/search?&keywords={query}",
-                "query": "required"
-              }
-            }
-          ]
+            "@type": "OfferCatalog",
+            "name": "Org X  Resource Catalog",
+            "itemListElement": [
+                {
+                    "@type": "WebContent",
+                    "url": "https://www.x.org/sitemap.xml",
+                    "name": "Org X sitemap",
+                    "encodingFormat": "text/xml",
+                    "usageInfo": "https://book.oceaninfohub.org/publishing/publishing.html#sitemap-xml",
+                    "publishingPrinciples": "https://book.oceaninfohub.org/publishing/publishing.html#sitemap-xml",
+                    "schemaVersion": "https://sitemap.org",
+                    "audience": {
+                        "@type": "Audience",
+                        "audienceType": "public",
+                        "name": "General Public"
+                    }
+                }
+            ]
         }
-      ]
+    ]
 }
