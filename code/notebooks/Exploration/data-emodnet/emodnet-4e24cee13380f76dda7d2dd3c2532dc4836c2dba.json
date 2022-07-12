@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=wsch11lo20",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3.366323720701609 51.32904160157468, 3.366323720701609 51.597200253648424, 4.251925267393272 51.597200253648424, 4.251925267393272 51.32904160157468, 3.366323720701609 51.32904160157468))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Soundings of lower-lying areas in the Western Scheldt. (unit: m/reference plane: NAP)",
+    "keywords": "Elevation",
+    "name": "Soundings (unit: m/reference plane: NAP, Western Scheldt, 2011)",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=wsch11lo20"
+}

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geo.vliz.be:80/geoserver/Emodnetbio/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=harbour_seal",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-10.6407794952393 51.3422927856445, -10.6407794952393 55.4315452575684, -5.83656454086304 55.4315452575684, -5.83656454086304 51.3422927856445, -10.6407794952393 51.3422927856445))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "These grid data were derived from National Parks and Wildlife Service cetacean surveys within the Irish MSFD area and the EEA-10km GRID. The grid shows the current distribution of Harbour seal (Phoca vitulina) in Irish coastal and marine waters. The data were collected for the purposes of 2019 reporting under Article 17 of the EU Habitats Directive.",
+    "keywords": "Species distribution, Species distribution",
+    "name": "Harbour Seal Distribution Polygons",
+    "url": "http://geo.vliz.be:80/geoserver/Emodnetbio/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=harbour_seal"
+}

@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=arcticmarineareas",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-180.0 51.3845118691187, -180.0 90.0, 180.0 90.0, 180.0 51.3845118691187, -180.0 51.3845118691187))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "There are many ways to divide the Arctic marine region—by ecosystem/ecological characteristics, by administrative criteria, or by some combination of the two. However, effective monitoring of biodiversity requires that an ecosystem-based approach be used for choosing areas.\n\nhttp://geo.abds.is/geonetwork/srv/eng/catalog.search#/metadata/dcd5c12f-3acb-4101-8e1a-bba0aec50582",
+    "keywords": "features, arcticmarineareas",
+    "name": "Arctic Marine Areas",
+    "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=arcticmarineareas"
+}

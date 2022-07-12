@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=lw_path_meeuwfay",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.667153021 50.07052725, 2.667153021 51.45326982, 4.116607013 51.45326982, 4.116607013 50.07052725, 2.667153021 50.07052725))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Some exemplary trajectories of European Herring Gulls (Larus argentatus Pontoppidan, 1736) and Lesser Black-backed Gulls (Larus fuscus Linnaeus, 1758), tracked with the LifeWatch bird tracking GPS network. Displayed positions are calculated centroid positions of daily tracks.",
+    "keywords": "bird, GPS tracking, migration patterns, habitat use, Species distribution",
+    "name": "Trajectory lesser black-backed gull (Fay, Belgium, the Netherlands & France, 2016)",
+    "url": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=lw_path_meeuwfay"
+}

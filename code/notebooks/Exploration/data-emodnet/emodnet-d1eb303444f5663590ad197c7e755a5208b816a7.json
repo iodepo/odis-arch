@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=wes_bth_lat_mt_2019_1m1",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3.558818725887479 51.33187944324275, 3.558818725887479 51.46220710636878, 4.256845968163593 51.46220710636878, 4.256845968163593 51.33187944324275, 3.558818725887479 51.33187944324275))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Bathymetric grid of the Westerschelde (mouth - Belgian border). Depths have positive values, heights negative. The resolution of the grid is 1 meter. The reference plane is LAT.",
+    "keywords": "",
+    "name": "Bathymetry (unit: m/reference plane: LAT, Western Scheldt, 2019)",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=wes_bth_lat_mt_2019_1m1"
+}
