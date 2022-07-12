@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=mra_uk_blocks",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-25.2780513763428 47.3531379699707, -25.2780513763428 63.9693298339844, 3.54121971130371 63.9693298339844, 3.54121971130371 47.3531379699707, -25.2780513763428 47.3531379699707))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Mineral rights areas are geographical units where exploration and exploitation of mineral resources (e.g. oil, gas) can take place. The areas are delineated by governmental agencies and (parts of) these areas can be licensed off to companies following a bidding round, allowing them to develop their activities in the area. Mineral rights areas occur both onshore and offshore. The smallest unit of division is a ‘block’. A number of blocks form a ‘quad’.\n\nThe mineral rights areas that can be found in the Marine Regions gazetteer only consist of the offshore units. The license data, which are subject to frequent alterations, are not incorporated in the data set in order to provide a sustainable link to the described features. The license data can be consulted through the awarding government’s website. The area of each block was calculated and added as a field to the attribute table.",
+    "keywords": "mineral rights areas, oil, gas, exploitation, exploration, offshore, Administrative units",
+    "name": "Offshore mineral rights areas United Kingdom",
+    "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=mra_uk_blocks"
+}

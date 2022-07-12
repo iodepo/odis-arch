@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=bathy_vliz_bpns",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.41955423355103 51.1116027832031, 2.41955423355103 51.798656463623, 3.35848593711853 51.798656463623, 3.35848593711853 51.1116027832031, 2.41955423355103 51.1116027832031))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This layer contains the footprints of bathymetric surveys performed by VLIZ in the period 2012-2019 in the Belgian part of the North Sea. The bathymetric data gathered during these surveys is available for download in the Marine Data Archive (mda.vliz.be). For more information on the data acquisition, contact infrastructuur@vliz.be. For access to MDA, contact data@vliz.be.",
+    "keywords": "bathymetry, bpns, Elevation",
+    "name": "Footprints bathymetric surveys VLIZ (Belgian part of North Sea, 2012-2019)",
+    "url": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=bathy_vliz_bpns"
+}

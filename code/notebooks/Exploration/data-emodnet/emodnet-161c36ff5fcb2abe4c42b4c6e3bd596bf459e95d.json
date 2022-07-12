@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=fao",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-180.0 -85.4702911376953, -180.0 89.8999862670898, 180.0 89.8999862670898, 180.0 -85.4702911376953, -180.0 -85.4702911376953))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "FAO Major Fishing Areas for Statistical Purposes are arbitrary areas, the boundaries of which were determined in consultation with international fishery agencies on various considerations, including (i) the boundary of natural regions and the natural divisions of oceans and seas; (ii) the boundaries of adjacent statistical fisheries bodies already established in inter-governmental conventions and treaties; (iii) existing national practices; (iv) national boundaries; (v) the longitude and latitude grid system; (vi) the distribution of the aquatic fauna; and (vii) the distribution of the resources and the environmental conditions within an area.\n\nPurpose: \n\tThe rationale of the FAO Major Fishing Areas has been that the areas should, as far as possible, coincide with the areas of competence of other fishery commissions when existing. This system facilitates comparison of data, and improves the possibilities of cooperation in statistical matters in general.",
+    "keywords": "FAO, FIGIS, fishery, fisheries, fishing areas, ocean management, resource management, FAO area (theme), World (place), Area management / restriction / regulation zones & reporting units",
+    "name": "FAO Statistical Areas for Fishery Purposes",
+    "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=fao"
+}

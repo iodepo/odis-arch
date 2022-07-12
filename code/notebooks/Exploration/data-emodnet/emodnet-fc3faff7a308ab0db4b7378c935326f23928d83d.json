@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=urban",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3.175 51.006, 3.175 51.508, 5.105 51.508, 5.105 51.006, 3.175 51.006))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Selection made by VLIZ of the Europe Urbanized Areas of Europe from ESRI.",
+    "keywords": "Steden",
+    "name": "Selection of urbanized areas along the Scheldt",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=urban"
+}

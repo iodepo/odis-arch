@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=seavox_v17",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-181.800201416016 -79.4131317138672, -181.800201416016 90.8429107666016, 181.800018310547 90.8429107666016, 181.800018310547 -79.4131317138672, -181.800201416016 -79.4131317138672))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "SeaVoX is a combined SeaDataNet and MarineXML vocabulary content governance group, it is moderated by BODC (https://www.bodc.ac.uk/data/codes_and_formats/seavox/). This polygon data set defines the geographic extent of the terms specified by the SeaVoX vocabulary governance to describe coherent regions of the hydrosphere. It includes land masses enclosing freshwater bodies. The coastline data set used in the shapefile is taken from the World Vector Shoreline data set (scale 1:250,000). Reference for the data set: \"polygon data set of the extent of water bodies from the SeaVoX Salt and Fresh Water Body Gazetteer, http://vocab.nerc.ac.uk/collection/C19/current/\".\nThe data file follows a hierarchical structure with each region consisting of one or more polygons. This approach was adopted to avoid the need to have overlapping polygons in regions where a sea area included a number of sub-regions, for example the Mediterranean Sea includes the Aegean Sea, Ionian Sea etc. The following gives the level in the structure at which particular regions, which consist of more than one polygon can be found. This level in the structure is given by the polygon's attributes. \nAttribute: REGION: ARCTIC OCEAN, ATLANTIC OCEAN,BALTIC SEA,INDIAN OCEAN,MEDITERRANEAN REGION,PACIFIC OCEAN,SOUTH CHINA AND EASTERN ARCHIPELAGIC SEAS,SOUTHERN OCEAN,MAINLAND NORTH AMERICAMAINLAND,EUROPE,MAINLAND ASIA \nAttribute: LEVEL_1: ARAFURA SEA,DAVIS SEA,GREENLAND SEA,GULF OF BOTHNIA,MEDITERRANEAN SEA,NORTH ATLANTIC OCEAN,NORTH PACIFIC OCEAN,ROSS SEA,SOUTH ATLANTIC OCEAN,SOUTH PACIFIC OCEAN,TIMOR SEA, LAURENTIAN GREAT LAKED \nAttribute: LEVEL_2: MEDITERRANEAN SEA, WESTERN BASIN,MEDITERRANEAN SEA,EASTERN BASIN,NORTHEAST ATLANTIC OCEAN (40W),NORTHEAST PACIFIC OCEAN (180W),NORTHWEST ATLANTIC OCEAN (40W),NORTHWEST PACIFIC OCEAN (180W),SOUTHEAST ATLANTIC OCEAN (20W),SOUTHEAST PACIFIC OCEAN (140W),SOUTHWEST ATLANTIC OCEAN (20W),SOUTHWEST PACIFIC OCEAN (140W) LAKE ERIE, LAKE SUPERIOR, DETROIT RIVER, ST. CLAIR RIVER, LAKE ST. CLAIR, NIAGARA RIVER, LAKE HURON, LAKE ONTARIO, LAKE MICHIGAN, ST. MARYS RIVER \nAttribute: LEVEL_3: BERING SEA,CORAL SEA,ENGLISH CHANNEL,JAPAN SEA,NORTH SEA,TASMAN SEA,YELLOW SEA \nAttribute: LEVEL_4: CARDIGAN BAY,DOVER STRAIT,FIRTH OF CLYDE,LIVERPOOL BAY,NORTH CHANNEL,POOLE BAY,SOLENT,SOLWAY FIRTH \nAttribute: SUB_REGION: This is the lowest level in the structure. \nThis version of the shapefile corresponds to version 17 of the SeaVoX Salt and Fresh Water Body Gazetteer. This version includes the following updates: Addition of 5 new sub-regions: Hollands Diep, Krammer, Grevelingen, Haringvliet, and Bay of Brest\nCredits\nPolygon data set of the extent of water bodies from the SeaVoX Salt and Fresh Water Body Gazetteer, http://vocab.nerc.ac.uk/collection/C19/current/\nUse limitations\nThe source of the data set should be attributed as: \"polygon data set of the extent of water bodies from the SeaVoX Salt and Fresh Water Body Gazetteer, http://vocab.nerc.ac.uk/collection/C19/current/\"",
+    "keywords": "Administrative units",
+    "name": "SeaVoX - Sea Areas Polygons (v17, 2019)",
+    "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=seavox_v17"
+}

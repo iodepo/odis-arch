@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=afstanden_vlissingen",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3.408 50.77, 3.408 51.457, 5.259 51.457, 5.259 50.77, 3.408 50.77))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "keywords": "afstanden, km, Vlissingen",
+    "name": "Afstanden vanaf Vlissingen (VLIZ, 2009)",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=afstanden_vlissingen"
+}

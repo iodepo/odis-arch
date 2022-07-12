@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.vliz.be/en/imis?module=dataset&dasid=6388",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-164.347427368164 15.3970518112183, -164.347427368164 61.7791175842285, -47.2022933959961 61.7791175842285, -47.2022933959961 15.3970518112183, -164.347427368164 15.3970518112183))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Polygon data representing the Emission Control Areas (ECAs) designated under regulation 13 of MARPOL Annex VI (NOx emission control). The outline coordinates were processed in June 2019. The coastline was extracted from the ESRI Countries 2014. \nAvailable ECAs: \n1) North American area (regulation 13.6.1 and appendix VII of MARPOL Annex VI); \n2) United States Caribbean sea area (regulation 13.6.2 and appendix VII of MARPOL Annex VI)\n\nPreferred citation:\nFlanders Marine Institute (VLIZ), Belgium; (2020). Emission Control Areas (ECAs) designated under regulation 13 of MARPOL Annex VI (NOx emission control). Available online at http://www.marineregions.org/. https://doi.org/10.14284/396",
+    "keywords": "features, eca_reg13_nox",
+    "name": "Emission Control Areas (ECAs) designated under regulation 13 of MARPOL Annex VI (NOx emission control)",
+    "url": "http://www.vliz.be/en/imis?module=dataset&dasid=6388"
+}

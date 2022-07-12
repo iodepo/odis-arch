@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geo.vliz.be:80/geoserver/HistorischeKaarten/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=MosaicMiddelkerke_voorbombardement",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.7706330547580933 51.168718920990216, 2.7706330547580933 51.20216982186138, 2.846383206962691 51.20216982186138, 2.846383206962691 51.168718920990216, 2.7706330547580933 51.168718920990216))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "keywords": "MosaicMiddelkerke_voorbombardement, WCS, GeoTIFF",
+    "name": "MosaicMiddelkerke_voorbombardement",
+    "url": "http://geo.vliz.be:80/geoserver/HistorischeKaarten/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=MosaicMiddelkerke_voorbombardement"
+}
