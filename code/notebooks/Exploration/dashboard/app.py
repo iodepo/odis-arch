@@ -286,7 +286,7 @@ with st.expander("ODIS Node Summary", expanded=True):
             dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
             mask = df['propername'].values ==  node_filter
             df_orgDate = df[mask]
-            st.write(df_orgDate['dates'].values[0])
+            st.subheader(df_orgDate['dates'].values[0])
 
 # Summary
 
