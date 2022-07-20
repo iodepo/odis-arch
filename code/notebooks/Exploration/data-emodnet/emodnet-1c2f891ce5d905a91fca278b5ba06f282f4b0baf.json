@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=welvaartsindex_36",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.53705191612244 50.9011840820312, 2.53705191612244 51.3751335144043, 3.40357565879822 51.3751335144043, 3.40357565879822 50.9011840820312, 2.53705191612244 50.9011840820312))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This index compares the average tax income per inhabitant of a given administrative unit (e.g. municipality) with the average income per inhabitant in Belgium. For Belgium, this index is assimilated to 100 (Source: Federal Public Service Economy, SMEs, the Self-employed and Energy). If the prosperity index of a given administrative unit exceeds 100, this means that the average income of its inhabitants is higher than the national average income.",
+    "keywords": "Prosperity, Income, poverty, Administrative units",
+    "name": "Prosperity index (Belgian coastal area, 2015)",
+    "url": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=welvaartsindex_36"
+}

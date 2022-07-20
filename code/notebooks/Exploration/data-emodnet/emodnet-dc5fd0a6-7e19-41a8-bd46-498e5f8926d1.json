@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://www.marineregions.org/sources.php#comarge",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-179.999989 -78.422964, -179.999989 84.844672, 179.999989 84.844672, 179.999989 -78.422964, -179.999989 -78.422964))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This shapefile has been prepared in the framework of COMARGE, one of the field project of the Census of Marine Life. It is intended to represent continental margins worldwide, with the exclusion of the continental shelf. The continental margins have been defined based on bathymetry and expert opinion. The upper margin of the boundary has been set at 140 m depth, which is the average depth of the shelf break, except in Antarctica where the shelf break goes deeper and the upper boundary has been set up at 500 m. The lower boundary has been set at 3500 m depth. Both isobaths were extracted from S2004 Bathymetry (a global bathymetry at 1 arc-minute resolution). The upper and lower boundaries were manually edited to follow the contour of continental margins in particular cases. Please note that some but not all margins around island are included in this shapefile.",
+    "keywords": "Downloadable Data",
+    "name": "Continental margins between 140m and 3500m depth",
+    "url": "http://www.marineregions.org/sources.php#comarge"
+}

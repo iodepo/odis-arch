@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=moneos_monitoring_points",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((3.1635 50.9372280334, 3.1635 51.65861111, 4.74237 51.65861111, 4.74237 50.9372280334, 3.1635 50.9372280334))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "MONEOS monitoring activities in the Schelde represented as stations (points)",
+    "keywords": "",
+    "name": "MONEOS monitoring (points, Scheldt, 2009-2016)",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=moneos_monitoring_points"
+}

@@ -1,0 +1,81 @@
+# Gleaner config file for the ODIS partners running GeoNode or
+# are unable to generate JSON-LD for their catalogue
+# This points to the simple graph (JSON) file for each partner
+# specifically for 4 partners: Indonesia
+#                              Maspawio
+#                              Benguela Current Commission
+#                              Caribbean Marine Atlas
+---
+minio:
+  address: 0.0.0.0
+  port: 9000   
+  accessKey: worldsbestaccesskey
+  secretKey: worldsbestsecretkey
+  ssl: false
+  bucket: gleaner
+gleaner:
+  runid: runX # this will be the bucket the output is placed in...
+  summon: true # do we want to visit the web sites and pull down the files
+  mill: true
+context:
+  cache: true
+contextmaps:
+- prefix: "https://schema.org/"
+  file: "./schemaorg-current-https.jsonld"
+- prefix: "http://schema.org/"
+  file: "./schemaorg-current-https.jsonld"
+summoner:
+  after: ""      # "21 May 20 10:00 UTC"   
+  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  threads: 5
+  delay:  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
+  headless: http://127.0.0.1:9222  # URL for headless see docs/headless
+millers:
+  graph: true
+
+sources:
+  - sourcetype: sitegraph
+    name: inanodc
+    logo: ""
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
+    headless: false
+    #pid: http://hdl.handle.net/1834/41372
+    propername: "Indonesia National Oceanic Data Center"
+    domain: https://geonode.nodc.id
+    active: true
+  - sourcetype: sitegraph
+    name: maspawio
+    logo: "https://cordioea.net/wp-content/uploads/2017/09/Geonde.png"
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
+    headless: false
+    #pid: http://hdl.handle.net/1834/41372
+    propername: "MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean"
+    domain: http://maspawio.net
+    active: true
+  - sourcetype: sitegraph
+    name: benguelacc
+    logo: ""
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
+    headless: false
+    #pid: http://hdl.handle.net/1834/41372
+    propername: "Benguela Current Convention (BCC) GeoData Portal"
+    domain: https://geodata.benguelacc.org/
+    active: true
+  - sourcetype: sitegraph
+    name: caribbeanmarineatlas
+    logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
+    headless: false
+    #pid: http://hdl.handle.net/1834/41372
+    propername: "Caribbean Marine Atlas catalogue"
+    domain: https://www.caribbeanmarineatlas.net/
+    active: true
+  - sourcetype: sitegraph
+    name: emodnet
+    logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+    headless: false
+    #pid: http://hdl.handle.net/1834/41372
+    propername: "European Marine Observation and Data Network catalogue"
+    domain: https://emodnet.ec.europa.eu/
+    active: true 

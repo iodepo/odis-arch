@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=elektrickabels",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.81726523047261 51.2426536140001, 2.81726523047261 51.6946858996444, 3.17587812250701 51.6946858996444, 3.17587812250701 51.2426536140001, 2.81726523047261 51.2426536140001))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "The position of the export cables between the offshore wind farms in the BNS and the main land.",
+    "keywords": "elektriciteit, electricity, cable, kabel, Energy resources, Utility and governmental services",
+    "name": "Export cables wind farms (Belgian part of North Sea, 2018)",
+    "url": "https://geo.vliz.be/geoserver/Kustportaal/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=elektrickabels"
+}

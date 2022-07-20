@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "http://geo.vliz.be:80/geoserver/Crestproject/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=crest_testlocaties",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.675824288041764 51.135446276075655, 2.675824288041764 51.22275826581478, 2.889029616434496 51.22275826581478, 2.889029616434496 51.135446276075655, 2.675824288041764 51.135446276075655))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "Two zones were defined in the CREST project (Climate Resilient Coast) as test sites. One zone is situated at Mariakerke, the other in West-Groenendijk (Koksijde).\n\nFollowing measurements will be carried out at both locations: measurements using wave buoys, with a frame, aeolian sand transport and wind and current measurements, topographic measurements.",
+    "keywords": "features, crest_testlocaties",
+    "name": "Test locations (CREST, Belgian coast, 2015-2019)",
+    "url": "http://geo.vliz.be:80/geoserver/Crestproject/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=crest_testlocaties"
+}

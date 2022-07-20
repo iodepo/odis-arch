@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=haedatgrids_polygon",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-180.018417358398 -48.3181838989258, -180.018417358398 46.2548828125, 180.836410522461 46.2548828125, 180.836410522461 -48.3181838989258, -180.018417358398 -48.3181838989258))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "keywords": "features, haedatgrids_polygon",
+    "name": "HAB monitoring grids (polygons, world, 2018)",
+    "url": "https://geo.vliz.be/geoserver/MarineRegions/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=haedatgrids_polygon"
+}

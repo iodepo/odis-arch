@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=vh_dieptecontouren",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((4.228 51.117, 4.228 51.36, 4.405 51.36, 4.405 51.117, 4.228 51.117))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "keywords": "Beneden-Zeeschelde, bathymetrie, diepte, morfodynamiek, vaargeul, Schelde",
+    "name": "Bathymetrie Beneden-Zeeschelde, dieptecontouren (MDK)",
+    "url": "https://geo.vliz.be/geoserver/Scheldemonitor/ows?service=WMS&request=GetLegendGraphic&format=image%2Fpng&width=20&height=20&layer=vh_dieptecontouren"
+}
