@@ -183,17 +183,30 @@ st.set_page_config(
     page_icon="https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png",
     layout="wide",
     initial_sidebar_state="expanded",
-     menu_items={
+    menu_items={
          'Report a bug': "https://github.com/iodepo/odis-arch",
          'Get Help': 'https://oceaninfohub.org/contact-2/',         
          'About': "Dashboard demo by [jmckenna](https://github.com/jmckenna)"
-     }    
+    }   
 )
 
 # dashboard title
 st.title("ODIS Dashboard")
 
 with st.expander("ODIS Node Summary", expanded=True):
+
+    #use markdown trick, as st.expander label cannot be styled
+    #      see https://github.com/streamlit/streamlit/issues/2056
+    st.markdown(
+    """
+    <style>
+    .streamlit-expanderHeader {
+      font-size: large;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
 
     # top-level filters
     #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
@@ -211,7 +224,7 @@ with st.expander("ODIS Node Summary", expanded=True):
         nodeCol1, nodeCol2, nodeCol3, nodeCol4 = st.columns(4, gap="medium")
 
         with nodeCol1:
-            st.write("Patterns")
+            st.write("Types indexed")
             rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
                    PREFIX con: <http://www.ontotext.com/connectors/lucene#>
                    PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
@@ -274,17 +287,20 @@ with st.expander("ODIS Node Summary", expanded=True):
             st.write(dfKeywordsOrg.head(10))  
 
         with nodeCol3:
-            st.write("Number of Catalogues:")
+            st.write("Number of Catalogues")
             st.subheader(dfProvFilter['count'].sum())
             
         with nodeCol4:
-            st.write("Date indexed to Graph:")
+            st.write("Date indexed to Graph")
             df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
             names = df['propername'].tolist()
             dates = df['dates'].tolist()
             # Convert date strings (e.g. 2014-10-18) to datetime
             dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
-            mask = df['propername'].values ==  node_filter
+            if "INVEMAR" in node_filter: 
+                mask = df['propername'].values ==  "INVEMAR"
+            else:
+                mask = df['propername'].values ==  node_filter
             df_orgDate = df[mask]
             st.subheader(df_orgDate['dates'].values[0])
 
@@ -293,11 +309,24 @@ with st.expander("ODIS Node Summary", expanded=True):
 #st.header("ODIS Graph Summary")
 with st.expander("ODIS Graph Summary", expanded=False):
 
+    #use markdown trick, as st.expander label cannot be styled
+    #      see https://github.com/streamlit/streamlit/issues/2056
+    st.markdown(
+    """
+    <style>
+    .streamlit-expanderHeader {
+      font-size: large;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
+
     sumCol1, sumCol2, sumCol3 = st.columns(3, gap="medium")
 
     with sumCol1:
         st.write("Size of ODIS graph")
-        st.write(dfCount['Triples'])
+        st.subheader(dfCount['Triples'].values[0] + " triples")
 
     with sumCol2:
         st.write("Number of Nodes")
@@ -310,11 +339,11 @@ with st.expander("ODIS Graph Summary", expanded=False):
     sumCol4, sumCol5, sumCol6 = st.columns(3, gap="medium")
 
     with sumCol4:
-        st.write("Patterns")
+        st.write("Types indexed")
         st.write(dfTypes.head(10))
 
     with sumCol5:
-        st.write("Timeline added to Graph")
+        st.write("Timeline: when added to Graph")
         #st.write(dfProv.plot.pie(y='count',legend=False, figsize=(10, 10)))
         #st.pyplot() 
         df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
@@ -329,11 +358,24 @@ with st.expander("ODIS Graph Summary", expanded=False):
         st.write(dfKeywords.head(10))   
 
 with st.expander("About the Dashboard", expanded=False):
-     st.markdown("""
+
+    #use markdown trick, as st.expander label cannot be styled
+    #      see https://github.com/streamlit/streamlit/issues/2056
+    st.markdown(
+    """
+    <style>
+    .streamlit-expanderHeader {
+      font-size: large;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
+    st.markdown("""
          The ODIS (Ocean Data and Information System) Dashboard 
          shows live queries related to 
          the ODIS Graph, including describing each node in the 
          network.  More information about how to connect to the
          ODIS network can be found at [https://book.oceaninfohub.org/](https://book.oceaninfohub.org/)
-     """)
-     st.image("https://oceaninfohub.org/wp-content/uploads/2020/12/logo_OIH_PNG-RGB-1.png", width=300)
+    """)
+    st.image("https://oceaninfohub.org/wp-content/uploads/2020/12/logo_OIH_PNG-RGB-1.png", width=300)
