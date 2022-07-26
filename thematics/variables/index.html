@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Variables &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Essential Ocean Variables &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Aggregator" href="../../indexing/index.html" />
+    <link rel="next" title="Licenses" href="../license/README.html" />
     <link rel="prev" title="Source and Prov Approaches" href="../identifier/id.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -219,6 +219,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Support 7: EOVs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../license/README.html">
+   Support 8: Licenses
   </a>
  </li>
 </ul>
@@ -610,6 +615,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keywords">
+   keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variablemeasured">
+   variableMeasured
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurementtechnique">
    measurementTechnique
   </a>
@@ -620,8 +640,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variablemeasured">
-   variableMeasured
+  <a class="reference internal nav-link" href="#spatialcoverage">
+   spatialCoverage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -630,29 +650,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spatialcoverage">
-   spatialCoverage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#temporalcoverage">
    temporalCoverage
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-temporalcoverage">
-   Science on Schema temporalCoverage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-variablemeasured">
-   Science on Schema variableMeasured
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-indefinedtermset">
-   Science on Schema inDefinedTermSet
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#science-on-schema-temporalcoverage">
+     Science on Schema temporalCoverage
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -663,7 +670,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Variables</h1>
+                <h1>Essential Ocean Variables</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -679,6 +686,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keywords">
+   keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variablemeasured">
+   variableMeasured
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#measurementtechnique">
    measurementTechnique
   </a>
@@ -689,8 +711,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variablemeasured">
-   variableMeasured
+  <a class="reference internal nav-link" href="#spatialcoverage">
+   spatialCoverage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -699,29 +721,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spatialcoverage">
-   spatialCoverage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#temporalcoverage">
    temporalCoverage
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-temporalcoverage">
-   Science on Schema temporalCoverage
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-variablemeasured">
-   Science on Schema variableMeasured
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#science-on-schema-indefinedtermset">
-   Science on Schema inDefinedTermSet
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#science-on-schema-temporalcoverage">
+     Science on Schema temporalCoverage
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -733,254 +742,142 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h1>
-<p>This section details initial documentation of approaches for describing variable and variable associated
-properties to a type Dataset.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="essential-ocean-variables">
+<h1>Essential Ocean Variables<a class="headerlink" href="#essential-ocean-variables" title="Permalink to this headline">#</a></h1>
+<p>This section details initial documentation of approaches for describing elements of a
+<a class="reference external" href="https://schema.org/Dataset">schema:Dataset</a> with a focus on approaches supporting Essential
+Ocean Variables.   This includes the ability to link to supporting documents for quality assurance
+and control (QA/QC) and specification sheets.  Also shown here are methods to encode the
+event and associated instruments along with spatial and temporal elements.</p>
+<p>A rough description of these links leveraging pseudo <a class="reference external" href="http://schema.org">schema.org</a> terms follows with a detailed
+and valid data graph as an example after that.  We will then frame out and break down some of the
+specific elements.</p>
+<p>Reference image:</p>
+<p><img alt="notes image" src="../../_images/eov.png" /></p>
 <section id="references">
 <h2>References:<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_content&amp;view=article&amp;layout=edit&amp;id=283&amp;Itemid=441">GOOS reference</a></p></li>
 <li><p><a class="reference external" href="https://www.goosocean.org/index.php?option=com_oe&amp;task=viewDocumentRecord&amp;docID=17465">Goos example spec sheet</a> and</p></li>
-<li><p><a class="reference external" href="https://repository.oceanbestpractices.org/handle/11329/1920?show=full">Dublin core record to map</a> for different, but related, work.</p></li>
 <li><p><a class="reference external" href="https://manual.obis.org/examples/">OBIS examples</a></p></li>
 </ul>
-<p>The following data graph is a full example with some key properties for type Dataset.  Below it elements of the
-type are framed out and detailed.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="p">{</span>
 <span class="linenos">  2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos">  3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
 <span class="linenos">  4</span>    <span class="p">},</span>
 <span class="linenos">  5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="linenos">  6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;</span><span class="p">,</span>
-<span class="linenos">  7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007&quot;</span><span class="p">,</span>
-<span class="linenos">  8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Original provider:</span><span class="se">\n</span><span class="s2">HDR Environmental, Operations and Construction, Inc.</span><span class="se">\n\n</span><span class="s2">Dataset credits:</span><span class="se">\n</span><span class="s2">The U.S. Navy Marine Species Monitoring Program</span><span class="se">\n\n</span><span class="s2">Abstract:</span><span class="se">\n</span><span class="s2">Features in this feature class represent sightings from the NAVFAC MISTCS Vessel Surveys Jan-Apr 2007.&quot;</span><span class="p">,</span>
+<span class="linenos">  6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/dataset/12345&quot;</span><span class="p">,</span>
+<span class="linenos">  7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Vessel Surveys Jan-Apr 2007&quot;</span><span class="p">,</span>
+<span class="linenos">  8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Original provider: HDR Environmental, Operations and Construction, Inc. Dataset credits: The U.S. Navy Marine Species Monitoring Program Abstract:Features in this feature class represent sightings from the NAVFAC MISTCS Vessel Surveys Jan-Apr 2007.&quot;</span><span class="p">,</span>
 <span class="linenos">  9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;</span><span class="p">,</span>
-<span class="linenos"> 10</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos"> 11</span>        <span class="s2">&quot;http://ipt.env.duke.edu/resource?r=zd_1519&quot;</span>
-<span class="linenos"> 12</span>    <span class="p">],</span>
-<span class="linenos"> 13</span>    <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License&quot;</span><span class="p">,</span>
-<span class="linenos"> 14</span>    <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="s2">&quot;Ampela, K. and G. Miller-Francisco. 2017. MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007. Data downloaded from OBIS-SEAMAP (http://seamap.env.duke.edu/dataset/1519) on yyyy-mm-dd.&quot;</span><span class="p">,</span>
-<span class="linenos"> 15</span>    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-24T06:34:56.000Z&quot;</span><span class="p">,</span>
-<span class="linenos"> 16</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos"> 17</span>        <span class="s2">&quot;Occurrence, Mariana Islands Range Complex,Marine Animal Survey,Marine Biology, Marine mammals, Sea turtles, Visual Sighting,Vessel&quot;</span><span class="p">,</span>
-<span class="linenos"> 18</span>        <span class="s2">&quot;Observation&quot;</span><span class="p">,</span>
-<span class="linenos"> 19</span>        <span class="s2">&quot;Occurrence&quot;</span>
-<span class="linenos"> 20</span>    <span class="p">],</span>
-<span class="linenos"> 21</span>    <span class="s2">&quot;variableMeasured&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos"> 22</span>        <span class="p">{</span>
-<span class="linenos"> 23</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos"> 24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Abundance&quot;</span><span class="p">,</span>
-<span class="linenos"> 25</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Abundance&quot;</span>
-<span class="linenos"> 26</span>        <span class="p">},</span>
-<span class="linenos"> 27</span>        <span class="p">{</span>
-<span class="linenos"> 28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos"> 29</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;NetMeshSize&quot;</span><span class="p">,</span>
-<span class="linenos"> 30</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/&quot;</span><span class="p">,</span>
-<span class="linenos"> 31</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;NetMeshSize DEVNOTE:  is this technically a measured variable, or an instrument property?&quot;</span>
-<span class="linenos"> 32</span>        <span class="p">},</span>
-<span class="linenos"> 33</span>        <span class="p">{</span>
-<span class="linenos"> 34</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos"> 35</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SamplingDeviceApertureSurfaceArea&quot;</span><span class="p">,</span>
-<span class="linenos"> 36</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/&quot;</span><span class="p">,</span>
-<span class="linenos"> 37</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;SamplingDeviceApertureSurfaceArea  DEVNOTE, I can not put PropertyValue on thing well, so going to call this a variable Measured&quot;</span>
-<span class="linenos"> 38</span>        <span class="p">}</span>
-<span class="linenos"> 39</span>    <span class="p">],</span>
-<span class="linenos"> 40</span>    <span class="s2">&quot;includedInDataCatalog&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 41</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org&quot;</span><span class="p">,</span>
-<span class="linenos"> 42</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
-<span class="linenos"> 43</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org&quot;</span>
-<span class="linenos"> 44</span>    <span class="p">},</span>
-<span class="linenos"> 45</span>    <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="s2">&quot;A description in text of the measurement techniques used or a URL to an on-line description.&quot;</span><span class="p">,</span>
-<span class="linenos"> 46</span>    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">[{</span>
-<span class="linenos"> 47</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 48</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-<span class="linenos"> 49</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-<span class="linenos"> 50</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;QA/QC reference&quot;</span><span class="p">,</span>
-<span class="linenos"> 51</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A link to the QA/QC principles used&quot;</span>
-<span class="linenos"> 52</span>    <span class="p">},</span>
-<span class="linenos"> 53</span>    <span class="p">{</span>
-<span class="linenos"> 54</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 55</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-<span class="linenos"> 56</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-<span class="linenos"> 57</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to GOOS Spec Sheet&quot;</span><span class="p">,</span>
-<span class="linenos"> 58</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A link to the URL to GOOS Spec Sheet&quot;</span>
-<span class="linenos"> 59</span>    <span class="p">}],</span>
-<span class="linenos"> 60</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2007/2007&quot;</span><span class="p">,</span>
-<span class="linenos"> 61</span>    <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 62</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="linenos"> 63</span>        <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ipt.env.duke.edu/archive.do?r=zd_1519&quot;</span><span class="p">,</span>
-<span class="linenos"> 64</span>        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;application/zip&quot;</span>
-<span class="linenos"> 65</span>    <span class="p">},</span>
-<span class="linenos"> 66</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 67</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="linenos"> 68</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 69</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="linenos"> 70</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;</span>
-<span class="linenos"> 71</span>        <span class="p">},</span>
-<span class="linenos"> 72</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 73</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos"> 74</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://dbpedia.org/resource/Spatial_reference_system&quot;</span><span class="p">,</span>
-<span class="linenos"> 75</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;</span>
-<span class="linenos"> 76</span>        <span class="p">}</span>
-<span class="linenos"> 77</span>    <span class="p">},</span>
-<span class="linenos"> 78</span>    
-<span class="linenos"> 79</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos"> 80</span>        <span class="p">{</span>
-<span class="linenos"> 81</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/19393&quot;</span><span class="p">,</span>
-<span class="linenos"> 82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos"> 83</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Duke University&quot;</span><span class="p">,</span>
-<span class="linenos"> 84</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Duke University&quot;</span><span class="p">,</span>
-<span class="linenos"> 85</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/19393&quot;</span>
-<span class="linenos"> 86</span>        <span class="p">}</span>
-<span class="linenos"> 87</span>    <span class="p">],</span>
-<span class="linenos"> 88</span>    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 89</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
-<span class="linenos"> 90</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;describe the activity, might include name here too.&quot;</span><span class="p">,</span>
-<span class="linenos"> 91</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the activity, p-wave velocity measurement of drill cores  DEVNOTE  really a simple measurement technique?&quot;</span><span class="p">,</span>
-<span class="linenos"> 92</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 93</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-<span class="linenos"> 94</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The instrumented action, measuring X&quot;</span><span class="p">,</span>
-<span class="linenos"> 95</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 96</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
-<span class="linenos"> 97</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sampling instrument&quot;</span><span class="p">,</span>
-<span class="linenos"> 98</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/&quot;</span><span class="p">,</span>
-<span class="linenos"> 99</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Sampling instrument&quot;</span>
-<span class="linenos">100</span>            <span class="p">}</span>
-<span class="linenos">101</span>        <span class="p">}</span>
-<span class="linenos">102</span>    <span class="p">},</span>
-<span class="linenos">103</span>    <span class="s2">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
-<span class="linenos">104</span>    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
-<span class="linenos">105</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-20/2016-01-22&quot;</span>
-<span class="linenos">106</span><span class="p">}</span>
+<span class="hll"><span class="linenos"> 10</span>    <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License&quot;</span><span class="p">,</span>
+</span><span class="linenos"> 11</span>    <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="s2">&quot;Ampela, K. and G. Miller-Francisco. 2017. MIRC NAVFAC MISTCS Vessel Surveys Jan-Apr 2007. Data downloaded from OBIS-SEAMAP (http://seamap.env.duke.edu/dataset/1519) on yyyy-mm-dd.&quot;</span><span class="p">,</span>
+<span class="linenos"> 12</span>    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-24T06:34:56.000Z&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 13</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Sea State&quot;</span><span class="p">,</span><span class="s2">&quot;Mariana Islands Range Complex&quot;</span><span class="p">,</span><span class="s2">&quot;Oceanography&quot;</span><span class="p">,</span><span class="s2">&quot;Marine Physics&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos"> 14</span>    <span class="s2">&quot;variableMeasured&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos"> 15</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 16</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 17</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sea State&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 18</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Sea State is the characterization of wave and swell, typically in terms of height, wavelength, period, and directional wave energy flux &quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 19</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;http://purl.obolibrary.org/obo/ENVO_01001374&quot;</span><span class="p">,</span> <span class="s2">&quot;https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/11aca777-8a01-42ce-b076-b3059c3d8cae?gtm_keyword=SEA%20STATE&amp;gtm_scheme=Earth%20Science&quot;</span><span class="p">]</span>
+</span><span class="hll"><span class="linenos"> 20</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 21</span>            <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 22</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 23</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ocean Surface Stress&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 24</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The 2-dimensional horizontal vector Ocean Surface Stress is the rate per unit area at which momentum is transferred from the atmosphere to the ocean.&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 25</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.obolibrary.org/obo/ENVO_01001844&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 26</span>            <span class="s2">&quot;value&quot;</span> <span class="p">:</span>  <span class="mf">0.2</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 27</span>                <span class="s2">&quot;unitCode&quot;</span><span class="p">:</span> <span class="s2">&quot;http://qudt.org/vocab/unit/N-PER-M2&quot;</span>
+</span><span class="hll"><span class="linenos"> 28</span>
+</span><span class="hll"><span class="linenos"> 29</span>            <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 30</span>    <span class="p">],</span>
+</span><span class="hll"><span class="linenos"> 31</span>    <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;http://dx.doi.org/10.1002/exampleMethodsSeaStateDOI.ch1&quot;</span><span class="p">,</span> <span class="s2">&quot;http://dx.doi.org/10.1002/exampleMethodsOceanStressDOI.ch1&quot;</span><span class="p">],</span>
+</span><span class="hll"><span class="linenos"> 32</span>    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">[{</span>
+</span><span class="hll"><span class="linenos"> 33</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 34</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.goosocean.org/components/com_oe/oe.php?task=download&amp;id=34494&amp;version=1.0&amp;lang=1&amp;format=1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 35</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ocean Observations Physics and Climate Panel (OOPC) Sea State GOOS EOV Specification Sheet&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 36</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is the EOV specification sheet released by GOOS for Sea State.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. &quot;</span>
+</span><span class="hll"><span class="linenos"> 37</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 38</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 39</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 40</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.goosocean.org/components/com_oe/oe.php?task=download&amp;id=34507&amp;version=1.0&amp;lang=1&amp;format=1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 41</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ocean Observations Physics and Climate Panel (OOPC) Ocean Surface Stress GOOS EOV Specification Sheet&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 42</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is the EOV specification sheet released by GOOS for Ocean Surface Stress.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. &quot;</span>
+</span><span class="hll"><span class="linenos"> 43</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 44</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 45</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 46</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/id/doc/ID&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 47</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;QA/QC guidance&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 48</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;QA/QC  - EOV data and the methods used to generate them should have been vetted through some QA/QC methods, ideally performed by an independent third-party. These should be included in a dedicated JSON-LD block, even if it points to the same methodology linked to in the measurementTechnique block. &quot;</span>
+</span><span class="hll"><span class="linenos"> 49</span>    <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 50</span> <span class="p">],</span>
+</span><span class="linenos"> 51</span>    <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 52</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+<span class="linenos"> 53</span>        <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/archive.do?r=zd_1519&quot;</span><span class="p">,</span>
+<span class="linenos"> 54</span>        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;application/zip&quot;</span>
+<span class="linenos"> 55</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos"> 56</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 57</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 58</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 59</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 60</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;</span>
+</span><span class="hll"><span class="linenos"> 61</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 62</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 63</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 64</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://dbpedia.org/resource/Spatial_reference_system&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 65</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;</span>
+</span><span class="hll"><span class="linenos"> 66</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 67</span>    <span class="p">},</span>
+</span><span class="linenos"> 68</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 69</span>        <span class="p">{</span>
+<span class="linenos"> 70</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span><span class="p">,</span>
+<span class="linenos"> 71</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos"> 72</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+<span class="linenos"> 73</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+<span class="linenos"> 74</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span>
+<span class="linenos"> 75</span>        <span class="p">}</span>
+<span class="linenos"> 76</span>    <span class="p">],</span>
+<span class="hll"><span class="linenos"> 77</span>    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 78</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 79</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;describe the activity, might include name here too.&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 80</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 81</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">[{</span>
+</span><span class="hll"><span class="linenos"> 82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 83</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 84</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 85</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 86</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OceanWaveS WaMoS II 500 waves and surface current radar&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 87</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL0999/&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 88</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The WaMoS II 500 radar is an industry-proven X-band radar-based wave and surface current monitoring system developed by OceanWaveS. This sensor is able to measure and displays essential wave field parameters including wave heights, periods, directions and surface currents. The operating range extends to 4.0 km depending on X-band radar type and installation gemoetry. Requiring a minimum wind speed of 3 m/s and a minimum wave height of about 0.5m.&quot;</span>
+</span><span class="hll"><span class="linenos"> 89</span>            <span class="p">}},</span>
+</span><span class="hll"><span class="linenos"> 90</span>           <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 91</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 92</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of ocean stress&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 93</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 94</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 95</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Metek uSonic-3 Scientific {formerly: USA-1} ultrasonic anemometer&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 96</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL1402/&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 97</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A high precision 3D sonic anemometer. Typical applications for this device include: meteorological systems, meteorological networks, measuring dispersion parameters for pollution modelling, research stations, industrial sites, air quality forecasts, eddy correlation fluxes, marine and offshore platforms, wind shear detection, wind energy, and wake vortex monitoring. This device takes accurate measurement of 3 wind components and turbulence. Constructed with stainless steel. &quot;</span>
+</span><span class="hll"><span class="linenos"> 98</span>            <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 99</span>           <span class="p">}</span>
+</span><span class="hll"><span class="linenos">100</span>         <span class="p">]</span>
+</span><span class="hll"><span class="linenos">101</span>    <span class="p">},</span>
+</span><span class="linenos">102</span>    <span class="s2">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+<span class="linenos">103</span>    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">104</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-20/2016-01-22&quot;</span>
+</span><span class="linenos">105</span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
-<section id="measurementtechnique">
-<h2>measurementTechnique<a class="headerlink" href="#measurementtechnique" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://schema.org/measurementTechnique">https://schema.org/measurementTechnique</a> is used to provide either
-text about or a URL to information about the techniques or technology used in a Dataset.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
-
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
-    &quot;@type&quot;: &quot;Dataset&quot;,
-    &quot;measurementTechnique&quot;: &quot;A description in text of the measurement techniques used or a URL to an on-line description.&quot;
-}
-</pre></div>
-</div>
-<img alt="../../_images/index_1_1.svg" src="../../_images/index_1_1.svg" /></div>
-</div>
+<section id="license">
+<h2>license<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h2>
+<p>As licenses are an important cross-cutting item there is a separate section on licenses
+at:  <a class="reference internal" href="../license/README.html"><span class="doc std std-doc">License chapter</span></a></p>
 </section>
-<section id="publishingprinciples">
-<h2>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">#</a></h2>
-<p>As defined in the <a class="reference external" href="https://book.oceaninfohub.org/thematics/sdg/index.html#publishingprinciples">Linking to Principles</a>
-section on publishing principles, This can be used to connect CreativeWork, Organization, or Person to either of
-CreativeWork or URL. So this allows us to link a CreativeWork to a policy or principle statement.
-This has some very useful use cases where resources can be grouped based on their connection to those principles and policies.</p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
-
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
-    &quot;@type&quot;: &quot;Dataset&quot;,
-    &quot;publishingPrinciples&quot;: {
-        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
-        &quot;@type&quot;: &quot;CreativeWork&quot;,
-        &quot;description&quot;: [
-            &quot;A link to the QA/QC principles used&quot;,
-            &quot;A link to the URL to GOOS Spec Sheet&quot;
-        ],
-        &quot;name&quot;: [
-            &quot;QA/QC reference&quot;,
-            &quot;URL to GOOS Spec Sheet&quot;
-        ],
-        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
-    }
-}
-</pre></div>
-</div>
-<img alt="../../_images/index_3_11.svg" src="../../_images/index_3_11.svg" /></div>
-</div>
+<section id="keywords">
+<h2>keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">#</a></h2>
+<p>As keywords are an important cross-cutting item there is a separate section on keywords
+at:  <a class="reference internal" href="../terms/list.html"><span class="doc std std-doc">Keywords chapter</span></a></p>
 </section>
 <section id="variablemeasured">
 <h2>variableMeasured<a class="headerlink" href="#variablemeasured" title="Permalink to this headline">#</a></h2>
@@ -1033,31 +930,234 @@ the more detailed <a class="reference external" href="https://schema.org/Propert
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
     },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
     &quot;@type&quot;: &quot;Dataset&quot;,
     &quot;variableMeasured&quot;: [
         {
             &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;description&quot;: &quot;Abundance&quot;,
-            &quot;name&quot;: &quot;Abundance&quot;
+            &quot;description&quot;: &quot;Sea State is the characterization of wave and swell, typically in terms of height, wavelength, period, and directional wave energy flux &quot;,
+            &quot;name&quot;: &quot;Sea State&quot;,
+            &quot;propertyID&quot;: [
+                &quot;http://purl.obolibrary.org/obo/ENVO_01001374&quot;,
+                &quot;https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/11aca777-8a01-42ce-b076-b3059c3d8cae?gtm_keyword=SEA%20STATE&amp;gtm_scheme=Earth%20Science&quot;
+            ]
         },
         {
             &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;description&quot;: &quot;NetMeshSize DEVNOTE:  is this technically a measured variable, or an instrument property?&quot;,
-            &quot;name&quot;: &quot;NetMeshSize&quot;,
-            &quot;url&quot;: &quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100015/&quot;
+            &quot;description&quot;: &quot;The 2-dimensional horizontal vector Ocean Surface Stress is the rate per unit area at which momentum is transferred from the atmosphere to the ocean.&quot;,
+            &quot;name&quot;: &quot;Ocean Surface Stress&quot;,
+            &quot;propertyID&quot;: &quot;http://purl.obolibrary.org/obo/ENVO_01001844&quot;,
+            &quot;unitCode&quot;: &quot;http://qudt.org/vocab/unit/N-PER-M2&quot;,
+            &quot;value&quot;: 0.2
+        }
+    ]
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_1_1.svg" src="../../_images/index_1_1.svg" /></div>
+</div>
+</section>
+<section id="measurementtechnique">
+<h2>measurementTechnique<a class="headerlink" href="#measurementtechnique" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://schema.org/measurementTechnique">https://schema.org/measurementTechnique</a> is used to provide either
+text about or a URL to information about the techniques or technology used in a Dataset.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
+    &quot;@type&quot;: &quot;Dataset&quot;,
+    &quot;measurementTechnique&quot;: [
+        &quot;http://dx.doi.org/10.1002/exampleMethodsSeaStateDOI.ch1&quot;,
+        &quot;http://dx.doi.org/10.1002/exampleMethodsOceanStressDOI.ch1&quot;
+    ]
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_3_11.svg" src="../../_images/index_3_11.svg" /></div>
+</div>
+</section>
+<section id="publishingprinciples">
+<h2>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">#</a></h2>
+<p>As defined in the <a class="reference external" href="https://book.oceaninfohub.org/thematics/sdg/index.html#publishingprinciples">Linking to Principles</a>
+section on publishing principles, This can be used to connect CreativeWork, Organization, or Person to either of
+CreativeWork or URL. So this allows us to link a CreativeWork to a policy or principle statement.
+This has some very useful use cases where resources can be grouped based on their connection to those principles and policies.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
+    &quot;@type&quot;: &quot;Dataset&quot;,
+    &quot;publishingPrinciples&quot;: [
+        {
+            &quot;@type&quot;: &quot;CreativeWork&quot;,
+            &quot;description&quot;: &quot;This is the EOV specification sheet released by GOOS for Sea State.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. &quot;,
+            &quot;name&quot;: &quot;Ocean Observations Physics and Climate Panel (OOPC) Sea State GOOS EOV Specification Sheet&quot;,
+            &quot;url&quot;: &quot;http://www.goosocean.org/components/com_oe/oe.php?task=download&amp;id=34494&amp;version=1.0&amp;lang=1&amp;format=1&quot;
         },
         {
-            &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;description&quot;: &quot;SamplingDeviceApertureSurfaceArea  DEVNOTE, I can not put PropertyValue on thing well, so going to call this a variable Measured&quot;,
-            &quot;name&quot;: &quot;SamplingDeviceApertureSurfaceArea&quot;,
-            &quot;url&quot;: &quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100017/&quot;
+            &quot;@type&quot;: &quot;CreativeWork&quot;,
+            &quot;description&quot;: &quot;This is the EOV specification sheet released by GOOS for Ocean Surface Stress.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. &quot;,
+            &quot;name&quot;: &quot;Ocean Observations Physics and Climate Panel (OOPC) Ocean Surface Stress GOOS EOV Specification Sheet&quot;,
+            &quot;url&quot;: &quot;http://www.goosocean.org/components/com_oe/oe.php?task=download&amp;id=34507&amp;version=1.0&amp;lang=1&amp;format=1&quot;
+        },
+        {
+            &quot;@type&quot;: &quot;CreativeWork&quot;,
+            &quot;description&quot;: &quot;QA/QC  - EOV data and the methods used to generate them should have been vetted through some QA/QC methods, ideally performed by an independent third-party. These should be included in a dedicated JSON-LD block, even if it points to the same methodology linked to in the measurementTechnique block. &quot;,
+            &quot;name&quot;: &quot;QA/QC guidance&quot;,
+            &quot;url&quot;: &quot;http://example.org/id/doc/ID&quot;
         }
     ]
 }
 </pre></div>
 </div>
 <img alt="../../_images/index_5_11.svg" src="../../_images/index_5_11.svg" /></div>
+</div>
+</section>
+<section id="spatialcoverage">
+<h2>spatialCoverage<a class="headerlink" href="#spatialcoverage" title="Permalink to this headline">#</a></h2>
+<p>More details on spatial elements are found
+at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics/spatial/README.html">Spatial Geometry</a></p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
+    &quot;@type&quot;: &quot;Dataset&quot;,
+    &quot;spatialCoverage&quot;: {
+        &quot;@type&quot;: &quot;Place&quot;,
+        &quot;additionalProperty&quot;: {
+            &quot;@type&quot;: &quot;PropertyValue&quot;,
+            &quot;propertyID&quot;: &quot;http://dbpedia.org/resource/Spatial_reference_system&quot;,
+            &quot;value&quot;: &quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;
+        },
+        &quot;geo&quot;: {
+            &quot;@type&quot;: &quot;GeoShape&quot;,
+            &quot;polygon&quot;: &quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;
+        }
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_7_1.svg" src="../../_images/index_7_1.svg" /></div>
 </div>
 </section>
 <section id="about">
@@ -1110,89 +1210,34 @@ the more detailed <a class="reference external" href="https://schema.org/Propert
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
     },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
     &quot;@type&quot;: &quot;Dataset&quot;,
     &quot;about&quot;: {
         &quot;@type&quot;: &quot;Event&quot;,
         &quot;description&quot;: &quot;describe the activity, might include name here too.&quot;,
-        &quot;name&quot;: &quot;Name of the activity, p-wave velocity measurement of drill cores  DEVNOTE  really a simple measurement technique?&quot;,
-        &quot;potentialAction&quot;: {
-            &quot;@type&quot;: &quot;Action&quot;,
-            &quot;instrument&quot;: {
-                &quot;@type&quot;: &quot;Thing&quot;,
-                &quot;description&quot;: &quot;Sampling instrument&quot;,
-                &quot;name&quot;: &quot;Sampling instrument&quot;,
-                &quot;url&quot;: &quot;http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/&quot;
+        &quot;name&quot;: &quot;Measurement of sea state&quot;,
+        &quot;potentialAction&quot;: [
+            {
+                &quot;@type&quot;: &quot;Action&quot;,
+                &quot;instrument&quot;: {
+                    &quot;@type&quot;: &quot;Thing&quot;,
+                    &quot;description&quot;: &quot;The WaMoS II 500 radar is an industry-proven X-band radar-based wave and surface current monitoring system developed by OceanWaveS. This sensor is able to measure and displays essential wave field parameters including wave heights, periods, directions and surface currents. The operating range extends to 4.0 km depending on X-band radar type and installation gemoetry. Requiring a minimum wind speed of 3 m/s and a minimum wave height of about 0.5m.&quot;,
+                    &quot;name&quot;: &quot;OceanWaveS WaMoS II 500 waves and surface current radar&quot;,
+                    &quot;url&quot;: &quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL0999/&quot;
+                },
+                &quot;name&quot;: &quot;Measurement of sea state&quot;
             },
-            &quot;name&quot;: &quot;The instrumented action, measuring X&quot;
-        }
-    }
-}
-</pre></div>
-</div>
-<img alt="../../_images/index_7_1.svg" src="../../_images/index_7_1.svg" /></div>
-</div>
-</section>
-<section id="spatialcoverage">
-<h2>spatialCoverage<a class="headerlink" href="#spatialcoverage" title="Permalink to this headline">#</a></h2>
-<p>More details on spatial elements are found
-at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics/spatial/README.html">Spatial Geometry</a></p>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
-<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
-<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
-<span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/obisData2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-
-<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
-
-<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-<span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
-
-<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
-    &quot;@type&quot;: &quot;Dataset&quot;,
-    &quot;spatialCoverage&quot;: {
-        &quot;@type&quot;: &quot;Place&quot;,
-        &quot;additionalProperty&quot;: {
-            &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;propertyID&quot;: &quot;http://dbpedia.org/resource/Spatial_reference_system&quot;,
-            &quot;value&quot;: &quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;
-        },
-        &quot;geo&quot;: {
-            &quot;@type&quot;: &quot;GeoShape&quot;,
-            &quot;polygon&quot;: &quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;
-        }
+            {
+                &quot;@type&quot;: &quot;Action&quot;,
+                &quot;instrument&quot;: {
+                    &quot;@type&quot;: &quot;Thing&quot;,
+                    &quot;description&quot;: &quot;A high precision 3D sonic anemometer. Typical applications for this device include: meteorological systems, meteorological networks, measuring dispersion parameters for pollution modelling, research stations, industrial sites, air quality forecasts, eddy correlation fluxes, marine and offshore platforms, wind shear detection, wind energy, and wake vortex monitoring. This device takes accurate measurement of 3 wind components and turbulence. Constructed with stainless steel. &quot;,
+                    &quot;name&quot;: &quot;Metek uSonic-3 Scientific {formerly: USA-1} ultrasonic anemometer&quot;,
+                    &quot;url&quot;: &quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL1402/&quot;
+                },
+                &quot;name&quot;: &quot;Measurement of ocean stress&quot;
+            }
+        ]
     }
 }
 </pre></div>
@@ -1250,7 +1295,7 @@ at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
     },
-    &quot;@id&quot;: &quot;https://obis.org/dataset/dcbb8f12-c869-4d31-aa8b-23abb27898ce&quot;,
+    &quot;@id&quot;: &quot;https://example.org/dataset/12345&quot;,
     &quot;@type&quot;: &quot;Dataset&quot;,
     &quot;temporalCoverage&quot;: &quot;2012-09-20/2016-01-22&quot;
 }
@@ -1258,9 +1303,8 @@ at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics
 </div>
 <img alt="../../_images/index_11_1.svg" src="../../_images/index_11_1.svg" /></div>
 </div>
-</section>
 <section id="science-on-schema-temporalcoverage">
-<h2>Science on Schema temporalCoverage<a class="headerlink" href="#science-on-schema-temporalcoverage" title="Permalink to this headline">#</a></h2>
+<h3>Science on Schema temporalCoverage<a class="headerlink" href="#science-on-schema-temporalcoverage" title="Permalink to this headline">#</a></h3>
 <p>Example from Science on Schema recommendations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos"> 2</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
@@ -1285,45 +1329,6 @@ at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics
 </pre></div>
 </div>
 </section>
-<section id="science-on-schema-variablemeasured">
-<h2>Science on Schema variableMeasured<a class="headerlink" href="#science-on-schema-variablemeasured" title="Permalink to this headline">#</a></h2>
-<p>Example from Science on Schema recommendations:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;https://schema.org/&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;gsn-quantity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.geoscienceontology.org/geo-lower/quantity#&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;variableMeasured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;propertyID&quot;</span><span class="p">:</span><span class="s2">&quot;http://www.geoscienceontology.org/geo-lower/quantity#latitude&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.sample-data-repository.org/dataset-parameter/665787&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Latitude where water samples were collected; north is positive.&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;unitText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;decimal degrees&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;45.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;15.0&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>via <a class="reference external" href="https://schema.org/valueReference">valueReference</a> we can get to Defined Term  (EVO)</p>
-</section>
-<section id="science-on-schema-indefinedtermset">
-<h2>Science on Schema inDefinedTermSet<a class="headerlink" href="#science-on-schema-indefinedtermset" title="Permalink to this headline">#</a></h2>
-<p>Defined Term  (not scoped in variableMeasured valid types)</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;inDefinedTermSet&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;termCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image&quot;</span><span class="w"></span>
-<span class="p">},</span><span class="w"></span>
-</pre></div>
-</div>
 </section>
 </section>
 
@@ -1361,10 +1366,10 @@ at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics
             <p class="prev-next-title">Source and Prov Approaches</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../indexing/index.html" title="next page">
+    <a class='right-next' id="next-link" href="../license/README.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Aggregator</p>
+        <p class="prev-next-title">Licenses</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

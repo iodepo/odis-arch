@@ -221,6 +221,11 @@ const thebe_selector_output = ".output, .cell_output"
    Support 7: EOVs
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../license/README.html">
+   Support 8: Licenses
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -816,6 +821,19 @@ text keyword.  The other two are defined as a <a class="reference external" href
 <p>Keywords can be defined as a <a class="reference external" href="https://schema.org/Text">Text</a> value.  This is the most common approach though
 it doesn’t provide some of the benefits of the other two approaches.  For example, it doesn’t allow for terms to
 be dereferenced on the net or for connects in the graph to be made for common terms by their subject IRIs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;nitrous oxide&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;Central Pacific&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;headspace equilibration&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;SRI Greenhouse Gas Monitoring Gas Chromatograph&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;CTD profiler&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;Gas Chromatograph&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Be sure to use the [] notation to define the keyword.  This defined an array of items vs a single items.  If you

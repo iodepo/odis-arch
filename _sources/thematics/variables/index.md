@@ -12,27 +12,90 @@ execution:
   allow_errors: true
 ---
 
-# Variables
+# Essential Ocean Variables
 
-This section details initial documentation of approaches for describing variable and variable associated 
-properties to a type Dataset.
+This section details initial documentation of approaches for describing elements of a 
+[schema:Dataset](https://schema.org/Dataset) with a focus on approaches supporting Essential 
+Ocean Variables.   This includes the ability to link to supporting documents for quality assurance
+and control (QA/QC) and specification sheets.  Also shown here are methods to encode the 
+event and associated instruments along with spatial and temporal elements.  
+
+A rough description of these links leveraging pseudo schema.org terms follows with a detailed
+and valid data graph as an example after that.  We will then frame out and break down some of the 
+specific elements.  
+
+Reference image:
+
+![notes image](./eov.png)
 
 ## References:
 
 * [GOOS reference](https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441)
 * [Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and
-* [Dublin core record to map](https://repository.oceanbestpractices.org/handle/11329/1920?show=full) for different, but related, work.
 * [OBIS examples](https://manual.obis.org/examples/)
 
-[//]: # (Reference image:)
-
-[//]: # (![notes image]&#40;./eov.png&#41;)
-
-The following data graph is a full example with some key properties for type Dataset.  Below it elements of the 
-type are framed out and detailed.  
 
 ```{literalinclude} ./graphs/obisData2.json
 :linenos:
+:emphasize-lines: 10,13,14-30,31,32-50,56-67,77-101,104
+```
+
+## license
+
+As licenses are an important cross-cutting item there is a separate section on licenses
+at:  [License chapter](../license/README.md)
+
+## keywords
+
+As keywords are an important cross-cutting item there is a separate section on keywords
+at:  [Keywords chapter](../terms/list.md)
+
+## variableMeasured
+
+A key section detailing approaches to describing variables.  This property expects either of text or
+the more detailed [schema:PropertyValue](https://schema.org/PropertyValue).
+
+```{seealso}
+See also:  [Science on Schema variable](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#variables)
+```
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("./graphs/obisData2.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@type":     "Dataset",
+  "variableMeasured": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
 ```
 
 ## measurementTechnique
@@ -125,14 +188,10 @@ jbutils.show_graph(framed)
 
 ```
 
-## variableMeasured
+## spatialCoverage
 
-A key section detailing approaches to describing variables.  This property expects either of text or
-the more detailed [schema:PropertyValue](https://schema.org/PropertyValue).
-
-```{seealso}
-See also:  [Science on Schema variable](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#variables)
-```
+More details on spatial elements are found
+at:  [Spatial Geometry](https://book.oceaninfohub.org/thematics/spatial/README.html)
 
 ```{code-cell}
 :tags: [hide-input]
@@ -156,7 +215,7 @@ frame = {
   "@context": {"@vocab": "https://schema.org/"},
   "@explicit": "true",
   "@type":     "Dataset",
-  "variableMeasured": ""
+  "spatialCoverage": ""
 }
 
 context = {
@@ -172,7 +231,6 @@ print(jd)
 jbutils.show_graph(framed)
 
 ```
-
 
 ## about
 
@@ -221,53 +279,6 @@ jbutils.show_graph(framed)
 
 ```
 
-
-
-## spatialCoverage
-
-More details on spatial elements are found
-at:  [Spatial Geometry](https://book.oceaninfohub.org/thematics/spatial/README.html)
-
-```{code-cell}
-:tags: [hide-input]
-
-import json
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
-from pyld import jsonld
-import graphviz
-import os, sys
-
-currentdir = os.path.dirname(os.path.abspath(''))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
-from lib import jbutils
-
-with open("./graphs/obisData2.json") as dgraph:
-    doc = json.load(dgraph)
-
-frame = {
-  "@context": {"@vocab": "https://schema.org/"},
-  "@explicit": "true",
-  "@type":     "Dataset",
-  "spatialCoverage": ""
-}
-
-context = {
-    "@vocab": "https://schema.org/",
-}
-
-compacted = jsonld.compact(doc, context)
-
-framed = jsonld.frame(compacted, frame)
-jd = json.dumps(framed, indent=4)
-print(jd)
-
-jbutils.show_graph(framed)
-
-```
-
-
 ## temporalCoverage
 
 ```{seealso}
@@ -315,7 +326,7 @@ jbutils.show_graph(framed)
 
 ```
 
-## Science on Schema temporalCoverage
+### Science on Schema temporalCoverage
 
 Example from Science on Schema recommendations:
 
@@ -324,47 +335,5 @@ Example from Science on Schema recommendations:
 ```
 
 
-## Science on Schema variableMeasured
-
-Example from Science on Schema recommendations:
-
-```json
-{
-  "@context": {
-    "@vocab": "https://schema.org/"
-    "gsn-quantity": "http://www.geoscienceontology.org/geo-lower/quantity#"
-  },
-  "@type": "Dataset",
-  "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
-  "variableMeasured": [
-    {
-      "@type": "PropertyValue",
-      "name": "latitude",
-      "propertyID":"http://www.geoscienceontology.org/geo-lower/quantity#latitude",
-      "url": "https://www.sample-data-repository.org/dataset-parameter/665787",
-      "description": "Latitude where water samples were collected; north is positive.",
-      "unitText": "decimal degrees",
-      "minValue": "45.0",
-      "maxValue": "15.0"
-    },
-  ]
-}
-```
-
-via [valueReference](https://schema.org/valueReference) we can get to Defined Term  (EVO)
-
-
-## Science on Schema inDefinedTermSet
-
-Defined Term  (not scoped in variableMeasured valid types)
-```json
-{
-    "@id": "http://purl.org/dc/dcmitype/Image",
-    "@type": "DefinedTerm",
-    "inDefinedTermSet": "http://purl.org/dc/terms/DCMIType",
-    "termCode": "Image",
-    "name": "Image"
-},
-```
 
 
