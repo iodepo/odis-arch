@@ -28,3 +28,25 @@ To comment on the graph:
 ## Need to:
 
 * Review [PropertyValue](https://schema.org/PropertyValue) vs [DefinedTerm](https://schema.org/DefinedTerm) and they could connect with [variableMeasured](https://schema.org/variableMeasured)
+
+
+Note that the two varmes show the concept of not presenting a value (ie, range of values) and one (stress) can have
+a value
+
+For property ID note we can have an array but prefer semantic descriptions
+
+measurementTechnique should point to a method that is mature, globally adopted and opperational and / or endorsed by GOOS panel responsible for the EOV in question
+These _should_ be at registered locations with PIDs like for example Zenodo
+
+
+ "propertyID": ["http://purl.obolibrary.org/obo/ENVO_01001374", "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/11aca777-8a01-42ce-b076-b3059c3d8cae"]
+Here we have linked to GOOS but also GMCD via their keyword view with UUID value    NERC is at http://vocab.nerc.ac.uk/collection/P14/current/GVAR0725/ but question about using
+
+
+QA/QC notes:  QA/QC publishing principles should link to the exact methods used for QA/QC - not a general certification of a service or similar.
+
+Hey Ward, Pieter:  here's where we're at, can OBIS' BioEco EOV specifications work with this?
+
+
+Document:  https://github.com/BeBOP-OBON/miop/issues/8
+
