@@ -2,7 +2,11 @@
 
 * Move the geospatial geometry to under Coverage -> Place
 * Make a Core 0 as Dataset
-* note license pattern
+* note license pattern  (make this a support patterm 8 entry)
+* think next about Products and Services in the schema.org OIH approach
+* need to make a page about "context" from the OIH point of view
+* need a future document about Methods and Event  (think about the instrument element here too)
+
 * how to define a "cross archive" action
 * Need PROV for "Person" as export, connect Person to the group publishing the info as MemberOf
 * SOSO reference for time interval:  https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time 
@@ -50,3 +54,47 @@ Hey Ward, Pieter:  here's where we're at, can OBIS' BioEco EOV specifications wo
 
 Document:  https://github.com/BeBOP-OBON/miop/issues/8
 
+Elements:
+
+## Science on Schema variableMeasured
+
+Example from Science on Schema recommendations:
+
+```json
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+    "gsn-quantity": "http://www.geoscienceontology.org/geo-lower/quantity#"
+  },
+  "@type": "Dataset",
+  "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID":"http://www.geoscienceontology.org/geo-lower/quantity#latitude",
+      "url": "https://www.sample-data-repository.org/dataset-parameter/665787",
+      "description": "Latitude where water samples were collected; north is positive.",
+      "unitText": "decimal degrees",
+      "minValue": "45.0",
+      "maxValue": "15.0"
+    },
+  ]
+}
+```
+
+via [valueReference](https://schema.org/valueReference) we can get to Defined Term  (EVO)
+
+
+## Science on Schema inDefinedTermSet
+
+Defined Term  (not scoped in variableMeasured valid types)
+```json
+{
+    "@id": "http://purl.org/dc/dcmitype/Image",
+    "@type": "DefinedTerm",
+    "inDefinedTermSet": "http://purl.org/dc/terms/DCMIType",
+    "termCode": "Image",
+    "name": "Image"
+},
+```

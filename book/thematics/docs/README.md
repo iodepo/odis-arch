@@ -250,7 +250,7 @@ jbutils.show_graph(framed)
 ```json
 {
   "@context": "https://schema.org/",
-  <strong>"license": "https://creativecommons.org/licenses/by/4.0/"</strong>
+  "license": "https://creativecommons.org/licenses/by/4.0/"
 }
 ```
 
@@ -261,11 +261,11 @@ jbutils.show_graph(framed)
 ```json
 {
   "@context": "https://schema.org/",
-  <strong>"license": {
+  "license": {
     "@type": "CreativeWork",
     "name": "Creative Commons Attribution 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/"
-  }</strong>
+  }
 }
 
 ```
@@ -280,7 +280,7 @@ jbutils.show_graph(framed)
 ```json
 {
   "@context": "https://schema.org/",
-  <strong>"license": "https://spdx.org/licenses/CC-BY-4.0"</strong>
+  "license": "https://spdx.org/licenses/CC-BY-4.0"
 }
 ```
 
@@ -289,7 +289,7 @@ OR, include both the SPDX and the Creative Commons URLs in an array:
 ```json
 {
   "@context": "https://schema.org/",
-  <strong>"license": ["https://spdx.org/licenses/CC-BY-4.0", "https://creativecommons.org/licenses/by/4.0/"]</strong>
+  "license": ["https://spdx.org/licenses/CC-BY-4.0", "https://creativecommons.org/licenses/by/4.0/"]
 }
 ```
 

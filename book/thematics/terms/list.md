@@ -98,6 +98,19 @@ Keywords can be defined as a [Text](https://schema.org/Text) value.  This is the
 it doesn't provide some of the benefits of the other two approaches.  For example, it doesn't allow for terms to 
 be dereferenced on the net or for connects in the graph to be made for common terms by their subject IRIs. 
 
+```
+{
+  "@context": "https://schema.org/",
+  "keywords": [
+    "nitrous oxide", 
+    "Central Pacific", 
+    "headspace equilibration", 
+    "SRI Greenhouse Gas Monitoring Gas Chromatograph", 
+    "CTD profiler", 
+    "Gas Chromatograph"
+  ]
+}
+```
 
 ```{note}
 Be sure to use the [] notation to define the keyword.  This defined an array of items vs a single items.  If you
