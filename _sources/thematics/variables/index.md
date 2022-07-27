@@ -16,24 +16,34 @@ execution:
 
 This section details initial documentation of approaches for describing elements of a 
 [schema:Dataset](https://schema.org/Dataset) with a focus on approaches supporting Essential 
-Ocean Variables.   This includes the ability to link to supporting documents for quality assurance
-and control (QA/QC) and specification sheets.  Also shown here are methods to encode the 
-event and associated instruments along with spatial and temporal elements.  
+Ocean Variables.   
 
 A rough description of these links leveraging pseudo schema.org terms follows with a detailed
-and valid data graph as an example after that.  We will then frame out and break down some of the 
-specific elements.  
+and valid data graph as an example after that.  
 
 Reference image:
 
 ![notes image](./eov.png)
+
+
+The image above details out some of the key points to be encoded.  These include:
+
+* Links to and description of methods
+* QA/QC references
+* Links to GOOS Specification sheets
+* Information on variables measured
+* Connections to the event measured and potential associated instruments
+* Spatial coverage
+* Temporal coverage
+
+The valid data graph follows the reference section and details follow that.  The highlighted lines
+in the data graph represented the detailed sections.   
 
 ## References:
 
 * [GOOS reference](https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441)
 * [Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and
 * [OBIS examples](https://manual.obis.org/examples/)
-
 
 ```{literalinclude} ./graphs/obisData2.json
 :linenos:
@@ -54,6 +64,18 @@ at:  [Keywords chapter](../terms/list.md)
 
 A key section detailing approaches to describing variables.  This property expects either of text or
 the more detailed [schema:PropertyValue](https://schema.org/PropertyValue).
+
+```{note}
+There can be multiple links in the proertyID property.  Preference should be given to those with semantic descriptions.
+```
+
+```{note}
+In cases where a single value can be associated with a variable, or a min max value, this can be provided along with a
+unitCode property.   In cases where a variable represents a large collection of data this can be omitted and the data obtained
+in a distribution reference.  
+```
+
+
 
 ```{seealso}
 See also:  [Science on Schema variable](https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#variables)
@@ -149,6 +171,11 @@ section on publishing principles, This can be used to connect CreativeWork, Orga
 CreativeWork or URL. So this allows us to link a CreativeWork to a policy or principle statement. 
 This has some very useful use cases where resources can be grouped based on their connection to those principles and policies.
 
+For this section on EOVs, it is used to link in the specification sheets for the measured variables.  This can also be used to link
+in QA/QC documentation.  There is no direct connection between the creative works linked here and the measured variables though convention 
+would be to keep the order the same if possible.  Such order is not maintained through potential serialization of the JSON-LD records though 
+list order can be maintained with an @list keyword.  
+
 ```{code-cell}
 :tags: [hide-input]
 
@@ -234,6 +261,10 @@ jbutils.show_graph(framed)
 
 ## about
 
+This section is an attempt to leverage schema.org to link instrument information.  This is done via the Event type with a
+connected Action type.  
+
+
 ```{seealso}
 See also [Identifier and Prov subjectOf and inverse about](https://book.oceaninfohub.org/thematics/identifier/id.html#subjectof-and-inverse-about).
 [schema:about](https://schema.org/about) connects the subject matter of the content.
@@ -280,6 +311,9 @@ jbutils.show_graph(framed)
 ```
 
 ## temporalCoverage
+
+Representation of temporal coverage follows [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) patterns.  ESIP Science on Schema
+as has patterns for Deep Time (geologic time) patterns.  
 
 ```{seealso}
 This section is based on the 
