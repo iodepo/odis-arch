@@ -21,7 +21,10 @@ Properties such as label, description, keyword etc can be
 extended in the context with a container language attribute notiation.
 
 This will allow the use of standard language codes (fr, es, en, de, etc) to
-be used when describing these properties. 
+be used when describing these properties.   A list of codes can be seen
+at the [Online Browsing Platform (OBP)](https://www.iso.org/obp/ui/#search and)
+and [Popular standards ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.html).
+You should use the 2-letter codes as demonstrated below.  
 
 
 ```{literalinclude} ./graphs/language.json
