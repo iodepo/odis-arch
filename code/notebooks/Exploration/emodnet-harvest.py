@@ -22,8 +22,10 @@ Notes:
 """
 
 # define common variables
-CSW_ENDPOINT = "https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw"
+CSW_ENDPOINT = "https://emodnet.ec.europa.eu/geonetwork/emodnet/eng/csw"
+#CSW_ENDPOINT = "http://www.emodnet.eu/geonetwork/emodnet/eng/csw"
 CSW_ENDPOINT_TIMEOUT = 60 #seconds
+GEONETWORK_SEARCH_BASE_URL = "https://emodnet.ec.europa.eu/geonetwork/emodnet/eng/catalog.search#/metadata/"
 PATH_TO_DATA_FOLDER = "./data-emodnet/"
 NEW_RDF_FILENAME = "emodnet-catalogue.rdf"
 HOSTNAME = "https://emodnet.ec.europa.eu"
@@ -82,6 +84,17 @@ pagesize = 10
 totalrecs = 0
 sort_property = "dc:title"  # a supported queryable of the CSW
 sort_order = "ASC"  # should be 'ASC' or 'DESC'
+# header = {
+    # 'Accept-Encoding': 'gzip, deflate, sdch',
+    # 'Accept-Language': 'en-US,en;q=0.8',
+    # 'Upgrade-Insecure-Requests': '1',
+    # 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+    # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    # 'Cache-Control': 'max-age=0',
+    # 'Connection': 'keep-alive',
+# }
+header = {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36"}
+#header = {"User-agent": "x"}
 
 print("************************")
 print("Parsing records...")
@@ -94,7 +107,7 @@ while stop == 0:
     else:  # subsequent run, startposition is now paged
         startpos = csw.results["nextrecord"]    
 
-    csw = CatalogueServiceWeb(CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT)
+    csw = CatalogueServiceWeb(url=CSW_ENDPOINT, timeout=CSW_ENDPOINT_TIMEOUT, headers=header, auth=None)
     sortby = SortBy([SortProperty(sort_property, sort_order)])
     csw_dublincore_outputschema = "http://www.opengis.net/cat/csw/2.0.2"
     csw_iso_outputschema = "http://www.isotc211.org/2005/gmd"
@@ -163,10 +176,11 @@ while stop == 0:
             data = {}
 
             #id should point to url of dataset record
-            if len(csw.records[rec].distribution.online) > 0:
-                url = str(csw.records[rec].distribution.online[0].url)
-            else:
-                url = "None"
+            url = GEONETWORK_SEARCH_BASE_URL + id
+            #if len(csw.records[rec].distribution.online) > 0:
+                #url = str(csw.records[rec].distribution.online[0].url)
+            #else:
+                #url = "None"
             data["@id"] = url
             print("        " + url)
             
