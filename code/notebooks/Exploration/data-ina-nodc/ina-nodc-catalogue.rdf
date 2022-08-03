@@ -7,7 +7,11 @@
             geosparql:asWKT "POLYGON((90.0 -15.00000000000005, 90.0 10.0, 150.0000000000001 10.0, 150.0000000000001 -15.00000000000005, 90.0 -15.00000000000005))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "National Bathymetry was formed from the inversion of gravity anomaly data resulting from altimetry data processing by adding sounding data carried out by several institutions, namely BIG, NGDC, BODC, BPPT, LIPI, P3GL and other institutions with single and multibeam surveys. The spatial resolution of BATNAS data is 6arc-second using the MSL datum. National BATimemetry gridded data from 90 to 150BT and from 20LS to 20LU. This bathymetric data has advantages in coastal areas and shallow waters from the BIG survey. The development of the National Bathymetry gridded model begins with the calculation of the free air gravity anomaly data, until it becomes bathymetric data using the Gravity-Geological Method (GGM). The accuracy test results show that the developed marine gravity model has adequate accuracy, as a basis for estimating the bathymetric model at a resolution of 1m (1 minute) before iterating over the noise data assimilation, from 1m to 6-arcsecond resolution." ;
-    :keywords "GeoTIFF, Indonesia National Bathymetry, WCS, batnas, Global" ;
+    :keywords "GeoTIFF",
+        "Global",
+        "Indonesia National Bathymetry",
+        "WCS",
+        "batnas" ;
     :name "National Bathymetry (BIG)" ;
     :url "https://geonode.nodc.id/layers/BATNAS:geonode:batnas" .
 
@@ -15,8 +19,16 @@
     geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
             geosparql:asWKT "POLYGON((119.27125101401867 -0.8608031692045857, 119.27125101401867 0.03055573489691263, 119.87235327169869 0.03055573489691263, 119.87235327169869 -0.8608031692045857, 119.27125101401867 -0.8608031692045857))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
-    :description "No abstract provided" ;
-    :keywords "Bati_Palu, GeoTIFF, WCS, Global" ;
+    :description "Following the earthquake-tsunami-liquifaction events of September 2018, bathymetric data were acquired from 9 to 18 October 2018 using the Baruna Jaya I research vessel. A total length of 110 km, which covers an area of 2,600 km2. The Baruna Jaya I is equipped with a hull mounted HydroSweep DS Multibeam operating at 14–16 kHz with beam resolution of 2 9 2 and a geopositioning system (GPS C-NAV 2050)." ;
+    :keywords "Bathymetry",
+        "Bati_Palu",
+        "Earthquake",
+        "GeoTIFF",
+        "Global",
+        "RV Baruna Jaya I",
+        "Tsunami",
+        "WCS",
+        "liquifaction" ;
     :name "Bathymetry Palu" ;
     :url "https://geonode.nodc.id/layers/Bati_Palu0:geonode:Bati_Palu0" .
 
@@ -25,7 +37,12 @@
             geosparql:asWKT "POLYGON((115.1625 -8.962500000000007, 115.1625 -7.924999999999995, 116.51666666666668 -7.924999999999995, 116.51666666666668 -8.962500000000007, 115.1625 -8.962500000000007))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Bathymetry data over Lombok Strait, West Nusa Tenggara, Indonesia, source is GEBCO" ;
-    :keywords "Bathymetry, Batimetri_Selat_Lombok_GEBCO, GeoTIFF, Lombok Strait, WCS, Global" ;
+    :keywords "Bathymetry",
+        "Batimetri_Selat_Lombok_GEBCO",
+        "GeoTIFF",
+        "Global",
+        "Lombok Strait",
+        "WCS" ;
     :name "Bathymetry Lombok Strait" ;
     :url "https://geonode.nodc.id/layers/Batimetri_Selat_Lombok_GEBCO:geonode:Batimetri_Selat_Lombok_GEBCO" .
 
@@ -34,7 +51,11 @@
             geosparql:asWKT "POLYGON((90.0 -15.0, 90.0 15.0000000024, 145.0000000044 15.0000000024, 145.0000000044 -15.0, 90.0 -15.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GEBCO’s gridded bathymetric data set is a global terrain model for ocean and land, providing elevation data, in meters, on a 15 arc-second interval grid. It is accompanied by a Type Identifier (TID) Grid that gives information on the types of source data. The GEBCO_2021 Grid and TID Grid can be download as global files in netCDF format or a set of 8 tiles (each with an area of 90° x 90°), giving global coverage, in Esri ASCII raster and data GeoTiff formats. The data filea are included in a zip file along with the data set documentation." ;
-    :keywords "GeoTIFF, Indonesia National Bathymetry, WCS, gebco, Global" ;
+    :keywords "GeoTIFF",
+        "Global",
+        "Indonesia National Bathymetry",
+        "WCS",
+        "gebco" ;
     :name "GEBCO Bathymetry" ;
     :url "https://geonode.nodc.id/layers/GEBCO:geonode:Gebco" .
 
@@ -43,7 +64,16 @@
             geosparql:asWKT "POLYGON((70.0 -20.0, 70.0 20.0, 160.0 20.0, 160.0 -20.0, 70.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "CTD (Conductivity Temperature Depth) dataset observed from CTD measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, oxygen, chlorophyll, transmissivity and pressure. InaNODC has reformat the data and found that has more than 29.195 stations data and more than 19.074.761 samples data from June 27, 1961. It was identified that several countries involved including Australia, China, France, Germany, Great Britain, India, Indonesia, Japan, Korea, Panama, Russia, Taiwan and United States had made observations using CTD measurement." ;
-    :keywords "Conductivity Temperature Depth, chlorophyll, features, mv_station_ctd, oxygen, pressure, salinity, temperature, transmissivity, Global" ;
+    :keywords "Conductivity Temperature Depth",
+        "Global",
+        "chlorophyll",
+        "features",
+        "mv_station_ctd",
+        "oxygen",
+        "pressure",
+        "salinity",
+        "temperature",
+        "transmissivity" ;
     :name "Conductivity Temperature Depth VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:CTD_VIEW" .
 
@@ -52,7 +82,13 @@
             geosparql:asWKT "POLYGON((115.634895324707 13.1191539764404, 115.634895324707 16.0978469848633, 118.058906555176 16.0978469848633, 118.058906555176 13.1191539764404, 115.634895324707 13.1191539764404))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "DRB (Drifting Buoy Data) dataset observed from drifting buoy measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity and oxygen. InaNODC has reformat the data and found that has more 307 stations data and more 2.971 samples data from January 13, 2000. It was identified that United States had made observations using drifting buoy measurement." ;
-    :keywords "Drifting Buoy Data, features, mv_station_drb, oxygen, salinity, temperature, Global" ;
+    :keywords "Drifting Buoy Data",
+        "Global",
+        "features",
+        "mv_station_drb",
+        "oxygen",
+        "salinity",
+        "temperature" ;
     :name "Drifting Buoy VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:DRB_VIEW" .
 
@@ -61,7 +97,14 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GLD (Glider Data) dataset observed from glider measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, oxygen and chlorophyll. InaNODC has reformat the data and found that has more than 221.685 stations data and more than 44.981.128 samples data from June 1st, 2010. It was identified that several countries involved including Australia and United States had made observations using glider measurement." ;
-    :keywords "Glider Data, chlorophyll, features, mv_station_gld, oxygen, salinity, temperature, Global" ;
+    :keywords "Glider Data",
+        "Global",
+        "chlorophyll",
+        "features",
+        "mv_station_gld",
+        "oxygen",
+        "salinity",
+        "temperature" ;
     :name "Glider VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:GLD_VIEW" .
 
@@ -70,7 +113,12 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "MRB (Moored Buoy Data) dataset observed from moored buoy measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature and salinity. InaNODC has reformat the data and found that has more than 171.894 stations data and more than 1.973.441 samples data from February 18, 1990. It was identified that several countries involved including Japan, Taiwan and United States had made observations using moored buoy measurement." ;
-    :keywords "Moored Buoy Data, features, mv_station_mbr, salinity, temperature, Global" ;
+    :keywords "Global",
+        "Moored Buoy Data",
+        "features",
+        "mv_station_mbr",
+        "salinity",
+        "temperature" ;
     :name "Moored Buoy VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:MBR_VIEW" .
 
@@ -79,7 +127,11 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "MBT (Mechanical Bathy Thermograph Data) dataset observed from MBT measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists temperature parameter. InaNODC has reformat the data and found that has more than 134.157 stations data and more than 2.513.700 samples data from January 1st, 1951. It was identified that several countries involved including Australia, Canada, Chile, Germany, Great Britain, India, Japan, Netherlands, New Zealand, Russia, Thailand and United States had made observations using MBT measurement." ;
-    :keywords "Mechanical Bathy Thermograph Data, Temperture, features, mv_station_mbt, Global" ;
+    :keywords "Global",
+        "Mechanical Bathy Thermograph Data",
+        "Temperture",
+        "features",
+        "mv_station_mbt" ;
     :name "Mechanical Bathy Thermograph VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:MBT_VIEW" .
 
@@ -88,7 +140,36 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "OSD (Ocean Station Data) dataset observed from any measurements. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, oxygen, phosphate, silicate, nitrate, nitrite, pH, chlorophyll, plankton, alkalinity, partial pressure of carbon dioxide, dissolved inorganic carbon, transmissivity, pressure, tritium, helium, δ-helium-3, δ-carbon-14, δ-carbon-14, argon, neon, Chlorofluorocarbon 11 (CFC 11), Chlorofluorocarbon 12 (CFC 12), Chlorofluorocarbon 113 (CFC 113) and δ-oxygen-18. InaNODC has reformat the data and found that has more than 68.310 stations data and more than 889.728 samples data from November 13, 1817. It was identified that several countries involved including Australia, Austria, China, Denmark, France, Germany, Great Britain, India, Indonesia, Japan, Korea, Panama, Philippines, Russia, Singapore, Sweden, Taiwan, Thailand and United States had made observations using CTD measurement." ;
-    :keywords "Batimetri_Selat_Lombok_GEBCO_2_, CFC 11, CFC 113, CFC 12, Ocean Station Data, alkalinity, argon, carbon, carbon dioxide, chlorophyll, features, helium, mv_station_osd, neon, nitrate, nitrite, oxygen, oxygen-18, pH, phosphate, plankton, pressure, salinity, silicate, temperature, transmissivity, tritium, δ-carbon-14, δ-helium-3, Global" ;
+    :keywords "Batimetri_Selat_Lombok_GEBCO_2_",
+        "CFC 11",
+        "CFC 113",
+        "CFC 12",
+        "Global",
+        "Ocean Station Data",
+        "alkalinity",
+        "argon",
+        "carbon",
+        "carbon dioxide",
+        "chlorophyll",
+        "features",
+        "helium",
+        "mv_station_osd",
+        "neon",
+        "nitrate",
+        "nitrite",
+        "oxygen",
+        "oxygen-18",
+        "pH",
+        "phosphate",
+        "plankton",
+        "pressure",
+        "salinity",
+        "silicate",
+        "temperature",
+        "transmissivity",
+        "tritium",
+        "δ-carbon-14",
+        "δ-helium-3" ;
     :name "Ocean Station VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:OSD_VIEW" .
 
@@ -97,7 +178,18 @@
             geosparql:asWKT "POLYGON((79.6000061035156 -20.1979904174805, 79.6000061035156 20.1999912261963, 160.398986816406 20.1999912261963, 160.398986816406 -20.1979904174805, 79.6000061035156 -20.1979904174805))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "PFL (Profiling Floats Data) dataset observed from floater measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, oxygen, nitrate, nitrite, pH, transmissivity and pressure. InaNODC has reformat the data and found that has more than 177.341 stations data and more than 51.224.486 samples data from March 4, 1995. It was identified that several countries involved including Australia, China, France, Great Britain, India, Japan, Korea, and United States had made observations using floater measurement." ;
-    :keywords "Profiling Floats Data, features, mv_station_pfl, nitrate, nitrite, oxygen, pH, pressure, salinity, temperature, transmissivity, Global" ;
+    :keywords "Global",
+        "Profiling Floats Data",
+        "features",
+        "mv_station_pfl",
+        "nitrate",
+        "nitrite",
+        "oxygen",
+        "pH",
+        "pressure",
+        "salinity",
+        "temperature",
+        "transmissivity" ;
     :name "Profiling Floats VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:PFL_VIEW" .
 
@@ -106,7 +198,19 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "SUR (Surface Only Data) dataset observed from surface instrument measurements. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, pH, chlorophyll, alkalinity, partial pressure of carbon dioxide, CO2 warming, CO2 atmosphere and air pressure. InaNODC has reformat the data and found that has more than 619 stations data and more than 52.350 samples data from June 27, 1961. It was identified that several countries involved including Australia, France, Germany, India, Japan, New Caledonia and United States had made observations using surface instrument measurements." ;
-    :keywords "CO2 atmosphere, CO2 warming, Surface Only data, air pressure, alkalinity, carbon dioxide, chlorophyll, features, mv_station_sur, pH, salinity, temperature, Global" ;
+    :keywords "CO2 atmosphere",
+        "CO2 warming",
+        "Global",
+        "Surface Only data",
+        "air pressure",
+        "alkalinity",
+        "carbon dioxide",
+        "chlorophyll",
+        "features",
+        "mv_station_sur",
+        "pH",
+        "salinity",
+        "temperature" ;
     :name "Surface Only VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:SUR_VIEW" .
 
@@ -115,7 +219,15 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "UOR (Undulating Ocean Recorded Data) dataset observed from UOR measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists several parameters including temperature, salinity, oxygen, chlorophyll, and pressure. InaNODC has reformat the data and found that has more than 26.407 stations data and more than 4.043.047 samples data from November 14, 1992. It was identified that several countries involved including Australia, France and United States had made observations using UOR measurement." ;
-    :keywords "Undulating Ocean Recorded Data, chlorophyll, features, mv_station_uor, oxygen, pressure, salinity, temperature, Global" ;
+    :keywords "Global",
+        "Undulating Ocean Recorded Data",
+        "chlorophyll",
+        "features",
+        "mv_station_uor",
+        "oxygen",
+        "pressure",
+        "salinity",
+        "temperature" ;
     :name "Undulating Ocean Recorded VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:UOR_VIEW" .
 
@@ -124,7 +236,11 @@
             geosparql:asWKT "POLYGON((80.0 -20.0, 80.0 20.0, 160.0 20.0, 160.0 -20.0, 80.0 -20.0))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "XBT (Expendable Bathy Thermograph Data) dataset observed from XBT measurement. The dataset has been recovered at region between 80°E – 160°E and 20°N-20°S including Indonesia water from any national and international research institute who conduct research survey at this region. This dataset consists temperature parameter. InaNODC has reformat the data and found that has more than 194.530 stations data and more than 88.006.759 samples data from August 7, 1962. It was identified that several countries involved including Antigua, Australia, Bahamas, Belgium, Canada, Chile, China, Cyprus, Denmark, France, Germany, Great Britain, Honduras, Hong Kong, India, Indonesia, Japan, Kuwait, Liberia, Malaysia, Mexico, Netherland, New Zealand, Norway, Panama, Philippines, Saint Vincent and then Grenadines, Singapore, South Africa, Russia, Sweden, Thailand and United States had made observations using XBT measurement." ;
-    :keywords "Expendable Bathy Thermograph Data, features, mv_station_xdt, temperature, Global" ;
+    :keywords "Expendable Bathy Thermograph Data",
+        "Global",
+        "features",
+        "mv_station_xdt",
+        "temperature" ;
     :name "Expendable Bathy Thermograph VIEW" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:XDT_VIEW" .
 
@@ -133,7 +249,11 @@
             geosparql:asWKT "POLYGON((95.0448 -10.723, 95.0448 5.8892, 140.713 5.8892, 140.713 -10.723, 95.0448 -10.723))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The Tidal Station Data Information System from the Geospatial Information Agency (BIG) is an online data service presented in the form of graphs and tables presented in Coordinated Universal Time (UTC) time format. Until now, the Geodetic and Geodynamic Control Network Center of the Geospatial Information Agency (BIG) manages more than 200 Tidal Stations throughout Indonesia. The data displayed in this Information System is raw data sent directly from sensors installed at Tidal Stations without going through the data cleaning or validation stages. The data displayed consists of station ID, station name, location coordinates, time, data provider. Tidal information displayed is data on 24 hours and a few days before" ;
-    :keywords "Tidal, features, sea level monitoring, v_station_bigtides, Global" ;
+    :keywords "Global",
+        "Tidal",
+        "features",
+        "sea level monitoring",
+        "v_station_bigtides" ;
     :name "Tides Observation BIG" ;
     :url "https://geonode.nodc.id/layers/geonode:geonode:v_station_bigtides" .
 
@@ -142,7 +262,9 @@
             geosparql:asWKT "POLYGON((125.666667 -8.833333, 125.666667 -2.333333, 133.666667 -2.333333, 133.666667 -8.833333, 125.666667 -8.833333))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "No abstract provided" ;
-    :keywords "Banda_1992, features, Global" ;
+    :keywords "Banda_1992",
+        "Global",
+        "features" ;
     :name "Banda_1992" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:Banda_1992" .
 
@@ -151,7 +273,11 @@
             geosparql:asWKT "POLYGON((91.64043056000008 -13.942138888999978, 91.64043056000008 8.221450018000041, 141.4000000000001 8.221450018000041, 141.4000000000001 -13.942138888999978, 91.64043056000008 -13.942138888999978))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "On 11 March 2009, the Republic of Indonesia deposited with the Secretary-General of the United Nations, pursuant to article 47, paragraph 9, of the Convention, a list of geographical coordinates of points of the Indonesian Archipelagic Baselines based on the Government Regulation of the Republic of Indonesia Number 38 of 2002 as amended by the Government Regulation of the Republic of Indonesia Number 37 of 2008. The list of geographical coordinates of points is referenced to the World Geodetic System 1984 (WGS84)." ;
-    :keywords "Batas_Laut_NKRI_2017, Indonesian Sea, Indonesian boundary, features, Global" ;
+    :keywords "Batas_Laut_NKRI_2017",
+        "Global",
+        "Indonesian Sea",
+        "Indonesian boundary",
+        "features" ;
     :name "Indonesian Sea Boundary" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:Batas_Laut_NKRI_2017" .
 
@@ -160,7 +286,11 @@
             geosparql:asWKT "POLYGON((91.43829428899215 -11.184870408477536, 91.43829428899215 12.099553269000069, 141.66800756777832 12.099553269000069, 141.66800756777832 -11.184870408477536, 91.43829428899215 -11.184870408477536))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major fault in Indonesia, source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "INA_Megathrust, fault, features, megathrust, Global" ;
+    :keywords "Global",
+        "INA_Megathrust",
+        "fault",
+        "features",
+        "megathrust" ;
     :name "INA Megathrust" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:INA_Megathrust0" .
 
@@ -169,7 +299,12 @@
             geosparql:asWKT "POLYGON((95.009496 -11.00214, 95.009496 5.9072, 141.001 5.9072, 141.001 -11.00214, 95.009496 -11.00214))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Indonesia provincial administrative boundaries. The country is divided into 34 provinces" ;
-    :keywords "Boundary, INDONESIA_PROP, Indonesia, Province, features, Global" ;
+    :keywords "Boundary",
+        "Global",
+        "INDONESIA_PROP",
+        "Indonesia",
+        "Province",
+        "features" ;
     :name "Indonesian Provinces Boundary" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:INDONESIA_PROP" .
 
@@ -178,7 +313,9 @@
             geosparql:asWKT "POLYGON((95.31501666679495 -10.725000000257044, 95.31501666679495 5.889444444002104, 140.7133333334156 5.889444444002104, 140.7133333334156 -10.725000000257044, 95.31501666679495 -10.725000000257044))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Sea transportation is a vital aspect of Indonesia’s trading infrastructure carrying over 90% of internationally traded goods. Indonesia has hundreds of small ports throughout the islands" ;
-    :keywords "Indonesia, sea port, Global" ;
+    :keywords "Global",
+        "Indonesia",
+        "sea port" ;
     :name "Sea Port" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:PELABUHAN" .
 
@@ -187,7 +324,10 @@
             geosparql:asWKT "POLYGON((95.67070715200003 -11.281020240999965, 95.67070715200003 5.865885065000043, 140.32466062900005 5.865885065000043, 140.32466062900005 -11.281020240999965, 95.67070715200003 -11.281020240999965))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Distribution of earthquake prone areas, Souce is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Earthquake, Rawan_Gempa, features, Global" ;
+    :keywords "Earthquake",
+        "Global",
+        "Rawan_Gempa",
+        "features" ;
     :name "Earthquake Prone" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Gempa" .
 
@@ -196,7 +336,10 @@
             geosparql:asWKT "POLYGON((95.25087775400004 -9.825664207999978, 95.25087775400004 5.618879995000043, 136.5885401690001 5.618879995000043, 136.5885401690001 -9.825664207999978, 95.25087775400004 -9.825664207999978))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Tsunami prone is information on the distribution of tsunami-prone locations throughout Indonesia. Data consists of location, estimated tsunami height and tsunami disaster class" ;
-    :keywords "Rawan_Tsunami, Tsunami, features, Global" ;
+    :keywords "Global",
+        "Rawan_Tsunami",
+        "Tsunami",
+        "features" ;
     :name "Tsunami Prone" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:Rawan_Tsunami" .
 
@@ -205,7 +348,11 @@
             geosparql:asWKT "POLYGON((106.53820144341644 -8.03394370643152, 106.53820144341644 -6.484693256974863, 114.35122182592907 -6.484693256974863, 114.35122182592907 -8.03394370643152, 106.53820144341644 -8.03394370643152))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of Java Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Java, _2016_JAVA_FaultModel_v1_2, fault model, features, Global" ;
+    :keywords "Global",
+        "Java",
+        "_2016_JAVA_FaultModel_v1_2",
+        "fault model",
+        "features" ;
     :name "JAVA Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_JAVA_FaultModel_v1_2" .
 
@@ -214,7 +361,11 @@
             geosparql:asWKT "POLYGON((115.98444219815235 -2.349334961255746, 115.98444219815235 3.669655418980488, 118.87001089545487 3.669655418980488, 118.87001089545487 -2.349334961255746, 115.98444219815235 -2.349334961255746))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of Kalimantan Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Kalimantan, _2016_KalimantanfaultMod_v1_2, fault model, features, Global" ;
+    :keywords "Global",
+        "Kalimantan",
+        "_2016_KalimantanfaultMod_v1_2",
+        "fault model",
+        "features" ;
     :name "Kalimantan Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_KalimantanfaultMod_v1_20" .
 
@@ -223,7 +374,11 @@
             geosparql:asWKT "POLYGON((120.52400257009943 -11.982422600358229, 120.52400257009943 0.252881900667318, 144.10435021047576 0.252881900667318, 144.10435021047576 -11.982422600358229, 120.52400257009943 -11.982422600358229))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of Moluccas Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Moluccas, _2016_NMaluccuFaults_latlong_v1_2, fault model, features, Global" ;
+    :keywords "Global",
+        "Moluccas",
+        "_2016_NMaluccuFaults_latlong_v1_2",
+        "fault model",
+        "features" ;
     :name "Moluccas Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_NMaluccuFaults_latlong_v1_2" .
 
@@ -232,7 +387,11 @@
             geosparql:asWKT "POLYGON((113.25482152039595 -12.075596319761837, 113.25482152039595 -2.879210168083296, 132.5663297352751 -2.879210168083296, 132.5663297352751 -12.075596319761837, 113.25482152039595 -12.075596319761837))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of East NNusa Tenggara Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "East Nusa Tenggara, _2016_NT_Banda_Fault_v1.2_simplified, fault model, features, Global" ;
+    :keywords "East Nusa Tenggara",
+        "Global",
+        "_2016_NT_Banda_Fault_v1.2_simplified",
+        "fault model",
+        "features" ;
     :name "NTT Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_NT_Banda_Fault_v1_2_simplified" .
 
@@ -241,7 +400,11 @@
             geosparql:asWKT "POLYGON((92.749448 -7.974175661487142, 92.749448 12.603273, 106.1898207278928 12.603273, 106.1898207278928 -7.974175661487142, 92.749448 -7.974175661487142))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of Sumatra Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Sumatra, _2016_SUM_FaultModel_v1_2, fault model, features, Global" ;
+    :keywords "Global",
+        "Sumatra",
+        "_2016_SUM_FaultModel_v1_2",
+        "fault model",
+        "features" ;
     :name "Sumatra Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_SUM_FaultModel_v1_2" .
 
@@ -250,7 +413,11 @@
             geosparql:asWKT "POLYGON((118.15810131774181 -5.478569182096969, 118.15810131774181 2.808633864773904, 124.94025816117549 2.808633864773904, 124.94025816117549 -5.478569182096969, 118.15810131774181 -5.478569182096969))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mapped major faults of Sulawesi Island. Source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "Sulawesi, _2016_SulawesiFaultMod_v1_2, fault model, features, Global" ;
+    :keywords "Global",
+        "Sulawesi",
+        "_2016_SulawesiFaultMod_v1_2",
+        "fault model",
+        "features" ;
     :name "Sulawesi Fault Model" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:a__2016_SulawesiFaultMod_v1_20" .
 
@@ -259,7 +426,10 @@
             geosparql:asWKT "POLYGON((92.06463683552255 -13.417092574262085, 92.06463683552255 7.574724092743509, 140.94080720548925 7.574724092743509, 140.94080720548925 -13.417092574262085, 92.06463683552255 -13.417092574262085))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Layer concerning Indonesian Archipelagic Sea Lanes, sea lanes designated as lanes for the implementation of the Archipelagic Sea Lane Passage Rights based on international maritime law conventions; cetacean, turtle, and subsea pipelines/cables" ;
-    :keywords "Indonesian Archipelagic Sea Lanes, features, subsea pipelines/cables, Global" ;
+    :keywords "Global",
+        "Indonesian Archipelagic Sea Lanes",
+        "features",
+        "subsea pipelines/cables" ;
     :name "Sea Lines Indonesia" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:alur_pipa_kabel_laut" .
 
@@ -268,7 +438,10 @@
             geosparql:asWKT "POLYGON((95.63024139422507 -10.995746977003213, 95.63024139422507 5.654130460946479, 141.00001525769807 5.654130460946479, 141.00001525769807 -10.995746977003213, 95.63024139422507 -10.995746977003213))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Indonesia holds 3.5 million hectares of mangroves, about 23% of the world’s total, and is the most diverse with 92 true mangrove species. The Coordinating Ministry for Maritime Affairs and Investment (CMMAI) is mandated to coordinate the related ministries and agencies, including Ministry of Marine Affairs and Fisheries, Ministry of Environment and Forestry, and the Mangrove and Peatland Restoration Agency to support mangroves rehabilitation across provinces in Indonesia." ;
-    :keywords "features, mang_gcs, mangrove, Global" ;
+    :keywords "Global",
+        "features",
+        "mang_gcs",
+        "mangrove" ;
     :name "Mangrove" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:mang_gcs" .
 
@@ -277,7 +450,10 @@
             geosparql:asWKT "POLYGON((94.97216899990366 -10.982222221974482, 94.97216899990366 6.0741666671562795, 140.97888888871273 6.0741666671562795, 140.97888888871273 -10.982222221974482, 94.97216899990366 -10.982222221974482))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The United Nations Group of Experts on Geographical Names (UNGEGN) has verified the names the names, coordinates, and locations of islands owned by Indonesia. With climate change and various nature irregularities, several islands have emerged, while several other islands have disappeared due to abrasion. The verification of islands and their names continued to be done in order to ensure Indonesia’s geographical certainty." ;
-    :keywords "Indonesia, Islands, features, Global" ;
+    :keywords "Global",
+        "Indonesia",
+        "Islands",
+        "features" ;
     :name "Islands Verified by the United Nations" ;
     :url "https://geonode.nodc.id/layers/geonode_data:geonode:pulau_pbb" .
 
@@ -286,7 +462,32 @@
             geosparql:asWKT "POLYGON((92.04 -13.93, 92.04 8.05, 141.4 8.05, 141.4 -13.93, 92.04 -13.93))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Map of distribution and potential of fish resources especially for pelagic throughout the country, map shows locations with low, medium and high potential" ;
-    :keywords "ArcGIS REST MapServer, ESRI, Ikan Plagis, Pelagic Fish, Global, Asia, East Asia, South Asia, India, Southeast Asia, Brunei Darussalam, Indonesia, Malaysia, Philippines, Singapore, Thailand, Timor-Leste, Viet Nam, Pacific, Australia, Fiji, Kiribati, Micronesia, Federated States of, Palau, Papua New Guinea" ;
+    :keywords " Federated States of",
+        "ArcGIS REST MapServer",
+        "Asia",
+        "Australia",
+        "Brunei Darussalam",
+        "ESRI",
+        "East Asia",
+        "Fiji",
+        "Global",
+        "Ikan Plagis",
+        "India",
+        "Indonesia",
+        "Kiribati",
+        "Malaysia",
+        "Micronesia",
+        "Pacific",
+        "Palau",
+        "Papua New Guinea",
+        "Pelagic Fish",
+        "Philippines",
+        "Singapore",
+        "South Asia",
+        "Southeast Asia",
+        "Thailand",
+        "Timor-Leste",
+        "Viet Nam" ;
     :name "Pelagics  Fish" ;
     :url "https://geonode.nodc.id/layers/httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:httpsportalina-sdioridgisrestserviceskemkomaritimpotensi_perikanan_ikan_plagis_kecilmapserver:1" .
 
@@ -295,7 +496,8 @@
             geosparql:asWKT "POLYGON((-21.971455960157023 -15.380926728868781, -21.971455960157023 15.3807919512829, 21.973856539842984 15.3807919512829, 21.973856539842984 -15.380926728868781, -21.971455960157023 -15.380926728868781))"^^geosparql:wktLiteral ;
             geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Data Peta Gempa PUPR Tahun 2017. Map of faults modeled, source is BNPB (Indonesian National Board for Disaster Management)" ;
-    :keywords "faults, Global" ;
+    :keywords "Global",
+        "faults" ;
     :name "Peta Sumber Sesar" ;
     :url "https://geonode.nodc.id/maps/180" .
 

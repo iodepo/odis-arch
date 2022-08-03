@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/4361085ffa46ba24c3ce29270a07a613d097a607",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-181.800003051758 -90.8683242797852, -181.800003051758 84.533821105957, 181.800003051758 84.533821105957, 181.800003051758 -90.8683242797852, -181.800003051758 -90.8683242797852))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "This dataset is the World Countries 2014 database from ESRI (data from DeLorme, 2014), adapted to be consistent with the Maritime Boundaries v11 dataset (Flanders Marine Institute, 2019). Changes to the original World Countries database include adapting the coastline such as adding reefs extracted from the Coral Reef Distribution UNEP for the countries where reefs were fundamental for the correct calculation of the maritime areas, and removing rocks. Several territories with overlapping claims have been added to be consistent with the Exclusive Economic Zones. ISO and M49 UN country codes have been included in the attributes for territories and sovereigns. The original World Countries database is redistributable with proper metadata and source/copyright attribution (esri.com). The Maritime Boundaries dataset is available under a CC-BY license at http://marineregions.org",
+    "keywords": [
+        "world",
+        "countries",
+        "esri",
+        "boundaries",
+        "administrative",
+        "Administrative units"
+    ],
+    "name": "World countries (ESRI, 2014)",
+    "url": "https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/4361085ffa46ba24c3ce29270a07a613d097a607"
+}

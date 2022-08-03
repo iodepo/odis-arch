@@ -192,23 +192,24 @@ while stop == 0:
 
             # keyword(s) loop
             k = ""
+            k_list = []
             #print(*subjects)
             #print(subjects[0]["keywords"])
                             
             #handle theme and place keywords  
             for i in range(len(subjects)):
                 #print(subjects[i])
-                if i == 0:
-                    k = ", ".join(subjects[i]["keywords"]) #theme keywords
-                else:
-                    k += ", " + ", ".join(subjects[i]["keywords"]) #place keywords
-              
+                for j in subjects[i]["keywords"]:
+                  k_list.append(j.split(' | '))
+
+            #print(k_list)              
             # handle theme keywords only
             #if subjects: #handle case for no keywords            
                 #k = ", ".join(subjects[0]["keywords"])
             #for s in subjects: #DublinCore
             #    k.append(s)
-            data["https://schema.org/keywords"] = k 
+            #k_list = k.split(",")
+            data["https://schema.org/keywords"] = k_list
     
             context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
             compacted = jsonld.compact(data, context)
