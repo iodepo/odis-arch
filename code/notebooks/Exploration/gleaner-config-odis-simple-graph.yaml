@@ -1,10 +1,6 @@
 # Gleaner config file for the ODIS partners running GeoNode or
 # are unable to generate JSON-LD for their catalogue
 # This points to the simple graph (JSON) file for each partner
-# specifically for 4 partners: Indonesia
-#                              Maspawio
-#                              Benguela Current Commission
-#                              Caribbean Marine Atlas
 ---
 minio:
   address: 0.0.0.0
@@ -71,11 +67,20 @@ sources:
     domain: https://www.caribbeanmarineatlas.net/
     active: true
   - sourcetype: sitegraph
-    name: emodnet
-    logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+    name: vliz
+    logo: ""
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
     headless: false
     #pid: http://hdl.handle.net/1834/41372
-    propername: "European Marine Observation and Data Network catalogue"
-    domain: https://emodnet.ec.europa.eu/
-    active: true 
+    propername: "Flanders Marine Institute catalogue"
+    domain: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+    active: true    
+  # - sourcetype: sitegraph
+    # name: emodnet
+    # logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
+    # url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+    # headless: false
+    # #pid: http://hdl.handle.net/1834/41372
+    # propername: "European Marine Observation and Data Network catalogue"
+    # domain: https://emodnet.ec.europa.eu/
+    # active: true 
