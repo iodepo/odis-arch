@@ -1,0 +1,236 @@
+sources:
+- sourcetype: sitemap
+  name: cioosatlantic
+  url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
+  #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  headless: true
+  pid: https://www.re3data.org/repository/cioosatlantic
+  propername: CIOOS Atlantic
+  domain: http://cioosatlantic.ca
+  active: true
+- sourcetype: sitegraph
+  name: inanodc
+  logo: ""
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
+  headless: false
+  #pid: http://hdl.handle.net/1834/41372
+  propername: "Indonesia National Oceanic Data Center"
+  domain: https://geonode.nodc.id
+  active: true
+- sourcetype: sitegraph
+  name: maspawio
+  logo: "https://cordioea.net/wp-content/uploads/2017/09/Geonde.png"
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
+  headless: false
+  #pid: http://hdl.handle.net/1834/41372
+  propername: "MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean"
+  domain: http://maspawio.net
+  active: true
+- sourcetype: sitegraph
+  name: benguelacc
+  logo: ""
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
+  headless: false
+  #pid: http://hdl.handle.net/1834/41372
+  propername: "Benguela Current Convention (BCC) GeoData Portal"
+  domain: https://geodata.benguelacc.org/
+  active: true
+- sourcetype: sitegraph
+  name: caribbeanmarineatlas
+  logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
+  headless: false
+  #pid: http://hdl.handle.net/1834/41372
+  propername: "Caribbean Marine Atlas catalogue"
+  domain: https://www.caribbeanmarineatlas.net/
+  active: true
+- sourcetype: sitegraph
+  name: emodnet
+  logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+  headless: false
+  #pid: http://hdl.handle.net/1834/41372
+  propername: "European Marine Observation and Data Network catalogue"
+  domain: https://emodnet.ec.europa.eu/
+  active: true
+- sourcetype: sitemap
+  name: pogo
+  logo: ""
+  url: https://oceanscape.org/organisation-sitemap.xml
+  headless: true
+  pid: http://example.org/pogo/experts
+  propername: Pogo Keywords
+  domain: https://oceanscape.org
+  active: true
+- sourcetype: sitemap
+  name: pdh
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
+  headless: false
+  pid: http://example.org/pacificdatahub
+  propername: Pacific Data Hub
+  domain: https://pacificdata.org
+  active: true
+- sourcetype: sitegraph
+  name: obps
+  url: https://oih.oceanbestpractices.org/obps.json
+  headless: false
+  pid: http://example.org/invemar/obps
+  propername: Ocean Best Practices
+  domain: https://oih.oceanbestpractices.org
+  active: true
+- sourcetype: sitemap
+  name: edmerp
+  url: https://edmerp.seadatanet.org/sitemap.xml
+  headless: false
+  pid: https://www.re3data.org/repository/seadatanet/edmerp
+  propername: EDMERP SeaDataNet
+  domain: https://edmerp.seadatanet.org
+  active: true
+- sourcetype: sitemap
+  name: edmo
+  url: https://edmo.seadatanet.org/sitemap.xml
+  headless: false
+  pid: https://www.re3data.org/repository/seadatanet/edmo
+  propername: EDMO SeaDataNet
+  domain: https://edmo.seadatanet.org
+  active: true
+- sourcetype: sitegraph
+  name: invemarexpert
+  url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
+  headless: false
+  pid: http://example.org/invemar/experts
+  propername: INVEMAR Experts
+  domain: http://portete.invemar.org.co/chm/api/oih/expert
+  active: true
+- sourcetype: sitegraph
+  name: invemardocuments
+  url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
+  headless: false
+  pid: http://example.org/invemar/documents
+  propername: INVEMAR documents
+  domain: http://portete.invemar.org.co/chm/api/oih/documents
+  active: true
+- sourcetype: sitegraph
+  name: invemarinstitution
+  url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
+  headless: false
+  pid: http://example.org/invemar/institution
+  propername: INVEMAR institution
+  domain: http://portete.invemar.org.co/chm/api/oih/institution
+  active: true
+- sourcetype: sitegraph
+  name: invemarvessel
+  url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
+  headless: false
+  pid: http://example.org/invemar/vessel
+  propername: INVEMAR vessel
+  domain: http://portete.invemar.org.co/chm/api/oih/vessel
+  active: true
+- sourcetype: sitegraph
+  name: invemartraining
+  url: http://portete.invemar.org.co/chm/api/oih/training?format=json
+  headless: false
+  pid: http://example.org/invemar/training
+  propername: INVEMAR training
+  domain: http://portete.invemar.org.co/chm/api/oih/training
+  active: true
+- sourcetype: sitegraph
+  name: aquadocs
+  url: https://oih.aquadocs.org/aquadocs.json
+  headless: false
+  pid: http://hdl.handle.net/1834/41372
+  propername: AquaDocs
+  domain: https://aquadocs.org
+  active: true
+- sourcetype: sitemap
+  name: marinetraining
+  url: https://www.marinetraining.eu/sitemap.xml
+  headless: false
+  pid: https://www.re3data.org/repository/marinetraining
+  propername: Marine Training EU
+  domain: https://marinetraining.eu/
+  active: true
+- sourcetype: sitemap
+  name: euroceanprojects
+  url: https://infohub.eurocean.net/sitemap/projects
+  headless: false
+  pid: http://example.org/eurocean/projects
+  propername: EurOcean Projects
+  domain: https://infohub.eurocean.net/data/projects
+  active: true
+- sourcetype: sitemap
+  name: euroceanvessels
+  url: https://infohub.eurocean.net/sitemap/vessels
+  headless: false
+  pid: http://example.org/invemar/documents
+  propername: EurOcean vessels
+  domain: https://infohub.eurocean.net/data/vessels
+  active: true
+- sourcetype: sitemap
+  name: euroceanorgs
+  url: https://infohub.eurocean.net/sitemap/organizations
+  headless: false
+  pid: http://example.org/invemar/documents
+  propername: EurOcean Organizations
+  domain: https://infohub.eurocean.net/data/organizations
+  active: true
+- sourcetype: sitemap
+  name: obis
+  url: https://obis.org/sitemap/sitemap_datasets.xml
+  headless: false
+  pid: https://www.re3data.org/repository/obis
+  propername: Ocean Biodiversity Information System
+  domain: https://obis.org
+  active: true
+- sourcetype: sitemap
+  name: oceanexperts
+  url: https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml
+  headless: false
+  pid: https://www.re3data.org/repository/oceanexpert
+  propername: OceanExpert UNESCO/IOC Project Office for IODE
+  domain: https://oceanexpert.org/
+  active: true
+- sourcetype: sitemap
+  name: euroceanexpert
+  logo: ""
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapExperts.xml
+  headless: false
+  pid: http://example.org/eurocean/experts
+  propername: EurOcean Experts
+  domain: https://infohub.eurocean.net/data/experts
+  active: true
+- sourcetype: sitemap
+  name: euroceanevents
+  logo: ""
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapEvents.xml
+  headless: false
+  pid: http://example.org/eurocean/events
+  propername: EurOcean Events
+  domain: https://infohub.eurocean.net/data/events
+  active: true
+- sourcetype: sitemap
+  name: euroceantraining
+  logo: ""
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapTraining.xml
+  headless: false
+  pid: http://example.org/eurocean/training
+  propername: EurOcean training
+  domain: https://infohub.eurocean.net/data/training
+  active: true
+- sourcetype: sitemap
+  name: euroceanorgs
+  logo: ""
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapInstitutions.xml
+  headless: false
+  pid: http://example.org/eurocean/orgs
+  propername: EurOcean Organizations
+  domain: https://infohub.eurocean.net/data/organizations
+  active: true
+#- sourcetype: sitemap
+  #name: marineie
+  #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
+  #headless: true
+  #pid: https://www.re3data.org/repository/marineie
+  #propername: Marine Institute Data Catalogue
+  #domain: http://data.marine.ie
+  #active: true
