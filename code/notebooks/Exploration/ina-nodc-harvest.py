@@ -29,6 +29,7 @@ NEW_RDF_FILENAME = "ina-nodc-catalogue.rdf"
 HOSTNAME = "https://geonode.nodc.id"
 LOGFILE = "ina-nodc-harvest.log"
 SHORTNAME = "ina-nodc" #must be hyphen
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/"
 
 """
 #########################
@@ -162,10 +163,13 @@ while stop == 0:
 
             data = {}
 
-            #id should point to url of dataset record
+            #url should point to the readable catalogue page for that record
             url = csw.records[rec].distribution.online[0].url
-            data["@id"] = url
             print("        " + url)
+            
+            #id should point to url of the generated JSON-LD filename
+            idUrl = str(ID_URL_BASE + SHORTNAME + "-{}.json".format(id))            
+            data["@id"] = idUrl
             
             data["@type"] = "https://schema.org/Dataset"
 
