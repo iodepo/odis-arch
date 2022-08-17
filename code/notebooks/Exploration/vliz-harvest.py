@@ -30,6 +30,7 @@ NEW_RDF_FILENAME = "vliz-catalogue.rdf"
 HOSTNAME = "https://emodnet.ec.europa.eu"
 LOGFILE = "vliz-harvest.log"
 SHORTNAME = "vliz" #must be hyphen
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/"
 
 """
 #########################
@@ -162,15 +163,14 @@ while stop == 0:
             poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
 
             data = {}
-
-            #id should point to url of dataset record
+          
+            #url should point to the readable catalogue page for that record
             url = GEONETWORK_SEARCH_BASE_URL + id
-            #if len(csw.records[rec].distribution.online) > 0:
-                #url = str(csw.records[rec].distribution.online[0].url)
-            #else:
-                #url = "None"
-            data["@id"] = url
             print("        " + url)
+            
+            #id should point to url of the generated JSON-LD filename
+            idUrl = str(ID_URL_BASE + SHORTNAME + "-{}.json".format(id))            
+            data["@id"] = idUrl            
             
             data["@type"] = "https://schema.org/Dataset"
 
