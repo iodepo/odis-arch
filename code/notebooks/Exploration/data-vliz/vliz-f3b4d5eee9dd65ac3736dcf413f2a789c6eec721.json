@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-f3b4d5eee9dd65ac3736dcf413f2a789c6eec721.json",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((2.57963871955872 50.7640609741211, 2.57963871955872 51.3565063476562, 3.45707964897156 51.3565063476562, 3.45707964897156 50.7640609741211, 2.57963871955872 50.7640609741211))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "description": "The geographical level, at which the work is carried out, are the statistical sectors as defined by the former National Institute of Statistics. For convenience, these are called \"neighbourhoods\". For each neighbourhood, a score was calculated for each dimension (demography, housing, education and unemployment). These dimension scores are than used to carry out a analysis of the socio-economic deprivation. Analogously with the socio-economic deprivation atlas of Kesteloot, a threshold value of 15% was used. In concrete terms: for each dimension of socio-economic deprivation (demography, housing, education and job-seekers), the 1,297 neighbourhoods are ranked from high to low. For this purpose, the dimension scores were used. The threshold value for each dimension is thus obtained by taking the value at which 15% of all neighbourhoods have a higher value than this threshold value. In order to determine whether or not a neighbourhood can be described as vulnerable, we state that all neighbourhoods that have exceeded the threshold values on 3 or 4 of the dimensions can be considered potentially disadvantaged.",
+    "keywords": [
+        "kansarmoede",
+        "kansarme buurten",
+        "West-Vlaanderen",
+        "socio-economisch",
+        "Population distribution and demography"
+    ],
+    "name": "Underprivileged neighbourhoods (West Flanders, 2017)",
+    "url": "https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/f3b4d5eee9dd65ac3736dcf413f2a789c6eec721"
+}

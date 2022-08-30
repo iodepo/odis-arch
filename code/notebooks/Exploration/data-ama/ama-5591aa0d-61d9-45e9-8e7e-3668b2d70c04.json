@@ -3,7 +3,7 @@
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#"
     },
-    "@id": "None",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ama/ama-5591aa0d-61d9-45e9-8e7e-3668b2d70c04.json",
     "@type": "Dataset",
     "geosparql:hasGeometry": {
         "@type": "http://www.opengis.net/ont/sf#Polygon",
@@ -16,7 +16,10 @@
         }
     },
     "description": "Biozones for the Namibian EEZ representing by actual respectively symbolic areas\nMethod of data acquisition: Cutting of EEZ polygon based on breaks and depth strata determined at BCLME/BENEFIT workshop ; 10 and 30 m depth lines based on SAN data (ph_bathy_coast_li_na), but had to be added with info from GEBCO (ph_bathy_off_gr) and own grid from hydro acoustic (Survey General) and SAN points for southern part of Namibian waters. Slope breaks based on GEBCO data. For the file ph_biozo_sym_pol_na, the supratidal, intertidal, shallow and deep photic zones display a symbolic width and are not based on the real depth values for these zones (otherwise too small).",
-    "keywords": "Atlas, Namibia",
+    "keywords": [
+        "Atlas",
+        "Namibia"
+    ],
     "name": "Namibia: Biozones in the EEZ",
     "url": "None"
 }

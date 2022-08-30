@@ -3,7 +3,7 @@
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#"
     },
-    "@id": "https://geonode.nodc.id/layers/GEBCO:geonode:Gebco",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-f4436aff-6223-431b-aeaa-c0b96b2e2b6c.json",
     "@type": "Dataset",
     "geosparql:hasGeometry": {
         "@type": "http://www.opengis.net/ont/sf#Polygon",
@@ -16,7 +16,13 @@
         }
     },
     "description": "GEBCO’s gridded bathymetric data set is a global terrain model for ocean and land, providing elevation data, in meters, on a 15 arc-second interval grid. It is accompanied by a Type Identifier (TID) Grid that gives information on the types of source data. The GEBCO_2021 Grid and TID Grid can be download as global files in netCDF format or a set of 8 tiles (each with an area of 90° x 90°), giving global coverage, in Esri ASCII raster and data GeoTiff formats. The data filea are included in a zip file along with the data set documentation.",
-    "keywords": "GeoTIFF, Indonesia National Bathymetry, WCS, gebco, Global",
+    "keywords": [
+        "GeoTIFF",
+        "Indonesia National Bathymetry",
+        "WCS",
+        "gebco",
+        "Global"
+    ],
     "name": "GEBCO Bathymetry",
     "url": "https://geonode.nodc.id/layers/GEBCO:geonode:Gebco"
 }

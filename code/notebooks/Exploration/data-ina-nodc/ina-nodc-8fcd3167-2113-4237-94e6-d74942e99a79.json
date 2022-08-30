@@ -3,7 +3,7 @@
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#"
     },
-    "@id": "https://geonode.nodc.id/layers/BATNAS:geonode:batnas",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-8fcd3167-2113-4237-94e6-d74942e99a79.json",
     "@type": "Dataset",
     "geosparql:hasGeometry": {
         "@type": "http://www.opengis.net/ont/sf#Polygon",
@@ -16,7 +16,13 @@
         }
     },
     "description": "National Bathymetry was formed from the inversion of gravity anomaly data resulting from altimetry data processing by adding sounding data carried out by several institutions, namely BIG, NGDC, BODC, BPPT, LIPI, P3GL and other institutions with single and multibeam surveys. The spatial resolution of BATNAS data is 6arc-second using the MSL datum. National BATimemetry gridded data from 90 to 150BT and from 20LS to 20LU. This bathymetric data has advantages in coastal areas and shallow waters from the BIG survey. The development of the National Bathymetry gridded model begins with the calculation of the free air gravity anomaly data, until it becomes bathymetric data using the Gravity-Geological Method (GGM). The accuracy test results show that the developed marine gravity model has adequate accuracy, as a basis for estimating the bathymetric model at a resolution of 1m (1 minute) before iterating over the noise data assimilation, from 1m to 6-arcsecond resolution.",
-    "keywords": "GeoTIFF, Indonesia National Bathymetry, WCS, batnas, Global",
+    "keywords": [
+        "GeoTIFF",
+        "Indonesia National Bathymetry",
+        "WCS",
+        "batnas",
+        "Global"
+    ],
     "name": "National Bathymetry (BIG)",
     "url": "https://geonode.nodc.id/layers/BATNAS:geonode:batnas"
 }
