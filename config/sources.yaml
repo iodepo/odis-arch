@@ -1,49 +1,115 @@
+# Master config file for ODIS nodes, that drives the Dagster pipeline
+# to update the ODIS graph.  Other important notes about this config file:
+#  - sorted alphabetically by 'name' parameter
+#  - no need to use quotes. Use the single-quoted style (') if characters 
+#    such as " and \ are being used inside the string to avoid escaping them
+#  - pid: should point to the ODISCat 'view' if available, such as https://catalogue.odis.org/view/689
+#         or if not, use format: https://oceaninfohub.org/.well-known/org/[name]
+#  - url: point to sitemap or sitegraph
+#  - endpoint: point to API endpoint if available
+#  - endpointNtype: CSW, CKAN, ERDDAP, WMS, REST API, etc.
+#      note: listing node endpoints are helpful for others (and Dashboard) 
+#            to discover the services available, even when the ODIS graph isn't 
+#            using the endpoints directly
+#  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
+#               necessarily when it was included in the ODIS graph)
+#  - headless: true if JSON-LD is embedded in page
+#  - if a parameter has no value, leave blank (with no quotes)
+---
 sources:
-- sourcetype: sitemap
-  name: cioosatlantic
+- name: benguelacc
+  propername: Benguela Current Convention (BCC) GeoData Portal
+  catalogue: https://geodata.benguelacc.org/
+  domain: https://www.benguelacc.org/  
+  logo: https://static.tildacdn.com/tild3263-3132-4937-a166-373963646533/Skjermbilde_2020-12-.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/benguelacc
+  sourcetype: sitegraph
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
+  endpoint1: https://geodata.benguelacc.org/catalogue/csw
+  endpoint1type: CSW
+  headless: false
+  dateadded: 2022-04-13
+  active: true
+- name: caribbeanmarineatlas
+  propername: "Caribbean Marine Atlas catalogue"
+  catalogue: https://www.caribbeanmarineatlas.net/home/
+  domain: https://www.caribbeanmarineatlas.net/  
+  logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
+  pid: https://catalogue.odis.org/view/616
+  sourcetype: sitegraph  
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
+  endpoint1: https://www.caribbeanmarineatlas.net/catalogue/csw
+  endpoint1type: CSW  
+  headless: false
+  dateadded: 2022-04-13
+  active: true  
+- name: cioosatlantic
+  propername: CIOOS Atlantic
+  catalogue: https://catalogue.cioosatlantic.ca/
+  domain: https://cioosatlantic.ca
+  logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
+  sourcetype: sitemap
   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  endpoint1: https://cioosatlantic.ca/erddap/index.html
+  endpoint1type: ERDDAP
   headless: true
-  pid: https://www.re3data.org/repository/cioosatlantic
-  propername: CIOOS Atlantic
-  domain: http://cioosatlantic.ca
+  dateadded: 2022-06-04
   active: true
-- sourcetype: sitegraph
-  name: inanodc
-  logo: ""
+- name: inanodc
+  propername: Indonesia National Oceanic Data Center
+  catalogue: https://geonode.nodc.id
+  domain: https://nodc.id  
+  logo: https://nodc.id/dist/img/brin.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/inanodc
+  sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
+  endpoint1: https://geonode.nodc.id/catalogue/csw
+  endpoint1type: CSW 
   headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Indonesia National Oceanic Data Center"
-  domain: https://geonode.nodc.id
+  dateadded: 2022-04-05 
   active: true
-- sourcetype: sitegraph
-  name: maspawio
-  logo: "https://cordioea.net/wp-content/uploads/2017/09/Geonde.png"
+- name: maspawio
+  propername: MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
+  catalogue: http://maspawio.net/
+  domain: https://cordioea.net/
+  logo: https://cordioea.net/wp-content/uploads/2017/09/Geonde.png
+  pid: https://catalogue.odis.org/view/351
+  sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
+  endpoint1: http://maspawio.net/catalogue/csw
+  endpoint1type: CSW
   headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean"
-  domain: http://maspawio.net
+  dateadded: 2022-03-30 
   active: true
-- sourcetype: sitegraph
-  name: benguelacc
+- name: pdh
+  propername: Pacific Data Hub
+  catalogue: https://pacificdata.org/data/dataset
+  domain: https://pacificdata.org
+  logo: https://pacificdata.org/themes/custom/spc/logo.png
+  pid: https://catalogue.odis.org/view/689
+  sourcetype: sitemap  
+  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
+  endpoint1: https://pacificdata.org/data/api/action/package_list
+  endpoint1type: CKAN
+  headless: true
+  dateadded: 2022-07-25   
+  active: false
+- name: vliz
+  propername: Flanders Marine Institute catalogue
+  catalogue: https://pacificdata.org/data/dataset
+  domain: https://pacificdata.org  
   logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
   headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Benguela Current Convention (BCC) GeoData Portal"
-  domain: https://geodata.benguelacc.org/
-  active: true
-- sourcetype: sitegraph
-  name: caribbeanmarineatlas
-  logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Caribbean Marine Atlas catalogue"
-  domain: https://www.caribbeanmarineatlas.net/
-  active: true
+  pid: http://example.org/vliz/orgs
+  sourcetype: sitegraph
+  domain: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
+  active: true  
 - sourcetype: sitegraph
   name: emodnet
   logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
@@ -61,14 +127,6 @@ sources:
   pid: http://example.org/pogo/experts
   propername: Pogo Keywords
   domain: https://oceanscape.org
-  active: true
-- sourcetype: sitemap
-  name: pdh
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
-  headless: false
-  pid: http://example.org/pacificdatahub
-  propername: Pacific Data Hub
-  domain: https://pacificdata.org
   active: true
 - sourcetype: sitegraph
   name: obps
@@ -225,15 +283,6 @@ sources:
   pid: http://example.org/eurocean/orgs
   propername: EurOcean Organizations
   domain: https://infohub.eurocean.net/data/organizations
-  active: true
-- sourcetype: sitegraph
-  name: vliz
-  logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-  headless: false
-  pid: http://example.org/vliz/orgs
-  propername: VLIZ
-  domain: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   active: true
 
 #- sourcetype: sitemap
