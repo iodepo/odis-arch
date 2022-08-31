@@ -39,10 +39,10 @@ sources:
 # Caribbean Marine Atlas catalogue
 #  
 - name: caribbeanmarineatlas
-  propername: "Caribbean Marine Atlas catalogue"
+  propername: Caribbean Marine Atlas catalogue
   catalogue: https://www.caribbeanmarineatlas.net/home/
   domain: https://www.caribbeanmarineatlas.net/  
-  logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
+  logo: https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg
   pid: https://catalogue.odis.org/view/616
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
@@ -77,10 +77,10 @@ sources:
 # European Marine Observation and Data Network catalogue
 #  
 - name: emodnet
-  propername: "European Marine Observation and Data Network catalogue"  
+  propername: European Marine Observation and Data Network catalogue  
   domain: https://emodnet.ec.europa.eu/
   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home 
-  logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
+  logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
   pid: https://catalogue.odis.org/view/364
   sourcetype: sitemap
   #sitemaps are password protected?
@@ -127,14 +127,21 @@ sources:
   headless: false
   dateadded: 2022-03-30 
   active: true
-- name: pogo
-  logo: ""
-  url: https://oceanscape.org/organisation-sitemap.xml
-  headless: true
-  pid: http://example.org/pogo/experts
+#
+# Oceanscape Project
+# 
+- name: oceanscape
+  propername: Oceanscape Project
+  catalogue: https://oceanscape.org
+  domain: https://geoblueplanet.org/
+  logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
+  pid: https://catalogue.odis.org/view/1098
   sourcetype: sitemap
-  propername: Pogo Keywords
-  domain: https://oceanscape.org
+  url: https://oceanscape.org/organisation-sitemap.xml
+  #url: https://oceanscape.org/sitemap_index.xml
+  backend: WordPress  
+  headless: true
+  dateadded: 2022-05-18 
   active: true
 #
 # Pacific Data Hub
@@ -155,10 +162,10 @@ sources:
   dateadded: 2022-07-25   
   active: false
 #
-# Flanders Marine Institute catalogue
+# VLIZ: Flanders Marine Institute catalogue
 #     
 - name: vliz
-  propername: Flanders Marine Institute catalogue
+  propername: VLIZ: Flanders Marine Institute catalogue
   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
   domain: http://www.vliz.be/en 
   logo: ""
