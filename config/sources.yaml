@@ -54,11 +54,28 @@ sources:
   sourcetype: sitemap
   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-  endpoint1: https://cioosatlantic.ca/erddap/index.html
-  endpoint1type: ERDDAP
+  endpoint1: https://cioosatlantic.ca/en/dataset/api/action/package_list
+  endpoint1type: CKAN  
+  endpoint2: https://cioosatlantic.ca/erddap/index.html
+  endpoint2type: ERDDAP
   headless: true
   dateadded: 2022-06-04
   active: true
+- name: emodnet
+  propername: "European Marine Observation and Data Network catalogue"  
+  domain: https://emodnet.ec.europa.eu/
+  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home 
+  logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
+  pid: https://catalogue.odis.org/view/364
+  sourcetype: sitemap
+  #sitemaps are password protected?
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
+  endpoint1type: CSW
+  headless: true
+  dateadded: 2022-08-24  
+  active: false  
 - name: inanodc
   propername: Indonesia National Oceanic Data Center
   catalogue: https://geonode.nodc.id
@@ -101,23 +118,16 @@ sources:
   active: false
 - name: vliz
   propername: Flanders Marine Institute catalogue
-  catalogue: https://pacificdata.org/data/dataset
-  domain: https://pacificdata.org  
+  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+  domain: http://www.vliz.be/en 
   logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-  headless: false
-  pid: http://example.org/vliz/orgs
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/vliz
   sourcetype: sitegraph
-  domain: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
-  active: true  
-- sourcetype: sitegraph
-  name: emodnet
-  logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
+  endpoint1type: CSW
   headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "European Marine Observation and Data Network catalogue"
-  domain: https://emodnet.ec.europa.eu/
   active: true
 - sourcetype: sitemap
   name: pogo
