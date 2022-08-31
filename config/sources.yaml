@@ -14,6 +14,7 @@
 #  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
 #               necessarily when it was included in the ODIS graph)
 #  - headless: true if JSON-LD is embedded in page
+#  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 ---
 sources:
@@ -29,8 +30,8 @@ sources:
   pid: https://oceaninfohub.org/.well-known/org/benguelacc
   sourcetype: sitegraph
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
-  endpoint1: https://geodata.benguelacc.org/catalogue/csw
   endpoint1type: CSW
+  endpoint1: https://geodata.benguelacc.org/catalogue/csw  
   backend: GeoNode
   headless: false
   dateadded: 2022-04-13
@@ -46,8 +47,8 @@ sources:
   pid: https://catalogue.odis.org/view/616
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
-  endpoint1: https://www.caribbeanmarineatlas.net/catalogue/csw
   endpoint1type: CSW
+  endpoint1: https://www.caribbeanmarineatlas.net/catalogue/csw  
   backend: GeoNode  
   headless: false
   dateadded: 2022-04-13
@@ -65,10 +66,10 @@ sources:
   sourcetype: sitemap
   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-  endpoint1: https://catalogue.cioosatlantic.ca/api/action/package_list
   endpoint1type: CKAN  
-  endpoint2: https://cioosatlantic.ca/erddap/index.html
+  endpoint1: https://catalogue.cioosatlantic.ca/api/action/package_list
   endpoint2type: ERDDAP
+  endpoint2: https://cioosatlantic.ca/erddap/index.html
   backend: CKAN  
   headless: true
   dateadded: 2022-06-04
@@ -86,8 +87,8 @@ sources:
   #sitemaps are password protected?
   url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
   #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
-  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   endpoint1type: CSW
+  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   backend: GeoNetwork  
   headless: true
   dateadded: 2022-08-24  
@@ -104,8 +105,8 @@ sources:
   pid: https://oceaninfohub.org/.well-known/org/inanodc
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
-  endpoint1: https://geonode.nodc.id/catalogue/csw
   endpoint1type: CSW
+  endpoint1: https://geonode.nodc.id/catalogue/csw
   backend: GeoNode  
   headless: false
   dateadded: 2022-04-05 
@@ -121,8 +122,8 @@ sources:
   pid: https://catalogue.odis.org/view/351
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
-  endpoint1: http://maspawio.net/catalogue/csw
   endpoint1type: CSW
+  endpoint1: http://maspawio.net/catalogue/csw
   backend: GeoNode  
   headless: false
   dateadded: 2022-03-30 
@@ -155,8 +156,8 @@ sources:
   sourcetype: sitemap
   url:   
   #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
-  endpoint1: https://pacificdata.org/data/api/action/package_list
   endpoint1type: CKAN
+  endpoint1: https://pacificdata.org/data/api/action/package_list
   backend: CKAN  
   headless: true
   dateadded: 2022-07-25   
@@ -173,12 +174,12 @@ sources:
   pid: https://oceaninfohub.org/.well-known/org/vliz
   sourcetype: sitegraph
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   endpoint1type: CSW
+  endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   backend: GeoNetwork  
   headless: false
   dateadded: 2022-08-03
-  active: true
+  active: false
 - sourcetype: sitegraph
   name: obps
   url: https://oih.oceanbestpractices.org/obps.json
