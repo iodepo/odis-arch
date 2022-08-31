@@ -17,6 +17,9 @@
 #  - if a parameter has no value, leave blank (with no quotes)
 ---
 sources:
+#
+# Benguela Current Convention (BCC) GeoData Portal
+#
 - name: benguelacc
   propername: Benguela Current Convention (BCC) GeoData Portal
   catalogue: https://geodata.benguelacc.org/
@@ -28,9 +31,13 @@ sources:
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
   endpoint1: https://geodata.benguelacc.org/catalogue/csw
   endpoint1type: CSW
+  backend: GeoNode
   headless: false
   dateadded: 2022-04-13
   active: true
+#
+# Caribbean Marine Atlas catalogue
+#  
 - name: caribbeanmarineatlas
   propername: "Caribbean Marine Atlas catalogue"
   catalogue: https://www.caribbeanmarineatlas.net/home/
@@ -40,10 +47,14 @@ sources:
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
   endpoint1: https://www.caribbeanmarineatlas.net/catalogue/csw
-  endpoint1type: CSW  
+  endpoint1type: CSW
+  backend: GeoNode  
   headless: false
   dateadded: 2022-04-13
-  active: true  
+  active: true
+#
+# CIOOS Atlantic
+#    
 - name: cioosatlantic
   propername: CIOOS Atlantic
   catalogue: https://catalogue.cioosatlantic.ca/
@@ -54,13 +65,17 @@ sources:
   sourcetype: sitemap
   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-  endpoint1: https://cioosatlantic.ca/en/dataset/api/action/package_list
+  endpoint1: https://catalogue.cioosatlantic.ca/api/action/package_list
   endpoint1type: CKAN  
   endpoint2: https://cioosatlantic.ca/erddap/index.html
   endpoint2type: ERDDAP
+  backend: CKAN  
   headless: true
   dateadded: 2022-06-04
   active: true
+#
+# European Marine Observation and Data Network catalogue
+#  
 - name: emodnet
   propername: "European Marine Observation and Data Network catalogue"  
   domain: https://emodnet.ec.europa.eu/
@@ -73,9 +88,13 @@ sources:
   #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
   endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   endpoint1type: CSW
+  backend: GeoNetwork  
   headless: true
   dateadded: 2022-08-24  
-  active: false  
+  active: false
+#
+# Indonesia National Oceanic Data Center
+#    
 - name: inanodc
   propername: Indonesia National Oceanic Data Center
   catalogue: https://geonode.nodc.id
@@ -86,10 +105,14 @@ sources:
   sourcetype: sitegraph  
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
   endpoint1: https://geonode.nodc.id/catalogue/csw
-  endpoint1type: CSW 
+  endpoint1type: CSW
+  backend: GeoNode  
   headless: false
   dateadded: 2022-04-05 
   active: true
+#
+# MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
+#     
 - name: maspawio
   propername: MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
   catalogue: http://maspawio.net/
@@ -100,22 +123,40 @@ sources:
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
   endpoint1: http://maspawio.net/catalogue/csw
   endpoint1type: CSW
+  backend: GeoNode  
   headless: false
   dateadded: 2022-03-30 
   active: true
+- name: pogo
+  logo: ""
+  url: https://oceanscape.org/organisation-sitemap.xml
+  headless: true
+  pid: http://example.org/pogo/experts
+  sourcetype: sitemap
+  propername: Pogo Keywords
+  domain: https://oceanscape.org
+  active: true
+#
+# Pacific Data Hub
+#   
 - name: pdh
   propername: Pacific Data Hub
   catalogue: https://pacificdata.org/data/dataset
   domain: https://pacificdata.org
   logo: https://pacificdata.org/themes/custom/spc/logo.png
   pid: https://catalogue.odis.org/view/689
-  sourcetype: sitemap  
+  sourcetype: sitemap
+  url:   
   #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
   endpoint1: https://pacificdata.org/data/api/action/package_list
   endpoint1type: CKAN
+  backend: CKAN  
   headless: true
   dateadded: 2022-07-25   
   active: false
+#
+# Flanders Marine Institute catalogue
+#     
 - name: vliz
   propername: Flanders Marine Institute catalogue
   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
@@ -127,16 +168,9 @@ sources:
   url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
   endpoint1: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
   endpoint1type: CSW
+  backend: GeoNetwork  
   headless: false
-  active: true
-- sourcetype: sitemap
-  name: pogo
-  logo: ""
-  url: https://oceanscape.org/organisation-sitemap.xml
-  headless: true
-  pid: http://example.org/pogo/experts
-  propername: Pogo Keywords
-  domain: https://oceanscape.org
+  dateadded: 2022-08-03
   active: true
 - sourcetype: sitegraph
   name: obps
