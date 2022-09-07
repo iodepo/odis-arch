@@ -11,6 +11,8 @@
 #  - headless: true if JSON-LD is embedded in page
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
+# How to validate at commandline: execute the following :
+#    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 ---
 sources:
 #
@@ -449,7 +451,7 @@ sources:
 # VLIZ: Flanders Marine Institute catalogue
 #     
 - name: vliz
-  propername: VLIZ: Flanders Marine Institute catalogue
+  propername: VLIZ - Flanders Marine Institute catalogue
   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
   domain: http://www.vliz.be/en 
   logo: ""
