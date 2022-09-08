@@ -11,8 +11,8 @@
 #  - headless: true if JSON-LD is embedded in page
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
-# How to validate at commandline: execute the following (if the contains valid yaml, 
-# it will do nothing) :
+# To validate at commandline: execute the following (if the file contains valid 
+# yaml, it will do nothing) :
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 ---
 sources:
