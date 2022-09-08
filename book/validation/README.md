@@ -23,6 +23,7 @@ Initial approach:
 * Develop a base SHACL document that assess a data graph based on elements needed to support search
 * [SHACL](https://www.w3.org/TR/shacl/)
 * Leverage [SHACL Playground](https://shacl.org/playground/)
+* RDFShape at [https://rdfshape.weso.es/](https://rdfshape.weso.es/) and [https://rdfshape.herokuapp.com/](https://rdfshape.herokuapp.com/) 
   
 To support this will need an initial data graph to work with.  The type is not
 important.  All types will need to satisfy the search needs.
