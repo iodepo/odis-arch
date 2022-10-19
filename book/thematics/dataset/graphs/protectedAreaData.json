@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://urlToThisJsonDoc.org/",
+    "name": "Florida Quays National Marine Sanctuary data bundle",
+    "description": "This dataset contains geospatial data delimiting the Florida Quays National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant features.",
+    "url": "URLtoLandingPage",
+    "sameAs": [
+        "URLforAnyEquivalentPages"
+    ],
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": "Any citations of other CreativeWorks that are relevant to or qualify this one",
+    "version": "2021-04-24T06:34:56.000Z",
+    "keywords": [
+        "marine protected area",
+        "sanctuary",
+        "Florida",
+		"ocean use regulations",
+		"fishing restrictions"
+    ],
+    "measurementTechnique": "The URL to or text about the methods, technique or technology used in a Dataset",
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Level of fishing protection",
+			"propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "This variable uses a 1 through 5 categorial/ordinal scale to express the level of restriction (5 being the most restricted) on fishing activity in the protected area",
+			"measurementTechnique": "URLtoMethodology or text describing method of determination"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Bottom trawling status",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether bottom trawling is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://protectedseas.net/odisCatalog",
+        "@type": "DataCatalog",
+        "url": "https://protectedseas.net/"
+    },
+    "temporalCoverage": "2007/2007",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://protectedseas.net/download/fq2007.zip",
+        "encodingFormat": "application/zip"
+    },
+    "spatialCoverage": {
+		"@type": "Place",
+		"identifier": [
+			"Management Authority area ID",
+			"National area ID",
+			"IUCN WDPA ID",
+			"ProtectedSeas Navigator ID"
+		],
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@id": "https://oceanexpert.org/institution/CodeForProtectedSeas",
+            "@type": "Organization",
+            "legalName": "ProtectedSeas",
+            "name": "ProtectedSeas",
+            "url": "https://protectedseas.net/"
+        }
+    ],
+    "about": {
+        "@type": "Event",
+        "description": "Assessment of the protection status of the Florida Quays MPA",
+        "name": "Florida Quays MPA Assessment",
+        "potentialAction": [{
+            "@type": "Action",
+            "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
+            },
+			{ 
+            "@type": "Action",
+            "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
+            }]
+    },
+	"publishingPrinciples": [
+        {
+        "@type": "CreativeWork",
+        "url": "http://example.org/id/doc/ID",
+        "name": "Recommendations for assessing protected area status in US national waters",
+        "description": "This dataset was generated following the recommendations of ..."
+    }
+ ]
+}
