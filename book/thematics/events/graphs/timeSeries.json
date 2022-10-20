@@ -7,29 +7,30 @@
     "name": "Our time series name",
     "description": "Enter an informative description of your time series here",
     "url": "https://yourTimeSeriesWebsite.org/",
-    "about": "Enter text describing what this event series is about (e.g. dophin sightings, microbial sampling, or harmful algal blooms.",
+    "about": "Enter text describing what this event series is about (e.g. dolphin sightings, microbial sampling, or harmful algal blooms.",
 	"keywords": ["keyword 1","keyword 2","keyword 3","keyword 4"],
 	"startDate": "2007-03-01T13:00:00Z",
 	"endDate": "2018-05-11T15:30:00Z",
 	"location": {
 		"name": "The name of the place the events took place in, if present",
         "@type": "Place",
-		"description": "Enter the geospatial region which encapsulates all the events in this series, see https://book.oceaninfohub.org/thematics/spatial/README.html"
+		"description": "Enter the geospatial region which encapsulates all the events in this series, see https://book.oceaninfohub.org/thematics/spatial/README.html",
         "geo": {
             "@type": "GeoShape",
             "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
         },
-		"additionalProperty": {
+		"additionalProperty":[ {
             "@type": "PropertyValue",
             "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
             "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
         },
-        "additionalProperty": {
+       {
             "@type": "PropertyValue",
             "propertyID": "GPS Accuracy / Location error",
             "value": "18",
 			"unitCode": "http://qudt.org/vocab/unit/M"
         }
+          ]
     },
 	"funder": "Funder's Official / Legal Name",
 	"funding": "Official name of grant / funding mechanism",
@@ -38,7 +39,7 @@
 		"https://dataPortalAboutThisTimeSeries.org/",
 		"ISBN:978-3-16-148410-0"
 	],
-	"superevent": ["",],
+	"superevent": [""],
     "citation": [
 		"Enter a DOI for any literature or published work relevant to this time series",
 		"Enter a DOI for any literature or published work relevant to this time series",
@@ -55,14 +56,13 @@
         "name": "Measurement of sea state",
         "potentialAction": [{
             "@type": "Event",
-            "name": "March 2010 sample",
-            }},
+            "name": "March 2010 sample"
+            },
            {
-        "@type": "Event",
-            "name": "February 2010 sample",
-            }
+             "@type": "Event",
+             "name": "February 2010 sample"
            }
-         ]
+        ]
     }],
     "provider": [
         {
