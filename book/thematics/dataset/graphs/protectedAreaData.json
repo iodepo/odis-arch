@@ -22,17 +22,17 @@
         "marine protected area",
         "sanctuary",
         "Florida",
-	"ocean use regulations",
-	"fishing restrictions"
+        "ocean use regulations",
+        "fishing restrictions"
     ],
     "measurementTechnique": "The URL to or text about the methods, technique or technology used in a Dataset",
     "variableMeasured": [
         {
             "@type": "PropertyValue",
             "name": "Level of fishing protection",
-	        "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
             "description": "This variable uses a 1 through 5 categorial/ordinal scale to express the level of restriction (5 being the most restricted) on fishing activity in the protected area",
-	        "measurementTechnique": "URLtoMethodology or text describing method of determination"
+            "measurementTechnique": "URLtoMethodology or text describing method of determination"
         },
         {
             "@type": "PropertyValue",
@@ -48,119 +48,120 @@
     },
     "temporalCoverage": "2007/2007",
     "spatialCoverage": {
-		"@type": "Place",
-		"name": "Pyramid Point State Marine Conservation Area",
-		"url": "https://urlToTheMPA.gov/",
-		"identifier": [
-			{
-			"@type": "PropertyValue",
-			"propertyID": "Management Authority area ID",
-			"value": "CA302"
-			},
-		    {
-			"@type": "PropertyValue",
-			"propertyID": "National area ID",
-			"value": "CA302"
-			},
-			{
-			"@type": "PropertyValue",
-			"propertyID": "IUCN WDPA ID",
-			"value": "555586861"
-			},
-			{
-			"@type": "PropertyValue",
-			"propertyID": "Protected Seas Navigator ID",
-			"value": "CA302"
-			}
-		],
+        "@type": "Place",
+        "name": "Pyramid Point State Marine Conservation Area",
+        "url": "https://urlToTheMPA.gov/",
+        "identifier": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Management Authority area ID",
+                "value": "CA302"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "National area ID",
+                "value": "CA302"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "IUCN WDPA ID",
+                "value": "555586861"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Protected Seas Navigator ID",
+                "value": "CA302"
+            }
+        ],
         "geo": {
             "@type": "GeoShape",
             "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
         },
-        "additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
-            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Area type",
-            "value": "Marine Protected Area"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Area Management Authority",
-            "value": "National Oceanographic and Atmospheric Administration"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Area Management Authority Type",
-            "value": "Federal"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Area Subnational Unit",
-            "value": "Florida"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Area Designation",
-            "value": "National Marine Sanctuary"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Year of Establishment",
-            "value": "1975"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Coastal",
-            "value": "Yes"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Terrestrial component",
-            "value": "Yes"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Spatial area",
-            "value": "500000",
-			"unitCode": "http://qudt.org/vocab/unit/M2"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "IUCN Classification",
-            "value": "II"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "No-take area",
-            "value": "No"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Restricted-take area",
-            "value": "Yes"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Regulation citations",
-            "value": "https://urlToManagementPlan.gov/"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Stage of establishment",
-            "value": "Actively managed"
-        },
-		"additionalProperty": {
-            "@type": "PropertyValue",
-            "propertyID": "Counted for 30 x 30",
-            "value": "Yes",
-			"url": "https://urlToFurther30x30Information.org/"
-        },
-		"publicAccess": "True",
-		
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Area type",
+                "value": "Marine Protected Area"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Area Management Authority",
+                "value": "National Oceanographic and Atmospheric Administration"
+            },
+            { 
+                "@type": "PropertyValue",
+                "propertyID": "Area Management Authority Type",
+                "value": "Federal"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Area Subnational Unit",
+                "value": "Florida"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Area Designation",
+                "value": "National Marine Sanctuary"
+            },
+            {             
+                "@type": "PropertyValue",
+                "propertyID": "Year of Establishment",
+                "value": "1975"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Coastal",
+                "value": "Yes"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Terrestrial component",
+                "value": "Yes"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Spatial area",
+                "value": "500000",
+                "unitCode": "http://qudt.org/vocab/unit/M2"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "IUCN Classification",
+                "value": "II"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "No-take area",
+                "value": "No"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Restricted-take area",
+                "value": "Yes"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Regulation citations",
+                "value": "https://urlToManagementPlan.gov/"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Stage of establishment",
+                "value": "Actively managed"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "Counted for 30 x 30",
+                "value": "Yes",
+                "url": "https://urlToFurther30x30Information.org/"
+            }
+        ],
+        "publicAccess": "True"
     },
     "provider": [
         {
@@ -172,28 +173,26 @@
         }
     ],
     "about": [
-    
-    {
-        "@type": "Event",
-        "description": "Assessment of the protection status of the Florida Quays MPA",
-        "name": "Florida Quays MPA Assessment",
-        "potentialAction": [{
+        {
+            "@type": "Event",
+            "description": "Assessment of the protection status of the Florida Quays MPA",
+            "name": "Florida Quays MPA Assessment",
+            "potentialAction": [{
                 "@type": "Action",
                 "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
             },
-			{ 
+            { 
                 "@type": "Action",
                 "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
             }]
-    }
-	],
-	"publishingPrinciples": [
+        }
+    ],
+    "publishingPrinciples": [
         {
-        "@type": "CreativeWork",
-        "url": "http://example.org/id/doc/ID",
-        "name": "Recommendations for assessing protected area status in US national waters",
-        "description": "This dataset was generated following the recommendations of ..."
-    }
+            "@type": "CreativeWork",
+            "url": "http://example.org/id/doc/ID",
+            "name": "Recommendations for assessing protected area status in US national waters",
+            "description": "This dataset was generated following the recommendations of ..."
+        }
     ]
- 
 }
