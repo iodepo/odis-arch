@@ -1,241 +1,470 @@
+# Master config file for ODIS nodes, that drives the Dagster pipeline
+# to update the ODIS graph.  Other important notes about this config file:
+#  - sorted alphabetically by 'name' parameter
+#  - no need to use quotes. Use the single-quoted style (') if characters 
+#    such as " and \ are being used inside the string to avoid escaping them
+#  - pid: should point to the ODISCat 'view' if available, such as https://catalogue.odis.org/view/689
+#         or if not, use format: https://oceaninfohub.org/.well-known/org/[name]
+#  - url: point to sitemap or sitegraph
+#  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
+#               necessarily when it was included in the ODIS graph)
+#  - headless: true if JSON-LD is embedded in page
+#  - active: ready to include in ODIS
+#  - if a parameter has no value, leave blank (with no quotes)
+# To validate at commandline: execute the following (if the file contains valid 
+# yaml, it will do nothing) :
+#    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
+---
 sources:
-- sourcetype: sitemap
-  name: cioosatlantic
+#
+# AquaDocs
+#
+- name: aquadocs
+  propername: AquaDocs
+  catalogue: https://aquadocs.org/discover
+  domain: https://aquadocs.org
+  logo: https://aquadocs.org/themes/OR//images/repo-logo.png
+  pid: https://catalogue.odis.org/view/3215
+  sourcetype: sitegraph  
+  url: https://oih.aquadocs.org/aquadocs.json
+  backend: OAI  
+  headless: false
+  dateadded: 2021-02-26
+  active: true
+#
+# Benguela Current Convention (BCC) GeoData Portal
+#
+- name: benguelacc
+  propername: Benguela Current Convention (BCC) GeoData Portal
+  catalogue: https://geodata.benguelacc.org/
+  domain: https://www.benguelacc.org/  
+  logo: https://static.tildacdn.com/tild3263-3132-4937-a166-373963646533/Skjermbilde_2020-12-.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/benguelacc
+  sourcetype: sitegraph
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
+  backend: GeoNode  
+  headless: false
+  dateadded: 2022-04-13
+  active: true
+#
+# Caribbean Marine Atlas catalogue
+#  
+- name: caribbeanmarineatlas
+  propername: Caribbean Marine Atlas catalogue
+  catalogue: https://www.caribbeanmarineatlas.net/home/
+  domain: https://www.caribbeanmarineatlas.net/  
+  logo: https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg
+  pid: https://catalogue.odis.org/view/616
+  sourcetype: sitegraph  
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
+  backend: GeoNode  
+  headless: false
+  dateadded: 2022-04-13
+  active: true
+#
+# CIOOS Atlantic
+#    
+- name: cioosatlantic
+  propername: CIOOS Atlantic
+  catalogue: https://catalogue.cioosatlantic.ca/
+  domain: https://cioosatlantic.ca
+  logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
+  sourcetype: sitemap
   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  backend: CKAN  
   headless: true
-  pid: https://www.re3data.org/repository/cioosatlantic
-  propername: CIOOS Atlantic
-  domain: http://cioosatlantic.ca
+  dateadded: 2022-06-04
   active: true
-- sourcetype: sitegraph
-  name: inanodc
-  logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Indonesia National Oceanic Data Center"
-  domain: https://geonode.nodc.id
-  active: true
-- sourcetype: sitegraph
-  name: maspawio
-  logo: "https://cordioea.net/wp-content/uploads/2017/09/Geonde.png"
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean"
-  domain: http://maspawio.net
-  active: true
-- sourcetype: sitegraph
-  name: benguelacc
-  logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Benguela Current Convention (BCC) GeoData Portal"
-  domain: https://geodata.benguelacc.org/
-  active: true
-- sourcetype: sitegraph
-  name: caribbeanmarineatlas
-  logo: "https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg"
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "Caribbean Marine Atlas catalogue"
-  domain: https://www.caribbeanmarineatlas.net/
-  active: true
-- sourcetype: sitegraph
-  name: emodnet
-  logo: "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg"
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
-  headless: false
-  #pid: http://hdl.handle.net/1834/41372
-  propername: "European Marine Observation and Data Network catalogue"
-  domain: https://emodnet.ec.europa.eu/
-  active: true
-- sourcetype: sitemap
-  name: pogo
-  logo: ""
-  url: https://oceanscape.org/organisation-sitemap.xml
-  headless: true
-  pid: http://example.org/pogo/experts
-  propername: Pogo Keywords
-  domain: https://oceanscape.org
-  active: true
-- sourcetype: sitemap
-  name: pdh
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
-  headless: false
-  pid: http://example.org/pacificdatahub
-  propername: Pacific Data Hub
-  domain: https://pacificdata.org
-  active: true
-- sourcetype: sitegraph
-  name: obps
-  url: https://oih.oceanbestpractices.org/obps.json
-  headless: false
-  pid: http://example.org/invemar/obps
-  propername: Ocean Best Practices
-  domain: https://oih.oceanbestpractices.org
-  active: true
-- sourcetype: sitemap
-  name: edmerp
-  url: https://edmerp.seadatanet.org/sitemap.xml
-  headless: false
-  pid: https://www.re3data.org/repository/seadatanet/edmerp
-  propername: EDMERP SeaDataNet
+#
+# EDMERP SeaDataNet
+#  
+- name: edmerp
+  propername: European Directory of Marine Environmental Research Projects (EDMERP) SeaDataNet
+  catalogue: https://edmerp.seadatanet.org/search
   domain: https://edmerp.seadatanet.org
-  active: true
-- sourcetype: sitemap
-  name: edmo
-  url: https://edmo.seadatanet.org/sitemap.xml
+  logo: https://edmerp.seadatanet.org/grfx/edmerp/logo_big.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/edmerp
+  sourcetype: sitemap
+  url: https://edmerp.seadatanet.org/sitemap.xml
+  backend: SeaDataCloud
   headless: false
-  pid: https://www.re3data.org/repository/seadatanet/edmo
-  propername: EDMO SeaDataNet
+  dateadded: 2021-07-26 
+  active: true 
+#
+# EDMO SeaDataNet
+#    
+- name: edmo
+  propername: European Directory of Marine Organisations (EDMO) SeaDataNet
+  catalogue: https://edmo.seadatanet.org/search
   domain: https://edmo.seadatanet.org
-  active: true
-- sourcetype: sitegraph
-  name: invemarexpert
-  url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
+  logo: https://edmo.seadatanet.org/grfx/edmo/logo.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/edmo
+  sourcetype: sitemap 
+  url: https://edmo.seadatanet.org/sitemap.xml
+  backend: SeaDataCloud
+  dateadded: 2021-07-26
   headless: false
-  pid: http://example.org/invemar/experts
-  propername: INVEMAR Experts
-  domain: http://portete.invemar.org.co/chm/api/oih/expert
   active: true
-- sourcetype: sitegraph
-  name: invemardocuments
-  url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
-  headless: false
-  pid: http://example.org/invemar/documents
-  propername: INVEMAR documents
-  domain: http://portete.invemar.org.co/chm/api/oih/documents
-  active: true
-- sourcetype: sitegraph
-  name: invemarinstitution
-  url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
-  headless: false
-  pid: http://example.org/invemar/institution
-  propername: INVEMAR institution
-  domain: http://portete.invemar.org.co/chm/api/oih/institution
-  active: true
-- sourcetype: sitegraph
-  name: invemarvessel
-  url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
-  headless: false
-  pid: http://example.org/invemar/vessel
-  propername: INVEMAR vessel
-  domain: http://portete.invemar.org.co/chm/api/oih/vessel
-  active: true
-- sourcetype: sitegraph
-  name: invemartraining
-  url: http://portete.invemar.org.co/chm/api/oih/training?format=json
-  headless: false
-  pid: http://example.org/invemar/training
-  propername: INVEMAR training
-  domain: http://portete.invemar.org.co/chm/api/oih/training
-  active: true
-- sourcetype: sitegraph
-  name: aquadocs
-  url: https://oih.aquadocs.org/aquadocs.json
-  headless: false
-  pid: http://hdl.handle.net/1834/41372
-  propername: AquaDocs
-  domain: https://aquadocs.org
-  active: true
-- sourcetype: sitemap
-  name: marinetraining
-  url: https://www.marinetraining.eu/sitemap.xml
-  headless: false
-  pid: https://www.re3data.org/repository/marinetraining
-  propername: Marine Training EU
-  domain: https://marinetraining.eu/
-  active: true
-- sourcetype: sitemap
-  name: euroceanprojects
-  url: https://infohub.eurocean.net/sitemap/projects
-  headless: false
-  pid: http://example.org/eurocean/projects
-  propername: EurOcean Projects
-  domain: https://infohub.eurocean.net/data/projects
-  active: true
-- sourcetype: sitemap
-  name: euroceanvessels
-  url: https://infohub.eurocean.net/sitemap/vessels
-  headless: false
-  pid: http://example.org/invemar/documents
-  propername: EurOcean vessels
-  domain: https://infohub.eurocean.net/data/vessels
-  active: true
-- sourcetype: sitemap
-  name: euroceanorgs
-  url: https://infohub.eurocean.net/sitemap/organizations
-  headless: false
-  pid: http://example.org/invemar/documents
-  propername: EurOcean Organizations
-  domain: https://infohub.eurocean.net/data/organizations
-  active: true
-- sourcetype: sitemap
-  name: obis
-  url: https://obis.org/sitemap/sitemap_datasets.xml
-  headless: false
-  pid: https://www.re3data.org/repository/obis
-  propername: Ocean Biodiversity Information System
-  domain: https://obis.org
-  active: true
-- sourcetype: sitemap
-  name: oceanexperts
-  url: https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml
-  headless: false
-  pid: https://www.re3data.org/repository/oceanexpert
-  propername: OceanExpert UNESCO/IOC Project Office for IODE
-  domain: https://oceanexpert.org/
-  active: true
-- sourcetype: sitemap
-  name: euroceanexpert
-  logo: ""
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapExperts.xml
-  headless: false
-  pid: http://example.org/eurocean/experts
-  propername: EurOcean Experts
-  domain: https://infohub.eurocean.net/data/experts
-  active: true
-- sourcetype: sitemap
-  name: euroceanevents
-  logo: ""
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapEvents.xml
-  headless: false
-  pid: http://example.org/eurocean/events
+#
+# EurOcean Events
+#    
+- name: euroceanevents
   propername: EurOcean Events
-  domain: https://infohub.eurocean.net/data/events
-  active: true
-- sourcetype: sitemap
-  name: euroceantraining
-  logo: ""
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapTraining.xml
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/events
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993  
+  sourcetype: sitemap  
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapEvents.xml
+  backend: Unknown    
   headless: false
-  pid: http://example.org/eurocean/training
-  propername: EurOcean training
-  domain: https://infohub.eurocean.net/data/training
+  dateadded: 2022-03-26
+  active: true  
+#
+# EurOcean Experts
+#   
+- name: euroceanexperts
+  propername: EurOcean Experts
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/experts
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993
+  sourcetype: sitemap
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapExperts.xml  
+  backend: Unknown  
+  headless: false
+  dateadded: 2022-03-26
   active: true
-- sourcetype: sitemap
-  name: euroceanorgs
-  logo: ""
+#
+# EurOcean Institutions
+#   
+- name: euroceaninstitutions
+  propername: EurOcean Institutions
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/institutions  
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993
+  sourcetype: sitemap  
   url: https://www.oceanexpert.org/assets/sitemaps/sitemapInstitutions.xml
+  backend: Unknown  
   headless: false
-  pid: http://example.org/eurocean/orgs
+  dateadded: 2022-03-26  
+  active: true
+#
+# EurOcean Organizations
+#   
+- name: euroceanorgs
   propername: EurOcean Organizations
-  domain: https://infohub.eurocean.net/data/organizations
-  active: true
-- sourcetype: sitegraph
-  name: vliz
-  logo: ""
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/organizations
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993
+  sourcetype: sitemap
+  #sitemap entries link to login page
+  url: https://infohub.eurocean.net/sitemap/organizations
+  backend: Unknown  
   headless: false
-  pid: http://example.org/vliz/orgs
-  propername: VLIZ
-  domain: https://emodnet.ec.europa.eu/geonetwork/srv/eng/csw
+  dateadded: 2022-03-26  
+  active: true  
+#
+# EurOcean Projects
+#   
+- name: euroceanprojects
+  propername: EurOcean Projects
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/projects
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993
+  sourcetype: sitemap
+  #sitemap entries link to login page
+  url: https://infohub.eurocean.net/sitemap/projects
+  backend: Unknown  
+  headless: false
+  dateadded: 2022-03-26 
   active: true
-
+#
+# EurOcean Training
+#    
+- name: euroceantraining
+  propername: EurOcean Training 
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/training 
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993  
+  sourcetype: sitemap
+  url: https://www.oceanexpert.org/assets/sitemaps/sitemapTraining.xml
+  backend: Unknown  
+  headless: false
+  dateadded: 2022-03-26  
+  active: true  
+#
+# EurOcean Vessels
+#    
+- name: euroceanvessels
+  propername: EurOcean Vessels
+  domain: https://infohub.eurocean.net/
+  catalogue: https://infohub.eurocean.net/data/vessels
+  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/2993
+  sourcetype: sitemap
+  #sitemap entries link to login page  
+  url: https://infohub.eurocean.net/sitemap/vessels
+  backend: Unknown  
+  headless: false
+  dateadded: 2022-03-26
+  active: true  
+#
+# European Marine Observation and Data Network catalogue
+#  
+- name: emodnet
+  propername: European Marine Observation and Data Network catalogue  
+  domain: https://emodnet.ec.europa.eu/
+  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home 
+  logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
+  pid: https://catalogue.odis.org/view/364
+  sourcetype: sitemap
+  #sitemaps are password protected?
+  url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
+  backend: GeoNetwork  
+  headless: true
+  dateadded: 2022-08-24  
+  active: false
+#
+# Indonesia National Oceanic Data Center
+#    
+- name: inanodc
+  propername: Indonesia National Oceanic Data Center
+  catalogue: https://geonode.nodc.id
+  domain: https://nodc.id  
+  logo: https://nodc.id/dist/img/brin.png
+  pid: https://catalogue.odis.org/view/3246
+  sourcetype: sitemap
+  url: https://geonode.nodc.id/sitemap.xml  
+  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc/ina-nodc-simple-graph.json
+  backend: GeoNode  
+  headless: false
+  dateadded: 2022-04-05 
+  active: true
+#
+# INVEMAR Documents
+#  
+- name: invemardocuments
+  propername: CHM LAC - Documents
+  catalogue: http://portete.invemar.org.co/chm/ 
+  domain: http://portete.invemar.org.co
+  logo: http://portete.invemar.org.co/static/images/logo-web.svg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/invemardocuments
+  sourcetype: sitegraph  
+  url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
+  backend: INVEMAR CHM  
+  headless: false
+  dateadded: 2022-01-26  
+  active: true  
+#
+# INVEMAR Experts
+#    
+- name: invemarexperts
+  propername: CHM LAC - Experts
+  catalogue: http://portete.invemar.org.co/chm/ 
+  domain: http://portete.invemar.org.co
+  logo: http://portete.invemar.org.co/static/images/logo-web.svg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/invemarexpert
+  sourcetype: sitegraph  
+  url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
+  backend: INVEMAR CHM  
+  headless: false
+  dateadded: 2022-01-26 
+  active: true
+#
+# INVEMAR Institutions
+#   
+- name: invemarinstitutions
+  propername: CHM LAC - Institutions
+  catalogue: http://portete.invemar.org.co/chm/ 
+  domain: http://portete.invemar.org.co
+  logo: http://portete.invemar.org.co/static/images/logo-web.svg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/invemarinstitutions
+  sourcetype: sitegraph  
+  url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
+  backend: INVEMAR CHM  
+  headless: false
+  dateadded: 2022-01-26  
+  active: true
+#
+# INVEMAR Training
+#    
+- name: invemartraining
+  propername: CHM LAC - Training
+  catalogue: http://portete.invemar.org.co/chm/ 
+  domain: http://portete.invemar.org.co
+  logo: http://portete.invemar.org.co/static/images/logo-web.svg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/invemartraining
+  sourcetype: sitegraph  
+  url: http://portete.invemar.org.co/chm/api/oih/training?format=json
+  backend: INVEMAR CHM  
+  headless: false
+  dateadded: 2022-01-26  
+  active: true
+#
+# INVEMAR Vessels
+#     
+- name: invemarvessels
+  propername: CHM LAC - Vessels
+  catalogue: http://portete.invemar.org.co/chm/ 
+  domain: http://portete.invemar.org.co
+  logo: http://portete.invemar.org.co/static/images/logo-web.svg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/invemarvessels
+  sourcetype: sitegraph  
+  url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
+  backend: INVEMAR CHM  
+  headless: false
+  dateadded: 2022-01-26  
+  active: true
+#
+# Marine Training EU
+#  
+- name: marinetraining
+  propername: Marine Training EU
+  catalogue: https://marinetraining.eu/search
+  domain: https://marinetraining.eu/
+  logo: https://marinetraining.eu/sites/default/files/M2.0.png
+  #ODISCat entry missing ODIS-arch url & type
+  pid: https://catalogue.odis.org/view/1972  
+  sourcetype: sitemap  
+  url: https://www.marinetraining.eu/sitemap.xml
+  backend: Drupal  
+  headless: false
+  dateadded: 2021-05-26
+  active: true  
+#
+# MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
+#     
+- name: maspawio
+  propername: MASPAWIO - Marine Spatial Atlas for the Western Indian Ocean
+  catalogue: http://maspawio.net/
+  domain: https://cordioea.net/
+  logo: https://cordioea.net/wp-content/uploads/2017/09/Geonde.png
+  pid: https://catalogue.odis.org/view/351
+  sourcetype: sitegraph  
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-simple-graph.json
+  backend: GeoNode  
+  headless: false
+  dateadded: 2022-03-30 
+  active: true
+#
+# OBIS: Ocean Biodiversity Information System
+#       
+- name: obis
+  propername: Ocean Biodiversity Information System
+  catalogue: https://obis.org
+  domain: https://obis.org
+  logo: https://obis.org/images/logo.png
+  #ODISCat entry missing ODIS-arch url
+  pid: https://catalogue.odis.org/view/343
+  sourcetype: sitemap  
+  url: https://obis.org/sitemap_datasets.xml
+  backend: Unknown  
+  headless: false
+  dateadded: 2021-02-26
+  active: true  
+#
+# Ocean Best Practices
+#   
+- name: obps
+  propername: Ocean Best Practices System
+  catalogue: https://www.oceanbestpractices.org/repository/ 
+  domain: https://www.oceanbestpractices.org/
+  logo: https://search.oceanbestpractices.org/static/media/unesco-ioc-ocb-lockup-2x.713a7ec7.png 
+  pid: https://catalogue.odis.org/view/292
+  sourcetype: sitegraph  
+  url: https://oih.oceanbestpractices.org/obps.json
+  backend: OAI  
+  headless: false
+  dateadded: 2021-01-26 
+  active: true
+#
+# OceanExpert
+#  
+- name: oceanexperts
+  propername: OceanExpert UNESCO/IOC Project Office for IODE
+  catalogue: https://oceanexpert.org/advancedSearch
+  domain: https://oceanexpert.org/
+  logo: https://oceanexpert.org/img/logoimageindex.jpg
+  #ODISCat arch url doesn't point to sitemap
+  pid: https://catalogue.odis.org/view/4
+  sourcetype: sitemap    
+  url: https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml
+  backend: Unknown  
+  headless: false
+  dateadded: 2021-08-26  
+  active: true  
+#
+# Oceanscape Project
+# 
+- name: oceanscape
+  propername: Oceanscape Project
+  catalogue: https://oceanscape.org
+  domain: https://geoblueplanet.org/
+  logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
+  pid: https://catalogue.odis.org/view/1098
+  sourcetype: sitemap
+  url: https://oceanscape.org/organisation-sitemap.xml
+  #url: https://oceanscape.org/sitemap_index.xml
+  backend: WordPress  
+  headless: true
+  dateadded: 2022-05-18 
+  active: true
+#
+# Pacific Data Hub
+#   
+- name: pdh
+  propername: Pacific Data Hub
+  catalogue: https://pacificdata.org/data/dataset
+  domain: https://pacificdata.org
+  logo: https://pacificdata.org/themes/custom/spc/logo.png
+  pid: https://catalogue.odis.org/view/689
+  sourcetype: sitemap
+  url: https://pacificdata.org/organization/sitemap.xml  
+  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
+  backend: CKAN  
+  headless: true
+  dateadded: 2022-07-25   
+  active: true
+#
+# VLIZ: Flanders Marine Institute catalogue
+#     
+- name: vliz
+  propername: VLIZ - Flanders Marine Institute catalogue
+  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+  domain: http://www.vliz.be/en 
+  logo: ""
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/vliz
+  sourcetype: sitegraph
+  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  backend: GeoNetwork  
+  headless: false
+  dateadded: 2022-08-03
+  active: false
 #- sourcetype: sitemap
   #name: marineie
   #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap

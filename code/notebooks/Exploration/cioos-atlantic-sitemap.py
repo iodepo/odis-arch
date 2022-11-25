@@ -3,7 +3,7 @@
 """
 Purpose: Standalone script to generate sitemap, from CKAN endpoint
 
-Usage:   python pacificdatahub-sitemap.py
+Usage:   python cioos-atlantic-sitemap.py
 
 Output:  sitemap.xml
          
@@ -12,12 +12,12 @@ Requires: Python 3.x, CKAN+DCAT extension installed
 """
 
 # define common variables
-CKAN_ENDPOINT = "https://pacificdata.org/data"
+CKAN_ENDPOINT = "https://catalogue.cioosatlantic.ca"
 CKAN_ENDPOINT_TIMEOUT = 60 #seconds
 NEW_SITEMAP_FILENAME = "sitemap.xml"
-HOSTNAME = "https://pacificdata.org/"
-LOGFILE = "pacificdatahub-sitemap.log"
-SHORTNAME = "pacificdatahub" #no spaces
+HOSTNAME = "https://cioosatlantic.ca"
+LOGFILE = "cioos-atlantic-sitemap.log"
+SHORTNAME = "cioos-atlantic" #no spaces
 
 """
 #########################
