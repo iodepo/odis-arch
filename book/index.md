@@ -1,7 +1,11 @@
-The Ocean InfoHub Project
-============================
+# The Ocean InfoHub Project
 
 ## Introduction
+
+A short YouTube video is linked below to provide a high level context
+to the Ocean InfoHub project. 
+
+[![Ocean Infohub YouTube video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
 
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
@@ -95,8 +99,3 @@ Government of Canada:
 
 ![image1](./images/intro2.png)
 
-## Info-graphic
-
-The following is a simple overview info-graphic of the Ocean Info Hub activity flow.  
-
-![image1](./images/OIHInfoGraphic.png)
