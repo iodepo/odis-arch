@@ -1,0 +1,105 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://urlToThisJsonDoc.org/",
+    "name": "Generic Dataset pattern for the Ocean Biomolecular Observatory Network (OBON) Programme of the UN Decade of Ocean Science for Sustainable Development",
+    "description": "This template provides guidance to all partners that wish to federate their data through the OBON digital strategy and ODIS architecture. Please contact OBON for more guidance.",
+    "url": "URLtoLandingPage",
+    "sameAs": [
+        "URLforAnyEquivalentPages",
+        "www.
+    ],
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": "Any citations of other CreativeWorks that are relevant to or qualify this one",
+    "version": "2021-04-24T06:34:56.000Z",
+    "keywords": [
+        "biomolecule",
+        "eDNA",
+        "RNA",
+		    "fish stock assessment",
+	    	"pathogen"
+    ],
+    "measurementTechnique": "The URL to or text about the methods, technique or technology used to produce this Dataset",
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Nucleotide sequence",
+			      "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "Description of this variable",
+		      	"measurementTechnique": "URLtoMethodology or text describing method of determination"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Nucleotide sequence quality score",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether bottom trawling is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://registry.org/odisCatalogID",
+        "@type": "DataCatalog",
+        "url": "https://organisationDatacatalog.org/"
+    },
+    "temporalCoverage": "2007/2007",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://repository.org/download/asd3jw.fastq",
+        "encodingFormat": "application/fastq"
+    },
+    "spatialCoverage": {
+		"@type": "Place",
+		        "@id": "https://placeRegistry.org/permanentIdForPlace",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@id": "https://oceanexpert.org/institution/CodeForProvider",
+            "@type": "Organization",
+            "legalName": "Name of the Organisation",
+            "name": "ProtectedSeas",
+            "url": "https://protectedseas.net/"
+        }
+    ],
+    "about": {
+        "@type": "Event",
+        "description": "Assessment of the protection status of the Florida Quays MPA",
+        "name": "Florida Quays MPA Assessment",
+        "potentialAction": [{
+            "@type": "Action",
+            "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
+            },
+			{ 
+            "@type": "Action",
+            "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
+            }]
+    },
+	"publishingPrinciples": [{
+        "@type": "CreativeWork",
+        "url": "http://www.goosocean.org/components/com_oe/oe.php?task=download&id=34494&version=1.0&lang=1&format=1",
+        "name": "Ocean Observations Physics and Climate Panel (OOPC) Sea State GOOS EOV Specification Sheet",
+        "description": "This is the EOV specification sheet released by GOOS for Sea State.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. "
+    },
+        {
+        "@type": "CreativeWork",
+        "url": "http://www.goosocean.org/components/com_oe/oe.php?task=download&id=34507&version=1.0&lang=1&format=1",
+        "name": "Ocean Observations Physics and Climate Panel (OOPC) Ocean Surface Stress GOOS EOV Specification Sheet",
+        "description": "This is the EOV specification sheet released by GOOS for Ocean Surface Stress.  It was composed by the Ocean Observations Panel for Climate.  OOPC is sponsored by the Global Ocean Observing System the Global Climate Observing System and the World Climate Research Program. OOPC provides advice on scientific requirements to the Joint Commission for Oceanography and Marine Meteorology. "
+    },
+        {
+        "@type": "CreativeWork",
+        "url": "http://example.org/id/doc/ID",
+        "name": "QA/QC guidance",
+        "description": "QA/QC  - EOV data and the methods used to generate them should have been vetted through some QA/QC methods, ideally performed by an independent third-party. These should be included in a dedicated JSON-LD block, even if it points to the same methodology linked to in the measurementTechnique block. "
+    }
+ ],
+}
