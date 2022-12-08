@@ -229,20 +229,18 @@ sources:
 #
 # European Marine Observation and Data Network catalogue
 #  
-- name: emodnet
+- name: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
   propername: European Marine Observation and Data Network catalogue  
   domain: https://emodnet.ec.europa.eu/
   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home 
   logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
   pid: https://catalogue.odis.org/view/364
   sourcetype: sitemap
-  #sitemaps are password protected?
   url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
-  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
   backend: GeoNetwork  
   headless: true
   dateadded: 2022-08-24  
-  active: false
+  active: true
 #
 # Indonesia National Oceanic Data Center
 #    
@@ -466,20 +464,20 @@ sources:
   active: false  
 #
 # VLIZ: Flanders Marine Institute catalogue
-#     
-- name: vliz
-  propername: VLIZ - Flanders Marine Institute catalogue
-  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-  domain: http://www.vliz.be/en 
-  logo: ""
-  #missing ODISCat entry
-  pid: https://oceaninfohub.org/.well-known/org/vliz
-  sourcetype: sitegraph
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-  backend: GeoNetwork  
-  headless: false
-  dateadded: 2022-08-03
-  active: false
+#   note: VLIZ & EMODNet services were unified in late 2022 
+# - name: vliz
+  # propername: VLIZ - Flanders Marine Institute catalogue
+  # catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+  # domain: http://www.vliz.be/en 
+  # logo: ""
+  # #missing ODISCat entry
+  # pid: https://oceaninfohub.org/.well-known/org/vliz
+  # sourcetype: sitegraph
+  # url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  # backend: GeoNetwork  
+  # headless: false
+  # dateadded: 2022-08-03
+  # active: false
 #- sourcetype: sitemap
   #name: marineie
   #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
