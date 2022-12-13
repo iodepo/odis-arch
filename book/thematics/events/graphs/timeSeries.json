@@ -1,7 +1,38 @@
 {
-    "@context": {
-        "@vocab": "https://schema.org/"
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "EventSeries",
+  "@id": "https://pidOfThisJsonLDdoc.org/",
+  "name": "Our time series name",
+  "description": "Enter an informative description of your time series here",
+  "url": "https://yourTimeSeriesWebsite.org/",
+  "about": "Enter text describing what this event series is about (e.g. dolphin sightings, microbial sampling, or harmful algal blooms.",
+  "keywords": [
+    "keyword 1",
+    "keyword 2",
+    "keyword 3",
+    "keyword 4"
+  ],
+  "startDate": "2007-03-01T13:00:00Z",
+  "endDate": "2018-05-11T15:30:00Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.3280,
+      "longitude": 120.1633
+    }
+  },
+  "location": {
+    "name": "The name of the place the events took place in, if present",
+    "@type": "Place",
+    "description": "Enter the geospatial region which encapsulates all the events in this series, see https://book.oceaninfohub.org/thematics/spatial/README.html",
+    "geo": {
+      "@type": "GeoShape",
+      "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
     },
+<<<<<<< Updated upstream
     "@type": "EventSeries",
     "@id": "https://pidOfThisJsonLDdoc.org/",
     "name": "Our time series name",
@@ -74,3 +105,90 @@
         }
     ]
 }
+=======
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "GPS Accuracy / Location error",
+        "value": "18",
+        "unitCode": "http://qudt.org/vocab/unit/M"
+      }
+    ]
+  },
+  "funder": "Funder's Official / Legal Name",
+  "funding": "Official name of grant / funding mechanism",
+  "organizer": "Official name or URL/DOI/URI of the coordinating organization or individual",
+  "subjectOf": [
+    "https://dataPortalAboutThisTimeSeries.org/",
+    "ISBN:978-3-16-148410-0"
+  ],
+  "superevent": [
+    ""
+  ],
+  "citation": [
+    "Enter a DOI for any literature or published work relevant to this time series",
+    "Enter a DOI for any literature or published work relevant to this time series",
+    "Enter a DOI for any literature or published work relevant to this time series"
+  ],
+  "contributor": {
+    "@list": [
+      {
+        "@id": "https://pidOfThisJsonLDdoc.org/",
+        "@type": "Person",
+        "name": "Capt. Nemo",
+        "url": "https://orcid.org/id/XYZ",
+        "role": "Their resolvableURL"
+      },
+      "A person or organization who contributed to this event series",
+      "A person or organization who contributed to this event series",
+      "A person or organization who contributed to this event series"
+    ]
+  },
+  "subevent": {
+    "@list": [
+      {
+        "@id": "https://pidOfThisJsonLDdoc.org/",
+        "url": "https://yourTimeSeriesWebsite.org/id/subevent/page",
+        "@type": "Event",
+        "description": "describe the activity, could be a cruise, or sampling event,  might include name here too.",
+        "name": "Measurement of sea state",
+        "alternateName": [
+          "Some alternate name"
+        ],
+        "startDate": "2007-03-01T13:00:00Z",
+        "endDate": "2007-04-01T13:00:00Z",
+        "recordedIn": [
+          {
+            "@id": "https://pidOfThisJsonLDdoc.org/",
+            "@type": "Dataset"
+          }
+        ],
+        "potentialAction": [
+          {
+            "@type": "Event",
+            "name": "March 2010 sample"
+          },
+          {
+            "@type": "Event",
+            "name": "February 2010 sample"
+          }
+        ]
+      }
+    ]
+  },
+  "provider": [
+    {
+      "@id": "https://oceanexpert.org/institution/INSTITUTE_ID",
+      "@type": "Organization",
+      "legalName": "Example University",
+      "name": "Example University",
+      "url": "https://oceanexpert.org/institution/INSTITUTE_ID"
+    }
+  ]
+}
+>>>>>>> Stashed changes

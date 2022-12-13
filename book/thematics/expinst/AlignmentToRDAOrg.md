@@ -32,19 +32,19 @@ Document Flow
 
 ## Schema.org type Organization
 
-Schema.org is a collection of schemas, or data categories, that can
+Schema.org is a collection of schemas representing type and properties that can
 be used to mark up content on the web. It provides a standardized way
 of describing information on the web, making it easier for search engines
 and other applications to understand and process the information. For people
 interested in describing research organizations, schema.org provides
 several relevant schemas that can be used to mark up information about
-research organizations, such as the Organization schema,
-the EducationalOrganization schema, and the ResearchOrganization schema.
+research organizations, such as  schema.org/Organization,
+ schema.org/EducationalOrganization, and the schema.org/ResearchOrganization.
 These schemas allow you to provide information about the research organization,
-such as its name, location, and details about the research it conducts. This
-can help search engines and other applications to better understand the information
-about your research organization and can make it easier for people to
-find your organization and learn more about the research you do.
+such as its name, location, funding and more. This
+can help search engines and other applications better understand the information
+about a research organization and can make it easier for people to
+find an organization and learn more about them.
 
 Thing ->  https://schema.org/Organization  -> https://schema.org/ResearchOrganization
 
