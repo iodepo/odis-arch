@@ -1,0 +1,115 @@
+{
+	"@context": { "@vocab": "https://schema.org/" },
+	"@type": "EventSeries",
+	"@id": {foaf:homepage},
+	"name": {dcterms:title},
+	"description": {dcterms:description},
+	"url": {foaf:homepage},
+	"startDate": {odo:hasProjectDates -> time:hasBeginning -> rdfs:label},
+	"endDate": {odo:hasProjectDates -> time:hasEnd -> rdfs:label},
+	"location": {
+		"@type": "Place",
+		"name": {odo:hasGeoLocation},
+		"geo": {
+			"@type": "GeoShape",
+			"polygon": {NEED},
+			"additionalProperty":[ 
+				{
+					"@type": "PropertyValue",
+					"propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+					"value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+				},
+				{
+					"@type": "PropertyValue",
+					"propertyID": "GPS Accuracy / Location error",
+					"value": {NEED},
+					"unitCode": "http://qudt.org/vocab/unit/M"
+				}
+			]
+		}
+	},
+	"funder": [
+		{
+			"@id": {odo:hasAward -> odo:osprey_page},
+			"@type": "FundingAgency",
+			"name":  {odo:hasAward -> odo:hasFundingSource -> foaf:name},
+			"alternateName:": {odo:hasAward -> odo:hasFundingSource -> odo:hasAcronym},
+			"identifier": {
+				"@id": {odo:hasAward -> odo:hasFundingSource -> odo:Identifier -> {odo:identifierScheme:odo:IdentifierScheme_Fundref; odo:resolvableURL}
+				"@type": "PropertyValue",
+				"propertyID": "https://registry.identifiers.org/registry/doi",
+				"value": 'doi:' . {odo:hasAward -> odo:hasFundingSource -> odo:Identifier -> {odo:identifierScheme:odo:IdentifierScheme_Fundref; odo:identifierValue}},
+				"url": {odo:hasAward -> odo:hasFundingSource -> odo:Identifier -> {odo:identifierScheme:odo:IdentifierScheme_Fundref; odo:resolvableURL}},
+			},
+			"sameAs": {odo:hasAward -> odo:hasFundingSource -> odo:Identifier -> {odo:identifierScheme:odo:IdentifierScheme_Fundref; odo:resolvableURL}}
+		}
+	],
+	"funding": [
+		{
+			"@id": {odo:hasAward -> odo:osprey_page},
+			"@type": "MonetaryGrant",
+			"url": {odo:hasAward -> odo:osprey_page},
+			"name": {odo:hasAward -> odo:hasAwardNumber},
+			"identifier": {odo:hasAward -> odo:hasAwardNumber},
+			"funder": {"@id": odo:hasAward -> odo:osprey_page}},
+			"sameAs": {odo:hasAward -> odo:hasAwardURL}
+		}
+	],
+	"organizer": [
+		{
+			"@type": "Organization",
+			"name": {odo:hasAgentWithRole -> odo:forOrganization} ,
+			"NOTE": "see https://bco-dmo.atlassian.net/browse/BD-270",
+		}
+	],
+	"citation": [
+		{NEED: allow us to put publications on a Project - should be URLs to the DOI, etc}
+	],
+	"contributor": {
+		"@list": [
+			{
+				"@id": {odo:hasAgentWithRole -> odo:performedBy -> odo:osprey_page},
+				"@type": "Person",
+				"name": {odo:hasAgentWithRole -> odo:performedBy -> rdfs:label},
+				"url": {odo:hasAgentWithRole -> odo:performedBy -> odo:osprey_page}
+				"role": {odo odo:hasAgentWithRole -> rdf:type -> rdfs:label WHERE rdf:type != odo:Role AND rdf:type = rdfs:subclassOf odo:Role}
+			}
+		]
+	},
+	"subevent": {
+		"@list: [
+			{
+				"@id": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:osprey_page},
+				"url": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:osprey_page},
+				"@type": "Event",
+				"name": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> dcterms:title},
+				"alternateName": [
+					{odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:hasSynonym}
+				],
+				"description": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:hasDeploymentDescription},
+				"startDate": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:hasDeploymentDates -> time:hasBeginning -> rdfs:label},
+				"endDate": {odo:hasDataset <- odo:fromCollection -> odo:fromDeployment -> odo:hasDeploymentDates -> time:hasEnd -> rdfs:label},
+				"recordedIn": [
+					{
+						"@id": {odo:hasDataset <- odo:osprey_page},
+						"@type": "Dataset"
+					}
+				]
+			}
+		]
+	},
+	"provider": {
+		"@id": "https://www.bco-dmo.org",
+		"@type": ["ResearchProject", "DataCatalog"],
+		"name": "Biological and Chemical Data Management Office",
+		"alternateName": "BCO-DMO",
+		"url": "https://www.bco-dmo.org",
+		"publishingPrinciples": [
+			{
+				"@type": "DigitalDocument",
+				"name": "Terms of Use",
+				"url": "https://www.bco-dmo.org/terms-use"
+			} 
+		]
+	}
+}
