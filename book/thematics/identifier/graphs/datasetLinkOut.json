@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://geoconnex.us/example/asset/1",
+    "name": "Name or title of the document",
+    "description": "Description of the map to aid in searching",
+    "url": "https://example.org/url/of/the/item",
+    "identifier": [
+        {
+            "@type": "PropertyValue",
+            "propertyID": "https://www.wikidata.org/wiki/Q17058352",
+            "value": "Q2207226",
+            "url": "https://www.geosamples.org/id/igsn/Q2207226",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "url": "https://example.org/id/dataset/1"
+            }
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "https://registry.identifiers.org/registry/odam",
+            "value": "frim1",
+            "valueReference": "NID",
+            "subjectOf": {
+                "@type": "CreativeWork",
+                "url": "https://example.org/id/dataset/2"
+            }
+        }
+    ],
+    "keywords": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Name of the set",
+            "description": "Description of the set",
+            "url": "url for the set"
+        },
+        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
+    }
+}

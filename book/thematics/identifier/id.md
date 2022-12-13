@@ -47,7 +47,7 @@ to provide source and provenance information about a resource.
 
 ```{literalinclude} ./graphs/creativework.json
 :linenos:
-:emphasize-lines: 7-33
+:emphasize-lines: 8-34
 ```
 
 ```{code-cell}
