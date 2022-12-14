@@ -33,34 +33,33 @@ Document Flow
 ## Schema.org type Organization
 
 Schema.org is a collection of schemas representing type and properties that can
-be used to mark up content on the web. It provides a standardized way
-of describing information on the web, making it easier for search engines
-and other applications to understand and process the information. For people
-interested in describing research organizations, schema.org provides
+be used to mark up content on the web. It provides a standardized way of
+describing information on the web, making it easier for search engines and other
+applications to understand and process the information. 
+
+For people interested in describing research organizations, schema.org provides
 several relevant schemas that can be used to mark up information about
 research organizations, such as  schema.org/Organization,
- schema.org/EducationalOrganization, and the schema.org/ResearchOrganization.
+schema.org/EducationalOrganization, and the schema.org/ResearchOrganization.
+
 These schemas allow you to provide information about the research organization,
-such as its name, location, funding and more. This
-can help search engines and other applications better understand the information
-about a research organization and can make it easier for people to
-find an organization and learn more about them.
+such as its name, location, funding and more. This can help search engines and
+other applications better understand the information about a research
+organization and can make it easier for people to find an organization and learn
+more about them.
 
-Thing ->  https://schema.org/Organization  -> https://schema.org/ResearchOrganization
+![relations](./assets/d2/schemaorg.svg)
 
-https://github.com/schemaorg/schemaorg/issues/2877
+References:
+
+* https://schema.org/Thing
+* https://schema.org/Organization
+* https://schema.org/ResearchOrganization
+* https://github.com/schemaorg/schemaorg/issues/2877
 
 ## JSON-LD
-(move to a refernece elsewhere in the book)
 
-JSON-LD is a way of encoding Linked Data in JSON, the popular data interchange
-format used by many web APIs. Linked Data is a method of representing information
-on the web in a way that allows it to be linked and interconnected with other data.
-This allows data from different sources to be connected and used together in new
-and powerful ways. JSON-LD uses a standardized syntax to represent Linked Data,
-making it easier to integrate with other systems and tools. It is often used to
-add structured data to web pages, making it easier for search engines and other
-applications to understand and process the information on the page.
+[JSON-LD Basics](https://book.oceaninfohub.org/foundation/foundation.html)
 
 ## Implementation of RDA attributes
 
@@ -75,30 +74,78 @@ Implementation document with json crack and playground links
 
 SHACL is a W3C recommendation for a language that can be used to define and
 validate the structure and content of data stored in RDF graphs. It stands for
-SHapes Constraint Language. RDF is a standard for representing information on
-the web in a way that allows it to be linked and interconnected with other data.
+SHapes Constraint Language. 
+
 SHACL provides a way to specify constraints on the data in an RDF graph, such as
 the required and optional properties for a given class of data, the allowed
 values for a property, and the relationships between different classes of data.
+
 These constraints can be used to validate the data in an RDF graph, ensuring
 that it adheres to the defined structure and rules. This can help to ensure the
 quality and consistency of the data, making it easier to integrate and use with
 other systems.
 
+A popular SHACL validation tool is pySHACL.  It can produce both human and 
+machine focues output.  For machines, the output is valid RDF which can be 
+used in a triplestore and querried for reports.  
+
+For humans output looks like the following.  Note the use of _Severity_ to 
+allow for different types of warnings to be produced.
+
+```turtle
+Validation Report
+Conforms: False
+Results (6):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:urlResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:url
+        Message: URL required for the location of the resource described by this metadata
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:identifierProviderProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:provider
+        Message: A provider must be noted
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:identifierProviderProperty
+        Focus Node: <https://index.example.org/id/org/x>
+        Result Path: schema:provider
+        Message: A provider must be noted
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Warning
+        Source Shape: oihval:keywordsResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:keywords
+        Message: A resource should include descriptive keywords
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Info
+        Source Shape: oihval:licenseResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:license
+        Message: Though not required, it is good practice to include a license if one exists
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Info
+        Source Shape: oihval:licenseResourceProperty
+        Focus Node: <https://index.example.org/id/org/x>
+        Result Path: schema:license
+        Message: Though not required, it is good practice to include a license if one exists
+
+```
+
+
+[OIH Book Validation Information](https://book.oceaninfohub.org/validation/README.html)
 
 ## Query (SPARQL)
 
 SPARQL is a query language that is used to retrieve and manipulate data stored
 in RDF graphs. RDF is a standard for representing information on the web in a
-way that allows it to be linked and interconnected with other data. SPARQL
-allows you to query this data using a specialized syntax, similar to SQL. You
-can use SPARQL to ask questions about the data in an RDF graph, such as which
-entities have a certain property, what values a property has, and how entities
-are related to each other. SPARQL can also be used to update the data in an RDF
-graph, allowing you to add, delete, and modify data. This makes SPARQL a
-powerful tool for working with RDF data and can enable you to do things like
-build search engines, integrate data from different sources, and create complex
-data-driven applications.
+way that allows it to be linked and interconnected with other data. 
+
+[OIH Book SPARQL Information](https://book.oceaninfohub.org/users/query.html)
+
 
 ## Issues encountered
 
@@ -132,8 +179,6 @@ Can use them at altIDs or Poperty values with details
 
 See https://www.rd-alliance.org/groups/data-repository-attributes-wg
 for the latest information on the output of this group.
-
-Ref: https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
 | [](https://docs.google.com/document/d/1cNT_IQUUFbDIlT0eCY320LaBz7LjjkenDwYMTVyU6f0/edit)[Attribute:<br>](https://docs.google.com/document/d/1cNT_IQUUFbDIlT0eCY320LaBz7LjjkenDwYMTVyU6f0/edit) | re3data<br>                              | fairsharing                                                                                                                    | [schema.org](http://schema.org/)                                                                                                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

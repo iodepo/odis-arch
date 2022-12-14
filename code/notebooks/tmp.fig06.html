@@ -50,8 +50,8 @@
         
 
         // parsing and collecting nodes and edges from the python
-        nodes = new vis.DataSet([{"color": {"background": "white", "border": "#ff7e0e"}, "id": "?recipe", "label": "?recipe", "shape": "ellipse", "shapeProperties": {"borderDashes": [5, 5]}, "style": "dashed"}, {"color": {"background": "white", "border": "#ff7e0e"}, "id": "ind:ChickenEgg", "label": "ind:ChickenEgg", "shape": "ellipse"}, {"color": {"background": "white", "border": "#ff7e0e"}, "id": "wtm:Recipe", "label": "wtm:Recipe", "shape": "ellipse"}, {"color": {"background": "white", "border": "#ff7e0e"}, "id": "?time", "label": "?time", "shape": "ellipse", "shapeProperties": {"borderDashes": [5, 5]}, "style": "dashed"}, {"color": {"background": "white", "border": "#ff7e0e"}, "id": "?definition", "label": "?definition", "shape": "ellipse", "shapeProperties": {"borderDashes": [5, 5]}, "style": "dashed"}]);
-        edges = new vis.DataSet([{"arrows": {"to": {"enabled": true}}, "color": "#ff7e0e", "from": "?recipe", "label": "wtm:hasIngredient", "to": "ind:ChickenEgg"}, {"arrows": {"to": {"enabled": true}}, "color": "#ff7e0e", "from": "?recipe", "label": "rdf:type", "to": "wtm:Recipe"}, {"arrows": {"to": {"enabled": true}}, "color": "#ff7e0e", "from": "?recipe", "label": "wtm:hasCookTime", "to": "?time"}, {"arrows": {"to": {"enabled": true}}, "color": "#ff7e0e", "from": "?recipe", "label": "skos:definition", "to": "?definition"}]);
+        nodes = new vis.DataSet([{"color": {"background": "white", "border": "#ff7e0e"}, "id": "?s", "label": "?s", "shape": "ellipse", "shapeProperties": {"borderDashes": [5, 5]}, "style": "dashed"}, {"color": {"background": "white", "border": "#ff7e0e"}, "id": "?o", "label": "?o", "shape": "ellipse", "shapeProperties": {"borderDashes": [5, 5]}, "style": "dashed"}]);
+        edges = new vis.DataSet([{"arrows": {"to": {"enabled": true}}, "color": "#ff7e0e", "dashes": [5, 5], "from": "?s", "label": "?p", "style": "dashed", "to": "?o"}]);
 
         // adding nodes and edges to the graph
         data = {nodes: nodes, edges: edges};

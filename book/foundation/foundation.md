@@ -15,6 +15,14 @@ execution:
 # JSON-LD Foundation
 
 ## Introduction
+JSON-LD is a way of encoding Linked Data in JSON, the popular data interchange
+format used by many web APIs. Linked Data is a method of representing information
+on the web in a way that allows it to be linked and interconnected with other data.
+This allows data from different sources to be connected and used together in new
+and powerful ways. JSON-LD uses a standardized syntax to represent Linked Data,
+making it easier to integrate with other systems and tools. It is often used to
+add structured data to web pages, making it easier for search engines and other
+applications to understand and process the information on the page.
 
 This document provide a very brief introduction to the JSON-LD serialization format.  
 The [JSON-LD](https://json-ld.org) website has some detailed material and videos in
