@@ -17,9 +17,9 @@ execution:
 
 ## About
 
-This document describes the alignment of schema.org Organization with the
+This document describes an application of schema.org Organization to implement the
 [RDA Data Repository Attributes Working Group](https://www.rd-alliance.org/groups/data-repository-attributes-wg)
-work on repository attributes.  
+guidance on repository attributes.
 
 Document Flow
 
@@ -32,8 +32,8 @@ Document Flow
 
 ## Schema.org type Organization
 
-Schema.org is a collection of schemas representing type and properties that can
-be used to mark up content on the web. It provides a standardized way of
+Schema.org (https://schema.org/docs/about.html) is a collection of schemas representing
+type and properties that canbe used to mark up content on the web. It provides a standardized way of
 describing information on the web, making it easier for search engines and other
 applications to understand and process the information. 
 
@@ -42,13 +42,15 @@ several relevant schemas that can be used to mark up information about
 research organizations, such as  schema.org/Organization,
 schema.org/EducationalOrganization, and the schema.org/ResearchOrganization.
 
-These schemas allow you to provide information about the research organization,
-such as its name, location, funding and more. This can help search engines and
-other applications better understand the information about a research
-organization and can make it easier for people to find an organization and learn
-more about them.
-
 ![relations](./assets/d2/schemaorg.svg)
+
+Additionally, types for data, APIs, and various offers an organization can make
+are available.
+
+Also, as a vocabulary based on the RDF data model, mappings and leveraging other related
+vocabularies such as DCAT is possible.  Beyond integration, there are also mappings that
+have been done such as: [ISO 19115 - DCAT - Schema.org mapping](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
+and [DCAT v2 schema.org alignment](https://www.w3.org/TR/vocab-dcat-2/#dcat-sdo).
 
 References:
 
@@ -63,9 +65,8 @@ References:
 
 ## Implementation of RDA attributes
 
-Full example with highlights as in other docs and JSON-LD framing elements/sections
+[Example JSON-LD](graphs/organizationv2.json)
 
-Implementation document with json crack and playground links
 
 ![orgv2](./assets/orgv2.png)
 
@@ -138,7 +139,6 @@ Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#Min
         Message: Though not required, it is good practice to include a license if one exists
 
 ```
-
 
 [OIH Book Validation Information](https://book.oceaninfohub.org/validation/README.html)
 
