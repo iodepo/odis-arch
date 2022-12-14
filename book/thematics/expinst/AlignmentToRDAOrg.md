@@ -85,12 +85,16 @@ that it adheres to the defined structure and rules. This can help to ensure the
 quality and consistency of the data, making it easier to integrate and use with
 other systems.
 
-A popular SHACL validation tool is pySHACL.  It can produce both human and 
-machine focues output.  For machines, the output is valid RDF which can be 
-used in a triplestore and querried for reports.  
+A popular SHACL validation tool is [pySHACL](https://github.com/RDFLib/pySHACL).
+It can produce both human and machine focues output.  For machines, the output is
+valid RDF which can be used in a triplestore and querried for reports.  
 
 For humans output looks like the following.  Note the use of _Severity_ to 
 allow for different types of warnings to be produced.
+
+```bash
+pyshacl -s ./shapes/orgShape.ttl -sf turtle  -f human ./graphs/organizationv2.json -df json-ld
+```
 
 ```turtle
 Validation Report
@@ -146,6 +150,7 @@ way that allows it to be linked and interconnected with other data.
 
 [OIH Book SPARQL Information](https://book.oceaninfohub.org/users/query.html)
 
+[Notebook example](https://github.com/iodepo/odis-arch/blob/schema-dev-df/code/notebooks/demos/simpleSPARQL.ipynb)
 
 ## Issues encountered
 
@@ -154,9 +159,21 @@ than the ecoding.  It's almost always possible to find a valid approach
 to encoding information.  However, that process can cause the discovery
 and use of the data to be more difficult.  
 
+### Loose semantics
+
+Some of the concepts present in the RDA working group are a bit difficult
+to map into the properties and Types of schema.org.  Exmaples include:
+
+* Persistent identifiers used within your organization
+* Deposit
+* Content/format
+
 ### On leveraging PIDs
 
-Can use them at altIDs or Poperty values with details
+PIDs are easy to leverage in schema.org.   Then can can use as altIDs or
+Poperty values.  This is just one example of where approaches can vary
+and shows where use the of Architecture Decision Records could be of
+use.  [(Example ADR reference)](https://github.com/joelparkerhenderson/architecture-decision-record)
 
 ```json
   "identifier":
@@ -171,8 +188,11 @@ Can use them at altIDs or Poperty values with details
 
 ### External context leveraging
 
-### Square peg round hole (loose semantics)
+In this exercise the goal was to map the working group properties using only Schema.org.  However,
+one could leverage things like Dublin Core, FOAF, or DCAT to address some of the loose
+semantics of Schema.org.
 
+The trade off being a more complex context and potentially more compelexity in query space.
 
 
 ## Reference table (late 2022)
