@@ -1,6 +1,16 @@
 # odis-arch
 
-Repository for the development of the ODIS architecture. The reference documentation in the [docs](docs) folder is published to https://iodepo.github.io/odis-arch.
+Repository for the development of the ODIS (Ocean Data and 
+Information System) architecture, as part of the [OIH](https://oceaninfohub.org/) 
+(Ocean InfoHub) Project. The reference documentation in the [docs](docs) folder is 
+published to https://iodepo.github.io/odis-arch.
+
+## License
+
+The ODIS reference documentation in the [docs](docs) folder is covered by
+the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode), 
+which lets others distribute, remix, adapt, and build upon the work, even commercially, 
+as long as they credit the original authors for the original creation.
 
 ## Project folder and documents
 
