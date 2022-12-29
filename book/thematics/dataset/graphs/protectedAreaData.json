@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "https://urlToThisJsonLD.org/",
     "name": "Florida Keys National Marine Sanctuary data bundle",
-    "description": "This dataset contains geospatial data delimiting the Florida Keys National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant features.",
+    "description": "This dataset contains geospatial data delimiting the Florida Keys National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant data.",
     "url": "https://mpa.protectedseas.net/index.php?z=7&lat=24.976890639378173&lng=-81.60833353550001&q=NMS4&pin",
     "sameAs": [
         "URLforAnyEquivalentPages"
@@ -15,7 +15,7 @@
     "version": "2021-04-24T06:34:56.000Z",
     "keywords": [
         "marine protected area",
-        "sanctuary",
+        "marine sanctuary",
         "Florida",
 	    "ocean use regulations",
 	    "fishing restrictions"
@@ -193,14 +193,14 @@
     "spatialCoverage": {
 		"@type": "Place",
 		"identifier": [
-			"Management Authority area ID",
-			"National area ID",
-			"IUCN WDPA ID",
-			"ProtectedSeas Navigator ID"
+			{"Management Authority area ID":"NMS4"},
+			{"National area ID": "NMS4"},
+			{"IUCN WDPA ID": 122900},
+			{"ProtectedSeas Navigator ID":"NMS4"}
 		],
         "geo": {
             "@type": "GeoShape",
-            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+            "polygon": "-83.14999999299988 24.299999971000034,-83.14999999599995 24.300000002000104,-83.14999999799988 24.54999998700015,-83.09999999799997 24.766666998000176,-80.08340483199999 25.650076710000118,-80.06666707299996 25.65002719800009,-80.0666674249998 25.566666894000093,-80.08333275799997 25.466669366000133,-80.1333429529999 25.266667202000065,-80.19097335499997 25.158766158000105,-80.21666804999995 25.11687086200004,-80.32997129199998 24.971561405000102,-80.34999845999988 24.95000076800005,-80.86669919099995 24.65000153000011,-81.3833008009999 24.499999994000177,-81.83329769699992 24.416700333999984,-83.08333300099997 24.29999999300003,-83.14999961799992 24.299999971000034,-83.14999999299988 24.299999971000034"
         },
         "additionalProperty": {
             "@type": "PropertyValue",
@@ -227,7 +227,7 @@
             },
 			{
                 "@type": "Action",
-                "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
+                "name": "Assessment of the bottom trawling restrictions in the Florida Keys in 2007"
             }]
     },
 	"publishingPrinciples": [
