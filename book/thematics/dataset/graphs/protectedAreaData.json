@@ -5,7 +5,7 @@
     "@type": "Dataset",
     "@id": "https://urlToThisJsonLD.org/",
     "name": "Florida Keys National Marine Sanctuary data bundle",
-    "description": "This dataset contains geospatial data delimiting the Florida Keys National Marine Sanctuary as well as information on their managements, governing policies, human activities, and other relevant data.",
+    "description": "This dataset contains geospatial data delimiting the Florida Keys National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant data.",
     "url": "https://mpa.protectedseas.net/index.php?z=7&lat=24.976890639378173&lng=-81.60833353550001&q=NMS4&pin",
     "sameAs": [
         "URLforAnyEquivalentPages"
@@ -192,7 +192,15 @@
     }],
     "spatialCoverage": {
 		"@type": "Place",
-		"identifier": [
+		"identifier": [{
+                "@type": "PropertyValue",
+                "name": "National area ID"
+        "description": "more about National area ID",
+        "propertyID": "NMS4",
+        "url": "
+https://example.org/id/for/ID
+"
+},
 			{"Management Authority area ID":"NMS4"},
 			{"National area ID": "NMS4"},
 			{"IUCN WDPA ID": 122900},
