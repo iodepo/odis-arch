@@ -4,17 +4,67 @@
     },
     "@id": "https://index.example.org/id/org/x",
     "@type": "Organization",
+    "additionalType": [
+        "https://www.wikidata.org/wiki/Q31855",
+        "https://r3data.org/typeX"
+    ],
+    "name": "Organization X",
+    "identifier": [
+        {
+            "@id": "https://ror.org/01qk7v094",
+            "@type": "PropertyValue",
+            "description": "Intergovernmental Oceanographic Commission of UNESCO",
+            "propertyID": "https://registry.identifiers.org/registry/ror#!",
+            "url": "https://registry.identifiers.org/registry/ror#!"
+        }
+    ],
+    "url": "https://example.org/",
+    "description": "Description of org ...",
+    "keywords": [
+        "Oceanography",
+        "Marine Physics"
+    ],
+    "telephone": "( 33 1) 42 68 53 00",
+    "email": "secretariat(at)example.org",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Public Relations",
+        "description": "This contact point can have email and phone independent of the org itself",
+        "email": "nemo@nowhere.com",
+        "telephone": "( 33 1) 42 68 53 00",
+        "email": "secretariat(at)example.org"
+    },
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Paris, France",
         "postalCode": "F-75002",
         "streetAddress": "38 avenue de l'Opera"
     },
-    "email": "secretariat(at)example.org",
-    "name": "Organization X",
-    "description": "Description of org ...",
-    "telephone": "( 33 1) 42 68 53 00",
-    "url": "https://example.org/",
+    "location": [
+        {
+            "@type": "VirtualLocation",
+            "description": "AWS region east-1 Virgina",
+            "name": "Org A AWS Instance"
+        },
+        {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Philadelphia",
+                "addressRegion": "PA"
+            },
+            "url": "wells-fargo-center.html"
+        }
+    ],
+    "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.108237,
+            "longitude": -80.642982
+        },
+        "geoRadius": 1000
+    },
     "member": [
         {
             "@id": "https://example.org/id/org/1",
@@ -27,24 +77,25 @@
             "@type": "Person"
         }
     ],
-    "identifier": {
-        "@id": "https://grid.ac/institutes/grid.475727.4",
-        "@type": "PropertyValue",
-        "description": "UN Department of Economic and Social Affairs Sustainable Development",
-        "propertyID": "https://registry.identifiers.org/registry/grid",
-        "url": "https://grid.ac/institutes/grid.475727.4"
+    "makesOffer": {
+        "@type": "Offer",
+        "category": [
+            {
+                "@type": "CategoryCode",
+                "@id": "http://id.loc.gov/vocabulary/iso639-2/cze",
+                "codeValue": "DOI",
+                "name": "PID DOI offered",
+                "inCodeSet": "http://id.loc.gov/vocabulary/iso639-2"
+            },
+            {
+                "@type": "CategoryCode",
+                "@id": "http://id.loc.gov/vocabulary/iso639-2/cze",
+                "codeValue": "CCBy0",
+                "name": "License CCBy0 offered",
+                "inCodeSet": "http://id.loc.gov/vocabulary/iso639-2"
+            }
+        ]
     },
-    "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 41.108237,
-            "longitude": -80.642982
-            
-        },
-        "geoRadius": 1000
-    },
-    "publishingPrinciples": "link to the ODIS book URL",
     "hasOfferCatalog": [
         {
             "@type": "OfferCatalog",
@@ -65,6 +116,94 @@
                     }
                 }
             ]
+        }
+    ],
+    "publishingPrinciples": [
+        {
+            "@type": "CreativeWork",
+            "url": "http://example.org/docs/mission.pdf",
+            "name": "Org X mission statement",
+            "description": "mission statement"
+        },
+        {
+            "@type": "CreativeWork",
+            "url": "http://example.org/docs/qaqc.pdf",
+            "name": "Org X curation policy",
+            "description": "A brief description of the policy here"
+        },
+        {
+            "@type": "CreativeWork",
+            "url": "http://example.org/docs/restrictions.pdf",
+            "name": "Org X access policy",
+            "description": "A brief description of the access policy here"
+        },
+        {
+            "@type": "CreativeWork",
+            "url": "http://example.org/docs/metadataStandards.pdf",
+            "name": "Org X metadata standards ",
+            "description": "A brief description of the metadata standards here"
+        },
+        {
+            "@type": "CreativeWork",
+            "url": "http://example.org/docs/preservation.pdf",
+            "name": "Org X preservation policy",
+            "description": "A brief description of the preservation policy here"
+        }
+    ],
+    "hasCredential": {
+        "@type": [
+            "EducationalOccupationalCredential"
+        ],
+        "name": "Certified Safety Professional",
+        "url": "https://www.bcsp.org/CSP",
+        "description": "Certified Safety Professionals (CSP) are persons ...",
+        "credentialCategory": {
+            "@type": "DefinedTerm",
+            "@id": "http://purl.org/ctdl/terms/Certification",
+            "name": "Certification",
+            "inDefinedTermSet": {
+                "@type": "DefinedTermSet",
+                "@id": "http://purl.org/ctdl/terms/",
+                "name": "Credential Transparency Description Language"
+            }
+        }
+    },
+    "potentialAction": {
+        "@type": "Action",
+        "@id": "https://us-central1-top-operand-112611.cloudfunctions.net/function-1",
+        "result": {
+            "@type": "DataDownload",
+            "encodingFormat": "text/plain",
+            "description": "a simple text result for the RGB counts"
+        },
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://us-central1-top-operand-112611.cloudfunctions.net/function-1",
+            "httpMethod": "POST",
+            "contentType": [
+                "image/jpeg",
+                "image/png"
+            ]
+        },
+        "object": {
+            "@type": "ImageObject",
+            "description": "A JPEG or PNG to analyze the RGB counts"
+        }
+    },
+    "knowsAbout": [
+        {
+            "@type": "Text",
+            "description": "Invasive species in brackish water"
+        },
+        {
+            "@type": "URL",
+            "url": "https://www.wikidata.org/wiki/Q183368"
+        },
+        {
+            "@id": "https://example.org/id/course/x",
+            "@type": "Course",
+            "description": "In this course ...",
+            "url": "URL to the course"
         }
     ]
 }

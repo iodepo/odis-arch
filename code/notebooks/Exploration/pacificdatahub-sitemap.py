@@ -17,7 +17,7 @@ CKAN_ENDPOINT_TIMEOUT = 60 #seconds
 NEW_SITEMAP_FILENAME = "sitemap.xml"
 HOSTNAME = "https://pacificdata.org/"
 LOGFILE = "pacificdatahub-sitemap.log"
-SHORTNAME = "pacificdatahub" #must be hyphen
+SHORTNAME = "pacificdatahub" #no spaces
 
 """
 #########################
