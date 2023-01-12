@@ -4,14 +4,19 @@
     },
     "@type": "Dataset",
     "@id": "https://urlToThisJsonLD.org/",
-    "name": "Florida Quays National Marine Sanctuary data bundle",
-    "description": "This dataset contains geospatial data delimiting the Florida Quays National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant features.",
+    "name": "Florida Keys National Marine Sanctuary data bundle",
+    "description": "This dataset contains geospatial data delimiting the Florida Keys National Marine Sanctuary as well as information on their management, governing policies, human activities, and other relevant data.",
     "url": "https://mpa.protectedseas.net/index.php?z=7&lat=24.976890639378173&lng=-81.60833353550001&q=NMS4&pin",
-    "distribution": {
+    "distribution": [{
         "@type": "DataDownload",
-        "contentUrl": "https://protectedseas.net/download/fq2007.zip",
+        "contentUrl": "https://protectedseas.net/download/",
         "encodingFormat": "application/zip"
     },
+    {
+        "@type": "InteractiveMap",
+        "contentUrl": "https://mpa.protectedseas.net",
+        "encodingFormat": "application/html"
+    }],
     "sameAs": [
         "https://URLforAnyEquivalentPages.org/"
     ],
@@ -20,12 +25,12 @@
     "version": "2021-04-24T06:34:56.000Z",
     "keywords": [
         "marine protected area",
-        "sanctuary",
+        "marine sanctuary",
         "Florida",
         "ocean use regulations",
         "fishing restrictions"
     ],
-    "measurementTechnique": "The URL to or text about the methods, technique or technology used in a Dataset",
+    "measurementTechnique": "https://protectedseas.net/mpa_mapping",
     "variableMeasured": [
         {
             "@type": "PropertyValue",
@@ -39,6 +44,144 @@
             "name": "Bottom trawling status",
             "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
             "description": "The levels of this categorical variable indicate whether bottom trawling is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Discharge status",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether discharge from vessels is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Speed restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether vessel speed is unrestricted (0), restricted(1), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Entry restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether vessel entry into the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Diving restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether scuba diving in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Removal of historic artifacts restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether removal of historic artifacts from the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Stopping restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether stopping in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Anchoring restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether anchoring in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Landing restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether vessel landing in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Dragging restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether dragging in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Dredging restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether dredging in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Industrial or Mineral exploration restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether industrial or mineral exploration in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Construction restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether construction in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Drilling restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether drilling in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Overflight or drones restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether overflight or use of drones in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Gillnetting restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of gillnets in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Hook and line restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of hook and line fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Trolling restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of trolling fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Nets restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of net fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Traps and pots restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of trap or pot fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Spear fishing restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of spear fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Long lining fishing restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether use of long lining fishing gear in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Commercial fishing restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether commercial fishing in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Recreational fishing restricted",
+            "propertyID": "PID/URI to a controlled vocabulary term or similar describing this variable",
+            "description": "The levels of this categorical variable indicate whether recreational fishing in the area is allowed (0), restricted(1), prohibited (2), or if the status is unknown or does not apply (3)"
         }
     ],
     "includedInDataCatalog": {
@@ -75,7 +218,7 @@
         ],
         "geo": {
             "@type": "GeoShape",
-            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+            "polygon": "-83.14999999299988 24.299999971000034,-83.14999999599995 24.300000002000104,-83.14999999799988 24.54999998700015,-83.09999999799997 24.766666998000176,-80.08340483199999 25.650076710000118,-80.06666707299996 25.65002719800009,-80.0666674249998 25.566666894000093,-80.08333275799997 25.466669366000133,-80.1333429529999 25.266667202000065,-80.19097335499997 25.158766158000105,-80.21666804999995 25.11687086200004,-80.32997129199998 24.971561405000102,-80.34999845999988 24.95000076800005,-80.86669919099995 24.65000153000011,-81.3833008009999 24.499999994000177,-81.83329769699992 24.416700333999984,-83.08333300099997 24.29999999300003,-83.14999961799992 24.299999971000034,-83.14999999299988 24.299999971000034"
         },
         "additionalProperty": [
             {
@@ -172,27 +315,22 @@
             "url": "https://protectedseas.net/"
         }
     ],
-    "about": [
-        {
-            "@type": "Event",
-            "description": "Assessment of the protection status of the Florida Quays MPA",
-            "name": "Florida Quays MPA Assessment",
-            "potentialAction": [{
+    "about": {
+        "@type": "Event",
+        "description": "Regulatory review and coding for the Florida Keys National Marine Sanctuary",
+        "name": "Florida Keys Regulatory Assessment",
+        "potentialAction": [{
                 "@type": "Action",
-                "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
-            },
-            { 
-                "@type": "Action",
-                "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
+                "name": "Assessment of the bottom trawling restrictions in the Florida Keys in 2007"
             }]
         }
     ],
     "publishingPrinciples": [
         {
-            "@type": "CreativeWork",
-            "url": "http://example.org/id/doc/ID",
-            "name": "Recommendations for assessing protected area status in US national waters",
-            "description": "This dataset was generated following the recommendations of ..."
-        }
-    ]
+        "@type": "CreativeWork",
+        "url": "http://example.org/id/doc/ID",
+        "name": "NOAA MPA Center MPA Inventory",
+        "description": "This dataset was generated in partnership with the NOAA MPA Center as an extension of the U.S. MPA inventory."
+    }
+ ]
 }
