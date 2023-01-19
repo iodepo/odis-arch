@@ -4,6 +4,15 @@
   },
   "@type": "DigitalDocument",
   "@id": "https://example.org/id/XYZ",
+  "name": "Name or title of the document",
+  "description": "Description / abstract of the creative work to aid in searching",
+  "version": "v1.9",
+  "inLanguage": {
+    "@type": "Language",
+    "name": "English",
+    "alternateName": "en"
+  },
+  "url": "https://www.sample-data-repository.org/creativework/report.pdf",
   "hasDigitalDocumentPermission": {
     "@type": "DigitalDocumentPermission",
     "grantee": {
@@ -12,9 +21,14 @@
     },
     "permissionType": "ReadPermission"
   },
-  "name": "Name or title of the document",
-  "description": "Description of the creative work to aid in searching",
-  "url": "https://www.sample-data-repository.org/creativework/report.pdf",
+  "license": "http://spdx.org/licenses/CC0-1.0",
+  "dateCreated": "2020-01-15", 
+  "datePublished": "2020-02-12",
+  "dateModified": "2020-06-12",
+  "locationCreated": {
+    "@type": "Place",
+    "name": "New York, New York, United States of America"
+  },
   "contributor": {
     "@type": "Organization",
     "@id": "http://www.foo.org/orgID",
@@ -29,7 +43,6 @@
     "url": "https://www.sample-data-repository.org/person/51317"
   },
   "identifier": {
-    "@id": "https://doi.org/10.5066/F7VX0DMQ",
     "@type": "PropertyValue",
     "propertyID": "https://registry.identifiers.org/registry/doi",
     "value": "doi:10.5066/F7VX0DMQ",
@@ -40,6 +53,62 @@
     "keyword 2",
     "keyword 3"
   ],  
+  "additionalProperty":
+    [
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "method type",
+        "description": "Enter the the type of methodology described, for example standard operating procedure, guide, manual, standar specification, or best practice.",
+        "value": "standard operating procedure"
+      }, 
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "adoption level",
+        "description": "Describe how widely this method has been adopted with terms like organisational, multi-organisational, international.",
+        "value": "national"
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "disciplinary area",
+        "description": "Add keywords to describe the disciplinary area(s) this method is relevant to, ideally using terms from https://vocab.nerc.ac.uk/collection/P08/current/",
+        "value": [
+          "atmosphere",
+          "cryosphere"
+        ]
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Essential Ocean Variables",
+        "description": "Add keywords for the GOOS Essential Ocean Variables which this method is relevant to, please use the EOV names provided here: https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441",
+        "value": [
+          "Sea state",
+          "Seas ice"
+        ]
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Sustainable Development Goals, Targets, and Indicators",
+        "description": "Add the SDG codes for goals (14), targets (14.1), and/or indicators (14.1.1) which this method is relevant to, please use the codes provided here: https://sdgs.un.org/",
+        "value": [
+          "14.1.1",
+          "2.1.1"
+        ]
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Maturity level",
+        "description": "Please descript the maturity level of your method with a keyword or phrase. For example, concept, pilot, mature.",
+        "value": "pilot"
+      },
+      { 
+        "@type": "PropertyValue",
+        "additionalType": "http://purl.org/dc/terms/bibliographicCitation",
+        "propertyID": "http://purl.org/dc/terms/bibliographicCitation",
+        "description": "Include any bibliographic citation for this record here",
+        "value": "Smith et al. (2020) How to measure ice. 5(3):Ice Press. NY, USA."
+      }     
+      
+    ],
   "provider": {
     "@id": "https://www.repositoryB.org",
     "@type": "Organization",
@@ -48,7 +117,6 @@
     "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
     "url": "https://www.sample-data-repository.org"
   },
-  "license": "http://spdx.org/licenses/CC0-1.0",
   "publisher": {
     "@id": "https://www.publishingrus.org",
     "@type": "Organization",
