@@ -6,7 +6,10 @@
   "@id": "https://example.org/id/XYZ",
   "hasDigitalDocumentPermission": {
     "@type": "DigitalDocumentPermission",
-    "grantee": "public",
+    "grantee": {
+      "@type": "Audience",
+      "audienceType": "public"
+    },
     "permissionType": "ReadPermission"
   },
   "name": "Name or title of the document",
