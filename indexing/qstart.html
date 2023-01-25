@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../users/referenceclient.html">
+  <a class="reference internal" href="../users/index.html">
    Users
   </a>
  </li>
@@ -852,10 +852,10 @@ and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> d
 <p>For this demonstration, we will be running on linux, so this would look something like:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner
-curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner-IS.yml
-curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/setenvIS.sh
-curl -L -O https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/template_v2.0.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner
+curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/gleaner-IS.yml
+curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/setenvIS.sh
+curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>https://github.com/earthcubearchitecture-project418/gleaner/releases/download/2.0.25/template_v2.0.yaml
 </pre></div>
 </div>
 </div>
@@ -868,7 +868,7 @@ line curl tool.  For GitHub, be sure to add the -L to inform curl to follow redi
 <p class="admonition-title">Command</p>
 <p>You may need to change the permission on your gleaner file to ensure it can be run.   On Linux this would
 look something like the following.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">755</span> gleaner
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>gleaner
 </pre></div>
 </div>
 </div>
@@ -877,7 +877,7 @@ appropriate JSON-LD context.  For this work we will want to pull down the <em>sc
 It also should work to do something similar to the following:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://schema.org/version/latest/schemaorg-current-https.jsonld
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-O<span class="w"> </span>https://schema.org/version/latest/schemaorg-current-https.jsonld
 </pre></div>
 </div>
 </div>
@@ -937,29 +937,29 @@ use localhost to resolve with and host local runtime data in a /tmp/gleaner dire
 <p>Load our environment variables to the shell:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> setenv.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>setenv.sh
 </pre></div>
 </div>
 </div>
 <p>Then start the containers:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose -f gleaner-IS.yml up -d
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>-f<span class="w"> </span>gleaner-IS.yml<span class="w"> </span>up<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
 <p>If all has gone well, you should be able to see your running containers with</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker ps
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps
 </pre></div>
 </div>
 </div>
 <p>and see results similar to:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS              PORTS                    NAMES
-c4b7097f5e06        nawer/blazegraph                 <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9999-&gt;9999/tcp   test_triplestore_1
-ca08c24963a0        minio/minio:latest               <span class="s2">&quot;/usr/bin/docker-ent…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9000-&gt;9000/tcp   test_s3system_1
-24274eba0d34        chromedp/headless-shell:latest   <span class="s2">&quot;/headless-shell/hea…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9222-&gt;9222/tcp   test_headless_1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CONTAINER<span class="w"> </span>ID<span class="w">        </span>IMAGE<span class="w">                            </span>COMMAND<span class="w">                  </span>CREATED<span class="w">             </span>STATUS<span class="w">              </span>PORTS<span class="w">                    </span>NAMES
+c4b7097f5e06<span class="w">        </span>nawer/blazegraph<span class="w">                 </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9999-&gt;9999/tcp<span class="w">   </span>test_triplestore_1
+ca08c24963a0<span class="w">        </span>minio/minio:latest<span class="w">               </span><span class="s2">&quot;/usr/bin/docker-ent…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9000-&gt;9000/tcp<span class="w">   </span>test_s3system_1
+24274eba0d34<span class="w">        </span>chromedp/headless-shell:latest<span class="w">   </span><span class="s2">&quot;/headless-shell/hea…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9222-&gt;9222/tcp<span class="w">   </span>test_headless_1
 </pre></div>
 </div>
 </section>
@@ -1161,14 +1161,14 @@ run Gleaner via a script or cron style service.  We will document that elsewhere
 <p>We can do a quick test of the setup.</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0 -setup
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>./gleaner<span class="w"> </span>-cfg<span class="w"> </span>template_v2.0<span class="w"> </span>-setup
 </pre></div>
 </div>
 </div>
 <p>For now, we are ready to run Gleaner.  Try:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./gleaner -cfg template_v2.0
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>./gleaner<span class="w"> </span>-cfg<span class="w"> </span>template_v2.0
 </pre></div>
 </div>
 </div>
@@ -1194,7 +1194,7 @@ port at 9000.  This typically something like localhost:9000.</p>
 <p>Once you have it installed and working, you can write an entry for our object store with:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ./mc <span class="nb">alias</span> <span class="nb">set</span> minio http://0.0.0.0:9000 worldsbestaccesskey worldsbestsecretkey
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>./mc<span class="w"> </span><span class="nb">alias</span><span class="w"> </span><span class="nb">set</span><span class="w"> </span>minio<span class="w"> </span>http://0.0.0.0:9000<span class="w"> </span>worldsbestaccesskey<span class="w"> </span>worldsbestsecretkey
 </pre></div>
 </div>
 </div>

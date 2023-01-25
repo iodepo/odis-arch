@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../users/referenceclient.html">
+  <a class="reference internal" href="../../users/index.html">
    Users
   </a>
  </li>
@@ -796,34 +796,35 @@ to provide source and provenance information about a resource.</p>
 <span class="linenos"> 4</span>    <span class="p">},</span>
 <span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
 <span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 7</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 8</span>    <span class="s2">&quot;isBasedOn&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/xyz&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">10</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">13</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span>
-</span><span class="hll"><span class="linenos">15</span>    <span class="p">},</span>
-</span><span class="hll"><span class="linenos">16</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">17</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">19</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">20</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">21</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
-</span><span class="hll"><span class="linenos">22</span>    <span class="p">},</span>
-</span><span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">24</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">25</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">26</span>        <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">27</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>        <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">29</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
-</span><span class="hll"><span class="linenos">30</span>    <span class="p">},</span>
-</span><span class="hll"><span class="linenos">31</span>    <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">32</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
-</span><span class="hll"><span class="linenos">33</span>    <span class="p">}</span>
-</span><span class="linenos">34</span><span class="p">}</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/url/of/the/item&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 8</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;isBasedOn&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/xyz&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">14</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span>
+</span><span class="hll"><span class="linenos">16</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">20</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">24</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">25</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">27</span>        <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>        <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">30</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">32</span>    <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">33</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+</span><span class="hll"><span class="linenos">34</span>    <span class="p">}</span>
+</span><span class="linenos">35</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">

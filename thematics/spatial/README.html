@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../users/referenceclient.html">
+  <a class="reference internal" href="../../users/index.html">
    Users
   </a>
  </li>
@@ -771,7 +771,7 @@ declare the coordinate reference system (CRS) of the geometry using the crs prop
 </div>
 <section id="wkt-bounding-box">
 <h3>WKT Bounding Box<a class="headerlink" href="#wkt-bounding-box" title="Permalink to this headline">#</a></h3>
-<p>Note that WKT doesn’t directly have a bounding box to in that case you
+<p>Note that WKT doesn’t directly have a bounding box, in that case you
 would need to use a polygon.  The following is an example of a WKT string:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POLYGON</span><span class="p">((</span><span class="mf">45.066730529474505</span> <span class="mf">2.6430807905900235</span><span class="p">,</span><span class="mf">47.395832091974505</span> <span class="mf">2.6430807905900235</span><span class="p">,</span><span class="mf">47.395832091974505</span> <span class="mf">0.3588601145746598</span><span class="p">,</span><span class="mf">45.066730529474505</span> <span class="mf">0.3588601145746598</span><span class="p">,</span><span class="mf">45.066730529474505</span> <span class="mf">2.6430807905900235</span><span class="p">))</span>
 </pre></div>
@@ -798,6 +798,7 @@ is a simple example of the existing <a class="reference external" href="http://S
 pending <a class="reference external" href="https://schema.org/GeospatialGeometry">GeospatialGeometry</a> which is a
 type Intangible (and not Place referenced by spatialCoverage).  This will be a
 subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoShape</a>.</p>
+<p><a class="reference external" href="http://Schema.org">Schema.org</a> spatial relations are guided by <a class="reference external" href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
 <span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>

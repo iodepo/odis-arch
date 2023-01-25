@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="referenceclient.html">
+  <a class="reference internal" href="index.html">
    Users
   </a>
  </li>
@@ -626,33 +626,33 @@ This is a simple HTTP protocol that allows you to query the graph using SPARQL a
 <p>The OIH triplestore exposes the graph following this pattern for queries.</p>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode <span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span> -H <span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
 </pre></div>
 </div>
 <p>If run this from the command line we will get something like the following.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>✗ curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode <span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span> -H <span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>✗<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
 
 <span class="o">{</span>
-  <span class="s2">&quot;head&quot;</span> : <span class="o">{</span>
-    <span class="s2">&quot;vars&quot;</span> : <span class="o">[</span> <span class="s2">&quot;s&quot;</span>, <span class="s2">&quot;p&quot;</span>, <span class="s2">&quot;o&quot;</span> <span class="o">]</span>
-  <span class="o">}</span>,
-  <span class="s2">&quot;results&quot;</span> : <span class="o">{</span>
-    <span class="s2">&quot;bindings&quot;</span> : <span class="o">[</span> <span class="o">{</span>
-      <span class="s2">&quot;s&quot;</span> : <span class="o">{</span>
-        <span class="s2">&quot;type&quot;</span> : <span class="s2">&quot;uri&quot;</span>,
-        <span class="s2">&quot;value&quot;</span> : <span class="s2">&quot;https://hdl.handle.net/1834/10030&quot;</span>
-      <span class="o">}</span>,
-      <span class="s2">&quot;p&quot;</span> : <span class="o">{</span>
-        <span class="s2">&quot;type&quot;</span> : <span class="s2">&quot;uri&quot;</span>,
-        <span class="s2">&quot;value&quot;</span> : <span class="s2">&quot;https://schema.org/propertyID&quot;</span>
-      <span class="o">}</span>,
-      <span class="s2">&quot;o&quot;</span> : <span class="o">{</span>
-        <span class="s2">&quot;type&quot;</span> : <span class="s2">&quot;literal&quot;</span>,
-        <span class="s2">&quot;value&quot;</span> : <span class="s2">&quot;https://hdl.handle.net/&quot;</span>
-      <span class="o">}</span>
-    <span class="o">}</span> <span class="o">]</span>
-  <span class="o">}</span>
-<span class="o">}</span>                                   
+<span class="w">  </span><span class="s2">&quot;head&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;vars&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;s&quot;</span>,<span class="w"> </span><span class="s2">&quot;p&quot;</span>,<span class="w"> </span><span class="s2">&quot;o&quot;</span><span class="w"> </span><span class="o">]</span>
+<span class="w">  </span><span class="o">}</span>,
+<span class="w">  </span><span class="s2">&quot;results&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;bindings&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">&quot;s&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;uri&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://hdl.handle.net/1834/10030&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;p&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;uri&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://schema.org/propertyID&quot;</span>
+<span class="w">      </span><span class="o">}</span>,
+<span class="w">      </span><span class="s2">&quot;o&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;literal&quot;</span>,
+<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://hdl.handle.net/&quot;</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
+<span class="w">  </span><span class="o">}</span>
+<span class="o">}</span><span class="w">                                   </span>
 </pre></div>
 </div>
 <p>While this is unlikely how you will want to interact with the graph,
@@ -660,20 +660,20 @@ it desmonstrates the HTTP based access API that can be used in tools, notebooks
 or other applications.</p>
 <p>This is the same basic approach the used in the web client.  There the
 axios library (<a class="reference external" href="https://axios-http.com/">https://axios-http.com/</a>) is used with a code snippet like:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// handle success</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container2&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="nx">render</span><span class="p">(</span><span class="nx">showresults</span><span class="p">(</span><span class="nx">response</span><span class="p">),</span><span class="w"> </span><span class="nx">el</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">})</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// handle error</span><span class="w"></span>
-<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">})</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// always executed</span><span class="w"></span>
-<span class="w">      </span><span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// handle success</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container2&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">render</span><span class="p">(</span><span class="nx">showresults</span><span class="p">(</span><span class="nx">response</span><span class="p">),</span><span class="w"> </span><span class="nx">el</span><span class="p">);</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// handle error</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="w">      </span><span class="p">})</span>
+<span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// always executed</span>
+<span class="w">      </span><span class="p">});</span>
 </pre></div>
 </div>
 </section>

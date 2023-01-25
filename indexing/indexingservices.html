@@ -310,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../users/referenceclient.html">
+  <a class="reference internal" href="../users/index.html">
    Users
   </a>
  </li>
@@ -576,21 +576,21 @@ The Docker Compose file used to launch the Gleaner IS has a set of configurable 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># domains </span>
-<span class="nb">export</span> <span class="nv">GLEANER_ADMIN_DOMAIN</span><span class="o">=</span>admin.local.dev
-<span class="nb">export</span> <span class="nv">GLEANER_OSS_DOMAIN</span><span class="o">=</span>oss.local.dev
-<span class="nb">export</span> <span class="nv">GLEANER_GRAPH_DOMAIN</span><span class="o">=</span>graph.local.dev
-<span class="nb">export</span> <span class="nv">GLEANER_WEB_DOMAIN</span><span class="o">=</span>web.local.dev
-<span class="nb">export</span> <span class="nv">GLEANER_WEB2_DOMAIN</span><span class="o">=</span>web2.local.dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_ADMIN_DOMAIN</span><span class="o">=</span>admin.local.dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_OSS_DOMAIN</span><span class="o">=</span>oss.local.dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_GRAPH_DOMAIN</span><span class="o">=</span>graph.local.dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_WEB_DOMAIN</span><span class="o">=</span>web.local.dev
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_WEB2_DOMAIN</span><span class="o">=</span>web2.local.dev
 
 <span class="c1"># Object store keys</span>
-<span class="nb">export</span> <span class="nv">MINIO_ACCESS_KEY</span><span class="o">=</span>worldsbestaccesskey
-<span class="nb">export</span> <span class="nv">MINIO_SECRET_KEY</span><span class="o">=</span>worldsbestsecretkey
+<span class="nb">export</span><span class="w"> </span><span class="nv">MINIO_ACCESS_KEY</span><span class="o">=</span>worldsbestaccesskey
+<span class="nb">export</span><span class="w"> </span><span class="nv">MINIO_SECRET_KEY</span><span class="o">=</span>worldsbestsecretkey
 
 <span class="c1"># local data volumes</span>
-<span class="nb">export</span> <span class="nv">GLEANER_BASE</span><span class="o">=</span>/tmp/gleaner/
-<span class="nb">export</span> <span class="nv">GLEANER_TRAEFIK</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/config
-<span class="nb">export</span> <span class="nv">GLEANER_OBJECTS</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/datavol/s3
-<span class="nb">export</span> <span class="nv">GLEANER_GRAPH</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/datavol/graph
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_BASE</span><span class="o">=</span>/tmp/gleaner/
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_TRAEFIK</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/config
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_OBJECTS</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/datavol/s3
+<span class="nb">export</span><span class="w"> </span><span class="nv">GLEANER_GRAPH</span><span class="o">=</span><span class="si">${</span><span class="nv">GLEANER_BASE</span><span class="si">}</span>/datavol/graph
 </pre></div>
 </div>
 <p>The actual services can be deployed via a Docker Compose file (also works with Podman).  An example of that file and details about it follow.</p>

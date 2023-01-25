@@ -1,11 +1,20 @@
-The Ocean InfoHub Project
-============================
+![splash](./images/splash.png)
+
+# The Ocean InfoHub Project
 
 ## Introduction
 
+The Ocean InfoHub aims to build a sustainable, interoperable, and inclusive digital ecosystem for all Ocean data centres. Existing and emerging data systems are linked, with the ultimate goal of coordinating action and capacity to improve access to Ocean data and knowledge.
+
+The following video provide brief high level context to the Ocean InfoHub project.
+
+[![Ocean Infohub YouTube video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
+
+[Broucher](./assets/IOC_OceanInfoHub_Proposal__summary.pdf)
+
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
-The Ocean Data and Information System (ODIS) will provide a schema.org based interoperability layer and supporting technology to allow existing and emerging ocean data and information systems, from any stakeholder, to interoperate with one another. This will enable and accelerate more effective development and dissemination of digital technology and sharing of ocean data, information, and knowledge. As such, ODIS will not be a new portal or centralised system, but will provide a collaborative solution to interlink distributed systems for common goals. Together with global project partners and partners in the three regions, a process of co-design will enable a number of global and regional nodes to test the proof of concept for the ODIS.
+The Ocean Data and Information System (ODIS) will provide a schema.org based interoperability layer and supporting technology to allow existing and emerging ocean data and information systems, from any stakeholder, to interoperate with one another. This will enable and accelerate more effective development and dissemination of digital technology and sharing of ocean data, information, and knowledge. As such, ODIS will not be a new portal or centralized system, but will provide a collaborative solution to interlink distributed systems for common goals. Together with global project partners and partners in the three regions, a process of co-design will enable a number of global and regional nodes to test the proof of concept for the ODIS.
 
 The ODIS-architecture development is being supported by the Ocean InfoHub Project, and it has been tested initially on IOC and partner databases. However, the system and standards are open for any institution or initiative that is interested in accessing the global data ecosystem to adopt and implement.
 
@@ -95,8 +104,3 @@ Government of Canada:
 
 ![image1](./images/intro2.png)
 
-## Info-graphic
-
-The following is a simple overview info-graphic of the Ocean Info Hub activity flow.  
-
-![image1](./images/OIHInfoGraphic.png)
