@@ -68,7 +68,7 @@ jbutils.show_graph(compacted)
 
 ### WKT Bounding Box
 
-Note that WKT doesn't directly have a bounding box to in that case you 
+Note that WKT doesn't directly have a bounding box, in that case you 
 would need to use a polygon.  The following is an example of a WKT string:
 
 ```
@@ -99,6 +99,8 @@ is a simple example of the existing Schema.org pattern for a lat long value.   T
 pending [GeospatialGeometry](https://schema.org/GeospatialGeometry) which is a 
 type Intangible (and not Place referenced by spatialCoverage).  This will be a 
 subtype of [GeoShape](https://schema.org/GeoShape).   
+
+Schema.org spatial relations are guided by [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
 
 ```{literalinclude} ./graphs/sos.json
 :linenos:

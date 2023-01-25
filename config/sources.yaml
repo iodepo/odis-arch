@@ -12,7 +12,7 @@
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 # To validate at commandline: execute the following (if the file contains valid 
-# yaml, it will do nothing) :
+# yaml, it will return nothing) :
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 ---
 sources:
@@ -236,13 +236,11 @@ sources:
   logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
   pid: https://catalogue.odis.org/view/364
   sourcetype: sitemap
-  #sitemaps are password protected?
   url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
-  #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-emodnet/emodnet-simple-graph.json
   backend: GeoNetwork  
   headless: true
   dateadded: 2022-08-24  
-  active: false
+  active: true
 #
 # Indonesia National Oceanic Data Center
 #    
@@ -450,21 +448,36 @@ sources:
   dateadded: 2022-07-25   
   active: true
 #
+# POGO
+# 
+- name: pogo
+  propername: Partnership for Observation of the Global Ocean
+  catalogue: https://pogo-ocean.org/
+  domain: https://geoblueplanet.org/
+  logo: https://pogo-ocean.org/wp-content/uploads/2020/02/POGO1_long-01-768x135.png
+  pid: https://catalogue.odis.org/view/3247
+  sourcetype: sitemap
+  url: https://pogo-ocean.org/pogo-member-sitemap.xml
+  backend: WordPress  
+  headless: true
+  dateadded: 2022-11-30
+  active: false  
+#
 # VLIZ: Flanders Marine Institute catalogue
-#     
-- name: vliz
-  propername: VLIZ - Flanders Marine Institute catalogue
-  catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-  domain: http://www.vliz.be/en 
-  logo: ""
-  #missing ODISCat entry
-  pid: https://oceaninfohub.org/.well-known/org/vliz
-  sourcetype: sitegraph
-  url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-  backend: GeoNetwork  
-  headless: false
-  dateadded: 2022-08-03
-  active: false
+#   note: VLIZ & EMODNet services were unified in late 2022 
+# - name: vliz
+  # propername: VLIZ - Flanders Marine Institute catalogue
+  # catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+  # domain: http://www.vliz.be/en 
+  # logo: ""
+  # #missing ODISCat entry
+  # pid: https://oceaninfohub.org/.well-known/org/vliz
+  # sourcetype: sitegraph
+  # url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  # backend: GeoNetwork  
+  # headless: false
+  # dateadded: 2022-08-03
+  # active: false
 #- sourcetype: sitemap
   #name: marineie
   #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
