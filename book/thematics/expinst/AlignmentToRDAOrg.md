@@ -17,9 +17,9 @@ execution:
 
 ## About
 
-This document describes the alignment of schema.org Organization with the
+This document describes an application of schema.org Organization to implement the
 [RDA Data Repository Attributes Working Group](https://www.rd-alliance.org/groups/data-repository-attributes-wg)
-work on repository attributes.  
+guidance on repository attributes.
 
 Document Flow
 
@@ -32,41 +32,41 @@ Document Flow
 
 ## Schema.org type Organization
 
-Schema.org is a collection of schemas, or data categories, that can
-be used to mark up content on the web. It provides a standardized way
-of describing information on the web, making it easier for search engines
-and other applications to understand and process the information. For people
-interested in describing research organizations, schema.org provides
+Schema.org (https://schema.org/docs/about.html) is a collection of schemas representing
+type and properties that canbe used to mark up content on the web. It provides a standardized way of
+describing information on the web, making it easier for search engines and other
+applications to understand and process the information. 
+
+For people interested in describing research organizations, schema.org provides
 several relevant schemas that can be used to mark up information about
-research organizations, such as the Organization schema,
-the EducationalOrganization schema, and the ResearchOrganization schema.
-These schemas allow you to provide information about the research organization,
-such as its name, location, and details about the research it conducts. This
-can help search engines and other applications to better understand the information
-about your research organization and can make it easier for people to
-find your organization and learn more about the research you do.
+research organizations, such as  schema.org/Organization,
+schema.org/EducationalOrganization, and the schema.org/ResearchOrganization.
 
-Thing ->  https://schema.org/Organization  -> https://schema.org/ResearchOrganization
+![relations](./assets/d2/schemaorg.svg)
 
-https://github.com/schemaorg/schemaorg/issues/2877
+Additionally, types for data, APIs, and various offers an organization can make
+are available.
+
+Also, as a vocabulary based on the RDF data model, mappings and leveraging other related
+vocabularies such as DCAT is possible.  Beyond integration, there are also mappings that
+have been done such as: [ISO 19115 - DCAT - Schema.org mapping](https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping)
+and [DCAT v2 schema.org alignment](https://www.w3.org/TR/vocab-dcat-2/#dcat-sdo).
+
+References:
+
+* https://schema.org/Thing
+* https://schema.org/Organization
+* https://schema.org/ResearchOrganization
+* https://github.com/schemaorg/schemaorg/issues/2877
 
 ## JSON-LD
-(move to a refernece elsewhere in the book)
 
-JSON-LD is a way of encoding Linked Data in JSON, the popular data interchange
-format used by many web APIs. Linked Data is a method of representing information
-on the web in a way that allows it to be linked and interconnected with other data.
-This allows data from different sources to be connected and used together in new
-and powerful ways. JSON-LD uses a standardized syntax to represent Linked Data,
-making it easier to integrate with other systems and tools. It is often used to
-add structured data to web pages, making it easier for search engines and other
-applications to understand and process the information on the page.
+[JSON-LD Basics](https://book.oceaninfohub.org/foundation/foundation.html)
 
 ## Implementation of RDA attributes
 
-Full example with highlights as in other docs and JSON-LD framing elements/sections
+[Example JSON-LD](graphs/organizationv2.json)
 
-Implementation document with json crack and playground links
 
 ![orgv2](./assets/orgv2.png)
 
@@ -75,30 +75,82 @@ Implementation document with json crack and playground links
 
 SHACL is a W3C recommendation for a language that can be used to define and
 validate the structure and content of data stored in RDF graphs. It stands for
-SHapes Constraint Language. RDF is a standard for representing information on
-the web in a way that allows it to be linked and interconnected with other data.
+SHapes Constraint Language. 
+
 SHACL provides a way to specify constraints on the data in an RDF graph, such as
 the required and optional properties for a given class of data, the allowed
 values for a property, and the relationships between different classes of data.
+
 These constraints can be used to validate the data in an RDF graph, ensuring
 that it adheres to the defined structure and rules. This can help to ensure the
 quality and consistency of the data, making it easier to integrate and use with
 other systems.
 
+A popular SHACL validation tool is [pySHACL](https://github.com/RDFLib/pySHACL).
+It can produce both human and machine focues output.  For machines, the output is
+valid RDF which can be used in a triplestore and querried for reports.  
+
+For humans output looks like the following.  Note the use of _Severity_ to 
+allow for different types of warnings to be produced.
+
+```bash
+pyshacl -s ./shapes/orgShape.ttl -sf turtle  -f human ./graphs/organizationv2.json -df json-ld
+```
+
+```turtle
+Validation Report
+Conforms: False
+Results (6):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:urlResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:url
+        Message: URL required for the location of the resource described by this metadata
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:identifierProviderProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:provider
+        Message: A provider must be noted
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Violation
+        Source Shape: oihval:identifierProviderProperty
+        Focus Node: <https://index.example.org/id/org/x>
+        Result Path: schema:provider
+        Message: A provider must be noted
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Warning
+        Source Shape: oihval:keywordsResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:keywords
+        Message: A resource should include descriptive keywords
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Info
+        Source Shape: oihval:licenseResourceProperty
+        Focus Node: <https://example.org/id/org/1>
+        Result Path: schema:license
+        Message: Though not required, it is good practice to include a license if one exists
+Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+        Severity: sh:Info
+        Source Shape: oihval:licenseResourceProperty
+        Focus Node: <https://index.example.org/id/org/x>
+        Result Path: schema:license
+        Message: Though not required, it is good practice to include a license if one exists
+
+```
+
+[OIH Book Validation Information](https://book.oceaninfohub.org/validation/README.html)
 
 ## Query (SPARQL)
 
 SPARQL is a query language that is used to retrieve and manipulate data stored
 in RDF graphs. RDF is a standard for representing information on the web in a
-way that allows it to be linked and interconnected with other data. SPARQL
-allows you to query this data using a specialized syntax, similar to SQL. You
-can use SPARQL to ask questions about the data in an RDF graph, such as which
-entities have a certain property, what values a property has, and how entities
-are related to each other. SPARQL can also be used to update the data in an RDF
-graph, allowing you to add, delete, and modify data. This makes SPARQL a
-powerful tool for working with RDF data and can enable you to do things like
-build search engines, integrate data from different sources, and create complex
-data-driven applications.
+way that allows it to be linked and interconnected with other data. 
+
+[OIH Book SPARQL Information](https://book.oceaninfohub.org/users/query.html)
+
+[Notebook example](https://github.com/iodepo/odis-arch/blob/schema-dev-df/code/notebooks/demos/simpleSPARQL.ipynb)
 
 ## Issues encountered
 
@@ -107,9 +159,21 @@ than the ecoding.  It's almost always possible to find a valid approach
 to encoding information.  However, that process can cause the discovery
 and use of the data to be more difficult.  
 
+### Loose semantics
+
+Some of the concepts present in the RDA working group are a bit difficult
+to map into the properties and Types of schema.org.  Exmaples include:
+
+* Persistent identifiers used within your organization
+* Deposit
+* Content/format
+
 ### On leveraging PIDs
 
-Can use them at altIDs or Poperty values with details
+PIDs are easy to leverage in schema.org.   Then can can use as altIDs or
+Poperty values.  This is just one example of where approaches can vary
+and shows where use the of Architecture Decision Records could be of
+use.  [(Example ADR reference)](https://github.com/joelparkerhenderson/architecture-decision-record)
 
 ```json
   "identifier":
@@ -124,16 +188,17 @@ Can use them at altIDs or Poperty values with details
 
 ### External context leveraging
 
-### Square peg round hole (loose semantics)
+In this exercise the goal was to map the working group properties using only Schema.org.  However,
+one could leverage things like Dublin Core, FOAF, or DCAT to address some of the loose
+semantics of Schema.org.
 
+The trade off being a more complex context and potentially more compelexity in query space.
 
 
 ## Reference table (late 2022)
 
 See https://www.rd-alliance.org/groups/data-repository-attributes-wg
 for the latest information on the output of this group.
-
-Ref: https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
 | [](https://docs.google.com/document/d/1cNT_IQUUFbDIlT0eCY320LaBz7LjjkenDwYMTVyU6f0/edit)[Attribute:<br>](https://docs.google.com/document/d/1cNT_IQUUFbDIlT0eCY320LaBz7LjjkenDwYMTVyU6f0/edit) | re3data<br>                              | fairsharing                                                                                                                    | [schema.org](http://schema.org/)                                                                                                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
