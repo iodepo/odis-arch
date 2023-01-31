@@ -1,0 +1,40 @@
+name: Daily sitemap checks
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        pip install -r workflows/actions/sitemapcheck/requirements.txt
+
+    - name: Run Python script
+      run: |
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/sources.csv
+
+    - name: Add new file to Git
+      run: |
+        git config --global user.email "github-actions@example.com"
+        git config --global user.name "GitHub Actions"
+        git add workflows/actions/sitemapcheck/sources.csv
+        git commit -m "Add sitemap results data"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.7.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
