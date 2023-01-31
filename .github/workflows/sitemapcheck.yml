@@ -34,7 +34,7 @@ jobs:
         git commit -m "Add sitemap results data"
 
     - name: Push changes
-      uses: ad-m/github-push-action@v0.7.0
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
