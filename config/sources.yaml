@@ -65,19 +65,35 @@ sources:
 #
 # CIOOS Atlantic
 #    
-- name: cioosatlantic
-  propername: CIOOS Atlantic
-  catalogue: https://catalogue.cioosatlantic.ca/
-  domain: https://cioosatlantic.ca
-  logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
+# - name: cioosatlantic
+  # propername: CIOOS Atlantic
+  # catalogue: https://catalogue.cioosatlantic.ca/
+  # domain: https://cioosatlantic.ca
+  # logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
+  # #missing ODISCat entry
+  # pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
+  # sourcetype: sitemap
+  # url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
+  # #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  # backend: CKAN  
+  # headless: true
+  # dateadded: 2022-06-04
+  # active: true
+#
+# CIOOS National
+#    
+- name: cioos
+  propername: CIOOS
+  catalogue: https://catalogue.cioos.ca/
+  domain: https://cioos.ca/
+  logo: https://cioos.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/national/cioos-national_EN.svg
   #missing ODISCat entry
-  pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
+  pid: https://oceaninfohub.org/.well-known/org/cioos
   sourcetype: sitemap
-  url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
-  #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  url: https://catalogue.cioos.ca/sitemap/sitemap.xml
   backend: CKAN  
   headless: true
-  dateadded: 2022-06-04
+  dateadded: 2023-01-31
   active: true
 #
 # EDMERP SeaDataNet
