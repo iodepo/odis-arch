@@ -3,8 +3,6 @@ name: Daily sitemap checks
 on:
   schedule:
     - cron: '30 * * * *'
-      branches:
-        - 'schema-dev'
 
 jobs:
   build:
