@@ -22,19 +22,20 @@ jobs:
         python -m venv venv
         pip install -r workflows/actions/sitemapcheck/requirements.txt
 
+
     - name: Get current date
-      run: |
-        export CURRENT_DATE=$(date +%Y-%m-%d)
+      id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
     - name: Run Python script
       run: |
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/output/$CURRENT_DATE_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/output/${{ steps.date.outputs.date  }}_sitemaps.csv
 
     - name: Add new file to Git
       run: |
         git config --global user.email "github-actions@example.com"
         git config --global user.name "GitHub Actions"
-        git add workflows/actions/sitemapcheck/output/$CURRENT_DATE_sitemaps.csv
+        git add workflows/actions/sitemapcheck/output/${{ steps.date.outputs.date  }}_sitemaps.csv
         git commit -m "Updating sitemap testing output directory"
 
     - name: Push changes
