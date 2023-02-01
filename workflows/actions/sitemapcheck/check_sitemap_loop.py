@@ -1,6 +1,7 @@
 import advertools as adv
 import requests, sys, os
 import yaml, yaql
+from datetime import datetime
 from urllib.request import urlopen
 import urllib.request
 import logging
@@ -80,7 +81,11 @@ def main():
         for s in data_source["sources"]:
             smurl = s["url"]
             stype = s["sourcetype"]
-            name = s["name"]
+
+            # set name with date string
+            today = datetime.now()
+            date_string = today.strftime('%Y-%m-%d')
+            name = date_string+s["name"]
 
             r, res = check_sitemapv2(smurl, stype, name)
 
