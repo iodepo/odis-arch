@@ -24,7 +24,7 @@ jobs:
 
     - name: Run Python script
       run: |
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/output/_sitemaps.csv
 
     - name: Add new file to Git
       run: |
