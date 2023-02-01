@@ -81,11 +81,7 @@ def main():
         for s in data_source["sources"]:
             smurl = s["url"]
             stype = s["sourcetype"]
-
-            # set name with date string
-            today = datetime.now()
-            date_string = today.strftime('%Y-%m-%d')
-            name = date_string+s["name"]
+            name = s["name"]
 
             r, res = check_sitemapv2(smurl, stype, name)
 
