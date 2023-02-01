@@ -30,8 +30,8 @@ jobs:
       run: |
         git config --global user.email "github-actions@example.com"
         git config --global user.name "GitHub Actions"
-        git add workflows/actions/sitemapcheck/sources.csv
-        git commit -m "Add sitemap results data"
+        git add workflows/actions/sitemapcheck/output/
+        git commit -m "Updating sitemap testing output directory"
 
     - name: Push changes
       uses: ad-m/github-push-action@master
