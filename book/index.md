@@ -6,7 +6,7 @@
 
 The Ocean InfoHub aims to build a sustainable, interoperable, and inclusive digital ecosystem for all Ocean data centres. Existing and emerging data systems are linked, with the ultimate goal of coordinating action and capacity to improve access to Ocean data and knowledge.
 
-The following video provide brief high level context to the Ocean InfoHub project.
+The following video provides a brief high level context to the Ocean InfoHub project.
 
 [![Ocean Infohub YouTube video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
 
