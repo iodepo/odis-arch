@@ -1,18 +1,11 @@
 import advertools as adv
 import requests, sys, os
 import yaml, yaql
-from datetime import datetime
 from urllib.request import urlopen
-import urllib.request
 import logging
 import argparse
 from typing import Tuple
 import pandas as pd
-import numpy as np
-import csv
-from io import StringIO
-
-# TODO   explore csv for the web and RML
 
 def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
     logging.getLogger('requests').setLevel(logging.ERROR)  # 'NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
@@ -81,11 +74,7 @@ def main():
         for s in data_source["sources"]:
             smurl = s["url"]
             stype = s["sourcetype"]
-
-            # set name with date string
-            today = datetime.now()
-            date_string = today.strftime('%Y-%m-%d')
-            name = date_string+s["name"]
+            name = s["name"]
 
             r, res = check_sitemapv2(smurl, stype, name)
 
