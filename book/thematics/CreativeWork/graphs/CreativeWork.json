@@ -1,0 +1,237 @@
+{
+    "@context": {
+      "@vocab": "https://schema.org/"
+    },
+    "@id": "https://myPIDs.org/pidToThisJsonDocument/",
+    "@type": "CreativeWork",
+
+
+    "about": "Text or controlled vocabulary/ontology, singly or as an array: The subject matter of this CreativeWork",
+    "abstract": "Text: A descriptive summary of a CreativeWork",
+    "accessMode": [
+        "auditory",
+        "chartOnVisual",
+        "chemOnVisual",
+        "colorDependent",
+        "diagramOnVisual",
+        "mathOnVisual",
+        "musicOnVisual",
+        "tactile",
+        "textOnVisual",
+        "textual",
+        "visual"
+    ],
+    "accessModeSufficient": [
+        "auditory",
+        "chartOnVisual",
+        "chemOnVisual",
+        "colorDependent",
+        "diagramOnVisual",
+        "mathOnVisual",
+        "musicOnVisual",
+        "tactile",
+        "textOnVisual",
+        "textual",
+        "visual"
+    ],
+    "accessibilityHazard": [
+       "flashing",
+       "noFlashingHazard",
+       "motionSimulation",
+       "noMotionSimulationHazard",
+       "sound",
+       "noSoundHazard",
+       "unknown",
+       "none"
+    ],
+    "accessibilitySummary": "Text: A textual summary of how this CreativeWork can be accessed, if there are any hazards associated with access, and related facts",
+    "accountablePerson": {
+        "@type": "Person",
+        "name": "Dr Uta Passow",
+        "givenName": "Uta",
+        "familyName": "Passow",
+        "url": "https://www.sample-data-repository.org/person/51317"
+    },
+    "acquireLicensePage": "https://urlToLicenseAcquisitionPage.org/",
+    "alternativeHeadline": "Text: A secondary title of the CreativeWork.",
+    "archivedAt": "https://urlToResourceCreativeWorkIsArchivedAt.org/",
+    "audience": "Text: Text describing the audience the CreativeWork is intended for.",
+    "associatedMedia": {
+        "@type": "MediaObject",
+        "name": "Name of the media object encoding this CreativeWork",
+        "description": "A schema.org MediaObject, such as an image, video, or audio object embedded in a web page or a downloadable dataset, i.e. DataDownload. See [TODO: Add MediaObject support profile]"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dr Uta Passow",
+        "givenName": "Uta",
+        "familyName": "Passow",
+        "url": "https://www.sample-data-repository.org/person/51317"
+    },
+
+    
+    "citation": [
+        "Citation to other work relevant to this software",
+        "Citation to other work relevant to this software",
+        "Citation to other work relevant to this software"
+    ],
+
+    "contributor": {
+        "@type": "Organization",
+        "@id": "http://www.foo.org/orgID",
+        "legalName": "Some Institute"
+      },
+    "copyrightYear": "Number: 1999",
+    "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Fiji"
+    },
+    "creator": [
+        {
+          "@type": "Person",
+          "@id": "http://lod.example-data-repository.org/id/person/51159",
+          "name": "Dr Langdon Quetin",
+          "url": "https://www.example-data-repository.org/person/51159"
+        },
+        {
+          "@type": "Person",
+          "@id": "http://lod.example-data-repository.org/id/person/51160",
+          "name": "Dr Robin Ross",
+          "url": "https://www.example-data-repository.org/person/51160"
+        }
+    ],
+      
+
+    "dateCreated": "2019-03-21",
+    "dateModified" : "2019-03-21",
+    "datePublished": "2019-03-21",
+    "discussionUrl" : "http://LinkToPage/with/comments/about/this/work",
+    "editor" : {
+        "@type": "Person",
+        "name" : "Person name"
+    },
+    
+    "educationalLevel" : "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+    "encoding" : {
+        "@type" : "MediaObject",
+        "description" : "A media object that encodes this CreativeWork.  Such as video, etc."
+    },
+    "encodingFormat" : "application/zip ",
+    "exampleOfWork" :{
+        "@type" : "CreativeWork",
+        "description" : "A creative work that this work is an example/instance/realization/derivation of"
+    },
+    "expires" : "2019-03-21",
+    "funder" : {
+        "@type": "Person",
+        "name" : "Person name"
+    },
+    "funding" : {
+        "@type": "Grant",
+        "name" : "Name of grant that supports this creativework"
+    },
+    "genre" : "Genre of the creative work, broadcast channel or group.",
+    "hasPart" : {
+        "@type" : "CreativeWork",
+        "description" : "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).Inverse property: isPartOf"
+    },
+    "headline" : "Headline of the article",
+    "inLanguage" : {
+        "@type": "Language",
+        "name": "Spanish",
+        "alternateName": "es"
+      },
+
+      "isAccessibleForFree" : "True",
+      "isBasedOn": {
+        "@type" : "CreativeWork",
+        "description" : "A resource from which this work is derived or from which it is a modification or adaption"
+    },
+    "isPartOf": {
+        "@type" : "CreativeWork",
+        "description" : "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.Inverse property: hasPart"
+    },
+    "locationCreated" : {
+        "@type": "Place",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.3280,
+          "longitude": 120.1633
+        }
+    },
+    "mainEntity" : "Thing",
+    "maintainer" : {
+        "@type": "Person",
+        "name" : "Person name"
+    },
+    "mentions" : "Thing Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept",
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "name of offer"
+        },
+        {
+            "@type": "Demand",
+            "name": "name of demand"
+        }
+    ],
+
+
+
+    "keywords": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Name of the set",
+          "description": "Description of the set",
+          "url": "url for the set"
+        },
+        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
+      },
+      "license": "http://spdx.org/licenses/CC0-1.0",
+      "publisher": {
+        "@id": "https://www.publishingrus.org",
+        "@type": "Organization",
+        "legalName": "Some Institute"
+      }, 
+      "provider": {
+        "@id": "https://www.repositoryB.org",
+        "@type": "Organization",
+        "legalName": "Sample Data Repository Office",
+        "name": "SDRO",
+        "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
+        "url": "https://www.sample-data-repository.org"
+      },
+
+
+    
+    "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
+    "alternateName": "Thing 1",
+    "description": "Free text or a URL to a description of this Thing.",
+    "disambiguatingDescription": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation",
+    "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "https://registry.identifiers.org/registry/myIdentifier/",
+        "value": "xyz",
+        "url": "https://myIdentifier.org/xyz",
+        "description": "Text: Optional description of this identifier, see [TODO: ADD URI TO IDENTIFER PATTERN] for more guidance on sharing identifieres."
+      },
+    "image": "https://myPIDs.org/pidToImageOfThisThing/",
+    "mainEntityOfPage": "https://www.urlToPageWhichIsMainlyAboutThisThing.com/",
+    "name": "Thing One",
+    "potentialAction": {
+        "@type": "Action",
+        "description": "Text: Description of Action which this Thing could potentially participate in. See [TODO:ADD LINK TO ACTION PATTERN] for how to add more structured metadata to Action. ",
+        "name": "Text: Name of Action that this Thing could potentially participate in"        
+      },
+    "sameAs":
+        [
+            "https://myPIDs.org/pidToAnotherWebResourceAboutThisThing/",
+            "https://myPIDs.org/pidToYetAnotherWebResourceAboutThisThing/"
+        ],
+    "subjectOf": [
+        "https://myPIDs.org/pidToCreativeWorkAboutThisThing/",
+        "https://myPIDs.org/pidToEventAboutThisThing/"
+    ],
+    "url": "https://www.urlToPageAboutThisThing.com/"
+  }
