@@ -2,7 +2,7 @@ name: Daily sitemap checks
 
 on:
   schedule:
-    - cron: '30 * * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -22,15 +22,19 @@ jobs:
         python -m venv venv
         pip install -r workflows/actions/sitemapcheck/requirements.txt
 
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M')"
+
     - name: Run Python script
       run: |
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/actions/sitemapcheck/output/_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/config/sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_sitemaps.csv
 
     - name: Add new file to Git
       run: |
         git config --global user.email "github-actions@example.com"
         git config --global user.name "GitHub Actions"
-        git add workflows/actions/sitemapcheck/output/
+        git add workflows/output/${{ steps.date.outputs.date  }}_sitemaps.csv
         git commit -m "Updating sitemap testing output directory"
 
     - name: Push changes
