@@ -10,8 +10,9 @@ PREFIX schemax: <http://schema.org/>
 PREFIX bds: <http://www.bigdata.com/rdf/search#>
 
 
-SELECT (COUNT(distinct(?s)) as ?count)
+SELECT ?type (COUNT( DISTINCT ?s) AS ?count)
 WHERE {
-    ?s schema:license ?o
+    ?s schema:license ?o .
+    ?s a ?type .
 }
-
+GROUP BY ?type  ORDER BY DESC(?count)
