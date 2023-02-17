@@ -1,0 +1,16 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?s ?p ?o
+WHERE {
+        VALUES ?s {
+        <http://schema.ufokn.org/core/v1/FeatureAtRisk/37129-25071>
+        <http://schema.ufokn.org/core/v1/FeatureAtRisk/37129-61678>
+        <http://schema.ufokn.org/core/v1/FeatureAtRisk/37129-66505>
+        <http://schema.ufokn.org/core/v1/FeatureAtRisk/37129-64330>
+        <http://schema.ufokn.org/core/v1/FeatureAtRisk/37129-14977>
+     }
+     ?s ?p ?o .
+}
+

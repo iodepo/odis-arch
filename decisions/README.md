@@ -28,14 +28,17 @@
 
 
 
+
+
 Make ADRs: 
 
- - Do not include @id for properties under the assumption that they are not issues them as nodes.  Kept for the top level, and clearly state only to this if it is a resolvable IRI.  Making it a FDO.  (ref: https://www.w3.org/TR/json-ld/#node-identifiers)
- - Keep each minimal, if a property requires or supports a type, just show the minimal properties for that embedded type, and link out to the full specification in an independent pattern by adding a link in the embedded Type's description property. 
- - how to force a string literal to be a URI, or at least indicate/express that a value is of type URL to support confident filtering: We will recommend typing URIs where possible, guidance to be added to documentation (see below)
- - When we see that a property expects "Thing" as a value, we understand this as any arbitrary string, PID to an ontology class, etc. We do not understand this as needing a subclass of schema.org:"Thing", as the example for instrument in the Action type notes "pen" as a valid entry.
+- Do not include @id for properties under the assumption that they are not issues them as nodes.  Kept for the top level, and clearly state only to this if it is a resolvable IRI.  Making it a FDO.  (ref: https://www.w3.org/TR/json-ld/#node-identifiers)
+- Keep each minimal, if a property requires or supports a type, just show the minimal properties for that embedded type, and link out to the full specification in an independent pattern by adding a link in the embedded Type's description property. 
+- how to force a string literal to be a URI, or at least indicate/express that a value is of type URL to support confident filtering: We will recommend typing URIs where possible, guidance to be added to documentation (see below)
+- When we see that a property expects "Thing" as a value, we understand this as any arbitrary string, PID to an ontology class, etc. We do not understand this as needing a subclass of schema.org:"Thing", as the example for instrument in the Action type notes "pen" as a valid entry.
 - In our patterns, we don't necessarily list all properties for each Type, just those we think the ODIS community can work with now. We encourage pull requests or suggestions for more, and will add them based on need / request. 
 - For Dates : always use DateTime with ISO 8601 compliance. (YYYY-MM-DD)
+- In cases where (like in Niko's records) there is no @id for a JSON record we need an approach that allows us to link resources together
 
 Material for documentation linked to ADRs
 - How to declare a literal as a URI
