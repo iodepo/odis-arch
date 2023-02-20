@@ -14,7 +14,7 @@ PREFIX bds: <http://www.bigdata.com/rdf/search#>
 SELECT DISTINCT ?g  ?s   ?type ?score ?name ?url ?lit ?description ?headline
 WHERE
 {
-   ?lit bds:search "coral" .
+   ?lit bds:search "HydroBios MultiNet" .
    ?lit bds:matchAllTerms "false" .
    ?lit bds:relevance ?score .
    graph ?g {
