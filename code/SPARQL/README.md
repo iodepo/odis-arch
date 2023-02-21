@@ -64,12 +64,6 @@ A testing query, for searching the graph index.
 A testing query, no description yet. 
 
 
-### provTest1.rq
-
-A testing query, no description yet. 
-
-
-
 ## Notes
 
 

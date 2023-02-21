@@ -16,3 +16,4 @@ WHERE
    ?wat rdfs:seeAlso ?domain
 }
 GROUP BY ?wat ?orgname ?domain
+ORDER BY DESC(?count)
