@@ -84,89 +84,83 @@
         "Lance A Fujieki ",
         "Dana Stuart Gerlach"
     ],
+    "potentialAction": [{
+        "@type": "Action",
+        "name": "Detmerination of nitrite and nitrate",
+        "actionStatus": "CompletedActionStatus",
+        "instrument": "Technicon Autoanalyzer II",
+        "object":"Certified reference material (CRM)",
+        "result":[
+            "nitrite and nitrite concentrations per seawtar mass",
+            "Column title NO3_NO2 in https://www.bco-dmo.org/dataset/3773"
+        ]
+    }],    
     "subevent": [
         {
-                            "@type": "Event",
-                            "name": "HOT_001",
-                            "description": "Hydrographic measurements at ALOHA station",
-                            "instrument": "R/V MOANA WAVE",
-                            "startDate": "1988-10-31T00:56:00Z",
-                            "endDate": "1988-11-02T08:57:00Z",
-                            "location": {
-                                "name": "ALOHA",
-                                "@type": "Place",
-                                "geo": {
-                                    "@type": "GeoShape",
-                                    "polygon": "-158.00 22.77, -158.00 22.73, -157.90 22.73, -157.90 22.77, -158.00 22.77"
-                                },
-                                "additionalProperty": [
-                                    {
-                                        "@type": "PropertyValue",
-                                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
-                                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
-                                    },
-                                    {
-                                        "@type": "PropertyValue",
-                                        "propertyID": "GPS Accuracy / Location error",
-                                        "value": "18",
-                                        "unitCode": "http://qudt.org/vocab/unit/M"
-                                    }
-                                ]
-                            },
-                            "organizer": [
-                                "R. Lukas",
-                                "D. Karl"
-                            ],
-                            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf",
+            "@type": "Event",
+            "name": "HOT_001",
+            "description": "Hydrographic measurements at ALOHA station",
+            "instrument": "R/V MOANA WAVE",
+            "startDate": "1988-10-31T00:56:00Z",
+            "endDate": "1988-11-02T08:57:00Z",
+            "location": {
+                "name": "ALOHA",
+                "@type": "Place",
+                "geo": {
+                    "@type": "GeoShape",
+                    "polygon": "-158.00 22.77, -158.00 22.73, -157.90 22.73, -157.90 22.77, -158.00 22.77"
                 },
-                "potentialAction": [{
-                    "@type": "Action",
-                    "name": "Detmerination of nitrite and nitrate",
-                    "actionStatus": "CompletedActionStatus",
-                    "instrument": [
-                        "Technicon Autoanalyzer II ",
-                    "object":"Certified reference material (CRM)"
-                    "result":[
-                        "nitrite and nitrite concentrations per seawtar mass",
-                        "Column title NO3_NO2 in https://www.bco-dmo.org/dataset/3773"
-                            ],
-                           
-                        },
-                        },
-                        {
-                            "@type": "Event",
-                            "name": "HOT_002",
-                            "instrument": "R/V MOANA WAVE",
-                            "startDate": "1988-12-01T22:19:00Z",
-                            "endDate": "1988-12-04T16:44:00Z",
-                            "location": {
-                                "name": "ALOHA",
-                                "@type": "Place",
-                                "geo": {
-                                    "@type": "GeoShape",
-                                    "polygon": "-158.13 22.90, -158.12 22.75, -157.92 22.75, -157.92 22.90, -158.12 22.90"
-                                },
-                                "additionalProperty": [
-                                    {
-                                        "@type": "PropertyValue",
-                                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
-                                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
-                                    },
-                                    {
-                                        "@type": "PropertyValue",
-                                        "propertyID": "GPS Accuracy / Location error",
-                                        "value": "18",
-                                        "unitCode": "http://qudt.org/vocab/unit/M"
-                                    }
-                                ]
-                            },
-                            "organizer": [
-                                "E. Firing"
-                            ],
-                            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf"
-                        }
-                    ]
-                }
+                "additionalProperty": [
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+                    },
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "GPS Accuracy / Location error",
+                        "value": "18",
+                        "unitCode": "http://qudt.org/vocab/unit/M"
+                    }
+                ]
+            },
+            "organizer": [
+                "R. Lukas",
+                "D. Karl"
+            ],
+            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf"
+        },
+        {
+            "@type": "Event",
+            "name": "HOT_002",
+            "instrument": "R/V MOANA WAVE",
+            "startDate": "1988-12-01T22:19:00Z",
+            "endDate": "1988-12-04T16:44:00Z",
+            "location": {
+                "name": "ALOHA",
+                "@type": "Place",
+                "geo": {
+                    "@type": "GeoShape",
+                    "polygon": "-158.13 22.90, -158.12 22.75, -157.92 22.75, -157.92 22.90, -158.12 22.90"
+                },
+                "additionalProperty": [
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+                    },
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "GPS Accuracy / Location error",
+                        "value": "18",
+                        "unitCode": "http://qudt.org/vocab/unit/M"
+                    }
+                ]
+            },
+            "organizer": [
+                "E. Firing"
+            ],
+            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf"
         }
     ]
 }
