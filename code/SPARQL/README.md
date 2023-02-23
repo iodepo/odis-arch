@@ -67,14 +67,8 @@ A testing query, no description yet.
 ## Notes
 
 
+[SPARQL Reference](https://www.w3.org/TR/sparql11-query/)
+
 ```bash
 curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql -d@hasLicense.rq
-```
-
-## Snippets
-
-```sparql
-FILTER (
-        ?type IN (schema:Person, schema:Organization, schema:CreativeWork, schemax:Person, schemax:Organization)
-) .
 ```

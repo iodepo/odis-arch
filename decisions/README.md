@@ -40,6 +40,9 @@ Make ADRs:
 - For Dates : always use DateTime with ISO 8601 compliance. (YYYY-MM-DD)
 - In cases where (like in Niko's records) there is no @id for a JSON record we need an approach that allows us to link resources together
 - Symphony related:  If a software package hosts it's own data, then the software description metadata should describe that data as datasets so it can be found
+- Assuming that the page supports content negotiation, the @id of the JSON-LD can be the URL of the web page hosting it.  
+- detail how to leverage the sitemap index to point to multiple sitemap and then designate one or more as ones for OIH to index via robots.txt
+
 
 Material for documentation linked to ADRs
 - How to declare a literal as a URI
