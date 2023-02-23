@@ -39,6 +39,7 @@ Make ADRs:
 - In our patterns, we don't necessarily list all properties for each Type, just those we think the ODIS community can work with now. We encourage pull requests or suggestions for more, and will add them based on need / request. 
 - For Dates : always use DateTime with ISO 8601 compliance. (YYYY-MM-DD)
 - In cases where (like in Niko's records) there is no @id for a JSON record we need an approach that allows us to link resources together
+- Symphony related:  If a software package hosts it's own data, then the software description metadata should describe that data as datasets so it can be found
 
 Material for documentation linked to ADRs
 - How to declare a literal as a URI

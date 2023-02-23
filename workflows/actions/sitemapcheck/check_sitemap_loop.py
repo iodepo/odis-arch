@@ -75,10 +75,11 @@ def main():
             smurl = s["url"]
             stype = s["sourcetype"]
             name = s["name"]
+            pname = s["propername"]
 
             r, res = check_sitemapv2(smurl, stype, name)
 
-            data = { 'name': name, 'code': r, 'description': res, 'url': smurl, 'type': stype}
+            data = { 'name': name,  'propername': pname, 'code': r, 'description': res, 'url': smurl, 'type': stype}
             rl.append(data)
 
         # leverage pandas to convert to csv
