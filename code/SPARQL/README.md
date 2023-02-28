@@ -72,3 +72,12 @@ A testing query, no description yet.
 ```bash
 curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql -d@hasLicense.rq
 ```
+
+You can also do ?format=json  or csv with these.   When you do that you can 
+also then leverage the powerful jq tool with commands like
+
+```text
+cat results.json | jq '.results.bindings[] .s.value' 
+```
+
+which would look at all the elements _s_ in the bindings array and pull their value.

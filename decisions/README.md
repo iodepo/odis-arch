@@ -1,10 +1,7 @@
 # ADRs
 
-
-
 ## Notes
 
-- Git checkout error on Windows: error: invalid path 'workflows/output/2023-02-08T00:09_sitemaps.csv'
 - re: book's recommendations for Spatial (spatialCoverage vs WKT vs GeoJSON)
   - came across aShepherd's comments/decision to follow ODIS conventions (bottom comment at https://github.com/ESIPFed/science-on-schema.org/issues/101) which (according to his take) is:
     - schema.org `spatialCoverage` (for Google friendliness)
@@ -17,18 +14,8 @@
 - PL: order of properties in patterns (alphabetic or curated by us)
   - agreed to use alphabetical, as these patterns will be used by so many groups
 - PL: for urls and external links, always use the consistent style
-- JM: formatting rules
-   - spaces only (no tabs)
-   - 4 spaces for each sub-property
    - citation needed
      - https://www.ecma-international.org/publications-and-standards/standards/ecma-404/
-   - case sensitivity of property/values
-     "@type": "Thing"
-
-
-
-
-
 
 Make ADRs: 
 
@@ -44,18 +31,17 @@ Make ADRs:
 - detail how to leverage the sitemap index to point to multiple sitemap and then designate one or more as ones for OIH to index via robots.txt
 
 
-Material for documentation linked to ADRs
-- How to declare a literal as a URI
+Other:
 
-
-Consider ADR:
 - create dedicated repo for patterns to improve management across graphs
 - create IRIs for the latest released version of each pattern 
 - Add the IRIs for latest released version of each pattern to the respective @id of that pattern 
-- add docs for shacl validation 
 
-Lead documentation with: 
 
+Add to Book, not ADR:
+
+- Material for documentation linked to ADRs
+- How to declare a literal as a URI
 
 ```    "identifier": {
         "@type": "PropertyValue",
@@ -87,6 +73,3 @@ Some initial work and notes on the use of Architecture Decision Records
 
 * https://github.com/joelparkerhenderson/architecture-decision-record
 * https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/templates/decision-record-template-by-michael-nygard/index.md 
-
-
-
