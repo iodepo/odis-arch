@@ -15,6 +15,13 @@ just a pipeline test to demonstrate the approach and
 explore if investing in building out all the required
 NodeShapes is useful. 
 
+It might also be useful to explore [SSSOM](https://mapping-commons.github.io/sssom/home/) 
+as a tool in this process.  We could define the mapping in that,
+and then  generate the SPARQL needed to 
+perform the transformations.  
+
+
+
 ### Notes 
 
 * DCAT-US: https://resources.data.gov/resources/dcat-us/
