@@ -161,12 +161,13 @@
         "targetUrl": "http://example.org/CFE/subjects/3362"
     },    
     "educationalLevel" : "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+    "educationalUse" : "Text or DefinedTerm property to describe the purpose of this CreativeWork in the context of education",
     "encoding" : {
         "@type" : "MediaObject",
         "description" : "A media object that encodes this CreativeWork.  Such as video, etc."
     },
     "encodingFormat" : "application/zip ",
-    "exampleOfWork" :{
+    "exampleOfWork": {
         "@type" : "CreativeWork",
         "description" : "A creative work that this work is an example/instance/realization/derivation of"
     },
@@ -189,10 +190,28 @@
         "@type": "Language",
         "name": "Spanish",
         "alternateName": "es"
-      },
-
-      "isAccessibleForFree" : "True",
-      "isBasedOn": {
+      },    
+    "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/ListenAction",
+        "userInteractionCount": "14300"
+    },
+    "interactivityType": "Text to describe the predominant mode of learning supported by the learning resource",
+    "interpretedAsClaim": {
+        "@type": "Claim",
+        "appearance": {
+            "@type": "CreativeWork",
+            "name": "Julius Caesar"
+        },
+        "claimInterpreter": {
+            "@type": "Person",
+            "@id": "http://lod.example-data-repository.org/id/person/514",
+            "name": "Susan White",
+            "url": "https://www.example-data-repository.org/person/514"
+        }
+    },
+    "isAccessibleForFree" : "True",
+    "isBasedOn": {
         "@type" : "CreativeWork",
         "description" : "A resource from which this work is derived or from which it is a modification or adaption"
     },
@@ -250,11 +269,46 @@
       "name": "SDRO",
       "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
       "url": "https://www.sample-data-repository.org"
+    }, 
+
+    "translationOfWork": {
+        "@type": "CreativeWork",
+        "description": "The CreativeWork that this CreativeWork was translated from, if any",
+        "inLanguage": "ja",
+        "name": "クリエイティブな作品",
+        "url": "https://www.sample-data-repository.org/creativeWork/1243",
+        "translator":
+          {
+            "@type": "Person",
+            "name": "Dr 山田 太郎",
+            "givenName": "太郎",
+            "familyName": "山田",
+            "url": "https://www.sample-data-repository.org/person/12435"
+          }
+    } ,
+    "translator": [
+        {
+        "@type": "Organization",
+        "legalName": "Translations Incorporated",
+        "name": "TI",
+        "description": "An organisation which has been tasked with translating this CreativeWork.",
+        "url": "https://www.translationsIncorporated.org/"
+       },
+       {
+        "@type": "Person",
+        "name": "John Doe",
+        "description": "A person who has been tasked with translating this CreativeWork.",
+        "url": "https://www.sample-data-repository.org/person/51332"
+       }
+    ],
+    "typicalAgeRange": "20-60",
+    "usageInfo": {
+      "@type": "CreativeWork",
+      "name": "Guidelines on how to use and how not to use this CreativeWork",
+      "description": "A document or other resources which contains information on how the CreativeWork should and should not be used.",
+      "url": "https://usageGuides.org/usageGuide_2321.pdf"
     },
-
-
     "version": "3.2",
-
     "video": {
         "@type": "VideoObject",
         "description": "A video object about this CreativeWork.",
@@ -267,29 +321,30 @@
       {
         "@type": "Dataset",
         "datePublished": "2012",
+        "description":"A CSV distribution of this CreativeWork",
         "distribution": "https://repository.org/pid_to_the_downloadable_dataset.",
         "encodingFormat": "text/csv",
         "publisher": {
           "@type": "Organization",
           "name": "Data R Us Inc."
         }
-        },
-        {
+      },
+      {
         "@type": "Dataset",
         "datePublished": "2021",
+        "description":"A Geo JSON distribution of this CreativeWork",
         "distribution": "https://anotherRepository.org/pid_to_the_downloadable_dataset.",
         "encodingFormat": "application/geo+json",
         "publisher": {
           "@type": "Organization",
           "name": "GeoData 4 All Inc."
         }
+      }
       ],
-    
     "workTranslation": {
       "@type": "CreativeWork",
-      "@id": "https://urlToCreativeWork.org/TranslatedVersionOfCreativeWork",
-      "about": "The subject matter of the translation - usually the CreativeWork that has been translated",
-      "inLanguage": "en",
+      "description": "A French translation of this CreativeWork",
+      "inLanguage": "fr",
       "name": "This CreativeWork - A New Translation",
       "translator":
         {
@@ -301,7 +356,12 @@
         }
     },
 
-    
+
+
+
+
+
+
     "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
     "alternateName": "Thing 1",
     "description": "Free text or a URL to a description of this Thing.",
