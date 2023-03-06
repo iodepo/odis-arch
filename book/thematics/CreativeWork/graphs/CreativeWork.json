@@ -114,7 +114,7 @@
         "@type": "Organization",
         "@id": "http://www.foo.org/orgID",
         "legalName": "Some Institute"
-      },
+    },
     "copyrightHolder": {
         "@type": "Person",
         "@id": "http://lod.example-data-repository.org/id/person/5112",
@@ -215,10 +215,23 @@
         "@type" : "CreativeWork",
         "description" : "A resource from which this work is derived or from which it is a modification or adaption"
     },
+    "isFamilyFriendly" : "True",
     "isPartOf": {
         "@type" : "CreativeWork",
         "description" : "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.Inverse property: hasPart"
     },
+    "keywords": {
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "Name of the set",
+          "description": "Description of the set",
+          "url": "url for the set"
+        },
+        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
+    },
+    "learningResourceType": "Text or DefinedTerm property to describe predominant type or kind characterizing the learning resource.",
+    "license": "http://spdx.org/licenses/CC0-1.0",    
     "locationCreated" : {
         "@type": "Place",
         "geo": {
@@ -232,6 +245,8 @@
         "@type": "Person",
         "name" : "Person name"
     },
+    "material": "Text or Product or URL property to describe the material that the CreativeWork is made from",
+    "materialExtent": "Text or QuantitativeValue to state the quantity of the materials being described or an expression of the physical space they occupy",
     "mentions" : "Thing Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept",
     "offers": [
         {
@@ -243,40 +258,159 @@
             "name": "name of demand"
         }
     ],
-
-
-
-    "keywords": {
-        "@type": "DefinedTerm",
-        "inDefinedTermSet": {
-          "@type": "DefinedTermSet",
-          "name": "Name of the set",
-          "description": "Description of the set",
-          "url": "url for the set"
-        },
-        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
-    },
-    "license": "http://spdx.org/licenses/CC0-1.0",
-    "publisher": {
-      "@id": "https://www.publishingrus.org",
-      "@type": "Organization",
-      "legalName": "Some Institute"
-    }, 
+    "pattern": "Text or DefinedTerm property to state the pattern that the CreativeWork has, for example 'polka dot', 'striped', 'Canadian flag'",
+    "position": "Text or Integer to describe the position of the CreativeWork in a series or sequence of items",
+    "producer": {
+        "@type": "Person",
+        "name": "George Martin"
+      },
     "provider": {
-      "@id": "https://www.repositoryB.org",
       "@type": "Organization",
       "legalName": "Sample Data Repository Office",
       "name": "SDRO",
       "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
-      "url": "https://www.sample-data-repository.org"
-    }, 
-
+      "url": "https://www.sample-data-repositoryB.org"
+    },
+    "publication": {
+        "@type": "PublicationEvent",
+        "startDate": "1968-11-25",
+        "location": {
+            "@type": "Country",
+            "name": "Ghana"
+        }
+    },
+    "publisher": {
+        "url": "https://www.publishingrus.org",
+        "@type": "Organization",
+        "legalName": "Some Institute"
+    },     
+    "publisherImprint": {
+        "@id": "https://www.publishingdiv.org",
+        "@type": "Organization",
+        "legalName": "Some publishing division"
+    },
+    "publishingPrinciples": "https://url.to.document.describing.editorial.principles.of.organization.com",
+    "recordedAt": {
+        "@type": "Event",
+        "location": "Some place",
+        "startDate": "Some start date",
+        "url": "https://url.to.event.com"
+    },
+    "releasedEvent": {
+        "@type":"PublicationEvent",
+        "startDate": "Some date",
+        "location": {
+          "@type": "Country",
+          "name": "Some country"
+        }
+    },
+    "review":     {
+        "@type": "Review",
+        "author": "A Reviewer",
+        "datePublished": "Some date",
+        "reviewBody": "Text describing the review of the CreativeWork",
+        "name": "text for name of review",
+        "reviewRating": {
+          "@type": "Rating",
+          "bestRating": "some integer",
+          "ratingValue": "some integer",
+          "worstRating": "some integer"
+        }
+    },
+    "schemaVersion": [
+        "https://schema.org/docs/releases.html#v10.0",
+        "http://dublincore.org/specifications/dublin-core/dces/1999-07-02",
+        "https://github.com/spdx/license-list-XML/releases/tag/v3.20"
+    ],
+    "sdDatePublished": "2022-04-12", 
+    "sdLicense": "http://spdx.org/licenses/CC0-1.0",
+    "sdPublisher": [
+        {
+        "@type": "Organization",
+        "legalName": "Example Structured Data Publishing Organisation",
+        "name": "ESDPO",
+        "description": "An organisation which publishes structured data about things.",
+        "url": "https://www.exampleSDPublisher.org/"
+       },
+       {
+        "@type": "Person",
+        "name": "John Doe",
+        "description": "A person who publishes structured data about Things",
+        "url": "https://www.sample-data-repository.org/person/51332"
+       }
+    ],
+    "size": "Text indicating the phyiscal size of the CreativeWork (if appropriate). DefinedTerm or QuantitativeValue or SizeSpecification are also valid Types",
+    "sourceOrganization":  {
+        "@type": "Organization",
+        "legalName": "Example Source Organisation",
+        "name": "ESO",
+        "description": "The organisation which the creator of this CreativeWork was working for.",
+        "url": "https://www.exampleSource.org/"
+    },
+    "spatial": {
+        "@type": "Place",
+		"description": "Use the 'spatial' property and the properites under 'Place' for any spatial information you'd like to add, beyond spatialCoverage."
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "address": "54 Ocean Drive, 23521 Ocean City, CountryName",
+        "name": "Place name",
+		"description": "Use this Place type to express which spatial region your CreativeWork is about or is focused on. If you don't have precise coordinates, use this description field to describe the place with free text",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "-158.8575 23.4375, -158.8575 21.2283, -157.4567 21.2283, -157.4567 23.4375, -158.8575 23.4375"
+        },
+		"additionalProperty":[ 
+        {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GPS Accuracy / Location error",
+            "value": "18",
+			"unitCode": "http://qudt.org/vocab/unit/M"
+        }
+          ]
+    },
+    "sponsor":  [
+        {
+        "@type": "Organization",
+        "legalName": "Example Sponsorship Organisation",
+        "name": "ESO",
+        "description": "An organisation which sponsors things.",
+        "url": "https://www.exampleSponsorship.org/"
+       },
+       {
+        "@type": "Person",
+        "name": "John Doe",
+        "description": "A person who sponsors many Things",
+        "url": "https://www.sample-data-repository.org/person/51332"
+       }
+    ],
+    "teaches": [
+        "ocean exploration",
+        {
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": "http://vocabularies.unesco.org/thesaurus",
+            "name": "ocean exploration",
+            "termCode": "concept10630",
+            "url": "http://vocabularies.unesco.org/thesaurus/concept10630"
+        }
+        
+    ],
+    "temporal": "A more general property for any time-related information about this CreativeWork. This can be expressed as text or using the properties associated with the DateTime Type",
+    "temporalCoverage": "2011/2012",
+    "text": "The entire textual content of this CreativeWork, if relevant",
+    "thumbnailUrl": "https://www.sample-website.org/imageAboutThisThing.jpg",
+    "timeRequired": "PT30M",
     "translationOfWork": {
         "@type": "CreativeWork",
         "description": "The CreativeWork that this CreativeWork was translated from, if any",
         "inLanguage": "ja",
         "name": "クリエイティブな作品",
-        "url": "https://www.sample-data-repository.org/creativeWork/1243",
+        "url": "https://www.sample-data-repository.org/creativeWork/1124",
         "translator":
           {
             "@type": "Person",
@@ -359,9 +493,6 @@
 
 
 
-
-
-
     "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
     "alternateName": "Thing 1",
     "description": "Free text or a URL to a description of this Thing.",
@@ -391,4 +522,4 @@
         "https://myPIDs.org/pidToEventAboutThisThing/"
     ],
     "url": "https://www.urlToPageAboutThisThing.com/"
-  }
+}
