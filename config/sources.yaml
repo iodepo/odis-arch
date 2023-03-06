@@ -456,7 +456,24 @@ sources:
   backend: WordPress  
   headless: true
   dateadded: 2022-11-30
-  active: false  
+  active: false
+#
+# RDA Australia
+# 
+- name: rda
+  propername: Research Data Australia
+  catalogue: https://researchdata.edu.au/
+  domain: https://ardc.edu.au/
+  logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/researchdataaustralia
+  sourcetype: sitemap
+  url: https://researchdata.edu.au/home/sitemap/?ds=64
+  changefreq: daily  
+  backend: GeoNetwork  
+  headless: true
+  dateadded: 2023-03-06
+  active: true 
 #
 # VLIZ: Flanders Marine Institute catalogue
 #   note: VLIZ & EMODNet services were unified in late 2022 
