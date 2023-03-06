@@ -53,13 +53,31 @@
         "url": "https://www.sample-data-repository.org/person/51317"
     },
     "acquireLicensePage": "https://urlToLicenseAcquisitionPage.org/",
+    "aggregateRating": {
+
+        "@type": "AggregateRating",
+        "reviewAspect": "Text describing what part of the CreativeWork is subject to the ratings here",
+        "ratingValue": "4",
+        "ratingExplanation": "Text explaining the ratingValue",
+        "reviewCount": "250",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
     "alternativeHeadline": "Text: A secondary title of the CreativeWork.",
     "archivedAt": "https://urlToResourceCreativeWorkIsArchivedAt.org/",
-    "audience": "Text: Text describing the audience the CreativeWork is intended for.",
+    "assesses": "Text to describe what (if anything) the CreativeWork described by this template assesses.",
     "associatedMedia": {
         "@type": "MediaObject",
         "name": "Name of the media object encoding this CreativeWork",
         "description": "A schema.org MediaObject, such as an image, video, or audio object embedded in a web page or a downloadable dataset, i.e. DataDownload. See [TODO: Add MediaObject support profile]"
+    },
+    "audience": "Text: Text describing the audience the CreativeWork is intended for.",
+    "audio": {
+        "@type": "AudioObject",
+        "name": "Title Of The AudioFile",
+        "description": "Description of the audio object",
+        "contentUrl": "http://myAudioWebsite.org/TitleOfTheAudioFile.mp4",
+        "encoding": "audio/mp4"
     },
     "author": {
         "@type": "Person",
@@ -68,24 +86,49 @@
         "familyName": "Passow",
         "url": "https://www.sample-data-repository.org/person/51317"
     },
-
-    
+    "award": "Text to describe an award won for this CreativeWork",
+    "character": {
+        "@type": "Person",
+        "name": "Odysseus",
+        "description": "A description of any ficitonal character mentioned in this creative work",
+        "givenName": "Odysseus",
+        "familyName": "",
+        "url": "https://en.wikipedia.org/wiki/Odysseus"
+    },
     "citation": [
         "Citation to other work relevant to this software",
         "Citation to other work relevant to this software",
         "Citation to other work relevant to this software"
     ],
-
+    "comment": "Text comment on the CreativeWork", 
+    "commentCount": 1,
+    "conditionsOfAccess": "Text to describe conditions that affect the availability of, or method(s) of access to, an item.",
+    "contentLocation": {
+        "@type": "AdministrativeArea",
+        "name": "Lunenburg",
+        "description": "The location depicted or described in the CreativeWork"
+      },
+    "contentRating": "Text stating the official rating for this CreativeWork",
+    "contentReferenceTime": "DateTime: 2016-03-21T11:30:00-07:00",
     "contributor": {
         "@type": "Organization",
         "@id": "http://www.foo.org/orgID",
         "legalName": "Some Institute"
       },
+    "copyrightHolder": {
+        "@type": "Person",
+        "@id": "http://lod.example-data-repository.org/id/person/5112",
+        "name": "Dr Sarah Smith",
+        "url": "https://www.example-data-repository.org/person/5112"
+    }, 
+    "copyrightNotice": "Text of a notice appropriate for describing the copyright aspects of this Creative Work", 
     "copyrightYear": "Number: 1999",
+    "correction": "Text or CorrectionComment or URL property to indicate a correction to the CreativeWork",
     "countryOfOrigin": {
         "@type": "Country",
         "name": "Fiji"
     },
+    "creativeWorkStatus": "Text or DefinedTerm property to describe the status of this CreativeWork in terms of its stage in a lifecycle",
     "creator": [
         {
           "@type": "Person",
@@ -100,17 +143,23 @@
           "url": "https://www.example-data-repository.org/person/51160"
         }
     ],
-      
-
+    "creditText": "Text used to credit person(s) and/or organization(s) associated with this CreativeWork",
     "dateCreated": "2019-03-21",
     "dateModified" : "2019-03-21",
     "datePublished": "2019-03-21",
     "discussionUrl" : "http://LinkToPage/with/comments/about/this/work",
+    "editEIDR": "Text or URL to state the EIDR (Entertainment Identifier Registry) identifier representing a specific edit / edition for a work of film or television.",
     "editor" : {
         "@type": "Person",
         "name" : "Person name"
     },
-    
+    "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "alignmentType": "educationalSubject",
+        "educationalFramework": "Text: The framework to which the resource being described is aligned",
+        "targetName": "Text: name of a node in an established educational framework",
+        "targetUrl": "http://example.org/CFE/subjects/3362"
+    },    
     "educationalLevel" : "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
     "encoding" : {
         "@type" : "MediaObject",
@@ -187,22 +236,70 @@
           "url": "url for the set"
         },
         "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
-      },
-      "license": "http://spdx.org/licenses/CC0-1.0",
-      "publisher": {
-        "@id": "https://www.publishingrus.org",
-        "@type": "Organization",
-        "legalName": "Some Institute"
-      }, 
-      "provider": {
-        "@id": "https://www.repositoryB.org",
-        "@type": "Organization",
-        "legalName": "Sample Data Repository Office",
-        "name": "SDRO",
-        "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
-        "url": "https://www.sample-data-repository.org"
-      },
+    },
+    "license": "http://spdx.org/licenses/CC0-1.0",
+    "publisher": {
+      "@id": "https://www.publishingrus.org",
+      "@type": "Organization",
+      "legalName": "Some Institute"
+    }, 
+    "provider": {
+      "@id": "https://www.repositoryB.org",
+      "@type": "Organization",
+      "legalName": "Sample Data Repository Office",
+      "name": "SDRO",
+      "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
+      "url": "https://www.sample-data-repository.org"
+    },
 
+
+    "version": "3.2",
+
+    "video": {
+        "@type": "VideoObject",
+        "description": "A video object about this CreativeWork.",
+        "duration": "PT1M33S",
+        "name": "A video about our CreativeWork",
+        "thumbnail": "https://videoImageArchive.org/videoThumbnail.jpg",
+        "contentSize": "500MB"
+    },
+    "workExample": [
+      {
+        "@type": "Dataset",
+        "datePublished": "2012",
+        "distribution": "https://repository.org/pid_to_the_downloadable_dataset.",
+        "encodingFormat": "text/csv",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Data R Us Inc."
+        }
+        },
+        {
+        "@type": "Dataset",
+        "datePublished": "2021",
+        "distribution": "https://anotherRepository.org/pid_to_the_downloadable_dataset.",
+        "encodingFormat": "application/geo+json",
+        "publisher": {
+          "@type": "Organization",
+          "name": "GeoData 4 All Inc."
+        }
+      ],
+    
+    "workTranslation": {
+      "@type": "CreativeWork",
+      "@id": "https://urlToCreativeWork.org/TranslatedVersionOfCreativeWork",
+      "about": "The subject matter of the translation - usually the CreativeWork that has been translated",
+      "inLanguage": "en",
+      "name": "This CreativeWork - A New Translation",
+      "translator":
+        {
+          "@type": "Person",
+          "name": "Dr John Doe",
+          "givenName": "John",
+          "familyName": "Doe",
+          "url": "https://www.sample-data-repository.org/person/51332"
+        }
+    },
 
     
     "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
