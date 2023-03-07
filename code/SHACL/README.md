@@ -29,6 +29,6 @@ curl http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.r
 
 ```bash
 
-curl http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.rdf |   pyshacl -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/SHACL/oih_search.ttl -sf turtle -df n3 -f table -
+curl http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.rdf |   pyshacl -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/SHACL/typesAreURI.ttl -sf turtle -df n3 -f table -
 
 ```
