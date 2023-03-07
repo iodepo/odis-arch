@@ -20,6 +20,9 @@ as a tool in this process.  We could define the mapping in that,
 and then  generate the SPARQL needed to 
 perform the transformations.  
 
+The process could also leverage the JSON-LD Framing approach to allow us
+to pull out the elements from the source files that we want.  Based on those then
+we can use SHACL AF or other process to generate out the triples we want. 
 
 
 ### Notes 
