@@ -51,6 +51,23 @@ sources:
   dateadded: 2021-02-26
   active: true
 #
+# BeBOP-OBON 
+#
+- name: bebop
+  propername: Better Biomolecular Ocean Practices (BeBOP) as part of Ocean Biomolecular Observing Network (OBON)
+  catalogue: https://github.com/BeBOP-OBON/odis-interface
+  domain: https://oceandecade.org/actions/better-biomolecular-ocean-practices/
+  logo: https://en.unesco.org/sites/default/files/styles/banner_sec_col_234x100/public/logo_decade_ocean_science_en.jpg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/bebop
+  sourcetype: sitemap  
+  url: https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml
+  changefreq: as needed
+  backend: GitHub  
+  headless: false
+  dateadded: 2023-03-08
+  active: true  
+#
 # Benguela Current Convention (BCC) GeoData Portal
 #
 - name: benguelacc
