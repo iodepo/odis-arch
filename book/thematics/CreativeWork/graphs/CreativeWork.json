@@ -1,11 +1,9 @@
 {
     "@context": {
-      "@vocab": "https://schema.org/"
+        "@vocab": "https://schema.org/"
     },
     "@id": "https://myPIDs.org/pidToThisJsonDocument/",
     "@type": "CreativeWork",
-
-
     "about": "Text or controlled vocabulary/ontology, singly or as an array: The subject matter of this CreativeWork",
     "abstract": "Text: A descriptive summary of a CreativeWork",
     "accessMode": [
@@ -35,14 +33,14 @@
         "visual"
     ],
     "accessibilityHazard": [
-       "flashing",
-       "noFlashingHazard",
-       "motionSimulation",
-       "noMotionSimulationHazard",
-       "sound",
-       "noSoundHazard",
-       "unknown",
-       "none"
+        "flashing",
+        "noFlashingHazard",
+        "motionSimulation",
+        "noMotionSimulationHazard",
+        "sound",
+        "noSoundHazard",
+        "unknown",
+        "none"
     ],
     "accessibilitySummary": "Text: A textual summary of how this CreativeWork can be accessed, if there are any hazards associated with access, and related facts",
     "accountablePerson": {
@@ -54,7 +52,6 @@
     },
     "acquireLicensePage": "https://urlToLicenseAcquisitionPage.org/",
     "aggregateRating": {
-
         "@type": "AggregateRating",
         "reviewAspect": "Text describing what part of the CreativeWork is subject to the ratings here",
         "ratingValue": "4",
@@ -100,14 +97,14 @@
         "Citation to other work relevant to this software",
         "Citation to other work relevant to this software"
     ],
-    "comment": "Text comment on the CreativeWork", 
+    "comment": "Text comment on the CreativeWork",
     "commentCount": 1,
     "conditionsOfAccess": "Text to describe conditions that affect the availability of, or method(s) of access to, an item.",
     "contentLocation": {
         "@type": "AdministrativeArea",
         "name": "Lunenburg",
         "description": "The location depicted or described in the CreativeWork"
-      },
+    },
     "contentRating": "Text stating the official rating for this CreativeWork",
     "contentReferenceTime": "DateTime: 2016-03-21T11:30:00-07:00",
     "contributor": {
@@ -120,8 +117,8 @@
         "@id": "http://lod.example-data-repository.org/id/person/5112",
         "name": "Dr Sarah Smith",
         "url": "https://www.example-data-repository.org/person/5112"
-    }, 
-    "copyrightNotice": "Text of a notice appropriate for describing the copyright aspects of this Creative Work", 
+    },
+    "copyrightNotice": "Text of a notice appropriate for describing the copyright aspects of this Creative Work",
     "copyrightYear": "Number: 1999",
     "correction": "Text or CorrectionComment or URL property to indicate a correction to the CreativeWork",
     "countryOfOrigin": {
@@ -131,27 +128,27 @@
     "creativeWorkStatus": "Text or DefinedTerm property to describe the status of this CreativeWork in terms of its stage in a lifecycle",
     "creator": [
         {
-          "@type": "Person",
-          "@id": "http://lod.example-data-repository.org/id/person/51159",
-          "name": "Dr Langdon Quetin",
-          "url": "https://www.example-data-repository.org/person/51159"
+            "@type": "Person",
+            "@id": "http://lod.example-data-repository.org/id/person/51159",
+            "name": "Dr Langdon Quetin",
+            "url": "https://www.example-data-repository.org/person/51159"
         },
         {
-          "@type": "Person",
-          "@id": "http://lod.example-data-repository.org/id/person/51160",
-          "name": "Dr Robin Ross",
-          "url": "https://www.example-data-repository.org/person/51160"
+            "@type": "Person",
+            "@id": "http://lod.example-data-repository.org/id/person/51160",
+            "name": "Dr Robin Ross",
+            "url": "https://www.example-data-repository.org/person/51160"
         }
     ],
     "creditText": "Text used to credit person(s) and/or organization(s) associated with this CreativeWork",
     "dateCreated": "2019-03-21",
-    "dateModified" : "2019-03-21",
+    "dateModified": "2019-03-21",
     "datePublished": "2019-03-21",
-    "discussionUrl" : "http://LinkToPage/with/comments/about/this/work",
+    "discussionUrl": "http://LinkToPage/with/comments/about/this/work",
     "editEIDR": "Text or URL to state the EIDR (Entertainment Identifier Registry) identifier representing a specific edit / edition for a work of film or television.",
-    "editor" : {
+    "editor": {
         "@type": "Person",
-        "name" : "Person name"
+        "name": "Person name"
     },
     "educationalAlignment": {
         "@type": "AlignmentObject",
@@ -159,38 +156,38 @@
         "educationalFramework": "Text: The framework to which the resource being described is aligned",
         "targetName": "Text: name of a node in an established educational framework",
         "targetUrl": "http://example.org/CFE/subjects/3362"
-    },    
-    "educationalLevel" : "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
-    "educationalUse" : "Text or DefinedTerm property to describe the purpose of this CreativeWork in the context of education",
-    "encoding" : {
-        "@type" : "MediaObject",
-        "description" : "A media object that encodes this CreativeWork.  Such as video, etc."
     },
-    "encodingFormat" : "application/zip ",
+    "educationalLevel": "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+    "educationalUse": "Text or DefinedTerm property to describe the purpose of this CreativeWork in the context of education",
+    "encoding": {
+        "@type": "MediaObject",
+        "description": "A media object that encodes this CreativeWork.  Such as video, etc."
+    },
+    "encodingFormat": "application/zip ",
     "exampleOfWork": {
-        "@type" : "CreativeWork",
-        "description" : "A creative work that this work is an example/instance/realization/derivation of"
+        "@type": "CreativeWork",
+        "description": "A creative work that this work is an example/instance/realization/derivation of"
     },
-    "expires" : "2019-03-21",
-    "funder" : {
+    "expires": "2019-03-21",
+    "funder": {
         "@type": "Person",
-        "name" : "Person name"
+        "name": "Person name"
     },
-    "funding" : {
+    "funding": {
         "@type": "Grant",
-        "name" : "Name of grant that supports this creativework"
+        "name": "Name of grant that supports this creativework"
     },
-    "genre" : "Genre of the creative work, broadcast channel or group.",
-    "hasPart" : {
-        "@type" : "CreativeWork",
-        "description" : "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).Inverse property: isPartOf"
+    "genre": "Genre of the creative work, broadcast channel or group.",
+    "hasPart": {
+        "@type": "CreativeWork",
+        "description": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).Inverse property: isPartOf"
     },
-    "headline" : "Headline of the article",
-    "inLanguage" : {
+    "headline": "Headline of the article",
+    "inLanguage": {
         "@type": "Language",
         "name": "Spanish",
         "alternateName": "es"
-    },    
+    },
     "interactionStatistic": {
         "@type": "InteractionCounter",
         "interactionType": "https://schema.org/ListenAction",
@@ -210,44 +207,44 @@
             "url": "https://www.example-data-repository.org/person/514"
         }
     },
-    "isAccessibleForFree" : "True",
+    "isAccessibleForFree": "True",
     "isBasedOn": {
-        "@type" : "CreativeWork",
-        "description" : "A resource from which this work is derived or from which it is a modification or adaption"
+        "@type": "CreativeWork",
+        "description": "A resource from which this work is derived or from which it is a modification or adaption"
     },
-    "isFamilyFriendly" : "True",
+    "isFamilyFriendly": "True",
     "isPartOf": {
-        "@type" : "CreativeWork",
-        "description" : "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.Inverse property: hasPart"
+        "@type": "CreativeWork",
+        "description": "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.Inverse property: hasPart"
     },
     "keywords": {
         "@type": "DefinedTerm",
         "inDefinedTermSet": {
-          "@type": "DefinedTermSet",
-          "name": "Name of the set",
-          "description": "Description of the set",
-          "url": "url for the set"
+            "@type": "DefinedTermSet",
+            "name": "Name of the set",
+            "description": "Description of the set",
+            "url": "url for the set"
         },
         "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
     },
     "learningResourceType": "Text or DefinedTerm property to describe predominant type or kind characterizing the learning resource.",
-    "license": "http://spdx.org/licenses/CC0-1.0",    
-    "locationCreated" : {
+    "license": "http://spdx.org/licenses/CC0-1.0",
+    "locationCreated": {
         "@type": "Place",
         "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 39.3280,
-          "longitude": 120.1633
+            "@type": "GeoCoordinates",
+            "latitude": 39.3280,
+            "longitude": 120.1633
         }
     },
-    "mainEntity" : "Thing",
-    "maintainer" : {
+    "mainEntity": "Thing",
+    "maintainer": {
         "@type": "Person",
-        "name" : "Person name"
+        "name": "Person name"
     },
     "material": "Text or Product or URL property to describe the material that the CreativeWork is made from",
     "materialExtent": "Text or QuantitativeValue to state the quantity of the materials being described or an expression of the physical space they occupy",
-    "mentions" : "Thing Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept",
+    "mentions": "Thing Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept",
     "offers": [
         {
             "@type": "Offer",
@@ -263,13 +260,13 @@
     "producer": {
         "@type": "Person",
         "name": "George Martin"
-      },
+    },
     "provider": {
-      "@type": "Organization",
-      "legalName": "Sample Data Repository Office",
-      "name": "SDRO",
-      "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
-      "url": "https://www.sample-data-repositoryB.org"
+        "@type": "Organization",
+        "legalName": "Sample Data Repository Office",
+        "name": "SDRO",
+        "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
+        "url": "https://www.sample-data-repositoryB.org"
     },
     "publication": {
         "@type": "PublicationEvent",
@@ -283,7 +280,7 @@
         "url": "https://www.publishingrus.org",
         "@type": "Organization",
         "legalName": "Some Institute"
-    },     
+    },
     "publisherImprint": {
         "@id": "https://www.publishingdiv.org",
         "@type": "Organization",
@@ -297,24 +294,24 @@
         "url": "https://url.to.event.com"
     },
     "releasedEvent": {
-        "@type":"PublicationEvent",
+        "@type": "PublicationEvent",
         "startDate": "Some date",
         "location": {
-          "@type": "Country",
-          "name": "Some country"
+            "@type": "Country",
+            "name": "Some country"
         }
     },
-    "review":     {
+    "review": {
         "@type": "Review",
         "author": "A Reviewer",
         "datePublished": "Some date",
         "reviewBody": "Text describing the review of the CreativeWork",
         "name": "text for name of review",
         "reviewRating": {
-          "@type": "Rating",
-          "bestRating": "some integer",
-          "ratingValue": "some integer",
-          "worstRating": "some integer"
+            "@type": "Rating",
+            "bestRating": "some integer",
+            "ratingValue": "some integer",
+            "worstRating": "some integer"
         }
     },
     "schemaVersion": [
@@ -322,25 +319,25 @@
         "http://dublincore.org/specifications/dublin-core/dces/1999-07-02",
         "https://github.com/spdx/license-list-XML/releases/tag/v3.20"
     ],
-    "sdDatePublished": "2022-04-12", 
+    "sdDatePublished": "2022-04-12",
     "sdLicense": "http://spdx.org/licenses/CC0-1.0",
     "sdPublisher": [
         {
-        "@type": "Organization",
-        "legalName": "Example Structured Data Publishing Organisation",
-        "name": "ESDPO",
-        "description": "An organisation which publishes structured data about things.",
-        "url": "https://www.exampleSDPublisher.org/"
-       },
-       {
-        "@type": "Person",
-        "name": "John Doe",
-        "description": "A person who publishes structured data about Things",
-        "url": "https://www.sample-data-repository.org/person/51332"
-       }
+            "@type": "Organization",
+            "legalName": "Example Structured Data Publishing Organisation",
+            "name": "ESDPO",
+            "description": "An organisation which publishes structured data about things.",
+            "url": "https://www.exampleSDPublisher.org/"
+        },
+        {
+            "@type": "Person",
+            "name": "John Doe",
+            "description": "A person who publishes structured data about Things",
+            "url": "https://www.sample-data-repository.org/person/51332"
+        }
     ],
     "size": "Text indicating the phyiscal size of the CreativeWork (if appropriate). DefinedTerm or QuantitativeValue or SizeSpecification are also valid Types",
-    "sourceOrganization":  {
+    "sourceOrganization": {
         "@type": "Organization",
         "legalName": "Example Source Organisation",
         "name": "ESO",
@@ -349,45 +346,45 @@
     },
     "spatial": {
         "@type": "Place",
-		"description": "Use the 'spatial' property and the properites under 'Place' for any spatial information you'd like to add, beyond spatialCoverage."
+        "description": "Use the 'spatial' property and the properites under 'Place' for any spatial information you'd like to add, beyond spatialCoverage."
     },
     "spatialCoverage": {
         "@type": "Place",
         "address": "54 Ocean Drive, 23521 Ocean City, CountryName",
         "name": "Place name",
-		"description": "Use this Place type to express which spatial region your CreativeWork is about or is focused on. If you don't have precise coordinates, use this description field to describe the place with free text",
+        "description": "Use this Place type to express which spatial region your CreativeWork is about or is focused on. If you don't have precise coordinates, use this description field to describe the place with free text",
         "geo": {
             "@type": "GeoShape",
             "polygon": "-158.8575 23.4375, -158.8575 21.2283, -157.4567 21.2283, -157.4567 23.4375, -158.8575 23.4375"
         },
-		"additionalProperty":[ 
-          {
-            "@type": "PropertyValue",
-            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
-            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
-          },
-          {
-            "@type": "PropertyValue",
-            "propertyID": "GPS Accuracy / Location error",
-            "value": "18",
-			"unitCode": "http://qudt.org/vocab/unit/M"
-          }
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "GPS Accuracy / Location error",
+                "value": "18",
+                "unitCode": "http://qudt.org/vocab/unit/M"
+            }
         ]
     },
-    "sponsor":  [
+    "sponsor": [
         {
-        "@type": "Organization",
-        "legalName": "Example Sponsorship Organisation",
-        "name": "ESO",
-        "description": "An organisation which sponsors things.",
-        "url": "https://www.exampleSponsorship.org/"
-       },
-       {
-        "@type": "Person",
-        "name": "John Doe",
-        "description": "A person who sponsors many Things",
-        "url": "https://www.sample-data-repository.org/person/51332"
-       }
+            "@type": "Organization",
+            "legalName": "Example Sponsorship Organisation",
+            "name": "ESO",
+            "description": "An organisation which sponsors things.",
+            "url": "https://www.exampleSponsorship.org/"
+        },
+        {
+            "@type": "Person",
+            "name": "John Doe",
+            "description": "A person who sponsors many Things",
+            "url": "https://www.sample-data-repository.org/person/51332"
+        }
     ],
     "teaches": [
         "ocean exploration",
@@ -398,7 +395,6 @@
             "termCode": "concept10630",
             "url": "http://vocabularies.unesco.org/thesaurus/concept10630"
         }
-        
     ],
     "temporal": "A more general property for any time-related information about this CreativeWork. This can be expressed as text or using the properties associated with the DateTime Type",
     "temporalCoverage": "2011/2012",
@@ -411,36 +407,35 @@
         "inLanguage": "ja",
         "name": "クリエイティブな作品",
         "url": "https://www.sample-data-repository.org/creativeWork/1124",
-        "translator":
-          {
+        "translator": {
             "@type": "Person",
             "name": "Dr 山田 太郎",
             "givenName": "太郎",
             "familyName": "山田",
             "url": "https://www.sample-data-repository.org/person/12435"
-          }
-    } ,
+        }
+    },
     "translator": [
         {
-        "@type": "Organization",
-        "legalName": "Translations Incorporated",
-        "name": "TI",
-        "description": "An organisation which has been tasked with translating this CreativeWork.",
-        "url": "https://www.translationsIncorporated.org/"
-       },
-       {
-        "@type": "Person",
-        "name": "John Doe",
-        "description": "A person who has been tasked with translating this CreativeWork.",
-        "url": "https://www.sample-data-repository.org/person/51332"
-       }
+            "@type": "Organization",
+            "legalName": "Translations Incorporated",
+            "name": "TI",
+            "description": "An organisation which has been tasked with translating this CreativeWork.",
+            "url": "https://www.translationsIncorporated.org/"
+        },
+        {
+            "@type": "Person",
+            "name": "John Doe",
+            "description": "A person who has been tasked with translating this CreativeWork.",
+            "url": "https://www.sample-data-repository.org/person/51332"
+        }
     ],
     "typicalAgeRange": "20-60",
     "usageInfo": {
-      "@type": "CreativeWork",
-      "name": "Guidelines on how to use and how not to use this CreativeWork",
-      "description": "A document or other resources which contains information on how the CreativeWork should and should not be used.",
-      "url": "https://usageGuides.org/usageGuide_2321.pdf"
+        "@type": "CreativeWork",
+        "name": "Guidelines on how to use and how not to use this CreativeWork",
+        "description": "A document or other resources which contains information on how the CreativeWork should and should not be used.",
+        "url": "https://usageGuides.org/usageGuide_2321.pdf"
     },
     "version": "3.2",
     "video": {
@@ -452,47 +447,42 @@
         "contentSize": "500MB"
     },
     "workExample": [
-      {
-        "@type": "Dataset",
-        "datePublished": "2012",
-        "description":"A CSV distribution of this CreativeWork",
-        "distribution": "https://repository.org/pid_to_the_downloadable_dataset.",
-        "encodingFormat": "text/csv",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Data R Us Inc."
+        {
+            "@type": "Dataset",
+            "datePublished": "2012",
+            "description": "A CSV distribution of this CreativeWork",
+            "distribution": "https://repository.org/pid_to_the_downloadable_dataset.",
+            "encodingFormat": "text/csv",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Data R Us Inc."
+            }
+        },
+        {
+            "@type": "Dataset",
+            "datePublished": "2021",
+            "description": "A Geo JSON distribution of this CreativeWork",
+            "distribution": "https://anotherRepository.org/pid_to_the_downloadable_dataset.",
+            "encodingFormat": "application/geo+json",
+            "publisher": {
+                "@type": "Organization",
+                "name": "GeoData 4 All Inc."
+            }
         }
-      },
-      {
-        "@type": "Dataset",
-        "datePublished": "2021",
-        "description":"A Geo JSON distribution of this CreativeWork",
-        "distribution": "https://anotherRepository.org/pid_to_the_downloadable_dataset.",
-        "encodingFormat": "application/geo+json",
-        "publisher": {
-          "@type": "Organization",
-          "name": "GeoData 4 All Inc."
-        }
-      }
     ],
     "workTranslation": {
-      "@type": "CreativeWork",
-      "description": "A French translation of this CreativeWork",
-      "inLanguage": "fr",
-      "name": "This CreativeWork - A New Translation",
-      "translator":
-        {
-          "@type": "Person",
-          "name": "Dr John Doe",
-          "givenName": "John",
-          "familyName": "Doe",
-          "url": "https://www.sample-data-repository.org/person/51332"
+        "@type": "CreativeWork",
+        "description": "A French translation of this CreativeWork",
+        "inLanguage": "fr",
+        "name": "This CreativeWork - A New Translation",
+        "translator": {
+            "@type": "Person",
+            "name": "Dr John Doe",
+            "givenName": "John",
+            "familyName": "Doe",
+            "url": "https://www.sample-data-repository.org/person/51332"
         }
     },
-
-
-
-
     "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
     "alternateName": "Thing 1",
     "description": "Free text or a URL to a description of this Thing.",
@@ -503,20 +493,19 @@
         "value": "xyz",
         "url": "https://myIdentifier.org/xyz",
         "description": "Text: Optional description of this identifier, see [TODO: ADD URI TO IDENTIFER PATTERN] for more guidance on sharing identifieres."
-      },
+    },
     "image": "https://myPIDs.org/pidToImageOfThisThing/",
     "mainEntityOfPage": "https://www.urlToPageWhichIsMainlyAboutThisThing.com/",
     "name": "Thing One",
     "potentialAction": {
         "@type": "Action",
         "description": "Text: Description of Action which this Thing could potentially participate in. See [TODO:ADD LINK TO ACTION PATTERN] for how to add more structured metadata to Action. ",
-        "name": "Text: Name of Action that this Thing could potentially participate in"        
-      },
-    "sameAs":
-        [
-            "https://myPIDs.org/pidToAnotherWebResourceAboutThisThing/",
-            "https://myPIDs.org/pidToYetAnotherWebResourceAboutThisThing/"
-        ],
+        "name": "Text: Name of Action that this Thing could potentially participate in"
+    },
+    "sameAs": [
+        "https://myPIDs.org/pidToAnotherWebResourceAboutThisThing/",
+        "https://myPIDs.org/pidToYetAnotherWebResourceAboutThisThing/"
+    ],
     "subjectOf": [
         "https://myPIDs.org/pidToCreativeWorkAboutThisThing/",
         "https://myPIDs.org/pidToEventAboutThisThing/"
