@@ -3,14 +3,19 @@
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "identifier": {
+        "@type": "PropertyValue",
+        "description": "These identifiers for individual casts are assigned by the World Ocean Database",
+        "propertyID": "Unique_Cast",
+        "value": "15302"
+    },
     "name": "A concise but descriptive name of the dataset",
     "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
-    "url": "https://urlToTheDatasetOrLandingPage.org/",
+    "url": "https://noaa-wod-pds.s3.amazonaws.com/index.html",
     "sameAs": [
         "http://alternativeUrlToTheDatasetOrLandingPage.org"
     ],
-    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "license": "Public domain",
     "citation": [
         "Citation to other work relevant to this dataset",
         "Citation to other work relevant to this dataset",
@@ -50,8 +55,9 @@
     "temporalCoverage": "2007/2007",
     "distribution": {
         "@type": "DataDownload",
-        "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
-        "encodingFormat": "text/csv"
+        "contentUrl": "https://www.ncei.noaa.gov/access/world-ocean-database-select/OCLdb_output/ocldb1678285460.26800.CTD.tar.gz",
+        "encodingFormat": "application/gzip",
+        "description": "This tar.gz file contains a collection of netCDF files"
     },
     "spatialCoverage": {
         "@type": "Place",
