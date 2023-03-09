@@ -51,6 +51,23 @@ sources:
   dateadded: 2021-02-26
   active: true
 #
+# BeBOP-OBON 
+#
+- name: bebop
+  propername: Better Biomolecular Ocean Practices (BeBOP) as part of Ocean Biomolecular Observing Network (OBON)
+  catalogue: https://github.com/BeBOP-OBON/odis-interface
+  domain: https://oceandecade.org/actions/better-biomolecular-ocean-practices/
+  logo: https://en.unesco.org/sites/default/files/styles/banner_sec_col_234x100/public/logo_decade_ocean_science_en.jpg
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/bebop
+  sourcetype: sitemap  
+  url: https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml
+  changefreq: as needed
+  backend: GitHub  
+  headless: false
+  dateadded: 2023-03-08
+  active: true  
+#
 # Benguela Current Convention (BCC) GeoData Portal
 #
 - name: benguelacc
@@ -151,58 +168,7 @@ sources:
   backend: SeaDataCloud
   dateadded: 2021-07-26
   headless: false
-  active: true
-#
-# EurOcean Events
-#    
-- name: euroceanevents
-  propername: EurOcean Events
-  domain: https://infohub.eurocean.net/
-  catalogue: https://infohub.eurocean.net/data/events
-  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
-  #ODISCat entry missing ODIS-arch url & type
-  pid: https://catalogue.odis.org/view/2993  
-  sourcetype: sitemap  
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapEvents.xml
-  changefreq: unknown
-  backend: unknown    
-  headless: false
-  dateadded: 2022-03-26
-  active: true  
-#
-# EurOcean Experts
-#   
-- name: euroceanexperts
-  propername: EurOcean Experts
-  domain: https://infohub.eurocean.net/
-  catalogue: https://infohub.eurocean.net/data/experts
-  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
-  #ODISCat entry missing ODIS-arch url & type
-  pid: https://catalogue.odis.org/view/2993
-  sourcetype: sitemap
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapExperts.xml
-  changefreq: unknown  
-  backend: unknown  
-  headless: false
-  dateadded: 2022-03-26
-  active: true
-#
-# EurOcean Institutions
-#   
-- name: euroceaninstitutions
-  propername: EurOcean Institutions
-  domain: https://infohub.eurocean.net/
-  catalogue: https://infohub.eurocean.net/data/institutions  
-  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
-  #ODISCat entry missing ODIS-arch url & type
-  pid: https://catalogue.odis.org/view/2993
-  sourcetype: sitemap  
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapInstitutions.xml
-  changefreq: unknown  
-  backend: unknown  
-  headless: false
-  dateadded: 2022-03-26  
-  active: true
+  active: true 
 #
 # EurOcean Organizations
 #   
@@ -239,23 +205,6 @@ sources:
   headless: false
   dateadded: 2022-03-26 
   active: true
-#
-# EurOcean Training
-#    
-- name: euroceantraining
-  propername: EurOcean Training 
-  domain: https://infohub.eurocean.net/
-  catalogue: https://infohub.eurocean.net/data/training 
-  logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png  
-  #ODISCat entry missing ODIS-arch url & type
-  pid: https://catalogue.odis.org/view/2993  
-  sourcetype: sitemap
-  url: https://www.oceanexpert.org/assets/sitemaps/sitemapTraining.xml
-  changefreq: unknown  
-  backend: unknown  
-  headless: false
-  dateadded: 2022-03-26  
-  active: true  
 #
 # EurOcean Vessels
 #    
@@ -474,7 +423,7 @@ sources:
   backend: unknown  
   headless: false
   dateadded: 2021-08-26  
-  active: true  
+  active: true
 #
 # Oceanscape Project
 # 
@@ -506,7 +455,7 @@ sources:
   #url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-pacificdatahub/sitemap.xml
   changefreq: as needed 
   backend: CKAN  
-  headless: true
+  headless: false
   dateadded: 2022-07-25   
   active: true
 #
@@ -524,7 +473,24 @@ sources:
   backend: WordPress  
   headless: true
   dateadded: 2022-11-30
-  active: false  
+  active: false
+#
+# RDA Australia
+# 
+- name: rda
+  propername: Research Data Australia
+  catalogue: https://researchdata.edu.au/
+  domain: https://ardc.edu.au/
+  logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/researchdataaustralia
+  sourcetype: sitemap
+  url: https://researchdata.edu.au/home/sitemap/?ds=64
+  changefreq: daily  
+  backend: GeoNetwork  
+  headless: true
+  dateadded: 2023-03-06
+  active: true 
 #
 # VLIZ: Flanders Marine Institute catalogue
 #   note: VLIZ & EMODNet services were unified in late 2022 
