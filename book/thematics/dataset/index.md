@@ -58,16 +58,11 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../code/dataGraphs/demo.json") as dgraph:
+with open("../../../code/dataGraphs/map.json") as dgraph:
     doc = json.load(dgraph)
 
-frame = {
-  "@context": {"@vocab": "https://schema.org/"},
-  "@explicit": "true",
-  "@requireAll": "true",
-  "@type":     "Map",
-  "identifier": ""
-}
+with open("../../../code/frames/mapFrameID.json") as fgraph:
+    frame = json.load(fgraph)
 
 context = {
     "@vocab": "https://schema.org/",
