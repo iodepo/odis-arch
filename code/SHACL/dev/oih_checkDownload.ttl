@@ -1,0 +1,22 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix oihval: <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#> .
+
+oihval:IDShape
+    a shacl:NodeShape ;
+    shacl:targetClass schema:Dataset ;
+    shacl:message "Graph must have an ID"@en ;
+    shacl:description "Provide URL to OIH shape guidance" ;
+    shacl:nodeKind shacl:IRI ;
+    .
+
+oihval:PersonCountShape
+    a shacl:NodeShape ;
+    shacl:severity shacl:Warning ;
+    shacl:message "A resource should include a DataDownload" ;
+    shacl:targetNode schema:Course ;
+    shacl:property [
+        shacl:path [ shacl:inversePath <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ] ;
+        shacl:minCount 1 ;
+    ] .
