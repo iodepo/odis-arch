@@ -33,8 +33,52 @@ guidance and other creative works.  Due to this OIH will focus on a generic exam
 of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 for more focused creative work examples.
 
-
-```{literalinclude} ./graphs/obisData.json
+```{literalinclude} ./graphs/datasetTemplate.json
 :linenos:
 ```
 
+## Demo area  please ignore
+
+This area is being used to test out a new repository structure where the data graphs, 
+frames and SHACL shapes are kept in a discrete location.  
+
+
+```{code-cell}
+:tags: [hide-input]
+
+import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
+from pyld import jsonld
+import graphviz
+import os, sys
+
+currentdir = os.path.dirname(os.path.abspath(''))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+from lib import jbutils
+
+with open("../../../code/dataGraphs/demo.json") as dgraph:
+    doc = json.load(dgraph)
+
+frame = {
+  "@context": {"@vocab": "https://schema.org/"},
+  "@explicit": "true",
+  "@requireAll": "true",
+  "@type":     "Map",
+  "identifier": ""
+}
+
+context = {
+    "@vocab": "https://schema.org/",
+}
+
+compacted = jsonld.compact(doc, context)
+
+framed = jsonld.frame(compacted, frame)
+jd = json.dumps(framed, indent=4)
+print(jd)
+
+jbutils.show_graph(framed)
+
+```

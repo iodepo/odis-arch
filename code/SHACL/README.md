@@ -5,6 +5,7 @@
 Need to sync / coordinate with the 
 [Geoshapes](https://github.com/geoschemas-org/geoshapes) repository.
 
+[ODIS Solr Schema](https://github.com/iodepo/oih-ui/blob/main/solr/conf/schema.xml)
 
 ## Example use
 
@@ -28,7 +29,12 @@ curl http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.r
 ## Examples
 
 ```bash
-
 curl http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.rdf |   pyshacl -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/SHACL/typesAreURI.ttl -sf turtle -df n3 -f table -
+```
+
+local exmaple
+
+```bash
+  pyshacl -s typesAreURI.ttl -sf turtle -df nt -f table data.nt 
 
 ```
