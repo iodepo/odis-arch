@@ -34,7 +34,7 @@ of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide e
 for more focused creative work examples.
 
 
-```{literalinclude} ./graphs/obisData.json
+```{literalinclude} ./graphs/datasetTemplate.json
 :linenos:
 ```
 
