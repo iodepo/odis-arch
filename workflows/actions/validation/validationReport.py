@@ -56,7 +56,7 @@ kg = kglab.KnowledgeGraph(
     namespaces = namespaces,
     )
 
-dgurl = "http://ossapi.oceaninfohub.org/public/graphs/summonededmo_2023-02-21-06-26-50_release.rdf"
+dgurl = "http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.rdf"
 sgurl =  "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/validation/shapes/oih_search.ttl"
 
 now = datetime.now()
