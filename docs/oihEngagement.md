@@ -1,0 +1,24 @@
+# Engagement
+
+## About
+
+The products of the Ocean InfoHub are quite varied and and such express a range of
+potgential engagement opportunites.
+
+![enagement map](./images/oihProducts.svg)
+
+The above image is a first attempt at expressing these.  Many of these are still
+in active developoment but early links to them are available.  These links follow.
+
+* The Book  https://book.oceaninfohub.org/
+* Search https://search.oceaninfohub.org/
+* SPARQL endpoint http://graph.oceaninfohub.org/blazegraph/#splash
+* Graph Releases  https://oceans.collaborium.io/releases.html
+* Decision Records  https://github.com/iodepo/odis-arch/tree/schema-dev-df/decisions
+* Profiles  https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/dataGraphs
+* Validation Graphs https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/SHACL
+* JSON Schema  https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/JSONschema
+* Graph Frames  https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/frames
+* Queries https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/SPARQL
+* Validdation of Architecture  https://github.com/iodepo/odis-arch/tree/master/workflows
+* Validation of Graph Conformance  https://github.com/iodepo/odis-arch/tree/master/workflows

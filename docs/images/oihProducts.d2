@@ -1,0 +1,53 @@
+direction: right
+
+oih: Ocean InfoHub
+search: Search \n (Web User Interface)
+sp: SPARQL endpoint
+book: The Book \n (Publication)
+
+av: Archicture Validation \n sitemaps, etc
+oih -> av
+
+sa: Semantic Assets
+sa.adr:  Decision Records
+sa.dg:  Profiles
+sa.sg:  Validation Graphs (SHACL)
+sa.js:  JSON Schema
+sa.fr:  Graph Frames
+sa.rs:  SPARQL queries
+
+rg:  Graph Releases \n (Data Publication)
+
+oih -> search
+oih -> sp
+oih -> book
+oih -> sa.adr
+oih -> sa.dg
+oih -> sa.sg
+oih -> sa.js
+oih -> sa.fr
+oih -> sa.rs
+oih -> rg
+
+sa.reports: Validation reports
+sa.sg -> sa.reports
+
+ce: Community engagement {
+  style: {
+    fill: deepskyblue
+  }
+}
+ue: User engagement {
+  style: {
+    fill: deepskyblue
+  }
+}
+
+search <- ue
+sp <- ue
+rg <- ue
+
+sa <- ce: Community contributions \n to development
+# sa.reports <- ce : Community feedback loop \n on validation
+book <- ce
+av <- ce
