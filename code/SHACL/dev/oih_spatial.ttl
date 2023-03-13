@@ -43,3 +43,54 @@ oihval:geoResourceProperty
     shacl:minCount 1 ;
     shacl:message "A resource should include a geo property path from Dataset" ;
     .
+
+oihval:spatialExtentProperty
+    a sh:PropertyShape ;
+    sh:path schema:spatialCoverage;
+    sh:minCount 1 ;
+    sh:class schema:Place ;
+      sh:or (  [sh:path schema:geo ;
+                  sh:or (  [  sh:class  schema:GeoCoordinates ]
+                           [  sh:class  schema:GeoShape ] )  ;
+	              sh:minCount 1 ;
+	              sh:message "spatial location MUST be specified eitehr with GeoCoordinates lat/long pairs (for point location), or with GeoShape  Line, Box or Polygon." ;]
+               [sh:path schema:name;
+                  sh:nodeKind sh:Literal;
+                  sh:minCount 1 ]
+      );
+    sh:severity sh:Info ;
+    sh:message "Recommended: provide a spatial coverage description if applicable using schema:Place, either a place name,  point location(s) (GeoCoordinates), or GeoShape (bounding box, line profile location, or polygon)." ;
+    .
+ 
+oihval:geoCoordinatesNode
+	a sh:NodeShape ;
+    sh:targetClass schema:GeoCoordinates ;
+	sh:property [ sh:path schema:latitude ;
+	#pyshacl seems to assume that decimal numbers are xsd:doubles...
+	# pyshacl doesn't seem to pay attention to min and max values
+			sh:or ( [sh:datatype xsd:double ]
+					[sh:datatype xsd:integer ] );
+			sh:minValue -90.0;
+			sh:maxValue 90.0;
+			sh:minCount 1 ] ;
+	sh:property [sh:path schema:longitude ;
+			sh:or ( [sh:datatype xsd:double ]
+					[sh:datatype xsd:integer ] );
+			sh:minValue -180.0;
+			sh:maxValue 180.0;
+			sh:minCount 1 ] ;
+	   sh:message "GeoCoodinates must include latitude between -90 and 90, and longitude between -180 and 180." ;
+	.
+
+oihval:geoShapeNode
+	a sh:NodeShape ;
+    sh:targetClass schema:GeoShape ;
+	sh:property
+		[sh:path [sh:alternativePath ( schema:line schema:polygon schema:box) ];
+			sh:datatype xsd:string;
+			sh:minCount 1 ;
+            sh:message "geoshape must include a line, polygon or box geometry as a string of latitude longitude pairs"
+		]
+.
+
+

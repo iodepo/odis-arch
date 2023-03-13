@@ -44,6 +44,28 @@ from reportlab.rl_config import defaultPageSize
 from reportlab.lib.units import inch
 from reportlab.platypus.tables import Table
 from reportlab.platypus import SimpleDocTemplate
+import argparse
+
+
+# could also do anonymous read of a public bucket and loop and read
+# each source in there.  Then apply the supplied shape.
+# need name of the source and and the shape run (ie, geo, goihgeneral, etc.)
+
+
+# Initialize args  parser
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--datagraph", help="datagraph to check")
+parser.add_argument("-s", "--shapegraph", help="shacl shape graph to use")
+# parser.add_argument("-f", "--file", help="Optional name of CSV file to save results to")
+
+args = parser.parse_args()
+
+dgurl = args.source
+sgurl = args.name
+# file = args.file
+
+# dgurl = "http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.rdf"
+# sgurl =  "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/validation/shapes/oih_search.ttl"
 
 namespaces = {
     "shacl":   "http://www.w3.org/ns/shacl#" ,
@@ -56,8 +78,6 @@ kg = kglab.KnowledgeGraph(
     namespaces = namespaces,
     )
 
-dgurl = "http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.rdf"
-sgurl =  "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/validation/shapes/oih_search.ttl"
 
 now = datetime.now()
 date_time = now.strftime("%m-%d-%Y-%H-%M-%S")
@@ -223,14 +243,7 @@ ptext = 'Details of the detected violations and the associated reference node ar
 
 Story.append(Paragraph(ptext, styles["Justify"]))
 
-# add table
-# rlab_table_data=[['Index','Path','Constraint','Severity','Message','ID', 'Focus]]+df.values.tolist()
-
-# this is the table of the data fram, but useless in this PDF, just save to CSV and send that.
-# table = Table(df.values.tolist(), colWidths=150, rowHeights=20, splitByRow=1)
-# Story.append(Spacer(1, 12))
-# Story.append(table)
-
+# make our document
 doc.build(Story)
 
 # write to S3 with buffer
