@@ -25,8 +25,21 @@ sa.fr:  Graph Frames
 sa.rs:  SPARQL queries
 
 
-oih -> web.search
-oih -> web.dashboard
+oih -> web.search {
+style: {
+    stroke: green
+    stroke-width: 3
+    stroke-dash: 3
+       }
+}
+oih -> web.dashboard {
+style: {
+    stroke: green
+    stroke-width: 3
+    stroke-dash: 3
+       }
+}
+
 oih -> web.sp
 oih -> web.book
 oih -> web.rg
@@ -49,11 +62,25 @@ ue: User engagement {
   }
 }
 
-web.search <- ue
+web.search <- ue {
+style: {
+    stroke: green
+    stroke-width: 3
+    stroke-dash: 3
+       }
+}
+
 web.sp <- ue
 web.rg <- ue
 
-web.dashboard <- ce
+web.dashboard <- ce {
+style: {
+    stroke: green
+    stroke-width: 3
+    stroke-dash: 3
+       }
+}
+
 sa <- ce: Community contributions \n to development
 aa <- ce: Community contributions \n to development
 # sa.reports <- ce : Community feedback loop \n on validation

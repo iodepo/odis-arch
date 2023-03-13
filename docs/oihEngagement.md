@@ -10,6 +10,12 @@ potgential engagement opportunites.
 The above image is a first attempt at expressing these.  Many of these are still
 in active developoment but early links to them are available.  These links follow.
 
+While it is important to express all the various products, it is also importnat realize that some
+may have more value at various stages of the project.  Expressed in green above
+are two potential early important deliverables that can foster early engagement in 
+both the user and community spheres. 
+
+
 * [The Book](https://book.oceaninfohub.org/)
 * [Search](https://search.oceaninfohub.org/)
 * [Dashboard](http://catalogue.gatewaygeo.ca:8501/odis/dashboard/)
