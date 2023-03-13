@@ -1,36 +1,42 @@
 direction: right
 
 oih: Ocean InfoHub
-search: Search \n (Web User Interface)
-sp: SPARQL endpoint
-book: The Book \n (Publication)
 
-av: Archicture Validation \n sitemaps, etc
-oih -> av
+web: Web Assets
+web.book: The Book \n (Publication)
+web.dashboard: OIH status dashboard
+web.search: Search \n (Web User Interface)
+web.sp: SPARQL endpoint
+web.rg:  Graph Releases \n (Data Publication)
+
+aa: Architecture Assets
+aa.adr:  Decision Records
+aa.av: Archicture Validation \n sitemaps, etc
+aa.reports: Validation reports
+
+oih -> aa.av
+oih -> aa.adr
 
 sa: Semantic Assets
-sa.adr:  Decision Records
 sa.dg:  Profiles
 sa.sg:  Validation Graphs (SHACL)
 sa.js:  JSON Schema
 sa.fr:  Graph Frames
 sa.rs:  SPARQL queries
 
-rg:  Graph Releases \n (Data Publication)
 
-oih -> search
-oih -> sp
-oih -> book
-oih -> sa.adr
+oih -> web.search
+oih -> web.dashboard
+oih -> web.sp
+oih -> web.book
+oih -> web.rg
 oih -> sa.dg
 oih -> sa.sg
 oih -> sa.js
 oih -> sa.fr
 oih -> sa.rs
-oih -> rg
 
-sa.reports: Validation reports
-sa.sg -> sa.reports
+sa.sg -> aa.reports
 
 ce: Community engagement {
   style: {
@@ -43,11 +49,12 @@ ue: User engagement {
   }
 }
 
-search <- ue
-sp <- ue
-rg <- ue
+web.search <- ue
+web.sp <- ue
+web.rg <- ue
 
+web.dashboard <- ce
 sa <- ce: Community contributions \n to development
+aa <- ce: Community contributions \n to development
 # sa.reports <- ce : Community feedback loop \n on validation
-book <- ce
-av <- ce
+web.book <- ce
