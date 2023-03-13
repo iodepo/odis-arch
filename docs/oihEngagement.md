@@ -12,6 +12,7 @@ in active developoment but early links to them are available.  These links follo
 
 * [The Book](https://book.oceaninfohub.org/)
 * [Search](https://search.oceaninfohub.org/)
+* [Dashboard](http://catalogue.gatewaygeo.ca:8501/odis/dashboard/)
 * [SPARQL endpoint](http://graph.oceaninfohub.org/blazegraph/#splash)
 * [Graph Releases](https://oceans.collaborium.io/releases.html)
 * [Decision Records](https://github.com/iodepo/odis-arch/tree/schema-dev-df/decisions)
@@ -22,3 +23,12 @@ in active developoment but early links to them are available.  These links follo
 * [Queries](https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/SPARQL)
 * [Validdation of Architecture](https://github.com/iodepo/odis-arch/tree/master/workflows)
 * [Validation of Graph Conformance](https://github.com/iodepo/odis-arch/tree/master/workflows)
+
+
+It is also intrsting to view this in terms of the following:
+
+
+![reltions](./images/relations.png)
+
+This image is one I made in the context of the [FAIR Implementation networks](https://www.go-fair.org/implementation-networks/).
+
