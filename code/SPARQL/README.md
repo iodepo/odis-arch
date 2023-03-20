@@ -76,6 +76,12 @@ curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oce
 You can also do ?format=json  or csv with these.   When you do that you can 
 also then leverage the powerful jq tool with commands like
 
+```bash
+curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql\?format\=json -d@countByLicense.rq | jq '.results.bindings[]'
+```
+
+Or, if you have the resuls already.
+
 ```text
 cat results.json | jq '.results.bindings[] .s.value' 
 ```

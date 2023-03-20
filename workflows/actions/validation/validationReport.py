@@ -16,9 +16,12 @@
 #
 
 # Imports
-
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)  ## remove pandas future warning
+
+# pyshack sends output to log along with the vars.  This suppresses that
+import logging, sys
+logging.disable(sys.maxsize)
 
 from urllib.request import urlopen
 import kglab
@@ -29,11 +32,7 @@ import seaborn as sns
 from rdflib import Graph  #, plugin
 import matplotlib.pyplot as plt
 import boto3
-
-# pyshack sends output to log along with the vars.  This suppresses that
-import logging, sys
-logging.disable(sys.maxsize)
-
+import re
 import time, io
 from datetime import datetime
 from reportlab.lib.enums import TA_JUSTIFY
@@ -45,24 +44,66 @@ from reportlab.lib.units import inch
 from reportlab.platypus.tables import Table
 from reportlab.platypus import SimpleDocTemplate
 import argparse
+from minio import Minio
 
 
 # could also do anonymous read of a public bucket and loop and read
 # each source in there.  Then apply the supplied shape.
 # need name of the source and and the shape run (ie, geo, goihgeneral, etc.)
 
+# Create client with anonymous access.
+client = Minio("ossapi.oceaninfohub.org:80",  secure=False)
+
+# List objects information whose names starts with "my/prefix/".
+objects = client.list_objects("public", prefix="graphs", recursive=True)
+for obj in objects:
+        print(obj.object_name)
+
+        result = client.stat_object("public", obj.object_name)
+        print(
+            "last-modified: {0}, size: {1}".format(
+                    result.last_modified, result.size,
+            ),
+
+        )
+
+        if True:  #  how to tell if an objet   obj.is_public  ?????
+            # Use presigned_get_object() to get a presigned URL for the object
+            url = client.presigned_get_object("public", obj.object_name)
+            print(f"Public URL for object: {url}")
+        else:
+            print("Object does not have anonymous access enabled.")
+
+
+raise "exit now"
 
 # Initialize args  parser
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--datagraph", help="datagraph to check")
 parser.add_argument("-s", "--shapegraph", help="shacl shape graph to use")
+# parser.add_argument("-n", "--name", help="name of the validation run, spatial, core, funding")
 # parser.add_argument("-f", "--file", help="Optional name of CSV file to save results to")
 
 args = parser.parse_args()
 
-dgurl = args.source
-sgurl = args.name
+dgurl = args.datagraph
+sgurl = args.shapegraph
 # file = args.file
+
+#  need to parse out the name from the release graph and the base name of the shacl shape used
+# Define the regular expression pattern
+pattern = r"summoned(.*?)_v1"
+
+# Use re.search() to extract the text between "summoned" and "_v1"
+match = re.search(pattern, dgurl)
+source = "unknown"
+
+if match:
+   # Access the matched text using group(1)
+   source = match.group(1)
+else:
+   print("No match found.")
+   raise "unable to match on provider name via regex"
 
 # dgurl = "http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.rdf"
 # sgurl =  "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/validation/shapes/oih_search.ttl"
@@ -124,6 +165,7 @@ SELECT  ?severity  ?constraint ?path ?message ?focus ?path ?value
 pdf = kg.query_as_df(sparql)
 df = pdf  #.to_pandas()  #  including .to_pandas() breaks with papermill for reasons unknown at this time if to_pandas() is used, needed in my kglab conda env
 
+ib = True
 if 'severity' in df.columns:
     dfc = df.groupby('severity').count().reset_index().rename(columns={'path': 'Count'})
     ctst = pd.crosstab(df['message'], df['severity'],  margins = False , margins_name = 'Totals')
@@ -134,13 +176,13 @@ if 'severity' in df.columns:
 
     sns.set(rc={'figure.figsize':(11.7,8.27)})
     sns.heatmap(ctst, annot=True, fmt=".0f", cmap = sns.cm.crest)
-    plt.savefig('../../output/validation/heatmap_{}.png'.format(date_time))
+    plt.savefig('../../output/validation/{}_heatmap_{}.png'.format(source, date_time))
 else:
     print("No severity column found, all SHACL validations must have passed OR a processing error occurred upstream")
-
+    ib = False
 
 # Save CSV
-df.to_csv("../../output/validation/validationReport_{}.csv".format(date_time))
+df.to_csv("../../output/validation/{}_table_{}.csv".format(source, date_time))
 
 # build report
 
@@ -169,7 +211,7 @@ def pre(txt):
     return result
 
 #  use for a file
-doc = SimpleDocTemplate("../../output/validation/report_{}.pdf".format(date_time),pagesize=letter,
+doc = SimpleDocTemplate("../../output/validation/{}_report_{}.pdf".format(source, date_time),pagesize=letter,
                         rightMargin=72,leftMargin=72,
                         topMargin=72,bottomMargin=18)
 
@@ -178,8 +220,9 @@ doc = SimpleDocTemplate("../../output/validation/report_{}.pdf".format(date_time
 #                         rightMargin=72,leftMargin=72,
 #                         topMargin=72,bottomMargin=18)
 
-logo = '../../output/validation/heatmap_{}.png'.format(date_time)
-im = Image(logo, 4*inch, 3*inch)
+if ib:
+    logo = '../../output/validation/{}_heatmap_{}.png'.format(source, date_time)
+    im = Image(logo, 4*inch, 3*inch)
 
 address_parts = ["RunID: {}".format(date_time), "Shape graph: {}".format(sgurl)]
 
@@ -219,14 +262,15 @@ ptext = 'This is a validation report using pySHACL to process the provided data 
 Story.append(Paragraph(ptext, styles["Justify"]))
 Story.append(Spacer(1, 12))
 
-Story.append(Paragraph(s1, styles["Justify"]))
-Story.append(Spacer(1, 12))
+# Story.append(Paragraph(s1, styles["Justify"]))
+# Story.append(Spacer(1, 12))
 
 # Story.append(Paragraph(str(ctst), styles["Code"]))
 # Story.append(Spacer(1, 12))
 
 # Add the image
-Story.append(im)
+if ib:
+    Story.append(im)
 
 ptext = 'For more information about validation please visit the project documentation.  \
         Details of the errors reported can be found in the shape file documentation page.'
@@ -239,7 +283,7 @@ ptext = '%s' % full_name
 Story.append(Paragraph(ptext, styles["Heading1"]))
 
 ptext = 'Details of the detected violations and the associated reference node are found in the CSV \
-        that accompany this report:  validationReport_{}.csv '.format(date_time)
+        that accompany this report:  {}_table_{}.csv '.format(source, date_time)
 
 Story.append(Paragraph(ptext, styles["Justify"]))
 

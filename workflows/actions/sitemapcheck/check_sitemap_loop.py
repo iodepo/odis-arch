@@ -7,6 +7,8 @@ import argparse
 from typing import Tuple
 import pandas as pd
 
+# python check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/sources.yaml -f report.csv -n oceanexperts
+
 def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
     logging.getLogger('requests').setLevel(logging.ERROR)  # 'NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
     logging.getLogger('advertools').setLevel(logging.ERROR)
