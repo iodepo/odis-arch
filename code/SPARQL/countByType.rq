@@ -8,7 +8,7 @@ PREFIX schemaold: <http://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-SELECT  ( COUNT(?type) as ?count) ?type
+SELECT  ( COUNT( DISTINCT ?s) as ?count) ?type
 WHERE
  {
     ?s rdf:type ?type .

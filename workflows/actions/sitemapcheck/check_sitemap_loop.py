@@ -7,6 +7,8 @@ import argparse
 from typing import Tuple
 import pandas as pd
 
+# python check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/sources.yaml -f report.csv -n oceanexperts
+
 def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
     logging.getLogger('requests').setLevel(logging.ERROR)  # 'NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
     logging.getLogger('advertools').setLevel(logging.ERROR)
@@ -75,10 +77,11 @@ def main():
             smurl = s["url"]
             stype = s["sourcetype"]
             name = s["name"]
+            pname = s["propername"]
 
             r, res = check_sitemapv2(smurl, stype, name)
 
-            data = { 'name': name, 'code': r, 'description': res, 'url': smurl, 'type': stype}
+            data = { 'name': name,  'propername': pname, 'code': r, 'description': res, 'url': smurl, 'type': stype}
             rl.append(data)
 
         # leverage pandas to convert to csv

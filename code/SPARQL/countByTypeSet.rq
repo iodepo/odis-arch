@@ -5,18 +5,14 @@ prefix prov: <http://www.w3.org/ns/prov#>
 PREFIX con: <http://www.ontotext.com/connectors/lucene#>
 PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
 PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX schemaold: <http://schema.org/>
-
 
 SELECT   ( COUNT(?type) as ?count) ?type
 WHERE
 {
-
    ?s rdf:type ?type
    FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
-
 }
 GROUP BY ?type
 ORDER BY DESC(?count)

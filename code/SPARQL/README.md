@@ -64,23 +64,26 @@ A testing query, for searching the graph index.
 A testing query, no description yet. 
 
 
-### provTest1.rq
-
-A testing query, no description yet. 
-
-
-
 ## Notes
 
+
+[SPARQL Reference](https://www.w3.org/TR/sparql11-query/)
 
 ```bash
 curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql -d@hasLicense.rq
 ```
 
-## Snippets
+You can also do ?format=json  or csv with these.   When you do that you can 
+also then leverage the powerful jq tool with commands like
 
-```sparql
-FILTER (
-        ?type IN (schema:Person, schema:Organization, schema:CreativeWork, schemax:Person, schemax:Organization)
-) .
+```bash
+curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql\?format\=json -d@countByLicense.rq | jq '.results.bindings[]'
 ```
+
+Or, if you have the resuls already.
+
+```text
+cat results.json | jq '.results.bindings[] .s.value' 
+```
+
+which would look at all the elements _s_ in the bindings array and pull their value.
