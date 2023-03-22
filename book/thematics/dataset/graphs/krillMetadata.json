@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#"
+  },
+  "@type": "Dataset",
+  "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+  "name": "D20220226-T144737.raw",
+  "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
+  "url": "https://urlToTheDatasetOrLandingPage.org/",
+  "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+  "sameAs": ["https://URLforAnyEquivalentPages.org/"],
+  "citation": [
+    "Citation to other work relevant to this dataset",
+    "Citation to other work relevant to this dataset",
+    "Citation to other work relevant to this dataset"
+  ],
+  "version": "2021-04-24T06:34:56.000Z",
+  "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
+  "encoding": {
+    "@type": "MediaObject",
+    "encodingFormat": "text/plain",
+    "contentSize": "54960000"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
+    "encodingFormat": "text/csv"
+  },
+  "potentialAction": {
+    "@type": "Action",
+    "name": "Use My API",
+    "description": "Use the API to retrieve data from my organization.",
+    "@id": "https://us-central1-top-operand-112611.cloudfunctions.net/function-1",
+    "result": {
+      "@type": "DataDownload",
+      "encodingFormat": "text/plain",
+      "description": "a simple text result for the RGB counts"
+    },
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://us-central1-top-operand-112611.cloudfunctions.net/function-1",
+      "httpMethod": "POST",
+      "contentType": ["image/jpeg", "image/png"]
+    },
+    "object": {
+      "@type": "ImageObject",
+      "description": "A JPEG or PNG to analyze the RGB counts"
+    }
+  },
+  "identifier": {
+    "@id": "https://doi.org/10.5066/F7VX0DMQ",
+    "@type": "PropertyValue",
+    "name": "DOI: 10.5066/F7VX0DMQ",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "doi:10.5066/F7VX0DMQ",
+    "url": "https://doi.org/10.5066/F7VX0DMQ"
+  },
+  "geosparql:hasGeometry": {
+    "@type": "http://www.opengis.net/ont/sf#Point",
+    "geosparql:asWKT": {
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "@value": "POINT (-45.70008 -60.04339)"
+    },
+    "geosparql:crs": {
+      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  },
+  "provider": [
+    {
+      "@type": "Organization",
+      "legalName": "Legal Name of Organisation which generated the dataset",
+      "name": "Other Name of Organisation which generated the dataset",
+      "url": "https://organisationWebsite.org/"
+    }
+  ],
+  "includedInDataCatalog": {
+    "@id": "https://registryOfCatalogs.org/permanentUrlIdentifiyingCatalog",
+    "@type": "DataCatalog",
+    "url": "https://urlOfDataCatalog.org"
+  },
+  "temporalCoverage": "2007/2007",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/vessel",
+      "value": "Saga Sea"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/sonarModel",
+      "value": "ES80"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/sonarType",
+      "value": "echosounder"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/frequencies",
+      "value": "[38, 120]"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/surveyTime",
+      "value": "2022-02-26T14:47:37"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/startTime",
+      "value": "2022-02-26 14:47:37.473999872"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "krill.akerbiomarine.com/endTime",
+      "value": "2022-02-26 15:01:23.320000"
+    }
+  ],
+  "subjectOf": {
+    "@type": "Event",
+    "description": "Describe the event which is the subject of this dataset. For example, a cruise ID.",
+    "name": "Concise and descriptive name of the Event",
+    "potentialAction": {
+      "@type": "Action",
+      "name": "Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast",
+      "agent": [
+        "Name or permanent ID of person or thing that performed this action",
+        "Name or permanent ID of person or thing that performed this action",
+        "Name or permanent ID of person or thing that performed this action"
+      ],
+      "startTime": "2007-03-11T14:45UTC",
+      "endTime": "2007-03-11T15:42UTC",
+      "instrument": {
+        "@type": "Thing",
+        "name": "The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor",
+        "url": "http://ontology.org/uriToSemanticDescriptorOfThisInstrument",
+        "description": "Extended description of the sampling instrument"
+      }
+    }
+  },
+  "publishingPrinciples": [
+    {
+      "@type": "CreativeWork",
+      "url": "http://example.org/id/doc/ID",
+      "name": "Recommendations for assessing protected area status in US national waters",
+      "description": "This dataset was generated following the recommendations of ..."
+    }
+  ]
+}
