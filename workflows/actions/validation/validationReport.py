@@ -26,14 +26,15 @@ logging.disable(sys.maxsize)
 from urllib.request import urlopen
 import kglab
 from rdflib import Graph, plugin
+from rdflib import Dataset
 from rdflib.serializer import Serializer
 import pandas as pd
 import seaborn as sns
-from rdflib import Graph  #, plugin
+from rdflib import Graph, plugin
 import matplotlib.pyplot as plt
 import boto3
 import re
-import time, io
+import time, io, os
 from datetime import datetime
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import letter
@@ -46,52 +47,58 @@ from reportlab.platypus import SimpleDocTemplate
 import argparse
 from minio import Minio
 
+# Process each line
+def popper(input):
+    # Split input into separate lines
+    lines = input.decode().split('\n')
+    modified_lines = []
+
+    for line in lines:
+        segments = line.split(' ')
+
+        if len(segments) > 3:
+
+            # Remove the last two segment
+            segments.pop()
+            segments.pop()
+
+            new_line = ' '.join(segments) + ' .'
+            modified_lines.append(new_line)
+
+    result_string = '\n'.join(modified_lines)
+
+    return(result_string)
 
 # could also do anonymous read of a public bucket and loop and read
 # each source in there.  Then apply the supplied shape.
 # need name of the source and and the shape run (ie, geo, goihgeneral, etc.)
 
-# Create client with anonymous access.
-client = Minio("ossapi.oceaninfohub.org:80",  secure=False)
-
-# List objects information whose names starts with "my/prefix/".
-objects = client.list_objects("public", prefix="graphs", recursive=True)
-for obj in objects:
-        print(obj.object_name)
-
-        result = client.stat_object("public", obj.object_name)
-        print(
-            "last-modified: {0}, size: {1}".format(
-                    result.last_modified, result.size,
-            ),
-
-        )
-
-        if True:  #  how to tell if an objet   obj.is_public  ?????
-            # Use presigned_get_object() to get a presigned URL for the object
-            url = client.presigned_get_object("public", obj.object_name)
-            print(f"Public URL for object: {url}")
-        else:
-            print("Object does not have anonymous access enabled.")
-
-
-raise "exit now"
-
 # Initialize args  parser
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--datagraph", help="datagraph to check")
 parser.add_argument("-s", "--shapegraph", help="shacl shape graph to use")
-# parser.add_argument("-n", "--name", help="name of the validation run, spatial, core, funding")
-# parser.add_argument("-f", "--file", help="Optional name of CSV file to save results to")
+parser.add_argument("-n", "--name", help="name of the validation run, spatial, core, funding")
 
 args = parser.parse_args()
-
 dgurl = args.datagraph
 sgurl = args.shapegraph
-# file = args.file
+valname = args.name
+
+client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.
+
+objects = client.list_objects("public", prefix="graphs", recursive=True)
+for obj in objects:
+        result = client.stat_object("public", obj.object_name)
+        # print(
+            # "last-modified: {0}, size: {1}".format(
+                    # result.last_modified, result.size,
+            # ),
+        # )
+        if result.size > 0:  #  how to tell if an objet   obj.is_public  ?????
+            url = client.presigned_get_object("public", obj.object_name)
+            print(f"Public URL for object: {url}")
 
 #  need to parse out the name from the release graph and the base name of the shacl shape used
-# Define the regular expression pattern
 pattern = r"summoned(.*?)_v1"
 
 # Use re.search() to extract the text between "summoned" and "_v1"
@@ -129,14 +136,23 @@ sg = sf.read()
 df = urlopen(dgurl)
 dg = df.read()
 
+# print(dg)
+r = popper(dg)
+
 fna = []   # array to hold errors
 try:
-    g = Graph().parse(dg, format='n3')
-    result = g.serialize(format='ttl')# .decode('utf-8')
-    kg.load_rdf_text(result)
-except:
-    print("An exception occurred with {}".format(fn))
-    fna.append(fn)
+    g = Graph().parse(data=r, format='nt')
+    r = g.serialize(format='nt')
+    # print(r)
+    kg.load_rdf_text(r)
+except Exception as e:
+    # code = x.status_code
+    # dtype = info.get_content_type()
+    print("Exception: {}\n --".format(str(e)))
+    # print("An exception occurred with {}".format(fn))
+    # fna.append(fn)
+
+
 
 conforms, report_graph, report_text = kg.validate(
     shacl_graph=sg,
@@ -144,6 +160,8 @@ conforms, report_graph, report_text = kg.validate(
 )
 
 kg.load_rdf_text(data=report_graph.save_rdf_text(), format="ttl")
+
+# print(report_graph.save_rdf_text())
 
 sparql = """
 SELECT  ?severity  ?constraint ?path ?message ?focus ?path ?value
@@ -176,13 +194,13 @@ if 'severity' in df.columns:
 
     sns.set(rc={'figure.figsize':(11.7,8.27)})
     sns.heatmap(ctst, annot=True, fmt=".0f", cmap = sns.cm.crest)
-    plt.savefig('../../output/validation/{}_heatmap_{}.png'.format(source, date_time))
+    plt.savefig('../../output/validation/{}_{}_heatmap_{}.png'.format(source, valname, date_time))
 else:
     print("No severity column found, all SHACL validations must have passed OR a processing error occurred upstream")
     ib = False
 
 # Save CSV
-df.to_csv("../../output/validation/{}_table_{}.csv".format(source, date_time))
+df.to_csv("../../output/validation/{}_{}_table_{}.csv".format(source, valname, date_time))
 
 # build report
 
@@ -211,7 +229,7 @@ def pre(txt):
     return result
 
 #  use for a file
-doc = SimpleDocTemplate("../../output/validation/{}_report_{}.pdf".format(source, date_time),pagesize=letter,
+doc = SimpleDocTemplate("../../output/validation/{}_{}_{}.pdf".format(source, valname, date_time),pagesize=letter,
                         rightMargin=72,leftMargin=72,
                         topMargin=72,bottomMargin=18)
 
@@ -221,7 +239,7 @@ doc = SimpleDocTemplate("../../output/validation/{}_report_{}.pdf".format(source
 #                         topMargin=72,bottomMargin=18)
 
 if ib:
-    logo = '../../output/validation/{}_heatmap_{}.png'.format(source, date_time)
+    logo = '../../output/validation/{}_{}_heatmap_{}.png'.format(source, valname, date_time)
     im = Image(logo, 4*inch, 3*inch)
 
 address_parts = ["RunID: {}".format(date_time), "Shape graph: {}".format(sgurl)]
@@ -283,7 +301,7 @@ ptext = '%s' % full_name
 Story.append(Paragraph(ptext, styles["Heading1"]))
 
 ptext = 'Details of the detected violations and the associated reference node are found in the CSV \
-        that accompany this report:  {}_table_{}.csv '.format(source, date_time)
+        that accompany this report:  {}_{}_table_{}.csv '.format(source, valname, date_time)
 
 Story.append(Paragraph(ptext, styles["Justify"]))
 
@@ -322,3 +340,4 @@ doc.build(Story)
 # s3_resource = boto3.resource('s3')
 # s3_resource.Object(bucket, 'df.csv').put(Body=csv_buffer.getvalue())
 # ```
+

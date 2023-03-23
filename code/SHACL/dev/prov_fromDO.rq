@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT ?o ?pm ?date ?pe ?pa ?pc
+WHERE {
+        VALUES ?o { "0b4cd0ae2f0ceca03ec56bbd91ae5f5484f0ae1f.jsonld"
+            "c1d0be9e6cf31acbe9b7a2ff588245a3dd472911.jsonld"
+     }
+
+     ?pe prov:value ?o .
+     ?pa prov:generated ?pe .
+     ?pa prov:endedAtTime ?date .
+     ?pa prov:used ?pc .
+     ?pc prov:hadMember ?pm
+}

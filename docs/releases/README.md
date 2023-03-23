@@ -73,35 +73,23 @@ institutions or multiple affiliations.) -->
 <!-- info: Provide a link to the dataset: -->
 <!-- width: half -->
 
-| Name   |      Date      |  Link |
-|----------|:-------------:|------:|
-|africaioc | 2023-03-05-06-12-21 | [summonedafricaioc_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.rdf) 
-|aquadocs | 2023-03-05-12-46-01 | [summonedaquadocs_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.rdf) 
-|benguelacc | 2023-03-06-20-15-41 | [summonedbenguelacc_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedbenguelacc_v1_release.rdf) 
-|caribbeanmarineatlas | 2023-03-06-20-15-41 | [summonedcaribbeanmarineatlas_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedcaribbeanmarineatlas_v1_release.rdf) 
-|cioos | 2023-03-06-20-59-25 | [summonedcioos_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.rdf) 
-|edmerp | 2023-03-06-23-34-27 | [summonededmerp_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.rdf) 
-|edmo | 2023-03-07-00-40-41 | [summonededmo_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.rdf) 
-|emodnet | 2023-03-09-21-23-21 | [summonedemodnet_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.rdf) 
-|euroceanevents | 2023-02-21-04-23-09 | [summonedeuroceanevents_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceanevents_v1_release.rdf) 
-|euroceanexperts | 2023-02-21-06-04-16 | [summonedeuroceanexperts_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceanexperts_v1_release.rdf) 
-|euroceaninstitutions | 2023-02-21-12-03-17 | [summonedeuroceaninstitutions_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceaninstitutions_v1_release.rdf) 
-|euroceanorgs | 2023-03-09-23-15-31 | [summonedeuroceanorgs_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceanorgs_v1_release.rdf) 
-|euroceanprojects | 2023-03-09-19-29-16 | [summonedeuroceanprojects_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceanprojects_v1_release.rdf) 
-|euroceantraining | 2023-02-22-06-02-42 | [summonedeuroceantraining_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceantraining_v1_release.rdf) 
-|euroceanvessels | 2023-03-09-19-04-54 | [summonedeuroceanvessels_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedeuroceanvessels_v1_release.rdf) 
-|inanodc | 2023-03-09-19-03-08 | [summonedinanodc_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.rdf) 
-|invemardocuments | 2023-03-09-19-07-26 | [summonedinvemardocuments_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.rdf) 
-|invemarexperts | 2023-03-09-19-08-20 | [summonedinvemarexperts_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.rdf) 
-|invemarinstitutions | 2023-03-09-19-10-33 | [summonedinvemarinstitutions_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarinstitutions_v1_release.rdf) 
-|invemartraining | 2023-03-10-00-02-38 | [summonedinvemartraining_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.rdf) 
-|invemarvessels | 2023-03-10-06-02-41 | [summonedinvemarvessels_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.rdf) 
-|marinetraining | 2023-03-10-12-25-44 | [summonedmarinetraining_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.rdf) 
-|maspawio | 2023-03-03-18-04-10 | [summonedmaspawio_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedmaspawio_v1_release.rdf) 
-|obis | 2023-03-04-02-11-57 | [summonedobis_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.rdf) 
-|obps | 2023-03-04-06-04-45 | [summonedobps_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.rdf) 
-|oceanexperts | 2023-03-04-12-04-13 | [summonedoceanexperts_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.rdf) 
-|oceanscape | 2023-03-04-18-09-46 | [summonedoceanscape_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanscape_v1_release.rdf) 
-|pdh | 2023-03-05-00-03-35 | [summonedpdh_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedpdh_v1_release.rdf) 
-|pogo | 2023-03-05-06-04-15 | [summonedpogo_v1_release.rdf](http://ossapi.oceaninfohub.org/public/graphs/summonedpogo_v1_release.rdf) 
+| provider           |      size      |           date            | URL                                                                                                                                                                              
+|--------------------|:-------------:|:-------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  africaioc         | 707451  | 2023-03-23 17:18:18+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.nq)                     |
+| aquadocs           | 211713813  | 2023-03-23 17:18:18+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.nq)                       |
+| cioos              | 42653232  | 2023-03-23 17:18:23+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq)                             |
+| edmerp             | 17165450  | 2023-03-23 17:18:24+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.nq)                           |
+| edmo               | 21312369  | 2023-03-23 17:18:25+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.nq)                               |
+| emodnet            | 312445  | 2023-03-23 17:18:26+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.nq)                         |
+| inanodc            | 120868  | 2023-03-23 17:18:26+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.nq)                         |
+| invemardocuments   | 30805743  | 2023-03-23 17:18:27+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.nq)       |
+| invemarexperts     | 3337999  | 2023-03-23 17:18:28+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.nq)           |
+| invemarinstitutions | 730445  | 2023-03-23 17:18:28+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarinstitutions_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarinstitutions_v1_release.nq) |
+| invemartraining    | 1435575  | 2023-03-23 17:18:28+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.nq)         |
+| invemarvessels     | 272856  | 2023-03-23 17:18:29+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.nq)           |
+| marinetraining     | 2618862  | 2023-03-23 17:18:29+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.nq)           |
+| obis               | 43477772  | 2023-03-23 17:18:29+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nq)                               |
+| obis               | 30808113  | 2023-03-20 20:48:09+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nt](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nt)                               |
+| obps               | 12110954  | 2023-03-23 17:18:30+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq)                               |
+| oceanexperts       | 180515480  | 2023-03-23 17:18:31+00:00 | [http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq)               |
 

@@ -19,7 +19,7 @@
 
 Make ADRs: 
 
-- Do not include @id for properties under the assumption that they are not issues them as nodes.  Kept for the top level, and clearly state only to this if it is a resolvable IRI.  Making it a FDO.  (ref: https://www.w3.org/TR/json-ld/#node-identifiers)
+- Do not include @id for properties under the assumption that they are not issues them as nodes.  Kept for the top level, and clearly state only to this if it is a resolvable IRI.  Making it a FDO.  (ref: https://www.w3.org/TR/json-ld/#node-identifiers)   Use an example from the Africa IOC for this.  Need to align this "sub" @id use in the datagraph with the approach expressed by the JSON-LD documentation.
 - Keep each minimal, if a property requires or supports a type, just show the minimal properties for that embedded type, and link out to the full specification in an independent pattern by adding a link in the embedded Type's description property. 
 - how to force a string literal to be a URI, or at least indicate/express that a value is of type URL to support confident filtering: We will recommend typing URIs where possible, guidance to be added to documentation (see below)
 - When we see that a property expects "Thing" as a value, we understand this as any arbitrary string, PID to an ontology class, etc. We do not understand this as needing a subclass of schema.org:"Thing", as the example for instrument in the Action type notes "pen" as a valid entry.
