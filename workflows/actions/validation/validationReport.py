@@ -164,7 +164,7 @@ kg.load_rdf_text(data=report_graph.save_rdf_text(), format="ttl")
 # print(report_graph.save_rdf_text())
 
 sparql = """
-SELECT  ?severity  ?constraint ?path ?message ?focus ?path ?value
+SELECT  ?severity  ?constraint ?path ?message (STR(?focus) AS ?focusURL) ?path ?value
   WHERE {
     ?id rdf:type shacl:ValidationResult .
     ?id shacl:focusNode ?focus .
