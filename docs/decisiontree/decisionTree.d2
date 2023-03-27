@@ -1,0 +1,37 @@
+r: Do you have \nrobots.txt {
+}
+
+nr: No robots.txt {
+   tooltip:  It's fine, not a big deal
+link: https://book.oceaninfohub.org/publishing/publishing.html#robots-txt
+}
+
+s: Do you have \nsitemap.xml {
+  link: https://book.oceaninfohub.org/publishing/publishing.html#sitemap-xml
+}
+
+ns: make a sitemap.xml {
+  link: https://book.oceaninfohub.org/publishing/publishing.html#sitemap-xml
+}
+
+vs: validate your sitemap {
+  tooltip: We will have a simple sitemap validation \n workflow
+}
+
+rc: resource check {
+  link: https://github.com/gleanerio/archetype/blob/master/tooling/bashScrape.md
+  tooltip: We will have a simple resource validation \n workflow
+}
+
+
+r -> s: yes
+r -> nr: no
+nr -> s: move on anyway
+
+s -> ns: no
+ns -> s: got one now
+
+s -> vs: yes
+
+vs -> vs: It's not valid
+vs -> rc: it's valid
