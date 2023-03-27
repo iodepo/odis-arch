@@ -69,6 +69,50 @@ OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 
 ## Raw output testing of SPARQL to markdown
 
+
+### Query References
+
+The following are SPARQL queries that can be found at [odis-arch/code/SPARQL/interop](https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/SPARQL/interop)
+
+#### Count By License
+
+Number of resources with a license declared 
+
+#### DOIs
+
+Number of resources with a DOI declared 
+
+
+#### ORCIDSs
+
+Number of resources with an ORCID declared 
+
+
+#### Count by Spatial
+
+Number of resources with geoSPARQL or schema.org properties
+associated with spatial information
+
+
+#### Count by Temporal
+
+Number of resources with temporal information.  At presnt this 
+is just schema:endDate and schema:startDate but this will be 
+expanded.
+
+#### Types and Type by defined set
+
+Counts of the types used in the OIH patterns. 
+
+#### Count by Predicates
+
+Count and name of all predicates used
+
+#### Count by Variable Measured
+
+Count and name of all schema:variableMeasured used
+
+
 ## countByLicense.rq
 | count_datatype                           | count_type | count_value | type_type | type_value                       |
 | ---------------------------------------- | ---------- | ----------- | --------- | -------------------------------- |
