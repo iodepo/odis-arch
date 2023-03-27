@@ -8,7 +8,7 @@ PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
 PREFIX schema: <https://schema.org/>
 PREFIX schemaold: <http://schema.org/>
 
-SELECT   ( COUNT(?type) as ?count) ?type
+SELECT ( COUNT(?type) as ?count) ?type
 WHERE
 {
    ?s rdf:type ?type

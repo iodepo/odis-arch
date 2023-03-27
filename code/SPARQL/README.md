@@ -70,17 +70,18 @@ A testing query, no description yet.
 [SPARQL Reference](https://www.w3.org/TR/sparql11-query/)
 
 ```bash
-curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql -d@hasLicense.rq
+curl  -XPOST  --header "Content-Type:application/sparql-query"  --data-binary @hasLicense.rq  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql 
 ```
 
 You can also do ?format=json  or csv with these.   When you do that you can 
 also then leverage the powerful jq tool with commands like
 
 ```bash
-curl  -XPOST  --header "Content-Type:application/sparql-query"  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql\?format\=json -d@countByLicense.rq | jq '.results.bindings[]'
+curl  -XPOST  --header "Content-Type:application/sparql-query"  --data-binary @countByLicense.rq  http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql\?format\=json | jq '.results.bindings[]'
 ```
 
-Or, if you have the resuls already.
+
+Or, if you have the results already.
 
 ```text
 cat results.json | jq '.results.bindings[] .s.value' 

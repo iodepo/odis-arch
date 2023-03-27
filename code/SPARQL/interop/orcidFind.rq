@@ -10,10 +10,11 @@ PREFIX schemax: <http://schema.org/>
 PREFIX bds: <http://www.bigdata.com/rdf/search#>
 
 
-SELECT  ( COUNT (?obj) as ?count) 
+
+SELECT  ( COUNT (?obj) as ?count)
 WHERE {
   ?s schema:identifier ?obj .
-  FILTER(isURI(?obj))
+  FILTER (isURI(?obj))
   BIND(STR(?obj) AS ?strObj)
-  FILTER(REGEX(?strObj, "doi"))
+  FILTER (REGEX(?strObj, "orcid"))
 }

@@ -1,74 +1,3 @@
-# Ocean InfoHub Graph (OIH-Graph)
-
-The Ocean InfoHub Graph is a Knowledge Graph built in collabortion 
-with the OIH partners.
-
-## Dataset Overview
-
-OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
-
-
-## Providers
-
-| name (graph alias)                                                                                                                                                                              | catalog | logo |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------:|-----:|
-| [IOC Africa Data Portal](https://ioc-africa.org) (africaioc)                                                                                                                       | [catlog](https://ioc-africa.org/dbs/displayData.php) | <img src='https://ioc-africa.org/dbs/images/unesco_ioc_logo.png' width='100'>|
-| [AquaDocs](https://aquadocs.org) (aquadocs)                                                                                                                                        | [catlog](https://aquadocs.org/discover) | <img src='https://aquadocs.org/themes/OR//images/repo-logo.png' width='100'>|
-| [Better Biomolecular Ocean Practices (BeBOP) as part of Ocean Biomolecular Observing Network (OBON)](https://oceandecade.org/actions/better-biomolecular-ocean-practices/) (bebop) | [catlog](https://github.com/BeBOP-OBON/odis-interface) | <img src='https://en.unesco.org/sites/default/files/styles/banner_sec_col_234x100/public/logo_decade_ocean_science_en.jpg' width='100'>|
-| [Benguela Current Convention (BCC) GeoData Portal](https://www.benguelacc.org/) (benguelacc)                                                                                       | [catlog](https://geodata.benguelacc.org/) | <img src='https://static.tildacdn.com/tild3263-3132-4937-a166-373963646533/Skjermbilde_2020-12-.png' width='100'>|
-| [Caribbean Marine Atlas catalogue](https://www.caribbeanmarineatlas.net/) (caribbeanmarineatlas)                                                                                   | [catlog](https://www.caribbeanmarineatlas.net/home/) | <img src='https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg' width='100'>|
-| [CIOOS](https://cioos.ca/) (cioos)                                                                                                                                                 | [catlog](https://catalogue.cioos.ca/) | <img src='https://cioos.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/national/cioos-national_EN.svg' width='100'>|
-| [European Directory of Marine Environmental Research Projects (EDMERP) SeaDataNet](https://edmerp.seadatanet.org) (edmerp)                                                         | [catlog](https://edmerp.seadatanet.org/search) | <img src='https://edmerp.seadatanet.org/grfx/edmerp/logo_big.png' width='100'>|
-| [European Directory of Marine Organisations (EDMO) SeaDataNet](https://edmo.seadatanet.org) (edmo)                                                                                 | [catlog](https://edmo.seadatanet.org/search) | <img src='https://edmo.seadatanet.org/grfx/edmo/logo.png' width='100'>|
-| [EurOcean Organizations](https://infohub.eurocean.net/) (euroceanorgs)                                                                                                             | [catlog](https://infohub.eurocean.net/data/organizations) | <img src='https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png' width='100'>|
-| [EurOcean Projects](https://infohub.eurocean.net/) (euroceanprojects)                                                                                                              | [catlog](https://infohub.eurocean.net/data/projects) | <img src='https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png' width='100'>|
-| [EurOcean Vessels](https://infohub.eurocean.net/) (euroceanvessels)                                                                                                                | [catlog](https://infohub.eurocean.net/data/vessels) | <img src='https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png' width='100'>|
-| [European Marine Observation and Data Network catalogue](https://emodnet.ec.europa.eu/) (emodnet)                                                                                  | [catlog](https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home) | <img src='https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg' width='100'>|
-| [Indonesia National Oceanic Data Center](https://nodc.id) (inanodc)                                                                                                                | [catlog](https://geonode.nodc.id) | <img src='https://nodc.id/dist/img/brin.png' width='100'>|
-| [CHM LAC - Documents](http://portete.invemar.org.co) (invemardocuments)                                                                                                            | [catlog](http://portete.invemar.org.co/chm/) | <img src='http://portete.invemar.org.co/static/images/logo-web.svg' width='100'>|
-| [CHM LAC - Experts](http://portete.invemar.org.co) (invemarexperts)                                                                                                                | [catlog](http://portete.invemar.org.co/chm/) | <img src='http://portete.invemar.org.co/static/images/logo-web.svg' width='100'>|
-| [CHM LAC - Institutions](http://portete.invemar.org.co) (invemarinstitutions)                                                                                                      | [catlog](http://portete.invemar.org.co/chm/) | <img src='http://portete.invemar.org.co/static/images/logo-web.svg' width='100'>|
-| [CHM LAC - Training](http://portete.invemar.org.co) (invemartraining)                                                                                                              | [catlog](http://portete.invemar.org.co/chm/) | <img src='http://portete.invemar.org.co/static/images/logo-web.svg' width='100'>|
-| [CHM LAC - Vessels](http://portete.invemar.org.co) (invemarvessels)                                                                                                                | [catlog](http://portete.invemar.org.co/chm/) | <img src='http://portete.invemar.org.co/static/images/logo-web.svg' width='100'>|
-| [Marine Training EU](https://marinetraining.eu/) (marinetraining)                                                                                                                  | [catlog](https://marinetraining.eu/search) | <img src='https://marinetraining.eu/sites/default/files/M2.0.png' width='100'>|
-| [MASPAWIO - Marine Spatial Atlas for the Western Indian Ocean](https://cordioea.net/) (maspawio)                                                                                   | [catlog](http://maspawio.net/) | <img src='https://cordioea.net/wp-content/uploads/2017/09/Geonde.png' width='100'>|
-| [Ocean Biodiversity Information System](https://obis.org) (obis)                                                                                                                   | [catlog](https://obis.org) | <img src='https://obis.org/images/logo.png' width='100'>|
-
-
-## Distributions
-
-| provider by graph alias   |      size      |  date | link
-|----------|:-------------:|------:|------:|
-| africaioc | 707451  | 2023-03-23 17:18:18+00:00  | [summonedafricaioc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.nq) |
-| aquadocs | 211713813  | 2023-03-23 17:18:18+00:00  | [summonedaquadocs_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.nq) |
-| cioos | 42653232  | 2023-03-23 17:18:23+00:00  | [summonedcioos_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq) |
-| edmerp | 17165450  | 2023-03-23 17:18:24+00:00  | [summonededmerp_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.nq) |
-| edmo | 21312369  | 2023-03-23 17:18:25+00:00  | [summonededmo_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.nq) |
-| emodnet | 312445  | 2023-03-23 17:18:26+00:00  | [summonedemodnet_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.nq) |
-| inanodc | 120868  | 2023-03-23 17:18:26+00:00  | [summonedinanodc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.nq) |
-| invemardocuments | 30805743  | 2023-03-23 17:18:27+00:00  | [summonedinvemardocuments_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.nq) |
-| invemarexperts | 3337999  | 2023-03-23 17:18:28+00:00  | [summonedinvemarexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.nq) |
-| invemarinstitutions | 730445  | 2023-03-23 17:18:28+00:00  | [summonedinvemarinstitutions_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarinstitutions_v1_release.nq) |
-| invemartraining | 1435575  | 2023-03-23 17:18:28+00:00  | [summonedinvemartraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.nq) |
-| invemarvessels | 272856  | 2023-03-23 17:18:29+00:00  | [summonedinvemarvessels_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.nq) |
-| marinetraining | 2618862  | 2023-03-23 17:18:29+00:00  | [summonedmarinetraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.nq) |
-| obis | 43477772  | 2023-03-23 17:18:29+00:00  | [summonedobis_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nq) |
-| obps | 12110954  | 2023-03-23 17:18:30+00:00  | [summonedobps_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq) |
-| oceanexperts | 180515480  | 2023-03-23 17:18:31+00:00  | [summonedoceanexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq) |
-
-## Associated Assets
-
-### Spatial extents (per distribution element)
-
-### Temporal extents (per distribution element)
-
-### Validation
-
-### Profiles
-
-
-## Raw output testing of SPARQL to markdown
-
 ## countByLicense.rq
 | count_datatype                           | count_type | count_value | type_type | type_value                       |
 | ---------------------------------------- | ---------- | ----------- | --------- | -------------------------------- |
@@ -76,163 +5,7 @@ OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 4687        | uri       | https://schema.org/Dataset       |
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 4574        | uri       | http://www.w3.org/ns/prov#Entity |
    
-
    
-## doiFind.rq
-| count_datatype                           | count_type | count_value |
-| ---------------------------------------- | ---------- | ----------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 913         |
-   
-   
-## orcidFind.rq
-| count_datatype                           | count_type | count_value |
-| ---------------------------------------- | ---------- | ----------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 716         |
-   
-      
-
-## countBySpatial.rq
-| count_datatype                           | count_type | count_value | p_type | p_value                                          |
-| ---------------------------------------- | ---------- | ----------- | ------ | ------------------------------------------------ |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 25423       | uri    | https://schema.org/location                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | uri    | https://schema.org/spatialCoverage               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 33          | uri    | http://www.opengis.net/ont/geosparql#hasGeometry |
-   
-   
-## countByTemporal.rq
-| count_datatype                           | count_type | count_value | p_type | p_value                      |
-| ---------------------------------------- | ---------- | ----------- | ------ | ---------------------------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 25537       | uri    | https://schema.org/endDate   |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 25537       | uri    | https://schema.org/startDate |
-   
-   
-## countByType.rq
-| count_datatype                           | count_type | count_value | type_type | type_value                                                     |
-| ---------------------------------------- | ---------- | ----------- | --------- | -------------------------------------------------------------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | uri       | https://schema.org/Person                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 141807      | uri       | http://www.w3.org/ns/prov#Entity                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | uri       | https://schema.org/Organization                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 91343       | uri       | https://schema.org/ListItem                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 86837       | uri       | https://schema.org/Text                                        |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 67618       | uri       | https://schema.org/PropertyValue                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | uri       | http://www.w3.org/ns/prov#Activity                             |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | uri       | http://www.w3.org/ns/prov#Collection                           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 56705       | uri       | https://schema.org/Place                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | uri       | https://schema.org/CreativeWork                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24338       | uri       | https://schema.org/ProgramMembership                           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | uri       | https://schema.org/Event                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 23732       | uri       | https://schema.org/PostalAddress                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 21564       | uri       | https://schema.org/Country                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 18051       | uri       | https://schema.org/DefinedTerm                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 11852       | uri       | https://schema.org/ContactPoint                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 9037        | uri       | https://schema.org/DataDownload                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | uri       | https://schema.org/GeoShape                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | uri       | https://schema.org/Dataset                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4076        | uri       | http://schema.org/Place                                        |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4075        | uri       | http://schema.org/GeoShape                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3746        | uri       | http://schema.org/DataDownload                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | uri       | https://schema.org/ResearchProject                             |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3202        | uri       | http://schema.org/Dataset                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3131        | uri       | http://schema.org/PropertyValue                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 2141        | uri       | http://schema.org/Organization                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 2038        | uri       | http://schema.org/ContactPoint                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | uri       | https://schema.org/CourseInstance                              |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | uri       | https://schema.org/Course                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1372        | uri       | http://schema.org/Person                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1190        | uri       | http://www.w3.org/2006/vcard/ns#Organization                   |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1135        | uri       | http://www.w3.org/2006/vcard/ns#Individual                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 506         | uri       | http://schema.org/DataCatalog                                  |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | uri       | https://schema.org/Vehicle                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 112         | uri       | https://schema.org/Action                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | uri       | http://www.opengis.net/ont/sf#Polygon                          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | uri       | https://schema.org/FundingAgency                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 58          | uri       | http://schema.org/WebAPI                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 31          | uri       | http://www.w3.org/ns/prov#Organization                         |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 10          | uri       | https://schema.org/ItemList                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/CreativeWork |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/ItemList     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | uri       | https://schema.org/LearningResource                            |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | uri       | https://schema.org/DataCatalog                                 |
-   
-   
-## countByTypeSet.rq
-| count_datatype                           | count_type | count_value | type_type | type_value                         |
-| ---------------------------------------- | ---------- | ----------- | --------- | ---------------------------------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | uri       | https://schema.org/Person          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | uri       | https://schema.org/Organization    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | uri       | https://schema.org/CreativeWork    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | uri       | https://schema.org/Event           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | uri       | https://schema.org/Dataset         |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | uri       | https://schema.org/ResearchProject |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | uri       | https://schema.org/CourseInstance  |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | uri       | https://schema.org/Course          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | uri       | https://schema.org/Vehicle         |
-   
-   
-## countByTypeSetSum.rq
-| count_datatype                           | count_type | count_value | total_count_datatype                     | total_count_type | total_count_value | type_type | type_value                         |
-| ---------------------------------------- | ---------- | ----------- | ---------------------------------------- | ---------------- | ----------------- | --------- | ---------------------------------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Person          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Organization    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/CreativeWork    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Event           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Dataset         |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/ResearchProject |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/CourseInstance  |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Course          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Vehicle         |
-   
-   
-## countByTypeSum.rq
-| count_datatype                           | count_type | count_value | total_count_datatype                     | total_count_type | total_count_value | type_type | type_value                                                     |
-| ---------------------------------------- | ---------- | ----------- | ---------------------------------------- | ---------------- | ----------------- | --------- | -------------------------------------------------------------- |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Person                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 141807      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Entity                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Organization                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 91343       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ListItem                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 86837       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Text                                        |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 67618       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/PropertyValue                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Activity                             |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Collection                           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 56705       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Place                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/CreativeWork                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24338       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ProgramMembership                           |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Event                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 23732       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/PostalAddress                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 21564       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Country                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 18051       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DefinedTerm                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 11852       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ContactPoint                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 9037        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DataDownload                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/GeoShape                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Dataset                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4076        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Place                                        |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 4075        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/GeoShape                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3746        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/DataDownload                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ResearchProject                             |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3202        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Dataset                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3131        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/PropertyValue                                |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 2141        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Organization                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 2038        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/ContactPoint                                 |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/CourseInstance                              |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Course                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1372        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Person                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1190        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/2006/vcard/ns#Organization                   |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1135        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/2006/vcard/ns#Individual                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 506         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/DataCatalog                                  |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Vehicle                                     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 112         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Action                                      |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.opengis.net/ont/sf#Polygon                          |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/FundingAgency                               |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 58          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/WebAPI                                       |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 31          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Organization                         |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 10          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ItemList                                    |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/CreativeWork |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/ItemList     |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/LearningResource                            |
-| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DataCatalog                                 |
-   
-   
-
 ## countByPred.rq
 | count_datatype                           | count_type | count_value | p_type | p_value                                          |
 | ---------------------------------------- | ---------- | ----------- | ------ | ------------------------------------------------ |
@@ -387,6 +160,147 @@ OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri    | https://schema.org/contactType                   |
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri    | https://schema.org/relatedLink                   |
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | uri    | https://schema.org/EventStatus                   |
+   
+   
+## countBySpatial.rq
+| count_datatype                           | count_type | count_value | p_type | p_value                                          |
+| ---------------------------------------- | ---------- | ----------- | ------ | ------------------------------------------------ |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 25423       | uri    | https://schema.org/location                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | uri    | https://schema.org/spatialCoverage               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 33          | uri    | http://www.opengis.net/ont/geosparql#hasGeometry |
+   
+   
+## countByTemporal.rq
+| count_datatype                           | count_type | count_value | p_type | p_value                      |
+| ---------------------------------------- | ---------- | ----------- | ------ | ---------------------------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 25537       | uri    | https://schema.org/endDate   |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 25537       | uri    | https://schema.org/startDate |
+   
+   
+## countByType.rq
+| count_datatype                           | count_type | count_value | type_type | type_value                                                     |
+| ---------------------------------------- | ---------- | ----------- | --------- | -------------------------------------------------------------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | uri       | https://schema.org/Person                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 141807      | uri       | http://www.w3.org/ns/prov#Entity                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | uri       | https://schema.org/Organization                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 91343       | uri       | https://schema.org/ListItem                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 86837       | uri       | https://schema.org/Text                                        |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 67618       | uri       | https://schema.org/PropertyValue                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | uri       | http://www.w3.org/ns/prov#Activity                             |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | uri       | http://www.w3.org/ns/prov#Collection                           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 56705       | uri       | https://schema.org/Place                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | uri       | https://schema.org/CreativeWork                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24338       | uri       | https://schema.org/ProgramMembership                           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | uri       | https://schema.org/Event                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 23732       | uri       | https://schema.org/PostalAddress                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 21564       | uri       | https://schema.org/Country                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 18051       | uri       | https://schema.org/DefinedTerm                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 11852       | uri       | https://schema.org/ContactPoint                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 9037        | uri       | https://schema.org/DataDownload                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | uri       | https://schema.org/GeoShape                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | uri       | https://schema.org/Dataset                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4076        | uri       | http://schema.org/Place                                        |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4075        | uri       | http://schema.org/GeoShape                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3746        | uri       | http://schema.org/DataDownload                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | uri       | https://schema.org/ResearchProject                             |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3202        | uri       | http://schema.org/Dataset                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3131        | uri       | http://schema.org/PropertyValue                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 2141        | uri       | http://schema.org/Organization                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 2038        | uri       | http://schema.org/ContactPoint                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | uri       | https://schema.org/CourseInstance                              |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | uri       | https://schema.org/Course                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1372        | uri       | http://schema.org/Person                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1190        | uri       | http://www.w3.org/2006/vcard/ns#Organization                   |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1135        | uri       | http://www.w3.org/2006/vcard/ns#Individual                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 506         | uri       | http://schema.org/DataCatalog                                  |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | uri       | https://schema.org/Vehicle                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 112         | uri       | https://schema.org/Action                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | uri       | http://www.opengis.net/ont/sf#Polygon                          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | uri       | https://schema.org/FundingAgency                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 58          | uri       | http://schema.org/WebAPI                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 31          | uri       | http://www.w3.org/ns/prov#Organization                         |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 10          | uri       | https://schema.org/ItemList                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/CreativeWork |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/ItemList     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | uri       | https://schema.org/LearningResource                            |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | uri       | https://schema.org/DataCatalog                                 |
+   
+   
+## countByTypeSet.rq
+| count_datatype                           | count_type | count_value | type_type | type_value                         |
+| ---------------------------------------- | ---------- | ----------- | --------- | ---------------------------------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | uri       | https://schema.org/Person          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | uri       | https://schema.org/Organization    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | uri       | https://schema.org/CreativeWork    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | uri       | https://schema.org/Event           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | uri       | https://schema.org/Dataset         |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | uri       | https://schema.org/ResearchProject |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | uri       | https://schema.org/CourseInstance  |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | uri       | https://schema.org/Course          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | uri       | https://schema.org/Vehicle         |
+   
+   
+## countByTypeSetSum.rq
+| count_datatype                           | count_type | count_value | total_count_datatype                     | total_count_type | total_count_value | type_type | type_value                         |
+| ---------------------------------------- | ---------- | ----------- | ---------------------------------------- | ---------------- | ----------------- | --------- | ---------------------------------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Person          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Organization    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/CreativeWork    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Event           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Dataset         |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/ResearchProject |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/CourseInstance  |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Course          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | http://www.w3.org/2001/XMLSchema#integer | literal          | 510095            | uri       | https://schema.org/Vehicle         |
+   
+   
+## countByTypeSum.rq
+| count_datatype                           | count_type | count_value | total_count_datatype                     | total_count_type | total_count_value | type_type | type_value                                                     |
+| ---------------------------------------- | ---------- | ----------- | ---------------------------------------- | ---------------- | ----------------- | --------- | -------------------------------------------------------------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 320045      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Person                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 141807      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Entity                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 108108      | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Organization                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 91343       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ListItem                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 86837       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Text                                        |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 67618       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/PropertyValue                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Activity                             |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 65776       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Collection                           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 56705       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Place                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 46061       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/CreativeWork                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24338       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ProgramMembership                           |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 24047       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Event                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 23732       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/PostalAddress                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 21564       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Country                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 18051       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DefinedTerm                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 11852       | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ContactPoint                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 9037        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DataDownload                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 8053        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/GeoShape                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4733        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Dataset                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4076        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Place                                        |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 4075        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/GeoShape                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3746        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/DataDownload                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3608        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ResearchProject                             |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3202        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Dataset                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3131        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/PropertyValue                                |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 2141        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Organization                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 2038        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/ContactPoint                                 |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1907        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/CourseInstance                              |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1471        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Course                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1372        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/Person                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1190        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/2006/vcard/ns#Organization                   |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1135        | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/2006/vcard/ns#Individual                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 506         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/DataCatalog                                  |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 115         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Vehicle                                     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 112         | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/Action                                      |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.opengis.net/ont/sf#Polygon                          |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 66          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/FundingAgency                               |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 58          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://schema.org/WebAPI                                       |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 31          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://www.w3.org/ns/prov#Organization                         |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 10          | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/ItemList                                    |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/CreativeWork |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 3           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | http://192.168.5.46:9999/blazegraph/namespace/oih/ItemList     |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/LearningResource                            |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | http://www.w3.org/2001/XMLSchema#integer | literal          | 1229547           | uri       | https://schema.org/DataCatalog                                 |
    
    
 ## countByVarMeasured.rq
@@ -2410,5 +2324,16 @@ OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | literal   |  Particulate organic matter (inc POC, PON)                                                                                                                                                                                                 |
 | http://www.w3.org/2001/XMLSchema#integer | literal    | 1           | literal   | Core - soft bottom                                                                                                                                                                                                                         |
    
-
-
+   
+## doiFind.rq
+| count_datatype                           | count_type | count_value |
+| ---------------------------------------- | ---------- | ----------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 913         |
+   
+   
+## orcidFind.rq
+| count_datatype                           | count_type | count_value |
+| ---------------------------------------- | ---------- | ----------- |
+| http://www.w3.org/2001/XMLSchema#integer | literal    | 716         |
+   
+   

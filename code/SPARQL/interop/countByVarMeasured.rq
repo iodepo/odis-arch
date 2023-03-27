@@ -1,0 +1,19 @@
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemaold: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX shema: <https://schema.org/>
+
+# the sum of varmes can be found in countByPred.rq query
+SELECT  ( COUNT( ?name) as ?count) ?name
+WHERE
+ {
+    ?s shema:variableMeasured ?pv .
+    ?pv schema:name ?name
+}
+GROUP BY ?name
+ORDER BY DESC(?count)
