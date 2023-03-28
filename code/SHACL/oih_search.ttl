@@ -6,7 +6,7 @@
 oihval:IDShape
     a shacl:NodeShape ;
     shacl:targetClass  schema:CreativeWork, schema:ResearchProject, schema:Person, schema:Course, schema:Organization, schema:Dataset, schema:Map, schema:Vehicle ;
-    shacl:message "Graph must have an ID"@en ;
+    shacl:message "Graph requires ID"@en ;
     shacl:description "URL OIH shape guidance" ;
     shacl:nodeKind shacl:IRI ;
     .
@@ -38,7 +38,7 @@ oihval:urlResourceProperty
     shacl:maxCount 1 ;
     shacl:minCount 1 ;
     shacl:nodeKind shacl:IRIOrLiteral ;
-    shacl:message "URL required for the location of a page describing the resource"@en ;
+    shacl:message "URL missing"@en ;
     shacl:description "https://foo.org" ;
     .
 
@@ -47,6 +47,6 @@ oihval:descriptionResourceProperty
     shacl:path schema:description;
     shacl:nodeKind shacl:Literal ;
     shacl:minCount 1 ;
-    shacl:message "Resource must have a description"@en ;
+    shacl:message "Description missing"@en ;
     shacl:description "https://foo.org" ;
     .
