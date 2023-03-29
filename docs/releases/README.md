@@ -7,7 +7,6 @@ with the OIH partners.
 
 OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 
-
 ## Providers
 
 | name (graph alias)                                                                                                                                                                              | catalog | logo |
@@ -56,21 +55,56 @@ OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
 | obps | 12110954  | 2023-03-23 17:18:30+00:00  | [summonedobps_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq) |
 | oceanexperts | 180515480  | 2023-03-23 17:18:31+00:00  | [summonedoceanexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq) |
 
-## Associated Assets
+
+## Notebook
+
+For a personal interactive view into this graph users can use a range of tools and services
+to interact with the above data.  Thse include commercial and open soruce approaches. 
+
+As a simple primer, a Jupyter notebook, [OIH Graph Explorer](https://github.com/gleanerio/notebooks/blob/master/notebooks/datastore/loadToMemory.ipynb)
+is made available.  This notebook provides some simple examples of how to load 
+one or all of the above graphs into a local in memory triplstore to analyze. 
+
+
+## Services
+
+This graph is available at the OIH triplstor located at http://graph.oceaninfohub.org.  Note that
+this service endpoint is a rolling release and represents the latest hrvested version of the 
+graph.  As such it may not b exactly in sync with th graph as represented in this set of files.
+
+At some point in the future, OIH may offer unique online SPRAQL endpoints for the various releases.
+
+## Prov
+
+OIH currently builds and maintains a provenance graph for the harvst and publish activities.  Those 
+tripls are not currently packaged along side these files.  That may be addd in the future.  Note 
+this is only activity prov.   It records the date a resource was harvestd and the source URL used
+to get it from.  It is not associated with the provider and is separate and indepenet from the 
+the data provided by the partners. 
+
+## Validation
+
+SHACL: SHACL (Shape Constraint Language) is a language used to define and validate the shapes of 
+RDF graphs. It provides a way to specify constraints on the structure and content of the data in 
+the graph, which can help ensure that the data conforms to the desired shape and meets the 
+requirements of the community or organization.
+
+## Profiles
+
+The data graphs provided here by the partners are authored in alignment with the collaborativly 
+created guidance representd at [The Book of OIH](https://book.oceaninfohub.org)
+
+## Extents and Counts 
 
 ### Spatial extents (per distribution element)
 
+This information is not yet computed and provided.
+
 ### Temporal extents (per distribution element)
 
-### Validation
+This information is not yet computed and provided.
 
-### Profiles
-
-
-## Raw output testing of SPARQL to markdown
-
-
-### Query References
+### SPARQL Query Results
 
 The following are SPARQL queries that can be found at [odis-arch/code/SPARQL/interop](https://github.com/iodepo/odis-arch/tree/schema-dev-df/code/SPARQL/interop)
 
@@ -82,17 +116,14 @@ Number of resources with a license declared
 
 Number of resources with a DOI declared 
 
-
 #### ORCIDSs
 
 Number of resources with an ORCID declared 
-
 
 #### Count by Spatial
 
 Number of resources with geoSPARQL or schema.org properties
 associated with spatial information
-
 
 #### Count by Temporal
 
