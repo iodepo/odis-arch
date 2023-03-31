@@ -29,7 +29,7 @@ oihval:nameResourceProperty
     shacl:minCount 1 ;
     shacl:severity shacl:Warning ;
     shacl:message "Name is suggested "@en ;
-    shacl:description "https://foo.org" ;
+    shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .
 
 oihval:urlResourceProperty
@@ -38,8 +38,8 @@ oihval:urlResourceProperty
     shacl:maxCount 1 ;
     shacl:minCount 1 ;
     shacl:nodeKind shacl:IRIOrLiteral ;
-    shacl:message "URL required for the location of a page describing the resource"@en ;
-    shacl:description "https://foo.org" ;
+    shacl:message "URL missing @en ;
+    shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .
 
 oihval:descriptionResourceProperty
@@ -47,6 +47,6 @@ oihval:descriptionResourceProperty
     shacl:path schema:description;
     shacl:nodeKind shacl:Literal ;
     shacl:minCount 1 ;
-    shacl:message "Resource must have a description"@en ;
-    shacl:description "https://foo.org" ;
+    shacl:message "Description missing @en ;
+    shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .
