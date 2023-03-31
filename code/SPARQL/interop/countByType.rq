@@ -11,8 +11,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT  ( COUNT( DISTINCT ?s) as ?count) ?type
 WHERE
  {
-    ?s rdf:type ?type .
+     graph ?g {
+         ?s rdf:type ?type .
+     }
 }
 GROUP BY ?type
 ORDER BY DESC(?count)
-

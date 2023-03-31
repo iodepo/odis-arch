@@ -1,11 +1,27 @@
 # Ocean InfoHub Graph (OIH-Graph)
 
-The Ocean InfoHub Graph is a Knowledge Graph built in collabortion 
-with the OIH partners.
+The Ocean InfoHub Graph (OIH-Graph) is a Knowledge Graph built in collaboration
+with the Ocean InfoHub  partners.  The Ocean InfoHub aims to build a sustainable,
+interoperable, and inclusive digital ecosystem for all ocean stakeholders.
+Existing and emerging data systems are linked, with the ultimate goal of coordinating
+action and capacity to improve access to ocean data and knowledge.
 
 ## Dataset Overview
 
-OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularis.
+OIH-Graph is an RDF graph leveraging schema.org and GeoSPARQL vocabularies.
+It is ~ 630 MB of RDF (~70 MB compressed) composed of ~ 3.2 million triples at this time.
+
+## Funding Support
+
+The Project is funded by the Government of Flanders, Kingdom of Belgium and implemented by IODE,
+project office of the IOC of UNESCO. It is a contribution to the
+OceanData 2030 Programme of the UN Decade of Ocean Science
+for Sustainable Development.
+
+## Citing
+
+At this time we do not have a formal citation or DOI for this release.  These are planned for the
+future as this process becomes more regular.
 
 ## Providers
 
@@ -64,6 +80,35 @@ to interact with the above data.  Thse include commercial and open soruce approa
 As a simple primer, a Jupyter notebook, [OIH Graph Explorer](https://github.com/gleanerio/notebooks/blob/master/notebooks/datastore/loadToMemory.ipynb)
 is made available.  This notebook provides some simple examples of how to load 
 one or all of the above graphs into a local in memory triplstore to analyze. 
+
+## Loading
+
+You can download and leverage the above files with your graph workflow as you wish.
+Below are some examples in UNIX for loading the graphs into various triplestores.
+
+Blazegraph triplestore
+```bash
+for file in *.nq; do echo "\n Loading $file:";  curl -X POST -H 'Content-Type:text/x-nquads' --data-binary  @$file http://server.lan:9090/blazegraph/namespace/oihreleasegraph/sparql; done
+```
+
+Jena triplestore
+```bash
+for file in *.nq; do echo "\n Loading $file:";  curl -i -X PUT -H 'Content-Type:text/x-nquads' --data-binary  @$file http://coreos.lan:3030/testing/data; done
+```
+
+Example passing basic auth with the Jena triplestore  admin:jfpwd
+```bash
+for file in *.nq; do echo "\n Loading $file:";  curl -i -u admin:jfpwd -X PUT -H 'Content-Type:text/x-nquads' --data-binary  @$file http://coreos.lan:3030/testing/data; done
+```
+
+GraphDB  triplestore
+```bash
+for file in *.nq; do echo "\n Loading $file:";  curl -i -X PUT -H 'Content-Type:text/x-nquads' --data-binary  @$file http://coreos.lan:7200/repositories/testing/statements; done
+```
+
+
+GraphDB
+
 
 
 ## Services
