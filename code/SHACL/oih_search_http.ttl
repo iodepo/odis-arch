@@ -38,7 +38,7 @@ oihval:urlResourceProperty
     shacl:maxCount 1 ;
     shacl:minCount 1 ;
     shacl:nodeKind shacl:IRIOrLiteral ;
-    shacl:message "URL missing @en ;
+    shacl:message "URL missing "@en ;
     shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .
 
@@ -47,6 +47,6 @@ oihval:descriptionResourceProperty
     shacl:path schema:description;
     shacl:nodeKind shacl:Literal ;
     shacl:minCount 1 ;
-    shacl:message "Description missing @en ;
+    shacl:message "Description missing"@en ;
     shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .
