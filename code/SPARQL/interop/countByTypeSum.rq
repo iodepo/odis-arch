@@ -10,23 +10,27 @@ PREFIX schemaold: <http://schema.org/>
 
 SELECT ?type ?count ?total_count
 WHERE {
-  {
-    SELECT ?type (COUNT(?type) as ?count)
-    WHERE {
-      ?s rdf:type ?type
-     }
-    GROUP BY ?type ORDER BY DESC(?count)
-  }
-  {
-    SELECT (SUM(?inner_count) as ?total_count)
-    WHERE {
-      {
-        SELECT ?type (COUNT(?type) as ?inner_count)
+    {
+        SELECT ?type (COUNT(?type) as ?count)
         WHERE {
-          ?s rdf:type ?type
+            graph ?g {
+                ?s rdf:type ?type
+            }
         }
-        GROUP BY ?type
-      }
+        GROUP BY ?type ORDER BY DESC(?count)
     }
-  }
+    {
+        SELECT (SUM(?inner_count) as ?total_count)
+        WHERE {
+            {
+                SELECT ?type (COUNT(?type) as ?inner_count)
+                WHERE {
+                    graph ?g {
+                        ?s rdf:type ?type
+                    }
+                }
+                GROUP BY ?type
+            }
+        }
+    }
 }
