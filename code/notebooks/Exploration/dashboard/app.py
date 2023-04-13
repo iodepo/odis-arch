@@ -86,10 +86,10 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         r = requests.get(oihGraphEndpoint)
         r.raise_for_status()
     except HTTPError:
-        st.subheader(":x:" + " Graph Endpoint is down")
+        st.subheader(":x:" + " Graph SPARQL Endpoint is down")
         graphStatus = 0
     else:
-        st.subheader(":white_check_mark:" + " Graph Endpoint is up")        
+        st.subheader(":white_check_mark:" + " Graph SPARQL Endpoint is up")        
         graphStatus = 1
         
         #### Load the Support Functions
