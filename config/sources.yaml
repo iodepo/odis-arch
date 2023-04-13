@@ -374,6 +374,23 @@ sources:
   dateadded: 2022-03-30 
   active: true
 #
+# METS-RCN 
+#
+- name: metsrcn
+  propername: Research Coordination Network for Marine Ecological Time Series (METS-RCN)
+  catalogue: https://github.com/NicoGEOMAR/METS-RCN
+  domain: https://www2.whoi.edu/site/mets-rcn/
+  logo: https://www.us-ocb.org/wp-content/uploads/sites/43/2022/05/METS-RCN-slider.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/metsrcn
+  sourcetype: sitemap  
+  url: https://raw.githubusercontent.com/NicoGEOMAR/METS-RCN/main/sitemap.xml
+  changefreq: as needed
+  backend: GitHub  
+  headless: false
+  dateadded: 2023-04-13
+  active: true   
+#
 # OBIS: Ocean Biodiversity Information System
 #       
 - name: obis
