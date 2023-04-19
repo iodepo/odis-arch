@@ -2,7 +2,7 @@
 
 ## About 
 
-During the deisgn process of the Ocean InfoHub (OIH), many of the design approached leverage three
+During the design process of the Ocean InfoHub (OIH), many of the design approached leverage three
 personas that help define the various archtypes of people who engage with OIH.  It should not be assumed
 these scope all the potential persona or that a person or organization scope only one.  It is quite possible
 to many.   These are simply design approaches representing potenial models or characters.   They 
