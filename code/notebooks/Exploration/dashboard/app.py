@@ -104,7 +104,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
 
         os.chdir(dashboardPath)
 
-
+        @st.cache_data(ttl=3600)
         def get_sparql_dataframe(service, query):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
@@ -144,7 +144,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         """
 
         #@st.cache(allow_output_mutation=True)
-        dfCount = get_sparql_dataframe(oihGraphEndpoint, rq_count)
+        #dfCount = get_sparql_dataframe(oihGraphEndpoint, rq_count)
         #dfCount["Triples"] = dfCount["Triples"].astype(int) # convert count c to int
 
         #### List of orgs
@@ -166,7 +166,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
                     ORDER BY ASC(?orgname)
                   """
         #@st.cache(allow_output_mutation=True)
-        dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)
+        #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)
 
         #### PROV: count of catalogues
 
@@ -190,9 +190,9 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
                 """
 
         #@st.cache(allow_output_mutation=True)     
-        dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
-        dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
-        dfProv.set_index('orgname', inplace=True)
+        #dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
+        #dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
+        #dfProv.set_index('orgname', inplace=True)
 
         #dfProv.info()
 
@@ -247,9 +247,9 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
                 """
 
         #@st.cache(allow_output_mutation=True)
-        dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
-        dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
-        dfKeywords.set_index('keywords', inplace=True)
+        #dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
+        #dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
+        #dfKeywords.set_index('keywords', inplace=True)
         #dfKeywords.head(10)
 
         #### Predicates
@@ -262,12 +262,12 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         GROUP BY ?p
         """
         #@st.cache(allow_output_mutation=True)
-        dfPredicates = get_sparql_dataframe(oihGraphEndpoint, rq_pcount)
-        dfPredicates['pCount'] = dfPredicates["pCount"].astype(int) # convert count to int
-        dfPredicates_sorted = dfPredicates.sort_values('pCount', ascending=False)
-        dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('p', 'Predicate')
-        dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('pCount', 'Count')
-        dfPredicates_sorted.set_index('Predicate', inplace=True)
+        #dfPredicates = get_sparql_dataframe(oihGraphEndpoint, rq_pcount)
+        #dfPredicates['pCount'] = dfPredicates["pCount"].astype(int) # convert count to int
+        #dfPredicates_sorted = dfPredicates.sort_values('pCount', ascending=False)
+        #dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('p', 'Predicate')
+        #dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('pCount', 'Count')
+        #dfPredicates_sorted.set_index('Predicate', inplace=True)
         #dfPredicates_sorted.head(10)
 
         #### Spatial Predicates
@@ -285,32 +285,9 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         }
         """
 
-        dfWKTCount = get_sparql_dataframe(oihGraphEndpoint, rq_wktcount)
-        dfWKTCount['sCount'] = dfWKTCount["sCount"].astype(int) # convert count to int
+        #dfWKTCount = get_sparql_dataframe(oihGraphEndpoint, rq_wktcount)
+        #dfWKTCount['sCount'] = dfWKTCount["sCount"].astype(int) # convert count to int
         # dfWKTCount.set_index('p', inplace=True)
-
-        ### Join latest sitemap checker output with sources.yaml
-
-        with open(odisArchGitSchemaDevPath + '/config/sources.yaml', 'r') as f:
-            dfSources = pd.json_normalize(yaml.safe_load_all(f), 'sources')
-
-        #os.system("git ls-tree --name-only HEAD > filelist.txt")
-        list_of_files = glob.glob(odisArchGitMasterPath + '/workflows/output/*.csv')
-        latest_file_path = max(list_of_files, key=os.path.getmtime)
-        latest_file_name = os.path.basename(latest_file_path)
-        latest_file_date = latest_file_name.split('T')[0] 
-
-        #dateToday = datetime.today().strftime('%Y-%m-%d')
-        sitemapCheckerRawUrl = "https://raw.githubusercontent.com/iodepo/odis-arch/master/workflows/output/" + latest_file_name
-        sitemapCheckerBlobUrl = "https://github.com/iodepo/odis-arch/blob/master/workflows/output/" + latest_file_name
-        urllib.request.urlretrieve(sitemapCheckerRawUrl, odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
-        dfSitemap = pd.read_csv(odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
-        #dfSitemap
-        # names = df['propername'].tolist()
-        # dates = df['dates'].tolist()
-        #dfJoinedRaw = dfSources.join(dfSitemap, lsuffix='name', rsuffix='name')
-        dfJoinedRaw = dfSources.set_index('name').join(dfSitemap.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
-        dfJoined = dfSources.set_index('name').join(dfSitemap.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
 
 if graphStatus == 1:
     #st.header("OIH Graph Summary")
@@ -328,44 +305,78 @@ if graphStatus == 1:
         """,
         unsafe_allow_html=True,
         )
-
+        
         sumCol1, sumCol2, sumCol3 = st.columns(3, gap="medium")
 
         with sumCol1:
             st.write("Size of OIH graph")
-            st.subheader(dfCount['Triples'].values[0] + " triples")
+            with st.spinner("Executing graph query..."):
+                dfCount = get_sparql_dataframe(oihGraphEndpoint, rq_count)
+                st.subheader(dfCount['Triples'].values[0] + " triples")                
+            #st.success("Done")            
 
         with sumCol2:
             st.write("Number of Nodes")
-            st.subheader(len(dfOrgs))
+            with st.spinner("Executing graph query..."): 
+                dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
+                st.subheader(len(dfOrgs))                
+            #st.success("Done")            
 
         with sumCol3:
             st.write("Number of Catalogues")
-            st.subheader(dfProv['count'].sum())
+            with st.spinner("Executing graph query..."):             
+                dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
+                dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
+                dfProv.set_index('orgname', inplace=True)            
+                st.subheader(dfProv['count'].sum())         
         
         sumCol4, sumCol5, sumCol6 = st.columns(3, gap="medium")
 
         with sumCol4:
-            st.write("Sitemap status (source [csv](" + sitemapCheckerBlobUrl + "))")
-            #st.write(emojize(":smiling_face_with_sunglasses:"))
-            #st.write(":white_check_mark:")
-            dfJoined.columns = dfJoined.columns.str.replace('code', 'Sitemap Status')
-            dfJoined.columns = dfJoined.columns.str.replace('propername', 'Node')
-            #dfJoined.set_index('Status', inplace=True)
-            #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = 'Valid'
-            #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = 'Failed'        
-            #unicode emoji list: https://unicode.org/emoji/charts/emoji-list.html
-            #                    https://www.htmlsymbols.xyz/unicode/U+274C
-            #        streamlit:  https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
-            dfJoined.loc[dfJoined['Sitemap Status'] == 0, 'Sitemap Status'] = "\u2705"
-            dfJoined.loc[dfJoined['Sitemap Status'] == 1, 'Sitemap Status'] = "\u274C"
-            #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = "\U0001F601"
-            #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = "\U0001F612"
-            #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = "\N{Heavy Check Mark}"
-            #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = "\N{Cross Mark}"
-            dfJoined.to_html(render_links=True, escape=False)        
-            st.dataframe(dfJoined[['Sitemap Status', 'Node']])
-            #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")
+            with st.spinner("Executing graph query..."): 
+                ### Join latest sitemap checker output with sources.yaml
+
+                with open(odisArchGitSchemaDevPath + '/config/sources.yaml', 'r') as f:
+                    dfSources = pd.json_normalize(yaml.safe_load_all(f), 'sources')
+
+                    #os.system("git ls-tree --name-only HEAD > filelist.txt")
+                    list_of_files = glob.glob(odisArchGitMasterPath + '/workflows/output/*.csv')
+                    latest_file_path = max(list_of_files, key=os.path.getmtime)
+                    latest_file_name = os.path.basename(latest_file_path)
+                    latest_file_date = latest_file_name.split('T')[0] 
+
+                    #dateToday = datetime.today().strftime('%Y-%m-%d')
+                    sitemapCheckerRawUrl = "https://raw.githubusercontent.com/iodepo/odis-arch/master/workflows/output/" + latest_file_name
+                    sitemapCheckerBlobUrl = "https://github.com/iodepo/odis-arch/blob/master/workflows/output/" + latest_file_name
+                    urllib.request.urlretrieve(sitemapCheckerRawUrl, odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
+                    dfSitemap = pd.read_csv(odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
+                    #dfSitemap
+                    # names = df['propername'].tolist()
+                    # dates = df['dates'].tolist()
+                    #dfJoinedRaw = dfSources.join(dfSitemap, lsuffix='name', rsuffix='name')
+                    dfJoinedRaw = dfSources.set_index('name').join(dfSitemap.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
+                    dfJoined = dfSources.set_index('name').join(dfSitemap.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
+        
+                    #st.write(emojize(":smiling_face_with_sunglasses:"))
+                    #st.write(":white_check_mark:")
+                    dfJoined.columns = dfJoined.columns.str.replace('code', 'Sitemap Status')
+                    dfJoined.columns = dfJoined.columns.str.replace('propername', 'Node')
+                    #dfJoined.set_index('Status', inplace=True)
+                    #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = 'Valid'
+                    #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = 'Failed'        
+                    #unicode emoji list: https://unicode.org/emoji/charts/emoji-list.html
+                    #                    https://www.htmlsymbols.xyz/unicode/U+274C
+                    #        streamlit:  https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
+                    dfJoined.loc[dfJoined['Sitemap Status'] == 0, 'Sitemap Status'] = "\u2705"
+                    dfJoined.loc[dfJoined['Sitemap Status'] == 1, 'Sitemap Status'] = "\u274C"
+                    #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = "\U0001F601"
+                    #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = "\U0001F612"
+                    #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = "\N{Heavy Check Mark}"
+                    #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = "\N{Cross Mark}"
+                    dfJoined.to_html(render_links=True, escape=False)        
+                    st.dataframe(dfJoined[['Sitemap Status', 'Node']])
+                    st.write("Sitemap status (source [csv](" + sitemapCheckerBlobUrl + "))")                    
+                    #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")
 
         with sumCol5:
             st.write("Types indexed")
@@ -391,23 +402,39 @@ if graphStatus == 1:
             dfTimeline.columns = dfTimeline.columns.str.replace('dateadded', 'Date Added')
             dfTimeline.columns = dfTimeline.columns.str.replace('propername', 'Node')        
             dfTimeline.set_index('Date Added', inplace=True)     
-            st.dataframe(data=dfTimeline, width=None, height=None)          
+            st.dataframe(data=dfTimeline, width=None, height=None)                 
 
+        #sumCol7, sumCol8, sumCol9 = st.columns(3, gap="medium")
         sumCol7, sumCol8, sumCol9 = st.columns([1, 2, 1], gap="medium")
+        #sumCol7, sumCol8, sumCol9 = st.columns([1, 3, 1], gap="medium")
 
         with sumCol7:
             st.write("Keywords")
-            dfKeywords.loc['Total']= dfKeywords.sum()
-            st.write(dfKeywords.head(50))
+            with st.spinner("Executing graph query..."):            
+                dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
+                dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
+                dfKeywords.set_index('keywords', inplace=True)            
+                dfKeywords.loc['Total']= dfKeywords.sum()
+                st.write(dfKeywords.head(50))
             
         with sumCol8:
             st.write("Predicates")
-            dfPredicates_sorted.loc['Total']= dfPredicates_sorted.sum()
-            st.write(dfPredicates_sorted)      
+            with st.spinner("Executing graph query..."):                        
+                dfPredicates = get_sparql_dataframe(oihGraphEndpoint, rq_pcount)
+                dfPredicates['pCount'] = dfPredicates["pCount"].astype(int) # convert count to int
+                dfPredicates_sorted = dfPredicates.sort_values('pCount', ascending=False)
+                dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('p', 'Predicate')
+                dfPredicates_sorted.columns = dfPredicates_sorted.columns.str.replace('pCount', 'Count')
+                dfPredicates_sorted.set_index('Predicate', inplace=True)            
+                dfPredicates_sorted.loc['Total']= dfPredicates_sorted.sum()
+                st.write(dfPredicates_sorted)      
             
         with sumCol9:
             st.write("Spatial Predicates")
-            st.subheader(dfWKTCount['sCount'].values[0])
+            with st.spinner("Executing graph query..."):                                    
+                dfWKTCount = get_sparql_dataframe(oihGraphEndpoint, rq_wktcount)
+                dfWKTCount['sCount'] = dfWKTCount["sCount"].astype(int) # convert count to int            
+                st.subheader(dfWKTCount['sCount'].values[0])
                     
         st.write("Raw Sources Report (" + latest_file_date + ")")
         #dfJoinedRaw.to_html()
@@ -549,12 +576,13 @@ if graphStatus == 1:
                        """
             
                 #@st.cache(allow_output_mutation=True)
-                dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
-                dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
-                dfTypesOrg.set_index('type', inplace=True)
-                dfTypesOrg.loc['Total']= dfTypesOrg.sum()
-                st.write(dfTypesOrg.head(50))
-                #st.dataframe(data=dfTypesOrg, width=400, height=None)
+                with st.spinner("Executing graph query..."):                
+                    dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
+                    dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
+                    dfTypesOrg.set_index('type', inplace=True)
+                    dfTypesOrg.loc['Total']= dfTypesOrg.sum()
+                    st.write(dfTypesOrg.head(50))
+                    #st.dataframe(data=dfTypesOrg, width=400, height=None)
 
             with nodeCol10:
                 st.write("Keywords")
@@ -580,11 +608,12 @@ if graphStatus == 1:
                     ORDER BY DESC(?count)
                     """        
                 #@st.cache(allow_output_mutation=True)
-                dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
-                dfKeywordsOrg.set_index('keywords', inplace=True)
-                #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                st.write(dfKeywordsOrg.head(50))  
+                with st.spinner("Executing graph query..."):                
+                    dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                    dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
+                    dfKeywordsOrg.set_index('keywords', inplace=True)
+                    #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                    st.write(dfKeywordsOrg.head(50))  
 
             with nodeCol11:
                 st.empty()                    
