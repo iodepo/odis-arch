@@ -29,7 +29,8 @@ oihGraphEndpoint = "http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparq
 
 odisArchGitMasterPath = "/home/apps/odis-arch-git-master-DO-NOT-TOUCH"
 odisArchGitSchemaDevPath = "/home/apps/odis-arch-git-schema-dev-DO-NOT-TOUCH"
-dashboardPath = "/home/apps/odis-dashboard/dashboard"
+dashboardPath = odisArchGitSchemaDevPath + "/code/notebooks/Exploration/dashboard"
+#dashboardPath = "/home/apps/odis-dashboard/dashboard"
     
 ######
 # page setup
