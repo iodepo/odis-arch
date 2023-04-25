@@ -1,8 +1,8 @@
-# ODIS Dasboard dockerfile
+# ODIS Dashboard dockerfile
 
 FROM python:3.9-slim
 
-WORKDIR /home/apps/dashboard
+WORKDIR /home/apps/odis-dashboard
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -13,10 +13,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python -m pip install --upgrade pip
-RUN git clone --single-branch --branch schema-dev https://github.com/iodepo/odis-arch.git /home/apps/dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH
-RUN git clone --single-branch --branch master https://github.com/iodepo/odis-arch.git /home/apps/dashboard/odis-arch-git-master-DO-NOT-TOUCH
+RUN git clone --single-branch --branch schema-dev https://github.com/iodepo/odis-arch.git /home/apps/odis-dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH
+RUN git clone --single-branch --branch master https://github.com/iodepo/odis-arch.git /home/apps/odis-dashboard/odis-arch-git-master-DO-NOT-TOUCH
 
-#copy dashboard.py, requirements.txt into /home/apps/dashboard
+#copy dashboard.py, requirements.txt into /home/apps/odis-dashboard
 COPY . .
 
 #install streamlit etc

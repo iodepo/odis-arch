@@ -29,9 +29,9 @@ oihGraphEndpoint = "http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparq
 #oihinvemarCollab = "https://ts.collaborium.io/blazegraph/namespace/invemar/sparql"
 #oihadCollab = "https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql"
 
-odisArchGitMasterPath = "/home/apps/dashboard/odis-arch-git-master-DO-NOT-TOUCH"
-odisArchGitSchemaDevPath = "/home/apps/dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH"
-dashboardPath = "/home/apps/dashboard"
+odisArchGitMasterPath = "/home/apps/odis-dashboard/odis-arch-git-master-DO-NOT-TOUCH"
+odisArchGitSchemaDevPath = "/home/apps/odis-dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH"
+dashboardPath = "/home/apps/odis-dashboard"
     
 ######
 # page setup
