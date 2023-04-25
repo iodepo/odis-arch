@@ -16,6 +16,19 @@ RUN python -m pip install --upgrade pip
 RUN git clone --single-branch --branch schema-dev https://github.com/iodepo/odis-arch.git /home/apps/odis-dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH
 RUN git clone --single-branch --branch master https://github.com/iodepo/odis-arch.git /home/apps/odis-dashboard/odis-arch-git-master-DO-NOT-TOUCH
 
+# streamlit-specific commands
+RUN mkdir -p /home/apps/odis-dashboard/.streamlit
+RUN bash -c 'echo -e "\
+[general]\n\
+email = \"\"\n\
+" > /home/apps/odis-dashboard/.streamlit/credentials.toml'
+RUN bash -c 'echo -e "\
+[server]\n\
+enableCORS = false\n\
+[browser]\n\
+gatherUsageStats = false\n\
+" > /home/apps/odis-dashboard/.streamlit/config.toml'
+
 #copy dashboard.py, requirements.txt into /home/apps/odis-dashboard
 COPY . .
 
