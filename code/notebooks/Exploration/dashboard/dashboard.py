@@ -5,6 +5,7 @@
 # ### Imports
 
 import streamlit as st
+from streamlit.components.v1 import html
 from SPARQLWrapper import SPARQLWrapper, JSON
 import pandas as pd
 import numpy as np
@@ -54,6 +55,10 @@ st.set_page_config(
 # dashboard title
 st.title("OIH Dashboard")
 st.markdown("This dashboard will help monitor the OIH graph, as well as the nodes connected to it.")
+
+# OpenHub badge source
+openhub_badge_html = f"<script type='text/javascript' src='https://www.openhub.net/p/odis-arch/widgets/project_thin_badge?format=js'></script>"
+html(openhub_badge_html)
 
 #sidebar glossary
 with st.sidebar:
