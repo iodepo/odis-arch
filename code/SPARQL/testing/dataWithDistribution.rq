@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+
+
+SELECT ?s ?dist ?url
+WHERE {
+    graph ?g {
+        ?s rdf:type schema:Dataset .
+        ?s schema:distribution ?dist .
+        ?dist a schema:DataDownload .
+        ?dis schema:contentUrl ?url .
+    }
+}

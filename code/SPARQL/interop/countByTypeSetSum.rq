@@ -25,7 +25,7 @@ WHERE {
         SELECT ?type (COUNT(?type) as ?inner_count)
         WHERE {
           ?s rdf:type ?type
-      FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
+           FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
 
         }
         GROUP BY ?type

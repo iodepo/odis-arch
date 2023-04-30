@@ -2,6 +2,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix oihval: <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#> .
+@prefix ex: <http://example.com/ns#> .
+
 
 oihval:IDShape
     a shacl:NodeShape ;
@@ -11,16 +13,59 @@ oihval:IDShape
     shacl:nodeKind shacl:IRI ;
 .
 
-oihval:DatasetCommonShape
+#oihval:DatasetCommonShape
+#    a shacl:NodeShape ;
+#    shacl:targetClass  schema:CreativeWork, schema:ResearchProject, schema:Person, schema:Course, schema:Organization, schema:Dataset, schema:Map, schema:Vehicle ;
+#    shacl:message "OIH Resource to Query validation" ;
+#    shacl:description "OIH shape guidance" ;
+#    shacl:property
+#        oihval:nameResourceProperty,
+#        oihval:urlResourceProperty,
+#        oihval:descriptionResourceProperty;
+#.
+
+#oihval:DatasetCommonShape
+#    a shacl:NodeShape ;
+#	shacl:targetSubjectsOf rdf:type ;
+#    shacl:pattern "^(?!.*genid).*$" ;
+#    shacl:message "OIH Resource to Query validation" ;
+#    shacl:description "OIH shape guidance" ;
+#    shacl:property
+#        oihval:nameResourceProperty,
+#        oihval:urlResourceProperty,
+#        oihval:descriptionResourceProperty;
+#.
+
+
+
+
+
+oihval:IDShapeTEST
     a shacl:NodeShape ;
     shacl:targetClass  schema:CreativeWork, schema:ResearchProject, schema:Person, schema:Course, schema:Organization, schema:Dataset, schema:Map, schema:Vehicle ;
-    shacl:message "OIH Resource to Query validation" ;
-    shacl:description "OIH shape guidance" ;
+#    shacl:message "Test skip genid"@en ;
+#    shacl:description "URL OIH shape guidance" ;
+#    shacl:targetClass schema:Dataset ;
+    shacl:sparql [
+        shacl:select """
+        PREFIX schema: <http://schema.org/>
+            SELECT  ?this ?p ?desc
+            WHERE {
+                BIND(schema:description AS ?p) .
+                ?this ?p ?desc .
+                FILTER  NOT EXISTS {
+                  BIND(STR(?this) AS ?thisstring)
+                  FILTER(regex(?thisstring,"genid","i"))
+                }
+            }
+            """ ;
+    ] ;
     shacl:property
         oihval:nameResourceProperty,
         oihval:urlResourceProperty,
-        oihval:descriptionResourceProperty ;
-    .
+        oihval:descriptionResourceProperty;
+.
+
 
 oihval:nameResourceProperty
     a shacl:PropertyShape ;
@@ -38,8 +83,8 @@ oihval:urlResourceProperty
     shacl:maxCount 1 ;
     shacl:minCount 1 ;
     shacl:nodeKind shacl:IRIOrLiteral ;
-    shacl:message "URL missing "@en ;
-    shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
+    shacl:message "URL missing"@en ;
+    shacl:description "https://foo.org" ;
     .
 
 oihval:descriptionResourceProperty
@@ -47,6 +92,6 @@ oihval:descriptionResourceProperty
     shacl:path schema:description;
     shacl:nodeKind shacl:Literal ;
     shacl:minCount 1 ;
-    shacl:message "Description missing"@en ;
+    shacl:message "Description regex test missing"@en ;
     shacl:description "https://book.oceaninfohub.org/foundation/foundation.html#other-properties" ;
     .

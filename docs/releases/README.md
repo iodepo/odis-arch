@@ -84,7 +84,8 @@ one or all of the above graphs into a local in memory triplstore to analyze.
 ## Loading
 
 You can download and leverage the above files with your graph workflow as you wish.
-Below are some examples in UNIX for loading the graphs into various triplestores.
+Below are some examples in UNIX for loading the graphs into various triplestores.  However, 
+consult the documentation for your package for specific help. 
 
 Blazegraph triplestore
 ```bash
@@ -107,9 +108,10 @@ for file in *.nq; do echo "\n Loading $file:";  curl -i -X PUT -H 'Content-Type:
 ```
 
 
-GraphDB
-
-
+GraphDB  triplestore
+```bash
+for file in *.nq; do echo "Loading $file:";  curl -i -X POST -H 'Content-Type:text/x-nquads' --data-binary @$file http://coreos.lan:7878/store; done```
+```
 
 ## Services
 

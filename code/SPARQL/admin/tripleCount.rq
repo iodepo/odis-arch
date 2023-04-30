@@ -6,5 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT   ( COUNT(?s) as ?count)
 WHERE
 {
-   ?s ?p ?o
+    graph ?g {
+       ?s ?p ?o
+    }
 }

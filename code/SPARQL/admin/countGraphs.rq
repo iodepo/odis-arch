@@ -3,7 +3,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-SELECT   ( COUNT(?g) as ?count)
+SELECT   ( COUNT( DISTINCT ?g) as ?count)
 WHERE
 {  graph ?g {
    ?s ?p ?o
