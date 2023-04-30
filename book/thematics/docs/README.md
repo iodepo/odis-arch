@@ -113,8 +113,9 @@ jbutils.show_graph(framed)
 
 ### Publisher and provider
 
-Our JSON-LD documents are graphs that can use framing to subset.  In this 
-case we can look closer at the author property which points to a type Person. 
+Our JSON-LD documents are graphs that can use framing to subset.  In this case
+we can look closer at the `provider` and `publisher` properties, which are both 
+of type `Organization`. 
 
 
 ```{code-cell}
