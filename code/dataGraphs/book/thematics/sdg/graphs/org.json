@@ -1,0 +1,54 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://example.org/id/org/x",
+    "@type": "Organization",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris, France",
+        "postalCode": "F-75002",
+        "streetAddress": "38 avenue de l'Opera"
+    },
+    "email": "secretariat(at)example.org",
+    "name": "Organization X",
+    "description": "Description of org ...",
+    "telephone": "( 33 1) 42 68 53 00",
+    "member": [
+        {
+            "@type": "Organization",
+            "name": "Organization A",
+            "description": "Org A is a potential parent organization of Org X"
+        }
+    ],
+    "identifier": {
+        "@id": "https://grid.ac/institutes/grid.475727.4",
+        "@type": "PropertyValue",
+        "description": "UN Department of Economic and Social Affairs Sustainable Development",
+        "propertyID": "https://registry.identifiers.org/registry/grid",
+        "url": "https://grid.ac/institutes/grid.475727.4"
+    },
+    "subjectOf": {
+        "@type": "CreativeWork",
+        "@id": "http://purl.unep.org/sdg/SDGIO_00020173",
+        "url": "http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173",
+        "name": "UNSD SDG indicator code:C140c01",
+        "description": "Number of countries making progress ... the oceans and their resources"
+    },
+    "publishingPrinciples": [
+        {
+            "@type": "CreativeWork",
+            "@id": "https://sdgs.un.org/goals/goal14",
+            "url": "https://sdgs.un.org/goals/goal14",
+            "name": "Sustainable Development Goal 14",
+            "description": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://dx.doi.org/10.1038/sdata.2016.18",
+            "url": "https://www.nature.com/articles/sdata201618",
+            "name": "FAIR data principles",
+            "description": "FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship."
+        }
+    ]
+}

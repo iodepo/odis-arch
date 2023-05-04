@@ -6,6 +6,7 @@ web: Web Assets
 web.book: The Book \n (Publication)
 web.dashboard: OIH status dashboard
 web.search: Search \n (Web User Interface)
+web.api: Search \n (API)
 web.sp: SPARQL endpoint
 web.rg:  Graph Releases \n (Data Publication)
 
@@ -41,6 +42,7 @@ style: {
 }
 
 oih -> web.sp
+oih -> web.api
 oih -> web.book
 oih -> web.rg
 oih -> sa.dg
@@ -83,5 +85,6 @@ style: {
 
 sa <- ce: Community contributions \n to development
 aa <- ce: Community contributions \n to development
+web.api <- ce: Community contributions \n to development
 # sa.reports <- ce : Community feedback loop \n on validation
 web.book <- ce

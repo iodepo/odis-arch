@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "CreativeWork",
+  "@id": "https://example.org/id/XYZ",
+  "name": "Name or title of the document",
+  "description": "Description of the resource to aid in searching",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://www.sample-data-repository.org/dataset/472032.tsv",
+    "encodingFormat": "text/tab-separated-values"
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "@id": "http://purl.unep.org/sdg/SDGIO_00020173",
+    "url": "http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173",
+    "name": "UNSD SDG indicator code:C140c01",
+    "description": "Number of countries making progress ... the oceans and their resources"
+  },
+  "maintainer" : {
+     "@type" : "Organization",
+     "@id": "https://ror.org/050bms902",
+     "description": "UN Department of Economic and Social Affairs Sustainable Development"
+  }
+}

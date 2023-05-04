@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://example.org/id/X",
+    "@type": "Vehicle",
+    "name": "JOIDES Resolution",
+    "identifier": {
+        "@id": "https://example.org/id/vessel/X",
+        "@type": "PropertyValue",
+        "propertyID": "https://en.wikipedia.org/wiki/IMO_number",
+        "url": "https://example.org/id/vessel/X",
+        "description": "Vessel ID "
+    },
+    "countryOfLastProcessing": "Angola",
+    "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Fiji"
+    },
+    "additionalProperty": {
+        "@id": "ID_value_string",
+        "@type": "PropertyValue",
+        "propertyID": "https://en.wikipedia.org/wiki/IMO_number",
+        "url": "https://foo.org/linkToPropertyIDPage",
+        "description": "Any additional properties for the vessel"
+    },
+    "subjectOf": {
+        "@type": "DataDownload",
+        "name": "external-metadata.xml",
+        "description": "Metadata describing the vessel",
+        "encodingFormat": [
+            "application/xml",
+            "https://foo.org/ship01"
+        ],
+        "dateModified": "2019-06-12T14:44:15Z"
+    }
+}

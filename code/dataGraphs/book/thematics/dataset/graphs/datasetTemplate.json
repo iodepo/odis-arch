@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "A concise but descriptive name of the dataset",
+    "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
+    "url": "https://urlToTheDatasetOrLandingPage.org/",
+    "sameAs": [
+        "http://alternativeUrlToTheDatasetOrLandingPage.org"
+    ],
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": [
+        "Citation to other work relevant to this dataset",
+        "Citation to other work relevant to this dataset",
+        "Citation to other work relevant to this dataset"
+    ],
+    "version": "2021-04-24T06:34:56.000Z",
+    "keywords": [
+        "Keyword 1",
+        "Keyword 2",
+        "Keyword 3"
+    ],
+    "measurementTechnique": "The URL to or text about the methods, technique or technology used to generate this Dataset",
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Name of a variable in the dataset",
+            "description": "Extended description of this variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Name of a variable in the dataset",
+            "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+            "description": "Extended description of this variable?"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "SamplingDeviceApertureSurfaceArea",
+            "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+            "description": "Extended description of this variable"
+        }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://registryOfCatalogs.org/permanentUrlIdentifiyingCatalog",
+        "@type": "DataCatalog",
+        "url": "https://urlOfDataCatalog.org"
+    },
+    "temporalCoverage": "2007/2007",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
+        "encodingFormat": "text/csv"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@type": "Organization",
+            "legalName": "Legal Name of Organisation which generated the dataset",
+            "name": "Other Name of Organisation which generated the dataset",
+            "url": "https://organisationWebsite.org/"
+        }
+    ],
+    "subjectOf": {
+        "@type": "Event",
+        "description": "Describe the event which is the subject of this dataset. For example, a cruise ID.",
+        "name": "Concise and descriptive name of the Event",
+        "potentialAction": {
+            "@type": "Action",
+            "name": "Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast",
+            "agent": [
+                "Name or permanent ID of person or thing that performed this action",
+                "Name or permanent ID of person or thing that performed this action",
+                "Name or permanent ID of person or thing that performed this action"
+            ],
+            "startTime": "2007-03-11T14:45UTC",
+            "endTime": "2007-03-11T15:42UTC",
+            "instrument": {
+                "@type": "Thing",
+                "name": "The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor",
+                "url": "http://ontology.org/uriToSemanticDescriptorOfThisInstrument",
+                "description": "Extended description of the sampling instrument"
+            }
+        }
+    }
+}
