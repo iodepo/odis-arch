@@ -374,6 +374,22 @@ sources:
   dateadded: 2022-03-30 
   active: true
 #
+# MEDIN
+#
+- name: medin
+  propername: Marine Environmental Data and Information Network (MEDIN)
+  catalogue: https://portal.medin.org.uk/portal/start.php
+  domain: https://medin.org.uk/
+  logo: https://medin.org.uk/sites/medin/files/images/medin-portal-logo.png
+  pid: https://catalogue.odis.org/view/40
+  sourcetype: sitemap  
+  url: https://portal.medin.org.uk/portal/sitemap.php
+  changefreq: daily
+  backend: MARIS
+  headless: yes
+  dateadded: 2023-05-11
+  active: true 
+#
 # METS-RCN 
 #
 - name: metsrcn
@@ -498,10 +514,9 @@ sources:
   catalogue: https://researchdata.edu.au/
   domain: https://ardc.edu.au/
   logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
-  #missing ODISCat entry
-  pid: https://oceaninfohub.org/.well-known/org/researchdataaustralia
+  pid: https://catalogue.odis.org/view/3267
   sourcetype: sitemap
-  url: https://researchdata.edu.au/home/sitemap/?ds=64
+  url: https://researchdata.edu.au/home/sitemap/?ds=384
   changefreq: daily  
   backend: GeoNetwork  
   headless: false
