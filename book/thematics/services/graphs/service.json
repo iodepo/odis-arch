@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Service",
+  "@id": "URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the Service that this JSON-LD document describes. To link to the Service itself, please use 'url' and/or 'identifier')",
+  "aggregateRating": {"@type": "https://schema.org/aggregateRating"},
+  "areaServed": [
+    "Text: The geographic area where the service is provided.",
+    {"@type": "https://schema.org/Place"},
+    {"@type": "https://schema.org/GeoShape"},
+    {"@type": "https://schema.org/AdministrativeArea"}
+  ],
+  "audience": {"@type": "https://schema.org/Audience"},
+  "availableChannel": {"@type": "https://schema.org/ServiceChannel"},
+  "award": "Text: An award won by or for this service.",
+  "brand": [
+    "Text: The brand(s) associated with the service, or the brand(s) maintained by an organization or business person.",
+    {"@type": "https://schema.org/Brand"},
+    {"@type": "https://schema.org/Organization"}
+  ],
+  "broker": [
+  {"@type": "https://schema.org/Person"},
+  {"@type": "https://schema.org/Organization"}
+  ],
+  "category": [
+    "Text: A category for the service.",
+    "URL",
+    {"@type": "https://schema.org/CategoryCode"},
+    {"@type": "https://schema.org/PhysicalActivityCategory"},
+    {"@type": "https://schema.org/Thing"}
+  ],
+  "hasOfferCatalog": "https://schema.org/OfferCatalog",
+  "hoursAvailable": "https://schema.org/OpeningHoursSpecification",
+  "isRelatedTo": [
+    {"@type": "https://schema.org/Product"},
+    {"@type": "https://schema.org/Service"}
+  ] ,
+  "isSimilarTo": [
+    {"@type": "https://schema.org/Product"},
+    {"@type": "https://schema.org/Service"}
+  ] ,
+  "logo": [
+    {"@type": "https://schema.org/ImageObject"},
+    "URL"
+  ] ,
+  "offers": [
+    {"@type": "https://schema.org/Demand"},
+    {"@type": "https://schema.org/Offer"}
+  ] ,
+  "provider": [
+    "Text: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider.",
+    {"@type": "https://schema.org/Person"},
+    {"@type": "https://schema.org/Organization"}
+  ],
+  "providerMobility": "Text: Indicates the mobility of a provided service (e.g. 'static', 'dynamic').",
+  "review": {"@type": "https://schema.org/Review"},
+ 
+  "serviceOutput":  {"@type": "https://schema.org/Thing"},
+  "serviceType":  [
+    "Text: Human-readable terms of service documentation",
+    {"@type": "https://schema.org/GovernmentBenefitsType"}
+  ],
+  "slogan": "Text: A slogan or motto associated with the item.",
+  "termsOfService": [
+    "Text: Human-readable terms of service documentation",
+    {"@type": "https://schema.org/Url"}
+  ],
+
+  
+  "additionalType": [
+    "Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.",
+    "URL"
+  ],
+  "alternateName": "Text: An alternative name for this Thing.",
+  "description": "Text: Free text which describes this Thing.",
+  "disambiguatingDescription": "Text: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation",
+  "identifier": [
+      {"@type": "https://schema.org/PropertyValue"},
+      "Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+      "URL"
+  ],
+  "image": [
+      "URL",
+      {"@type": "https://schema.org/ImageObject"}
+  ],
+  "mainEntityOfPage": [
+    "URL",
+    {"@type": "https://schema.org/CreativeWork"}
+  ],
+  "name": "Text: The name of the item.",
+  "potentialAction": {"@type": "https://schema.org/Action"},
+  "sameAs": "URL",
+  "subjectOf": "URL",
+  "url": "URL - the URL to the item described by this JSON-LD document"
+}
