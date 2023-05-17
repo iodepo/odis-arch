@@ -1,0 +1,27 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemaold: <http://schema.org/>
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+
+SELECT DISTINCT ?s  ?name
+WHERE
+        {
+           ?lit bds:search "A General formatting system for geo-referenced data" .
+           ?lit bds:matchAllTerms "false" .
+
+           graph ?g {
+            ?s ?p ?lit .
+            FILTER isIRI(?s)
+             OPTIONAL { ?s schema:name ?name .   }
+           }
+        }
+GROUP BY    ?name ?s
+LIMIT 300
+OFFSET 0

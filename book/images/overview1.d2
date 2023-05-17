@@ -1,0 +1,81 @@
+direction: right
+
+OIH: Ocean InfoHub \n Profiles  {
+  style: {
+    font-size: 28
+  }
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/oih/oih.png
+}
+
+
+
+group: Facilities author\n web hosted metadata
+group.f1: "" {
+  shape: image
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/facility.png
+}
+group.f2: "" {
+  shape: image
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/facility.png
+}
+group.f3: "" {
+  shape: image
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/facility.png
+}
+
+OIH -> group.f1: Made available to {
+  style: {
+    font-size: 28
+  }
+}
+OIH -> group.f2: Made available to {
+  style: {
+    font-size: 28
+  }
+}
+OIH -> group.f3: Made available to {
+  style: {
+    font-size: 28
+  }
+}
+
+IV: "Index & Validate"
+IV.I: Indexing {
+  shape: image
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/indexing.png
+}
+IV.V: Validation {
+  shape: image
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/code/notebooks/diagrams/content/validation.png
+}
+
+group.f1 -> IV: publish to web for indexing {
+  style: {
+    font-size: 28
+  }
+}
+group.f2 -> IV: publish to web for indexing {
+  style: {
+    font-size: 28
+  }
+}
+group.f3 -> IV: publish to web for indexing {
+  style: {
+    font-size: 28
+  }
+}
+
+IV.I -> IV.V
+
+Storage: Data Stores
+Storage.OS: Object Server {
+  shape: image
+  icon:  https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/diagrams/content/awss3_white.png
+}
+Storage.TS: Triplstore {
+  shape: image
+  icon:  https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-df/code/notebooks/diagrams/content/graphdatabase.png
+}
+
+IV -> Storage
+

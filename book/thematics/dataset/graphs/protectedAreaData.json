@@ -42,9 +42,8 @@
         }
     ],
     "includedInDataCatalog": {
-        "@id": "https://protectedseas.net/odisCatalog",
         "@type": "DataCatalog",
-        "url": "https://protectedseas.net/"
+        "url": "https://protectedseas.net/odisCatalog"
     },
     "temporalCoverage": "2007/2007",
     "spatialCoverage": {
@@ -93,7 +92,7 @@
                 "propertyID": "Area Management Authority",
                 "value": "National Oceanographic and Atmospheric Administration"
             },
-            { 
+            {
                 "@type": "PropertyValue",
                 "propertyID": "Area Management Authority Type",
                 "value": "Federal"
@@ -108,7 +107,7 @@
                 "propertyID": "Area Designation",
                 "value": "National Marine Sanctuary"
             },
-            {             
+            {
                 "@type": "PropertyValue",
                 "propertyID": "Year of Establishment",
                 "value": "1975"
@@ -165,7 +164,7 @@
     },
     "provider": [
         {
-            "@id": "https://oceanexpert.org/institution/CodeForProtectedSeas",
+            "identifier": "https://oceanexpert.org/institution/CodeForProtectedSeas",
             "@type": "Organization",
             "legalName": "ProtectedSeas",
             "name": "ProtectedSeas",
@@ -177,14 +176,16 @@
             "@type": "Event",
             "description": "Assessment of the protection status of the Florida Quays MPA",
             "name": "Florida Quays MPA Assessment",
-            "potentialAction": [{
-                "@type": "Action",
-                "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
-            },
-            { 
-                "@type": "Action",
-                "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
-            }]
+            "potentialAction": [
+                {
+                    "@type": "Action",
+                    "name": "Assessment of the level of fishing protection in the Florida Quays in 2007 trawling restrictions in the Florida Quays"
+                },
+                {
+                    "@type": "Action",
+                    "name": "Assessment of the bottom trawling restrictions in the Florida Quays in 2007"
+                }
+            ]
         }
     ],
     "publishingPrinciples": [

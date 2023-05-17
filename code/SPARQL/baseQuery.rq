@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemaold: <http://schema.org/>
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+
+
+SELECT DISTINCT ?g  ?s   ?type ?score ?name ?url ?lit ?description ?headline
+WHERE
+{
+   ?lit bds:search "HydroBios MultiNet" .
+   ?lit bds:matchAllTerms "false" .
+   ?lit bds:relevance ?score .
+   graph ?g {
+    ?s ?p ?lit .
+    ?s rdf:type ?type .
+    OPTIONAL { ?s schema:name ?name .   }
+    OPTIONAL { ?s schema:headline ?headline .   }
+    OPTIONAL { ?s schema:url ?url .   }
+    OPTIONAL { ?s schema:description ?description .    }
+  }
+
+}
+ORDER BY DESC(?score)
+LIMIT 30
+OFFSET 0

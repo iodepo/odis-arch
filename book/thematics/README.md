@@ -50,10 +50,3 @@ patterns developed for GeoScience Datasets by the ESIP
 [Science on Schema](https://github.com/ESIPFed/science-on-schema.org/) community.
 
 ```
-
-```{seealso}
-For OIH the focus is on generic documents which can scope reports, data and other resources.
-In those cases where the resources being described are life sciences resources such as datasets, software, and training materials. we recommend following 
-patterns developed by [Bioschemas](https://bioschemas.org/). 
-
-```
