@@ -1,0 +1,585 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "object",
+        "properties": {
+          "@vocab": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@vocab"
+        ]
+      },
+      "@id": {
+        "type": "string"
+      },
+      "@type": {
+        "type": "string"
+      },
+      "aggregateRating": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "areaServed": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "audience": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "availableChannel": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "award": {
+        "type": "string"
+      },
+      "bestRating": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "brand": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "broker": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "category": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "hasOfferCatalog": {
+        "type": "string"
+      },
+      "hoursAvailable": {
+        "type": "string"
+      },
+      "isRelatedTo": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "isSimilarTo": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "logo": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "offers": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "provider": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "providerMobility": {
+        "type": "string"
+      },
+      "ratingCount": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "ratingExplanation": {
+        "type": "string"
+      },
+      "ratingValue": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "review": {
+        "type": "string"
+      },
+      "reviewAspect": {
+        "type": "string"
+      },
+      "reviewCount": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "serviceOutput": {
+        "type": "string"
+      },
+      "serviceType": {
+        "type": "string"
+      },
+      "slogan": {
+        "type": "string"
+      },
+      "termsOfService": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "worstRating": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "additionalType": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@type"
+            ]
+          }
+        ]
+      },
+      "alternateName": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "disambiguatingDescription": {
+        "type": "string"
+      },
+      "identifier": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          },
+          "propertyID": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type",
+          "propertyID",
+          "value",
+          "url",
+          "description"
+        ]
+      },
+      "image": {
+        "type": "string"
+      },
+      "mainEntityOfPage": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "potentialAction": {
+        "type": "object",
+        "properties": {
+          "@type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@type",
+          "description",
+          "name"
+        ]
+      },
+      "sameAs": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "subjectOf": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "url": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "@context",
+      "@id",
+      "@type",
+      "aggregateRating",
+      "areaServed",
+      "audience",
+      "availableChannel",
+      "award",
+      "bestRating",
+      "brand",
+      "broker",
+      "category",
+      "hasOfferCatalog",
+      "hoursAvailable",
+      "isRelatedTo",
+      "isSimilarTo",
+      "logo",
+      "offers",
+      "provider",
+      "providerMobility",
+      "ratingCount",
+      "ratingExplanation",
+      "ratingValue",
+      "review",
+      "reviewAspect",
+      "reviewCount",
+      "serviceOutput",
+      "serviceType",
+      "slogan",
+      "termsOfService",
+      "worstRating",
+      "additionalType",
+      "alternateName",
+      "description",
+      "disambiguatingDescription",
+      "identifier",
+      "image",
+      "mainEntityOfPage",
+      "name",
+      "potentialAction",
+      "sameAs",
+      "subjectOf",
+      "url"
+    ]
+  }

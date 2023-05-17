@@ -11,7 +11,7 @@ kernelspec:
 execution:
   allow_errors: true
 ---
-# Services
+# Service
 
 
 ## About 
@@ -54,7 +54,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/action.json") as dgraph:
+with open("./graphs/service.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
