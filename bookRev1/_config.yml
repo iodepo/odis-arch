@@ -1,0 +1,55 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: The Ocean InfoHub Project and the development of the ODIS-architecture
+author: IODEPO
+logo: logo.png
+# copyright : "UN reference"  # Copyright year to be placed in the footer
+only_build_toc_files: true
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: auto
+  exclude_patterns:
+    - '*.ipynb'
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_engine: "xelatex"
+  latex_documents:
+    targetname: oceaninfohub.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  # binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  colab_url: "https://colab.research.google.com"
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_issues_button: true
+  home_page_in_navbar: true
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/iodepo/odis-arch  # Online location of your book
+  path_to_book: book  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# sphinx:
+#   config:
+#     html_theme_options:
+#       show_navbar_depth: 0
+
+#parse:
+  #myst_enable_extensions:
+    ## don't forget to list any other extensions you want enabled,
+    ## including those that are enabled by default!
+    #- deflist

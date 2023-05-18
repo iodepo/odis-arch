@@ -1,0 +1,100 @@
+# Notes
+
+* Move the geospatial geometry to under Coverage -> Place
+* Make a Core 0 as Dataset
+* note license pattern  (make this a support patterm 8 entry)
+* think next about Products and Services in the schema.org OIH approach
+* need to make a page about "context" from the OIH point of view
+* need a future document about Methods and Event  (think about the instrument element here too)
+
+* how to define a "cross archive" action
+* Need PROV for "Person" as export, connect Person to the group publishing the info as MemberOf
+* SOSO reference for time interval:  https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md#geologic-time 
+
+This is the start of the EOV and related variables section.  At present this is just notes.
+
+To comment on the graph:
+* Each EOV dataset MUST have the following components to be considered complete:
+* A qualified link to the DOI of the method used to generate that dataset
+* A qualified link to a DOI of the QA/QC processes and principles used on that dataset
+* A qualified link to to the GOOS EOV specification sheet the EOV is supposed to align to
+* A qualified link/element that points to the variables/elements in that dataset that is the EOV (if it's a complex dataset)
+  * That element should have a propertyID to an ontology term (from an ontology that can be interpreted by GOOS/IODE) that identifies which EOV it is
+* A qualified link to the measurement event(s)
+  * that can link onward to the measurement devices used
+* A qualified link to the spatial coverage of the data (can be placenames, but better if actual geospatial content like WKT)
+* A qualified link to some sort of temporal metadata that SoSo is attempting to settle a pattern for
+
+
+[related PDF](file:///home/fils/Downloads/OOPC_SSH_Specification_v5.2.pdf)
+
+
+## Need to:
+
+* Review [PropertyValue](https://schema.org/PropertyValue) vs [DefinedTerm](https://schema.org/DefinedTerm) and they could connect with [variableMeasured](https://schema.org/variableMeasured)
+
+
+Note that the two varmes show the concept of not presenting a value (ie, range of values) and one (stress) can have
+a value
+
+For property ID note we can have an array but prefer semantic descriptions
+
+measurementTechnique should point to a method that is mature, globally adopted and opperational and / or endorsed by GOOS panel responsible for the EOV in question
+These _should_ be at registered locations with PIDs like for example Zenodo
+
+
+ "propertyID": ["http://purl.obolibrary.org/obo/ENVO_01001374", "https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/11aca777-8a01-42ce-b076-b3059c3d8cae"]
+Here we have linked to GOOS but also GMCD via their keyword view with UUID value    NERC is at http://vocab.nerc.ac.uk/collection/P14/current/GVAR0725/ but question about using
+
+
+QA/QC notes:  QA/QC publishing principles should link to the exact methods used for QA/QC - not a general certification of a service or similar.
+
+Hey Ward, Pieter:  here's where we're at, can OBIS' BioEco EOV specifications work with this?
+
+
+Document:  https://github.com/BeBOP-OBON/miop/issues/8
+
+Elements:
+
+## Science on Schema variableMeasured
+
+Example from Science on Schema recommendations:
+
+```json
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+    "gsn-quantity": "http://www.geoscienceontology.org/geo-lower/quantity#"
+  },
+  "@type": "Dataset",
+  "name": "Removal of organic carbon by natural bacterioplankton communities as a function of pCO2 from laboratory experiments between 2012 and 2016",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "propertyID":"http://www.geoscienceontology.org/geo-lower/quantity#latitude",
+      "url": "https://www.sample-data-repository.org/dataset-parameter/665787",
+      "description": "Latitude where water samples were collected; north is positive.",
+      "unitText": "decimal degrees",
+      "minValue": "45.0",
+      "maxValue": "15.0"
+    },
+  ]
+}
+```
+
+via [valueReference](https://schema.org/valueReference) we can get to Defined Term  (EVO)
+
+
+## Science on Schema inDefinedTermSet
+
+Defined Term  (not scoped in variableMeasured valid types)
+```json
+{
+    "@id": "http://purl.org/dc/dcmitype/Image",
+    "@type": "DefinedTerm",
+    "inDefinedTermSet": "http://purl.org/dc/terms/DCMIType",
+    "termCode": "Image",
+    "name": "Image"
+},
+```

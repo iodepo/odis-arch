@@ -1,0 +1,77 @@
+digraph G {
+
+  graph [fontsize=10 fontname="Verdana" compound=true];
+  node [shape=record fontsize=10 fontname="Verdana"];
+
+  subgraph clusterOrg {
+    label = "Experts & Insitutions\nschema:[Organization, Person]";
+    color=blue;
+    Person;
+    Organization;
+   }
+
+  subgraph clusterServices {
+    label = "Services\nschema:Action";
+    color=blue;
+    Service;
+  } 
+
+  subgraph clusterSpatial {
+    label = "Spatial\nschema:spatialCoverage";
+    color=blue;
+    Place;
+    subjectOf;
+    GeoSPARQL;
+    GeoBlob;
+  }
+
+  subgraph clusterProj {
+    label = "Projects\nschema:[Project,ResearchProject]";
+    color=blue;
+    Project;
+    ResearchProject;
+  }
+
+  subgraph clusterVessel {
+    label = "Vessels\nschema:Vehicle";
+    color=blue;
+    Vessel;
+  }
+
+  subgraph clusterTraining {
+    label = "Training\nschema:[LearningResource, Course]";
+    color=blue;
+    Course;
+    Reseource;
+  }
+
+  subgraph clusterDoc {
+    label = "Documents\nschema:[CreativeWork, Dataset, Map]";
+    color=blue;
+    CreativeWork;
+    Map;
+    Dataset;
+  }
+
+
+// Express all creative works express spatial
+  CreativeWork -> Place [lhead=clusterSpatial ltail=clusterDoc]
+  // Map -> Place [lhead=clusterSpatial]
+  // Dataset -> Place [lhead=clusterSpatial]
+
+  Dataset -> Service   [ltail=clusterDoc];
+  Project -> Person  
+  Service -> Organization
+
+// Express all creative works express connection to people or organizations
+  CreativeWork -> Person [ltail=clusterDoc lhead=clusterOrg  dir="both"];
+
+  // Person, Organization, Project -> CreativeWork
+  // Person, Organization, Project -> Service
+
+  Vessel -> Organization [label="additionProperty"]
+  Person -> Organization
+  Course -> Organization [label="author, creator, funder, maintainer"]
+
+
+}

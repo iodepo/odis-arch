@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+
+SELECT DISTINCT  ?s ?url ?dist ?g ?type ?score ?name ?lit ?description ?headline
+WHERE
+{
+   ?lit bds:search "ocean acidification" .
+   ?lit bds:matchAllTerms "false" .
+   ?lit bds:relevance ?score .
+   graph ?g {
+    ?s ?p ?lit .
+    ?s rdf:type ?type .
+    OPTIONAL { ?s schema:distribution ?dist .   }
+    OPTIONAL { ?s schema:name ?name .   }
+    OPTIONAL { ?s schema:headline ?headline .   }
+    OPTIONAL { ?s schema:url ?url .   }
+    OPTIONAL { ?s schema:description ?description .    }
+  }
+
+}
+ORDER BY DESC(?score)
+OFFSET 0

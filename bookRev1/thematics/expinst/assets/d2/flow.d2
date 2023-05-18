@@ -1,0 +1,26 @@
+# ref: https://d2lang.com/tour/intro/
+# cheat sheet: https://github.com/terrastruct/d2/blob/master/docs/assets/cheat_sheet.pdf
+# Actors
+#
+
+Sitemap; Gleaner; ELT-Nabu; KnowledgeGraph
+
+Gleaner: {
+    shape: image
+    icon: https://gleaner.io/gleaner.png
+}
+
+OCI
+
+OCI.HeadlessChrome; OCI.S3
+OCI.S3.shape: stored_data
+
+Sitemap -> Gleaner
+Gleaner -> OCI.S3
+Gleaner <-> OCI.HeadlessChrome
+
+OCI.S3 -> ELT-Nabu
+ELT-Nabu -> KnowledgeGraph
+
+
+

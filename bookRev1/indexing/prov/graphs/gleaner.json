@@ -1,0 +1,49 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "@graph": [
+        {
+            "@id": "https://www.re3data.org/repository/obis",
+            "@type": "prov:Organization",
+            "rdf:name": "Ocean Biodiversity Information System",
+            "rdfs:seeAlso": "https://obis.org"
+        },
+        {
+            "@id": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2",
+            "@type": "prov:Entity",
+            "prov:wasAttributedTo": {
+                "@id": "https://www.re3data.org/repository/obis"
+            },
+            "prov:value": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"
+        },
+        {
+            "@id": "https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55",
+            "@type": "prov:Collection",
+            "prov:hadMember": {
+                "@id": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"
+            }
+        },
+        {
+            "@id": "urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55",
+            "@type": "prov:Entity",
+            "prov:value": "7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld"
+        },
+        {
+            "@id": "https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55",
+            "@type": "prov:Activity",
+            "prov:endedAtTime": {
+                "@value": "2021-04-20",
+                "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "prov:generated": {
+                "@id": "urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55"
+            },
+            "prov:used": {
+                "@id": "https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55"
+            }
+        }
+    ]
+}

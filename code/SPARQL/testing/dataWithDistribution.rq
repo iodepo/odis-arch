@@ -6,7 +6,7 @@ SELECT ?s ?dist ?url
 WHERE {
     graph ?g {
         ?s rdf:type schema:Dataset .
-        ?s schema:distribution ?dist .
+        ?s schema:keyword "acid" .
         ?dist a schema:DataDownload .
         ?dis schema:contentUrl ?url .
     }

@@ -1,0 +1,1035 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Keywords and Defined Terms &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Languages" href="../languages/languages.html" />
+    <link rel="prev" title="Services" href="../services/README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    The Ocean InfoHub Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../publishing/publishing.html">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/README.html">
+   Core 2a: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dataset/index.html">
+   Core 2b: Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../identifier/id.html">
+   Support 6: Identifier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../variables/index.html">
+   Support 7: EOVs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../license/README.html">
+   Support 8: Licenses
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tooling/index.html">
+   Tooling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/index.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/query.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/sparql.html">
+   OIH SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/thematics/terms/list.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/thematics/terms/list.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/iodepo/odis-arch"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fthematics/terms/list.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/thematics/terms/list.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/thematics/terms/list.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keywords">
+   Keywords
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text">
+     Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#url">
+     URL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definedterm">
+     DefinedTerm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defined-terms">
+   Defined Terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Keywords and Defined Terms</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keywords">
+   Keywords
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text">
+     Text
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#url">
+     URL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definedterm">
+     DefinedTerm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defined-terms">
+   Defined Terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="keywords-and-defined-terms">
+<h1>Keywords and Defined Terms<a class="headerlink" href="#keywords-and-defined-terms" title="Permalink to this headline">#</a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
+<p>This section is looking at how the keywords could be connected
+with Defined Terms that point to external vocabularies that follow
+a vocabulary publishing patterns like at the W3C
+<a class="reference external" href="https://www.w3.org/TR/swbp-vocab-pub/">Best Practice Recipes for Publishing RDF Vocabularies</a>.</p>
+<p>The pattern breaks down a bit when attempting to connect with things like
+the <a class="reference external" href="https://earthdata.nasa.gov/earth-observation-data/find-data/idn/gcmd-keywords">Global Change Master Directory keywords</a>.
+This impedance is caused by publishing approaches for the terms that don’t align well with
+the above publishing practices.  This does not mean we can not use these terms, rather that
+we may find multiple ways to connect them used by the community.  This can result in some
+ambiguity in linking in a community.</p>
+<p>A person could adapt the pattern to connect things like the <a class="reference external" href="https://public.wmo.int/en/programmes/global-climate-observing-system/essential-climate-variables">Global Change Observing System</a>
+or
+<a class="reference external" href="https://gcmd.earthdata.nasa.gov/KeywordViewer/scheme/all/6eb3919b-85ce-4988-8b78-9d0018fd8089?gtm_keyword=OCEAN%20CHEMISTRY%3Em_scheme=Earth%20Science">EARTH SCIENCE &gt; OCEANS &gt; OCEAN CHEMISTRY</a>.  The later of these does have a UUID (6eb3919b-85ce-4988-8b78-9d0018fd8089) but this is not a dereference-able PID.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This topic of keyword linking with DefinedTerms is under review at the <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org">Science on Schema</a>
+work at ESIP.   Reference <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md">Describing a Dataset</a>
+for the latest on their recommendations.</p>
+</div>
+</section>
+<section id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">#</a></h2>
+<p>The <a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/keywords">keywords</a> property of <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> can point to three different values.
+These are: <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>, <a class="reference external" href="https://schema.org/Text">Text</a> and <a class="reference external" href="https://schema.org/URL">URL</a>.</p>
+<p>We can see the three different approaches here to defining keywords.  Here, <em>Region X</em> is a classic
+text keyword.  The other two are defined as a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">16</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">20</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">26</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span>
+</span><span class="hll"><span class="linenos">30</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="p">]</span>
+</span><span class="linenos">32</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
+  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+
+<span class="n">framed</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">compacted</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
+</pre></div>
+</div>
+<img alt="../../_images/list_1_1.svg" src="../../_images/list_1_1.svg" /></div>
+</div>
+<section id="text">
+<h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">#</a></h3>
+<p>Keywords can be defined as a <a class="reference external" href="https://schema.org/Text">Text</a> value.  This is the most common approach though
+it doesn’t provide some of the benefits of the other two approaches.  For example, it doesn’t allow for terms to
+be dereferenced on the net or for connects in the graph to be made for common terms by their subject IRIs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;nitrous oxide&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;Central Pacific&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;headspace equilibration&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;SRI Greenhouse Gas Monitoring Gas Chromatograph&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;CTD profiler&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;Gas Chromatograph&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to use the [] notation to define the keyword.  This defined an array of items vs a single items.  If you
+use an approach like {“term1, term2, term4”} you have only created a single text string with comma separated values.  However
+that is viewed as a single string in the graph.   The [] notation creates an array of strings all connected to the subject IRI
+by the property <em>keywords</em>.</p>
+</div>
+</section>
+<section id="url">
+<h3>URL<a class="headerlink" href="#url" title="Permalink to this headline">#</a></h3>
+<p>Keywords can also point to a URL.  This provides a way to link to a vocabulary entry that defines the term.  This approach
+has some benefits of linking to more details but does easily provide an easy descriptive text for humans.  There is nothing
+preventing putting in a text keyword followed up by another entry with a related URL.</p>
+</section>
+<section id="definedterm">
+<h3>DefinedTerm<a class="headerlink" href="#definedterm" title="Permalink to this headline">#</a></h3>
+<p>This is the most complex approach.  Keywords can point to a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a> as
+defined in a <a class="reference external" href="https://schema.org/DefinedTermSet">DefinedTermSet</a> pointed to by
+the property <a class="reference external" href="https://schema.org/inDefinedTermSet">inDefinedTermSet</a>.  It does offer the ability to present both a human
+focused textual name and description of the term.  This is a great way to link to a vocabulary entry that defines the term.
+It also allows for a URL to be used to link to the vocabulary entry.   While this approach is the most comprehensive, it does
+incur a complexity during the query process to extract and present the information.</p>
+</section>
+</section>
+<section id="defined-terms">
+<h2>Defined Terms<a class="headerlink" href="#defined-terms" title="Permalink to this headline">#</a></h2>
+<p>During generation of the structured data a provide may wish to
+either use or publish a set of controlled vocabulary terms or
+a similar set.</p>
+<p>Within <a class="reference external" href="http://schema.org">schema.org</a> this could be done by leveraging the “DefinedTerm”
+amd “DefinedTermSet” types.</p>
+<p>These types allow us both to define a set of terms and
+use a set of terms in describing a thing.</p>
+<p>Note that DefinedTerm is an intangible and can connect to most
+types in <a class="reference external" href="http://Schema.org">Schema.org</a>.  So we can use them in places such as:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> -&gt; <a class="reference external" href="https://schema.org/keywords">keyword</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> -&gt; <a class="reference external" href="https://schema.org/learningResourceType">learningResourceType</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/LearningResource">LearningResource</a> -&gt; <a class="reference external" href="https://schema.org/teaches">teaches</a>  (and many others)</p></li>
+<li><p><a class="reference external" href="https://schema.org/LearningResource">LearningResource</a> -&gt; <a class="reference external" href="https://schema.org/competencyRequired">competencyRequired</a>  (and many others)</p></li>
+<li><p><a class="reference external" href="https://schema.org/PropertyValue">PropertyValue</a> -&gt; <a class="reference external" href="https://schema.org/valueReference">valueReference</a></p></li>
+</ul>
+<p>The following example is from the <a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/DefinedTermSet">DefinedTermSet</a>
+reference.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
+<span class="linenos"> 2</span>        <span class="p">{</span>
+<span class="linenos"> 3</span>                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 4</span>                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 5</span>                <span class="p">}</span>
+<span class="linenos"> 6</span>        <span class="p">},</span>
+<span class="linenos"> 7</span>        <span class="p">{</span>
+<span class="linenos"> 8</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of Ballentine&#39;s Law Dictionary Term Set&quot;</span>
+<span class="linenos">12</span>        <span class="p">},</span>
+<span class="linenos">13</span>        <span class="p">{</span>
+<span class="linenos">14</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">19</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">21</span>                <span class="p">}</span>
+<span class="linenos">22</span>        <span class="p">},</span>
+<span class="linenos">23</span>        <span class="p">{</span>
+<span class="linenos">24</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">29</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">31</span>                <span class="p">}</span>
+<span class="linenos">32</span>        <span class="p">}</span>
+<span class="linenos">33</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_multidigraph</span>
+<span class="kn">from</span> <span class="nn">rdflib.extras.external_graph_libs</span> <span class="kn">import</span> <span class="n">rdflib_to_networkx_graph</span>
+<span class="kn">from</span> <span class="nn">pyld</span> <span class="kn">import</span> <span class="n">jsonld</span>
+<span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/term.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
+</pre></div>
+</div>
+<img alt="../../_images/list_3_1.svg" src="../../_images/list_3_1.svg" /></div>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://schema.org/DefinedTerm">schema.org/DefinedTerm</a></p></li>
+<li><p><a class="reference external" href="https://schema.org/DefinedTermSet">schema.org/DefinedTermSet</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./thematics/terms"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../services/README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Services</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../languages/languages.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Languages</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By IODEPO<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
