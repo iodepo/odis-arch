@@ -1,0 +1,165 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",  
+
+   "distribution": [
+      "www.monitorwater.org/myLatestDataset.csv",
+      "https://peaceboatusoffice.wordpress.com/peace-boat-us-program-for-the-un-ocean-decade/data/myLatestDataset.csv"
+  ], 
+
+   "measurementTechnique": [
+    "Brief description(s) (one per line) of the method, technique, or technology used to generate this dataset",
+    "https://peaceboatusoffice.wordpress.com/peace-boat-us-program-for-the-un-ocean-decade/methods/methodUsedForNitrate_myLatestDataset.pdf",
+    "https://peaceboatusoffice.wordpress.com/peace-boat-us-program-for-the-un-ocean-decade/methods/methodUsedForNitrite_myLatestDataset.pdf"
+  ],
+
+   "variableMeasured": [
+
+    {
+        "@type": "PropertyValue",
+        "name": "Nitrate (magnitude)",
+        "description": "Extended description of this variable",
+        "unitCode": "mM"
+    },
+
+    {
+        "@type": "PropertyValue",
+        "name": "Please indicate the approximate number of participants in each age range:: 0-10 years - Number of participants",
+        "description": "An integer expressing the number of participants in the 0-10 years old age range"
+    }
+
+   ],
+  
+    "about": "Text or controlled vocabulary/ontology, singly or as an array: The subject matter of this CreativeWork",
+    "abstract": "Text: A descriptive summary of a CreativeWork",
+    "accountablePerson": {"@type": "https://schema.org/Person"},
+    "archivedAt": [
+        "www.zenodo.org/PeaceBoat/....",
+        {"@type": "https://schema.org/WebPage"}
+    ],
+    "associatedMedia": {"@type": "https://schema.org/MediaObject"},
+    "author": {"@type": "https://schema.org/Person"},
+    "citation": [
+        "Text: A textual citation to other work relevant to this CreativeWork",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+    "comment": "Text: A textual comment on the CreativeWork",
+    "conditionsOfAccess": "Text: Description of conditions that affect the availability of, or method(s) of access to, an item.",
+    "contributor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "copyrightHolder":  [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "copyrightNotice": "Text. Text of a notice appropriate for describing the copyright aspects of this Creative Work",
+    "copyrightYear": {"@type": "https://schema.org/Number"},
+    "correction": [
+        "Text:  description of a correction to the CreativeWork",
+        "URL",
+        {"@type": "https://schema.org/CorrectionComment"}
+    ],
+    "countryOfOrigin": {"@type": "https://schema.org/Country"},
+    "creator": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "creditText": "Text: Text used to credit person(s) and/or organization(s) associated with this CreativeWork",
+    "dateCreated": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "dateModified": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "datePublished": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "educationalLevel": [
+        "Text: The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+        "URL",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "educationalUse": [
+        "Text:  Description of the purpose of this CreativeWork in the context of education",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "encoding": {"@type": "https://schema.org/MediaObject"},
+    "encodingFormat": [
+        "Text: Textual description of the media type typically expressed using a MIME format (see IANA site [http://www.iana.org/assignments/media-types/media-types.xhtml] and MDN reference [https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types]), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc. ",
+        "URL"
+    ],
+    "funder": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "funding": {"@type": "https://schema.org/Grant"},
+    "inLanguage": [
+        "Text: The language of the content or performance or used in an action.",
+        {"@type": "https://schema.org/Language"}
+    ],
+    "isAccessibleForFree": {"@type": "https://schema.org/Boolean"},
+    "isBasedOn": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/Product"},
+        "URL"
+    ],
+    "keywords": [
+        "Text: Keywords or tags used to describe the CreativeWork.",
+        "water quality",
+        "water chemistry",
+        "Peace Boat US"
+        {"@type": "https://schema.org/DefinedTerm"},
+        "URL"
+    ],
+    "license": [
+        "URL"
+    ],
+    "locationCreated": {"@type": "https://schema.org/Place"},
+    "mainEntity": {"@type": "https://schema.org/Thing"},
+    "maintainer":  [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "provider": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "sponsor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "temporalCoverage": [
+        {"@type": "https://schema.org/DateTime"},
+        "Text",
+        "URL"
+    ],
+    "version": ["https://schema.org/Text", "https://schema.org/Number"],
+    
+      "alternateName": "Text: An alternative name for this Thing.",
+      "description": "Text: Free text which describes this Thing.",
+      "identifier": [
+          {"@type": "https://schema.org/PropertyValue"},
+          "Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+          "URL"
+      ],
+      "name": "Text: The name of the item.",
+      "url": "URL to the WordPress page about this dataset"
+}
