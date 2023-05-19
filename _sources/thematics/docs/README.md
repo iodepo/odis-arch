@@ -72,21 +72,18 @@ a resource.
 
 ```{code-cell}
 :tags: [hide-input]
-
 import json
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
 from pyld import jsonld
-import graphviz
 import os, sys
+import urllib
 
 currentdir = os.path.dirname(os.path.abspath(''))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
-from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
-    doc = json.load(dgraph)
+url = "https://raw.githubusercontent.com/iodepo/odis-in/master/assets/dataGraphs/thematics/docs/graphs/creativework.json"
+dgraph = urllib.request.urlopen(url)
+doc = json.load(dgraph)
 
 frame = {
   "@context": {"@vocab": "https://schema.org/"},
@@ -113,8 +110,9 @@ jbutils.show_graph(framed)
 
 ### Publisher and provider
 
-Our JSON-LD documents are graphs that can use framing to subset.  In this 
-case we can look closer at the author property which points to a type Person. 
+Our JSON-LD documents are graphs that can use framing to subset.  In this case
+we can look closer at the `provider` and `publisher` properties, which are both 
+of type `Organization`. 
 
 
 ```{code-cell}

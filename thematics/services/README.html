@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Services &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Service &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
   
   
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -461,7 +461,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Services</h1>
+    <h1>Service</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -484,8 +484,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="service">
+<h1>Service<a class="headerlink" href="#service" title="Permalink to this heading">#</a></h1>
 <section id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h2>
 <p>This section will provide information on the service type.  This is not
@@ -502,30 +502,6 @@ needed.</p>
 </div>
 <p>This with POST a jpeg to the service and get back a simple text response with some information
 about the image.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos"> 4</span>      <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 8</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>      <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;a simple text result for the RGB counts&quot;</span>
-<span class="linenos">11</span>    <span class="p">},</span>
-<span class="linenos">12</span>    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">13</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;EntryPoint&quot;</span><span class="p">,</span>
-<span class="linenos">14</span>      <span class="s2">&quot;urlTemplate&quot;</span><span class="p">:</span> <span class="s2">&quot;https://us-central1-top-operand-112611.cloudfunctions.net/function-1&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>      <span class="s2">&quot;httpMethod&quot;</span><span class="p">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>      <span class="s2">&quot;contentType&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">]</span>
-<span class="linenos">17</span>    <span class="p">},</span>
-<span class="linenos">18</span>    <span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">19</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A JPEG or PNG to analyze the RGB counts&quot;</span>
-<span class="linenos">21</span>    <span class="p">}</span>
-<span class="linenos">22</span>  <span class="p">}</span>
-</pre></div>
-</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -542,7 +518,7 @@ about the image.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/action.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/service.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -556,7 +532,31 @@ about the image.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/fb94b8892c07b20aa56d6b1c0695f0fbdedaa4f73a66e3fd5ef94729c9440824.svg" src="../../_images/fb94b8892c07b20aa56d6b1c0695f0fbdedaa4f73a66e3fd5ef94729c9440824.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3133</span><span class="o">/</span><span class="mf">1836337377.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> 
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
+
+<span class="nn">~/work/odis-arch/odis-arch/book/lib/jbutils.py</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">rdf</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>         <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">46</span>         <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span>         <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
+
+<span class="nn">~/work/odis-arch/odis-arch/book/lib/jbutils.py</span> in <span class="ni">short_name</span><span class="nt">(value, max_length)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>             <span class="c1"># If the URL is too long, hide it</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">24</span>                 <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>                 <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>             <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">NameError</span>: name &#39;split_uri&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="references">
@@ -596,7 +596,10 @@ about the image.</p>
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../spatial/README.html"
@@ -616,7 +619,10 @@ about the image.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -641,7 +647,7 @@ about the image.</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -671,7 +677,7 @@ By IODEPO
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -680,8 +686,8 @@ By IODEPO
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

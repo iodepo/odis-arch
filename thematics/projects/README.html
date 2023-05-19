@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -556,27 +556,47 @@ has a sub-type of <a class="reference external" href="https://schema.org/Researc
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/id/resproj/X&quot;,
-    &quot;@type&quot;: &quot;ResearchProject&quot;,
-    &quot;description&quot;: &quot;Repo description ... &quot;,
-    &quot;identifier&quot;: {
-        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
-        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
-    },
-    &quot;legalName&quot;: &quot;Example Data Repository&quot;,
-    &quot;name&quot;: &quot;ExDaRepo&quot;,
-    &quot;url&quot;: &quot;https://www.example-data-repository.org&quot;
-}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3074</span><span class="o">/</span><span class="mf">1228226558.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> 
+<span class="g g-Whitespace">    </span><span class="mi">298</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>         <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>             <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+<span class="nn">JSONDecodeError: Expecting property name enclosed</span> in <span class="ni">double quotes: line 55 column 9 </span><span class="nt">(char 1884)</span>
 </pre></div>
 </div>
-<img alt="../../_images/017d72ce635ea41d99397c307ad6128b9960e46eb6f7dd08c7326c31a88d0d20.svg" src="../../_images/017d72ce635ea41d99397c307ad6128b9960e46eb6f7dd08c7326c31a88d0d20.svg" /></div>
+</div>
 </div>
 <section id="details-identifier">
 <h3>Details: Identifier<a class="headerlink" href="#details-identifier" title="Permalink to this heading">#</a></h3>
@@ -629,23 +649,47 @@ a resource.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/id/resproj/X&quot;,
-    &quot;@type&quot;: &quot;ResearchProject&quot;,
-    &quot;identifier&quot;: {
-        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
-        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
-    }
-}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3074</span><span class="o">/</span><span class="mf">2974365103.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> 
+<span class="g g-Whitespace">    </span><span class="mi">298</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>         <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>             <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+<span class="nn">JSONDecodeError: Expecting property name enclosed</span> in <span class="ni">double quotes: line 55 column 9 </span><span class="nt">(char 1884)</span>
 </pre></div>
 </div>
-<img alt="../../_images/caeea63eddf8eea4e4861b0bd1af5ede884759e489443d08d12a192062fde7af.svg" src="../../_images/caeea63eddf8eea4e4861b0bd1af5ede884759e489443d08d12a192062fde7af.svg" /></div>
+</div>
 </div>
 </section>
 </section>
@@ -654,96 +698,123 @@ a resource.</p>
 <p>Here is what our full record looks like.  We have added in several
 more nodes to cover things like funding source, policy connections,
 spatial area served and parent organization.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos"> 4</span>  <span class="p">},</span>
-<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;ResearchProject&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/resproj/X&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>  <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Data Repository&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ExDaRepo&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Repo description ... &quot;</span><span class="p">,</span>
-<span class="linenos">11</span>  <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">12</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
-<span class="linenos">13</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/logo.jpg&quot;</span>
-<span class="linenos">14</span>  <span class="p">},</span>
-<span class="linenos">15</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">18</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
-<span class="linenos">19</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
-<span class="linenos">21</span>  <span class="p">},</span>
-<span class="linenos">22</span>  <span class="s2">&quot;contactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">23</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
-<span class="linenos">24</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ContactPoint&quot;</span><span class="p">,</span>
-<span class="linenos">25</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Support&quot;</span><span class="p">,</span>
-<span class="linenos">26</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;info@example-data-repository.org&quot;</span><span class="p">,</span>
-<span class="linenos">27</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>    <span class="s2">&quot;contactType&quot;</span><span class="p">:</span> <span class="s2">&quot;customer support&quot;</span>
-<span class="linenos">29</span>  <span class="p">},</span>
-<span class="linenos">30</span>  <span class="s2">&quot;funder&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">31</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;FundingAgency&quot;</span><span class="p">,</span>
-<span class="linenos">32</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.13039/10000001&quot;</span><span class="p">,</span>
-<span class="linenos">33</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span>
-<span class="linenos">34</span>    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;NSF&quot;</span><span class="p">,</span>
-<span class="linenos">35</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nsf.gov/&quot;</span>
-<span class="linenos">36</span>  <span class="p">},</span>
-<span class="linenos">37</span>  <span class="s2">&quot;ethicsPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">38</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos">39</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-<span class="linenos">40</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos">41</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work &quot;</span><span class="p">,</span>
-<span class="linenos">42</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/ethicsPolicy.pdf&quot;</span>
-<span class="linenos">43</span>  <span class="p">},</span>
-<span class="linenos">44</span>  <span class="s2">&quot;diversityPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">45</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos">46</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/ABC&quot;</span><span class="p">,</span>
-<span class="linenos">47</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos">48</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work&quot;</span><span class="p">,</span>
-<span class="linenos">49</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/diversityPolicy.pdf&quot;</span>
-<span class="linenos">50</span>  <span class="p">},</span>
-<span class="linenos">51</span>  <span class="s2">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">52</span>    <span class="p">{</span>
-<span class="linenos">53</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="linenos">54</span>      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">55</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-<span class="linenos">56</span>        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
-<span class="linenos">57</span>        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
-<span class="linenos">58</span>      <span class="p">},</span>
-<span class="linenos">59</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the area served&quot;</span>
-<span class="linenos">60</span>    <span class="p">},</span>
-<span class="linenos">61</span>    <span class="p">{</span>
-<span class="linenos">62</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
-<span class="linenos">63</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Textual description of area served&quot;</span>
-<span class="linenos">64</span>    <span class="p">},</span>
-<span class="linenos">65</span>    <span class="p">{</span>
-<span class="linenos">66</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;AdministrativeArea&quot;</span><span class="p">,</span>
-<span class="linenos">67</span>      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">68</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-<span class="linenos">69</span>        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
-<span class="linenos">70</span>        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
-<span class="linenos">71</span>      <span class="p">},</span>
-<span class="linenos">72</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Needs to be subset of Place, Review Place&quot;</span>
-<span class="linenos">73</span>    <span class="p">}</span>
-<span class="linenos">74</span>  <span class="p">],</span>
-<span class="linenos">75</span>  <span class="s2">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">76</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">77</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-<span class="linenos">78</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
-<span class="linenos">79</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
-<span class="linenos">80</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
-<span class="linenos">81</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">82</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-<span class="linenos">83</span>      <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
-<span class="linenos">84</span>      <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
-<span class="linenos">85</span>      <span class="s2">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
-<span class="linenos">86</span>      <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<span class="linenos">87</span>      <span class="s2">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
-<span class="linenos">88</span>    <span class="p">}</span>
-<span class="linenos">89</span>  <span class="p">}</span>
-<span class="linenos">90</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="p">{</span>
+<span class="linenos">  2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">  3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">  4</span>  <span class="p">},</span>
+<span class="linenos">  5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ResearchProject&quot;</span><span class="p">,</span>
+<span class="linenos">  6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/resproj/X&quot;</span><span class="p">,</span>
+<span class="linenos">  7</span>  <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Data Repository&quot;</span><span class="p">,</span>
+<span class="linenos">  8</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ExDaRepo&quot;</span><span class="p">,</span>
+<span class="linenos">  9</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org&quot;</span><span class="p">,</span>
+<span class="linenos"> 10</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Repo description ... &quot;</span><span class="p">,</span>
+<span class="linenos"> 11</span>  <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 12</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ImageObject&quot;</span><span class="p">,</span>
+<span class="linenos"> 13</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/logo.jpg&quot;</span>
+<span class="linenos"> 14</span>  <span class="p">},</span>
+<span class="linenos"> 15</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+<span class="linenos"> 17</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 18</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+<span class="linenos"> 19</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+<span class="linenos"> 20</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos"> 21</span>  <span class="p">},</span>
+<span class="linenos"> 22</span>  <span class="s2">&quot;contactPoint&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 23</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
+<span class="linenos"> 24</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;ContactPoint&quot;</span><span class="p">,</span>
+<span class="linenos"> 25</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Support&quot;</span><span class="p">,</span>
+<span class="linenos"> 26</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;info@example-data-repository.org&quot;</span><span class="p">,</span>
+<span class="linenos"> 27</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.example-data-repository.org/about-us&quot;</span><span class="p">,</span>
+<span class="linenos"> 28</span>    <span class="s2">&quot;contactType&quot;</span><span class="p">:</span> <span class="s2">&quot;customer support&quot;</span>
+<span class="linenos"> 29</span>  <span class="p">},</span>
+<span class="linenos"> 30</span>  <span class="s2">&quot;funder&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 31</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;FundingAgency&quot;</span><span class="p">,</span>
+<span class="linenos"> 32</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.13039/10000001&quot;</span><span class="p">,</span>
+<span class="linenos"> 33</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span>
+<span class="linenos"> 34</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span>
+<span class="linenos"> 35</span>    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;NSF&quot;</span><span class="p">,</span>
+<span class="linenos"> 36</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nsf.gov/&quot;</span><span class="p">,</span>
+<span class="linenos"> 37</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 38</span>      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/resproj/X&quot;</span><span class="p">,</span>
+<span class="linenos"> 39</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 40</span>      <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos"> 41</span>      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;DOI value expressed as doi:</span><span class="si">{doi}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="linenos"> 42</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dio.org/id/XYZ&quot;</span>
+<span class="linenos"> 43</span>    <span class="p">}</span>
+<span class="linenos"> 44</span>  <span class="p">},</span>
+<span class="linenos"> 45</span>  <span class="s2">&quot;funding&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 46</span>    <span class="p">{</span>
+<span class="linenos"> 47</span>      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;{odo:hasAward -&gt; odo:osprey_page}&quot;</span><span class="p">,</span>
+<span class="linenos"> 48</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;MonetaryGrant&quot;</span><span class="p">,</span>
+<span class="linenos"> 49</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+<span class="linenos"> 50</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;{odo:hasAward -&gt; odo:hasAwardNumber}&quot;</span><span class="p">,</span>
+<span class="linenos"> 51</span>      <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;{odo:hasAward -&gt; odo:hasAwardNumber}&quot;</span><span class="p">,</span>
+<span class="linenos"> 52</span>      <span class="s2">&quot;funder&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 53</span>        <span class="p">{</span>
+<span class="linenos"> 54</span>          <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.13039/10000001&quot;</span><span class="p">,</span>
+<span class="linenos"> 55</span>        <span class="p">},</span>
+<span class="linenos"> 56</span>        <span class="p">{</span>
+<span class="linenos"> 57</span>          <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;FundingAgency&quot;</span><span class="p">,</span>
+<span class="linenos"> 58</span>          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Some other org&quot;</span><span class="p">,</span>
+<span class="linenos"> 59</span>          <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.funder.org/&quot;</span>
+<span class="linenos"> 60</span>        <span class="p">}</span>
+<span class="linenos"> 61</span>      <span class="p">]</span>
+<span class="linenos"> 62</span>    <span class="p">}</span>
+<span class="linenos"> 63</span>  <span class="p">],</span>
+<span class="linenos"> 64</span>  <span class="s2">&quot;ethicsPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 65</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 66</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 67</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 68</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work &quot;</span><span class="p">,</span>
+<span class="linenos"> 69</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/ethicsPolicy.pdf&quot;</span>
+<span class="linenos"> 70</span>  <span class="p">},</span>
+<span class="linenos"> 71</span>  <span class="s2">&quot;diversityPolicy&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 72</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 73</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/ABC&quot;</span><span class="p">,</span>
+<span class="linenos"> 74</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 75</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work&quot;</span><span class="p">,</span>
+<span class="linenos"> 76</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.foo.org/creativework/diversityPolicy.pdf&quot;</span>
+<span class="linenos"> 77</span>  <span class="p">},</span>
+<span class="linenos"> 78</span>  <span class="s2">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 79</span>    <span class="p">{</span>
+<span class="linenos"> 80</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+<span class="linenos"> 81</span>      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 82</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+<span class="linenos"> 83</span>        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+<span class="linenos"> 84</span>        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+<span class="linenos"> 85</span>      <span class="p">},</span>
+<span class="linenos"> 86</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the area served&quot;</span>
+<span class="linenos"> 87</span>    <span class="p">},</span>
+<span class="linenos"> 88</span>    <span class="p">{</span>
+<span class="linenos"> 89</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+<span class="linenos"> 90</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Textual description of area served&quot;</span>
+<span class="linenos"> 91</span>    <span class="p">},</span>
+<span class="linenos"> 92</span>    <span class="p">{</span>
+<span class="linenos"> 93</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;AdministrativeArea&quot;</span><span class="p">,</span>
+<span class="linenos"> 94</span>      <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 95</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+<span class="linenos"> 96</span>        <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+<span class="linenos"> 97</span>        <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+<span class="linenos"> 98</span>      <span class="p">},</span>
+<span class="linenos"> 99</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Needs to be subset of Place, Review Place&quot;</span>
+<span class="linenos">100</span>    <span class="p">}</span>
+<span class="linenos">101</span>  <span class="p">],</span>
+<span class="linenos">102</span>  <span class="s2">&quot;parentOrganization&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">103</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">104</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+<span class="linenos">105</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span><span class="p">,</span>
+<span class="linenos">106</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SI&quot;</span><span class="p">,</span>
+<span class="linenos">107</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.someinstitute.edu&quot;</span><span class="p">,</span>
+<span class="linenos">108</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">109</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+<span class="linenos">110</span>      <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;234 Main St.&quot;</span><span class="p">,</span>
+<span class="linenos">111</span>      <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
+<span class="linenos">112</span>      <span class="s2">&quot;addressRegion&quot;</span><span class="p">:</span> <span class="s2">&quot;ST&quot;</span><span class="p">,</span>
+<span class="linenos">113</span>      <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<span class="linenos">114</span>      <span class="s2">&quot;addressCountry&quot;</span><span class="p">:</span> <span class="s2">&quot;USA&quot;</span>
+<span class="linenos">115</span>    <span class="p">}</span>
+<span class="linenos">116</span>  <span class="p">}</span>
+<span class="linenos">117</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -776,7 +847,47 @@ spatial area served and parent organization.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/da8338889e4f8712cf2abb1c9015ab2cae482790c06a78171a6f884d17a97fc4.svg" src="../../_images/da8338889e4f8712cf2abb1c9015ab2cae482790c06a78171a6f884d17a97fc4.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3074</span><span class="o">/</span><span class="mf">1292778686.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span> 
+<span class="g g-Whitespace">    </span><span class="mi">298</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
+<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>         <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">355</span>             <span class="k">raise</span> <span class="n">JSONDecodeError</span><span class="p">(</span><span class="s2">&quot;Expecting value&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">err</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+
+<span class="nn">JSONDecodeError: Expecting property name enclosed</span> in <span class="ni">double quotes: line 55 column 9 </span><span class="nt">(char 1884)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <section id="references">
 <h3>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
@@ -813,7 +924,10 @@ spatial area served and parent organization.</p>
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../docs/maps.html"
@@ -833,7 +947,10 @@ spatial area served and parent organization.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -865,7 +982,7 @@ spatial area served and parent organization.</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -895,7 +1012,7 @@ By IODEPO
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -904,8 +1021,8 @@ By IODEPO
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
