@@ -32,7 +32,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import re
-import time, io, os
+import time, io, os, sys
 from datetime import datetime
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import letter
@@ -87,6 +87,7 @@ def main():
     # Initialize args  parser
     parser = argparse.ArgumentParser()
     parser.add_argument("-d", "--datagraph", help="datagraph to check")
+    parser.add_argument("-a", "--all", help="select all datagraphs to be checked")
     parser.add_argument("-s", "--shapegraph", help="shacl shape graph to use")
     parser.add_argument("-n", "--name", help="name of the validation run, spatial, core, funding")
 
@@ -94,6 +95,14 @@ def main():
     dgurl = args.datagraph
     sgurl = args.shapegraph
     valname = args.name
+
+    if args.datagraph is None and args.shapegraph is None:
+        print("One of datagraph or all must be provided so the datagraph(s) is/are available")
+        sys.exit(2)
+
+    if args.shapegraph is None or args.name is None:
+        print("check that both -s --shapegraph and -n --name are set")
+        sys.exit(2)
 
     # Get the public URLs from an object store as a source for the validation
     client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.

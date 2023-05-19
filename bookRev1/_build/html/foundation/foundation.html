@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Thematic Patterns" href="../thematics/README.html" />
+    <link rel="next" title="Thematic Patterns" href="../thematics/index.html" />
     <link rel="prev" title="Publisher" href="../publishing/publishing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -147,17 +147,17 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/README.html">
+  <a class="reference internal" href="../thematics/index.html">
    Thematic Patterns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/expinst/README.html">
+  <a class="reference internal" href="../thematics/expinst/index.html">
    Core 1: Experts and Institutions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/docs/README.html">
+  <a class="reference internal" href="../thematics/docs/index.html">
    Core 2a: Documents
   </a>
  </li>
@@ -172,27 +172,27 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/projects/README.html">
+  <a class="reference internal" href="../thematics/projects/index.html">
    Core 4: Projects
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/training/README.html">
+  <a class="reference internal" href="../thematics/training/index.html">
    Core 5: Training
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/vessels/README.html">
+  <a class="reference internal" href="../thematics/vessels/index.html">
    Core 6: Vessels
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/spatial/README.html">
+  <a class="reference internal" href="../thematics/spatial/index.html">
    Support 1: Spatial Geometry
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/services/README.html">
+  <a class="reference internal" href="../thematics/services/index.html">
    Support 2: Services
   </a>
  </li>
@@ -222,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/license/README.html">
+  <a class="reference internal" href="../thematics/license/index.html">
    Support 8: Licenses
   </a>
  </li>
@@ -244,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/cliDocker/README.html">
+  <a class="reference internal" href="../indexing/cliDocker/index.html">
    Gleaner CLI Docker
   </a>
  </li>
@@ -269,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/prov/README.html">
+  <a class="reference internal" href="../indexing/prov/index.html">
    Indexing Activity Prov
   </a>
  </li>
@@ -298,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../validation/README.html">
+  <a class="reference internal" href="../validation/index.html">
    Validation
   </a>
  </li>
@@ -742,7 +742,7 @@ a simplified version of a CreativeWork document. All the types used by OIH are d
 by <a class="reference external" href="http://Schema.org">Schema.org</a> types.  In this case it is <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>.</p>
 <p>At the <a class="reference external" href="http://Schema.org">Schema.org</a> site you will find extensive details on what the various types mean and
 the full range of their properties. For OIH we are defining only a few of these properties
-as of interest in the <a class="reference internal" href="../thematics/README.html"><span class="doc std std-doc">Thematic section</span></a>.  You are free to use additional
+as of interest in the <span class="xref myst">Thematic section</span>.  You are free to use additional
 properties to describe your resources.  It will not cause any issues, however, the OIH interfaces
 may not leverage them.  However, if you feel others would, or you use them yourself, it’s encouraged
 to add them.</p>
@@ -828,28 +828,6 @@ Below we can see the addition of the geosparql context in line 4 and the use of 
 <p>If we wanted to use other vocabularies like DCAT or FOAF, we would add them to the context with a
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
 following the same prefix:term pattern.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 4</span>      <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span>
-</span><span class="linenos"> 5</span>    <span class="p">},</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">10</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">12</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
-<span class="linenos">13</span>            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
-<span class="linenos">14</span>        <span class="p">},</span>
-<span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">16</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
-<span class="linenos">17</span>        <span class="p">}</span>
-<span class="linenos">18</span>    <span class="p">}</span>
-<span class="linenos">19</span><span class="p">}</span>
-<span class="linenos">20</span>  
-</pre></div>
-</div>
 </section>
 <section id="graph">
 <h2>Graph<a class="headerlink" href="#graph" title="Permalink to this headline">#</a></h2>
@@ -940,7 +918,7 @@ a property on the CreateWork type, starts with a lower case n.</p>
 <p>As noted, we are using <a class="reference external" href="http://Schema.org">Schema.org</a> type for OIH.  In this case, as mentioned,
 this is type  <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>.  So any of the properties
 seen at the <a class="reference external" href="http://Schema.org">Schema.org</a> site can be used.   The key properties of value to the OIH implementation can then
-be found, for this type, in the <a class="reference internal" href="../thematics/docs/README.html"><span class="doc std std-doc">Documents thematic type</span></a>.</p>
+be found, for this type, in the <span class="xref myst">Documents thematic type</span>.</p>
 <p>For the OIH implementation, we will use the following properties as core properties we
 want all OIH documents to have.  These include:</p>
 <blockquote>
@@ -1011,7 +989,7 @@ and URL, where URL is actually a sub-type of Text.</p>
             <p class="prev-next-title">Publisher</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../thematics/README.html" title="next page">
+    <a class='right-next' id="next-link" href="../thematics/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Thematic Patterns</p>
