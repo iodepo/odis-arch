@@ -1,0 +1,24 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:DataShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Dataset ;
+    sh:property [
+        sh:path schema:givenName ;
+        sh:datatype xsd:string ;
+        sh:name "given name" ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:in ( "female" "male" ) ;
+    ]
+    sh:property [
+        sh:path schema:license ;
+        sh:in ( "female" "male" ) ;
+    ] .
+

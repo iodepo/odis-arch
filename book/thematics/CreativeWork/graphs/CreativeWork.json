@@ -1,237 +1,288 @@
 {
     "@context": {
-      "@vocab": "https://schema.org/"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://myPIDs.org/pidToThisJsonDocument/",
     "@type": "CreativeWork",
-
-
+    "@id": "URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the CreativeWork that this JSON-LD document describes. To link to the CreativeWork itself, please use 'url' and/or 'identifier')",
     "about": "Text or controlled vocabulary/ontology, singly or as an array: The subject matter of this CreativeWork",
     "abstract": "Text: A descriptive summary of a CreativeWork",
-    "accessMode": [
-        "auditory",
-        "chartOnVisual",
-        "chemOnVisual",
-        "colorDependent",
-        "diagramOnVisual",
-        "mathOnVisual",
-        "musicOnVisual",
-        "tactile",
-        "textOnVisual",
-        "textual",
-        "visual"
-    ],
-    "accessModeSufficient": [
-        "auditory",
-        "chartOnVisual",
-        "chemOnVisual",
-        "colorDependent",
-        "diagramOnVisual",
-        "mathOnVisual",
-        "musicOnVisual",
-        "tactile",
-        "textOnVisual",
-        "textual",
-        "visual"
-    ],
-    "accessibilityHazard": [
-       "flashing",
-       "noFlashingHazard",
-       "motionSimulation",
-       "noMotionSimulationHazard",
-       "sound",
-       "noSoundHazard",
-       "unknown",
-       "none"
-    ],
+    "accessMode": "Text: The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the approved vocabulary https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary.",
+    "accessModeSufficient": {
+        "@type": "http://schema.org/ItemList",
+        "description": "An ItemList of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the approved vocabulary (https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary)."
+    },
+    "accessibilityHazard":"Text: A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the approved vocabulary. https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary",
     "accessibilitySummary": "Text: A textual summary of how this CreativeWork can be accessed, if there are any hazards associated with access, and related facts",
-    "accountablePerson": {
-        "@type": "Person",
-        "name": "Dr Uta Passow",
-        "givenName": "Uta",
-        "familyName": "Passow",
-        "url": "https://www.sample-data-repository.org/person/51317"
-    },
-    "acquireLicensePage": "https://urlToLicenseAcquisitionPage.org/",
+    "accountablePerson": {"@type": "https://schema.org/Person"},
+    "acquireLicensePage": [
+        "URL",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+    "aggregateRating": {"@type": "AggregateRating"},
     "alternativeHeadline": "Text: A secondary title of the CreativeWork.",
-    "archivedAt": "https://urlToResourceCreativeWorkIsArchivedAt.org/",
-    "audience": "Text: Text describing the audience the CreativeWork is intended for.",
-    "associatedMedia": {
-        "@type": "MediaObject",
-        "name": "Name of the media object encoding this CreativeWork",
-        "description": "A schema.org MediaObject, such as an image, video, or audio object embedded in a web page or a downloadable dataset, i.e. DataDownload. See [TODO: Add MediaObject support profile]"
-    },
-    "author": {
-        "@type": "Person",
-        "name": "Dr Uta Passow",
-        "givenName": "Uta",
-        "familyName": "Passow",
-        "url": "https://www.sample-data-repository.org/person/51317"
-    },
-
-    
+    "archivedAt": [
+        "URL",
+        {"@type": "https://schema.org/WebPage"}
+    ],
+    "assesses": [
+        "Text: Text to describe what (if anything) the CreativeWork described by this template assesses.",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "associatedMedia": {"@type": "https://schema.org/MediaObject"},
+    "audience": {"@type": "https://schema.org/Audience"},
+    "audio": [
+        {"@type": "https://schema.org/AudioObject"},
+        {"@type": "https://schema.org/Clip"},
+        {"@type": "https://schema.org/MusicRecording"}
+    ],
+    "author": {"@type": "https://schema.org/Person"},
+    "award": "Text: A description of an award won for this CreativeWork",
+    "character": {"@type": "https://schema.org/Person"},
     "citation": [
-        "Citation to other work relevant to this software",
-        "Citation to other work relevant to this software",
-        "Citation to other work relevant to this software"
+        "Text: A textual citation to other work relevant to this CreativeWork",
+        {"@type": "https://schema.org/CreativeWork"}
     ],
-
-    "contributor": {
-        "@type": "Organization",
-        "@id": "http://www.foo.org/orgID",
-        "legalName": "Some Institute"
-      },
-    "copyrightYear": "Number: 1999",
-    "countryOfOrigin": {
-        "@type": "Country",
-        "name": "Fiji"
-    },
+    "comment": "Text: A textual comment on the CreativeWork",
+    "commentCount": {"@type": "https://schema.org/Integer"},
+    "conditionsOfAccess": "Text: Description of conditions that affect the availability of, or method(s) of access to, an item.",
+    "contentLocation": {"@type": "https://schema.org/Place"},
+    "contentRating": [
+        "Text: Text stating the official rating for this CreativeWork",
+        {"@type": "https://schema.org/Rating"}
+    ],
+    "contentReferenceTime": {"@type": "https://schema.org/DateTime"},
+    "contributor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "copyrightHolder":  [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "copyrightNotice": "Text. Text of a notice appropriate for describing the copyright aspects of this Creative Work",
+    "copyrightYear": {"@type": "https://schema.org/Number"},
+    "correction": [
+        "Text:  description of a correction to the CreativeWork",
+        "URL",
+        {"@type": "https://schema.org/CorrectionComment"}
+    ],
+    "countryOfOrigin": {"@type": "https://schema.org/Country"},
+    "creativeWorkStatus": [
+        "Text: Description of the status of this CreativeWork in terms of its stage in a lifecycle",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
     "creator": [
-        {
-          "@type": "Person",
-          "@id": "http://lod.example-data-repository.org/id/person/51159",
-          "name": "Dr Langdon Quetin",
-          "url": "https://www.example-data-repository.org/person/51159"
-        },
-        {
-          "@type": "Person",
-          "@id": "http://lod.example-data-repository.org/id/person/51160",
-          "name": "Dr Robin Ross",
-          "url": "https://www.example-data-repository.org/person/51160"
-        }
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
     ],
-      
-
-    "dateCreated": "2019-03-21",
-    "dateModified" : "2019-03-21",
-    "datePublished": "2019-03-21",
-    "discussionUrl" : "http://LinkToPage/with/comments/about/this/work",
-    "editor" : {
-        "@type": "Person",
-        "name" : "Person name"
-    },
-    
-    "educationalLevel" : "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
-    "encoding" : {
-        "@type" : "MediaObject",
-        "description" : "A media object that encodes this CreativeWork.  Such as video, etc."
-    },
-    "encodingFormat" : "application/zip ",
-    "exampleOfWork" :{
-        "@type" : "CreativeWork",
-        "description" : "A creative work that this work is an example/instance/realization/derivation of"
-    },
-    "expires" : "2019-03-21",
-    "funder" : {
-        "@type": "Person",
-        "name" : "Person name"
-    },
-    "funding" : {
-        "@type": "Grant",
-        "name" : "Name of grant that supports this creativework"
-    },
-    "genre" : "Genre of the creative work, broadcast channel or group.",
-    "hasPart" : {
-        "@type" : "CreativeWork",
-        "description" : "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).Inverse property: isPartOf"
-    },
-    "headline" : "Headline of the article",
-    "inLanguage" : {
-        "@type": "Language",
-        "name": "Spanish",
-        "alternateName": "es"
-      },
-
-      "isAccessibleForFree" : "True",
-      "isBasedOn": {
-        "@type" : "CreativeWork",
-        "description" : "A resource from which this work is derived or from which it is a modification or adaption"
-    },
-    "isPartOf": {
-        "@type" : "CreativeWork",
-        "description" : "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.Inverse property: hasPart"
-    },
-    "locationCreated" : {
-        "@type": "Place",
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 39.3280,
-          "longitude": 120.1633
-        }
-    },
-    "mainEntity" : "Thing",
-    "maintainer" : {
-        "@type": "Person",
-        "name" : "Person name"
-    },
-    "mentions" : "Thing Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept",
+    "creditText": "Text: Text used to credit person(s) and/or organization(s) associated with this CreativeWork",
+    "dateCreated": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "dateModified": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "datePublished": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "discussionUrl": "URL",
+    "editEIDR": [
+        "Text:  A statement on the EIDR (Entertainment Identifier Registry) identifier representing a specific edit / edition for a work of film or television.",
+        "URL"
+    ],
+    "editor": {"@type": "https://schema.org/Person"},
+    "educationalAlignment": {"@type": "https://schema.org/AlignmentObject"},
+    "educationalLevel": [
+        "Text: The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+        "URL",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "educationalUse": [
+        "Text:  Description of the purpose of this CreativeWork in the context of education",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "encoding": {"@type": "https://schema.org/MediaObject"},
+    "encodingFormat": [
+        "Text: Textual description of the media type typically expressed using a MIME format (see IANA site [http://www.iana.org/assignments/media-types/media-types.xhtml] and MDN reference [https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types]), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc. ",
+        "URL"
+    ],
+    "exampleOfWork": {"@type": "https://schema.org/CreativeWork"},
+    "expires": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "funder": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "funding": {"@type": "https://schema.org/Grant"},
+    "genre": [
+        "Text: Genre of the creative work, broadcast channel or group.",
+        "URL"
+    ],
+    "hasPart": {"@type": "https://schema.org/CreativeWork"},
+    "headline": "Text: Headline of the article",
+    "inLanguage": [
+        "Text: The language of the content or performance or used in an action.",
+        {"@type": "https://schema.org/Language"}
+    ],
+    "interactionStatistic": {"@type": "https://schema.org/InteractionCounter"},
+    "interactivityType": "Text: The predominant mode of learning supported by the learning resource",
+    "interpretedAsClaim": {"@type": "https://schema.org/Claim"},
+    "isAccessibleForFree": {"@type": "https://schema.org/Boolean"},
+    "isBasedOn": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/Product"},
+        "URL"
+    ],
+    "isFamilyFriendly": {"@type": "https://schema.org/Boolean"},
+    "isPartOf": [
+        {"@type": "https://schema.org/CreativeWork"},
+        "URL"
+    ],
+    "keywords": [
+        "Text: Keywords or tags used to describe the CreativeWork.",
+        {"@type": "https://schema.org/DefinedTerm"},
+        "URL"
+    ],
+    "learningResourceType": [
+        "Text: The predominant type or kind characterizing the learning resource.",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "license": [
+        "URL",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+    "locationCreated": {"@type": "https://schema.org/Place"},
+    "mainEntity": {"@type": "https://schema.org/Thing"},
+    "maintainer":  [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "material": [
+        {"@type": "https://schema.org/Product"},
+        "Text: A material that something is made from, e.g. leather, wool, cotton, paper.",
+        "URL"
+    ],
+    "materialExtent": [
+        {"@type": "https://schema.org/QuantitativeValue"},
+        "Text: The quantity of the materials being described or an expression of the physical space they occupy"
+    ],
+    "mentions": {"@type": "https://schema.org/Thing"},
     "offers": [
-        {
-            "@type": "Offer",
-            "name": "name of offer"
-        },
-        {
-            "@type": "Demand",
-            "name": "name of demand"
-        }
+        {"@type": "https://schema.org/Offer"},
+        {"@type": "https://schema.org/Demand"}
     ],
-
-
-
-    "keywords": {
-        "@type": "DefinedTerm",
-        "inDefinedTermSet": {
-          "@type": "DefinedTermSet",
-          "name": "Name of the set",
-          "description": "Description of the set",
-          "url": "url for the set"
-        },
-        "termCode": "A code that identifies this DefinedTerm within a DefinedTermSet"
-      },
-      "license": "http://spdx.org/licenses/CC0-1.0",
-      "publisher": {
-        "@id": "https://www.publishingrus.org",
-        "@type": "Organization",
-        "legalName": "Some Institute"
-      }, 
-      "provider": {
-        "@id": "https://www.repositoryB.org",
-        "@type": "Organization",
-        "legalName": "Sample Data Repository Office",
-        "name": "SDRO",
-        "sameAs": "http://www.re3data.org/repository/r3dxxxxxxxxx",
-        "url": "https://www.sample-data-repository.org"
-      },
+    "pattern": [
+        "Text: Text which states the pattern that the CreativeWork has, for example 'polka dot', 'striped', 'Canadian flag'",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "position": [
+        "Integer: An integer which expresses the position of an item in a series or sequence of items.",
+        "Text: A textual description of the position of an item in a series or sequence of items."
+    ],
+    "producer": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "provider": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "publication": {"@type": "https://schema.org/PublicationEvent"},
+    "publisher": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "publisherImprint": {"@type": "https://schema.org/Organization"},
+    "publishingPrinciples": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/URL"}
+    ],
+    "recordedAt": {"@type": "https://schema.org/Event"},
+    "releasedEvent": {"@type": "https://schema.org/PublicationEvent"},
+    "review": {"@type": "https://schema.org/Review"},
+    "schemaVersion": [
+        "Text",
+        "URL"
+    ],
+    "sdDatePublished": {"@type": "https://schema.org/Date"},
+    "sdLicense": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/URL"}
+    ],
+    "sdPublisher": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "size": "Text: Text indicating the phyiscal size of the CreativeWork (if appropriate). DefinedTerm or QuantitativeValue or SizeSpecification are also valid Types",
+    "sourceOrganization":  {"@type": "https://schema.org/Organization"},
+    "spatial":  {"@type": "https://schema.org/Place"},
+    "spatialCoverage": {"@type": "https://schema.org/Place"},
+    "sponsor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "teaches": [
+        {"@type": "https://schema.org/DefinedTerm"},
+        "Text"
+    ],
+    "temporal": "A more general property for any time-related information about this CreativeWork. This can be expressed as text or using the properties associated with the DateTime Type",
+    "temporalCoverage": [
+        {"@type": "https://schema.org/DateTime"},
+        "Text",
+        "URL"
+    ],
+    "text": "Text: The textual content of this CreativeWork.",
+    "thumbnail": {"@type": "https://schema.org/ImageObject"},
+    "thumbnailUrl": "URL",
+    "timeRequired": {"@type": "https://schema.org/Duration"},
+    "translationOfWork": {"@type": "https://schema.org/CreativeWork"},
+    "translator":[
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "typicalAgeRange": "Text: The typical expected age range, e.g. '7-9', '11-'.",
+    "usageInfo":[
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/URL"}
+    ],
+    "version": ["https://schema.org/Text", "https://schema.org/Number"],
+    "video": [
+        {"@type": "https://schema.org/Clip"},
+        {"@type": "https://schema.org/VideoObject"}
+    ],
+    "workExample": {"@type": "https://schema.org/CreativeWork"},
+    "workTranslation": {"@type": "https://schema.org/CreativeWork"},
 
 
     
-    "additionalType": "https://myPIDs.org/pidToMyAdditionalType/",
-    "alternateName": "Thing 1",
-    "description": "Free text or a URL to a description of this Thing.",
-    "disambiguatingDescription": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation",
-    "identifier": {
-        "@type": "PropertyValue",
-        "propertyID": "https://registry.identifiers.org/registry/myIdentifier/",
-        "value": "xyz",
-        "url": "https://myIdentifier.org/xyz",
-        "description": "Text: Optional description of this identifier, see [TODO: ADD URI TO IDENTIFER PATTERN] for more guidance on sharing identifieres."
-      },
-    "image": "https://myPIDs.org/pidToImageOfThisThing/",
-    "mainEntityOfPage": "https://www.urlToPageWhichIsMainlyAboutThisThing.com/",
-    "name": "Thing One",
-    "potentialAction": {
-        "@type": "Action",
-        "description": "Text: Description of Action which this Thing could potentially participate in. See [TODO:ADD LINK TO ACTION PATTERN] for how to add more structured metadata to Action. ",
-        "name": "Text: Name of Action that this Thing could potentially participate in"        
-      },
-    "sameAs":
-        [
-            "https://myPIDs.org/pidToAnotherWebResourceAboutThisThing/",
-            "https://myPIDs.org/pidToYetAnotherWebResourceAboutThisThing/"
-        ],
-    "subjectOf": [
-        "https://myPIDs.org/pidToCreativeWorkAboutThisThing/",
-        "https://myPIDs.org/pidToEventAboutThisThing/"
-    ],
-    "url": "https://www.urlToPageAboutThisThing.com/"
-  }
+    "additionalType": [
+        "Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.",
+        "URL"
+      ],
+      "alternateName": "Text: An alternative name for this Thing.",
+      "description": "Text: Free text which describes this Thing.",
+      "disambiguatingDescription": "Text: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation",
+      "identifier": [
+          {"@type": "https://schema.org/PropertyValue"},
+          "Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+          "URL"
+      ],
+      "image": [
+          "URL",
+          {"@type": "https://schema.org/ImageObject"}
+      ],
+      "mainEntityOfPage": [
+        "URL",
+        {"@type": "https://schema.org/CreativeWork"}
+      ],
+      "name": "Text: The name of the item.",
+      "potentialAction": {"@type": "https://schema.org/Action"},
+      "sameAs": "URL",
+      "subjectOf": "URL",
+      "url": "URL - the URL to the item described by this JSON-LD document"
+}

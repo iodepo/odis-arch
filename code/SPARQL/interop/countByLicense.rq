@@ -1,0 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemax: <http://schema.org/>
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+
+
+SELECT ?type (COUNT( DISTINCT ?s) AS ?count)
+WHERE {
+    ?s schema:license ?o .
+    ?s a ?type .
+}
+GROUP BY ?type  ORDER BY DESC(?count)

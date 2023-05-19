@@ -1,0 +1,52 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemax: <http://schema.org/>
+PREFIX bds: <http://www.bigdata.com/rdf/search#>
+
+SELECT ?s  ?type ?g ?desc
+WHERE {
+    {
+        graph ?g {
+            ?s ?p ?a .
+            ?s a ?type .
+
+            VALUES ?a {
+                "Algeria" "Angola" "Benin" "Botswana" "Burkina Faso"
+                "Burundi" "Cabo Verde" "Cameroon" "Central African Republic (CAR)"
+                "Chad" "Comoros" "Democratic Republic of the Congo" "Republic of the Congo"
+                "Cote d'Ivoire" "Djibouti" "Egypt" "Equatorial Guinea" "Eritrea" "Eswatini"
+                "Ethiopia" "Gabon" "Gambia" "Ghana" "Guinea" "Guinea-Bissau" "Kenya" "Lesotho"
+                "Liberia" "Libya" "Madagascar" "Malawi" "Mali" "Mauritania" "Mauritius"
+                "Morocco" "Mozambique" "Namibia" "Niger" "Nigeria" "Rwanda" "Sao Tome and Principe"
+                "Senegal" "Seychelles" "Sierra Leone" "Somalia" "South Africa" "South Sudan" "Sudan"
+                "Tanzania" "Togo" "Tunisia" "Uganda" "Zambia" "Zimbabwe"
+            }
+        }
+    }
+    UNION {
+        graph ?g {
+            ?s schema:description ?desc .
+            ?s a ?type .
+            FILTER (regex(?desc, ?a, "i"))
+
+            VALUES ?a {
+                "Algeria" "Angola" "Benin" "Botswana" "Burkina Faso"
+                "Burundi" "Cabo Verde" "Cameroon" "Central African Republic (CAR)"
+                "Chad" "Comoros" "Democratic Republic of the Congo" "Republic of the Congo"
+                "Cote d'Ivoire" "Djibouti" "Egypt" "Equatorial Guinea" "Eritrea" "Eswatini"
+                "Ethiopia" "Gabon" "Gambia" "Ghana" "Guinea" "Guinea-Bissau" "Kenya" "Lesotho"
+                "Liberia" "Libya" "Madagascar" "Malawi" "Mali" "Mauritania" "Mauritius"
+                "Morocco" "Mozambique" "Namibia" "Niger" "Nigeria" "Rwanda" "Sao Tome and Principe"
+                "Senegal" "Seychelles" "Sierra Leone" "Somalia" "South Africa" "South Sudan" "Sudan"
+                "Tanzania" "Togo" "Tunisia" "Uganda" "Zambia" "Zimbabwe"
+            }
+        }
+    }
+}
+LIMIT 1000

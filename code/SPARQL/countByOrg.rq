@@ -1,0 +1,19 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemaold: <http://schema.org/>
+
+SELECT   ( COUNT(?hm) as ?count) ?wat  ?orgname ?domain
+WHERE
+{
+   ?hm prov:wasAttributedTo ?wat .
+   ?wat rdf:name ?orgname .
+   ?wat rdfs:seeAlso ?domain
+}
+GROUP BY ?wat ?orgname ?domain 
+ORDER BY DESC(?count)

@@ -1,0 +1,20 @@
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX schemaold: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX shema: <https://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+
+# explicate spatial doesn't scope the use of NER for spatial concepts
+SELECT ( COUNT(?p) as ?count) ?p
+WHERE
+{
+   ?s ?p ?o
+   FILTER ( ?p IN (schema:location,schema:spatialCoverage,geosparql:hasGeometry) )
+}
+GROUP BY ?p
+ORDER BY DESC(?count)

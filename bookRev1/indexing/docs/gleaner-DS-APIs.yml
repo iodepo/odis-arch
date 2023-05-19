@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  mercantile:
+    image: fils/mercantile:latest
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mercantile.entrypoints=http"
+      - "traefik.http.routers.mercantile.rule=Host(`api.foo.org`)"
+        #- "traefik.http.routers.mercantile.rule=(Host(`foo.org`) && Path(`/query`)"
+      - "traefik.http.middlewares.mercantile-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.mercantile.middlewares=mercantile-https-redirect"
+      - "traefik.http.routers.mercantile-secure.entrypoints=https"
+      - "traefik.http.routers.mercantile-secure.rule=Host(`api.foo.org`)"
+        #- "traefik.http.routers.mercantile-secure.rule=(Host(`foo.org`) && Path(`/query`)"
+      - "traefik.http.routers.mercantile-secure.tls=true"
+      - "traefik.http.routers.mercantile-secure.tls.certresolver=http"
+      - "traefik.http.routers.mercantile-secure.service=mercantile"
+      - "traefik.http.middlewares.mercantile-secure.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST"
+      - "traefik.http.middlewares.mercantile-secure.headers.accesscontrolalloworigin=*"
+      - "traefik.http.middlewares.mercantile-secure.headers.accesscontrolmaxage=200"
+      - "traefik.http.middlewares.mercantile-secure.headers.addvaryheader=true"
+      - "traefik.http.middlewares.mercantile-secure.headers.accesscontrolallowcredentials=true"
+      - "traefik.http.middlewares.mercantile-secure.headers.accesscontrolallowheaders=*"
+        #- "traefik.http.middlewares.mercantile-secure.headers.accesscontrolallowheaders=Authorization,Origin,Content-Type,Accept"
+      - "traefik.http.middlewares.mercantile-secure.headers.customresponseheaders.Access-Control-Allow-Headers=*"
+        #- "traefik.http.middlewares.mercantile-secure.headers.customresponseheaders.Access-Control-Allow-Headers=hx-target,hx-request,Authorization,Origin,Content-Type,Accept"
+      - "traefik.http.routers.mercantile-secure.middlewares=mercantile-secure@docker" 
+      - "traefik.http.services.mercantile.loadbalancer.server.port=8080"
+      - "traefik.docker.network=traefik_default"
+    networks:
+      - traefik_default
+
+  koop:
+    image: fils/koop:1.0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.koop.entrypoints=http"
+      - "traefik.http.routers.koop.rule=Host(`spatial.foo.org`)"
+      - "traefik.http.middlewares.koop-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.koop.middlewares=koop-https-redirect"
+      - "traefik.http.routers.koop-secure.entrypoints=https"
+      - "traefik.http.routers.koop-secure.rule=Host(`spatial.foo.org`)"
+      - "traefik.http.routers.koop-secure.tls=true"
+      - "traefik.http.routers.koop-secure.tls.certresolver=http"
+      - "traefik.http.routers.koop-secure.service=koop"
+      - "traefik.http.services.koop.loadbalancer.server.port=9000"
+      - "traefik.docker.network=traefik_default"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+
