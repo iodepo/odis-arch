@@ -108,17 +108,28 @@ def main():
     client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.
     urls = publicurls(client, "public", "graph")
 
-    #  need to parse out the name from the release graph and the base name of the shacl shape used
+    if args.all:
+        print("do them all")
+        for url in urls:
+            setup(url, sgurl, valname)
+    else:
+        #  need to parse out the name from the release graph and the base name of the shacl shape used
+        print("single source mode")
+        setup(dgurl, sgurl, valname)
+
+def setup(dgurl, sgurl, valname):
+    print("{} {} {}".format(dgurl, sgurl, valname))
+
     pattern = r"summoned(.*?)_v1"
     match = re.search(pattern, dgurl)  # Use re.search() to extract the text between "summoned" and "_v1"
     source = "unknown"
 
     if match:
-       # Access the matched text using group(1)
-       source = match.group(1)
+        # Access the matched text using group(1)
+        source = match.group(1)
     else:
-       print("No match found.")
-       raise "unable to match on provider name via regex"
+        print("No match found.")
+        raise "unable to match on provider name via regex"
 
     now = datetime.now()
     date_time = now.strftime("%m-%d-%Y-%H-%M-%S")

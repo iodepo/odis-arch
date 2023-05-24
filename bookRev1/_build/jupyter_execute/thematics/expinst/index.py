@@ -28,7 +28,7 @@
 # of resources between OIH participants.   
 # 
 # 
-# ```{literalinclude} https://raw.githubusercontent.com/iodepo/odis-in/master/dataGraphs/thematics/expinst/graphs/person.json
+# ```{literalinclude} ../../../book/thematics/expinst/graphs/person.json
 # :linenos:
 # :emphasize-lines: 5-7, 10, 27-32
 # ```
@@ -45,7 +45,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/person.json") as dgraph:
+with open("../../../book/thematics/expinst/graphs/person.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -56,7 +56,7 @@ compacted = jsonld.compact(doc, context)
 jbutils.show_graph(compacted)
 
 
-# ### Details: Indentifier
+# ### Details: Identifier
 # 
 # For each profile there are a few key elements we need to know about.  One
 # key element is what the authoritative reference or canonical identifier is for 

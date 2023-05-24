@@ -620,8 +620,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#details-indentifier">
-     Details: Indentifier
+    <a class="reference internal nav-link" href="#details-identifier">
+     Details: Identifier
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -652,7 +652,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#details-indentifier">
      Details: Indentifier
     </a>
    </li>
@@ -693,8 +693,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#details-indentifier">
-     Details: Indentifier
+    <a class="reference internal nav-link" href="#details-identifier">
+     Details: Identifier
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -725,7 +725,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#details-indentifier">
      Details: Indentifier
     </a>
    </li>
@@ -768,6 +768,65 @@ Any of the properties of Person seen there are valid to use in such a record.</p
 with this documentation is provide a simple example that address some of the search
 and discovery goals of OIH along with those properties most useful in the linking
 of resources between OIH participants.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>  <span class="p">},</span>
+<span class="hll"><span class="linenos"> 5</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/x&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
+</span><span class="linenos"> 8</span>  <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">&quot;workLocation&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+</span><span class="linenos">11</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;54 Ocean Drive, 23521 Ocean City, CountryName&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Place name&quot;</span>
+<span class="linenos">13</span>  <span class="p">},</span>
+<span class="linenos">14</span>  <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>  <span class="s2">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">17</span>    <span class="p">{</span>
+<span class="linenos">18</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
+<span class="linenos">19</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Invasive species in brackish water&quot;</span>
+<span class="linenos">20</span>    <span class="p">},</span>
+<span class="linenos">21</span>    <span class="p">{</span>
+<span class="linenos">22</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">23</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q183368&quot;</span>
+<span class="linenos">24</span>    <span class="p">},</span>
+<span class="linenos">25</span>    <span class="p">{</span>
+<span class="linenos">26</span>      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/x&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">27</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;In this course ...&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to the course&quot;</span>
+</span><span class="hll"><span class="linenos">30</span>    <span class="p">}</span>
+</span><span class="hll"><span class="linenos">31</span>  <span class="p">],</span>
+</span><span class="hll"><span class="linenos">32</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">33</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
+<span class="linenos">34</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">35</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/orcid&quot;</span><span class="p">,</span>
+<span class="linenos">36</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
+<span class="linenos">37</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of this record...&quot;</span>
+<span class="linenos">38</span>  <span class="p">},</span>
+<span class="linenos">39</span>  <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">40</span>    <span class="p">{</span>
+<span class="linenos">41</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+<span class="linenos">42</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span>
+<span class="linenos">43</span>    <span class="p">},</span>
+<span class="linenos">44</span>    <span class="p">{</span>
+<span class="linenos">45</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">46</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;</span><span class="p">,</span>
+<span class="linenos">47</span>      <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;UN/LOCODE Code List by Country and Territory&quot;</span><span class="p">,</span>
+<span class="linenos">48</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span>
+<span class="linenos">49</span>      <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;FJ&quot;</span>
+<span class="linenos">50</span>    <span class="p">}</span>
+<span class="linenos">51</span>  <span class="p">],</span>
+<span class="linenos">52</span>  <span class="s2">&quot;knowsLanguage&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">53</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Language&quot;</span><span class="p">,</span>
+<span class="linenos">54</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
+<span class="linenos">55</span>    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span>
+<span class="linenos">56</span>  <span class="p">}</span>
+<span class="linenos">57</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -779,7 +838,7 @@ of resources between OIH participants.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../book/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -792,22 +851,17 @@ of resources between OIH participants.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">158547954.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/person.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<img alt="../../_images/index_1_1.svg" src="../../_images/index_1_1.svg" /></div>
 </div>
-</div>
-<section id="details-indentifier">
-<h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this headline">#</a></h3>
+<section id="details-identifier">
+<h3>Details: Identifier<a class="headerlink" href="#details-identifier" title="Permalink to this headline">#</a></h3>
 <p>For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for
 a resource.</p>
@@ -852,7 +906,7 @@ a resource.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">3969797554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3969797554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -912,7 +966,7 @@ nationality are for our use case.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">3844744660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3844744660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -980,7 +1034,7 @@ array [] syntax.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">2772367364.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">2772367364.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1039,7 +1093,7 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">1256779678.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">1256779678.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1100,7 +1154,7 @@ basic properties you can provide with confidence.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">3685700979.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3685700979.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1113,8 +1167,8 @@ basic properties you can provide with confidence.</p>
 </div>
 </div>
 </section>
-<section id="id1">
-<h3>Details: Indentifier<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="details-indentifier">
+<h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this headline">#</a></h3>
 <p>For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for
 a resource.</p>
@@ -1160,7 +1214,7 @@ a resource.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2121155</span><span class="o">/</span><span class="mf">1160506554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">1160506554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
