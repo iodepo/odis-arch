@@ -43,6 +43,10 @@ Make sure to go to the "Namespace" tab first and make sure the OIH namespace is 
 
 There are examples of SPARQL queries at  https://github.com/iodepo/odis-arch/tree/master/code/SPARQL
 
+Use https://www.w3.org/TR/sparql11-overview/ and https://www.w3.org/TR/2013/REC-sparql11-query-20130321/ 
+as guides to SPARQL.
+
+
 ### Notes
 
 * Use of the ```LIMIT 1000``` directive allows you to set a number of records, here 1000, to return.  This can be useful
