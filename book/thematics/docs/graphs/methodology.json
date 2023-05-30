@@ -46,6 +46,10 @@
         {"@type": "https://schema.org/DefinedTerm"},
         "URL"
     ],  
+  "citation": [
+        "Text: A textual citation to other work relevant to this CreativeWork",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
   "additionalProperty":
     [
      { 
@@ -57,7 +61,7 @@
       { 
         "@type": "PropertyValue",
         "propertyID": "method type",
-        "description": "Enter the the type of methodology described, for example standard operating procedure, guide, manual, standar specification, or best practice.",
+        "description": "Enter the the type of methodology described, for example standard operating procedure, guide, manual, standard specification, or best practice. For items declared as best practices, please provide 1) a statement of under what circumstances the method is the 'best' choice (in the schema:description field/property) and 2) valid links to documented and publicly available evidence showing how the method performs better than others in the relevant application scenario (in the schema:citations field/property).",
         "value": "Text"
       }, 
       { 
