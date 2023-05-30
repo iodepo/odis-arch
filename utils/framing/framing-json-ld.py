@@ -105,7 +105,6 @@ for jsonldfile in glob.glob(os.path.join(PATH_TO_SOURCE_DATA_FOLDER, '*.jsonld')
         
         #write the new JSON-LD file to output folder
         with open(PATH_TO_OUTPUT_DATA_FOLDER + filename, 'w') as outfile:
-            #outfile.write(str(framed))
             outfile.write(json.dumps(framed, indent=2))
             fileNum+=1            
                     
