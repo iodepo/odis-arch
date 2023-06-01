@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "QuantitativeValue",
+  "@id": "URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the QuantitativeValue that this JSON-LD document describes. To link to the QuantitativeValue itself, please use 'url' and/or 'identifier')",
+  
+  "additionalProperty": {"@type": "https://schema.org/PropertyValue"},
+  "maxValue": {"@type": "https://schema.org/Number"},
+  "minValue": {"@type": "https://schema.org/Number"},
+  "unitCode": [
+      "Text: The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL",
+      "URL"
+  ],
+  "unitText": "Text: A string or text indicating the unit of measurement",
+  "value": [
+    "Text: The value of this QuantitativeValue. The recommended type is https://schema.org/Number. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+    {"@type": "https://schema.org/Boolean"},
+    {"@type": "https://schema.org/Number"},
+    {"@type": "https://schema.org/StructuredValue"}
+],
+  "valueReference" : [
+      "Text: A secondary value that provides additional information on the original value, e.g. a reference temperature or a type of measurement.",
+      {"@type": "https://schema.org/DefinedTerm"},
+      {"@type": "https://schema.org/Enumeration"},
+      {"@type": "https://schema.org/MeasurementTypeEnumeration"},
+      {"@type": "https://schema.org/PropertyValue"},
+      {"@type": "https://schema.org/QuantitativeValue"},
+      {"@type": "https://schema.org/StructuredValue"}
+      
+  ],
+  
+  "additionalType": [
+    "Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.",
+    "URL"
+  ],
+  "alternateName": "Text: An alternative name for this Thing.",
+  "description": "Text: Free text which describes this Thing.",
+  "disambiguatingDescription": "Text: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation",
+  "identifier": [
+      {"@type": "https://schema.org/PropertyValue"},
+      "Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+      "URL"
+  ],
+  "image": [
+      "URL",
+      {"@type": "https://schema.org/ImageObject"}
+  ],
+  "mainEntityOfPage": [
+    "URL",
+    {"@type": "https://schema.org/CreativeWork"}
+  ],
+  "name": "Text: The name of the item.",
+  "potentialAction": {"@type": "https://schema.org/Action"},
+  "sameAs": "URL",
+  "subjectOf": "URL",
+  "url": "URL - the URL to the item described by this JSON-LD document"
+}
