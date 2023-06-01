@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JSON-LD Foundation &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -722,9 +721,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="json-ld-foundation">
+  <div class="tex2jax_ignore mathjax_ignore section" id="json-ld-foundation">
 <h1>JSON-LD Foundation<a class="headerlink" href="#json-ld-foundation" title="Permalink to this headline">#</a></h1>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>JSON-LD is a way of encoding Linked Data in JSON, the popular data interchange
 format used by many web APIs. Linked Data is a method of representing information
@@ -798,8 +797,8 @@ this is describing a resource of type <code class="docutils literal notranslate"
 start with an uppercase letter.  The property <code class="docutils literal notranslate"><span class="pre">name</span></code> is a property of the type and
 properties like this will be lowercase.</p>
 </div>
-</section>
-<section id="the-context">
+</div>
+<div class="section" id="the-context">
 <h2>The Context<a class="headerlink" href="#the-context" title="Permalink to this headline">#</a></h2>
 <p>The context is where the terms used in a document are connected to definitions and identifiers for them.
 If you wish to dive into the details of the context check out the
@@ -828,8 +827,8 @@ Below we can see the addition of the geosparql context in line 4 and the use of 
 <p>If we wanted to use other vocabularies like DCAT or FOAF, we would add them to the context with a
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
 following the same prefix:term pattern.</p>
-</section>
-<section id="graph">
+</div>
+<div class="section" id="graph">
 <h2>Graph<a class="headerlink" href="#graph" title="Permalink to this headline">#</a></h2>
 <p>The next section we will discuss is the graph part of the document seen in lines 5-9 below.  This is where the properties and
 values of our resource are described.</p>
@@ -847,7 +846,7 @@ values of our resource are described.</p>
 </div>
 <p>First though, let’s visit a couple special properties in our
 document.</p>
-<section id="node-identifiers-id">
+<div class="section" id="node-identifiers-id">
 <h3>Node identifiers (&#64;id)<a class="headerlink" href="#node-identifiers-id" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
 <span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -876,8 +875,8 @@ a Linked Open Data approach and are generally not recommended.</p>
 <p>The &#64;id should be the URL for the metadata record itself.  Not the HTML page the record is in.  However,
 these might be the same if use use content negotiation to select between HTML and JSON-LD representations
 of the record.</p>
-</section>
-<section id="type-identifiers-type">
+</div>
+<div class="section" id="type-identifiers-type">
 <h3>Type identifiers (&#64;type)<a class="headerlink" href="#type-identifiers-type" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
 <span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -899,8 +898,8 @@ types will be all lower case.  So, CreateWork, as a type, starts with a upper ca
 a property on the CreateWork type, starts with a lower case n.</p>
 </div>
 <p>For OIH these type for the various thematic profiles are defined in the documentation for the types.</p>
-</section>
-<section id="other-properties">
+</div>
+<div class="section" id="other-properties">
 <h3>Other properties<a class="headerlink" href="#other-properties" title="Permalink to this headline">#</a></h3>
 <p>At this point we can return to look at the other properties for our type.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
@@ -926,8 +925,8 @@ want all OIH documents to have.  These include:</p>
 <p>description:  A description of the document or item being described</p>
 <p>url: A URL for the document or item being described.</p>
 </div></blockquote>
-</section>
-<section id="domain-and-range">
+</div>
+<div class="section" id="domain-and-range">
 <h3>Domain and range<a class="headerlink" href="#domain-and-range" title="Permalink to this headline">#</a></h3>
 <p>The domain of a property identifies the type of object it can be applied to.<br />
 So if the domain of a property like <a class="reference external" href="https://schema.org/knowsAbout">schema.org/knowsAbout</a>
@@ -939,8 +938,8 @@ can point to a Text, Thing or URL object.</p>
 <p>In <a class="reference external" href="http://schema.org">schema.org</a>, the domain will be identified as “Used on these types”, and the
 range will be identified as “Values expected to be one of these types”.  You can see
 this at the <a class="reference external" href="https://schema.org/knowsAbout">schema.org/knowsAbout</a> page.</p>
-</section>
-<section id="thing-and-datatype">
+</div>
+<div class="section" id="thing-and-datatype">
 <h3>Thing and DataType<a class="headerlink" href="#thing-and-datatype" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference external" href="https://schema.org/Thing">Thing</a> and <a class="reference external" href="https://schema.org/DataType">Datatype</a> types
 are two special types we should mention.  Thing is the upper level and most generic
@@ -951,9 +950,9 @@ as the value of that property.</p>
 A DataType includes things like Integers, Strings, DateTime, etc.  So, using again
 knowsAbout, we see the range includes not only Thing by also the DataTypes Text
 and URL, where URL is actually a sub-type of Text.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

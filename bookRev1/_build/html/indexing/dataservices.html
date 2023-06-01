@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Services &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -598,7 +597,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="data-services">
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-services">
 <h1>Data Services<a class="headerlink" href="#data-services" title="Permalink to this headline">#</a></h1>
 <p>The typical functional goal of this work is the development and use of a Graph that can be accessed via a triplestore (Graph Database).  To do that we need a set of additional containers to support this and expose these services on the web through a single domain with https support.</p>
 <ul class="simple">
@@ -607,40 +606,34 @@ An S3 compliant object store supporting S3 APIs including S3Select.  For open so
 <li><p>Graph Database</p></li>
 <li><p>Web Router (technically optional)</p></li>
 </ul>
-<section id="gleaner-data-services-ds">
+<div class="section" id="gleaner-data-services-ds">
 <h2>Gleaner Data Services (DS)<a class="headerlink" href="#gleaner-data-services-ds" title="Permalink to this headline">#</a></h2>
 <p>If you wish to work with a triplestore and wish to use the default app used by OIH
 you can use the compose file that sets up the Gleaner Data Services environment.</p>
 <p>This adds the Blazegraph triplestore to the configuration along with the object store.</p>
 <p>The details of the OIH data services are found in the
 <a class="reference internal" href="#"><span class="doc std std-doc">Data Services</span></a> section.</p>
-<figure class="align-default" id="gleaner-ds">
+<div class="figure align-default" id="gleaner-ds">
 <img alt="../_images/gleaner2.png" src="../_images/gleaner2.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Gleaner Data Service Activity Workflow</span><a class="headerlink" href="#gleaner-ds" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Gleaner Data Service Activity Workflow</span><a class="headerlink" href="#gleaner-ds" title="Permalink to this image">#</a></p>
+</div>
 <p>Typically, a user would wish to run the full Gleaner DS stack which supports
 both the indexing process and the serving of the resulting data warehouse and graph
 database capacity.</p>
 <p>Combined, these would then look like the following where the indexing and
 data services shared a common object store.</p>
-<figure class="align-default" id="gleaner-isds">
+<div class="figure align-default" id="gleaner-isds">
 <img alt="../_images/gleaner3.png" src="../_images/gleaner3.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Gleaner Indexing and Data Service Combined</span><a class="headerlink" href="#gleaner-isds" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="object-store-pattern">
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Gleaner Indexing and Data Service Combined</span><a class="headerlink" href="#gleaner-isds" title="Permalink to this image">#</a></p>
+</div>
+<div class="section" id="object-store-pattern">
 <h3>Object store pattern<a class="headerlink" href="#object-store-pattern" title="Permalink to this headline">#</a></h3>
 <p>Within in the object store the following digital object pattern is used.<br />
 This is based on the work of the RDA Digital Fabric working group.</p>
-<figure class="align-default" id="gleaner-do">
+<div class="figure align-default" id="gleaner-do">
 <img alt="../_images/do.png" src="../_images/do.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Gleaner Digital Object Pattern</span><a class="headerlink" href="#gleaner-do" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Gleaner Digital Object Pattern</span><a class="headerlink" href="#gleaner-do" title="Permalink to this image">#</a></p>
+</div>
 <p>At this point the graph and data warehouse (object store) can be exposed to the net for use by clients such as jupyter notebooks or direct client calls to the S3 object APIs and SPARQL endpoint.</p>
 <p>Gleaner Data Services (DS) Environment Variables
 The Docker Compose file used to launch the Gleaner DS has a set of configurable elements that can be set and passed to the orchestration system with environment variables.</p>
@@ -786,9 +779,9 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 <p>NOTE:  DS also needs the object -&gt; graph sync (via Nabu)
 NOTE:  Should also add in (here or to the side) the ELT local Data Lake to Data Warehouse path (ala CSDCO VaultWalker)</p>
 <p><img alt="" src="../_images/do1.png" /></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

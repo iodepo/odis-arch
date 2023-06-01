@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Source and Prov Approaches &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -766,9 +765,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="source-and-prov-approaches">
+  <div class="tex2jax_ignore mathjax_ignore section" id="source-and-prov-approaches">
 <h1>Source and Prov Approaches<a class="headerlink" href="#source-and-prov-approaches" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This section will present an identifer discussion and then focus
 on approaches publishers can use to provide more source and provenance
@@ -786,7 +785,7 @@ Thing.  That is, these properties can be used on any <a class="reference externa
 <p>The others have their domain and range values listed.  All these
 properties work on CreativeWork. So they are all valid for that type
 and subtypes like Dataset and Map.</p>
-<section id="example-graph">
+<div class="section" id="example-graph">
 <h3>Example Graph<a class="headerlink" href="#example-graph" title="Permalink to this headline">#</a></h3>
 <p>The following example graph shows some of the properties we can use
 to provide source and provenance information about a resource.</p>
@@ -816,7 +815,7 @@ to provide source and provenance information about a resource.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">2740123178.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">2740123178.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -828,8 +827,8 @@ to provide source and provenance information about a resource.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="identifier">
+</div>
+<div class="section" id="identifier">
 <h3>identifier<a class="headerlink" href="#identifier" title="Permalink to this headline">#</a></h3>
 <p>This is the main subject of the start of this section.  Please
 refer there for details on this property.</p>
@@ -875,7 +874,7 @@ refer there for details on this property.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">3734262416.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">3734262416.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -887,21 +886,21 @@ refer there for details on this property.</p>
 </div>
 </div>
 </div>
-<section id="propertyid">
+<div class="section" id="propertyid">
 <h4>propertyID<a class="headerlink" href="#propertyid" title="Permalink to this headline">#</a></h4>
 <p>A commonly used identifier for the characteristic represented by the property, e.g. a manufacturer or a standard code for a property. propertyID can be (1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific id of the property), or (3) a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry). Standards bodies should promote a standard prefix for the identifiers of properties from their standards.</p>
-</section>
-<section id="value">
+</div>
+<div class="section" id="value">
 <h4>value<a class="headerlink" href="#value" title="Permalink to this headline">#</a></h4>
 <p>The value of the quantitative value or property value node. For PropertyValue,
 it can be ‘Text;’, ‘Number’, ‘Boolean’, or ‘StructuredValue’.</p>
-</section>
-<section id="url-pointing-to-type-url">
+</div>
+<div class="section" id="url-pointing-to-type-url">
 <h4>url (pointing to type URL)<a class="headerlink" href="#url-pointing-to-type-url" title="Permalink to this headline">#</a></h4>
 <p>URL of the item.</p>
-</section>
-</section>
-<section id="provider">
+</div>
+</div>
+<div class="section" id="provider">
 <h3>provider<a class="headerlink" href="#provider" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="http://schema.org/provider">schema.org/provider</a></p>
 <blockquote>
@@ -955,7 +954,7 @@ data available.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">3258158611.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">3258158611.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -967,8 +966,8 @@ data available.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="publisher">
+</div>
+<div class="section" id="publisher">
 <h3>publisher<a class="headerlink" href="#publisher" title="Permalink to this headline">#</a></h3>
 <p>See: <a class="reference external" href="https://schema.org/publisher">schema.org/publisher</a></p>
 <p>The publisher is defined as “The publisher of the creative work”.  This is
@@ -1016,7 +1015,7 @@ by the structured metadata.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">3518272496.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">3518272496.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1028,8 +1027,8 @@ by the structured metadata.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="sameas">
+</div>
+<div class="section" id="sameas">
 <h3>sameAs<a class="headerlink" href="#sameas" title="Permalink to this headline">#</a></h3>
 <p>See: <a class="reference external" href="https://schema.org/sameAs">schema.org/sameAs</a></p>
 <p>The sameAs property links a Thing to a URL.  It is expected that the
@@ -1083,7 +1082,7 @@ logically consistent to point to multiple sameAs resources.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">1457396557.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">1457396557.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1095,8 +1094,8 @@ logically consistent to point to multiple sameAs resources.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="isbasedon">
+</div>
+<div class="section" id="isbasedon">
 <h3>isBasedOn<a class="headerlink" href="#isbasedon" title="Permalink to this headline">#</a></h3>
 <p>See: <a class="reference external" href="https://schema.org/isBasedOn">schema.org/isBasedOn</a></p>
 <p>Where sameAs is used to link to the canonical URL of the resource, isBasedOn
@@ -1104,8 +1103,8 @@ provides a means to link derivative works to the original resource this new
 resources is based on.</p>
 <p>The isBasedOn property can be used to link to multiple resources if more
 than one was used in the generation of this new resource.</p>
-</section>
-<section id="subjectof-and-inverse-about">
+</div>
+<div class="section" id="subjectof-and-inverse-about">
 <h3>subjectOf and inverse about<a class="headerlink" href="#subjectof-and-inverse-about" title="Permalink to this headline">#</a></h3>
 <p>See: <a class="reference external" href="https://schema.org/subjectOf">schema.org/subjectOf</a></p>
 <p>The property subjectOf of can be used to indicate a resource that is related to
@@ -1159,7 +1158,7 @@ The property about can be used to:</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127391</span><span class="o">/</span><span class="mf">302652605.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606355</span><span class="o">/</span><span class="mf">302652605.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1171,9 +1170,9 @@ The property about can be used to:</p>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="references">
+</div>
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <div class="docutils container" id="id3">
 <dl class="citation">
@@ -1185,8 +1184,8 @@ The property about can be used to:</p>
 </dd>
 </dl>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

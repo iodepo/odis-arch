@@ -53,7 +53,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/gleaner.json") as dgraph:
+with open("../../../odis-in/dataGraphs/indexing/prov/graphs/gleaner.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -104,7 +104,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/nanoprov.json") as dgraph:
+with open("../../../odis-in/dataGraphs/indexing/prov/graphs/nanoprov.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

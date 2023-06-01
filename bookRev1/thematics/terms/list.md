@@ -69,7 +69,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/map.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/terms/graphs/map.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -178,7 +178,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/term.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/terms/graphs/map.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

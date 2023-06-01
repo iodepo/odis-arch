@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vessels &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -682,9 +681,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="vessels">
+  <div class="tex2jax_ignore mathjax_ignore section" id="vessels">
 <h1>Vessels<a class="headerlink" href="#vessels" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>OIH is exploring how we might leverage <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.<br />
 Note that <a class="reference external" href="http://schema.org">schema.org</a> is a very broad vocabulary and as such specific concepts
@@ -742,7 +741,7 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127577</span><span class="o">/</span><span class="mf">1945030229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">1945030229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -754,7 +753,7 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 </div>
 </div>
 </div>
-<section id="details-indentifier">
+<div class="section" id="details-indentifier">
 <h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this headline">#</a></h3>
 <p>For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for
@@ -801,7 +800,7 @@ a resource.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127577</span><span class="o">/</span><span class="mf">2630206018.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">2630206018.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -813,8 +812,8 @@ a resource.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="details-subjectof">
+</div>
+<div class="section" id="details-subjectof">
 <h3>Details: subjectOf<a class="headerlink" href="#details-subjectof" title="Permalink to this headline">#</a></h3>
 <p>Like SOS, we are recommending the use of subjectOf to link a simple
 <a class="reference external" href="http://Schema.org">Schema.org</a> type to a more detailed metadata description record.  This
@@ -862,7 +861,7 @@ domain specific metadata records.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127577</span><span class="o">/</span><span class="mf">3651073199.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">3651073199.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -874,9 +873,9 @@ domain specific metadata records.</p>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="references">
+</div>
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://vocab.ices.dk/?ref=315">ICES</a></p></li>
@@ -888,8 +887,8 @@ domain specific metadata records.</p>
 <li><p><a class="reference external" href="https://www.eurofleets.eu/">EuroFleets</a></p></li>
 <li><p>Identifiers to use include NOCD Code, Call Sign, ICES Shipcode, MMSI Code, IMO Code</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

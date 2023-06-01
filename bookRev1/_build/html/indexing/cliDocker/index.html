@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gleaner CLI Docker &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -634,23 +633,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="gleaner-cli-docker">
+  <div class="tex2jax_ignore mathjax_ignore section" id="gleaner-cli-docker">
 <h1>Gleaner CLI Docker<a class="headerlink" href="#gleaner-cli-docker" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This is a new approach for quick starts with Gleaner.  It is a script that exposes
 a containerized version of Gleaner as a CLI interface.</p>
 <p>You can use the -init flag to pull down all the support files you need including
 the Docker Compose file for setting up the object store, a triplestore and
 the support for headless indexing.</p>
-</section>
-<section id="prerequisites">
+</div>
+<div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <p>You need Docker installed.  Later, to work with the results and load them into a
 triplestore, you will also need an S3 compatible client.  We will use the Minio
 client, mc, for this.</p>
-</section>
-<section id="steps">
+</div>
+<div class="section" id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <p>Download the script <a class="reference external" href="http://gleanerDocker.sh">gleanerDocker.sh</a> from <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/tree/master/docs/cliDocker">https://github.com/earthcubearchitecture-project418/gleaner/tree/master/docs/cliDocker</a> You may need to make it run-able with</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/master/docs/cliDocker/gleanerDocker.sh
@@ -750,8 +749,8 @@ millers.go:80: Miller end time: <span class="m">2021</span>-08-15 <span class="m
 millers.go:81: Miller run time: <span class="m">0</span>.024649 
 </pre></div>
 </div>
-</section>
-<section id="working-with-results">
+</div>
+<div class="section" id="working-with-results">
 <h2>Working with results<a class="headerlink" href="#working-with-results" title="Permalink to this headline">#</a></h2>
 <p>If all has gone well, at this point you have downloaded the JSON-LD documents into Minio or
 some other object store.Next we will install a client that we can use to work with these objects.</p>
@@ -788,8 +787,8 @@ to container isolation.</p>
 </pre></div>
 </div>
 <p>You can explore mc and see how to copy and work with the object store.</p>
-</section>
-<section id="loading-to-the-triplestore">
+</div>
+<div class="section" id="loading-to-the-triplestore">
 <h2>Loading to the triplestore<a class="headerlink" href="#loading-to-the-triplestore" title="Permalink to this headline">#</a></h2>
 <p>As part of our Docker compose file we also spun up a triplestore.  Let’s use that now.</p>
 <p>Now Download the <a class="reference external" href="http://minio2blaze.sh">minio2blaze.sh</a> script.</p>
@@ -833,8 +832,8 @@ we should see something like:</p>
 <p><img alt="Blazegrah" src="../../_images/simplequery.png" /></p>
 <p>You can explore more about SPARQL and the wide range of queries you can do with it
 at the W3C <a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1 Query Language</a> reference.</p>
-</section>
-<section id="conclusion">
+</div>
+<div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
 <p>We have attempted here to give a quick introduction to the use of Gleaner in a Docker
 environment.  This is a very simple example, but it should give you an idea of the approach
@@ -844,8 +843,8 @@ at the <a class="reference external" href="https://github.com/gleanerio">Gleaner
 <blockquote>
 <div><p>Note: The plan is to merge the <a class="reference external" href="http://Gleaner.io">Gleaner.io</a> GitHub repository into the first.</p>
 </div></blockquote>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

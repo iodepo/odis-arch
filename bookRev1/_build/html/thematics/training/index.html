@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Training &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -678,9 +677,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="training">
+  <div class="tex2jax_ignore mathjax_ignore section" id="training">
 <h1>Training<a class="headerlink" href="#training" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>A thematic type to describe potential training activities.  In <a class="reference external" href="http://Schema.org">Schema.org</a> a Course
 is a subtype of <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> and <a class="reference external" href="https://schema.org/LearningResource">LearningResource</a>.</p>
@@ -693,8 +692,8 @@ educational course is a sequence of one or more educational events and/or
 creative works which aims to build knowledge, competence or ability of learners.</p>
 </div></blockquote>
 <p>We can start by looking at a basic Course description.</p>
-</section>
-<section id="simple-course">
+</div>
+<div class="section" id="simple-course">
 <h2>Simple Course<a class="headerlink" href="#simple-course" title="Permalink to this headline">#</a></h2>
 <p>A basic course might simply present the name and description of the course along
 with a few other key properties.</p>
@@ -724,7 +723,7 @@ with a few other key properties.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127541</span><span class="o">/</span><span class="mf">3647673430.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606500</span><span class="o">/</span><span class="mf">3647673430.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/course2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -756,8 +755,8 @@ connect resources.   If there was no existing Organization or Person resource yo
 simply create one here.   However, you may also find it useful to create a given
 resource and link to it in the graph.</p>
 </div>
-</section>
-<section id="detailed-course">
+</div>
+<div class="section" id="detailed-course">
 <h2>Detailed Course<a class="headerlink" href="#detailed-course" title="Permalink to this headline">#</a></h2>
 <p>There are a wide range of properties that can be used to describe a course.
 Many of these can be seen at the <a class="reference external" href="https://schema.org/Course">Course</a> type as
@@ -791,7 +790,7 @@ from <a class="reference external" href="https://schema.org/LearningResource">Le
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127541</span><span class="o">/</span><span class="mf">854608498.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606500</span><span class="o">/</span><span class="mf">854608498.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/course1.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -819,8 +818,8 @@ dates in a format that is in line with the [XML Datatype] and in particular the
 <p>By doing this we can then later conduct searches on the graph that use date ranges
 to allow us to find courses, or any resources, that are being taught in a
 given time period.</p>
-</section>
-<section id="references">
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.rd-alliance.org/groups/education-and-training-handling-research-data.html">RDA Education and Training on handling of research data IG
@@ -844,8 +843,8 @@ given time period.</p>
 <li><p><a class="reference external" href="https://catalogue.odis.org/search/type=16">https://catalogue.odis.org/search/type=16</a></p></li>
 <li><p><a class="reference external" href="https://clmeplus.org/">https://clmeplus.org/</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

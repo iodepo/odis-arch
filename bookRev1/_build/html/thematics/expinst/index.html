@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experts and Institutions &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -746,9 +745,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="experts-and-institutions">
+  <div class="tex2jax_ignore mathjax_ignore section" id="experts-and-institutions">
 <h1>Experts and Institutions<a class="headerlink" href="#experts-and-institutions" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This thematic type provides a way to describe the experts and institutions.
 In this case the following definitions are used:</p>
@@ -756,8 +755,8 @@ In this case the following definitions are used:</p>
 <div><p>Expert:  A person who has a deep understanding of a particular subject area.</p>
 <p>Institution: A group of people working together to provide a particular service.</p>
 </div></blockquote>
-</section>
-<section id="example-person-graph">
+</div>
+<div class="section" id="example-person-graph">
 <h2>Example: Person Graph<a class="headerlink" href="#example-person-graph" title="Permalink to this headline">#</a></h2>
 <p>The following graph present a basic record we might use for a person.<br />
 We will break down some of the key properties used in this graph.</p>
@@ -858,9 +857,9 @@ Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra
 Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
-<img alt="../../_images/index_1_1.svg" src="../../_images/index_1_1.svg" /></div>
+<img alt="../../_images/index_1_11.svg" src="../../_images/index_1_11.svg" /></div>
 </div>
-<section id="details-identifier">
+<div class="section" id="details-identifier">
 <h3>Details: Identifier<a class="headerlink" href="#details-identifier" title="Permalink to this headline">#</a></h3>
 <p>For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for
@@ -879,7 +878,7 @@ a resource.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -904,22 +903,33 @@ a resource.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3969797554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/person.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;Optional description of this record...&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/orcid&quot;,
+        &quot;url&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_3_21.svg" src="../../_images/index_3_21.svg" /></div>
 </div>
 </div>
-</section>
-<section id="details-nationality">
+<div class="section" id="details-nationality">
 <h3>Details: nationality<a class="headerlink" href="#details-nationality" title="Permalink to this headline">#</a></h3>
 <p>Nationality provide connections to languages a person is
 connected with.  The property, <a class="reference external" href="https://schema.org/nationality">schema.org/nationality</a>,
@@ -939,7 +949,7 @@ nationality are for our use case.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -964,19 +974,36 @@ nationality are for our use case.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3844744660.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/person.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;nationality&quot;: [
+        {
+            &quot;@type&quot;: &quot;Country&quot;,
+            &quot;name&quot;: &quot;Fiji&quot;
+        },
+        {
+            &quot;@type&quot;: &quot;DefinedTerm&quot;,
+            &quot;inDefinedTermSet&quot;: &quot;UN/LOCODE Code List by Country and Territory&quot;,
+            &quot;name&quot;: &quot;Fiji&quot;,
+            &quot;termCode&quot;: &quot;FJ&quot;,
+            &quot;url&quot;: &quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;
+        }
+    ]
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_5_21.svg" src="../../_images/index_5_21.svg" /></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -986,8 +1013,8 @@ These will be uniquely identified in the graph, however, in the construction of 
 this is a common blank node and results in the double arrows pointing to an underscore.
 This is a visualization issue and not a proper representation of the graph structure.</p>
 </div>
-</section>
-<section id="details-knowslanguage">
+</div>
+<div class="section" id="details-knowslanguage">
 <h3>Details: knowsLanguage<a class="headerlink" href="#details-knowslanguage" title="Permalink to this headline">#</a></h3>
 <p>Knows about provide connections to languages a person is
 connected with.  The property, <a class="reference external" href="https://schema.org/knowsLanguage">schema.org/knowsLanguage</a>,
@@ -1007,7 +1034,7 @@ array [] syntax.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -1032,22 +1059,31 @@ array [] syntax.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">2772367364.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/person.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;knowsLanguage&quot;: {
+        &quot;@type&quot;: &quot;Language&quot;,
+        &quot;alternateName&quot;: &quot;es&quot;,
+        &quot;name&quot;: &quot;Spanish&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_7_21.svg" src="../../_images/index_7_21.svg" /></div>
 </div>
 </div>
-</section>
-<section id="details-knows-about">
+<div class="section" id="details-knows-about">
 <h3>Details: Knows About<a class="headerlink" href="#details-knows-about" title="Permalink to this headline">#</a></h3>
 <p>Knows about provide connections to resources a person is
 connected with.  The property, <a class="reference external" href="https://schema.org/knowsAbout">schema.org/knowsAbout</a>,
@@ -1066,7 +1102,7 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -1091,27 +1127,47 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">1256779678.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/person.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;knowsAbout&quot;: [
+        {
+            &quot;@type&quot;: &quot;Text&quot;,
+            &quot;description&quot;: &quot;Invasive species in brackish water&quot;
+        },
+        {
+            &quot;@type&quot;: &quot;URL&quot;,
+            &quot;url&quot;: &quot;https://www.wikidata.org/wiki/Q183368&quot;
+        },
+        {
+            &quot;@id&quot;: &quot;https://example.org/id/course/x&quot;,
+            &quot;@type&quot;: &quot;Course&quot;,
+            &quot;description&quot;: &quot;In this course ...&quot;,
+            &quot;url&quot;: &quot;URL to the course&quot;
+        }
+    ]
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_9_21.svg" src="../../_images/index_9_21.svg" /></div>
 </div>
 </div>
-</section>
-</section>
-<section id="example-institution-graph">
+</div>
+<div class="section" id="example-institution-graph">
 <h2>Example: Institution Graph<a class="headerlink" href="#example-institution-graph" title="Permalink to this headline">#</a></h2>
 <p>Here we have an example of an data graph for type <a class="reference external" href="https://schema.org/Organization">schema.org/Organization</a>.<br />
 For the identifier we are using the a GRID, but this could also be something like a ROR.</p>
-<section id="on-the-property-membership">
+<div class="section" id="on-the-property-membership">
 <h3>On the property membership<a class="headerlink" href="#on-the-property-membership" title="Permalink to this headline">#</a></h3>
 <p>Line 18-29 show the inclusion of a <a class="reference external" href="https://schema.org/member">schema.org/member</a>
 property.  There are issues to note here both for consumers (aggregators) and
@@ -1139,7 +1195,7 @@ basic properties you can provide with confidence.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -1152,22 +1208,17 @@ basic properties you can provide with confidence.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">3685700979.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/organization.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<img alt="../../_images/index_11_1.svg" src="../../_images/index_11_1.svg" /></div>
 </div>
 </div>
-</section>
-<section id="details-indentifier">
+<div class="section" id="details-indentifier">
 <h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this headline">#</a></h3>
 <p>For each profile there are a few key elements we need to know about.  One
 key element is what the authoritative reference or canonical identifier is for
@@ -1186,7 +1237,7 @@ a resource.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -1212,23 +1263,34 @@ a resource.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127364</span><span class="o">/</span><span class="mf">1160506554.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/organization.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://index.example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
+        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
+    }
+}
+</pre></div>
+</div>
+<img alt="../../_images/index_13_2.svg" src="../../_images/index_13_2.svg" /></div>
 </div>
 </div>
-</section>
-</section>
-<section id="references">
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://schema.org/Person">schema:Person</a></p></li>
@@ -1242,8 +1304,8 @@ a resource.</p>
 </ul>
 </li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

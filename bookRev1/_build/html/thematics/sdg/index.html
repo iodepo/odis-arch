@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Linking to documents and resources &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -706,7 +705,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="linking-to-documents-and-resources">
+  <div class="tex2jax_ignore mathjax_ignore section" id="linking-to-documents-and-resources">
 <h1>Linking to documents and resources<a class="headerlink" href="#linking-to-documents-and-resources" title="Permalink to this headline">#</a></h1>
 <p>Leveraging the ability to link between resources can serve many goals.  We may
 wish to demonstrate connections between people and courses they have taken or
@@ -722,7 +721,7 @@ the goals of an organization when they are searching for or assessing them.</p>
 publisher and provider of the creative work</em>.   This is mostly to connect these
 works with the responsible party associated with them but may also serve to
 connect to the principles they are associated with.</p>
-<section id="organization-link-options">
+<div class="section" id="organization-link-options">
 <h2>Organization link options<a class="headerlink" href="#organization-link-options" title="Permalink to this headline">#</a></h2>
 <p>In the following section we will look at three different options for expressing
 links between an organization and resources that describe the policy and
@@ -756,7 +755,7 @@ predicates.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127467</span><span class="o">/</span><span class="mf">451987433.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">451987433.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -768,7 +767,7 @@ predicates.</p>
 </div>
 </div>
 </div>
-<section id="subjectof">
+<div class="section" id="subjectof">
 <h3>subjectOf<a class="headerlink" href="#subjectof" title="Permalink to this headline">#</a></h3>
 <p>Lets take a look at subjectOf.  In this case we are using subjectOf to express
 a connection to a UN SDG.  This, subjectOf, could also be used to connect
@@ -825,7 +824,7 @@ context of the range of subjectOf.   Reference thematic type <span class="xref m
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127467</span><span class="o">/</span><span class="mf">2520452864.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2520452864.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -837,8 +836,8 @@ context of the range of subjectOf.   Reference thematic type <span class="xref m
 </div>
 </div>
 </div>
-</section>
-<section id="publishingprinciples">
+</div>
+<div class="section" id="publishingprinciples">
 <h3>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">#</a></h3>
 <p>Lets take a look at <a class="reference external" href="https://schema.org/publishingPrinciples">publishingPrinciples</a>.  This can be used
 to connect CreativeWork, Organization, or Person to either of CreativeWork or URL.  So this
@@ -886,7 +885,7 @@ use cases where resources can be grouped based on their connection to those prin
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127467</span><span class="o">/</span><span class="mf">2263592434.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2263592434.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -898,9 +897,9 @@ use cases where resources can be grouped based on their connection to those prin
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="sustainable-development-goals">
+</div>
+</div>
+<div class="section" id="sustainable-development-goals">
 <h2>Sustainable Development Goals<a class="headerlink" href="#sustainable-development-goals" title="Permalink to this headline">#</a></h2>
 <p>The following example provides an an approach to connecting
 Sustainable Development Goals
@@ -938,7 +937,7 @@ connections carry a bit more semantic meaning.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127467</span><span class="o">/</span><span class="mf">2957463720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2957463720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -950,7 +949,7 @@ connections carry a bit more semantic meaning.</p>
 </div>
 </div>
 </div>
-<section id="citation">
+<div class="section" id="citation">
 <h3>citation<a class="headerlink" href="#citation" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/citation">citation</a> provides a way to link to another creative work.
 This property can be pointed to either Text or CreativeWork.  It should also be noted that citation
@@ -1001,7 +1000,7 @@ cite or reference another creative work.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127467</span><span class="o">/</span><span class="mf">730609211.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">730609211.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -1013,17 +1012,17 @@ cite or reference another creative work.</p>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="refs">
+</div>
+</div>
+<div class="section" id="refs">
 <h2>Refs<a class="headerlink" href="#refs" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000000_">SDGs</a></p></li>
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00000001">SDG targets</a></p></li>
 <li><p><a class="reference external" href="http://www.ontobee.org/ontology/SDGIO?iri=http%3A%2F%2Fpurl.unep.org%2Fsdg%2FSDGIO_00000003">SDG indicators</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

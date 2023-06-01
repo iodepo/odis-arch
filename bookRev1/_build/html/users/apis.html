@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>APIs &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -608,23 +607,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="apis">
+  <div class="tex2jax_ignore mathjax_ignore section" id="apis">
 <h1>APIs<a class="headerlink" href="#apis" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>The Ocean InfoHub graph is accessible through several approaches.<br />
 The graph is implemented in RDF and expressed through a standards compliant triplestore.</p>
 <p>This triplestore exposes a SPARQL endpoint that can be queried using the <a class="reference external" href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL 1.1 Query Language</a>.
 To do this you can visit a web based query interface as discussed in other sections of this document.</p>
 <p>It is also possible to access this service following RESTful principles.</p>
-</section>
-<section id="sparql-http-protocol">
+</div>
+<div class="section" id="sparql-http-protocol">
 <h2>SPARQL HTTP Protocol<a class="headerlink" href="#sparql-http-protocol" title="Permalink to this headline">#</a></h2>
 <p>One approach to this RESTful approach is to use the
 <a class="reference external" href="https://www.w3.org/TR/2013/REC-sparql11-http-rdf-update-20130321/">SPARQL 1.1 Graph Store HTTP Protocol</a>.
 This is a simple HTTP protocol that allows you to query the graph using SPARQL and obtain the results in JSON.</p>
 <p>The OIH triplestore exposes the graph following this pattern for queries.</p>
-<section id="examples">
+<div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode <span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span> -H <span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
 </pre></div>
@@ -676,9 +675,9 @@ axios library (<a class="reference external" href="https://axios-http.com/">http
       <span class="p">});</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

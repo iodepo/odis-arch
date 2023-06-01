@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keywords and Defined Terms &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -712,9 +711,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="keywords-and-defined-terms">
+  <div class="tex2jax_ignore mathjax_ignore section" id="keywords-and-defined-terms">
 <h1>Keywords and Defined Terms<a class="headerlink" href="#keywords-and-defined-terms" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This section is looking at how the keywords could be connected
 with Defined Terms that point to external vocabularies that follow
@@ -735,8 +734,8 @@ or
 work at ESIP.   Reference <a class="reference external" href="https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset.md">Describing a Dataset</a>
 for the latest on their recommendations.</p>
 </div>
-</section>
-<section id="keywords">
+</div>
+<div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/keywords">keywords</a> property of <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a> can point to three different values.
 These are: <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>, <a class="reference external" href="https://schema.org/Text">Text</a> and <a class="reference external" href="https://schema.org/URL">URL</a>.</p>
@@ -782,7 +781,7 @@ text keyword.  The other two are defined as a <a class="reference external" href
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127523</span><span class="o">/</span><span class="mf">1214556816.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606482</span><span class="o">/</span><span class="mf">1214556816.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -794,7 +793,7 @@ text keyword.  The other two are defined as a <a class="reference external" href
 </div>
 </div>
 </div>
-<section id="text">
+<div class="section" id="text">
 <h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">#</a></h3>
 <p>Keywords can be defined as a <a class="reference external" href="https://schema.org/Text">Text</a> value.  This is the most common approach though
 it doesn’t provide some of the benefits of the other two approaches.  For example, it doesn’t allow for terms to
@@ -819,14 +818,14 @@ use an approach like {“term1, term2, term4”} you have only created a single 
 that is viewed as a single string in the graph.   The [] notation creates an array of strings all connected to the subject IRI
 by the property <em>keywords</em>.</p>
 </div>
-</section>
-<section id="url">
+</div>
+<div class="section" id="url">
 <h3>URL<a class="headerlink" href="#url" title="Permalink to this headline">#</a></h3>
 <p>Keywords can also point to a URL.  This provides a way to link to a vocabulary entry that defines the term.  This approach
 has some benefits of linking to more details but does easily provide an easy descriptive text for humans.  There is nothing
 preventing putting in a text keyword followed up by another entry with a related URL.</p>
-</section>
-<section id="definedterm">
+</div>
+<div class="section" id="definedterm">
 <h3>DefinedTerm<a class="headerlink" href="#definedterm" title="Permalink to this headline">#</a></h3>
 <p>This is the most complex approach.  Keywords can point to a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a> as
 defined in a <a class="reference external" href="https://schema.org/DefinedTermSet">DefinedTermSet</a> pointed to by
@@ -834,9 +833,9 @@ the property <a class="reference external" href="https://schema.org/inDefinedTer
 focused textual name and description of the term.  This is a great way to link to a vocabulary entry that defines the term.
 It also allows for a URL to be used to link to the vocabulary entry.   While this approach is the most comprehensive, it does
 incur a complexity during the query process to extract and present the information.</p>
-</section>
-</section>
-<section id="defined-terms">
+</div>
+</div>
+<div class="section" id="defined-terms">
 <h2>Defined Terms<a class="headerlink" href="#defined-terms" title="Permalink to this headline">#</a></h2>
 <p>During generation of the structured data a provide may wish to
 either use or publish a set of controlled vocabulary terms or
@@ -885,7 +884,7 @@ reference.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2127523</span><span class="o">/</span><span class="mf">1462988128.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606482</span><span class="o">/</span><span class="mf">1462988128.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/term.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
@@ -897,15 +896,15 @@ reference.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="references">
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://schema.org/DefinedTerm">schema.org/DefinedTerm</a></p></li>
 <li><p><a class="reference external" href="https://schema.org/DefinedTermSet">schema.org/DefinedTermSet</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

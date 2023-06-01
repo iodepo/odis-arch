@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Known Issues &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -628,19 +627,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="known-issues">
+  <div class="tex2jax_ignore mathjax_ignore section" id="known-issues">
 <h1>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This document will collect some of the various issues we have encounter in publishing
 the JSON-LD documents.</p>
-<section id="control-characters-in-url-string-for-sitemap-or-in-the-json-ld-documents">
+<div class="section" id="control-characters-in-url-string-for-sitemap-or-in-the-json-ld-documents">
 <h3>control characters in URL string for sitemap or in the JSON-LD documents<a class="headerlink" href="#control-characters-in-url-string-for-sitemap-or-in-the-json-ld-documents" title="Permalink to this headline">#</a></h3>
 <p>Make sure there are no control characters such as new line, carriage returns,
 tabs or others in the document.  These can be problematic both for processing and
 display.</p>
-</section>
-<section id="context-is-a-map-changed-from-1-0">
+</div>
+<div class="section" id="context-is-a-map-changed-from-1-0">
 <h3>context is a map (changed from 1.0)<a class="headerlink" href="#context-is-a-map-changed-from-1-0" title="Permalink to this headline">#</a></h3>
 <p>Be sure to use a context style like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -649,20 +648,20 @@ display.</p>
 </pre></div>
 </div>
 <p>The context section must be a map starting in JSON-LD 1.1</p>
-</section>
-<section id="data-graphs-need-id">
+</div>
+<div class="section" id="data-graphs-need-id">
 <h3>data graphs need &#64;id<a class="headerlink" href="#data-graphs-need-id" title="Permalink to this headline">#</a></h3>
 <p>Be sure to include an &#64;id in your graph that points to the identifier or the
 web address of the resource providing the metadata.  This is not the material the
 metadata is about, but rather the metadata record itself.</p>
-</section>
-<section id="string-literals-must-be-valid">
+</div>
+<div class="section" id="string-literals-must-be-valid">
 <h3>string literals must be valid<a class="headerlink" href="#string-literals-must-be-valid" title="Permalink to this headline">#</a></h3>
 <p>The string literals must be sure to not have quotation marks or other invalid
 characters without escaping or encoding them.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

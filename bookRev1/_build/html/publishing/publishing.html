@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publisher &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -724,9 +723,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="publisher">
+  <div class="tex2jax_ignore mathjax_ignore section" id="publisher">
 <h1>Publisher<a class="headerlink" href="#publisher" title="Permalink to this headline">#</a></h1>
-<section id="about">
+<div class="section" id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
 <p>This page describes the publishing process for structured data
 on the web approach OIH will use.</p>
@@ -738,7 +737,7 @@ implement this approach.  See the section:
 <p>We also recommend reviewing the document:
 <a class="reference external" href="https://docs.google.com/document/d/1fay3uIqIO2rljVBTk6Sk6i1I3yRnVecn-UTl3JKXLnw/edit">Schema.org for Research Data Managers: A Primer</a></p>
 </div>
-<section id="architecture-implementation">
+<div class="section" id="architecture-implementation">
 <h3>Architecture Implementation<a class="headerlink" href="#architecture-implementation" title="Permalink to this headline">#</a></h3>
 <p>The Ocean Info Hub (OIH) will leverage structured data on the web and web
 architecture patterns to expose metadata about resources of interest to the
@@ -774,8 +773,8 @@ against the authored JSON-LD documents.</p></li>
 </ul>
 <p>Information on the sources, standards and vocabularies to be used can be found
 at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
-</section>
-<section id="including-json-ld-in-your-resource-page">
+</div>
+<div class="section" id="including-json-ld-in-your-resource-page">
 <h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Permalink to this headline">#</a></h3>
 <p>To provide detailed and semantically described details on a resource, OIH uses
 a <a class="reference external" href="https://json-ld.org/">JSON-LD</a> snippet or <em>data graph</em>.  This small document
@@ -821,7 +820,7 @@ being developed reference
 the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/book/thematics">Thematic section</a>.</p>
 <p>These JSON-LD documents leverage <a class="reference external" href="http://schema.org">schema.org</a> as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.</p>
-<section id="json-ld-tools-and-references">
+<div class="section" id="json-ld-tools-and-references">
 <h4>JSON-LD Tools and References<a class="headerlink" href="#json-ld-tools-and-references" title="Permalink to this headline">#</a></h4>
 <p>A key resource for JSON-LD can be found at <a class="reference external" href="https://json-ld.org/">JSON-LD</a>.
 There is also an interactive <em>playground</em> hosted there.  The <a class="reference external" href="https://json-ld.org/playground/">JSON-LD
@@ -835,8 +834,8 @@ will also allow for that sort of testing and feedback.</p>
 <p>Providers may also wish to provide content negotiation for type application/ld+json
 for these resources. Some indexers,  like Gleaner, will attempt to negotiate for
 the specific serialization and this will likely lighten the load on the servers going forward.</p>
-</section>
-<section id="validation-with-shacl-or-shex">
+</div>
+<div class="section" id="validation-with-shacl-or-shex">
 <h4>Validation With SHACL or ShEx<a class="headerlink" href="#validation-with-shacl-or-shex" title="Permalink to this headline">#</a></h4>
 <p>To help facilitate the interconnection of resource, some application focused validation
 will be developed. Note, this validation does not limit what can be in the graphs.<br />
@@ -845,7 +844,7 @@ leveraged for a specific application.  For this project, the application will
 be the OIH search portal.</p>
 <p>Some initial development work for this can be found in the
 <span class="xref myst">validation directory</span></p>
-<section id="validation-tools-and-references">
+<div class="section" id="validation-tools-and-references">
 <h5>Validation Tools and References<a class="headerlink" href="#validation-tools-and-references" title="Permalink to this headline">#</a></h5>
 <ul class="simple">
 <li><p><a class="reference external" href="https://shacl.org/playground/">SHACL playground</a></p></li>
@@ -857,9 +856,9 @@ be the OIH search portal.</p>
 </li>
 <li><p><a class="reference external" href="https://book.validatingrdf.com/bookHtml013.html">Comparing ShEx and SHACL</a></p></li>
 </ul>
-</section>
-</section>
-<section id="validation-leveraging-json-schema">
+</div>
+</div>
+<div class="section" id="validation-leveraging-json-schema">
 <h4>Validation Leveraging JSON Schema<a class="headerlink" href="#validation-leveraging-json-schema" title="Permalink to this headline">#</a></h4>
 <p>We have been exploring the potential to use JSON Schema combined with various
 on-line JSON editors (JSON Schema driven) to provide a potential approach to a
@@ -878,16 +877,16 @@ validate that we have well formed JSON-LD.</p>
 <p>Though this workflow is rather crude and manual it exposes a route to a defined
 workflow based around established schema that leverages other tools and
 software libraries to generate a workable tool.</p>
-</section>
-</section>
-</section>
-<section id="basics">
+</div>
+</div>
+</div>
+<div class="section" id="basics">
 <h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h2>
 <p>The basic activity can be seen in the following diagram:</p>
 <p><img alt="" src="../_images/example1Flow.png" /></p>
-<section id="elements-in-detail">
+<div class="section" id="elements-in-detail">
 <h3>Elements in detail<a class="headerlink" href="#elements-in-detail" title="Permalink to this headline">#</a></h3>
-<section id="robots-txt">
+<div class="section" id="robots-txt">
 <h4>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">#</a></h4>
 <p>OPTIONAL: Providers may decide to generate or modify their robots.txt
 file to provide guidance to the aggregators.
@@ -911,8 +910,8 @@ indexers both for allow and disallow directives.</p>
 <span class="n">Sitemap</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
-</section>
-<section id="sitemap-xml">
+</div>
+<div class="section" id="sitemap-xml">
 <h4>sitemap.xml<a class="headerlink" href="#sitemap-xml" title="Permalink to this headline">#</a></h4>
 <p>Providers will need to expose a set of resource
 landing pages using a sitemap.xml file. As noted above, providers
@@ -939,10 +938,10 @@ removals from the sitemap URL set to manage new or removed resources.</p>
 <span class="nt">&lt;/sitemapindex&gt;</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-<section id="full-workflow">
+</div>
+</div>
+</div>
+<div class="section" id="full-workflow">
 <h2>Full Workflow<a class="headerlink" href="#full-workflow" title="Permalink to this headline">#</a></h2>
 <p><img alt="" src="../_images/flowv2.png" /></p>
 <p>The architecture defines a workflow for objects seen in the above diagram.</p>
@@ -971,8 +970,8 @@ be used for search, connections and other value add services for the
 community. The graph is also directly available to the community for them
 to use in support of services they may wish to provide.</p></li>
 </ol>
-</section>
-<section id="existing-support-in-software">
+</div>
+<div class="section" id="existing-support-in-software">
 <h2>Existing support in software<a class="headerlink" href="#existing-support-in-software" title="Permalink to this headline">#</a></h2>
 <p>Many content management systems other web based data interfaces
 may already have support for the structured data on the web pattern and
@@ -992,8 +991,8 @@ for some of the more common ones.</p>
 </ul>
 </li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

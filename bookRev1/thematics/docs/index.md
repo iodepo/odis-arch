@@ -50,7 +50,7 @@ currentdir = os.path.dirname(os.path.abspath(''))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -81,9 +81,9 @@ currentdir = os.path.dirname(os.path.abspath(''))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
-url = "https://raw.githubusercontent.com/iodepo/odis-in/master/assets/dataGraphs/thematics/docs/graphs/creativework.json"
-dgraph = urllib.request.urlopen(url)
-doc = json.load(dgraph)
+
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+    doc = json.load(dgraph)
 
 frame = {
   "@context": {"@vocab": "https://schema.org/"},
@@ -130,7 +130,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -177,7 +177,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -219,7 +219,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {

@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indexing with Gleaner &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -780,10 +779,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="indexing-with-gleaner">
+  <div class="tex2jax_ignore mathjax_ignore section" id="indexing-with-gleaner">
 <h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Permalink to this headline">#</a></h1>
 <p><img alt="compose options" src="../_images/composeOptions.png" /></p>
-<section id="gleaner-app">
+<div class="section" id="gleaner-app">
 <h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Permalink to this headline">#</a></h2>
 <p>The Gleaner applications performs the retrieval and loading of JSON-LD documents
 from the web following structured data on the web patterns.  Gleaner is available for Linux, Mac OS X and Windows.</p>
@@ -796,7 +795,7 @@ Gleaner Indexing Services or Data Service Docker compose files.</p>
 such as Mac OS X.   If you are on Windows, there may be some issues.  If you can use a Linux subsystem on Windows,
 you may experience better results.  We will test with Windows eventually and update documentation as needed.</p>
 </div>
-<section id="quick-start-steps">
+<div class="section" id="quick-start-steps">
 <h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Permalink to this headline">#</a></h3>
 <p>This quick start guide is focused on setting up and testing Gleaner in a local environnement.  It is similar to
 how you might run Gleaner in a production environment but lacks the routing and other features likely desired for
@@ -838,7 +837,7 @@ downloading, setting them up and running Gleaner to index documents from the web
 </tr>
 </tbody>
 </table>
-<section id="grab-gleaner-and-the-support-files-we-need">
+<div class="section" id="grab-gleaner-and-the-support-files-we-need">
 <h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Permalink to this headline">#</a></h4>
 <p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file
 template.  To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
@@ -881,8 +880,8 @@ It also should work to do something similar to the following:</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="about-the-compose-file-s">
+</div>
+<div class="section" id="about-the-compose-file-s">
 <h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this headline">#</a></h4>
 <p>The above steps have collected the resources for the indexer.   We now want to set up the services that
 Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
@@ -905,8 +904,8 @@ file can be found in the <a class="reference external" href="https://github.com/
 required edits.  You can see the file in detail in the Index Services
 section.</p>
 </div>
-</section>
-<section id="edit-environment-variables-setup-script">
+</div>
+<div class="section" id="edit-environment-variables-setup-script">
 <h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this headline">#</a></h4>
 <p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
 to be populated to provide the local hosts information needed to run.  You can set these yourself or
@@ -931,8 +930,8 @@ having permission issues.</p>
 </div>
 <p>You may wish to edit file to work better with your environment.  By default it will attempt to
 use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
-</section>
-<section id="spin-up-the-containers">
+</div>
+<div class="section" id="spin-up-the-containers">
 <h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this headline">#</a></h4>
 <p>Load our environment variables to the shell:</p>
 <div class="tip admonition">
@@ -962,8 +961,8 @@ ca08c24963a0        minio/minio:latest               <span class="s2">&quot;/usr
 24274eba0d34        chromedp/headless-shell:latest   <span class="s2">&quot;/headless-shell/hea…&quot;</span>   <span class="m">8</span> seconds ago       Up <span class="m">7</span> seconds        <span class="m">0</span>.0.0.0:9222-&gt;9222/tcp   test_headless_1
 </pre></div>
 </div>
-</section>
-<section id="edit-gleaner-config-file">
+</div>
+<div class="section" id="edit-gleaner-config-file">
 <h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Permalink to this headline">#</a></h4>
 <p>We have all the files we need and we have our support services running.  The next and
 final step is to edit our Gleaner configuration file.  This will let Gleaner know
@@ -1038,7 +1037,7 @@ of the resources we wish to index.</p>
 <span class="linenos">66</span><span class="c1">#   domain: https://obis.org  </span>
 </pre></div>
 </div>
-<section id="object-store">
+<div class="section" id="object-store">
 <h5>Object store<a class="headerlink" href="#object-store" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">minio</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
@@ -1053,8 +1052,8 @@ of the resources we wish to index.</p>
 using minio and these are the IP and port from our docker compose steps above.  Note,
 if you were to use Ceph or AWS S3, this section is still labeled minio.  You simply
 need to update the property values.</p>
-</section>
-<section id="gleaner">
+</div>
+<div class="section" id="gleaner">
 <h5>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">gleaner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
@@ -1068,8 +1067,8 @@ need to update the property values.</p>
 <li><p>summon</p></li>
 <li><p>mill</p></li>
 </ul>
-</section>
-<section id="context-sections">
+</div>
+<div class="section" id="context-sections">
 <h5>Context sections<a class="headerlink" href="#context-sections" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">context</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
@@ -1081,8 +1080,8 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the context sections</p>
-</section>
-<section id="summoner-section">
+</div>
+<div class="section" id="summoner-section">
 <h5>Summoner section<a class="headerlink" href="#summoner-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">summoner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
@@ -1093,8 +1092,8 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the summoner sections</p>
-</section>
-<section id="millers-section">
+</div>
+<div class="section" id="millers-section">
 <h5>Millers section<a class="headerlink" href="#millers-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">millers</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
@@ -1102,8 +1101,8 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the miller sections</p>
-</section>
-<section id="site-graphs-section">
+</div>
+<div class="section" id="site-graphs-section">
 <h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sitegraphs</span><span class="p">:</span>
 <span class="linenos">2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
@@ -1115,8 +1114,8 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the sitegrpah sections</p>
-</section>
-<section id="sources-section">
+</div>
+<div class="section" id="sources-section">
 <h5>Sources section<a class="headerlink" href="#sources-section" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">sources</span><span class="p">:</span>
 <span class="linenos"> 2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
@@ -1152,9 +1151,9 @@ need to update the property values.</p>
 </pre></div>
 </div>
 <p>Comments for the sources sections</p>
-</section>
-</section>
-<section id="run-gleaner">
+</div>
+</div>
+<div class="section" id="run-gleaner">
 <h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Permalink to this headline">#</a></h4>
 <p>For this example we are going to run Gleaner directly.  In a deployed instance you may
 run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
@@ -1178,14 +1177,14 @@ run Gleaner via a script or cron style service.  We will document that elsewhere
 json and other formats.  So simply leave the suffix off and let the config code inspect the
 contents.</p>
 </div>
-</section>
-</section>
-<section id="load-results-to-a-graph-and-test">
+</div>
+</div>
+<div class="section" id="load-results-to-a-graph-and-test">
 <h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Permalink to this headline">#</a></h3>
 <p>You have set up the server environment and Gleaner and done your run.  Things look good
 but you don’t have a graph you can work with yet.    You need to load the JSON-LD into
 the triplestore in order to start playing.</p>
-<section id="minio-object-store">
+<div class="section" id="minio-object-store">
 <h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Permalink to this headline">#</a></h4>
 <p>To view the object store you could use your browser and point it on the default minio
 port at 9000.  This typically something like localhost:9000.</p>
@@ -1198,8 +1197,8 @@ port at 9000.  This typically something like localhost:9000.</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="load-triplestore">
+</div>
+<div class="section" id="load-triplestore">
 <h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this headline">#</a></h4>
 <p>We now want to load these objects, which are JSON-LD files holding RDF based graph
 data, into a graph database.  We use the term, triplestore, to define a graph database
@@ -1210,10 +1209,10 @@ graph data.</p>
 <li><p>Nabu</p></li>
 <li><p>Try out a simple SPARQL query</p></li>
 </ul>
-</section>
-</section>
-</section>
-<section id="references">
+</div>
+</div>
+</div>
+<div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <p>The following are some reference which may provide more information on the various
 technologies used in this approach.</p>
@@ -1225,8 +1224,8 @@ technologies used in this approach.</p>
 <li><p><a class="reference external" href="https://www.w3.org/TR/shacl/">SHACL</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Triplestore">Triplestores</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

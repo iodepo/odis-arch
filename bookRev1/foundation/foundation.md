@@ -56,7 +56,8 @@ import os, sys
 currentdir = os.path.dirname(os.path.abspath(''))
 sys.path.insert(0, currentdir)
 from lib import jbutils
-with open("./graphs/simple.json") as dgraph:
+
+with open("../../../odis-in/dataGraphs/foundation/graphs/simple.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

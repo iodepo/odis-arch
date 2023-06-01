@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indexing Services &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -547,7 +546,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="indexing-services">
+  <div class="tex2jax_ignore mathjax_ignore section" id="indexing-services">
 <h1>Indexing Services<a class="headerlink" href="#indexing-services" title="Permalink to this headline">#</a></h1>
 <p>Gleaner can not run alone and relies on a couple of Open Container Initiative (OCI) containers to support it.  For this document, we will assume you are using Docker but this will work with Podman or other OCI compliant orchestration environments.   These Gleaner Indexing Services are necessary to use Gleaner.   The exception to this would be if you are using a 3rd party objects store like AWS S3 or Wasabi.</p>
 <ul class="simple">
@@ -564,12 +563,10 @@ and loading the JSON-LD objects into Minio.</p>
 <p>It does not result in these objects ending up in a graph / triplestore.   You would use
 this option if you intend to work on the JSON-LD objects yourself.  Perhaps loading
 them into a alternative graphdb like Janus or working on them with python tooling.</p>
-<figure class="align-default" id="gleaner-is">
+<div class="figure align-default" id="gleaner-is">
 <img alt="../_images/gleaner1.png" src="../_images/gleaner1.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Basic Gleaner Indexing Service Activity Workflow</span><a class="headerlink" href="#gleaner-is" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Basic Gleaner Indexing Service Activity Workflow</span><a class="headerlink" href="#gleaner-is" title="Permalink to this image">#</a></p>
+</div>
 <p>Gleaner Indexing Services (IS) Environment Variables
 The Docker Compose file used to launch the Gleaner IS has a set of configurable elements that can be set and passed to the orchestration system with environment variables.</p>
 <p>These can be set manually or through the command line.  A simple script to set the variables could look like:</p>
@@ -595,7 +592,7 @@ The Docker Compose file used to launch the Gleaner IS has a set of configurable 
 </div>
 <p>The actual services can be deployed via a Docker Compose file (also works with Podman).  An example of that file and details about it follow.</p>
 <p>– Break down the compose files here  link to them</p>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {

@@ -54,7 +54,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/service.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/services/graphs/service.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
