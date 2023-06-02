@@ -22,12 +22,12 @@ versioning of the profiles to provide stable implementations providers can relia
 
 Six key categories of interest:
 
-1. [Experts and Institutions](./expinst/README.md)
-2. [Documents](./docs/README.md)
-3. [Spatial Maps](./docs/README.md)
-4. [Projects](./projects/README.md)
-5. [Training](./training/README.md)
-6. [Vessels](./vessels/README.md)
+1. [Experts and Institutions](./expinst/index.md)
+2. [Documents](./docs/index.md)
+3. [Spatial Maps](./docs/index.md)
+4. [Projects](./projects/index.md)
+5. [Training](./training/index.md)
+6. [Vessels](./vessels/index.md)
 
 
 ### Supporting Profiles
@@ -36,8 +36,8 @@ In support of these five thematic types above, these cross cutting types and pro
 selected for attention.  They represent some key patterns people may wish to leverage when 
 describing their resources.  
 
-1. [Spatial Geometry](./spatial/README.md)
-2. [Services](./services/README.md)
+1. [Spatial Geometry](./spatial/index.md)
+2. [Services](./services/index.md)
 3. [Term Lists](./terms/list.md)
 4. [Languages](./languages/languages.md)
 5. [Linking to Principles](./sdg/index.md)

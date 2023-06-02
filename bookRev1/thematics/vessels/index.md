@@ -55,11 +55,9 @@ Addressing the challenge of Observation Infrastructure, and
 potentially revisiting the current OIH type Vessel, may involve engagement with
 Schema.org itself, something they encourage. 
 
-
-```{literalinclude} ./graphs/ship.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json
 :linenos:
 ```
-
 
 ```{code-cell}
 :tags: [hide-input]

@@ -55,11 +55,9 @@ Addressing the challenge of Observation Infrastructure, and
 potentially revisiting the current OIH type Vessel, may involve engagement with
 Schema.org itself, something they encourage. 
 
-
-```{literalinclude} ./graphs/ship.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json
 :linenos:
 ```
-
 
 ```{code-cell}
 :tags: [hide-input]
@@ -73,7 +71,8 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/ship.json") as dgraph:
+
+with open("../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -107,7 +106,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/ship.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -154,7 +153,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/ship.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {

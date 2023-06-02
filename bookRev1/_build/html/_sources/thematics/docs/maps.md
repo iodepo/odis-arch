@@ -26,7 +26,7 @@ enumeration of types that do not apply to OIH use cases.  However, the use of th
 Map typing itself may aid in narrowing search requests later to a specific creative work.
 
 Schema.org type Map is a subtype of CreativeWork. As such, we can all the approaches 
-described in the [Documents](./README.md) section for this type as well.  The use 
+described in the [Documents](./index.md) section for this type as well.  The use 
 of type Map would be focused on documenting files such as KML, GeoJSON or others as a
 creative work that may be downloaded and used either in a workflow or directly.  
 
@@ -40,7 +40,7 @@ Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to 
 indicate the type of document it is through a mimetype via encoding.  
 ```
 
-```{literalinclude} ./graphs/map.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/docs/graphs/map.json
 :linenos:
 ```
 

@@ -274,7 +274,8 @@ Here we have an example of an data graph for type [schema.org/Organization](http
 For the identifier we are using the a GRID, but this could also be something like a ROR.  
 
 
-```{literalinclude} ./graphs/organization.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json
 :linenos:
 :emphasize-lines: 18-29
 ```

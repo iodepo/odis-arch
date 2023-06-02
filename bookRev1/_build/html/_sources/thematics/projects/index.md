@@ -44,7 +44,8 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/proj.json") as dgraph:
+
+with open("../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -96,7 +97,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/proj.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -128,7 +129,8 @@ more nodes to cover things like funding source, policy connections,
 spatial area served and parent organization. 
 
 
-```{literalinclude} ./graphs/proj.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json
 :linenos:
 ```
 
@@ -145,7 +147,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/proj.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

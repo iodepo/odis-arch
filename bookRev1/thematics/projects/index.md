@@ -129,7 +129,8 @@ more nodes to cover things like funding source, policy connections,
 spatial area served and parent organization. 
 
 
-```{literalinclude} ./graphs/proj.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json
 :linenos:
 ```
 

@@ -25,9 +25,8 @@
 # This with POST a jpeg to the service and get back a simple text response with some information
 # about the image.
 # 
-#  
 # 
-# ```{literalinclude} ./graphs/action.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/services/graphs/service.json
 # :linenos:
 # ```
 
@@ -43,7 +42,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/service.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/services/graphs/service.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

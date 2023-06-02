@@ -38,7 +38,8 @@
 # text keyword.  The other two are defined as a [DefinedTerm](https://schema.org/DefinedTerm).
 # 
 # 
-# ```{literalinclude} ./graphs/map.json
+# 
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/terms/graphs/map.json
 # :linenos:
 # :emphasize-lines: 17-31
 # ```
@@ -58,7 +59,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/map.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/terms/graphs/map.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -146,7 +147,7 @@ jbutils.show_graph(framed)
 # The following example is from the Schema.org [DefinedTermSet](https://schema.org/DefinedTermSet)
 # reference.
 # 
-# ```{literalinclude} ./graphs/term.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/terms/graphs/term.json
 # :linenos:
 # ```
 
@@ -165,7 +166,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/term.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/terms/graphs/map.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
