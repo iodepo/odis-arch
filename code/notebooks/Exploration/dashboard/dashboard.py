@@ -33,6 +33,8 @@ oihGraphEndpoint = "http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparq
 odisArchGitMasterPath = "/home/apps/odis-dashboard/odis-arch-git-master-DO-NOT-TOUCH"
 odisArchGitSchemaDevPath = "/home/apps/odis-dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH"
 dashboardPath = "/home/apps/odis-dashboard"
+
+sparqlTimeout = 1
     
 ######
 # page setup
@@ -117,7 +119,6 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
             """
-            global sparqlTimeout
             try:
                 sparql = SPARQLWrapper(service)
                 sparql.setQuery(query)
