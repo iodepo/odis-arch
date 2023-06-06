@@ -112,7 +112,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
 
         os.chdir(dashboardPath)
 
-        #@st.cache_data(ttl=3600)
+        @st.cache_data(ttl=3600)
         def get_sparql_dataframe(service, query):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
