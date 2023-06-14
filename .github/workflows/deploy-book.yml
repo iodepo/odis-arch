@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r ./book/requirements.txt
+        pip install -r ./bookRev1/requirements.txt
 
     # Build the book
     - name: Build the book
@@ -32,7 +32,7 @@ jobs:
     - name: Create cname file
       uses: finnp/create-file-action@master
       env:
-        FILE_NAME: "./book/_build/html/CNAME"
+        FILE_NAME: "./bookRev1/_build/html/CNAME"
         FILE_DATA: "book.oceaninfohub.org"
 
     # Push the book's HTML to github-pages
@@ -40,4 +40,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./book/_build/html
+        publish_dir: ./bookRev1/_build/html

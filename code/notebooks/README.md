@@ -22,3 +22,6 @@ attempt to document all requirements in the notebooks and the instructions.
 
 [SHACL Validation on Object Store](./validation/OIH_SHACL.ipynb)
 
+## Notes and References
+
+* [parquet-tools](https://pypi.org/project/parquet-tools/)
