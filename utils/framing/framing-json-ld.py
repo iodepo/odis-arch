@@ -57,8 +57,8 @@ Notes:
 """
 
 # define common variables
-PATH_TO_SOURCE_DATA_FOLDER = "/home/apps/minio-buckets/summoned/pdh/"
-PATH_TO_OUTPUT_DATA_FOLDER = "/home/apps/minio-buckets/framed/pdh/"
+PATH_TO_SOURCE_DATA_FOLDER = "/home/apps/minio-buckets-cioos-single/summoned/cioos/"
+PATH_TO_OUTPUT_DATA_FOLDER = "/home/apps/minio-buckets-cioos-single/framed/cioos/"
 LOGFILE = "./framing-json-ld.log"
 
 """
@@ -83,6 +83,11 @@ frametext =   {
     "@type": "Dataset"
 }
 
+frametextHTTPS =   {
+    "@context": {"@vocab": "https://schema.org/"},
+    "@type": "Dataset"
+}
+
 fileNum = 0
 
 print("\n")
@@ -99,9 +104,19 @@ for jsonldfile in glob.glob(os.path.join(PATH_TO_SOURCE_DATA_FOLDER, '*.jsonld')
         
         #load the JSON-LD
         jsonloaded = json.load(open(jsonldfile, 'r'))
-                      
+                  
+        #get the schema url
+        if "@vocab" in jsonloaded["@context"]:
+            context = jsonloaded["@context"]["@vocab"]
+            
+        elif "schema" in jsonloaded["@context"]:
+            context = jsonloaded["@context"]["schema"]
+        
         #frame the JSON-LD
-        framed = jsonld.frame(jsonloaded, frametext)
+        if "https" in context:        
+            framed = jsonld.frame(jsonloaded, frametextHTTPS)
+        else:
+            framed = jsonld.frame(jsonloaded, frametext)
         
         #write the new JSON-LD file to output folder
         with open(PATH_TO_OUTPUT_DATA_FOLDER + filename, 'w') as outfile:
