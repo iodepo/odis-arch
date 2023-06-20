@@ -33,6 +33,8 @@ oihGraphEndpoint = "http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparq
 odisArchGitMasterPath = "/home/apps/odis-dashboard/odis-arch-git-master-DO-NOT-TOUCH"
 odisArchGitSchemaDevPath = "/home/apps/odis-dashboard/odis-arch-git-schema-dev-DO-NOT-TOUCH"
 dashboardPath = "/home/apps/odis-dashboard"
+
+sparqlTimeout = 1
     
 ######
 # page setup
@@ -92,7 +94,8 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
     )
         
     try:
-        r = requests.get(oihGraphEndpoint)
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        r = requests.get(oihGraphEndpoint, headers=headers)
         r.raise_for_status()
     except HTTPError:
         st.subheader(":x:" + " Graph SPARQL Endpoint is down")
@@ -116,22 +119,30 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
             """
-            sparql = SPARQLWrapper(service)
-            sparql.setQuery(query)
-            sparql.setReturnFormat(JSON)
-            result = sparql.query()
+            try:
+                sparql = SPARQLWrapper(service)
+                sparql.setQuery(query)
+                sparql.setReturnFormat(JSON)
+                sparql.setTimeout(30)
+                result = sparql.query()
+                    
+            except:
+                sparqlTimeout = 1
+                pass  
 
-            processed_results = json.load(result.response)
-            cols = processed_results['head']['vars']
+            else:
+                sparqlTimeout = 0
+                processed_results = json.load(result.response)
+                cols = processed_results['head']['vars']
 
-            out = []
-            for row in processed_results['results']['bindings']:
-                item = []
-                for c in cols:
-                    item.append(row.get(c, {}).get('value'))
-                out.append(item)
+                out = []
+                for row in processed_results['results']['bindings']:
+                    item = []
+                    for c in cols:
+                        item.append(row.get(c, {}).get('value'))
+                    out.append(item)                
 
-            return pd.DataFrame(out, columns=cols)
+                return pd.DataFrame(out, columns=cols)
 
 
         ### Queries
@@ -331,11 +342,17 @@ if graphStatus == 1:
 
         with sumCol3:
             st.write("Number of Catalogues")
-            with st.spinner("Executing graph query..."):             
+            global sparqlNumCatTimeout
+            with st.spinner("Executing graph query..."):
                 dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
-                dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
-                dfProv.set_index('orgname', inplace=True)            
-                st.subheader(dfProv['count'].sum())         
+                if sparqlTimeout == 0:
+                    dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
+                    dfProv.set_index('orgname', inplace=True)            
+                    st.subheader(dfProv['count'].sum())
+                    sparqlNumCatTimeout = 0
+                else:
+                    sparqlNumCatTimeout = 1
+                    st.write(':cry: *could not process Number of Catalogues query on graph*')               
         
         sumCol4, sumCol5, sumCol6 = st.columns(3, gap="medium")
 
@@ -345,12 +362,14 @@ if graphStatus == 1:
 
                 with open(odisArchGitSchemaDevPath + '/config/sources.yaml', 'r') as f:
                     dfSources = pd.json_normalize(yaml.safe_load_all(f), 'sources')
-
+                    #dfSources
+                    
                     #os.system("git ls-tree --name-only HEAD > filelist.txt")
                     list_of_files = glob.glob(odisArchGitMasterPath + '/workflows/output/*.csv')
                     latest_file_path = max(list_of_files, key=os.path.getmtime)
                     latest_file_name = os.path.basename(latest_file_path)
                     latest_file_date = latest_file_name.split('T')[0] 
+                    #st.write(latest_file_date)
 
                     #dateToday = datetime.today().strftime('%Y-%m-%d')
                     sitemapCheckerRawUrl = "https://raw.githubusercontent.com/iodepo/odis-arch/master/workflows/output/" + latest_file_name
@@ -367,7 +386,9 @@ if graphStatus == 1:
                     #st.write(emojize(":smiling_face_with_sunglasses:"))
                     #st.write(":white_check_mark:")
                     dfJoined.columns = dfJoined.columns.str.replace('code', 'Sitemap Status')
-                    dfJoined.columns = dfJoined.columns.str.replace('propername', 'Node')
+                    dfJoined.columns = dfJoined.columns.str.replace('propername_sources', 'Node')
+                    dfJoined.columns = dfJoined.columns.str.replace('propername_sitemap', 'propername')
+                    #dfJoined
                     #dfJoined.set_index('Status', inplace=True)
                     #dfJoined.loc[dfJoined['Status'] == 0, 'Status'] = 'Valid'
                     #dfJoined.loc[dfJoined['Status'] == 1, 'Status'] = 'Failed'        
@@ -447,186 +468,191 @@ if graphStatus == 1:
         #dfJoinedRaw.to_html()
         #st.dataframe(dfJoinedRaw.to_html(render_links=True, escape=False))
         st.dataframe(dfJoined)
-            
+        
     with st.expander("OIH Node Summary", expanded=False):
+    
+        if sparqlNumCatTimeout == 0:            
+    
+            #use markdown trick, as st.expander label cannot be styled
+            #      see https://github.com/streamlit/streamlit/issues/2056
+            st.markdown(
+            """
+            <style>
+            .streamlit-expanderHeader {
+              font-size: large;
+            }
+            </style>
+            """,
+            unsafe_allow_html=True,
+            )
 
-        #use markdown trick, as st.expander label cannot be styled
-        #      see https://github.com/streamlit/streamlit/issues/2056
-        st.markdown(
-        """
-        <style>
-        .streamlit-expanderHeader {
-          font-size: large;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-        )
-
-        # top-level filters
-        #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
-        node_filter = st.selectbox("Select an ODIS node", dfOrgs, index=8)
-
-        # creating a single-element container
-        placeholder = st.empty()
-
-        # dataframe filter
-        dfProvFilter = dfProv[dfProv.index == node_filter]
-
-        with placeholder.container():
-
-            # create four columns
-            nodeCol1, nodeCol2, nodeCol3, nodeCol4 = st.columns([1, 1, 1, 1], gap="small")
-
-            with nodeCol1:
-                st.write("Sitemap Status")
-                #st.write(dfJoinedRaw.columns.tolist())
-                dfRecord = dfJoinedRaw[dfJoinedRaw['propername'] == node_filter]
-                nodeStatus = dfRecord[["code"]].values[0].item()
-                #dfName = dfJoinedRaw[['code', 'propername']]
-                #dfName
-                #nodeStatus = dfName.loc[dfName['propername'].casefold() == node_filter.casefold(), 'code'].item()
-                if nodeStatus == 0:
-                    st.subheader(":white_check_mark:" + " Valid")
-                else:
-                    st.subheader(":x:" + " Error")            
+            # top-level filters
+            #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
+            node_filter = st.selectbox("Select an ODIS node", dfOrgs, index=8)
+            
+            # creating a single-element container
+            placeholder = st.empty()
+            
+            # dataframe filter
+            dfProvFilter = dfProv[dfProv.index == node_filter]
+            
+            with placeholder.container():
+             
+                # create four columns
+                nodeCol1, nodeCol2, nodeCol3, nodeCol4 = st.columns([1, 1, 1, 1], gap="small")
+                 
+                with nodeCol1:
+                    st.write("Sitemap Status")
+                    #st.write(dfJoinedRaw.columns.tolist())
+                    dfRecord = dfJoinedRaw[dfJoinedRaw['propername'] == node_filter]
+                    nodeStatus = dfRecord[["code"]].values[0].item()
+                    #dfName = dfJoinedRaw[['code', 'propername']]
+                    #dfName
+                    #nodeStatus = dfName.loc[dfName['propername'].casefold() == node_filter.casefold(), 'code'].item()
+                    if nodeStatus == 0:
+                        st.subheader(":white_check_mark:" + " Valid")
+                    else:
+                        st.subheader(":x:" + " Error")            
+                     
+                with nodeCol2:
+                    st.write("Sitemap resources")
+                    sitemapDesc = dfRecord[["description"]].values[0].item()
+                    sitemapType = dfRecord[["type"]].values[0].item()
+                    if sitemapType == "sitemap":
+                        st.subheader(sitemapDesc.split(':')[0].rstrip())
+                    else:
+                        st.subheader("sitegraph: 1")
+                    #st.write(sitemapResources)
+                 
+                with nodeCol3:
+                    st.write("Number of Catalogues")
+                    st.subheader(dfProvFilter['count'].sum())
                 
-            with nodeCol2:
-                st.write("Sitemap resources")
-                sitemapDesc = dfRecord[["description"]].values[0].item()
-                sitemapType = dfRecord[["type"]].values[0].item()
-                if sitemapType == "sitemap":
-                    st.subheader(sitemapDesc.split(':')[0].rstrip())
-                else:
-                    st.subheader("sitegraph: 1")
-                #st.write(sitemapResources)
-
-            with nodeCol3:
-                st.write("Number of Catalogues")
-                st.subheader(dfProvFilter['count'].sum())
+                with nodeCol4:
+                    st.write("Date indexed to OIH Graph")
+                    # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
+                    # names = df['propername'].tolist()
+                    # dates = df['dates'].tolist()
+                      # # Convert date strings (e.g. 2014-10-18) to datetime
+                    # dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
+                    # if "INVEMAR" in node_filter: 
+                        # mask = df['propername'].values ==  "INVEMAR"
+                    # else:
+                        # mask = df['propername'].values ==  node_filter
+                    # df_orgDate = df[mask]
+                    # st.subheader(df_orgDate['dates'].values[0])
                 
-            with nodeCol4:
-                st.write("Date indexed to OIH Graph")
-                # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
-                # names = df['propername'].tolist()
-                # dates = df['dates'].tolist()
-                  # # Convert date strings (e.g. 2014-10-18) to datetime
-                # dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
-                # if "INVEMAR" in node_filter: 
-                    # mask = df['propername'].values ==  "INVEMAR"
-                # else:
-                    # mask = df['propername'].values ==  node_filter
-                # df_orgDate = df[mask]
-                # st.subheader(df_orgDate['dates'].values[0])
-                
-                with open(odisArchGitSchemaDevPath + "/config/sources.yaml", 'r') as f:
-                    valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
-
-                sourcesLength = len(valuesYaml['sources'])
-                #sourcesLength
-
-                #loop through YAML
-                for recNum in range(0, sourcesLength):
-                    properName = valuesYaml['sources'][recNum]['propername']
-                    #properName
-                    if (properName.casefold() == node_filter.casefold()):
-                        dateAdded = valuesYaml['sources'][recNum]['dateadded']
-                        st.subheader(dateAdded)
+                    with open(odisArchGitSchemaDevPath + "/config/sources.yaml", 'r') as f:
+                        valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
+                    
+                    sourcesLength = len(valuesYaml['sources'])
+                    #sourcesLength
+                    
+                    #loop through YAML
+                    for recNum in range(0, sourcesLength):
+                        properName = valuesYaml['sources'][recNum]['propername']
+                        #properName
+                        if (properName.casefold() == node_filter.casefold()):
+                            dateAdded = valuesYaml['sources'][recNum]['dateadded']
+                    st.subheader(dateAdded)
                         
-            nodeCol5, nodeCol6, nodeCol7, nodeCol8 = st.columns([1, 1, 1, 1], gap="small")
+                nodeCol5, nodeCol6, nodeCol7, nodeCol8 = st.columns([1, 1, 1, 1], gap="small")
+                     
+                with nodeCol5:
+                    st.write("Sitemap URL")
+                    sitemapUrl = dfRecord[["url_sitemap"]].values[0].item()
+                    st.write(sitemapUrl)
+                    
+                with nodeCol6:
+                    st.write("Catalogue Home")
+                    catalogueUrl = dfRecord[["catalogue"]].values[0].item()
+                    st.write(catalogueUrl) 
                 
-            with nodeCol5:
-                st.write("Sitemap URL")
-                sitemapUrl = dfRecord[["url_sitemap"]].values[0].item()
-                st.write(sitemapUrl)
+                with nodeCol7:
+                    st.empty()   
                 
-            with nodeCol6:
-                st.write("Catalogue Home")
-                catalogueUrl = dfRecord[["catalogue"]].values[0].item()
-                st.write(catalogueUrl) 
-
-            with nodeCol7:
-                st.empty()   
-
-            with nodeCol8:
-                st.write("")
-                logoUrl = dfRecord[["logo"]].values[0].item()
-                st.image(logoUrl, width=300)                     
+                with nodeCol8:
+                    st.write("")
+                    logoUrl = dfRecord[["logo"]].values[0].item()
+                    st.image(logoUrl, width=300)                     
+                    
+                nodeCol9, nodeCol10, nodeCol11 = st.columns(3, gap="medium")
                 
-            nodeCol9, nodeCol10, nodeCol11 = st.columns(3, gap="medium")
-
-            with nodeCol9:
-                st.write("Types indexed")
-                rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                       PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                       PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                       PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                       PREFIX schema: <https://schema.org/>
-                       PREFIX schemaold: <http://schema.org/>
-                       PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-     
-                       SELECT   ( COUNT(?type) as ?count) ?type   
-                       WHERE
-                       {
+                with nodeCol9:
+                    st.write("Types indexed")
+                    rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
+                           PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                           PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                           PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                           PREFIX schema: <https://schema.org/>
+                           PREFIX schemaold: <http://schema.org/>
+                           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                  
+                  
+                           SELECT   ( COUNT(?type) as ?count) ?type   
+                           WHERE
+                           {
+                   
+                             ?s rdf:type ?type .
+                             ?wat rdf:name ?orgname .
+                             FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
+                           """
+                    rq_types_org2 = "FILTER (?orgname = '" + node_filter + "') ."
+                    rq_types_org3 = """                   
+                           }
+                           GROUP BY ?type  
+                           ORDER BY DESC(?count)
+                           """
             
-                         ?s rdf:type ?type .
-                         ?wat rdf:name ?orgname .
-                         FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
-                       """
-                rq_types_org2 = "FILTER (?orgname = '" + node_filter + "') ."
-                rq_types_org3 = """                   
-                       }
-                       GROUP BY ?type  
-                       ORDER BY DESC(?count)
-                       """
-            
-                #@st.cache(allow_output_mutation=True)
-                with st.spinner("Executing graph query..."):                
-                    dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
-                    dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
-                    dfTypesOrg.set_index('type', inplace=True)
-                    dfTypesOrg.loc['Total']= dfTypesOrg.sum()
-                    st.write(dfTypesOrg.head(50))
-                    #st.dataframe(data=dfTypesOrg, width=400, height=None)
+                    #@st.cache(allow_output_mutation=True)
+                    with st.spinner("Executing graph query..."):                
+                        dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
+                        dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
+                        dfTypesOrg.set_index('type', inplace=True)
+                        dfTypesOrg.loc['Total']= dfTypesOrg.sum()
+                        st.write(dfTypesOrg.head(50))
+                        #st.dataframe(data=dfTypesOrg, width=400, height=None)
+                    
+                with nodeCol10:
+                    st.write("Keywords")
+                    rq_keywords_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
+                        PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                        PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                        PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                        PREFIX schema: <https://schema.org/>
+                        PREFIX schemaold: <http://schema.org/>
+                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                
+                        SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
+                        WHERE
+                        {
+                           ?s schema:keywords ?keywords .
+                           ?wat rdf:name ?orgname .
+                        """
+                
+                    rq_keywords_org2 = "FILTER (?orgname = '" + node_filter + "') ."
+                    rq_keywords_org3 = """        }
+                        GROUP BY ?keywords
+                        ORDER BY DESC(?count)
+                        """        
+                    #@st.cache(allow_output_mutation=True)
+                    with st.spinner("Executing graph query..."):                
+                        dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                        dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
+                        dfKeywordsOrg.set_index('keywords', inplace=True)
+                        #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                        st.write(dfKeywordsOrg.head(50))  
+           
+                with nodeCol11:
+                    st.empty() 
 
-            with nodeCol10:
-                st.write("Keywords")
-                rq_keywords_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                    PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                    PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                    PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                    PREFIX schema: <https://schema.org/>
-                    PREFIX schemaold: <http://schema.org/>
-                    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-                    SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
-                    WHERE
-                    {
-                       ?s schema:keywords ?keywords .
-                       ?wat rdf:name ?orgname .
-                    """
-            
-                rq_keywords_org2 = "FILTER (?orgname = '" + node_filter + "') ."
-                rq_keywords_org3 = """        }
-                    GROUP BY ?keywords
-                    ORDER BY DESC(?count)
-                    """        
-                #@st.cache(allow_output_mutation=True)
-                with st.spinner("Executing graph query..."):                
-                    dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                    dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
-                    dfKeywordsOrg.set_index('keywords', inplace=True)
-                    #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                    st.write(dfKeywordsOrg.head(50))  
-
-            with nodeCol11:
-                st.empty()                    
-
+        else: 
+            st.write(':cry: *could not query graph to generate Node summary*')     
+           
     with st.expander("About the Dashboard", expanded=False):
-
+           
         #use markdown trick, as st.expander label cannot be styled
         #      see https://github.com/streamlit/streamlit/issues/2056
         st.markdown(
