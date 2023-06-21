@@ -360,7 +360,7 @@ if graphStatus == 1:
             with st.spinner("Executing graph query..."): 
                 ### Join latest sitemap checker output with sources.yaml
 
-                with open(odisArchGitSchemaDevPath + '/config/sources.yaml', 'r') as f:
+                with open(odisArchGitSchemaDevPath + '/config/production-sources.yaml', 'r') as f:
                     dfSources = pd.json_normalize(yaml.safe_load_all(f), 'sources')
                     #dfSources
                     
@@ -542,7 +542,7 @@ if graphStatus == 1:
                     # df_orgDate = df[mask]
                     # st.subheader(df_orgDate['dates'].values[0])
                 
-                    with open(odisArchGitSchemaDevPath + "/config/sources.yaml", 'r') as f:
+                    with open(odisArchGitSchemaDevPath + "/config/production-sources.yaml", 'r') as f:
                         valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
                     
                     sourcesLength = len(valuesYaml['sources'])
