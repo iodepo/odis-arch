@@ -1,6 +1,6 @@
 # odis-arch
 
-[![deploy-book](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml/badge.svg)](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml)
+[![Deploy book](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml/badge.svg)](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml)
 [![Daily sitemap checks](https://github.com/iodepo/odis-arch/actions/workflows/sitemapcheck.yml/badge.svg)](https://github.com/iodepo/odis-arch/actions/workflows/sitemapcheck.yml)
 
 Repository for the development of the ODIS (Ocean Data and 
