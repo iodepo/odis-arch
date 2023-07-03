@@ -63,7 +63,7 @@ Python 3.x
 
 ## Execute
 
-- python framing-json-ld.py
+- `python framing-json-ld.py`
 
 ## Output
 
