@@ -558,35 +558,35 @@ has a sub-type of <a class="reference external" href="https://schema.org/Researc
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3127</span><span class="o">/</span><span class="mf">1228226558.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3356</span><span class="o">/</span><span class="mf">1228226558.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span> 
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
 <span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">297</span> 
 <span class="g g-Whitespace">    </span><span class="mi">298</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
 <span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
 <span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
 <span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
@@ -651,35 +651,35 @@ a resource.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3127</span><span class="o">/</span><span class="mf">2974365103.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3356</span><span class="o">/</span><span class="mf">2974365103.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span> 
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
 <span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">297</span> 
 <span class="g g-Whitespace">    </span><span class="mi">298</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
 <span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
 <span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
 <span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
@@ -849,35 +849,35 @@ spatial area served and parent organization.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">JSONDecodeError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3127</span><span class="o">/</span><span class="mf">1292778686.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3356</span><span class="o">/</span><span class="mf">1292778686.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/proj.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> 
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">load</span><span class="nt">(fp, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="bp">cls</span><span class="o">=</span><span class="bp">cls</span><span class="p">,</span> <span class="n">object_hook</span><span class="o">=</span><span class="n">object_hook</span><span class="p">,</span>
 <span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">parse_float</span><span class="o">=</span><span class="n">parse_float</span><span class="p">,</span> <span class="n">parse_int</span><span class="o">=</span><span class="n">parse_int</span><span class="p">,</span>
 <span class="ne">--&gt; </span><span class="mi">296</span>         <span class="n">parse_constant</span><span class="o">=</span><span class="n">parse_constant</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">object_pairs_hook</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">297</span> 
 <span class="g g-Whitespace">    </span><span class="mi">298</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/__init__.py</span> in <span class="ni">loads</span><span class="nt">(s, encoding, cls, object_hook, parse_float, parse_int, parse_constant, object_pairs_hook, **kw)</span>
 <span class="g g-Whitespace">    </span><span class="mi">346</span>             <span class="n">parse_int</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">parse_float</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span>
 <span class="g g-Whitespace">    </span><span class="mi">347</span>             <span class="n">parse_constant</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">object_pairs_hook</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">kw</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">348</span>         <span class="k">return</span> <span class="n">_default_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">349</span>     <span class="k">if</span> <span class="bp">cls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">350</span>         <span class="bp">cls</span> <span class="o">=</span> <span class="n">JSONDecoder</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">decode</span><span class="nt">(self, s, _w)</span>
 <span class="g g-Whitespace">    </span><span class="mi">335</span><span class="w"> </span>
 <span class="g g-Whitespace">    </span><span class="mi">336</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="ne">--&gt; </span><span class="mi">337</span><span class="sd">         obj, end = self.raw_decode(s, idx=_w(s, 0).end())</span>
 <span class="g g-Whitespace">    </span><span class="mi">338</span><span class="sd">         end = _w(s, end).end()</span>
 <span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">         if end != len(s):</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.16/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/json/decoder.py</span> in <span class="ni">raw_decode</span><span class="nt">(self, s, idx)</span>
 <span class="g g-Whitespace">    </span><span class="mi">351</span><span class="sd">         &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">352</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">353</span>             <span class="n">obj</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">scan_once</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
