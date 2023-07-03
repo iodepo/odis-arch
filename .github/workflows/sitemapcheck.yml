@@ -28,14 +28,15 @@ jobs:
 
     - name: Run Python script
       run: |
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/production-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_sitemaps.csv
-
-    - name: Add new file to Git
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/production-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_production_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/dev-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_dev_sitemaps.csv
+        
+    - name: Add new files to Git
       run: |
         git config --global user.email "github-actions@example.com"
         git config --global user.name "GitHub Actions"
-        git add workflows/output/${{ steps.date.outputs.date  }}_sitemaps.csv
-        git commit -m "Updating sitemap testing output directory"
+        git add workflows/output/${{ steps.date.outputs.date  }}_production_sitemaps.csv workflows/output/${{ steps.date.outputs.date  }}_dev_sitemaps.csv
+        git commit -m "Latest SitemapCheck results"
 
     - name: Push changes
       uses: ad-m/github-push-action@master
