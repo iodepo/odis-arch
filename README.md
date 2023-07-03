@@ -1,5 +1,8 @@
 # odis-arch
 
+[![deploy-book](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml/badge.svg)](https://github.com/iodepo/odis-arch/actions/workflows/deploy-book.yml)
+[![Daily sitemap checks](https://github.com/iodepo/odis-arch/actions/workflows/sitemapcheck.yml/badge.svg)](https://github.com/iodepo/odis-arch/actions/workflows/sitemapcheck.yml)
+
 Repository for the development of the ODIS (Ocean Data and 
 Information System) architecture, as part of the [OIH](https://oceaninfohub.org/) 
 (Ocean InfoHub) Project. The reference documentation in the [docs](docs) folder is 
