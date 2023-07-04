@@ -368,14 +368,21 @@ if graphStatus == 1:
                     list_of_files = glob.glob(odisArchGitMasterPath + '/workflows/output/*.csv')
                     latest_file_path = max(list_of_files, key=os.path.getmtime)
                     latest_file_name = os.path.basename(latest_file_path)
+                    if "production" in latest_file_name:
+                        production_file_name = latest_file_name
+                        dev_file_name = latest_file_name.replace("production", "dev") 
+                    else:
+                        dev_file_name = latest_file_name
+                        production_file_name = latest_file_name.replace("dev", "production")
                     latest_file_date = latest_file_name.split('T')[0] 
                     #st.write(latest_file_date)
 
                     #dateToday = datetime.today().strftime('%Y-%m-%d')
-                    sitemapCheckerRawUrl = "https://raw.githubusercontent.com/iodepo/odis-arch/master/workflows/output/" + latest_file_name
-                    sitemapCheckerBlobUrl = "https://github.com/iodepo/odis-arch/blob/master/workflows/output/" + latest_file_name
-                    urllib.request.urlretrieve(sitemapCheckerRawUrl, odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
-                    dfSitemap = pd.read_csv(odisArchGitMasterPath + "/workflows/output/" + latest_file_name)
+                    sitemapCheckerRawUrl = "https://raw.githubusercontent.com/iodepo/odis-arch/master/workflows/output/" + production_file_name
+                    sitemapCheckerBlobUrl = "https://github.com/iodepo/odis-arch/blob/master/workflows/output/" + production_file_name
+                    urllib.request.urlretrieve(sitemapCheckerRawUrl, odisArchGitMasterPath + "/workflows/output/" + production_file_name)
+                    dfSitemap = pd.read_csv(odisArchGitMasterPath + "/workflows/output/" + production_file_name)
+                    dfSitemapDev = pd.read_csv(odisArchGitMasterPath + "/workflows/output/" + dev_file_name)
                     #dfSitemap
                     # names = df['propername'].tolist()
                     # dates = df['dates'].tolist()
@@ -404,8 +411,8 @@ if graphStatus == 1:
                     dfJoined.to_html(render_links=True, escape=False)        
                     st.dataframe(dfJoined[['Sitemap Status', 'Node']])
                     st.write("Sitemap status (source [csv](" + sitemapCheckerBlobUrl + "))")                    
-                    #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")
-
+                    #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")        
+                    
         with sumCol5:
             st.write("Types indexed")
             #dfTypes.columns = dfTypes.columns.str.replace('type', 'Pattern Type')
@@ -464,10 +471,23 @@ if graphStatus == 1:
                 dfWKTCount['sCount'] = dfWKTCount["sCount"].astype(int) # convert count to int            
                 st.subheader(dfWKTCount['sCount'].values[0])
                     
-        st.write("Raw Sources Report (" + latest_file_date + ")")
+        st.write("Raw Sources Report (" + latest_file_date + ") on :red[Production Graph]")
         #dfJoinedRaw.to_html()
         #st.dataframe(dfJoinedRaw.to_html(render_links=True, escape=False))
         st.dataframe(dfJoined)
+        
+        with open(odisArchGitSchemaDevPath + '/config/dev-sources.yaml', 'r') as f:
+            dfSourcesDev = pd.json_normalize(yaml.safe_load_all(f), 'sources')        
+            st.write("Raw Sources Report (" + latest_file_date + ") on :red[Development Graph]")
+            dfJoinedRawDev = dfSourcesDev.set_index('name').join(dfSitemapDev.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
+            dfJoinedDev = dfSourcesDev.set_index('name').join(dfSitemapDev.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
+            dfJoinedDev.columns = dfJoinedDev.columns.str.replace('code', 'Sitemap Status')
+            dfJoinedDev.columns = dfJoinedDev.columns.str.replace('propername_sources', 'Node')
+            dfJoinedDev.columns = dfJoinedDev.columns.str.replace('propername_sitemap', 'propername')
+            dfJoinedDev.loc[dfJoinedDev['Sitemap Status'] == 0, 'Sitemap Status'] = "\u2705"
+            dfJoinedDev.loc[dfJoinedDev['Sitemap Status'] == 1, 'Sitemap Status'] = "\u274C"
+            dfJoinedDev.to_html(render_links=True, escape=False)
+            st.dataframe(dfJoinedDev)        
         
     with st.expander("OIH Node Summary", expanded=False):
     
