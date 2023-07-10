@@ -34,6 +34,23 @@ sources:
   dateadded: 2023-06-20
   active: true
 #
+# British Oceanographic Data Center
+#
+- name: bodc
+  propername: British Oceanographic Data Center (BODC)
+  catalogue: https://www.bodc.ac.uk/data/bodc_database/nodb/search/
+  domain: https://www.bodc.ac.uk/
+  logo: https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/bodc
+  sourcetype: sitemap  
+  url: https://api.linked-systems.uk/sitemap_pap_api.xml
+  changefreq: monthly
+  backend: Custom
+  headless: no
+  dateadded: 2023-07-10
+  active: true
+#
 # CIOOS Atlantic
 #    
 # - name: cioosatlantic
