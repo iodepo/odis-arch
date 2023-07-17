@@ -23,7 +23,8 @@ like research vessel is not well aligned to current types.
 For vessels in OIH, we leverage the existing Schema.org type [Vehicle](https://schema.org/Vehicle) 
 which is described as a device that is designed or used to transport people 
 or cargo over land, water, air, or through space; 
-but we additionally define vessels as *all operations at sea* to cover any research vessel.  
+but we additionally define vessels as *all operations at sea* to cover any vessel on the ocean, 
+such as a fishing boat.  
 We could go on to connect this type then to a descriptive property in a concept such as
 the WikiData entry for [Research Vessel, Q391022](https://www.wikidata.org/wiki/Q391022).
 We may also wish to leverage some of the approaches in [Keywords and Defined Terms](../terms/list.md).
