@@ -1,7 +1,7 @@
 # Development config file for ODIS nodes, that drives the Dagster pipeline
 # to update the ODIS graph.  Other important notes about this config file:
 #  - sorted alphabetically by 'name' parameter
-#  - no need to use quotes. Use the single-quoted style (') if characters
+#  - no need to use quotes. Use the single-quoted style (') if characters 
 #    such as " and \ are being used inside the string to avoid escaping them
 #  - pid: should point to the ODISCat 'view' if available, such as https://catalogue.odis.org/view/689
 #         or if not, use format: https://oceaninfohub.org/.well-known/org/[name]
@@ -12,7 +12,7 @@
 #  - headless: true if JSON-LD is embedded in page
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
-# To validate at commandline: execute the following (if the file contains valid
+# To validate at commandline: execute the following (if the file contains valid 
 # yaml, it will return nothing) :
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 ---
@@ -60,127 +60,143 @@ summoner:
 millers:
   graph: true
 sources:
-  #
-  # Belgian Marine Data Centre
-  #
-  - name: bmdc
-    propername: Belgian Marine Data Centre (BMDC)
-    catalogue: https://metadata.naturalsciences.be/geonetwork/srv/eng/catalog.search#/home
-    domain: https://www.bmdc.be/
-    logo: https://www.bmdc.be/NODC/images/museum.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/bmdc
-    sourcetype: sitemap
-    url: https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap
-    changefreq: daily
-    backend: GeoNetwork
-    headless: true
-    dateadded: 2023-06-20
-    active: true
-    #
-    # CIOOS Atlantic
-    #
-    # - name: cioosatlantic
-    # propername: CIOOS Atlantic
-    # catalogue: https://catalogue.cioosatlantic.ca/
-    # domain: https://cioosatlantic.ca
-    # logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
-    # #missing ODISCat entry
-    # pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
-    # sourcetype: sitemap
-    # url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
-    # #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-    # changefreq: as needed
-    # backend: CKAN
-    # headless: true
-    # dateadded: 2022-06-04
-    # active: true
-  #
-  # MEDIN
-  #
-  - name: medin
-    propername: Marine Environmental Data and Information Network (MEDIN)
-    catalogue: https://portal.medin.org.uk/portal/start.php
-    domain: https://medin.org.uk/
-    logo: https://medin.org.uk/sites/medin/files/images/medin-portal-logo.png
-    pid: https://catalogue.odis.org/view/40
-    sourcetype: sitemap
-    url: https://portal.medin.org.uk/portal/sitemap.php
-    changefreq: daily
-    backend: MARIS
-    headless: true
-    dateadded: 2023-05-11
-    active: true
-  #
-  # Oceanscape Project
-  #
-  - name: oceanscape
-    propername: Oceanscape Project
-    catalogue: https://oceanscape.org
-    domain: https://geoblueplanet.org/
-    logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
-    pid: https://catalogue.odis.org/view/1098
-    sourcetype: sitemap
-    url: https://oceanscape.org/organisation-sitemap.xml
-    #url: https://oceanscape.org/sitemap_index.xml
-    changefreq: as needed
-    backend: WordPress
-    headless: true
-    dateadded: 2022-05-18
-    active: true
-  #
-  # POGO
-  #
-  - name: pogo
-    propername: Partnership for Observation of the Global Ocean
-    catalogue: https://pogo-ocean.org/
-    domain: https://geoblueplanet.org/
-    logo: https://pogo-ocean.org/wp-content/uploads/2020/02/POGO1_long-01-768x135.png
-    pid: https://catalogue.odis.org/view/3247
-    sourcetype: sitemap
-    url: https://pogo-ocean.org/pogo-member-sitemap.xml
-    changefreq: as needed
-    backend: WordPress
-    headless: true
-    dateadded: 2022-11-30
-    active: false
-  #
-  # RDA Australia
-  #
-  - name: rda
-    propername: Research Data Australia
-    catalogue: https://researchdata.edu.au/
-    domain: https://ardc.edu.au/
-    logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
-    pid: https://catalogue.odis.org/view/3267
-    sourcetype: sitemap
-    url: https://researchdata.edu.au/home/sitemap/?ds=384
-    changefreq: daily
-    backend: GeoNetwork
-    headless: false
-    dateadded: 2023-03-06
-    active: true
-    #
-    # VLIZ: Flanders Marine Institute catalogue
-    #   note: VLIZ & EMODNet services were unified in late 2022
-    # - name: vliz
-    # propername: VLIZ - Flanders Marine Institute catalogue
-    # catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-    # domain: http://www.vliz.be/en
-    # logo: ""
-    # #missing ODISCat entry
-    # pid: https://oceaninfohub.org/.well-known/org/vliz
-    # sourcetype: sitegraph
-    # url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
-    # backend: GeoNetwork
-    # headless: false
-    # dateadded: 2022-08-03
-    # active: false
-    #- sourcetype: sitemap
-    #name: marineie
-    #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
-    #headless: true
-    #pid: https://www.re3data.org/repository/marineie
-    #propername: Marine Institute Data Catalogue
-    #domain: http://data.marine.ie
-    #active: true
+#
+# Belgian Marine Data Centre
+#
+- name: bmdc
+  propername: Belgian Marine Data Centre (BMDC)
+  catalogue: https://metadata.naturalsciences.be/geonetwork/srv/eng/catalog.search#/home
+  domain: https://www.bmdc.be/
+  logo: https://www.bmdc.be/NODC/images/museum.png
+  pid: https://catalogue.odis.org/view/3271
+  sourcetype: sitemap
+  url: https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap
+  changefreq: daily
+  backend: GeoNetwork
+  headless: yes
+  dateadded: 2023-06-20
+  active: true
+#
+# British Oceanographic Data Centre
+#
+- name: bodc
+  propername: British Oceanographic Data Centre (BODC)
+  catalogue: https://www.bodc.ac.uk/data/bodc_database/nodb/search/
+  domain: https://www.bodc.ac.uk/
+  logo: https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png
+  #missing ODISCat entry
+  pid: https://oceaninfohub.org/.well-known/org/bodc
+  sourcetype: sitemap
+  url: https://api.linked-systems.uk/sitemap_pap_api.xml
+  changefreq: monthly
+  backend: Custom
+  headless: no
+  dateadded: 2023-07-10
+  active: true
+#
+# CIOOS Atlantic
+#    
+# - name: cioosatlantic
+  # propername: CIOOS Atlantic
+  # catalogue: https://catalogue.cioosatlantic.ca/
+  # domain: https://cioosatlantic.ca
+  # logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
+  # #missing ODISCat entry
+  # pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
+  # sourcetype: sitemap
+  # url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
+  # #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
+  # changefreq: as needed
+  # backend: CKAN  
+  # headless: true
+  # dateadded: 2022-06-04
+  # active: true
+#
+# MEDIN
+#
+- name: medin
+  propername: Marine Environmental Data and Information Network (MEDIN)
+  catalogue: https://portal.medin.org.uk/portal/start.php
+  domain: https://medin.org.uk/
+  logo: https://medin.org.uk/sites/medin/files/images/medin-portal-logo.png
+  pid: https://catalogue.odis.org/view/40
+  sourcetype: sitemap  
+  url: https://portal.medin.org.uk/portal/sitemap.php
+  changefreq: daily
+  backend: MARIS
+  headless: yes
+  dateadded: 2023-05-11
+  active: true
+#
+# Oceanscape Project
+#  
+- name: oceanscape
+  propername: Oceanscape Project
+  catalogue: https://oceanscape.org
+  domain: https://geoblueplanet.org/
+  logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
+  pid: https://catalogue.odis.org/view/1098
+  sourcetype: sitemap
+  url: https://oceanscape.org/organisation-sitemap.xml
+  #url: https://oceanscape.org/sitemap_index.xml
+  changefreq: as needed   
+  backend: WordPress  
+  headless: true
+  dateadded: 2022-05-18 
+  active: true
+#
+# POGO
+# 
+- name: pogo
+  propername: Partnership for Observation of the Global Ocean
+  catalogue: https://pogo-ocean.org/
+  domain: https://geoblueplanet.org/
+  logo: https://pogo-ocean.org/wp-content/uploads/2020/02/POGO1_long-01-768x135.png
+  pid: https://catalogue.odis.org/view/3247
+  sourcetype: sitemap
+  url: https://pogo-ocean.org/pogo-member-sitemap.xml
+  changefreq: as needed  
+  backend: WordPress  
+  headless: true
+  dateadded: 2022-11-30
+  active: false
+#
+# RDA Australia
+# 
+- name: rda
+  propername: Research Data Australia
+  catalogue: https://researchdata.edu.au/
+  domain: https://ardc.edu.au/
+  logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
+  pid: https://catalogue.odis.org/view/3267
+  sourcetype: sitemap
+  url: https://researchdata.edu.au/home/sitemap/?ds=384
+  changefreq: daily  
+  backend: GeoNetwork  
+  headless: false
+  dateadded: 2023-03-06
+  active: true  
+#
+# VLIZ: Flanders Marine Institute catalogue
+#   note: VLIZ & EMODNet services were unified in late 2022 
+# - name: vliz
+  # propername: VLIZ - Flanders Marine Institute catalogue
+  # catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+  # domain: http://www.vliz.be/en 
+  # logo: ""
+  # #missing ODISCat entry
+  # pid: https://oceaninfohub.org/.well-known/org/vliz
+  # sourcetype: sitegraph
+  # url: https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-vliz/vliz-simple-graph.json
+  # backend: GeoNetwork  
+  # headless: false
+  # dateadded: 2022-08-03
+  # active: false
+#- sourcetype: sitemap
+  #name: marineie
+  #url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
+  #headless: true
+  #pid: https://www.re3data.org/repository/marineie
+  #propername: Marine Institute Data Catalogue
+  #domain: http://data.marine.ie
+  #active: true
