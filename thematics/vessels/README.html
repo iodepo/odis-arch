@@ -495,10 +495,12 @@ document.write(`
 <p>OIH is exploring how we might leverage <a class="reference external" href="http://schema.org">schema.org</a> to describe research vessels.<br />
 Note that <a class="reference external" href="http://schema.org">schema.org</a> is a very broad vocabulary and as such specific concepts
 like research vessel is not well aligned to current types.</p>
-<p>In <a class="reference external" href="http://Schema.org">Schema.org</a> the type <a class="reference external" href="https://schema.org/Vehicle">Vehicle</a> is described as a device that is designed
-or used to transport people or cargo over land, water, air, or through space.
-We have used this broad scoping to cover research vessels.  We could go on to
-connect this type then to a descriptive property in a concept such as
+<p>For vessels in OIH, we leverage the existing <a class="reference external" href="http://Schema.org">Schema.org</a> type <a class="reference external" href="https://schema.org/Vehicle">Vehicle</a>
+which is described as a device that is designed or used to transport people
+or cargo over land, water, air, or through space;
+but we additionally define vessels as <em>all operations at sea</em> to cover any vessel on the ocean,
+such as a fishing boat.<br />
+We could go on to connect this type then to a descriptive property in a concept such as
 the WikiData entry for <a class="reference external" href="https://www.wikidata.org/wiki/Q391022">Research Vessel, Q391022</a>.
 We may also wish to leverage some of the approaches in <a class="reference internal" href="../terms/list.html"><span class="doc std std-doc">Keywords and Defined Terms</span></a>.</p>
 <p>Our goal is to use <a class="reference external" href="http://schema.org">schema.org</a> as a simple upper level vocabulary that allows
@@ -593,7 +595,7 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3592</span><span class="o">/</span><span class="mf">1945030229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3567</span><span class="o">/</span><span class="mf">1945030229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> 
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
