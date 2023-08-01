@@ -114,7 +114,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
 
         os.chdir(dashboardPath)
 
-        @st.cache_data(ttl=3600)
+        #@st.cache_data(ttl=3600)
         def get_sparql_dataframe(service, query):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
@@ -323,6 +323,8 @@ if graphStatus == 1:
         """,
         unsafe_allow_html=True,
         )
+        
+        st.toast("The Dashboard performs heavy SPARQL queries to the ODIS graph :hourglass:")
         
         sumCol1, sumCol2, sumCol3 = st.columns(3, gap="medium")
 
