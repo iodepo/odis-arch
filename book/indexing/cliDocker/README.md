@@ -93,7 +93,7 @@ main.go:117: Buckets generated.  Object store should be ready for runs
 
 > Note:  Here is where we go off the rails.  The config file uses 0.0.0.0 as the 
 > location and this is not working.   You need to edit the config file with the 
-> "real" IP of the host machine.  In may case is this 192.168.122.77.  This is 
+> "real" IP of the host machine.  In many cases this is 192.168.122.77.  This is 
 > obviously still a local network IP but it does work.  I am still investigating 
 > this issue.
 

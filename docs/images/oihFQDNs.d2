@@ -1,0 +1,65 @@
+direction: down
+
+public: {
+
+search: search.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  The main search site and default entry point                                                                                                                                            
+   link: https://search.oceaninfohub.org                                                                                                        
+}
+
+
+wwww: www.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  The main search site and default entry point                                                                                                                                            
+   link: https://www.oceaninfohub.org                                                                                                        
+}
+
+
+dashboard
+
+platform
+
+}
+
+
+admin: {
+
+admin: admin.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  The main search site and default entry point                                                                                                                                            
+   link: https://search.oceaninfohub.org                                                                                                        
+}
+
+
+workflow: workflow.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  The main search site and default entry point                                                                                                                                            
+   link: https://www.oceaninfohub.org                                                                                                        
+}
+
+}
+
+data: {
+
+
+api: api.search.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  Ocean InfoHub Graph server                                                                                                                                            
+   link: https://search.oceaninfohub.org                                                                                                        
+}
+
+graph: graph.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  Ocean InfoHub Graph server                                                                                                                                            
+   link: https://search.oceaninfohub.org                                                                                                        
+}
+
+
+oss: oss.oceaninfohub.org {                                                                                                                                                               
+   tooltip:  Ocean InfoHub Object storage                                                                                                                                           
+   link: https://www.oceaninfohub.org                                                                                                        
+}
+
+}
+
+# links
+admin.workflow -> data.oss -> data.graph
+data.oss -> data.api
+
+data.graph -> public.dashboard 
+data.api -> public.search 

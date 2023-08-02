@@ -1,0 +1,27 @@
+@prefix ex: <http://example.com/ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:SubjectShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:prefixes ex: ;
+        sh:select """
+            SELECT ?this
+            WHERE {
+                ?this rdf:type ?type .
+                FILTER NOT EXISTS {
+                    BIND (STR(?this) AS ?subjectUri)
+                    FILTER (CONTAINS(LCASE(?subjectUri), "gleaner"))
+                }
+            }
+            """ ;
+    ] ;
+    sh:property [
+        a sh:PropertyShape ;
+        sh:path rdfs:label ; # The path to the property you want to validate
+        sh:minCount 1 ; # Add the constraint you want to apply to the property, for example: the property must have at least one value
+        sh:message "The property 'rdfs:label' must have at least one value." ;
+    ] .

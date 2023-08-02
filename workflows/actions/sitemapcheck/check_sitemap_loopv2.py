@@ -51,7 +51,7 @@ def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
 # TODO can I look for the <script type=application/ld+json>?
 # TODO try beautiful soup for this testing
 def sample_sitemap(smurl):
-    print("sample the sitemap and test")
+    print("----------------   sample the sitemap and test")
 
     iow_sitemap = adv.sitemap_to_df(smurl)
     usm = iow_sitemap.sitemap.unique()
@@ -63,9 +63,10 @@ def sample_sitemap(smurl):
 
     # sample the previously generated url data frame
     sample_size = 5
-    sample_df = urldf.groupby("dir_1").sample(n=sample_size, random_state=1, replace=True)
+    sample_df = urldf.sample(n=sample_size, random_state=1, replace=True)
+    # sample_df = urldf.groupby("dir_1").sample(n=sample_size, random_state=1, replace=True)
 
-    ul = sample_df["url"]
+    ul = sample_df["url"].unique()
 
     for item in ul:
         # user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
@@ -83,32 +84,35 @@ def sample_sitemap(smurl):
         try:
             # x = requests.get(item)
             # code = x.status_code
+
             request=urllib.request.Request(url=item, headers=headers) #The assembled request
             with urllib.request.urlopen(request) as response:
                 info = response.info()
                 dtype = info.get_content_type()    # -> text/html
-             # headers = x.headers()
-             #    print("URL: {} \ninfo : {}\n --".format(item, info))
+                # print("URL: {} \ninfo : {}\n --".format(item, info))
+                # print("Dtype: {} \ninfo : {}\n --".format(item, dtype))
+
+            # headers = x.headers()
                 # read n bytes until `buff` includes "</head>"
-                # data = b''
-                # i = 1
-                # while True:
-                #     buff = response.read(1024)
-                #     data += buff
-                #     if b'</head>' in buff:
-                #         break
-                #     elif buff == b'':
-                #         raise AttributeError('Not head-tag found.')
-                #     i += 1
+                data = b''
+                i = 1
+                while True:
+                    buff = response.read(1024)
+                    data += buff
+                    if b'</head>' in buff:
+                        break
+                    elif buff == b'':
+                        raise AttributeError('Now head-tag found.')
+                    i += 1
 
 
-            # head = str(data)
+                head = str(data)
 
-            # Search for a specific tag in the head
-            # if re.search('application/ld+json', head):
-            #     print('The json-ld tag was found in the head.')
-            # else:
-            #     print('The json-ld tag was not found in the head.')
+                # Search for a specific tag in the head
+                if re.search('application/ld+json', head):
+                    print('The json-ld tag WAS found in the head.')
+                else:
+                    print('The json-ld tag was NOT found in the head.')
 
             print("URL: {} ".format(item))
         except Exception as e:

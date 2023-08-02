@@ -7,7 +7,9 @@ import argparse
 from typing import Tuple
 import pandas as pd
 
-def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
+# python check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/config/sources.yaml -f report.csv -n oceanexperts
+
+def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str, int]:
     logging.getLogger('requests').setLevel(logging.ERROR)  # 'NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
     logging.getLogger('advertools').setLevel(logging.ERROR)
 
@@ -15,29 +17,29 @@ def check_sitemapv2(smurl, stype, name: str) -> Tuple[int, str]:
         x = requests.head(smurl)
         if x.status_code == 404:  # could check for 200 or 303?
             res = str("ERROR {} : {} Sitegrap URL is 404".format(name, smurl))
-            return 1, res  # sys.exit(os.EX_SOFTWARE)
+            return 1, res,0  # sys.exit(os.EX_SOFTWARE)
         else:
             res = str("{} \t {} Sitegraph URL code is {} ".format(name, smurl, x.status_code))
-            return 0, res  # sys.exit(os.EX_OK)
+            return 0, res,0  # sys.exit(os.EX_OK)
     else:
         try:
             r = requests.get(smurl)
         except:
             res = str("ERROR making request, no further information at this time")
-            return 1, res
+            return 1, res,0
         if r.status_code == 404:
             res = str("ERROR {} : {} Sitemap URL is 404".format(name, smurl))
-            return 1, res  # sys.exit(os.EX_SOFTWARE)
+            return 1, res,0  # sys.exit(os.EX_SOFTWARE)
         else:
             try:
                 iow_sitemap = adv.sitemap_to_df(smurl)
                 usm = iow_sitemap.sitemap.unique()
                 uloc = iow_sitemap["loc"].unique()
-                res = str("{} : {} VALID {}  with {} sitemap URL(s)".format(len(uloc), name, smurl, len(usm)))
-                return 0, res  # sys.exit(os.EX_OK)
+                res = str("VALID {} : {} with {} sitemap URL(s)".format(name, smurl, len(usm)))
+                return 0, res, len(uloc)  # sys.exit(os.EX_OK)
             except:
                 res = str("ERROR {} : {} reading sitemap XML".format(name, smurl))
-                return 1, res
+                return 1, res,0
 
 def main():
     # Read the command line arguments
@@ -75,10 +77,11 @@ def main():
             smurl = s["url"]
             stype = s["sourcetype"]
             name = s["name"]
+            pname = s["propername"]
 
-            r, res = check_sitemapv2(smurl, stype, name)
+            r, res, count = check_sitemapv2(smurl, stype, name)
 
-            data = { 'name': name, 'code': r, 'description': res, 'url': smurl, 'type': stype}
+            data = { 'name': name,  'propername': pname, 'code': r, 'count': count, 'description': res, 'url': smurl, 'type': stype}
             rl.append(data)
 
         # leverage pandas to convert to csv

@@ -1,0 +1,45 @@
+PREFIX schema: <https://schema.org/>
+PREFIX schemax: <http://schema.org/>
+
+SELECT ?s  ?type ?g ?desc
+WHERE {
+    {
+        graph ?g {
+            ?s ?p ?a .
+            ?s a ?type .
+        FILTER (?type IN
+                (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset,
+                    schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                    schema:CourseInstance, schema:Event, schema:Vehicle)
+        )
+            VALUES ?a {
+                "Cook Islands" "Fiji" "Kiribati" "Nauru" "New Zealand" "Niue"
+                "Palau" "Papua New Guinea" "Republic of Marshall Islands" "Samoa"
+                "Solomon Islands" "Tonga" "Tuvalu" "Vanuatu" "Federated States of Micronesia"
+                "French Polynesia" "Guam"   "New Caledonia" "American Samoa"
+                "Northern Mariana Islands" "Pitcairn Islands" "Wallis and Futuna" "Tokelau"
+            }
+        }
+    }
+    UNION {
+        graph ?g {
+            ?s schema:description ?desc .
+            ?s a ?type .
+            FILTER (regex(?desc, ?a, "i"))
+
+     FILTER (?type IN
+                (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset,
+                    schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                    schema:CourseInstance, schema:Event, schema:Vehicle)
+        )
+            VALUES ?a {
+                "Cook Islands" "Fiji" "Kiribati" "Nauru" "New Zealand" "Niue"
+                "Palau" "Papua New Guinea" "Republic of Marshall Islands" "Samoa"
+                "Solomon Islands" "Tonga" "Tuvalu" "Vanuatu" "Federated States of Micronesia"
+                "French Polynesia" "Guam"   "New Caledonia" "American Samoa"
+                "Northern Mariana Islands" "Pitcairn Islands" "Wallis and Futuna" "Tokelau"
+            }
+        }
+    }
+}
+LIMIT 1000

@@ -2,7 +2,7 @@
   "@context": {
     "@vocab": "https://schema.org/"
   },
-  "@type":     "ResearchProject",
+  "@type": "ResearchProject",
   "@id": "https://example.org/id/resproj/X",
   "legalName": "Example Data Repository",
   "name": "ExDaRepo",
@@ -30,10 +30,37 @@
   "funder": {
     "@type": "FundingAgency",
     "@id": "https://dx.doi.org/10.13039/10000001",
+    "name": "National Science Foundation",
     "legalName": "National Science Foundation",
     "alternateName": "NSF",
-    "url": "https://www.nsf.gov/"
+    "url": "https://www.nsf.gov/",
+    "identifier": {
+      "@id": "https://example.org/id/resproj/X",
+      "@type": "PropertyValue",
+      "propertyID": "https://registry.identifiers.org/registry/doi",
+      "value": "DOI value expressed as doi:{doi}",
+      "url": "https://dio.org/id/XYZ"
+    }
   },
+  "funding": [
+    {
+      "@id": "{odo:hasAward -> odo:osprey_page}",
+      "@type": "MonetaryGrant",
+      "url": "http://www.someinstitute.edu",
+      "name": "{odo:hasAward -> odo:hasAwardNumber}",
+      "identifier": "{odo:hasAward -> odo:hasAwardNumber}",
+      "funder": [
+        {
+          "@id": "https://dx.doi.org/10.13039/10000001",
+        },
+        {
+          "@type": "FundingAgency",
+          "name": "Some other org",
+          "url": "https://example.funder.org/"
+        }
+      ]
+    }
+  ],
   "ethicsPolicy": {
     "@type": "CreativeWork",
     "@id": "https://example.org/id/XYZ",

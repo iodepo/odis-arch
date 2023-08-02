@@ -29,7 +29,7 @@ In this case the following definitions are used:
 The following graph present a basic record we might use for a person.  
 We will break down some of the key properties used in this graph.
 
-As Ocean InfoHub is levergaing Schema.org we are 
+As Ocean InfoHub is leveraging Schema.org we are 
 using [schema.org/Person](https://schema.org/Person) for this type.
 Any of the properties of Person seen there are valid to use in such a record.
 
@@ -381,4 +381,4 @@ jbutils.show_graph(framed)
 * [https://oceanexpert.org/](https://oceanexpert.org/)
   * [Example page expert](https://oceanexpert.org/expert/44151)
   * [Example page institution](https://oceanexpert.org/institution/10171)
-  * [Ocean Expert: refernce: Adam Leadbetter](https://gist.github.com/adamml/58ebdc7fc3f8ab8dad5d8852a28fb28c)
+  * [Ocean Expert: reference: Adam Leadbetter](https://gist.github.com/adamml/58ebdc7fc3f8ab8dad5d8852a28fb28c)

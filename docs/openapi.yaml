@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: Ocean Info Hub API
+  description: API to search for Creative Works on Ocean Info Hub
+  version: 1.0.0
+servers:
+  - url: https://api.search.oceaninfohub.org
+paths:
+  /search:
+    get:
+      summary: Search for Creative Works
+      description: Search for Creative Works using specified parameters
+      parameters:
+        - name: document_type
+          in: query
+          description: The type of document to search for, e.g. CreativeWork
+          required: true
+          schema:
+            type: string
+            enum:
+              - CreativeWork
+        - name: start
+          in: query
+          description: The starting index for search results
+          required: false
+          schema:
+            type: integer
+            default: 0
+        - name: rows
+          in: query
+          description: The number of search results to return per request
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: search_text
+          in: query
+          description: The search query text
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  # Add the properties of the response object here
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  # Add the properties of the error response object here
+        500:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  # Add the properties of the error response object here

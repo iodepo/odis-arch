@@ -1,0 +1,101 @@
+digraph g {
+    graph [
+    rankdir = "LR"
+    ];
+
+    node [
+    fontsize = "16"
+    shape = "ellipse"
+    ];
+    
+    edge [
+    ];
+
+
+       noded
+        [
+         shape = none
+         label = <<table border="0" cellspacing="0">
+         <tr><td port="port1" border="1" bgcolor="grey">Documents</td></tr>
+         <tr><td port="port2" border="1" bgcolor="pink">schema:[CreativeWork, Dataset, Map]</td></tr>
+         <tr><td port="port3" border="1">Dataset</td></tr>
+         <tr><td port="port4" border="1">Map</td></tr>
+         <tr><td port="port5" border="1">CreativeWork</td></tr>
+         </table>>
+        ]
+               
+        nodep
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Projects</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:[Project,ResearchProject]</td></tr>
+        <tr><td port="port3" border="1">ResearchProject</td></tr>
+        <tr><td port="port4" border="1">Project</td></tr>
+        </table>>
+        ]
+                
+        nodesp
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Spatial</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:spatialCoverage</td></tr>
+        <tr><td port="port3" border="1">GeoSPARQL</td></tr>
+        </table>>
+        ]
+        
+        nodes
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Services</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:Action</td></tr>
+        <tr><td port="port3" border="1">Action</td></tr>
+        </table>>
+        ]
+                                
+                                    
+        nodee
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Experts and Insitutions</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:[Person, Organization]</td></tr>
+        <tr><td port="port3" border="1">Person</td></tr>
+        <tr><td port="port4" border="1">Organization</td></tr>
+        </table>>
+        ]
+                                        
+        nodev
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Vessels</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:Vehicle</td></tr>
+        <tr><td port="port3" border="1">vessel</td></tr>
+        </table>>
+        ]
+
+        nodet
+        [
+        shape = none
+        label = <<table border="0" cellspacing="0">
+        <tr><td port="port1" border="1" bgcolor="grey">Training</td></tr>
+        <tr><td port="port2" border="1" bgcolor="pink">schema:[LearningResource, Course]</td></tr>
+        <tr><td port="port3" border="1">Resource</td></tr>
+        <tr><td port="port4" border="1">Course</td></tr>
+        </table>>
+        ]
+        
+        noded -> nodesp
+        noded -> nodee
+        nodee -> noded
+        noded -> nodes
+        nodep:port3 -> nodee:port3
+        nodes -> nodee:port4
+        nodev -> nodee:port4
+        nodet:port4 -> nodee:port4
+        nodee:port4 -> nodee:port3 [dir="both"];
+                                                                                       
+}

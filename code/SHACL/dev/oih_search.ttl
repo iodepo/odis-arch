@@ -1,0 +1,63 @@
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix oihval: <https://oceans.collaborium.io/voc/validation/1.0.1/shacl#> .
+
+oihval:IDShape
+    a shacl:NodeShape ;
+    shacl:targetClass  schema:CreativeWork, schema:ResearchProject, schema:Person, schema:Course, schema:Organization, schema:Dataset, schema:Map, schema:Vehicle ;
+    shacl:message "Graph must have an ID"@en ;
+    shacl:description "URL OIH shape guidance" ;
+    shacl:nodeKind shacl:IRI ;
+    .
+
+oihval:DatasetCommonShape
+    a shacl:NodeShape ;
+    shacl:targetClass  schema:CreativeWork, schema:ResearchProject, schema:Person, schema:Course, schema:Organization, schema:Dataset, schema:Map, schema:Vehicle ;
+    shacl:message "OIH Resource to Query validation" ;
+    shacl:description "OIH shape guidance" ;
+    shacl:property
+        oihval:nameResourceProperty,
+        oihval:headlineResourceProperty,
+        oihval:urlResourceProperty,
+        oihval:descriptionResourceProperty ;
+    .
+
+oihval:nameResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:name ;
+    shacl:nodeKind shacl:Literal ;
+    shacl:minCount 1 ;
+    shacl:severity shacl:Warning ;
+    shacl:message "Name is suggested "@en ;
+    shacl:description "https://foo.org" ;
+    .
+
+oihval:headlineResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:headline ;
+    shacl:nodeKind shacl:Literal ;
+    shacl:minCount 1 ;
+    shacl:severity shacl:Warning ;
+    shacl:message "Headline is suggested "@en ;
+    shacl:description "https://foo.org" ;
+    .
+
+oihval:urlResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:url ;
+    shacl:maxCount 1 ;
+    shacl:minCount 1 ;
+    shacl:nodeKind shacl:IRIOrLiteral ;
+    shacl:message "URL required for the location of a page describing the resource"@en ;
+    shacl:description "https://foo.org" ;
+    .
+
+oihval:descriptionResourceProperty
+    a shacl:PropertyShape ;
+    shacl:path schema:description;
+    shacl:nodeKind shacl:Literal ;
+    shacl:minCount 1 ;
+    shacl:message "Resource must have a description"@en ;
+    shacl:description "https://foo.org" ;
+    .

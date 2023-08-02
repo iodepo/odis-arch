@@ -1,0 +1,35 @@
+@prefix schema: <https://schema.org/> .
+@prefix dcat:<http://www.w3.org/ns/dcat#> .
+@prefix dct:<http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ns#> .
+@prefix dp: <https://project-open-data.cio.gov/v1.1/schema/> .
+
+ex:Title
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [
+        sh:path dct:title ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+ex:TitleRule
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:prefixes ex: ;
+        sh:construct """
+            CONSTRUCT {
+                $this schema:description ?name .
+            }
+            WHERE {
+                $this dcat:description ?title .
+                BIND (?title AS ?name) .
+            }
+            """ ;
+     ] .
