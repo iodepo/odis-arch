@@ -24,14 +24,13 @@ def cdf2df(url):
 
 if __name__ == '__main__':
 
-    netcdf_url = 'https://noaa-wod-pds.s3.amazonaws.com/1909/wod_osd_1909.nc'
-    df = cdf2df(netcdf_url)
+    urls = ['https://noaa-wod-pds.s3.amazonaws.com/1909/wod_osd_1909.nc',
+        'https://noaa-wod-pds.s3.amazonaws.com/2020/wod_drb_2020.nc' ]
 
-    netcdf_url = 'https://noaa-wod-pds.s3.amazonaws.com/2020/wod_drb_2020.nc'
-    df2 = cdf2df(netcdf_url)
+    df_final = pd.DataFrame()
 
-    # simple concat of df and df2, this would become a loop on some collection of URLs
-    df3 = pd.concat([df, df2])
+    for u in urls:
+        df = cdf2df(u)
+        df_final = df_final.append(df)
 
-
-    print(df3)
+    print(df_final)
