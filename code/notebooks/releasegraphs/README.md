@@ -97,10 +97,10 @@ file.  This is then stored in parquet.
 > NOTE:  The [KGLab](https://derwen.ai/docs/kgl/) python library and more exactly some of the documentation at [https://derwen.ai/docs/kgl/ex2_0/](https://derwen.ai/docs/kgl/ex2_0/) can be used to load RDF in parquet into python graph workflows.
 
 
-| File Name                  | Notes                                                                                                            | URL |
-|:---------------------------|:-----------------------------------------------------------------------------------------------------------------|:--- |
-| OIHGraph_25032023.parquet | This file is a collection of the RDF triples from all the providers in one parquet file                          | [OIHGraph_25032023.parquet](http://ossapi.oceaninfohub.org/public/assets/OIHGraph_25032023.parquet) |
-| combined.parquet          | This file is a collection of the results from the SPARQL query 1 from all the providers in into one parquet file | [combined.parquet](http://ossapi.oceaninfohub.org/public/assets/combined.parquet) |
+| File Name                  | Notes                                                                                                                | URL |
+|:---------------------------|:---------------------------------------------------------------------------------------------------------------------|:--- |
+| OIHGraph_25032023.parquet | This file is a collection of the RDF triples from all the providers in one parquet file                              | [OIHGraph_25032023.parquet](http://ossapi.oceaninfohub.org/public/assets/OIHGraph_25032023.parquet) |
+| combined.parquet          | This file is a collection of the results from the SPARQL query above from all the providers in into one parquet file | [combined.parquet](http://ossapi.oceaninfohub.org/public/assets/combined.parquet) |
 
 Parquet schema for combined.parquet
 
@@ -129,6 +129,8 @@ message OIHGraph_25032023_scheme {
 
 ### Query result files
 
+These files represent the results of the SPARQL query listed above on the RDF graph of each of the 
+providers.  In the following section, links to these RDF files are provided.
 
 | File Name | URL                                                                                                     |
 |:--------- |:--------------------------------------------------------------------------------------------------------|
@@ -152,8 +154,7 @@ message OIHGraph_25032023_scheme {
 
 ### Graphs
 
-This section lists the graphs in NQ format for the current OIH partners.  
-
+This section provides an overview of the graphs, in the NQ format, associated with the existing OIH partners.
 
 | File Name | URL                                                                                                                                 |
 |:--------- |:------------------------------------------------------------------------------------------------------------------------------------|
