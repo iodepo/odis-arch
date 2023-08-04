@@ -11,7 +11,7 @@
   rml:logicalSource [
     rml:source [
       a csvw:Table;
-      csvw:url "PeaceBoatODIS.csv";
+      csvw:url "PeaceBoatODIS1line.csv";
       csvw:dialect [
         a csvw:Dialect;
         csvw:delimiter ","
@@ -27,14 +27,14 @@
 :TriplesMap rr:predicateObjectMap [
   rr:predicate rdf:type;
   rr:objectMap [
-   rr:constant schema:Measurement
+   rr:constant schema:DataCatalog
  ]
 ].
 
 :TriplesMap rr:predicateObjectMap [
   rr:predicate schema:author;
     rr:objectMap [
-   rr:template "http://genid/org/X/{id}"
+   rr:template "http://genid/org/{id}/{Organization}"
  ]
 ].
 
@@ -43,7 +43,7 @@
   rml:logicalSource [
     rml:source [
       a csvw:Table;
-      csvw:url "PeaceBoatODIS.csv";
+      csvw:url "PeaceBoatODIS1line.csv";
       csvw:dialect [
         a csvw:Dialect;
         csvw:delimiter ","
@@ -53,7 +53,7 @@
   ].
 
 :OrgMap rr:subjectMap [
-  rr:template "http://genid/org/X/{id}"
+  rr:template "http://genid/org/{id}/{Organization}"
 ].
 
 :OrgMap rr:predicateObjectMap [
@@ -62,7 +62,6 @@
    rr:constant schema:Organization
  ]
 ].
-
 
 :OrgMap rr:predicateObjectMap [
   rr:predicate schema:name;
