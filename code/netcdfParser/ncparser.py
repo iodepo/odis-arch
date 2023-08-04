@@ -2,6 +2,8 @@ import netCDF4 as nc
 import pandas as pd
 import requests
 
+#  reference:  https://noaa-wod-pds.s3.amazonaws.com/index.html  
+
 def cdf2df(url):
     data = requests.get(url).content
     nc_file = nc.Dataset('wodfile', memory=data)  # filename is not used as far as I can tell
