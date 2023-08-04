@@ -96,6 +96,10 @@ file.  This is then stored in parquet.
 
 > NOTE:  The [KGLab](https://derwen.ai/docs/kgl/) python library and more exactly some of the documentation at [https://derwen.ai/docs/kgl/ex2_0/](https://derwen.ai/docs/kgl/ex2_0/) can be used to load RDF in parquet into python graph workflows.
 
+> Note:  The links to the object in the following README are only HTTP not HTTPS, so your browser may not let you download
+these directly due to mixed protocol security issue.  I am working to get these resolved with the
+Belgium group hosting the services.   You may need to copy the URLs and download directly fro your terminal.  You can also typically paste them into the browser URL box directly and 
+it will work.  It's the mixing of http and https that browser bark at. 
 
 | File Name                  | Notes                                                                                                                | URL |
 |:---------------------------|:---------------------------------------------------------------------------------------------------------------------|:--- |
