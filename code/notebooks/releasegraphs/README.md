@@ -104,7 +104,7 @@ file.  This is then stored in parquet.
 
 Parquet schema for combined.parquet
 
-```json
+```
 message combined_scheme {
     optional binary s (STRING)
     optional binary type (STRING)
@@ -119,7 +119,7 @@ message combined_scheme {
 
 Parquet schema for OIHGraph_25032023.parquet
 
-```json
+```
 message OIHGraph_25032023_scheme {
     optional binary subject (STRING)
     optional binary predicate (STRING)
@@ -130,49 +130,49 @@ message OIHGraph_25032023_scheme {
 ### Query result files
 
 
-| File Name | URL |
-|:--------- |:--- |
-| africaioc.parquet | [africaioc.parquet](http://ossapi.oceaninfohub.org/public/assets/africaioc.parquet) |
-| cioos.parquet | [cioos.parquet](http://ossapi.oceaninfohub.org/public/assets/cioos.parquet) |
-| edmerp.parquet | [edmerp.parquet](http://ossapi.oceaninfohub.org/public/assets/edmerp.parquet) |
-| edmo.parquet | [edmo.parquet](http://ossapi.oceaninfohub.org/public/assets/edmo.parquet) |
-| emodnet.parquet | [emodnet.parquet](http://ossapi.oceaninfohub.org/public/assets/emodnet.parquet) |
-| inanodc.parquet | [inanodc.parquet](http://ossapi.oceaninfohub.org/public/assets/inanodc.parquet) |
-| invemardocuments.parquet | [invemardocuments.parquet](http://ossapi.oceaninfohub.org/public/assets/invemardocuments.parquet) |
-| invemarexperts.parquet | [invemarexperts.parquet](http://ossapi.oceaninfohub.org/public/assets/invemarexperts.parquet) |
+| File Name | URL                                                                                                     |
+|:--------- |:--------------------------------------------------------------------------------------------------------|
+| africaioc.parquet | [africaioc.parquet](http://ossapi.oceaninfohub.org/public/assets/africaioc.parquet)                     |
+| cioos.parquet | [cioos.parquet](http://ossapi.oceaninfohub.org/public/assets/cioos.parquet)                             |
+| edmerp.parquet | [edmerp.parquet](http://ossapi.oceaninfohub.org/public/assets/edmerp.parquet)                           |
+| edmo.parquet | [edmo.parquet](http://ossapi.oceaninfohub.org/public/assets/edmo.parquet)                               |
+| emodnet.parquet | [emodnet.parquet](http://ossapi.oceaninfohub.org/public/assets/emodnet.parquet)                         |
+| inanodc.parquet | [inanodc.parquet](http://ossapi.oceaninfohub.org/public/assets/inanodc.parquet)                         |
+| invemardocuments.parquet | [invemardocuments.parquet](http://ossapi.oceaninfohub.org/public/assets/invemardocuments.parquet)       |
+| invemarexperts.parquet | [invemarexperts.parquet](http://ossapi.oceaninfohub.org/public/assets/invemarexperts.parquet)           |
 | invemarinstitutions.parquet | [invemarinstitutions.parquet](http://ossapi.oceaninfohub.org/public/assets/invemarinstitutions.parquet) |
-| invemartraining.parquet | [invemartraining.parquet](http://ossapi.oceaninfohub.org/public/assets/invemartraining.parquet) |
-| invemarvessels.parquet | [invemarvessels.parquet](http://ossapi.oceaninfohub.org/public/assets/invemarvessels.parquet) |
-| marinetraining.parquet | [marinetraining.parquet](http://ossapi.oceaninfohub.org/public/assets/marinetraining.parquet) |
-| obis.parquet | [obis.parquet](http://ossapi.oceaninfohub.org/public/assets/obis.parquet) |
-| obps.parquet | [obps.parquet](http://ossapi.oceaninfohub.org/public/assets/obps.parquet) |
-| oceanexperts.parquet | [oceanexperts.parquet](http://ossapi.oceaninfohub.org/public/assets/oceanexperts.parquet) |
-| pdh.parquet | [pdh.parquet](http://ossapi.oceaninfohub.org/public/assets/pdh.parquet) |
-| test_obis.parquet | [test_obis.parquet](http://ossapi.oceaninfohub.org/public/assets/test_obis.parquet) |
+| invemartraining.parquet | [invemartraining.parquet](http://ossapi.oceaninfohub.org/public/assets/invemartraining.parquet)         |
+| invemarvessels.parquet | [invemarvessels.parquet](http://ossapi.oceaninfohub.org/public/assets/invemarvessels.parquet)           |
+| marinetraining.parquet | [marinetraining.parquet](http://ossapi.oceaninfohub.org/public/assets/marinetraining.parquet)           |
+| obis.parquet | [obis.parquet](http://ossapi.oceaninfohub.org/public/assets/obis.parquet)                               |
+| obps.parquet | [obps.parquet](http://ossapi.oceaninfohub.org/public/assets/obps.parquet)                               |
+| oceanexperts.parquet | [oceanexperts.parquet](http://ossapi.oceaninfohub.org/public/assets/oceanexperts.parquet)               |
+| pdh.parquet | [pdh.parquet](http://ossapi.oceaninfohub.org/public/assets/pdh.parquet)                                 |
+| test_obis.parquet | [test_obis.parquet](http://ossapi.oceaninfohub.org/public/assets/test_obis.parquet)                     |
 
 ### Graphs
 
 This section lists the graphs in NQ format for the current OIH partners.  
 
 
-| File Name | URL |
-|:--------- |:--- |
-| summonedafricaioc_v1_release.nq | [summonedafricaioc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.nq) |
-| summonedaquadocs_v1_release.nq | [summonedaquadocs_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.nq) |
-| summonedcioos_v1_release.nq | [summonedcioos_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq) |
-| summonededmerp_v1_release.nq | [summonededmerp_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.nq) |
-| summonededmo_v1_release.nq | [summonededmo_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.nq) |
-| summonedemodnet_v1_release.nq | [summonedemodnet_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.nq) |
-| summonedinanodc_v1_release.nq | [summonedinanodc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.nq) |
-| summonedinvemardocuments_v1_release.nq | [summonedinvemardocuments_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.nq) |
-| summonedinvemarexperts_v1_release.nq | [summonedinvemarexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.nq) |
+| File Name | URL                                                                                                                                 |
+|:--------- |:------------------------------------------------------------------------------------------------------------------------------------|
+| summonedafricaioc_v1_release.nq | [summonedafricaioc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedafricaioc_v1_release.nq)                     |
+| summonedaquadocs_v1_release.nq | [summonedaquadocs_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedaquadocs_v1_release.nq)                       |
+| summonedcioos_v1_release.nq | [summonedcioos_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq)                             |
+| summonededmerp_v1_release.nq | [summonededmerp_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmerp_v1_release.nq)                           |
+| summonededmo_v1_release.nq | [summonededmo_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonededmo_v1_release.nq)                               |
+| summonedemodnet_v1_release.nq | [summonedemodnet_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedemodnet_v1_release.nq)                         |
+| summonedinanodc_v1_release.nq | [summonedinanodc_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinanodc_v1_release.nq)                         |
+| summonedinvemardocuments_v1_release.nq | [summonedinvemardocuments_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemardocuments_v1_release.nq)       |
+| summonedinvemarexperts_v1_release.nq | [summonedinvemarexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarexperts_v1_release.nq)           |
 | summonedinvemarinstitutions_v1_release.nq | [summonedinvemarinstitutions_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarinstitutions_v1_release.nq) |
-| summonedinvemartraining_v1_release.nq | [summonedinvemartraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.nq) |
-| summonedinvemarvessels_v1_release.nq | [summonedinvemarvessels_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.nq) |
-| summonedmarinetraining_v1_release.nq | [summonedmarinetraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.nq) |
-| summonedobis_v1_release.nq | [summonedobis_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nq) |
-| summonedobps_v1_release.nq | [summonedobps_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq) |
-| summonedoceanexperts_v1_release.nq | [summonedoceanexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq) |
-| summonedpdh_v1_release.nq | [summonedpdh_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedpdh_v1_release.nq) |
+| summonedinvemartraining_v1_release.nq | [summonedinvemartraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemartraining_v1_release.nq)         |
+| summonedinvemarvessels_v1_release.nq | [summonedinvemarvessels_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedinvemarvessels_v1_release.nq)           |
+| summonedmarinetraining_v1_release.nq | [summonedmarinetraining_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedmarinetraining_v1_release.nq)           |
+| summonedobis_v1_release.nq | [summonedobis_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobis_v1_release.nq)                               |
+| summonedobps_v1_release.nq | [summonedobps_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedobps_v1_release.nq)                               |
+| summonedoceanexperts_v1_release.nq | [summonedoceanexperts_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedoceanexperts_v1_release.nq)               |
+| summonedpdh_v1_release.nq | [summonedpdh_v1_release.nq](http://ossapi.oceaninfohub.org/public/graphs/summonedpdh_v1_release.nq)                                 |
 
 
