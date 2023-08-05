@@ -23,9 +23,6 @@ References:
 ### Ocean InfoHub Introduction Video
 [![Ocean InfoHub Intro Video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
 
-
-
-
 ## About
 
 Preliminary efforts to make these products accessible can be viewed at: [Ocean InfoHub Graph (OIH-Graph)](https://github.com/iodepo/odis-arch/tree/schema-dev-df/docs/releases). The data found there can also be accessed via the subsequent links. In due course, these resources will be auto-generated, and new graph versions will be periodically released on Zenodo, complete with DOI and citation methodologies.
