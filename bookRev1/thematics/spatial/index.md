@@ -29,7 +29,7 @@ A more accessible description and set of examples can be found at WikiPedia:
 [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry).
 
 
-```{literalinclude} ./graphs/basic.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/basic.json
 :linenos:
 :emphasize-lines: 4, 9-17
 ```
@@ -102,7 +102,7 @@ subtype of [GeoShape](https://schema.org/GeoShape).
 
 Schema.org spatial relations are guided by [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
 
-```{literalinclude} ./graphs/sos.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/sos.json
 :linenos:
 :emphasize-lines: 8-15
 ```
@@ -153,7 +153,8 @@ ref Selfie:  When linking out to complex geometries we recommend following: http
 
 From the referenced SOS issue 105:
 
-```{literalinclude} ./graphs/issue105.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/issue105.json
 :linenos:
 :emphasize-lines: 4-6, 12,18,28,39,46
 

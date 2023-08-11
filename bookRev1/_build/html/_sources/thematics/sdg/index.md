@@ -44,7 +44,8 @@ we will review here.  Namely the subjectOF and publishingPrinciples
 predicates. 
 
 
-```{literalinclude} ./graphs/org.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json
 :linenos:
 :emphasize-lines: 31-53
 ```
@@ -61,7 +62,8 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/org.json") as dgraph:
+
+with open("../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -77,20 +79,17 @@ jbutils.show_graph(compacted)
 ### subjectOf
 
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+ 
 * [Event](https://schema.org/Event)
 * [CreativeWork](https://schema.org/CreativeWork)
-+++
-Range
----
+ 
 
 Used on these types
-^^^
+ 
 * [Thing](https://schema.org/Thing)
-+++
-Domain
+ 
 ````
 
 Lets take a look at subjectOf.  In this case we are using subjectOf to express
@@ -105,7 +104,7 @@ to a CreativeWork or Event.
 Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
 subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
 as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the 
-context of the range of subjectOf.   Reference thematic type [Training](../training/README.md)
+context of the range of subjectOf.   Reference thematic type [Training](../training/index.md)
 ```
 
 ```{code-cell}
@@ -123,7 +122,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/org.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -150,22 +149,19 @@ jbutils.show_graph(framed)
 
 ### publishingPrinciples
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+ 
 * [CreativeWork](https://schema.org/CreativeWork)
 * [URL](https://schema.org/URL)
-+++
-Range
----
+ 
 
 Used on these types
-^^^
+ 
 * [CreativeWork](https://schema.org/CreativeWork)
 * [Organization](https://schema.org/Organization)
 * [Person](https://schema.org/Person)
-+++
-Domain
+ 
 ````
 
 Lets take a look at [publishingPrinciples](https://schema.org/publishingPrinciples).  This can be used 
@@ -190,7 +186,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/org.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -231,7 +227,7 @@ Schema.org citation property.  By comparison, the
 [subjectOf](https://schema.org/subjectOf) 
 connections carry a bit more semantic meaning. 
 
-```{literalinclude} ./graphs/doc.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json
 :linenos:
 :emphasize-lines: 14-20
 
@@ -249,7 +245,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/doc.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -263,20 +259,17 @@ jbutils.show_graph(compacted)
 
 ### citation
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+ 
 * [Text](https://schema.org/Text)
 * [CreativeWork](https://schema.org/CreativeWork)
-+++
-Range
----
+ 
 
 Used on these types
-^^^
+ 
 * [CreativeWork](https://schema.org/CreativeWork)
-+++
-Domain
+ 
 ````
 
 Schema.org [citation](https://schema.org/citation) provides a way to link to another creative work.
@@ -304,7 +297,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/doc.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {

@@ -18,7 +18,7 @@
 # [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry).
 # 
 # 
-# ```{literalinclude} ./graphs/basic.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/basic.json
 # :linenos:
 # :emphasize-lines: 4, 9-17
 # ```
@@ -42,7 +42,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/basic.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/spatial/graphs/basic.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -89,7 +89,7 @@ jbutils.show_graph(compacted)
 # 
 # Schema.org spatial relations are guided by [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
 # 
-# ```{literalinclude} ./graphs/sos.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/sos.json
 # :linenos:
 # :emphasize-lines: 8-15
 # ```
@@ -106,7 +106,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/sos.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/spatial/graphs/sos.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -138,7 +138,8 @@ jbutils.show_graph(compacted)
 # 
 # From the referenced SOS issue 105:
 # 
-# ```{literalinclude} ./graphs/issue105.json
+# 
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/issue105.json
 # :linenos:
 # :emphasize-lines: 4-6, 12,18,28,39,46
 # 
@@ -156,7 +157,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/issue105.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/spatial/graphs/issue105.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {

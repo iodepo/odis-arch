@@ -130,7 +130,7 @@ leveraged for a specific application.  For this project, the application will
 be the OIH search portal.
 
 Some initial development work for this can be found in the
-[validation directory](../validation/README.md)
+[validation directory](../validation/index.md)
 
 ##### Validation Tools and References
 * [SHACL playground](https://shacl.org/playground/)

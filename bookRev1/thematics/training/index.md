@@ -34,7 +34,8 @@ We can start by looking at a basic Course description.
 A basic course might simply present the name and description of the course along 
 with a few other key properties. 
 
-```{literalinclude} ./graphs/course2.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/training/graphs/course2.json
 :linenos:
 :emphasize-lines: 7, 10-15
 
@@ -76,11 +77,11 @@ _provider_:
 The [provider](https://schema.org/provider) is the organization offering the course.
 This property is from the CreativeWork supertype.  In this case the provider may
 be of type Organization or Person.  For Ocean InfoHub these would be described in 
-the [Experts and Institutions](../expinst/README.md) section.
+the [Experts and Institutions](../expinst/index.md) section.
 
 ```{note}
 In this case you can see we use a simple @id in the provider property.  You can 
-see this same @id used in the  [Experts and Institutions](../expinst/README.md) section.
+see this same @id used in the  [Experts and Institutions](../expinst/index.md) section.
 By doing this, we connect this provider to the Organization described by that document.
 
 As such these will be connected in the graph.  So there is no need to duplicate 
@@ -101,7 +102,8 @@ We wont go into the details of each property here, but we will show a couple.
 
 The example below present two.  
 
-```{literalinclude} ./graphs/course1.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/training/graphs/course1.json
 :linenos:
 :emphasize-lines: 4-9, 16, 23-56
 

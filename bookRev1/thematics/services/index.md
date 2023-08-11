@@ -35,9 +35,8 @@ curl --data-binary "@yourfile.jpg" -X POST https://us-central1-top-operand-11261
 This with POST a jpeg to the service and get back a simple text response with some information
 about the image.
 
- 
 
-```{literalinclude} ./graphs/action.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/services/graphs/service.json
 :linenos:
 ```
 

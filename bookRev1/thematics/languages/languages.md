@@ -43,7 +43,8 @@ and [Popular standards ISO 3166 Country Codes](https://www.iso.org/iso-3166-coun
 Additional use the 2-letter codes is demonstrated below.  
 
 
-```{literalinclude} ./graphs/language.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/languages/graphs/language.json
 :linenos:
 ```
 

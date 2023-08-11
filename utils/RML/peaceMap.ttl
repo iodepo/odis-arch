@@ -1,0 +1,71 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/rules/> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
+:TriplesMap a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source [
+      a csvw:Table;
+      csvw:url "PeaceBoatODIS1line.csv";
+      csvw:dialect [
+        a csvw:Dialect;
+        csvw:delimiter ","
+      ]
+    ];
+    rml:referenceFormulation ql:CSV
+  ].
+
+:TriplesMap rr:subjectMap [
+  rr:template "http://peaceboat.org/dataset/X/{id}"
+].
+
+:TriplesMap rr:predicateObjectMap [
+  rr:predicate rdf:type;
+  rr:objectMap [
+   rr:constant schema:DataCatalog
+ ]
+].
+
+:TriplesMap rr:predicateObjectMap [
+  rr:predicate schema:author;
+    rr:objectMap [
+   rr:template "http://genid/org/{id}/{Organization}"
+ ]
+].
+
+
+:OrgMap a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source [
+      a csvw:Table;
+      csvw:url "PeaceBoatODIS1line.csv";
+      csvw:dialect [
+        a csvw:Dialect;
+        csvw:delimiter ","
+      ]
+    ];
+    rml:referenceFormulation ql:CSV
+  ].
+
+:OrgMap rr:subjectMap [
+  rr:template "http://genid/org/{id}/{Organization}"
+].
+
+:OrgMap rr:predicateObjectMap [
+  rr:predicate rdf:type;
+  rr:objectMap [
+   rr:constant schema:Organization
+ ]
+].
+
+:OrgMap rr:predicateObjectMap [
+  rr:predicate schema:name;
+    rr:objectMap [
+    rml:reference "Organization"
+ ]
+].

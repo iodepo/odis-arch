@@ -1167,6 +1167,50 @@ Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf
 <h2>Example: Institution Graph<a class="headerlink" href="#example-institution-graph" title="Permalink to this headline">#</a></h2>
 <p>Here we have an example of an data graph for type <a class="reference external" href="https://schema.org/Organization">schema.org/Organization</a>.<br />
 For the identifier we are using the a GRID, but this could also be something like a ROR.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://index.example.org/id/org/x&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+<span class="linenos">12</span>    <span class="p">},</span>
+<span class="linenos">13</span>    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">14</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera, F-75002, Paris, France&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris&quot;</span>
+<span class="linenos">17</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">20</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">24</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">25</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/org/1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+</span><span class="hll"><span class="linenos">29</span>        <span class="p">},</span>
+</span><span class="linenos">30</span>        <span class="p">{</span>
+<span class="linenos">31</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>    <span class="p">],</span>
+<span class="linenos">35</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">36</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+<span class="linenos">37</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">38</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+<span class="linenos">39</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+<span class="linenos">40</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos">41</span>    <span class="p">}</span>
+<span class="linenos">42</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="section" id="on-the-property-membership">
 <h3>On the property membership<a class="headerlink" href="#on-the-property-membership" title="Permalink to this headline">#</a></h3>
 <p>Line 18-29 show the inclusion of a <a class="reference external" href="https://schema.org/member">schema.org/member</a>

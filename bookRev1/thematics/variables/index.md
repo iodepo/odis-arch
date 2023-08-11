@@ -45,7 +45,8 @@ in the data graph represented the detailed sections.
 * [Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and
 * [OBIS examples](https://manual.obis.org/examples/)
 
-```{literalinclude} ./graphs/obisData2.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/variables/graphs/obisData2.json
 :linenos:
 :emphasize-lines: 10,13,14-30,31,32-50,56-67,77-101,104
 ```
@@ -53,7 +54,7 @@ in the data graph represented the detailed sections.
 ## license
 
 As licenses are an important cross-cutting item there is a separate section on licenses
-at:  [License chapter](../license/README.md)
+at:  [License chapter](../license/index.md)
 
 ## keywords
 
@@ -365,10 +366,8 @@ jbutils.show_graph(framed)
 
 Example from Science on Schema recommendations:
 
-```{literalinclude} ./graphs/temporalCoverage.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/variables/graphs/temporalCoverage.json
 :linenos:
 ```
-
-
-
 

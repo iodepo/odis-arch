@@ -729,6 +729,62 @@ principles of the subject organization.</p>
 <p>First we will see the full data graph.  We have highlighted the sections we
 we will review here.  Namely the subjectOF and publishingPrinciples
 predicates.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/org/x&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+<span class="linenos">12</span>    <span class="p">},</span>
+<span class="linenos">13</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">18</span>        <span class="p">{</span>
+<span class="linenos">19</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+<span class="linenos">22</span>        <span class="p">}</span>
+<span class="linenos">23</span>    <span class="p">],</span>
+<span class="linenos">24</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">25</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+<span class="linenos">29</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos">30</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">31</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">32</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">33</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">34</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">35</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">36</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll"><span class="linenos">37</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">38</span>    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">39</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">40</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">41</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sdgs.un.org/goals/goal14&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">42</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sdgs.un.org/goals/goal14&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">43</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sustainable Development Goal 14&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">44</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Conserve and sustainably use the oceans, seas and marine resources for sustainable development&quot;</span>
+</span><span class="hll"><span class="linenos">45</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">46</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">47</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">48</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.1038/sdata.2016.18&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">49</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nature.com/articles/sdata201618&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">50</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR data principles&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">51</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship.&quot;</span>
+</span><span class="hll"><span class="linenos">52</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos">53</span>    <span class="p">]</span>
+</span><span class="linenos">54</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -740,7 +796,8 @@ predicates.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -753,22 +810,30 @@ predicates.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">451987433.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/org.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/index_1_12.svg" src="../../_images/index_1_12.svg" /></div>
 </div>
 <div class="section" id="subjectof">
 <h3>subjectOf<a class="headerlink" href="#subjectof" title="Permalink to this headline">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Values expected to be one of these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/Event">Event</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a></p></li>
+</ul>
+<p class="sd-card-text">Used on these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/Thing">Thing</a></p></li>
+</ul>
+</div>
+</div>
 <p>Lets take a look at subjectOf.  In this case we are using subjectOf to express
 a connection to a UN SDG.  This, subjectOf, could also be used to connect
 documents describing the policy and principles of an organization or additional
@@ -780,7 +845,7 @@ to a CreativeWork or Event.</p>
 <p>Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
 subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
 as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the
-context of the range of subjectOf.   Reference thematic type <span class="xref myst">Training</span></p>
+context of the range of subjectOf.   Reference thematic type <a class="reference internal" href="../training/index.html"><span class="doc std std-doc">Training</span></a></p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -796,7 +861,7 @@ context of the range of subjectOf.   Reference thematic type <span class="xref m
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -822,23 +887,49 @@ context of the range of subjectOf.   Reference thematic type <span class="xref m
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2520452864.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/org.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;subjectOf&quot;: {
+        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
+        &quot;@type&quot;: &quot;CreativeWork&quot;,
+        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
+        &quot;name&quot;: &quot;UNSD SDG indicator code:C140c01&quot;,
+        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
+    }
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_3_23.svg" src="../../_images/index_3_23.svg" /></div>
 </div>
 </div>
 <div class="section" id="publishingprinciples">
 <h3>publishingPrinciples<a class="headerlink" href="#publishingprinciples" title="Permalink to this headline">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Values expected to be one of these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/URL">URL</a></p></li>
+</ul>
+<p class="sd-card-text">Used on these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/Organization">Organization</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/Person">Person</a></p></li>
+</ul>
+</div>
+</div>
 <p>Lets take a look at <a class="reference external" href="https://schema.org/publishingPrinciples">publishingPrinciples</a>.  This can be used
 to connect CreativeWork, Organization, or Person to either of CreativeWork or URL.  So this
 allows us to link a CreativeWork to a policy or principle statement.  This has some very useful
@@ -857,7 +948,7 @@ use cases where resources can be grouped based on their connection to those prin
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -883,19 +974,39 @@ use cases where resources can be grouped based on their connection to those prin
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2263592434.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/org.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;publishingPrinciples&quot;: [
+        {
+            &quot;@id&quot;: &quot;https://sdgs.un.org/goals/goal14&quot;,
+            &quot;@type&quot;: &quot;CreativeWork&quot;,
+            &quot;description&quot;: &quot;Conserve and sustainably use the oceans, seas and marine resources for sustainable development&quot;,
+            &quot;name&quot;: &quot;Sustainable Development Goal 14&quot;,
+            &quot;url&quot;: &quot;https://sdgs.un.org/goals/goal14&quot;
+        },
+        {
+            &quot;@id&quot;: &quot;https://dx.doi.org/10.1038/sdata.2016.18&quot;,
+            &quot;@type&quot;: &quot;CreativeWork&quot;,
+            &quot;description&quot;: &quot;FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship.&quot;,
+            &quot;name&quot;: &quot;FAIR data principles&quot;,
+            &quot;url&quot;: &quot;https://www.nature.com/articles/sdata201618&quot;
+        }
+    ]
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_5_22.svg" src="../../_images/index_5_22.svg" /></div>
 </div>
 </div>
 </div>
@@ -911,6 +1022,34 @@ as the <a class="reference external" href="https://www.undrr.org/publication/haz
 <a class="reference external" href="https://schema.org/publishingPrinciples">publishingPrinciples</a> or
 <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a>
 connections carry a bit more semantic meaning.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>  <span class="p">},</span>
+<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the resource to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">10</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>    <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/dataset/472032.tsv&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/tab-separated-values&quot;</span>
+<span class="linenos">13</span>  <span class="p">},</span>
+<span class="hll"><span class="linenos">14</span>  <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">15</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll"><span class="linenos">20</span>  <span class="p">},</span>
+</span><span class="linenos">21</span>  <span class="s2">&quot;maintainer&quot;</span> <span class="p">:</span> <span class="p">{</span>
+<span class="linenos">22</span>     <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">23</span>     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ror.org/050bms902&quot;</span><span class="p">,</span>
+<span class="linenos">24</span>     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+<span class="linenos">25</span>  <span class="p">}</span>
+<span class="linenos">26</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -922,7 +1061,7 @@ connections carry a bit more semantic meaning.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -935,22 +1074,30 @@ connections carry a bit more semantic meaning.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">2957463720.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/doc.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/index_7_1.svg" src="../../_images/index_7_1.svg" /></div>
 </div>
 <div class="section" id="citation">
 <h3>citation<a class="headerlink" href="#citation" title="Permalink to this headline">#</a></h3>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text">Values expected to be one of these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/Text">Text</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a></p></li>
+</ul>
+<p class="sd-card-text">Used on these types</p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a></p></li>
+</ul>
+</div>
+</div>
 <p><a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/citation">citation</a> provides a way to link to another creative work.
 This property can be pointed to either Text or CreativeWork.  It should also be noted that citation
 can only be used on type <a class="reference external" href="https://schema.org/CreativeWork">CreativeWork</a>.</p>
@@ -972,7 +1119,7 @@ cite or reference another creative work.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -998,19 +1145,30 @@ cite or reference another creative work.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606427</span><span class="o">/</span><span class="mf">730609211.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/doc.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;citation&quot;: {
+        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
+        &quot;@type&quot;: &quot;CreativeWork&quot;,
+        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
+        &quot;name&quot;: &quot;UNSD SDG indicator code:C140c01&quot;,
+        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
+    }
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_9_22.svg" src="../../_images/index_9_22.svg" /></div>
 </div>
 </div>
 </div>

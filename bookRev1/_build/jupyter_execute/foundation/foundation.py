@@ -23,14 +23,14 @@
 # 
 # At the Schema.org site you will find extensive details on what the various types mean and 
 # the full range of their properties. For OIH we are defining only a few of these properties 
-# as of interest in the [Thematic section](../thematics/README.md).  You are free to use additional 
+# as of interest in the [Thematic section](../thematics/index.md).  You are free to use additional
 # properties to describe your resources.  It will not cause any issues, however, the OIH interfaces
 # may not leverage them.  However, if you feel others would, or you use them yourself, it's encouraged
 # to add them.  
 # 
 # We will use the following simple JSON-LD document to show the various features of the format. 
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :linenos:
 # ```
 
@@ -44,7 +44,8 @@ import os, sys
 currentdir = os.path.dirname(os.path.abspath(''))
 sys.path.insert(0, currentdir)
 from lib import jbutils
-with open("./graphs/simple.json") as dgraph:
+
+with open("../../../odis-in/dataGraphs/foundation/graphs/simple.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -76,7 +77,7 @@ jbutils.show_graph(compacted)
 # 
 # 
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :emphasize-lines: 2-4
 # :linenos:
 # ```
@@ -97,7 +98,7 @@ jbutils.show_graph(compacted)
 # following the same prefix:term pattern.
 # 
 # 
-# ```{literalinclude} ../thematics/spatial/graphs/geosparqlsimple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/geosparqlsimple.json
 # :emphasize-lines: 4, 9, 11, 15
 # :linenos:
 # ```
@@ -109,7 +110,7 @@ jbutils.show_graph(compacted)
 # values of our resource are described.  
 # 
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :emphasize-lines: 5-9
 # :linenos:
 # ```
@@ -119,7 +120,7 @@ jbutils.show_graph(compacted)
 # 
 # ### Node identifiers (@id)
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :emphasize-lines: 6
 # :linenos:
 # ```
@@ -144,7 +145,7 @@ jbutils.show_graph(compacted)
 # 
 # ### Type identifiers (@type)
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :emphasize-lines: 5
 # :linenos:
 # ```
@@ -165,7 +166,7 @@ jbutils.show_graph(compacted)
 # 
 # At this point we can return to look at the other properties for our type.  
 # 
-# ```{literalinclude} ./graphs/simple.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
 # :emphasize-lines: 7-9
 # :linenos:
 # ```
@@ -173,7 +174,7 @@ jbutils.show_graph(compacted)
 # As noted, we are using Schema.org type for OIH.  In this case, as mentioned,
 # this is type  [CreativeWork](https://schema.org/CreativeWork).  So any of the properties 
 # seen at the Schema.org site can be used.   The key properties of value to the OIH implementation can then 
-# be found, for this type, in the [Documents thematic type](../thematics/docs/README.md).
+# be found, for this type, in the [Documents thematic type](../thematics/docs/index.md).
 # 
 # For the OIH implementation, we will use the following properties as core properties we 
 # want all OIH documents to have.  These include:

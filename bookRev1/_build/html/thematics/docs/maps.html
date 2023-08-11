@@ -691,7 +691,7 @@ the parent CreativeWork.  That is a <a class="reference external" href="https://
 enumeration of types that do not apply to OIH use cases.  However, the use of the
 Map typing itself may aid in narrowing search requests later to a specific creative work.</p>
 <p><a class="reference external" href="http://Schema.org">Schema.org</a> type Map is a subtype of CreativeWork. As such, we can all the approaches
-described in the <span class="xref myst">Documents</span> section for this type as well.  The use
+described in the <a class="reference internal" href="index.html"><span class="doc std std-doc">Documents</span></a> section for this type as well.  The use
 of type Map would be focused on documenting files such as KML, GeoJSON or others as a
 creative work that may be downloaded and used either in a workflow or directly.</p>
 <p>A map in this context would be a static file or document of some sort.  Map services like
@@ -702,6 +702,41 @@ service.  Potential approaches for doing can be seen the service type.</p>
 <p>In the current context, <a class="reference external" href="http://schema.org">schema.org</a> Map typically references maps as a document.
 Here we are likely to reference a KML, Shapefile or GeoPackage.  We may wish to then
 indicate the type of document it is through a mimetype via encoding.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">16</span>    <span class="p">},</span>
+<span class="linenos">17</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">18</span>        <span class="p">{</span>
+<span class="linenos">19</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
+<span class="linenos">22</span>            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
+<span class="linenos">23</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
+<span class="linenos">24</span>        <span class="p">},</span>
+<span class="linenos">25</span>        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>        <span class="p">{</span>
+<span class="linenos">27</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">29</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;North Atlantic Ocean&quot;</span>
+<span class="linenos">31</span>        <span class="p">}</span>
+<span class="linenos">32</span>    <span class="p">]</span>
+<span class="linenos">33</span><span class="p">}</span>
+</pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">

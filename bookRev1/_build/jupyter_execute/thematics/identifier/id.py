@@ -34,7 +34,8 @@
 # The following example graph shows some of the properties we can use
 # to provide source and provenance information about a resource. 
 # 
-# ```{literalinclude} ./graphs/creativework.json
+# 
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json
 # :linenos:
 # :emphasize-lines: 8-34
 # ```
@@ -51,7 +52,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -68,21 +69,17 @@ jbutils.show_graph(compacted)
 # refer there for details on this property.  
 # 
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [PropertyValue](https://schema.org/PropertyValue)
 # * [Text](https://schema.org/Text)
 # * [URL](https://schema.org/URL)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [Thing](https://schema.org/Thing)
-# +++
-# Domain
+# 
 # ````
 
 # In[2]:
@@ -100,7 +97,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -151,17 +148,15 @@ jbutils.show_graph(framed)
 # the services that presents the resource on the net or otherwise makes the 
 # data available. 
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [Organization](https://schema.org/Organization)
 # * [Person](https://schema.org/Person)
-# +++
-# Range
-# ---
+# 
 # 
 # Used on these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
 # * [EducationalOccupationalProgram](https://schema.org/EducationalOccupationalProgram)
 # * [Invoice](https://schema.org/Invoice)
@@ -169,8 +164,7 @@ jbutils.show_graph(framed)
 # * [Reservation](https://schema.org/Reservation)
 # * [Service](https://schema.org/Service)
 # * [Trip](https://schema.org/Trip) 
-# +++
-# Domain
+# 
 # ````
 
 # In[3]:
@@ -188,7 +182,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -220,20 +214,16 @@ jbutils.show_graph(framed)
 # viewed as the agent that is primarily responsible for making the content described
 # by the structured metadata.  
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [Organization](https://schema.org/Organization)
 # * [Person](https://schema.org/Person)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
-# +++
-# Domain
+# 
 # ````
 
 # In[4]:
@@ -251,7 +241,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -291,19 +281,14 @@ jbutils.show_graph(framed)
 # The sameAs property should always point to only one resource.  It is not 
 # logically consistent to point to multiple sameAs resources.
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [URL](https://schema.org/URL)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [Thing](https://schema.org/Thing)
-# +++
-# Domain
 # ````
 
 # In[5]:
@@ -321,7 +306,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -356,21 +341,17 @@ jbutils.show_graph(framed)
 # The isBasedOn property can be used to link to multiple resources if more 
 # than one was used in the generation of this new resource.  
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
 # * [Product](https://schema.org/Product)
 # * [URL](https://schema.org/URL)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
-# +++
-# Domain
+# 
 # ````
 # 
 # 
@@ -384,20 +365,16 @@ jbutils.show_graph(framed)
 # property can be used in an educational framework to indicate the field(s) of
 # science or literature the dataset relates to.
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
 # * [Event](https://schema.org/Event)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [Thing](https://schema.org/Thing)
-# +++
-# Domain
+# 
 # ````
 # 
 # The subjectOf property has an inverse-property [about](https://schema.org/about).
@@ -405,21 +382,17 @@ jbutils.show_graph(framed)
 # 
 # > indicate the subject matter this thing is about
 # 
-# ````{panels}
+# ````{card}
 # Values expected to be one of these types
-# ^^^
+# 
 # * [Thing](https://schema.org/Thing)
-# +++
-# Range
-# ---
 # 
 # Used on these types
-# ^^^
+# 
 # * [CreativeWork](https://schema.org/CreativeWork)
 # * [Event](https://schema.org/Event)
 # * [CommunicateAction](https://schema.org/CommunicateAction)
-# +++
-# Domain
+# 
 # ````
 
 # In[6]:
@@ -437,7 +410,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {

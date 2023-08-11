@@ -715,6 +715,45 @@ proposed.</p>
 <p>Addressing the challenge of Observation Infrastructure, and
 potentially revisiting the current OIH type Vessel, may involve engagement with
 <a class="reference external" href="http://Schema.org">Schema.org</a> itself, something they encourage.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/X&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Vehicle&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;JOIDES Resolution&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 9</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/vessel/X&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/IMO_number&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/vessel/X&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Vessel ID &quot;</span>
+<span class="linenos">14</span>    <span class="p">},</span>
+<span class="linenos">15</span>    <span class="s2">&quot;countryOfLastProcessing&quot;</span><span class="p">:</span> <span class="s2">&quot;Angola&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="s2">&quot;countryOfOrigin&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">17</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span>
+<span class="linenos">19</span>    <span class="p">},</span>
+<span class="linenos">20</span>    <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">21</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
+<span class="linenos">22</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">23</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/IMO_number&quot;</span><span class="p">,</span>
+<span class="linenos">24</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Any additional properties for the vessel&quot;</span>
+<span class="linenos">26</span>    <span class="p">},</span>
+<span class="linenos">27</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">28</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
+<span class="linenos">29</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;external-metadata.xml&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Metadata describing the vessel&quot;</span><span class="p">,</span>
+<span class="linenos">31</span>        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">32</span>            <span class="s2">&quot;application/xml&quot;</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;https://foo.org/ship01&quot;</span>
+<span class="linenos">34</span>        <span class="p">],</span>
+<span class="linenos">35</span>        <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-06-12T14:44:15Z&quot;</span>
+<span class="linenos">36</span>    <span class="p">}</span>
+<span class="linenos">37</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -726,7 +765,8 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -740,15 +780,27 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">1945030229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3668912</span><span class="o">/</span><span class="mf">1146838844.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> 
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/ship.json&#39;
+<span class="nn">~/src/Projects/OIH/odis-arch/bookRev1/lib/jbutils.py</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>         <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>         <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">47</span>         <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>             <span class="c1"># Apply different styles to the nodes based on whether they&#39;re</span>
+
+<span class="nn">~/src/Projects/OIH/odis-arch/bookRev1/lib/jbutils.py</span> in <span class="ni">short_name</span><span class="nt">(value, max_length)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>             <span class="c1"># If the URL is too long, hide it</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">24</span>                 <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>                 <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>             <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">NameError</span>: name &#39;split_uri&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -772,7 +824,7 @@ a resource.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -798,19 +850,30 @@ a resource.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">2630206018.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/ship.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/X&quot;,
+    &quot;@type&quot;: &quot;Vehicle&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://example.org/id/vessel/X&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;Vessel ID &quot;,
+        &quot;propertyID&quot;: &quot;https://en.wikipedia.org/wiki/IMO_number&quot;,
+        &quot;url&quot;: &quot;https://example.org/id/vessel/X&quot;
+    }
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_3_25.svg" src="../../_images/index_3_25.svg" /></div>
 </div>
 </div>
 <div class="section" id="details-subjectof">
@@ -833,7 +896,7 @@ domain specific metadata records.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -859,19 +922,33 @@ domain specific metadata records.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3606536</span><span class="o">/</span><span class="mf">3651073199.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./graphs/ship.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fontconfig error: &quot;/etc/fonts/conf.d/30-0-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./graphs/ship.json&#39;
+Fontconfig error: &quot;/etc/fonts/conf.d/60-open-sans.conf&quot;, line 1: Extra content at the end of the document
+
+Fontconfig error: &quot;/etc/fonts/conf.d/62-google-crosextra-caladea-fonts.conf&quot;, line 1: Extra content at the end of the document
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/X&quot;,
+    &quot;@type&quot;: &quot;Vehicle&quot;,
+    &quot;subjectOf&quot;: {
+        &quot;@type&quot;: &quot;DataDownload&quot;,
+        &quot;dateModified&quot;: &quot;2019-06-12T14:44:15Z&quot;,
+        &quot;description&quot;: &quot;Metadata describing the vessel&quot;,
+        &quot;encodingFormat&quot;: [
+            &quot;application/xml&quot;,
+            &quot;https://foo.org/ship01&quot;
+        ],
+        &quot;name&quot;: &quot;external-metadata.xml&quot;
+    }
+}
+</pre></div>
 </div>
+<img alt="../../_images/index_5_24.svg" src="../../_images/index_5_24.svg" /></div>
 </div>
 </div>
 </div>

@@ -22,8 +22,7 @@
 # of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 # for more focused creative work examples.
 # 
-# 
-# ```{literalinclude} ./graphs/creativework.json
+# ```{literalinclude} ../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json
 # :linenos:
 # ```
 
