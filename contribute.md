@@ -14,4 +14,3 @@ add to the XX as needed to arrive at a unique branch.
 Do pull requests from your __schema-dev-XX__ into __schema-dev__ and assign reviewers. 
 We will then merge into __master__ as needed.  Do not make commits to __mastger__ or  into 
 __gh_pages__ as the later is a build target for Jupyter Book GitHub Actions.  
-
