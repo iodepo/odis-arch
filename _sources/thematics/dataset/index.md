@@ -33,7 +33,7 @@ guidance and other creative works.  Due to this OIH will focus on a generic exam
 of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 for more focused creative work examples.
 
-```{literalinclude} ./graphs/datasetTemplate.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate.json
 :linenos:
 ```
 
@@ -46,23 +46,33 @@ frames and SHACL shapes are kept in a discrete location.
 ```{code-cell}
 :tags: [hide-input]
 
+import warnings
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore",category=DeprecationWarning)
+    
 import json
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
 from pyld import jsonld
-import graphviz
 import os, sys
+import urllib
+import contextlib
+
+devnull = open(os.devnull, 'w')
+contextlib.redirect_stderr(devnull)
 
 currentdir = os.path.dirname(os.path.abspath(''))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../code/dataGraphs/map.json") as dgraph:
-    doc = json.load(dgraph)
+ 
+url = "https://raw.githubusercontent.com/iodepo/odis-in/master/dataGraphs/thematics/docs/graphs/map.json"
+dgraph = urllib.request.urlopen(url)
+doc = json.load(dgraph)
 
-with open("../../../code/frames/mapFrameID.json") as fgraph:
-    frame = json.load(fgraph)
+furl = "https://raw.githubusercontent.com/iodepo/odis-in/master/frames/mapFrameID.json"
+fgraph = urllib.request.urlopen(furl)
+frame = json.load(fgraph)
+
 
 context = {
     "@vocab": "https://schema.org/",

@@ -8,25 +8,29 @@ these scope all the potential persona or that a person or organization scope onl
 to many.   These are simply design approaches representing potential models or characters.   They 
 are tools used in the design process of OIH.
 
-```{panels}
-:column: col-4
-:card: border-2
+````{grid}
+
+```{grid-item}
 ![](../images/personna.svg) 
-Publisher
-^^^
-A key persona whose activities are covered in detail in [Publishing patterns for OIH](../publishing/publishing.md)
----
+
+Publisher: A key persona whose activities are covered in detail in [Publishing patterns for OIH](../publishing/publishing.md)
+```
+
+```{grid-item}
 ![](../images/personna.svg) 
-Aggregator
-^^^
-Leverages web architecture to retrieve structured data on the web and generate usable indexes.
----
+
+Aggregator: Leverages web architecture to retrieve structured data on the web and generate usable indexes.
+```
+
+```{grid-item}
 ![](../images/personna.svg) 
-User
-^^^
-The end user of the publishing and aggregation activities.  May leverage 
+
+User: The end user of the publishing and aggregation activities.  May leverage
 the web for discovery or tools such as Jupyter for analytics and visualization.  
 ```
+
+````
+
 
 ## Persona: Publisher
 
@@ -35,7 +39,7 @@ to the web.  This persona is focused on describing and presenting structured dat
 to aid in the discovery and use the resources they manage. 
  Details on this persona can be found in the [Publisher](../publishing/publishing.md) section.  
 Additionally, this persona would be leveraging this encoding described in the [JSON-LD Foundation](../foundation/foundation.md) section and the 
-profiles described in the [Thematic Patterns](../thematics/README.md). 
+profiles described in the [Thematic Patterns](../thematics/index.md).
 
 ## Persona: Aggregator
 
@@ -56,4 +60,4 @@ other index.  They may also use query languages like SPARQL or other APIs or eve
 directly work with the underlying data warehouse of collected data graphs.  
 
 User tools may be web sites or scientific notebooks.  Some examples of these 
-user experiences are described in the [User](../users/referenceclient.md) section.
+user experiences are described in the [User](../users/index.md) section.
