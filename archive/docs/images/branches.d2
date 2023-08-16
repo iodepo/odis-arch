@@ -1,0 +1,39 @@
+direction: right
+
+m: master
+p: publiction
+gp: gh-pages
+s: schema-dev
+w: working branches
+b: book.oceaninfohub.org
+pdf: book as PDF
+z: zenodo
+g: graph repo\n(master branch)
+rg: release graphs\n(via zenodo API)
+
+# make the branches a color
+m.style.fill: "#f4a261"
+s.style.fill: "#f4a261"
+p.style.fill: "#f4a261"
+gp.style.fill: "#f4a261"
+g.style.fill: "#f4a261"
+w.style.fill: "#f4a261"
+
+# make the products a color
+pdf.style.fill: honeydew
+b.style.fill: honeydew
+
+m <- s: merge when veted
+m <- g: linked repo for patterns
+s < w: working branches sync to
+
+m -> p: merge to publication 
+p -> pdf: PDF via action
+
+p -> gp: action to build pages
+gp -> b:  published via GitHub Pages
+
+p -> z: archive publication branch for DOI
+g -> z: archive profile repo for DOI
+rg -> z: archive release graphs for DOI
+
