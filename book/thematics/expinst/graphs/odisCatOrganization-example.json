@@ -1,0 +1,80 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://index.example.org/id/org/x",
+    "@type": "Organization",
+    "makesOffer": [
+        {
+            "@type": "Offer", 
+            "name": "machine-to-machine interactions",
+            "description": "The list of machine-to-machine interactions (e.g. APIs) that this ODISCat entry has reported.",            
+            "itemOffered": [
+              {
+                "@type": "WebAPI",
+                "audience": "The Ocean Data and Information System (ODIS) Federation and all users",
+                "name": "ODIS endpoint",
+                "description": "This field contains the URL which connects this ODISCat entry to the Ocean Data and Information System (ODIS). For more information, see: https://book.oceaninfohub.org/",
+                "documentation": "https://book.oceaninfohub.org/",
+                "serviceType": "sitemap or sitegraph",
+                "url": "www.url-to-odis-endpoint.org"
+              },
+              {
+                "@type": "WebAPI",
+                "name": "example API",
+                "description": "....",  
+                "documentation": "...",
+                "serviceType": "CKAN API",
+                "url": "www.url-to-ckan-endpoint.org"
+              }
+            ]
+        }
+    ],   
+    "email": "secretariat(at)example.org",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Public Relations",
+        "description": "This contact point can have email and phone independent of the org itself",
+        "telephone": "( 33 1) 42 68 53 00",
+        "email": "secretariat(at)example.org"
+    },    
+    "name": "Organization X",
+    "description": "Description of org ...",
+    "telephone": "( 33 1) 42 68 53 00",
+    "url": "https://example.org/",
+    "keywords": [
+        "Oceanography",
+        "Marine Physics"
+    ],    
+    "member": [
+        {
+            "@type": "Organization",
+            "identifier": "https://example.org/id/org/1",
+            "name": "Organization A",
+            "description": "This Organisation has Organisation A as a member"
+        },
+        {
+            "identifier": "https://orcid.org/0000-0002-2257-9127",
+            "@type": "Person"
+        }
+    ],
+    "memberOf": [
+        {           
+            "@type": "Organization",
+            "identifier": "https://oceanexpert.org/org/1",
+        },
+        {
+            "identifier" "https://example.org/id/org/1",
+            "@type": "Organization",
+            "name": "Organization B",
+            "description": "This Organization is a member of Organization B"
+        }
+    ],
+    "identifier": {
+        "@id": "https://grid.ac/institutes/grid.475727.4",
+        "@type": "PropertyValue",
+        "description": "UN Department of Economic and Social Affairs Sustainable Development",
+        "propertyID": "https://registry.identifiers.org/registry/grid",
+        "url": "https://grid.ac/institutes/grid.475727.4"
+    }
+}
