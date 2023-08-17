@@ -1,0 +1,43 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://raw.githubusercontent.com/your-repo/wod_osd_1800.json",
+    "@type": "Dataset",
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Polygon",
+        "geosparql:asWKT": {
+            "@type": "geosparql:wktLiteral",
+            "@value": "POLYGON((-180.0 -999.0, -180.0 87.23332977294922, 180.0 87.23332977294922, 180.0 -999.0, -180.0 -999.0))"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "author": {
+        "@type": "Organization",
+        "name": "Ocean Climate Lab/NCEI",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "citation": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
+    "dateCreated": "2022-12-19",
+    "dateModified": "2022-12-19",
+    "description": "Data for multiple casts from the World Ocean Database",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://noaa-wod-pds.s3.amazonaws.com/1800/wod_osd_1800.nc"
+    },
+    "identifier": {
+        "@type": "PropertyValue",
+        "description": "These identifiers for individual casts are assigned by the World Ocean Database",
+        "propertyID": "/nodc/data/OCLAB/OCL/retrieval/monthlies/wod_update_nc/Oct2022/1800/wod_osd_1800.nc"
+    },
+    "name": "World Ocean Database - Multi-cast file: 1800/wod_osd_1800.nc",
+    "publisher": {
+        "@type": "Organization",
+        "name": "US DOC; NESDIS; NATIONAL CENTERS FOR ENVIRONMENTAL INFORMATION",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "url": "https://noaa-wod-pds.s3.amazonaws.com/"
+}
