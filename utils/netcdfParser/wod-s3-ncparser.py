@@ -35,6 +35,7 @@ S3_BUCKET_NAME = "noaa-wod-pds"
 OUTPUT_FOLDER = "./output/" #must exist
 LOGFILE = OUTPUT_FOLDER + "wod-parsed.log" #will get created
 URL_BASEPATH_WHERE_JSONLD_FILES_WILL_LIVE_LATER = "https://raw.githubusercontent.com/your-repo/"
+FILESIZE_THRESHOLD = 400000 #if greater, then download file instead of processing in memory.  Default is 400 MB
 
 #log to a file
 logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG,  
@@ -78,7 +79,7 @@ if __name__ == '__main__':
     bucket = resource.Bucket(S3_BUCKET_NAME)
     
     itemCount = 0
-    df_final = pd.DataFrame()
+    largeFileFlag = 0
 
     for item in bucket.objects.all():
         if item.key.endswith(".nc"):
@@ -92,7 +93,7 @@ if __name__ == '__main__':
             file_size = round(item.size*1.0/1024, 2)
             print("    size: " + str(file_size) + " MB")
             
-            if file_size > 500000:  #avoid memory error, download locally
+            if file_size > FILESIZE_THRESHOLD:  #avoid memory error, download locally
                print("    large file, downloading locally instead...")
                #download file locally
                bucket.download_file(item.key, OUTPUT_FOLDER + "wodfile.nc")
@@ -100,7 +101,7 @@ if __name__ == '__main__':
                largeFileFlag = 1
                
             else:
-               #get resource body (data) through the boto3.resource
+               #read resource body (data) through the boto3.resource
                resourceBody = item.get()['Body'].read()
                largeFileFlag = 0
                            
