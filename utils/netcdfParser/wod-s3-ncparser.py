@@ -13,8 +13,9 @@ Usage:   python wod-s3-ncparser.py
 Output:  Generates JSON-LD files into an existing output folder locally.
 
 Notes:   Avoids Python MemoryError by checking filesize and downloading
-         the file locally (if larger than 500MB), else reads the remote 
-         NetCDF file from the S3 resource into memory
+         the file locally (if larger than 400MB), else reads the remote 
+         NetCDF file from the S3 resource into memory. Set the
+         FILESIZE_THRESHOLD variable on line#39.
          
 Requires: Python 3.x
 """
