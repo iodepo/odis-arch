@@ -41,7 +41,7 @@ to add them.
 
 We will use the following simple JSON-LD document to show the various features of the format. 
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :linenos:
 ```
 
@@ -57,7 +57,7 @@ currentdir = os.path.dirname(os.path.abspath(''))
 sys.path.insert(0, currentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/foundation/graphs/simple.json") as dgraph:
+with open("../../odis-in/dataGraphs/foundation/graphs/simple.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -91,7 +91,7 @@ The context part of this document is highlighted below.
 
 
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :emphasize-lines: 2-4
 :linenos:
 ```
@@ -124,7 +124,7 @@ The next section we will discuss is the graph part of the document seen in lines
 values of our resource are described.  
 
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :emphasize-lines: 5-9
 :linenos:
 ```
@@ -134,7 +134,7 @@ document.
 
 ### Node identifiers (@id)
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :emphasize-lines: 6
 :linenos:
 ```
@@ -159,7 +159,7 @@ of the record.
 
 ### Type identifiers (@type)
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :emphasize-lines: 5
 :linenos:
 ```
@@ -180,7 +180,7 @@ For OIH these type for the various thematic profiles are defined in the document
 
 At this point we can return to look at the other properties for our type.  
 
-```{literalinclude} ../../../odis-in/dataGraphs/foundation/graphs/simple.json
+```{literalinclude} ../../odis-in/dataGraphs/foundation/graphs/simple.json
 :emphasize-lines: 7-9
 :linenos:
 ```
