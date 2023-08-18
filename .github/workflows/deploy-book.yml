@@ -3,7 +3,7 @@ name: deploy-book
 on:
   push:
     branches:
-      - 'master'
+      - 'publication'
 
 jobs:
   deploy-book:
@@ -27,7 +27,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build book
+        jupyter-book build bookRev1
 
     - name: Create cname file
       uses: finnp/create-file-action@master
