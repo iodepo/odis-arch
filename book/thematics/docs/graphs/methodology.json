@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "DigitalDocument",
+  "@id": "URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the DigitalDocument that this JSON-LD document describes. To link to the CreativeWork itself, please use 'url' and/or 'identifier')",
+  "name": "Text: Name or title of the document",
+  "description": "Text: Description / abstract of the creative work to aid in searching",
+  "version": ["https://schema.org/Text", "https://schema.org/Number"],
+  "inLanguage": { "@type": "https://schema.org/Language" },
+  "url": "URL",
+  "hasDigitalDocumentPermission": {"@type": "https://schema.org/DigitalDocumentPermission"},
+  "license": [
+        "URL",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+  "dateCreated": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ], 
+  "datePublished": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+  "dateModified": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+  "locationCreated": {"@type": "Place"},
+  "contributor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+  "author": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": ["Text", "URL"],
+    "value": "Text",
+    "url": "URL"
+  },
+  "keywords": [
+        "Text: Keywords or tags used to describe the CreativeWork.",
+        {"@type": "https://schema.org/DefinedTerm"},
+        "URL"
+    ],  
+  "citation": [
+        "Text: A textual citation to other work relevant to this CreativeWork",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+  "additionalProperty":
+    [
+     { 
+        "@type": "PropertyValue",
+        "propertyID": "OPFN contribution",
+        "description": "A boolean indicating whether or not the item described by this metadata is a contribution to the Ocean Practices Federated Network (OPFN)"
+        "value": {"@type": "https://schema.org/Boolean"}
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "method type",
+        "description": "Enter the the type of methodology described, for example standard operating procedure, guide, manual, standard specification, or best practice. For items declared as best practices, please provide 1) a statement of under what circumstances the method is the 'best' choice (in the schema:description field/property) and 2) valid links to documented and publicly available evidence showing how the method performs better than others in the relevant application scenario (in the schema:citations field/property).",
+        "value": "Text"
+      }, 
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "adoption level",
+        "description": "Describe how widely this method has been adopted with terms like organisational, multi-organisational, international.",
+        "value": "Text"
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "disciplinary area",
+        "description": "Add keywords to describe the disciplinary area(s) this method is relevant to, ideally using terms from https://vocab.nerc.ac.uk/collection/P08/current/",
+        "value": [
+          "Text: Keywords or tags used to describe the CreativeWork.",
+          {"@type": "https://schema.org/DefinedTerm"},
+          "URL"
+        ]
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Essential Ocean Variables",
+        "description": "Add keywords for the GOOS Essential Ocean Variables which this method is relevant to, please use the EOV names provided here: https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441",
+        "value": [
+          "Text: Keywords or tags used to describe the CreativeWork.",
+          {"@type": "https://schema.org/DefinedTerm"},
+          "URL"
+       ]
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Sustainable Development Goals, Targets, and Indicators",
+        "description": "Add the SDG codes for goals (14), targets (14.1), and/or indicators (14.1.1) which this method is relevant to, please use the codes provided here: https://sdgs.un.org/",
+        "value": "Text"
+      },
+      { 
+        "@type": "PropertyValue",
+        "propertyID": "Maturity level",
+        "description": "Please descript the maturity level of your method with a keyword or phrase. For example, concept, pilot, mature.",
+        "value": "Text"
+      },
+      { 
+        "@type": "PropertyValue",
+        "additionalType": "http://purl.org/dc/terms/bibliographicCitation",
+        "propertyID": "http://purl.org/dc/terms/bibliographicCitation",
+        "description": "Include any bibliographic citation for this record here",
+        "value": "Text"
+      }     
+      
+    ],
+  "provider": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+  "publisher": {
+    "@type": "Organization"
+  },
+  "about": {
+    "@type": "Action",
+    "actionStatus": "PotentialActionStatus",
+    "name": "Name of the action",
+    "agent": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "participant": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "instrument": [
+        "Text: Keywords or tags used to describe the CreativeWork.",
+        {"@type": "https://schema.org/DefinedTerm"},
+        "URL"
+    ],
+    "location": [
+      "Text - which locations are valid for actions supported by this protocol?",
+       {"@type": "https://schema.org/Place"}
+      ],
+    "object": [
+      "Text: object on which the action is taken",
+      "Text: another object on which the action is taken"
+    ],
+    "result": "Text: The result of the action - e.g. a DNA sample was generated"
+    }
+}
