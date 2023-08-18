@@ -1,47 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gleaner CLI Docker &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Gleaner CLI Docker &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -49,61 +61,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'indexing/cliDocker/index';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Indexing Services" href="../indexingservices.html" />
     <link rel="prev" title="Indexing with Gleaner" href="../qstart.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,564 +156,327 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../content.html">
-   Structured Data on the Web
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../personas/persona.html">
-   Personas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../publishing/publishing.html">
-   Publisher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../foundation/foundation.html">
-   JSON-LD Foundation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../content.html">Structured Data on the Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../personas/persona.html">Personas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publishing/publishing.html">Publisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../foundation/foundation.html">JSON-LD Foundation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Profiles
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Profiles</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/index.html">
-   Thematic Patterns
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/expinst/index.html">
-   Core 1: Experts and Institutions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/docs/index.html">
-   Core 2a: Documents
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/dataset/index.html">
-   Core 2b: Datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/docs/maps.html">
-   Core 3: Spatial Maps
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/projects/index.html">
-   Core 4: Projects
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/training/index.html">
-   Core 5: Training
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/vessels/index.html">
-   Core 6: Vessels
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/spatial/index.html">
-   Support 1: Spatial Geometry
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/services/index.html">
-   Support 2: Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/terms/list.html">
-   Support 3: Keywords &amp; Defined Terms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/languages/languages.html">
-   Support 4: Languages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/sdg/index.html">
-   Support 5: Linking To Principles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/identifier/id.html">
-   Support 6: Identifier
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/variables/index.html">
-   Support 7: EOVs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../thematics/license/index.html">
-   Support 8: Licenses
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/index.html">Thematic Patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/expinst/index.html">Core 1: Experts and Institutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/docs/index.html">Core 2a: Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/dataset/index.html">Core 2b: Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/docs/maps.html">Core 3: Spatial Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/projects/index.html">Core 4: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/training/index.html">Core 5: Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/vessels/index.html">Core 6: Vessels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/spatial/index.html">Support 1: Spatial Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/services/index.html">Support 2: Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/terms/list.html">Support 3: Keywords &amp; Defined Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/languages/languages.html">Support 4: Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/sdg/index.html">Support 5: Linking To Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/identifier/id.html">Support 6: Identifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/variables/index.html">Support 7: EOVs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../thematics/license/index.html">Support 8: Licenses</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Aggregation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../index.html">
-   Aggregator
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../qstart.html">
-   Indexing with Gleaner
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Gleaner CLI Docker
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexingservices.html">
-   Indexing Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dataservices.html">
-   Data Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../user.html">
-   Interfaces
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../graphpub.html">
-   Graph First Approach
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../prov/index.html">
-   Indexing Activity Prov
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../alternatives.html">
-   Alternatives
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Aggregator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../qstart.html">Indexing with Gleaner</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Gleaner CLI Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexingservices.html">Indexing Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataservices.html">Data Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphpub.html">Graph First Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prov/index.html">Indexing Activity Prov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alternatives.html">Alternatives</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tooling
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tooling</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../tooling/index.html">
-   Tooling
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tooling/index.html">Tooling</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Validation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Validation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../validation/index.html">
-   Validation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../validation/index.html">Validation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Interfaces
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../users/index.html">
-   Users
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../users/query.html">
-   SPARQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../users/sparql.html">
-   OIH SPARQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../users/apis.html">
-   APIs
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/index.html">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/query.html">SPARQL</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../users/sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/apis.html">APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../appendix/index.html">
-   Appendix
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/annoyances.html">
-     Known Issues
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/references.html">
-     References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/registries.html">
-     Registries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../appendix/vocabularies.html">
-     Controlled Vocabularies
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/annoyances.html">Known Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/references.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/registries.html">Registries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/vocabularies.html">Controlled Vocabularies</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/iodepo/odis-arch" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/cliDocker/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/indexing/cliDocker/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/iodepo/odis-arch"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Findexing/cliDocker/index.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/indexing/cliDocker/index.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#about">
-   About
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   Steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-results">
-   Working with results
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-to-the-triplestore">
-   Loading to the triplestore
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Gleaner CLI Docker</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#about">
-   About
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps">
-   Steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-with-results">
-   Working with results
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loading-to-the-triplestore">
-   Loading to the triplestore
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Gleaner CLI Docker</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-results">Working with results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-to-the-triplestore">Loading to the triplestore</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="gleaner-cli-docker">
-<h1>Gleaner CLI Docker<a class="headerlink" href="#gleaner-cli-docker" title="Permalink to this headline">#</a></h1>
-<div class="section" id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="gleaner-cli-docker">
+<h1>Gleaner CLI Docker<a class="headerlink" href="#gleaner-cli-docker" title="Permalink to this heading">#</a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h2>
 <p>This is a new approach for quick starts with Gleaner.  It is a script that exposes
 a containerized version of Gleaner as a CLI interface.</p>
 <p>You can use the -init flag to pull down all the support files you need including
 the Docker Compose file for setting up the object store, a triplestore and
 the support for headless indexing.</p>
-</div>
-<div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
 <p>You need Docker installed.  Later, to work with the results and load them into a
 triplestore, you will also need an S3 compatible client.  We will use the Minio
 client, mc, for this.</p>
-</div>
-<div class="section" id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
-<p>Download the script <a class="reference external" href="http://gleanerDocker.sh">gleanerDocker.sh</a> from <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/tree/master/docs/cliDocker">https://github.com/earthcubearchitecture-project418/gleaner/tree/master/docs/cliDocker</a> You may need to make it run-able with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/master/docs/cliDocker/gleanerDocker.sh
+</section>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this heading">#</a></h2>
+<p>Download the script <a class="reference external" href="http://gleanerDocker.sh">gleanerDocker.sh</a> from <a class="github reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/tree/master/docs/cliDocker">earthcubearchitecture-project418/gleaner</a> You may need to make it run-able with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/master/docs/cliDocker/gleanerDocker.sh
 
-chmod <span class="m">755</span> gleanerDocker.sh
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>gleanerDocker.sh
 </pre></div>
 </div>
 <p>Next you can run the script with the -init flag to pull down all the support files you need.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./gleanerDocker.sh -init
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./gleanerDocker.sh<span class="w"> </span>-init
 </pre></div>
 </div>
 <p>This will also download the needed docker image and the support files.
 Your directory should look like this now:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fils@ubuntu:~/clidocker# ls -lt
-total <span class="m">1356</span>
--rw-r--r-- <span class="m">1</span> fils fils    <span class="m">1281</span> Aug <span class="m">15</span> <span class="m">14</span>:07 gleaner-IS.yml
--rw-r--r-- <span class="m">1</span> fils fils     <span class="m">290</span> Aug <span class="m">15</span> <span class="m">14</span>:07 setenvIS.sh
--rw-r--r-- <span class="m">1</span> fils fils    <span class="m">1266</span> Aug <span class="m">15</span> <span class="m">14</span>:07 demo.yaml
--rw-r--r-- <span class="m">1</span> fils fils <span class="m">1371350</span> Aug <span class="m">15</span> <span class="m">14</span>:07 schemaorg-current-https.jsonld
--rwxr-xr-x <span class="m">1</span> fils fils    <span class="m">1852</span> Aug <span class="m">15</span> <span class="m">14</span>:06 gleanerDocker.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fils@ubuntu:~/clidocker#<span class="w"> </span>ls<span class="w"> </span>-lt
+total<span class="w"> </span><span class="m">1356</span>
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fils<span class="w"> </span>fils<span class="w">    </span><span class="m">1281</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">14</span>:07<span class="w"> </span>gleaner-IS.yml
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fils<span class="w"> </span>fils<span class="w">     </span><span class="m">290</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">14</span>:07<span class="w"> </span>setenvIS.sh
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fils<span class="w"> </span>fils<span class="w">    </span><span class="m">1266</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">14</span>:07<span class="w"> </span>demo.yaml
+-rw-r--r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fils<span class="w"> </span>fils<span class="w"> </span><span class="m">1371350</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">14</span>:07<span class="w"> </span>schemaorg-current-https.jsonld
+-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>fils<span class="w"> </span>fils<span class="w">    </span><span class="m">1852</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">14</span>:06<span class="w"> </span>gleanerDocker.sh
 </pre></div>
 </div>
 <p>Let’s see if we can setup our support infrastructure for Gleaner.  The
@@ -679,21 +486,21 @@ and a triplestore.</p>
 leverage the <a class="reference external" href="http://setenvIS.sh">setenvIS.sh</a> script.  This script will set up the environment we need.
 Note you can also use a .env file or other approaches.  You can references
 the <a class="reference external" href="https://docs.docker.com/compose/environment-variables/">Environment variables in Compose</a> documentation.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker# <span class="nb">source</span> setenvIS.sh 
-root@ubuntu:~/clidocker# docker-compose -f gleaner-IS.yml up -d
-Creating network <span class="s2">&quot;clidocker_traefik_default&quot;</span> with the default driver
-Creating clidocker_triplestore_1 ... <span class="k">done</span>
-Creating clidocker_s3system_1    ... <span class="k">done</span>
-Creating clidocker_headless_1    ... <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker#<span class="w"> </span><span class="nb">source</span><span class="w"> </span>setenvIS.sh<span class="w"> </span>
+root@ubuntu:~/clidocker#<span class="w"> </span>docker-compose<span class="w"> </span>-f<span class="w"> </span>gleaner-IS.yml<span class="w"> </span>up<span class="w"> </span>-d
+Creating<span class="w"> </span>network<span class="w"> </span><span class="s2">&quot;clidocker_traefik_default&quot;</span><span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>driver
+Creating<span class="w"> </span>clidocker_triplestore_1<span class="w"> </span>...<span class="w"> </span><span class="k">done</span>
+Creating<span class="w"> </span>clidocker_s3system_1<span class="w">    </span>...<span class="w"> </span><span class="k">done</span>
+Creating<span class="w"> </span>clidocker_headless_1<span class="w">    </span>...<span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p>Note:  In a fresh run all the images will be pulled down.  This may take a while.</p>
 <p>In the end, you should be able to see these images running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker# docker ps
-CONTAINER ID        IMAGE                            COMMAND                  CREATED              STATUS              PORTS                                              NAMES
-a26f7c945479        nawer/blazegraph                 <span class="s2">&quot;docker-entrypoint.s…&quot;</span>   About a minute ago   Up About a minute   <span class="m">0</span>.0.0.0:9999-&gt;9999/tcp                             clidocker_triplestore_1
-f3a4197c42be        minio/minio:latest               <span class="s2">&quot;/usr/bin/docker-ent…&quot;</span>   About a minute ago   Up About a minute   <span class="m">0</span>.0.0.0:9000-&gt;9000/tcp, <span class="m">0</span>.0.0.0:54321-&gt;54321/tcp   clidocker_s3system_1
-062f029462b1        chromedp/headless-shell:latest   <span class="s2">&quot;/headless-shell/hea…&quot;</span>   About a minute ago   Up About a minute   <span class="m">0</span>.0.0.0:9222-&gt;9222/tcp  
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker#<span class="w"> </span>docker<span class="w"> </span>ps
+CONTAINER<span class="w"> </span>ID<span class="w">        </span>IMAGE<span class="w">                            </span>COMMAND<span class="w">                  </span>CREATED<span class="w">              </span>STATUS<span class="w">              </span>PORTS<span class="w">                                              </span>NAMES
+a26f7c945479<span class="w">        </span>nawer/blazegraph<span class="w">                 </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w">   </span><span class="m">0</span>.0.0.0:9999-&gt;9999/tcp<span class="w">                             </span>clidocker_triplestore_1
+f3a4197c42be<span class="w">        </span>minio/minio:latest<span class="w">               </span><span class="s2">&quot;/usr/bin/docker-ent…&quot;</span><span class="w">   </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w">   </span><span class="m">0</span>.0.0.0:9000-&gt;9000/tcp,<span class="w"> </span><span class="m">0</span>.0.0.0:54321-&gt;54321/tcp<span class="w">   </span>clidocker_s3system_1
+062f029462b1<span class="w">        </span>chromedp/headless-shell:latest<span class="w">   </span><span class="s2">&quot;/headless-shell/hea…&quot;</span><span class="w">   </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span>About<span class="w"> </span>a<span class="w"> </span>minute<span class="w">   </span><span class="m">0</span>.0.0.0:9222-&gt;9222/tcp<span class="w">  </span>
 </pre></div>
 </div>
 <p>At this point we should be able to do a run.  During the init process a
@@ -704,11 +511,11 @@ and I will not do that for the release.  I have a demo site I will use.</p>
 </div></blockquote>
 <p>Next we need to setup our object for Gleaner.  Gleaner itself can do this
 task so we will use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker# ./gleanerDocker.sh -setup -cfg demo
-main.go:35: EarthCube Gleaner
-main.go:110: Setting up buckets
-check.go:58: Gleaner Bucket gleaner not found, generating
-main.go:117: Buckets generated.  Object store should be ready <span class="k">for</span> runs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker#<span class="w"> </span>./gleanerDocker.sh<span class="w"> </span>-setup<span class="w"> </span>-cfg<span class="w"> </span>demo
+main.go:35:<span class="w"> </span>EarthCube<span class="w"> </span>Gleaner
+main.go:110:<span class="w"> </span>Setting<span class="w"> </span>up<span class="w"> </span>buckets
+check.go:58:<span class="w"> </span>Gleaner<span class="w"> </span>Bucket<span class="w"> </span>gleaner<span class="w"> </span>not<span class="w"> </span>found,<span class="w"> </span>generating
+main.go:117:<span class="w"> </span>Buckets<span class="w"> </span>generated.<span class="w">  </span>Object<span class="w"> </span>store<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>ready<span class="w"> </span><span class="k">for</span><span class="w"> </span>runs
 </pre></div>
 </div>
 <blockquote>
@@ -724,34 +531,34 @@ this issue.</p>
 work, but is currently slow and gives little feedback</p>
 </div></blockquote>
 <p>If everything goes well, you should see something like the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker# ./gleanerDocker.sh -cfg demo
-main.go:35: EarthCube Gleaner
-main.go:122: Validating access to object store
-check.go:39: Validated access to object store: gleaner.
-org.go:156: Building organization graph <span class="o">(</span>nq<span class="o">)</span>
-org.go:163: <span class="o">{</span>samplesearth  https://samples.earth/sitemap.xml <span class="nb">false</span> https://www.re3data.org/repository/samplesearth Samples Earth <span class="o">(</span>DEMO Site<span class="o">)</span> https://samples.earth<span class="o">}</span>
-main.go:154: Sitegraph<span class="o">(</span>s<span class="o">)</span> processed
-summoner.go:16: Summoner start time: <span class="m">2021</span>-08-15 <span class="m">14</span>:34:08.907152656 +0000 UTC <span class="nv">m</span><span class="o">=</span>+0.067250623 
-resources.go:74: samplesearth : <span class="m">202</span>
- <span class="m">100</span>% <span class="p">|</span>██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span> <span class="o">(</span><span class="m">202</span>/202, <span class="m">20</span> it/s<span class="o">)</span>        
-summoner.go:34: Summoner end time: <span class="m">2021</span>-08-15 <span class="m">14</span>:34:20.36804137 +0000 UTC <span class="nv">m</span><span class="o">=</span>+11.528139340 
-summoner.go:35: Summoner run time: <span class="m">0</span>.191015 
-webfeed.go:37: <span class="m">1758</span>
-millers.go:26: Miller start time: <span class="m">2021</span>-08-15 <span class="m">14</span>:34:20.368063453 +0000 UTC <span class="nv">m</span><span class="o">=</span>+11.528161421 
-millers.go:40: Adding bucket to milling list: summoned/samplesearth
-millers.go:51: Adding bucket to prov building list: prov/samplesearth
- <span class="m">100</span>% <span class="p">|</span>█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span> <span class="o">(</span><span class="m">202</span>/202, <span class="m">236</span> it/s<span class="o">)</span>        
-graphng.go:77: Assembling result graph <span class="k">for</span> prefix: summoned/samplesearth to: milled/samplesearth
-graphng.go:78: Result graph will be at: results/runX/samplesearth_graph.nq
-pipecopy.go:16: Start pipe reader / writer sequence
-graphng.go:84: Pipe copy <span class="k">for</span> graph <span class="k">done</span>
-millers.go:80: Miller end time: <span class="m">2021</span>-08-15 <span class="m">14</span>:34:21.84702814 +0000 UTC <span class="nv">m</span><span class="o">=</span>+13.007126109 
-millers.go:81: Miller run time: <span class="m">0</span>.024649 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root@ubuntu:~/clidocker#<span class="w"> </span>./gleanerDocker.sh<span class="w"> </span>-cfg<span class="w"> </span>demo
+main.go:35:<span class="w"> </span>EarthCube<span class="w"> </span>Gleaner
+main.go:122:<span class="w"> </span>Validating<span class="w"> </span>access<span class="w"> </span>to<span class="w"> </span>object<span class="w"> </span>store
+check.go:39:<span class="w"> </span>Validated<span class="w"> </span>access<span class="w"> </span>to<span class="w"> </span>object<span class="w"> </span>store:<span class="w"> </span>gleaner.
+org.go:156:<span class="w"> </span>Building<span class="w"> </span>organization<span class="w"> </span>graph<span class="w"> </span><span class="o">(</span>nq<span class="o">)</span>
+org.go:163:<span class="w"> </span><span class="o">{</span>samplesearth<span class="w">  </span>https://samples.earth/sitemap.xml<span class="w"> </span><span class="nb">false</span><span class="w"> </span>https://www.re3data.org/repository/samplesearth<span class="w"> </span>Samples<span class="w"> </span>Earth<span class="w"> </span><span class="o">(</span>DEMO<span class="w"> </span>Site<span class="o">)</span><span class="w"> </span>https://samples.earth<span class="o">}</span>
+main.go:154:<span class="w"> </span>Sitegraph<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>processed
+summoner.go:16:<span class="w"> </span>Summoner<span class="w"> </span>start<span class="w"> </span>time:<span class="w"> </span><span class="m">2021</span>-08-15<span class="w"> </span><span class="m">14</span>:34:08.907152656<span class="w"> </span>+0000<span class="w"> </span>UTC<span class="w"> </span><span class="nv">m</span><span class="o">=</span>+0.067250623<span class="w"> </span>
+resources.go:74:<span class="w"> </span>samplesearth<span class="w"> </span>:<span class="w"> </span><span class="m">202</span>
+<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span>██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="o">(</span><span class="m">202</span>/202,<span class="w"> </span><span class="m">20</span><span class="w"> </span>it/s<span class="o">)</span><span class="w">        </span>
+summoner.go:34:<span class="w"> </span>Summoner<span class="w"> </span>end<span class="w"> </span>time:<span class="w"> </span><span class="m">2021</span>-08-15<span class="w"> </span><span class="m">14</span>:34:20.36804137<span class="w"> </span>+0000<span class="w"> </span>UTC<span class="w"> </span><span class="nv">m</span><span class="o">=</span>+11.528139340<span class="w"> </span>
+summoner.go:35:<span class="w"> </span>Summoner<span class="w"> </span>run<span class="w"> </span>time:<span class="w"> </span><span class="m">0</span>.191015<span class="w"> </span>
+webfeed.go:37:<span class="w"> </span><span class="m">1758</span>
+millers.go:26:<span class="w"> </span>Miller<span class="w"> </span>start<span class="w"> </span>time:<span class="w"> </span><span class="m">2021</span>-08-15<span class="w"> </span><span class="m">14</span>:34:20.368063453<span class="w"> </span>+0000<span class="w"> </span>UTC<span class="w"> </span><span class="nv">m</span><span class="o">=</span>+11.528161421<span class="w"> </span>
+millers.go:40:<span class="w"> </span>Adding<span class="w"> </span>bucket<span class="w"> </span>to<span class="w"> </span>milling<span class="w"> </span>list:<span class="w"> </span>summoned/samplesearth
+millers.go:51:<span class="w"> </span>Adding<span class="w"> </span>bucket<span class="w"> </span>to<span class="w"> </span>prov<span class="w"> </span>building<span class="w"> </span>list:<span class="w"> </span>prov/samplesearth
+<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span>█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="o">(</span><span class="m">202</span>/202,<span class="w"> </span><span class="m">236</span><span class="w"> </span>it/s<span class="o">)</span><span class="w">        </span>
+graphng.go:77:<span class="w"> </span>Assembling<span class="w"> </span>result<span class="w"> </span>graph<span class="w"> </span><span class="k">for</span><span class="w"> </span>prefix:<span class="w"> </span>summoned/samplesearth<span class="w"> </span>to:<span class="w"> </span>milled/samplesearth
+graphng.go:78:<span class="w"> </span>Result<span class="w"> </span>graph<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>at:<span class="w"> </span>results/runX/samplesearth_graph.nq
+pipecopy.go:16:<span class="w"> </span>Start<span class="w"> </span>pipe<span class="w"> </span>reader<span class="w"> </span>/<span class="w"> </span>writer<span class="w"> </span>sequence
+graphng.go:84:<span class="w"> </span>Pipe<span class="w"> </span>copy<span class="w"> </span><span class="k">for</span><span class="w"> </span>graph<span class="w"> </span><span class="k">done</span>
+millers.go:80:<span class="w"> </span>Miller<span class="w"> </span>end<span class="w"> </span>time:<span class="w"> </span><span class="m">2021</span>-08-15<span class="w"> </span><span class="m">14</span>:34:21.84702814<span class="w"> </span>+0000<span class="w"> </span>UTC<span class="w"> </span><span class="nv">m</span><span class="o">=</span>+13.007126109<span class="w"> </span>
+millers.go:81:<span class="w"> </span>Miller<span class="w"> </span>run<span class="w"> </span>time:<span class="w"> </span><span class="m">0</span>.024649<span class="w"> </span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="working-with-results">
-<h2>Working with results<a class="headerlink" href="#working-with-results" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="working-with-results">
+<h2>Working with results<a class="headerlink" href="#working-with-results" title="Permalink to this heading">#</a></h2>
 <p>If all has gone well, at this point you have downloaded the JSON-LD documents into Minio or
 some other object store.Next we will install a client that we can use to work with these objects.</p>
 <p>Note, there is a web interface exposed on the port mapped in the Docker compose file.
@@ -787,13 +594,13 @@ to container isolation.</p>
 </pre></div>
 </div>
 <p>You can explore mc and see how to copy and work with the object store.</p>
-</div>
-<div class="section" id="loading-to-the-triplestore">
-<h2>Loading to the triplestore<a class="headerlink" href="#loading-to-the-triplestore" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="loading-to-the-triplestore">
+<h2>Loading to the triplestore<a class="headerlink" href="#loading-to-the-triplestore" title="Permalink to this heading">#</a></h2>
 <p>As part of our Docker compose file we also spun up a triplestore.  Let’s use that now.</p>
 <p>Now Download the <a class="reference external" href="http://minio2blaze.sh">minio2blaze.sh</a> script.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -O https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/master/scripts/minio2blaze.sh
-chmod <span class="m">755</span> minio2blaze.sh 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/earthcubearchitecture-project418/gleaner/master/scripts/minio2blaze.sh
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>minio2blaze.sh<span class="w"> </span>
 </pre></div>
 </div>
 <p>The content we need to load into the triplestore needs to be in RDF for Blazegraph.  We also need
@@ -832,9 +639,9 @@ we should see something like:</p>
 <p><img alt="Blazegrah" src="../../_images/simplequery.png" /></p>
 <p>You can explore more about SPARQL and the wide range of queries you can do with it
 at the W3C <a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1 Query Language</a> reference.</p>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>We have attempted here to give a quick introduction to the use of Gleaner in a Docker
 environment.  This is a very simple example, but it should give you an idea of the approach
 used.  This approach can then be combined with other approaches documented to establish a
@@ -843,8 +650,8 @@ at the <a class="reference external" href="https://github.com/gleanerio">Gleaner
 <blockquote>
 <div><p>Note: The plan is to merge the <a class="reference external" href="http://Gleaner.io">Gleaner.io</a> GitHub repository into the first.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -858,7 +665,7 @@ at the <a class="reference external" href="https://github.com/gleanerio">Gleaner
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./indexing/cliDocker"
         },
         predefinedOutput: true
@@ -866,50 +673,110 @@ at the <a class="reference external" href="https://github.com/gleanerio">Gleaner
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../qstart.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Indexing with Gleaner</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../qstart.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Indexing with Gleaner</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../indexingservices.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../indexingservices.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Indexing Services</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By IODEPO<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-results">Working with results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-to-the-triplestore">Loading to the triplestore</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By IODEPO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

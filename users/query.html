@@ -1,47 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SPARQL &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>SPARQL &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -49,61 +61,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'users/query';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="OIH SPARQL" href="sparql.html" />
     <link rel="prev" title="Users" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,682 +156,338 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../content.html">
-   Structured Data on the Web
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../personas/persona.html">
-   Personas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publishing/publishing.html">
-   Publisher
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../foundation/foundation.html">
-   JSON-LD Foundation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../content.html">Structured Data on the Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../personas/persona.html">Personas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing/publishing.html">Publisher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation/foundation.html">JSON-LD Foundation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Profiles
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Profiles</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/index.html">
-   Thematic Patterns
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/expinst/index.html">
-   Core 1: Experts and Institutions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/docs/index.html">
-   Core 2a: Documents
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/dataset/index.html">
-   Core 2b: Datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/docs/maps.html">
-   Core 3: Spatial Maps
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/projects/index.html">
-   Core 4: Projects
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/training/index.html">
-   Core 5: Training
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/vessels/index.html">
-   Core 6: Vessels
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/spatial/index.html">
-   Support 1: Spatial Geometry
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/services/index.html">
-   Support 2: Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/terms/list.html">
-   Support 3: Keywords &amp; Defined Terms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/languages/languages.html">
-   Support 4: Languages
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/sdg/index.html">
-   Support 5: Linking To Principles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/identifier/id.html">
-   Support 6: Identifier
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/variables/index.html">
-   Support 7: EOVs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../thematics/license/index.html">
-   Support 8: Licenses
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/index.html">Thematic Patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/expinst/index.html">Core 1: Experts and Institutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/docs/index.html">Core 2a: Documents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/dataset/index.html">Core 2b: Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/docs/maps.html">Core 3: Spatial Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/projects/index.html">Core 4: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/training/index.html">Core 5: Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/vessels/index.html">Core 6: Vessels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/spatial/index.html">Support 1: Spatial Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/services/index.html">Support 2: Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/terms/list.html">Support 3: Keywords &amp; Defined Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/languages/languages.html">Support 4: Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/sdg/index.html">Support 5: Linking To Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/identifier/id.html">Support 6: Identifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/variables/index.html">Support 7: EOVs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/license/index.html">Support 8: Licenses</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Aggregation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/index.html">
-   Aggregator
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/qstart.html">
-   Indexing with Gleaner
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/cliDocker/index.html">
-   Gleaner CLI Docker
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/indexingservices.html">
-   Indexing Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/dataservices.html">
-   Data Services
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/user.html">
-   Interfaces
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/graphpub.html">
-   Graph First Approach
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/prov/index.html">
-   Indexing Activity Prov
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../indexing/alternatives.html">
-   Alternatives
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/index.html">Aggregator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/qstart.html">Indexing with Gleaner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/cliDocker/index.html">Gleaner CLI Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/indexingservices.html">Indexing Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/dataservices.html">Data Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/user.html">Interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/graphpub.html">Graph First Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/prov/index.html">Indexing Activity Prov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexing/alternatives.html">Alternatives</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tooling
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tooling</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../tooling/index.html">
-   Tooling
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../tooling/index.html">Tooling</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Validation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Validation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../validation/index.html">
-   Validation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../validation/index.html">Validation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Interfaces
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Interfaces</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   Users
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   SPARQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="sparql.html">
-   OIH SPARQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="apis.html">
-   APIs
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Users</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">SPARQL</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apis.html">APIs</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/index.html">
-   Appendix
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/annoyances.html">
-     Known Issues
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/references.html">
-     References
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/registries.html">
-     Registries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/vocabularies.html">
-     Controlled Vocabularies
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/annoyances.html">Known Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/references.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/registries.html">Registries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/vocabularies.html">Controlled Vocabularies</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/iodepo/odis-arch/master?urlpath=lab/tree/book/users/query.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
   
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
+  <div id="rtd-footer-container"></div>
 
-      </li>
+
+      </div>
       
-      <li>
-        <a href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/users/query.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/users/query.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/iodepo/odis-arch" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fusers/query.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/users/query.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/iodepo/odis-arch"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fusers/query.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/users/query.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   SPARQL
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     SPARQL
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-a-graph">
-     Load a Graph
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#let-s-define-our-first-query">
-   Let’s define our first query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-the-query">
-   Run the query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nicer-formatting">
-   Nicer formatting
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kglab">
-   KGLab
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prefix">
-   PREFIX
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#location-counts">
-   Location Counts
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filter">
-   FILTER
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#peru">
-   PERU
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dates">
-   Dates
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-bit-of-pandas">
-   A bit of Pandas
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-on-query">
-   More on Query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>SPARQL</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   SPARQL
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     SPARQL
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#load-a-graph">
-     Load a Graph
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#let-s-define-our-first-query">
-   Let’s define our first query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-the-query">
-   Run the query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nicer-formatting">
-   Nicer formatting
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kglab">
-   KGLab
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prefix">
-   PREFIX
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#location-counts">
-   Location Counts
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filter">
-   FILTER
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#peru">
-   PERU
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dates">
-   Dates
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-bit-of-pandas">
-   A bit of Pandas
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#more-on-query">
-   More on Query
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SPARQL</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SPARQL</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">SPARQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-a-graph">Load a Graph</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-define-our-first-query">Let’s define our first query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-query">Run the query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nicer-formatting">Nicer formatting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kglab">KGLab</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix">PREFIX</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#location-counts">Location Counts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">FILTER</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#peru">PERU</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dates">Dates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-of-pandas">A bit of Pandas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-query">More on Query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="sparql">
-<h1>SPARQL<a class="headerlink" href="#sparql" title="Permalink to this headline">#</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sparql">
+<h1>SPARQL<a class="headerlink" href="#sparql" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>This notebook will go over some concepts for querying the graph that is generated by the Ocean InfoHub.</p>
 <p>The product of the publishing and indexing process is a graph.  This graph follows the W3C Resource Description
 Framework (RDF).   RDF is a data model that can be represented in various text encodings.  Among these
@@ -800,14 +500,14 @@ revisit it here.    In this notebook, we will load the graph into a local graph 
 that also supports the same query language our graph databases use.  This will make the demonstration easier and
 allow you to download and run this notebook on your own machine if you wish.  The query language we will use
 is SPARQL.</p>
-</div>
-<div class="section" id="id1">
-<h2>SPARQL<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id1">
+<h2>SPARQL<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>SPARQL (SPARQL Protocol and RDF Query Language) is the query language that is used to query RDF graphs.  It
 is a W3C recommendation documented at <a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1 Query Language</a>.</p>
-</div>
-<div class="section" id="load-a-graph">
-<h2>Load a Graph<a class="headerlink" href="#load-a-graph" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="load-a-graph">
+<h2>Load a Graph<a class="headerlink" href="#load-a-graph" title="Permalink to this heading">#</a></h2>
 <p>For this demonstration we will be using Python to load the graph and do our queries.  However, there are many
 languages and libraries for working with graphs and SPARQL.   Also, you can often query a graph using web UIs
 infront of your graph database or even with simple direct HTTP requests.  Examples of some of these can be
@@ -827,10 +527,10 @@ found in other sections of the OIH documentation.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="let-s-define-our-first-query">
-<h1>Let’s define our first query<a class="headerlink" href="#let-s-define-our-first-query" title="Permalink to this headline">#</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="let-s-define-our-first-query">
+<h1>Let’s define our first query<a class="headerlink" href="#let-s-define-our-first-query" title="Permalink to this heading">#</a></h1>
 <p>This is a simple query that will return all the triples in the graph.   Recall an RDF graph is make of triples defined by a subject, predicate and object.  You can review RDF at the W3C RDF Primer (<a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>).  SPARQL allows us to do a type of pattern matching on the graph by defining a pattern we a relooking for.</p>
 <p>Here we define <code class="docutils literal notranslate"><span class="pre">?s</span> <span class="pre">?p</span> <span class="pre">?o</span></code> as the pattern we are looking for.  The <code class="docutils literal notranslate"><span class="pre">?</span></code> is a variable that can be used to match any value.  In this case, we are looking for all the triples in the graph.  We have used s, p and o to as simple names for our subject, predicate, object elements of the RDF triple.</p>
 <p>Since this would match ALL the values in the graph, which would be a lot, we have added a LIMIT option to reduce the number of resutls returned.</p>
@@ -848,9 +548,9 @@ found in other sections of the OIH documentation.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="run-the-query">
-<h1>Run the query<a class="headerlink" href="#run-the-query" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="run-the-query">
+<h1>Run the query<a class="headerlink" href="#run-the-query" title="Permalink to this heading">#</a></h1>
 <p>We will run this query, and print out the results</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -875,9 +575,9 @@ ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;Introduction to Ocean D
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="nicer-formatting">
-<h1>Nicer formatting<a class="headerlink" href="#nicer-formatting" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="nicer-formatting">
+<h1>Nicer formatting<a class="headerlink" href="#nicer-formatting" title="Permalink to this heading">#</a></h1>
 <p>We can do a bit of formatting to see our results in a nicer way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -905,9 +605,9 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="kglab">
-<h1>KGLab<a class="headerlink" href="#kglab" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="kglab">
+<h1>KGLab<a class="headerlink" href="#kglab" title="Permalink to this heading">#</a></h1>
 <p>As mentioned, this intro is based on the nice work done by KGLab (<a class="reference external" href="https://derwen.ai/docs/kgl/">https://derwen.ai/docs/kgl/</a>) both in their library and documentation.  We wll import kglab here and take advantage of some of their nice features.  In particular some nice functioons to load our graph and query it with results into a Dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -959,9 +659,9 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="prefix">
-<h1>PREFIX<a class="headerlink" href="#prefix" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prefix">
+<h1>PREFIX<a class="headerlink" href="#prefix" title="Permalink to this heading">#</a></h1>
 <p>Let’s do another query.  We will use the PREFIX keyword to define a prefix for the namespace.  This is a way to leverage namespace in our query.  Note the use of schema:name vs the <a class="reference external" href="https://schema.org/location">https://schema.org/location</a>.  The latter is a URI and the former is a prefix.  The prefix is defined in the PREFIX keyword.   The schema:name is the name of the property that we are querying, the prefix can expand it to a URI.  The <a class="reference external" href="https://schema.org/location">https://schema.org/location</a> is the URI of the property directly, without use of a prefix.   Both work, the prefix can simply make life easier for you and also help avoid hard to find typos where you may miss-type a URI.</p>
 <p>Let’s do a query to see all the location names in our group for training.</p>
 <div class="cell docutils container">
@@ -1036,9 +736,9 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="location-counts">
-<h1>Location Counts<a class="headerlink" href="#location-counts" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="location-counts">
+<h1>Location Counts<a class="headerlink" href="#location-counts" title="Permalink to this heading">#</a></h1>
 <p>The above is nice, but it doesn’t tell us much about the number of events in each location. We can modify our query to do this.  We can leverage the COUNT and GROUP BY capacity of SPARQL to do this.  We can then add in ORDER BY to sort the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1119,9 +819,9 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="filter">
-<h1>FILTER<a class="headerlink" href="#filter" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="filter">
+<h1>FILTER<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h1>
 <p>Graphs are great for showing relations between objects but our approaches to searching or selecting data can often leverage pattern matching on text strings.  We do have some tools in SPARQL for this in the form of FILTER.  We can use regex pattern in the FILTER to match text.  Let’s use this to find all the locations with “Peru” in the name.</p>
 <p>In the following we will do a simple FILTER with a regular expression, but you can also do things like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT DISTINCT ?s 
@@ -1201,13 +901,13 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="peru">
-<h1>PERU<a class="headerlink" href="#peru" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="peru">
+<h1>PERU<a class="headerlink" href="#peru" title="Permalink to this heading">#</a></h1>
 <p>So we see we have three entries in our graph that have Peru in the name.  This is where connecting our group to a shared concept of what Peru is like the WikiData entry for Peru at <a class="reference external" href="https://www.wikidata.org/wiki/Q419">https://www.wikidata.org/wiki/Q419</a> would help.  That’s a topic for another day.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="dates">
-<h1>Dates<a class="headerlink" href="#dates" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="dates">
+<h1>Dates<a class="headerlink" href="#dates" title="Permalink to this heading">#</a></h1>
 <p>Let’s look at the dates that are available in the graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1287,9 +987,9 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="a-bit-of-pandas">
-<h1>A bit of Pandas<a class="headerlink" href="#a-bit-of-pandas" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-bit-of-pandas">
+<h1>A bit of Pandas<a class="headerlink" href="#a-bit-of-pandas" title="Permalink to this heading">#</a></h1>
 <p>Here we will mix in a bit of Pandas to convert our dates to Pandas dates, group and plot.  This is not
 SPARQL but rather just some post processing in Pandas.  It does still give us an idea of some of the
 information we can extract from our graph.</p>
@@ -1308,16 +1008,16 @@ goals among the participants.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/query_24_0.svg" src="../_images/query_24_0.svg" /></div>
+<img alt="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" src="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" /></div>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="more-on-query">
-<h1>More on Query<a class="headerlink" href="#more-on-query" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="more-on-query">
+<h1>More on Query<a class="headerlink" href="#more-on-query" title="Permalink to this heading">#</a></h1>
 <p>Here we have gone through an introdcution to the SPARQL query language and how to use it to query our graph.<br />
 We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
 <p>This is a just a quick overview of the SPARQL language.  You can find a large amount of information online.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
@@ -1325,7 +1025,7 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
 <li><p><a class="reference external" href="https://www.dataversity.net/introduction-to-sparql/">https://www.dataversity.net/introduction-to-sparql/</a></p></li>
 <li><p><a class="reference external" href="https://www.slideshare.net/olafhartig/an-introduction-to-sparql">https://www.slideshare.net/olafhartig/an-introduction-to-sparql</a></p></li>
 </ul>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1339,7 +1039,7 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./users"
         },
         predefinedOutput: true
@@ -1347,50 +1047,123 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Users</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Users</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="sparql.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="sparql.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">OIH SPARQL</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By IODEPO<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SPARQL</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">SPARQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-a-graph">Load a Graph</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-define-our-first-query">Let’s define our first query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-query">Run the query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nicer-formatting">Nicer formatting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#kglab">KGLab</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prefix">PREFIX</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#location-counts">Location Counts</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">FILTER</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#peru">PERU</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dates">Dates</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-of-pandas">A bit of Pandas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-query">More on Query</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By IODEPO
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
