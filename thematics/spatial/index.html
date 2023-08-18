@@ -505,6 +505,27 @@ environments.</p>
 Well Know Text (WKT) is a OGC standard referenced at: <a class="reference external" href="https://www.ogc.org/standards/wkt-crs">https://www.ogc.org/standards/wkt-crs</a>.
 A more accessible description and set of examples can be found at WikiPedia:
 <a class="reference external" href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry">Well-known text representation of geometry</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>      <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span>
+</span><span class="linenos"> 5</span>    <span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">10</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">12</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
+</span><span class="hll"><span class="linenos">14</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">16</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+</span><span class="hll"><span class="linenos">17</span>        <span class="p">}</span>
+</span><span class="linenos">18</span>    <span class="p">}</span>
+<span class="linenos">19</span><span class="p">}</span>
+</pre></div>
+</div>
 <p>Line 4 declare the GeoSPARQL prefix for the vocabulary that we will leverage in this document.</p>
 <p>Lines 9-17 are the GeoSPARQL node and property definitions.  In this case our type is a simple
 point geometry.  We then go on to declare the asWKT with a type and value.  The value
@@ -540,19 +561,7 @@ declare the coordinate reference system (CRS) of the geometry using the crs prop
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3595</span><span class="o">/</span><span class="mf">3080568285.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/spatial/graphs/basic.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/spatial/graphs/basic.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/aa021c750ce0ddd95f4845f53287657e515161dfd97f6746a26dc9f7ecf699ac.svg" src="../../_images/aa021c750ce0ddd95f4845f53287657e515161dfd97f6746a26dc9f7ecf699ac.svg" /></div>
 </div>
 <section id="wkt-bounding-box">
 <h3>WKT Bounding Box<a class="headerlink" href="#wkt-bounding-box" title="Permalink to this heading">#</a></h3>
@@ -584,6 +593,24 @@ pending <a class="reference external" href="https://schema.org/GeospatialGeometr
 type Intangible (and not Place referenced by spatialCoverage).  This will be a
 subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoShape</a>.</p>
 <p><a class="reference external" href="http://Schema.org">Schema.org</a> spatial relations are guided by <a class="reference external" href="https://en.wikipedia.org/wiki/DE-9IM">DE-9IM</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>  <span class="p">},</span>
+<span class="linenos"> 5</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 8</span>  <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">11</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">12</span>      <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">39.3280</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>      <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">120.1633</span>
+</span><span class="hll"><span class="linenos">14</span>    <span class="p">}</span>
+</span><span class="hll"><span class="linenos">15</span>  <span class="p">}</span>
+</span><span class="linenos">16</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -614,19 +641,7 @@ subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoS
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3595</span><span class="o">/</span><span class="mf">2065556369.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/spatial/graphs/sos.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/spatial/graphs/sos.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/1e374372c4228bacfe400fd358f5f38ad289a9b92d9b629ba68bb1fecd6f163a.svg" src="../../_images/1e374372c4228bacfe400fd358f5f38ad289a9b92d9b629ba68bb1fecd6f163a.svg" /></div>
 </div>
 </section>
 <section id="option-review-sos-issue-105">
@@ -644,6 +659,62 @@ make the documents smaller and easier to read and could help query performance. 
 can then point to a dereferencable URL for the detailed geometry.</p>
 <p>ref Selfie:  When linking out to complex geometries we recommend following: <a class="reference external" href="https://docs.ogc.org/per/20-067.html">https://docs.ogc.org/per/20-067.html</a></p>
 <p>From the referenced SOS issue 105:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@version&quot;</span><span class="p">:</span> <span class="mf">1.1</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>        <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/vocab/json&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;@json&quot;</span>
+</span><span class="linenos"> 7</span>        <span class="p">},</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">&quot;rdfs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2000/01/rdf-schema#&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">&quot;xsd&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;http://igsn.org/core/v1/description&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">,</span>
+</span><span class="linenos">13</span>        <span class="s2">&quot;schema&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">14</span>    <span class="p">},</span>
+<span class="linenos">15</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://samples.earth/id/do/bqs2dn2u6s73o70jdup0&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://igsn.org/core/v1/Sample&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A fake ID for testing&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;schema:subjectOf&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="linenos">19</span>        <span class="p">{</span>
+<span class="linenos">20</span>            <span class="s2">&quot;schema:url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://samples.earth/id/do/bqs2dn2u6s73o70jdup0.geojson&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:DigitalDocument&quot;</span><span class="p">,</span>
+<span class="linenos">22</span>            <span class="s2">&quot;schema:format&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">23</span>                <span class="s2">&quot;application/vnd.geo+json&quot;</span>
+<span class="linenos">24</span>            <span class="p">],</span>
+<span class="linenos">25</span>            <span class="s2">&quot;schema:conformsTo&quot;</span><span class="p">:</span> <span class="s2">&quot;https://igsn.org/schema/spatial.schema.json&quot;</span>
+<span class="linenos">26</span>        <span class="p">}</span>
+<span class="linenos">27</span>    <span class="p">],</span>
+<span class="hll"><span class="linenos">28</span>    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">29</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;_:N98e75cacc29f40deb555eb583cb162dc&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
+<span class="linenos">31</span>        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">32</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
+<span class="linenos">33</span>            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
+<span class="linenos">34</span>        <span class="p">},</span>
+<span class="linenos">35</span>        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">36</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+<span class="linenos">37</span>        <span class="p">}</span>
+<span class="linenos">38</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">39</span>    <span class="s2">&quot;geoblob&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">40</span>        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeometryCollection&quot;</span><span class="p">,</span>
+<span class="linenos">41</span>        <span class="s2">&quot;geometries&quot;</span><span class="p">:</span> <span class="p">[{</span>
+<span class="linenos">42</span>            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+<span class="linenos">43</span>            <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">76</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">]</span>
+<span class="linenos">44</span>        <span class="p">}]</span>
+<span class="linenos">45</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">46</span>    <span class="s2">&quot;schema:spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">47</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:Place&quot;</span><span class="p">,</span>
+<span class="linenos">48</span>        <span class="s2">&quot;schema:geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">49</span>          <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:GeoCoordinates&quot;</span><span class="p">,</span>
+<span class="linenos">50</span>          <span class="s2">&quot;schema:latitude&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">18</span><span class="p">,</span>
+<span class="linenos">51</span>          <span class="s2">&quot;schema:longitude&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">76</span>
+<span class="linenos">52</span>        <span class="p">}</span>
+<span class="linenos">53</span>      <span class="p">}</span>
+<span class="linenos">54</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -674,19 +745,7 @@ can then point to a dereferencable URL for the detailed geometry.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3595</span><span class="o">/</span><span class="mf">1201320781.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/spatial/graphs/issue105.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/spatial/graphs/issue105.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/770bfe43bee1d946e8b0c364477bc7b804dfb8e387a928a77295e39a9bc43349.svg" src="../../_images/770bfe43bee1d946e8b0c364477bc7b804dfb8e387a928a77295e39a9bc43349.svg" /></div>
 </div>
 </section>
 <section id="references">

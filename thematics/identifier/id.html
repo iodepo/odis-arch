@@ -522,6 +522,43 @@ and subtypes like Dataset and Map.</p>
 <h3>Example Graph<a class="headerlink" href="#example-graph" title="Permalink to this heading">#</a></h3>
 <p>The following example graph shows some of the properties we can use
 to provide source and provenance information about a resource.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/url/of/the/item&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 8</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;isBasedOn&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/xyz&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">14</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span>
+</span><span class="hll"><span class="linenos">16</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">20</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">24</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">25</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">27</span>        <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>        <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">30</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos">32</span>    <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">33</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+</span><span class="hll"><span class="linenos">34</span>    <span class="p">}</span>
+</span><span class="linenos">35</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -552,19 +589,7 @@ to provide source and provenance information about a resource.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">4019807643.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/943753fe37bf1971a025072dfe1d42750c9be5edff7f038f335085adfbc3a539.svg" src="../../_images/943753fe37bf1971a025072dfe1d42750c9be5edff7f038f335085adfbc3a539.svg" /></div>
 </div>
 </section>
 <section id="identifier">
@@ -631,19 +656,23 @@ refer there for details on this property.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">4280587782.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/doi&quot;,
+        &quot;url&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
+        &quot;value&quot;: &quot;doi:10.5066/F7VX0DMQ&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/147685ac70ea2618b862728bb037b0bb07d2f80f0ffd6001204d2b3de1f65aac.svg" src="../../_images/147685ac70ea2618b862728bb037b0bb07d2f80f0ffd6001204d2b3de1f65aac.svg" /></div>
 </div>
 <section id="propertyid">
 <h4>propertyID<a class="headerlink" href="#propertyid" title="Permalink to this heading">#</a></h4>
@@ -736,19 +765,24 @@ data available.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">230997114.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;provider&quot;: {
+        &quot;@id&quot;: &quot;https://www.sample-data-repository.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Sample Data Repository Office&quot;,
+        &quot;name&quot;: &quot;SDRO&quot;,
+        &quot;sameAs&quot;: &quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;,
+        &quot;url&quot;: &quot;https://www.sample-data-repository.org&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/5fcb373d484863edeca9367c72fc80b1c969f0fb153561546ff5a87deacfa4a0.svg" src="../../_images/5fcb373d484863edeca9367c72fc80b1c969f0fb153561546ff5a87deacfa4a0.svg" /></div>
 </div>
 </section>
 <section id="publisher">
@@ -816,19 +850,24 @@ by the structured metadata.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">3003411695.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.sample-data-repository.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Sample Data Repository Office&quot;,
+        &quot;name&quot;: &quot;SDRO&quot;,
+        &quot;sameAs&quot;: &quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;,
+        &quot;url&quot;: &quot;https://www.sample-data-repository.org&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/b113ebb5d595253bc60e6ae3f14dd6b3ffed235e87f2ce4e5d4e15f505f5d664.svg" src="../../_images/b113ebb5d595253bc60e6ae3f14dd6b3ffed235e87f2ce4e5d4e15f505f5d664.svg" /></div>
 </div>
 </section>
 <section id="sameas">
@@ -901,19 +940,17 @@ logically consistent to point to multiple sameAs resources.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">3181363792.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;sameAs&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/56a2fec34de69f4f0c6a440957d3eafe054f2c743ce7d10870ea9a1ee0d36ec4.svg" src="../../_images/56a2fec34de69f4f0c6a440957d3eafe054f2c743ce7d10870ea9a1ee0d36ec4.svg" /></div>
 </div>
 </section>
 <section id="isbasedon">
@@ -1024,19 +1061,23 @@ The property about can be used to:</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3496</span><span class="o">/</span><span class="mf">1238804780.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;subjectOf&quot;: {
+        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
+        &quot;@type&quot;: &quot;CreativeWork&quot;,
+        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
+        &quot;name&quot;: &quot;UNSD SDG indicator code:C140c01&quot;,
+        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/d643041cd188862adb7d17baebbfea5feff6bdc41216400377cca6471300c8b4.svg" src="../../_images/d643041cd188862adb7d17baebbfea5feff6bdc41216400377cca6471300c8b4.svg" /></div>
 </div>
 </section>
 </section>

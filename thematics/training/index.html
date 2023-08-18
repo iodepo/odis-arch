@@ -506,6 +506,24 @@ creative works which aims to build knowledge, competence or ability of learners.
 <h2>Simple Course<a class="headerlink" href="#simple-course" title="Permalink to this heading">#</a></h2>
 <p>A basic course might simply present the name and description of the course along
 with a few other key properties.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/2&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 7</span>    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
+</span><span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">14</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+</span><span class="hll"><span class="linenos">15</span>    <span class="p">}</span>
+</span><span class="linenos">16</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -538,19 +556,7 @@ with a few other key properties.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3633</span><span class="o">/</span><span class="mf">675399790.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="g g-Whitespace">     </span><span class="mi">11</span> 
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/training/graphs/course2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/training/graphs/course2.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/5324a1d7e5391c27fab3a8aa7b829dbf13a51b73bd8a66f2c62d02497a996e95.svg" src="../../_images/5324a1d7e5391c27fab3a8aa7b829dbf13a51b73bd8a66f2c62d02497a996e95.svg" /></div>
 </div>
 <p>Here we can see the emphasized line 7 and lines 10-15 highlighting some
 unique types.</p>
@@ -581,6 +587,65 @@ the properties from Course and properties
 from <a class="reference external" href="https://schema.org/LearningResource">LearningResource</a>.</p>
 <p>We wont go into the details of each property here, but we will show a couple.</p>
 <p>The example below present two.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+</span><span class="hll"><span class="linenos"> 6</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 7</span>        <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 8</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+</span><span class="hll"><span class="linenos"> 9</span>        <span class="p">}</span>
+</span><span class="linenos">10</span>    <span class="p">},</span>
+<span class="linenos">11</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/2&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">16</span>    <span class="s2">&quot;teaches&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON-LD&quot;</span><span class="p">,</span>
+</span><span class="linenos">17</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">18</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">19</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+<span class="linenos">22</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;hasCourseInstance&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">24</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">25</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">27</span>                <span class="s2">&quot;MOOC1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll"><span class="linenos">29</span>            <span class="p">],</span>
+</span><span class="hll"><span class="linenos">30</span>            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">31</span>            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-15&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">32</span>            <span class="s2">&quot;attendee&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">33</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">34</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">35</span>                <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">36</span>                <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">37</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">38</span>                <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">39</span>                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">40</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">41</span>                    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;This can be text or URL for an ID like ORCID&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">42</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">43</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of the ID&quot;</span>
+</span><span class="hll"><span class="linenos">44</span>                <span class="p">}</span>
+</span><span class="hll"><span class="linenos">45</span>            <span class="p">}</span>
+</span><span class="hll"><span class="linenos">46</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">47</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">48</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">49</span>            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">50</span>                <span class="s2">&quot;MOOC2&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">51</span>                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll"><span class="linenos">52</span>            <span class="p">],</span>
+</span><span class="hll"><span class="linenos">53</span>            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-05-21&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">54</span>            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-04-15&quot;</span>
+</span><span class="hll"><span class="linenos">55</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos">56</span>    <span class="p">]</span>
+</span><span class="linenos">57</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -611,19 +676,7 @@ from <a class="reference external" href="https://schema.org/LearningResource">Le
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3633</span><span class="o">/</span><span class="mf">2809499739.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/training/graphs/course1.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/training/graphs/course1.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/02677b5be1169fada35536d2021d82a8563bccad4a6edb3083610d9464aa02b7.svg" src="../../_images/02677b5be1169fada35536d2021d82a8563bccad4a6edb3083610d9464aa02b7.svg" /></div>
 </div>
 <p>Line 16 shows the <a class="reference external" href="https://schema.org/teaches"><em>teaches</em></a> property.  It
 should be noted while this propery can point to simple text, it is

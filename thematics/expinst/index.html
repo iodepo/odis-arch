@@ -659,19 +659,23 @@ a resource.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">2312116913.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;Optional description of this record...&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/orcid&quot;,
+        &quot;url&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/acb5b681ada799a0e652ebb00c284ececfa630a1080bb2cc49d89782f34834f8.svg" src="../../_images/acb5b681ada799a0e652ebb00c284ececfa630a1080bb2cc49d89782f34834f8.svg" /></div>
 </div>
 </section>
 <section id="details-nationality">
@@ -725,19 +729,29 @@ nationality are for our use case.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">2313193893.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;nationality&quot;: [
+        {
+            &quot;@type&quot;: &quot;Country&quot;,
+            &quot;name&quot;: &quot;Fiji&quot;
+        },
+        {
+            &quot;@type&quot;: &quot;DefinedTerm&quot;,
+            &quot;inDefinedTermSet&quot;: &quot;UN/LOCODE Code List by Country and Territory&quot;,
+            &quot;name&quot;: &quot;Fiji&quot;,
+            &quot;termCode&quot;: &quot;FJ&quot;,
+            &quot;url&quot;: &quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;
+        }
+    ]
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/c0610722800d1b0d22f8215855f73cdd902e5b704a0b30e712779d84aea7e145.svg" src="../../_images/c0610722800d1b0d22f8215855f73cdd902e5b704a0b30e712779d84aea7e145.svg" /></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -799,19 +813,21 @@ array [] syntax.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">3657043703.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;knowsLanguage&quot;: {
+        &quot;@type&quot;: &quot;Language&quot;,
+        &quot;alternateName&quot;: &quot;es&quot;,
+        &quot;name&quot;: &quot;Spanish&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/0060246a95adc543b66e76f2cc69e75d1b685dbb8b95bb98b4afa6bc5a9a3caa.svg" src="../../_images/0060246a95adc543b66e76f2cc69e75d1b685dbb8b95bb98b4afa6bc5a9a3caa.svg" /></div>
 </div>
 </section>
 <section id="details-knows-about">
@@ -864,19 +880,32 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">2989691902.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/x&quot;,
+    &quot;@type&quot;: &quot;Person&quot;,
+    &quot;knowsAbout&quot;: [
+        {
+            &quot;@type&quot;: &quot;Text&quot;,
+            &quot;description&quot;: &quot;Invasive species in brackish water&quot;
+        },
+        {
+            &quot;@type&quot;: &quot;URL&quot;,
+            &quot;url&quot;: &quot;https://www.wikidata.org/wiki/Q183368&quot;
+        },
+        {
+            &quot;@id&quot;: &quot;https://example.org/id/course/x&quot;,
+            &quot;@type&quot;: &quot;Course&quot;,
+            &quot;description&quot;: &quot;In this course ...&quot;,
+            &quot;url&quot;: &quot;URL to the course&quot;
+        }
+    ]
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/8c47cc22186cbf543213888691f8dd00db22cddf9e846305fee22b8ec01ed3fa.svg" src="../../_images/8c47cc22186cbf543213888691f8dd00db22cddf9e846305fee22b8ec01ed3fa.svg" /></div>
 </div>
 </section>
 </section>
@@ -884,6 +913,50 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 <h2>Example: Institution Graph<a class="headerlink" href="#example-institution-graph" title="Permalink to this heading">#</a></h2>
 <p>Here we have an example of an data graph for type <a class="reference external" href="https://schema.org/Organization">schema.org/Organization</a>.<br />
 For the identifier we are using the a GRID, but this could also be something like a ROR.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://index.example.org/id/org/x&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+<span class="linenos">12</span>    <span class="p">},</span>
+<span class="linenos">13</span>    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">14</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera, F-75002, Paris, France&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris&quot;</span>
+<span class="linenos">17</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">20</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">24</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">25</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/org/1&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+</span><span class="hll"><span class="linenos">29</span>        <span class="p">},</span>
+</span><span class="linenos">30</span>        <span class="p">{</span>
+<span class="linenos">31</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span>
+<span class="linenos">33</span>        <span class="p">}</span>
+<span class="linenos">34</span>    <span class="p">],</span>
+<span class="linenos">35</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">36</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
+<span class="linenos">37</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">38</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
+<span class="linenos">39</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
+<span class="linenos">40</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos">41</span>    <span class="p">}</span>
+<span class="linenos">42</span><span class="p">}</span>
+</pre></div>
+</div>
 <section id="on-the-property-membership">
 <h3>On the property membership<a class="headerlink" href="#on-the-property-membership" title="Permalink to this heading">#</a></h3>
 <p>Line 18-29 show the inclusion of a <a class="reference external" href="https://schema.org/member">schema.org/member</a>
@@ -931,19 +1004,7 @@ basic properties you can provide with confidence.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">596901482.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/29043d3fb15ee6a3caca25a3bc833dd5a406ba1a3ed65265b01694f17689dc61.svg" src="../../_images/29043d3fb15ee6a3caca25a3bc833dd5a406ba1a3ed65265b01694f17689dc61.svg" /></div>
 </div>
 </section>
 <section id="details-indentifier">
@@ -997,19 +1058,23 @@ a resource.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3473</span><span class="o">/</span><span class="mf">1855492500.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://index.example.org/id/org/x&quot;,
+    &quot;@type&quot;: &quot;Organization&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
+        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/8a8b7ec4cd2d62633e1bdc13d8f02b1dd61ecb415edf94a0ef79a775be39e91e.svg" src="../../_images/8a8b7ec4cd2d62633e1bdc13d8f02b1dd61ecb415edf94a0ef79a775be39e91e.svg" /></div>
 </div>
 </section>
 </section>

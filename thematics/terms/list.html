@@ -521,6 +521,40 @@ for the latest on their recommendations.</p>
 These are: <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>, <a class="reference external" href="https://schema.org/Text">Text</a> and <a class="reference external" href="https://schema.org/URL">URL</a>.</p>
 <p>We can see the three different approaches here to defining keywords.  Here, <em>Region X</em> is a classic
 text keyword.  The other two are defined as a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>    <span class="p">},</span>
+<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">16</span>    <span class="p">},</span>
+<span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">20</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>        <span class="p">},</span>
+</span><span class="hll"><span class="linenos">26</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span>
+</span><span class="hll"><span class="linenos">30</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="p">]</span>
+</span><span class="linenos">32</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -565,19 +599,7 @@ text keyword.  The other two are defined as a <a class="reference external" href
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3614</span><span class="o">/</span><span class="mf">779036010.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/c5612ccbe9261e3485e484efec3a1d150bfce3fabee71d6fd31590b6ff148122.svg" src="../../_images/c5612ccbe9261e3485e484efec3a1d150bfce3fabee71d6fd31590b6ff148122.svg" /></div>
 </div>
 <section id="text">
 <h3>Text<a class="headerlink" href="#text" title="Permalink to this heading">#</a></h3>
@@ -641,6 +663,41 @@ types in <a class="reference external" href="http://Schema.org">Schema.org</a>. 
 </ul>
 <p>The following example is from the <a class="reference external" href="http://Schema.org">Schema.org</a> <a class="reference external" href="https://schema.org/DefinedTermSet">DefinedTermSet</a>
 reference.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
+<span class="linenos"> 2</span>        <span class="p">{</span>
+<span class="linenos"> 3</span>                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 4</span>                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 5</span>                <span class="p">}</span>
+<span class="linenos"> 6</span>        <span class="p">},</span>
+<span class="linenos"> 7</span>        <span class="p">{</span>
+<span class="linenos"> 8</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of Ballentine&#39;s Law Dictionary Term Set&quot;</span>
+<span class="linenos">12</span>        <span class="p">},</span>
+<span class="linenos">13</span>        <span class="p">{</span>
+<span class="linenos">14</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">15</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">19</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">21</span>                <span class="p">}</span>
+<span class="linenos">22</span>        <span class="p">},</span>
+<span class="linenos">23</span>        <span class="p">{</span>
+<span class="linenos">24</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">29</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">30</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">31</span>                <span class="p">}</span>
+<span class="linenos">32</span>        <span class="p">}</span>
+<span class="linenos">33</span><span class="p">]</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -674,19 +731,7 @@ reference.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3614</span><span class="o">/</span><span class="mf">1168586674.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/f8aa419e206d591de22d7870302779d7bea584caccedded045c03a90e30e059b.svg" src="../../_images/f8aa419e206d591de22d7870302779d7bea584caccedded045c03a90e30e059b.svg" /></div>
 </div>
 </section>
 <section id="references">

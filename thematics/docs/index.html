@@ -515,6 +515,62 @@ patterns developed for GeoScience Datasets by the ESIP
 guidance and other creative works.  Due to this OIH will focus on a generic example
 of <a class="reference external" href="https://schema.org/CreativeWork">schema.org/CreativeWork</a> and then provide examples
 for more focused creative work examples.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 4</span>  <span class="p">},</span>
+<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>  <span class="s2">&quot;contributor&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.foo.org/orgID&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
+<span class="linenos">14</span>  <span class="p">},</span>
+<span class="linenos">15</span>  <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
+<span class="linenos">18</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dr Uta Passow&quot;</span><span class="p">,</span>
+<span class="linenos">19</span>    <span class="s2">&quot;givenName&quot;</span><span class="p">:</span> <span class="s2">&quot;Uta&quot;</span><span class="p">,</span>
+<span class="linenos">20</span>    <span class="s2">&quot;familyName&quot;</span><span class="p">:</span> <span class="s2">&quot;Passow&quot;</span><span class="p">,</span>
+<span class="linenos">21</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/person/51317&quot;</span>
+<span class="linenos">22</span>  <span class="p">},</span>
+<span class="linenos">23</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">24</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">25</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">26</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
+<span class="linenos">27</span>    <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
+<span class="linenos">28</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos">29</span>  <span class="p">},</span>
+<span class="linenos">30</span>  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">31</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>    <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">33</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
+<span class="linenos">34</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of the set&quot;</span><span class="p">,</span>
+<span class="linenos">35</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the set&quot;</span><span class="p">,</span>
+<span class="linenos">36</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;url for the set&quot;</span>
+<span class="linenos">37</span>    <span class="p">},</span>
+<span class="linenos">38</span>    <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;A code that identifies this DefinedTerm within a DefinedTermSet&quot;</span>
+<span class="linenos">39</span>  <span class="p">},</span>
+<span class="linenos">40</span>  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">41</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.repositoryB.org&quot;</span><span class="p">,</span>
+<span class="linenos">42</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">43</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample Data Repository Office&quot;</span><span class="p">,</span>
+<span class="linenos">44</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SDRO&quot;</span><span class="p">,</span>
+<span class="linenos">45</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;</span><span class="p">,</span>
+<span class="linenos">46</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org&quot;</span>
+<span class="linenos">47</span>  <span class="p">},</span>
+<span class="linenos">48</span>  <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;http://spdx.org/licenses/CC0-1.0&quot;</span><span class="p">,</span>
+<span class="linenos">49</span>  <span class="s2">&quot;publisher&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">50</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.publishingrus.org&quot;</span><span class="p">,</span>
+<span class="linenos">51</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">52</span>    <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Some Institute&quot;</span>
+<span class="linenos">53</span>  <span class="p">}</span>
+<span class="linenos">54</span><span class="p">}</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -544,19 +600,7 @@ for more focused creative work examples.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3434</span><span class="o">/</span><span class="mf">1588687293.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
-</pre></div>
-</div>
-</div>
+<img alt="../../_images/6b144c024f1bda29aaf0fe5eae85ac075457f5a29f4377e98ae796b8f1df82e9.svg" src="../../_images/6b144c024f1bda29aaf0fe5eae85ac075457f5a29f4377e98ae796b8f1df82e9.svg" /></div>
 </div>
 <section id="details-indentifier">
 <h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this heading">#</a></h3>
@@ -607,19 +651,23 @@ a resource.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3434</span><span class="o">/</span><span class="mf">2312502848.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;identifier&quot;: {
+        &quot;@id&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
+        &quot;@type&quot;: &quot;PropertyValue&quot;,
+        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/doi&quot;,
+        &quot;url&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
+        &quot;value&quot;: &quot;doi:10.5066/F7VX0DMQ&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/147685ac70ea2618b862728bb037b0bb07d2f80f0ffd6001204d2b3de1f65aac.svg" src="../../_images/147685ac70ea2618b862728bb037b0bb07d2f80f0ffd6001204d2b3de1f65aac.svg" /></div>
 </div>
 </section>
 <section id="publisher-and-provider">
@@ -673,19 +721,29 @@ of type <code class="docutils literal notranslate"><span class="pre">Organizatio
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3434</span><span class="o">/</span><span class="mf">1992607826.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;provider&quot;: {
+        &quot;@id&quot;: &quot;https://www.repositoryB.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Sample Data Repository Office&quot;,
+        &quot;name&quot;: &quot;SDRO&quot;,
+        &quot;sameAs&quot;: &quot;http://www.re3data.org/repository/r3dxxxxxxxxx&quot;,
+        &quot;url&quot;: &quot;https://www.sample-data-repository.org&quot;
+    },
+    &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.publishingrus.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;legalName&quot;: &quot;Some Institute&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/fa18120d1e6a00e772b4ac49905de0d48a618ec2ae5cb8623dd95e62e6f8811d.svg" src="../../_images/fa18120d1e6a00e772b4ac49905de0d48a618ec2ae5cb8623dd95e62e6f8811d.svg" /></div>
 </div>
 </section>
 <section id="author-type-person">
@@ -737,19 +795,24 @@ case we can look closer at the author property which points to a type Person.</p
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3434</span><span class="o">/</span><span class="mf">1997491508.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;author&quot;: {
+        &quot;@id&quot;: &quot;https://www.sample-data-repository.org/person/51317&quot;,
+        &quot;@type&quot;: &quot;Person&quot;,
+        &quot;familyName&quot;: &quot;Passow&quot;,
+        &quot;givenName&quot;: &quot;Uta&quot;,
+        &quot;name&quot;: &quot;Dr Uta Passow&quot;,
+        &quot;url&quot;: &quot;https://www.sample-data-repository.org/person/51317&quot;
+    }
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/cb7f8c3e45a04561a385e30a5f1db15903ac6bb86113bf5b5cfba079198ad247.svg" src="../../_images/cb7f8c3e45a04561a385e30a5f1db15903ac6bb86113bf5b5cfba079198ad247.svg" /></div>
 </div>
 </section>
 <section id="license">
@@ -799,19 +862,17 @@ case we can look closer at the author property which points to a type Person.</p
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3434</span><span class="o">/</span><span class="mf">3435538259.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
-<span class="ne">---&gt; </span><span class="mi">13</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> 
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
+    &quot;@context&quot;: {
+        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    },
+    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@type&quot;: &quot;CreativeWork&quot;,
+    &quot;license&quot;: &quot;http://spdx.org/licenses/CC0-1.0&quot;
+}
 </pre></div>
 </div>
-</div>
+<img alt="../../_images/61d6a0e085d06595eb7f46ce11f831dd3a16ab967dce10be106f4c802c2769e5.svg" src="../../_images/61d6a0e085d06595eb7f46ce11f831dd3a16ab967dce10be106f4c802c2769e5.svg" /></div>
 </div>
 <section id="license-as-url">
 <h4>License as URL<a class="headerlink" href="#license-as-url" title="Permalink to this heading">#</a></h4>
