@@ -29,8 +29,8 @@ jobs:
 
     - name: Run Python script
       run: |
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/collection/config/production-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_production_sitemaps.csv
-        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev/collection/config/dev-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_dev_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/config/production-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_production_sitemaps.csv
+        python workflows/actions/sitemapcheck/check_sitemap_loop.py -s https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/config/dev-sources.yaml -f workflows/output/${{ steps.date.outputs.date  }}_dev_sitemaps.csv
         
     - name: Add new files to Git
       run: |
