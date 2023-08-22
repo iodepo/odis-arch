@@ -362,7 +362,7 @@ if graphStatus == 1:
             with st.spinner("Executing graph query..."): 
                 ### Join latest sitemap checker output with sources.yaml
 
-                with open(odisArchGitSchemaDevPath + '/collection/config/production-sources.yaml', 'r') as f:
+                with open(odisArchGitMasterPath + '/collection/config/production-sources.yaml', 'r') as f:
                     dfSources = pd.json_normalize(yaml.safe_load_all(f), 'sources')
                     #dfSources
                     
@@ -478,7 +478,7 @@ if graphStatus == 1:
         #st.dataframe(dfJoinedRaw.to_html(render_links=True, escape=False))
         st.dataframe(dfJoined)
         
-        with open(odisArchGitSchemaDevPath + '/collection/config/dev-sources.yaml', 'r') as f:
+        with open(odisArchGitMasterPath + '/collection/config/dev-sources.yaml', 'r') as f:
             dfSourcesDev = pd.json_normalize(yaml.safe_load_all(f), 'sources')        
             st.write("Raw Sources Report (" + latest_file_date + ") on :red[Development Graph]")
             dfJoinedRawDev = dfSourcesDev.set_index('name').join(dfSitemapDev.set_index('name'), lsuffix='_sources', rsuffix='_sitemap')
@@ -564,7 +564,7 @@ if graphStatus == 1:
                     # df_orgDate = df[mask]
                     # st.subheader(df_orgDate['dates'].values[0])
                 
-                    with open(odisArchGitSchemaDevPath + "/config/production-sources.yaml", 'r') as f:
+                    with open(odisArchGitMasterPath + "/config/production-sources.yaml", 'r') as f:
                         valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
                     
                     sourcesLength = len(valuesYaml['sources'])
