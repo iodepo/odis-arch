@@ -111,6 +111,23 @@ sources:
   # headless: true
   # dateadded: 2022-06-04
   # active: true
+  #
+  # INVEMAR Geospatial
+  #
+  - name: invemargeo
+    propername: CHM LAC - Geospatial
+    catalogue: http://portete.invemar.org.co/chm/
+    domain: http://portete.invemar.org.co
+    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/invemarvessels
+    sourcetype: sitegraph
+    url: http://portete.invemar.org.co/chm/api/oih/platformgeo?format=json
+    changefreq:
+    backend: INVEMAR CHM
+    headless: false
+    dateadded: 2023-08-22
+    active: true  
 #
 # MEDIN
 #
