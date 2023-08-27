@@ -2,7 +2,7 @@
 
 ## About
 
-The code here will be used to geenrate and publish the release graphs.
+The code here will be used to generate and publish the release graphs.
 We will use the sandbox environment available at http://sandbox.zenodo.org.
 
 Note that the sandbox environment can be cleaned at anytime. Also, the 
