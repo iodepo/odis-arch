@@ -35,7 +35,7 @@ to see how these elements map into the OIH sources metadata.
 			"affiliation":      "",
 			"name":             "",
 			"orcid":            "optional",
-			"type":				WorkPackageLeader
+			"type":				"WorkPackageLeader"
 		}
 	],
 	"creators":[
@@ -48,8 +48,8 @@ to see how these elements map into the OIH sources metadata.
 	"related_identifiers":[
 		{
 			"identifier":         "",
-			"relation":			  isPublishedIn,
-			"scheme":			  urn,
+			"relation":			  "isPublishedIn",
+			"scheme":			  "urn",
 			"resource_type":      ""
 		}
 	]
