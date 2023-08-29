@@ -8,14 +8,16 @@ Background: - World Oceans Database (WOD) S3 home: https://noaa-wod-pds.s3.amazo
             - WOD S3 connection info: https://registry.opendata.aws/noaa-wod/
                    - see right-panel on page
                    
-Usage:   python wod-s3-ncparser.py
+Usage:   python -m pip install -r requirements.txt
+         python wod-s3-ncparser.py
 
 Output:  Generates JSON-LD files into an existing output folder locally.
+         See the file 'sample-output.json' for an example.
 
 Notes:   Avoids Python MemoryError by checking filesize and downloading
          the file locally (if larger than 400MB), else reads the remote 
          NetCDF file from the S3 resource into memory. Set the
-         FILESIZE_THRESHOLD variable on line#39.
+         FILESIZE_THRESHOLD variable on line#41.
          
 Requires: Python 3.x
 """
@@ -36,7 +38,7 @@ S3_BUCKET_NAME = "noaa-wod-pds"
 OUTPUT_FOLDER = "./output/" #must exist
 LOGFILE = OUTPUT_FOLDER + "wod-parsed.log" #will get created
 URL_BASEPATH_WHERE_JSONLD_FILES_WILL_LIVE_LATER = "https://raw.githubusercontent.com/your-repo/"
-FILESIZE_THRESHOLD = 400000 #if greater, then download file instead of processing in memory.  Default is 400 MB
+FILESIZE_THRESHOLD = 400000 #(in KB) if greater, then download file instead of processing in memory.  Default is 400 MB
 
 #log to a file
 logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG,  
