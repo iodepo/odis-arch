@@ -169,22 +169,41 @@ if __name__ == '__main__':
             miny = df["geospatial_lat_min"].values[0]
             maxx = df["geospatial_lon_max"].values[0]
             maxy = df["geospatial_lat_max"].values[0]
-
-            poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
             
-            aswkt = {}
-            aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
-            aswkt["@value"] = poly
+            boxCoords = str("""{} {} {} {}""".format(minx, miny, maxx, maxy))
+            print("    GeoShape:Box: " + boxCoords)
+            spatialCov = {}
+            spatialCov["@type"] = "https://schema.org/Place"
+            geo = {}
+            geo["@type"] = "https://schema.org/GeoShape"
+            geo["https://schema.org/box"] = boxCoords 
+            spatialCov["https://schema.org/geo"] = geo
 
-            crs = {}
-            crs["@id"] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-
-            hasGeometry = {}
-            hasGeometry["@type"] = "http://www.opengis.net/ont/sf#Polygon" 
-            hasGeometry["http://www.opengis.net/ont/geosparql#asWKT"] = aswkt
-            hasGeometry["http://www.opengis.net/ont/geosparql#crs"] = crs
-
-            data["http://www.opengis.net/ont/geosparql#hasGeometry"] = hasGeometry
+            geospatialVerticalMin = df["geospatial_vertical_min"].values[0]
+            geospatialVerticalMax = df["geospatial_vertical_max"].values[0]
+            geospatialVerticalUnits = df["geospatial_vertical_units"].values[0]
+            geospatialVerticalPositive = df["geospatial_vertical_positive"].values[0]
+            print("    geospatialVerticalMax: " + geospatialVerticalMax)
+            print("    geospatialVerticalUnits: " + geospatialVerticalUnits)            
+            additionalProperty = []
+            additionalProperty1 = {}
+            additionalProperty1["https://schema.org/name"] = "Geospatial vertical min"           
+            additionalProperty1["https://schema.org/value"] = geospatialVerticalMin            
+            additionalProperty.append(additionalProperty1)             
+            additionalProperty2 = {}
+            additionalProperty2["https://schema.org/name"] = "Geospatial vertical max"           
+            additionalProperty2["https://schema.org/value"] = geospatialVerticalMax            
+            additionalProperty.append(additionalProperty2)            
+            additionalProperty3 = {}
+            additionalProperty3["https://schema.org/name"] = "Geospatial vertical units"           
+            additionalProperty3["https://schema.org/value"] = geospatialVerticalUnits
+            additionalProperty.append(additionalProperty3)
+            additionalProperty4 = {}
+            additionalProperty4["https://schema.org/name"] = "Geospatial vertical positive"           
+            additionalProperty4["https://schema.org/value"] = geospatialVerticalPositive
+            additionalProperty.append(additionalProperty4)             
+            spatialCov["https://schema.org/additionalProperty"] = additionalProperty              
+            data["https://schema.org/spatialCoverage"] = spatialCov            
 
             #keywords
             keywords = df["keywords"].values[0]
@@ -226,7 +245,25 @@ if __name__ == '__main__':
                 print("    license: empty")
             else:
                 print("    license: " + license)
-                data["https://schema.org/license"] = license                
+                data["https://schema.org/license"] = license
+
+            #startTime / endTime
+            startTime = df["time_coverage_start"].values[0]
+            endTime = df["time_coverage_end"].values[0]
+            print("    startTime: " + startTime)
+            print("    endTime: " + endTime)
+
+            subjectOf = {}
+            subjectOf["@type"] = "https://schema.org/Event"
+            subjectOf["https://schema.org/name"] = item.key
+            subjectOf["https://schema.org/description"] = "About the multi-cast event " + item.key + " (such as time of the cast)"            
+            potentialAction = {}
+            potentialAction["@type"] = "https://schema.org/Action"
+            potentialAction["https://schema.org/name"] = "Time of the event for: " + item.key            
+            potentialAction["https://schema.org/startTime"] = startTime
+            potentialAction["https://schema.org/endTime"] = endTime
+            subjectOf["https://schema.org/potentialAction"] = potentialAction
+            data["https://schema.org/subjectOf"] = subjectOf
             
             #export to JSON-LD file
             compacted = jsonld.compact(data, context)
