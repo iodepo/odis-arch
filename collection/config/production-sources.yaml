@@ -9,7 +9,7 @@
 #  - changefreq: how often sitemap is updated
 #  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
 #               necessarily when it was included in the ODIS graph)
-#  - headless: true if JSON-LD is embedded in page
+#  - headless: false if JSON-LD is embedded in page
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 # To validate at commandline: execute the following (if the file contains valid 
@@ -74,7 +74,7 @@ sources:
     url: https://ioc-africa.org/sitemap.xml
     changefreq: daily
     backend: Custom
-    headless: false
+    headless: true
     dateadded: 2023-02-09
     active: true
   #
@@ -90,7 +90,7 @@ sources:
     url: https://oih.aquadocs.org/aquadocs.json
     changefreq:
     backend: OAI
-    headless: false
+    headless: true
     dateadded: 2021-02-26
     active: true
   #
@@ -107,7 +107,7 @@ sources:
     url: https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml
     changefreq: as needed
     backend: GitHub
-    headless: false
+    headless: true
     dateadded: 2023-03-08
     active: true
   #
@@ -124,7 +124,7 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: false
+    headless: true
     dateadded: 2022-04-13
     active: true
   #
@@ -140,7 +140,7 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: false
+    headless: true
     dateadded: 2022-04-13
     active: true
   #
@@ -156,7 +156,7 @@ sources:
     url: https://catalogue.cioos.ca/sitemap/sitemap.xml
     changefreq: daily
     backend: CKAN
-    headless: true
+    headless: false
     dateadded: 2023-01-31
     active: true
   #
@@ -260,7 +260,7 @@ sources:
     url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
     changefreq: as needed
     backend: GeoNetwork
-    headless: true
+    headless: false
     dateadded: 2022-08-24
     active: true
   #
@@ -277,7 +277,7 @@ sources:
     #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ina-nodc/ina-nodc-simple-graph.json
     changefreq: on demand
     backend: GeoNode
-    headless: false
+    headless: true
     dateadded: 2022-04-05
     active: true
   #
@@ -294,7 +294,7 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: false
+    headless: true
     dateadded: 2022-01-26
     active: true
   #
@@ -311,7 +311,7 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: false
+    headless: true
     dateadded: 2022-01-26
     active: true
   #
@@ -328,7 +328,7 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: false
+    headless: true
     dateadded: 2022-01-26
     active: true
   #
@@ -345,7 +345,7 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/training?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: false
+    headless: true
     dateadded: 2022-01-26
     active: true
   #
@@ -362,7 +362,7 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: false
+    headless: true
     dateadded: 2022-01-26
     active: true
   #
@@ -395,7 +395,7 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: false
+    headless: true
     dateadded: 2022-03-30
     active: true
   #
@@ -412,7 +412,7 @@ sources:
     url: https://raw.githubusercontent.com/NicoGEOMAR/METS-RCN/main/sitemap.xml
     changefreq: as needed
     backend: GitHub
-    headless: false
+    headless: true
     dateadded: 2023-04-13
     active: true
   #
@@ -445,7 +445,7 @@ sources:
     url: https://oih.oceanbestpractices.org/obps.json
     changefreq:
     backend: OAI
-    headless: false
+    headless: true
     dateadded: 2021-01-26
     active: true
   #
