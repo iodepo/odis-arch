@@ -9,7 +9,7 @@
 #  - changefreq: how often sitemap is updated
 #  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
 #               necessarily when it was included in the ODIS graph)
-#  - headless: true if JSON-LD is embedded in page
+#  - headless: false if JSON-LD is embedded in page
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 # To validate at commandline: execute the following (if the file contains valid 
@@ -73,7 +73,7 @@ sources:
     url: https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap
     changefreq: daily
     backend: GeoNetwork
-    headless: yes
+    headless: false
     dateadded: 2023-06-20
     active: true
   #
@@ -90,7 +90,7 @@ sources:
     url: https://api.linked-systems.uk/sitemap_pap_api.xml
     changefreq: monthly
     backend: Custom
-    headless: no
+    headless: true
     dateadded: 2023-07-10
     active: true
   #
@@ -108,7 +108,7 @@ sources:
   #   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
   #   changefreq: as needed
   #   backend: CKAN  
-  #   headless: true
+  #   headless: false
   #   dateadded: 2022-06-04
   #   active: true
   #
@@ -143,7 +143,7 @@ sources:
     url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
     changefreq: daily
     backend: GeoNetwork
-    headless: yes
+    headless: false
     dateadded: 2023-08-22
     active: true
   #
@@ -159,7 +159,7 @@ sources:
     url: https://portal.medin.org.uk/portal/sitemap.php
     changefreq: daily
     backend: MARIS
-    headless: yes
+    headless: false
     dateadded: 2023-05-11
     active: true
   #
@@ -176,7 +176,7 @@ sources:
     url: http://222.186.3.18:8888/erddap/sitemap.xml
     changefreq: monthly
     backend: ERDDAP
-    headless: yes
+    headless: false
     dateadded: 2023-08-22
     active: true  
   #
@@ -193,7 +193,7 @@ sources:
     #url: https://oceanscape.org/sitemap_index.xml
     changefreq: as needed   
     backend: WordPress  
-    headless: true
+    headless: false
     dateadded: 2022-05-18 
     active: true
   #
@@ -226,7 +226,7 @@ sources:
     url: https://pogo-ocean.org/pogo-member-sitemap.xml
     changefreq: as needed  
     backend: WordPress  
-    headless: true
+    headless: false
     dateadded: 2022-11-30
     active: false
   #
