@@ -17,3 +17,40 @@ however it would be good to look over VoID (https://www.w3.org/TR/void/)
 to see if there are some good properties in there to use.
 
 
+## Resources
+
+* [Zenodo JSON formatter](https://jsonformatter.curiousconcept.com/)
+* [Reference structure](https://developers.zenodo.org/#representation)
+
+
+
+## Elements 
+
+The following elements are from the Zenodo metadata schema.  We need
+to see how these elements map into the OIH sources metadata.
+
+```json
+	"contributors":[
+		{
+			"affiliation":      "",
+			"name":             "",
+			"orcid":            "optional",
+			"type":				WorkPackageLeader
+		}
+	],
+	"creators":[
+		{
+			"affiliation":      "",
+			"name":             "",
+			"orcid":            "optional"
+		}
+	],
+	"related_identifiers":[
+		{
+			"identifier":         "",
+			"relation":			  isPublishedIn,
+			"scheme":			  urn,
+			"resource_type":      ""
+		}
+	]
+```
