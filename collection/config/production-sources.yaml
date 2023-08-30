@@ -9,7 +9,8 @@
 #  - changefreq: how often sitemap is updated
 #  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
 #               necessarily when it was included in the ODIS graph)
-#  - headless: false if JSON-LD is embedded in page
+#  - headless: false if JSON-LD is embedded in page, or if sitegraph
+#  - cron: how often to harvest the endpoint, defaults to weekly (on Sunday)
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 # To validate at commandline: execute the following (if the file contains valid 
@@ -74,8 +75,9 @@ sources:
     url: https://ioc-africa.org/sitemap.xml
     changefreq: daily
     backend: Custom
-    headless: true
+    headless: false
     dateadded: 2023-02-09
+    cron: 0 6 * * 0
     active: true
   #
   # AquaDocs
@@ -90,8 +92,9 @@ sources:
     url: https://oih.aquadocs.org/aquadocs.json
     changefreq:
     backend: OAI
-    headless: true
+    headless: false
     dateadded: 2021-02-26
+    cron: 0 7 * * 0
     active: true
   #
   # BeBOP-OBON
@@ -107,8 +110,9 @@ sources:
     url: https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml
     changefreq: as needed
     backend: GitHub
-    headless: true
+    headless: false
     dateadded: 2023-03-08
+    cron: 0 8 * * 0
     active: true
   #
   # Benguela Current Convention (BCC) GeoData Portal
@@ -124,8 +128,9 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: true
+    headless: false
     dateadded: 2022-04-13
+    cron: 0 1 * * 0
     active: true
   #
   # Caribbean Marine Atlas catalogue
@@ -140,8 +145,9 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: true
+    headless: false
     dateadded: 2022-04-13
+    cron: 0 2 * * 0
     active: true
   #
   # CIOOS National
@@ -158,6 +164,7 @@ sources:
     backend: CKAN
     headless: false
     dateadded: 2023-01-31
+    cron: 0 3 * * 0
     active: true
   #
   # EDMERP SeaDataNet
@@ -175,6 +182,7 @@ sources:
     backend: SeaDataCloud
     headless: false
     dateadded: 2021-07-26
+    cron: 0 4 * * 0
     active: true
   #
   # EDMO SeaDataNet
@@ -192,6 +200,7 @@ sources:
     backend: SeaDataCloud
     dateadded: 2021-07-26
     headless: false
+    cron: 0 5 * * 0
     active: true
   #
   # EurOcean Organizations
@@ -211,6 +220,7 @@ sources:
     headless: false
     dateadded: 2022-03-26
     active: true
+    cron: 0 6 * * 0
   #
   # EurOcean Projects
   #
@@ -229,6 +239,7 @@ sources:
     headless: false
     dateadded: 2022-03-26
     active: true
+    cron: 0 7 * * 0
   #
   # EurOcean Vessels
   #
@@ -247,6 +258,7 @@ sources:
     headless: false
     dateadded: 2022-03-26
     active: true
+    cron: 0 8 * * 0
   #
   # European Marine Observation and Data Network catalogue
   #
@@ -263,6 +275,7 @@ sources:
     headless: false
     dateadded: 2022-08-24
     active: true
+    cron: 0 9 * * 0
   #
   # Indonesia National Oceanic Data Center
   #
@@ -277,9 +290,10 @@ sources:
     #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ina-nodc/ina-nodc-simple-graph.json
     changefreq: on demand
     backend: GeoNode
-    headless: true
+    headless: false
     dateadded: 2022-04-05
     active: true
+    cron: 0 10 * * 0
   #
   # INVEMAR Documents
   #
@@ -294,9 +308,10 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: true
+    headless: false
     dateadded: 2022-01-26
     active: true
+    cron: 0 11 * * 0
   #
   # INVEMAR Experts
   #
@@ -311,9 +326,10 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: true
+    headless: false
     dateadded: 2022-01-26
     active: true
+    cron: 0 12 * * 0
   #
   # INVEMAR Institutions
   #
@@ -328,9 +344,10 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: true
+    headless: false
     dateadded: 2022-01-26
     active: true
+    cron: 0 13 * * 0
   #
   # INVEMAR Training
   #
@@ -345,9 +362,10 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/training?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: true
+    headless: false
     dateadded: 2022-01-26
     active: true
+    cron: 0 14 * * 0
   #
   # INVEMAR Vessels
   #
@@ -362,9 +380,10 @@ sources:
     url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
     changefreq:
     backend: INVEMAR CHM
-    headless: true
+    headless: false
     dateadded: 2022-01-26
     active: true
+    cron: 0 15 * * 0
   #
   # Marine Training EU
   #
@@ -382,6 +401,7 @@ sources:
     headless: false
     dateadded: 2021-05-26
     active: true
+    cron: 0 16 * * 0
   #
   # MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
   #
@@ -395,9 +415,10 @@ sources:
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json
     changefreq:
     backend: GeoNode
-    headless: true
+    headless: false
     dateadded: 2022-03-30
     active: true
+    cron: 0 17 * * 0
   #
   # METS-RCN
   #
@@ -412,9 +433,10 @@ sources:
     url: https://raw.githubusercontent.com/NicoGEOMAR/METS-RCN/main/sitemap.xml
     changefreq: as needed
     backend: GitHub
-    headless: true
+    headless: false
     dateadded: 2023-04-13
     active: true
+    cron: 0 18 * * 0
   #
   # OBIS: Ocean Biodiversity Information System
   #
@@ -432,6 +454,7 @@ sources:
     headless: false
     dateadded: 2021-02-26
     active: true
+    cron: 0 19 * * 0
   #
   # Ocean Best Practices
   #
@@ -445,9 +468,10 @@ sources:
     url: https://oih.oceanbestpractices.org/obps.json
     changefreq:
     backend: OAI
-    headless: true
+    headless: false
     dateadded: 2021-01-26
     active: true
+    cron: 0 20 * * 0
   #
   # OceanExpert
   #
@@ -465,6 +489,7 @@ sources:
     headless: false
     dateadded: 2021-08-26
     active: true
+    cron: 0 21 * * 0
   #
   # Pacific Data Hub
   #
@@ -482,3 +507,4 @@ sources:
     headless: false
     dateadded: 2022-07-25
     active: true
+    cron: 0 22 * * 0
