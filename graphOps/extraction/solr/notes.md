@@ -7,7 +7,6 @@ the graph to populate the items in the notes sections below.
 
 ## Notes
 
-
 Here are the keys extracted from the provided JSON:
 
 - id
