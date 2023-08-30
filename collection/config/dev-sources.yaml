@@ -9,7 +9,8 @@
 #  - changefreq: how often sitemap is updated
 #  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
 #               necessarily when it was included in the ODIS graph)
-#  - headless: false if JSON-LD is embedded in page
+#  - headless: false if JSON-LD is embedded in page, or if sitegraph
+#  - cron: how often to harvest the endpoint, defaults to weekly (on Sunday)
 #  - active: ready to include in ODIS
 #  - if a parameter has no value, leave blank (with no quotes)
 # To validate at commandline: execute the following (if the file contains valid 
@@ -75,6 +76,7 @@ sources:
     backend: GeoNetwork
     headless: false
     dateadded: 2023-06-20
+    cron: 0 6 * * 0 
     active: true
   #
   # British Oceanographic Data Centre
@@ -92,6 +94,7 @@ sources:
     backend: Custom
     headless: true
     dateadded: 2023-07-10
+    cron: 0 7 * * 0 
     active: true
   #
   # CIOOS Atlantic
@@ -127,6 +130,7 @@ sources:
     backend: INVEMAR CHM
     headless: false
     dateadded: 2023-08-22
+    cron: 0 8 * * 0 
     active: true
   #
   # Marine Institute Data Catalogue
@@ -145,6 +149,7 @@ sources:
     backend: GeoNetwork
     headless: false
     dateadded: 2023-08-22
+    cron: 0 9 * * 0 
     active: true
   #
   # MEDIN
@@ -161,6 +166,7 @@ sources:
     backend: MARIS
     headless: false
     dateadded: 2023-05-11
+    cron: 0 10 * * 0
     active: true
   #
   # NMDIS-China
@@ -178,6 +184,7 @@ sources:
     backend: ERDDAP
     headless: false
     dateadded: 2023-08-22
+    cron: 0 11 * * 0 
     active: true  
   #
   # Oceanscape Project
@@ -194,7 +201,8 @@ sources:
     changefreq: as needed   
     backend: WordPress  
     headless: false
-    dateadded: 2022-05-18 
+    dateadded: 2022-05-18
+    cron: 0 12 * * 0 
     active: true
   #
   # Pacific Environment Data Portal
@@ -212,6 +220,7 @@ sources:
     backend: Drupal
     headless: false
     dateadded: 2023-08-08
+    cron: 0 13 * * 0 
     active: true
   #
   # POGO
@@ -244,6 +253,7 @@ sources:
     backend: GeoNetwork  
     headless: false
     dateadded: 2023-03-06
+    cron: 0 14 * * 0    
     active: true  
   #
   # VLIZ: Flanders Marine Institute catalogue
