@@ -1,0 +1,194 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+  
+   "includedInDataCatalog": {"@type": "https://schema.org/DataCatalog"},
+   "measurementMethod": [
+    "CO2 measurements were measrued following SOP Dickson et al. (2008) manual."
+   ],
+   "measurementTechnique": [
+    "Text: A technique, method or technology used in an Observation, StatisticalVariable or Dataset (or DataDownload, DataCatalog), corresponding to the method used for measuring the corresponding variable(s) (for datasets, described using variableMeasured; for Observation, a StatisticalVariable).",
+    "URL",
+    {"@type": "https://schema.org/MeasurementMethodEnum"}
+   ],
+   "variableMeasured": [
+    {
+        "@type": "PropertyValue",
+        "name": "Depth",
+        "propertyID": "CTDPRS",
+        "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+        "description": "Extended description of this variable?",
+        "unitText": "m"
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "Dissolved Inorganic Carbon",
+        "propertyID": "DIC",
+        "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+        "description": "DIC: Collection method (e.g. bottle sampling) water collection with a water sampler (e.g. Niskin)
+        DIC: Analyzing instrument: Marianda Company VINDTA 3C system
+        DIC: Analyzing information with citation 	SOP 7
+        DIC: Quality control 	CRM
+        DIC: Abbreviation of data quality flag scheme	DIC_flag
+        DIC: Data quality scheme (name of scheme)	WOCE
+        DIC: Uncertainty	2
+        DIC: Field replicate information	6
+        DIC: Calibration method	CRM
+        DIC: Frequency of calibration	every batch of analysis
+        DIC: CRM manufacturer	Dickson CRM
+        DIC: Batch number(s)	several
+        DIC: Poison used to kill the sample:HgCl2
+        DIC: Poison volume: 200 µL
+        DIC: Poisoning correction description	dilution correction
+        DIC: Method reference (citation)	
+        DIC: Changes to Method or SOP",
+        
+        "unitText": "µmol kg-1",
+        "measurementMethod": "DIC: Method reference (citation)",
+        "measurementTechnique": "SOP 7"
+           
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "Name of a variable in the dataset",
+        "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+        "description": "Extended description of this variable?"
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "SamplingDeviceApertureSurfaceArea",
+        "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+        "description": "Extended description of this variable"
+    }
+   ],
+  
+    "about": "Text or controlled vocabulary/ontology, singly or as an array: The subject matter of this CreativeWork",
+   "abstract": "Text: A descriptive summary of a CreativeWork",
+   "accountablePerson": {"@type": "https://schema.org/Person"},
+    "archivedAt": [
+        "URL",
+        {"@type": "https://schema.org/WebPage"}
+    ],
+    "audience": {"@type": "https://schema.org/Audience"},
+    "author": {"@type": "https://schema.org/Person"},
+    "citation": [
+        "Text: A textual citation to other work relevant to this CreativeWork",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+    "conditionsOfAccess": "Text: Description of conditions that affect the availability of, or method(s) of access to, an item.",
+    "contributor": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Spain"},
+    "creativeWorkStatus": [
+        "Text: Description of the status of this CreativeWork in terms of its stage in a lifecycle",
+        {"@type": "https://schema.org/DefinedTerm"}
+    ],
+    "creator": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "dateCreated": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "dateModified": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "datePublished": [
+        {"@type": "https://schema.org/Date"},
+        {"@type": "https://schema.org/DateTime"}
+    ],
+    "encoding": {"@type": "https://schema.org/MediaObject"},
+    "encodingFormat": [
+        "Text: Textual description of the media type typically expressed using a MIME format (see IANA site [http://www.iana.org/assignments/media-types/media-types.xhtml] and MDN reference [https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types]), e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc. ",
+        "URL"
+    ],
+    "funder": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "funding": {"@type": "https://schema.org/Grant"},
+
+    "inLanguage": {
+        "@type": "Language",
+        "name": "English",
+        "alternateName": "en"
+      },
+    "isAccessibleForFree": {"@type": "https://schema.org/Boolean"},
+
+    "isPartOf": [
+        {"@type": "https://schema.org/CreativeWork"},
+        "URL"
+    ],
+    "keywords": [
+        "Text: Keywords or tags used to describe the CreativeWork.",
+        {"@type": "https://schema.org/DefinedTerm"},
+        "URL"
+    ],
+
+    "license": [
+        "URL",
+        {"@type": "https://schema.org/CreativeWork"}
+    ],
+    "locationCreated": {"@type": "https://schema.org/Place"},
+    "mainEntity": {"@type": "https://schema.org/Thing"},
+    "maintainer":  [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "provider": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "publisher": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "publishingPrinciples": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/URL"}
+    ],
+    "sdDatePublished": {"@type": "https://schema.org/Date"},
+    "sdLicense": [
+        {"@type": "https://schema.org/CreativeWork"},
+        {"@type": "https://schema.org/URL"}
+    ],
+    "sdPublisher": [
+        {"@type": "https://schema.org/Organization"},
+        {"@type": "https://schema.org/Person"}
+    ],
+    "sourceOrganization": "Instituto Español de Oceanografía IEO",
+    "spatial":  {"@type": "https://schema.org/Place"},
+    "spatialCoverage": {"@type": "https://schema.org/Place"},
+    "temporal": "A more general property for any time-related information about this CreativeWork. This can be expressed as text or using the properties associated with the DateTime Type",
+    "temporalCoverage": [
+        {"@type": "https://schema.org/DateTime"},
+        "Text",
+        "URL"
+    ],
+    "version": ["https://schema.org/Text", "https://schema.org/Number"],
+   
+
+    
+    "additionalType": [
+        "Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.",
+        "URL"
+      ],
+        "alternateName": "Text: An alternative name for this Thing.",
+      "description": "Monthly time series in the coastal area of VIGO  (NW Spain), the program started in the late 1980s, but CO2 measurements were introduced in late 2018 ",
+      "identifier": [
+          {"@type": "https://schema.org/PropertyValue"},
+          "Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+          "URL"
+      ],
+      "name": "1612019_SDG14_3_1_Metadata_submission_template_drop_QC_RADIAL_VIGO",
+      "potentialAction": {"@type": "https://schema.org/Action"},
+      "url": "https://github.com/iodepo/odis-arch/files/12072949/1612019_SDG14_3_1_Metadata_submission_template_drop_QC_RADIAL_VIGO.xlsx"
+}
