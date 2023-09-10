@@ -42,8 +42,6 @@ w: {
     }
 }
 b: book.oceaninfohub.org
-pdf: book as PDF
-z: Zenodo
 g: {
    label: graph repo (odis-in)\n(master branch)
     width: 150
@@ -54,44 +52,16 @@ g: {
       border-radius: 5
     }
 }
-rg:{
-   label: release graphs\n(via zenodo API)
-
-    width: 150
-    height: 100
-    style: {
-      stroke-width: 1
-      border-radius: 5
-    }
-}
-
-f {
-   label: forked repo
-    width: 150
-    height: 100
-    style: {
-      stroke-width: 1
-      fill: "#44C7B1"
-      border-radius: 5
-    }
-}
-
 
 # make the products a color
-pdf.style.fill: honeydew
 b.style.fill: honeydew
 
-m <- f: forks merge via pull request
-m <- w: working branches merge into
-m <- g: sub-module repo for patterns
+m <- w: working branches\n merge into
+m <- g: sub-module repo\n for patterns
 
-m -> p: managed merge to \n publication for book releases
-p -> pdf: PDF via GitHub action
+m -> p: managed merges into \n publication for book releases
 
-p -> gp: HTML via GitHub action
-gp -> b:  published via GitHub Pages
+p -> gp: HTML generated via \nGitHub action
+gp -> b:  published via \nGitHub Pages
 
-p -> z: archive publication branch release for DOI
-g -> z: archive graph pattern repo for DOI
-rg -> z: archive release graphs for DOI
 
