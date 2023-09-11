@@ -258,11 +258,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../indexing/user.html">
-   Interfaces
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../../indexing/graphpub.html">
    Graph First Approach
   </a>
@@ -675,102 +670,159 @@ needed.</p>
 </div>
 <p>This with POST a jpeg to the service and get back a simple text response with some information
 about the image.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos"> 4</span>  <span class="p">},</span>
-<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the Service that this JSON-LD document describes. To link to the Service itself, please use &#39;url&#39; and/or &#39;identifier&#39;)&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>  <span class="s2">&quot;aggregateRating&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/aggregateRating&quot;</span><span class="p">},</span>
-<span class="linenos"> 8</span>  <span class="s2">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;Text: The geographic area where the service is provided.&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Place&quot;</span><span class="p">},</span>
-<span class="linenos">11</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/GeoShape&quot;</span><span class="p">},</span>
-<span class="linenos">12</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/AdministrativeArea&quot;</span><span class="p">}</span>
-<span class="linenos">13</span>  <span class="p">],</span>
-<span class="linenos">14</span>  <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Audience&quot;</span><span class="p">},</span>
-<span class="linenos">15</span>  <span class="s2">&quot;availableChannel&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ServiceChannel&quot;</span><span class="p">},</span>
-<span class="linenos">16</span>  <span class="s2">&quot;award&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: An award won by or for this service.&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>  <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">18</span>    <span class="s2">&quot;Text: The brand(s) associated with the service, or the brand(s) maintained by an organization or business person.&quot;</span><span class="p">,</span>
-<span class="linenos">19</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Brand&quot;</span><span class="p">},</span>
-<span class="linenos">20</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span><span class="p">}</span>
-<span class="linenos">21</span>  <span class="p">],</span>
-<span class="linenos">22</span>  <span class="s2">&quot;broker&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">23</span>  <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Person&quot;</span><span class="p">},</span>
-<span class="linenos">24</span>  <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span><span class="p">}</span>
-<span class="linenos">25</span>  <span class="p">],</span>
-<span class="linenos">26</span>  <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">27</span>    <span class="s2">&quot;Text: A category for the service.&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>    <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">29</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/CategoryCode&quot;</span><span class="p">},</span>
-<span class="linenos">30</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/PhysicalActivityCategory&quot;</span><span class="p">},</span>
-<span class="linenos">31</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Thing&quot;</span><span class="p">}</span>
-<span class="linenos">32</span>  <span class="p">],</span>
-<span class="linenos">33</span>  <span class="s2">&quot;hasOfferCatalog&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/OfferCatalog&quot;</span><span class="p">,</span>
-<span class="linenos">34</span>  <span class="s2">&quot;hoursAvailable&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/OpeningHoursSpecification&quot;</span><span class="p">,</span>
-<span class="linenos">35</span>  <span class="s2">&quot;isRelatedTo&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">36</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Product&quot;</span><span class="p">},</span>
-<span class="linenos">37</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Service&quot;</span><span class="p">}</span>
-<span class="linenos">38</span>  <span class="p">]</span> <span class="p">,</span>
-<span class="linenos">39</span>  <span class="s2">&quot;isSimilarTo&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">40</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Product&quot;</span><span class="p">},</span>
-<span class="linenos">41</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Service&quot;</span><span class="p">}</span>
-<span class="linenos">42</span>  <span class="p">]</span> <span class="p">,</span>
-<span class="linenos">43</span>  <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">44</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ImageObject&quot;</span><span class="p">},</span>
-<span class="linenos">45</span>    <span class="s2">&quot;URL&quot;</span>
-<span class="linenos">46</span>  <span class="p">]</span> <span class="p">,</span>
-<span class="linenos">47</span>  <span class="s2">&quot;offers&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">48</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Demand&quot;</span><span class="p">},</span>
-<span class="linenos">49</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Offer&quot;</span><span class="p">}</span>
-<span class="linenos">50</span>  <span class="p">]</span> <span class="p">,</span>
-<span class="linenos">51</span>  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">52</span>    <span class="s2">&quot;Text: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider.&quot;</span><span class="p">,</span>
-<span class="linenos">53</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Person&quot;</span><span class="p">},</span>
-<span class="linenos">54</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span><span class="p">}</span>
-<span class="linenos">55</span>  <span class="p">],</span>
-<span class="linenos">56</span>  <span class="s2">&quot;providerMobility&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: Indicates the mobility of a provided service (e.g. &#39;static&#39;, &#39;dynamic&#39;).&quot;</span><span class="p">,</span>
-<span class="linenos">57</span>  <span class="s2">&quot;review&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Review&quot;</span><span class="p">},</span>
-<span class="linenos">58</span> 
-<span class="linenos">59</span>  <span class="s2">&quot;serviceOutput&quot;</span><span class="p">:</span>  <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Thing&quot;</span><span class="p">},</span>
-<span class="linenos">60</span>  <span class="s2">&quot;serviceType&quot;</span><span class="p">:</span>  <span class="p">[</span>
-<span class="linenos">61</span>    <span class="s2">&quot;Text: Human-readable terms of service documentation&quot;</span><span class="p">,</span>
-<span class="linenos">62</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/GovernmentBenefitsType&quot;</span><span class="p">}</span>
-<span class="linenos">63</span>  <span class="p">],</span>
-<span class="linenos">64</span>  <span class="s2">&quot;slogan&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: A slogan or motto associated with the item.&quot;</span><span class="p">,</span>
-<span class="linenos">65</span>  <span class="s2">&quot;termsOfService&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">66</span>    <span class="s2">&quot;Text: Human-readable terms of service documentation&quot;</span><span class="p">,</span>
-<span class="linenos">67</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Url&quot;</span><span class="p">}</span>
-<span class="linenos">68</span>  <span class="p">],</span>
-<span class="linenos">69</span>
-<span class="linenos">70</span>  
-<span class="linenos">71</span>  <span class="s2">&quot;additionalType&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">72</span>    <span class="s2">&quot;Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.&quot;</span><span class="p">,</span>
-<span class="linenos">73</span>    <span class="s2">&quot;URL&quot;</span>
-<span class="linenos">74</span>  <span class="p">],</span>
-<span class="linenos">75</span>  <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: An alternative name for this Thing.&quot;</span><span class="p">,</span>
-<span class="linenos">76</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: Free text which describes this Thing.&quot;</span><span class="p">,</span>
-<span class="linenos">77</span>  <span class="s2">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation&quot;</span><span class="p">,</span>
-<span class="linenos">78</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">79</span>      <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/PropertyValue&quot;</span><span class="p">},</span>
-<span class="linenos">80</span>      <span class="s2">&quot;Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.&quot;</span><span class="p">,</span>
-<span class="linenos">81</span>      <span class="s2">&quot;URL&quot;</span>
-<span class="linenos">82</span>  <span class="p">],</span>
-<span class="linenos">83</span>  <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">84</span>      <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">85</span>      <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ImageObject&quot;</span><span class="p">}</span>
-<span class="linenos">86</span>  <span class="p">],</span>
-<span class="linenos">87</span>  <span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">88</span>    <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">89</span>    <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/CreativeWork&quot;</span><span class="p">}</span>
-<span class="linenos">90</span>  <span class="p">],</span>
-<span class="linenos">91</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: The name of the item.&quot;</span><span class="p">,</span>
-<span class="linenos">92</span>  <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Action&quot;</span><span class="p">},</span>
-<span class="linenos">93</span>  <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">94</span>  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">95</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;URL - the URL to the item described by this JSON-LD document&quot;</span>
-<span class="linenos">96</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="p">{</span>
+<span class="linenos">  2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">  3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos">  4</span>  <span class="p">},</span>
+<span class="linenos">  5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Service&quot;</span><span class="p">,</span>
+<span class="linenos">  6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos">  7</span>  <span class="s2">&quot;aggregateRating&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">  8</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/aggregateRating&quot;</span>
+<span class="linenos">  9</span>  <span class="p">},</span>
+<span class="linenos"> 10</span>  <span class="s2">&quot;areaServed&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 11</span>    <span class="s2">&quot;Text: The geographic area where the service is provided.&quot;</span><span class="p">,</span>
+<span class="linenos"> 12</span>    <span class="p">{</span>
+<span class="linenos"> 13</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Place&quot;</span>
+<span class="linenos"> 14</span>    <span class="p">},</span>
+<span class="linenos"> 15</span>    <span class="p">{</span>
+<span class="linenos"> 16</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/GeoShape&quot;</span>
+<span class="linenos"> 17</span>    <span class="p">},</span>
+<span class="linenos"> 18</span>    <span class="p">{</span>
+<span class="linenos"> 19</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/AdministrativeArea&quot;</span>
+<span class="linenos"> 20</span>    <span class="p">}</span>
+<span class="linenos"> 21</span>  <span class="p">],</span>
+<span class="linenos"> 22</span>  <span class="s2">&quot;audience&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 23</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Audience&quot;</span>
+<span class="linenos"> 24</span>  <span class="p">},</span>
+<span class="linenos"> 25</span>  <span class="s2">&quot;availableChannel&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 26</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ServiceChannel&quot;</span>
+<span class="linenos"> 27</span>  <span class="p">},</span>
+<span class="linenos"> 28</span>  <span class="s2">&quot;award&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: An award won by or for this service.&quot;</span><span class="p">,</span>
+<span class="linenos"> 29</span>  <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 30</span>    <span class="s2">&quot;Text: The brand(s) associated with the service, or the brand(s) maintained by an organization or business person.&quot;</span><span class="p">,</span>
+<span class="linenos"> 31</span>    <span class="p">{</span>
+<span class="linenos"> 32</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Brand&quot;</span>
+<span class="linenos"> 33</span>    <span class="p">},</span>
+<span class="linenos"> 34</span>    <span class="p">{</span>
+<span class="linenos"> 35</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span>
+<span class="linenos"> 36</span>    <span class="p">}</span>
+<span class="linenos"> 37</span>  <span class="p">],</span>
+<span class="linenos"> 38</span>  <span class="s2">&quot;broker&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 39</span>    <span class="p">{</span>
+<span class="linenos"> 40</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Person&quot;</span>
+<span class="linenos"> 41</span>    <span class="p">},</span>
+<span class="linenos"> 42</span>    <span class="p">{</span>
+<span class="linenos"> 43</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span>
+<span class="linenos"> 44</span>    <span class="p">}</span>
+<span class="linenos"> 45</span>  <span class="p">],</span>
+<span class="linenos"> 46</span>  <span class="s2">&quot;category&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 47</span>    <span class="s2">&quot;Text: A category for the service.&quot;</span><span class="p">,</span>
+<span class="linenos"> 48</span>    <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos"> 49</span>    <span class="p">{</span>
+<span class="linenos"> 50</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/CategoryCode&quot;</span>
+<span class="linenos"> 51</span>    <span class="p">},</span>
+<span class="linenos"> 52</span>    <span class="p">{</span>
+<span class="linenos"> 53</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/PhysicalActivityCategory&quot;</span>
+<span class="linenos"> 54</span>    <span class="p">},</span>
+<span class="linenos"> 55</span>    <span class="p">{</span>
+<span class="linenos"> 56</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Thing&quot;</span>
+<span class="linenos"> 57</span>    <span class="p">}</span>
+<span class="linenos"> 58</span>  <span class="p">],</span>
+<span class="linenos"> 59</span>  <span class="s2">&quot;hasOfferCatalog&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/OfferCatalog&quot;</span><span class="p">,</span>
+<span class="linenos"> 60</span>  <span class="s2">&quot;hoursAvailable&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/OpeningHoursSpecification&quot;</span><span class="p">,</span>
+<span class="linenos"> 61</span>  <span class="s2">&quot;isRelatedTo&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 62</span>    <span class="p">{</span>
+<span class="linenos"> 63</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Product&quot;</span>
+<span class="linenos"> 64</span>    <span class="p">},</span>
+<span class="linenos"> 65</span>    <span class="p">{</span>
+<span class="linenos"> 66</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Service&quot;</span>
+<span class="linenos"> 67</span>    <span class="p">}</span>
+<span class="linenos"> 68</span>  <span class="p">],</span>
+<span class="linenos"> 69</span>  <span class="s2">&quot;isSimilarTo&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 70</span>    <span class="p">{</span>
+<span class="linenos"> 71</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Product&quot;</span>
+<span class="linenos"> 72</span>    <span class="p">},</span>
+<span class="linenos"> 73</span>    <span class="p">{</span>
+<span class="linenos"> 74</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Service&quot;</span>
+<span class="linenos"> 75</span>    <span class="p">}</span>
+<span class="linenos"> 76</span>  <span class="p">],</span>
+<span class="linenos"> 77</span>  <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 78</span>    <span class="p">{</span>
+<span class="linenos"> 79</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ImageObject&quot;</span>
+<span class="linenos"> 80</span>    <span class="p">},</span>
+<span class="linenos"> 81</span>    <span class="s2">&quot;URL&quot;</span>
+<span class="linenos"> 82</span>  <span class="p">],</span>
+<span class="linenos"> 83</span>  <span class="s2">&quot;offers&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 84</span>    <span class="p">{</span>
+<span class="linenos"> 85</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Demand&quot;</span>
+<span class="linenos"> 86</span>    <span class="p">},</span>
+<span class="linenos"> 87</span>    <span class="p">{</span>
+<span class="linenos"> 88</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Offer&quot;</span>
+<span class="linenos"> 89</span>    <span class="p">}</span>
+<span class="linenos"> 90</span>  <span class="p">],</span>
+<span class="linenos"> 91</span>  <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 92</span>    <span class="s2">&quot;Text: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider.&quot;</span><span class="p">,</span>
+<span class="linenos"> 93</span>    <span class="p">{</span>
+<span class="linenos"> 94</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Person&quot;</span>
+<span class="linenos"> 95</span>    <span class="p">},</span>
+<span class="linenos"> 96</span>    <span class="p">{</span>
+<span class="linenos"> 97</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Organization&quot;</span>
+<span class="linenos"> 98</span>    <span class="p">}</span>
+<span class="linenos"> 99</span>  <span class="p">],</span>
+<span class="linenos">100</span>  <span class="s2">&quot;providerMobility&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: Indicates the mobility of a provided service (e.g. &#39;static&#39;, &#39;dynamic&#39;).&quot;</span><span class="p">,</span>
+<span class="linenos">101</span>  <span class="s2">&quot;review&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">102</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Review&quot;</span>
+<span class="linenos">103</span>  <span class="p">},</span>
+<span class="linenos">104</span>  <span class="s2">&quot;serviceOutput&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">105</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Thing&quot;</span>
+<span class="linenos">106</span>  <span class="p">},</span>
+<span class="linenos">107</span>  <span class="s2">&quot;serviceType&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">108</span>    <span class="s2">&quot;Text: Human-readable terms of service documentation&quot;</span><span class="p">,</span>
+<span class="linenos">109</span>    <span class="p">{</span>
+<span class="linenos">110</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/GovernmentBenefitsType&quot;</span>
+<span class="linenos">111</span>    <span class="p">}</span>
+<span class="linenos">112</span>  <span class="p">],</span>
+<span class="linenos">113</span>  <span class="s2">&quot;slogan&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: A slogan or motto associated with the item.&quot;</span><span class="p">,</span>
+<span class="linenos">114</span>  <span class="s2">&quot;termsOfService&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">115</span>    <span class="s2">&quot;Text: Human-readable terms of service documentation&quot;</span><span class="p">,</span>
+<span class="linenos">116</span>    <span class="p">{</span>
+<span class="linenos">117</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Url&quot;</span>
+<span class="linenos">118</span>    <span class="p">}</span>
+<span class="linenos">119</span>  <span class="p">],</span>
+<span class="linenos">120</span>  <span class="s2">&quot;additionalType&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">121</span>    <span class="s2">&quot;Text: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.&quot;</span><span class="p">,</span>
+<span class="linenos">122</span>    <span class="s2">&quot;URL&quot;</span>
+<span class="linenos">123</span>  <span class="p">],</span>
+<span class="linenos">124</span>  <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: An alternative name for this Thing.&quot;</span><span class="p">,</span>
+<span class="linenos">125</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: Free text which describes this Thing.&quot;</span><span class="p">,</span>
+<span class="linenos">126</span>  <span class="s2">&quot;disambiguatingDescription&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation&quot;</span><span class="p">,</span>
+<span class="linenos">127</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">128</span>    <span class="p">{</span>
+<span class="linenos">129</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/PropertyValue&quot;</span>
+<span class="linenos">130</span>    <span class="p">},</span>
+<span class="linenos">131</span>    <span class="s2">&quot;Text - The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.&quot;</span><span class="p">,</span>
+<span class="linenos">132</span>    <span class="s2">&quot;URL&quot;</span>
+<span class="linenos">133</span>  <span class="p">],</span>
+<span class="linenos">134</span>  <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">135</span>    <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">136</span>    <span class="p">{</span>
+<span class="linenos">137</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/ImageObject&quot;</span>
+<span class="linenos">138</span>    <span class="p">}</span>
+<span class="linenos">139</span>  <span class="p">],</span>
+<span class="linenos">140</span>  <span class="s2">&quot;mainEntityOfPage&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">141</span>    <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">142</span>    <span class="p">{</span>
+<span class="linenos">143</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/CreativeWork&quot;</span>
+<span class="linenos">144</span>    <span class="p">}</span>
+<span class="linenos">145</span>  <span class="p">],</span>
+<span class="linenos">146</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Text: The name of the item.&quot;</span><span class="p">,</span>
+<span class="linenos">147</span>  <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">148</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/Action&quot;</span>
+<span class="linenos">149</span>  <span class="p">},</span>
+<span class="linenos">150</span>  <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">151</span>  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
+<span class="linenos">152</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;URL - the URL to the item described by this JSON-LD document&quot;</span>
+<span class="linenos">153</span><span class="p">}</span>
 </pre></div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -784,7 +836,7 @@ about the image.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/services/graphs/service.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/services/graphs/serviceBase.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
@@ -799,7 +851,7 @@ about the image.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_282824</span><span class="o">/</span><span class="mf">3307491376.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">8</span><span class="n">d950517e033</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> 
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>

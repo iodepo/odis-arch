@@ -10,7 +10,7 @@
 #     - `URL`
 #     - `CreativeWork`
 # 
-# ### License as URL - Good
+# ### License as URL  
 # 
 # <pre>
 # {
@@ -19,7 +19,7 @@
 # }
 # </pre>
 # 
-# ### License as CreativeWork - Better?
+# ### License as CreativeWork  
 # 
 # <pre>
 # {
@@ -32,7 +32,7 @@
 # }
 # </pre>
 # 
-# ### License as SPDX URL - Best
+# ### License as SPDX URL  
 # 
 # - Use a simple URL
 # - [SPDX](https://spdx.org/licenses/) creates URLs for many licenses including those that don't have URLs

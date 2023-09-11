@@ -6,7 +6,7 @@
 # 
 # ## About
 # 
-# This section will present an identifer discussion and then focus 
+# This section will present an identifier discussion and then focus 
 # on approaches publishers can use to provide more source and provenance 
 # information.This section is heavily influenced 
 # by {cite:ps}`49385` {cite:ps}`googledataset`  and the reader is highly
@@ -433,9 +433,3 @@ print(jd)
 
 jbutils.show_graph(framed)
 
-
-# ## References
-# 
-# ```{bibliography}
-# :style: unsrt
-# ```

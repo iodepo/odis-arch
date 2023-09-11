@@ -42,7 +42,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/services/graphs/service.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/services/graphs/serviceBase.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -54,7 +54,6 @@ jbutils.show_graph(compacted)
 
 
 # ## References
-# 
 # 
 # * https://schema.org/docs/actions.html
 # * https://schema.org/Action
