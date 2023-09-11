@@ -1,25 +1,31 @@
-# Development config file for ODIS nodes, that drives the Dagster pipeline
-# to update the ODIS graph.  Other important notes about this config file:
-#  - sorted alphabetically by 'name' parameter
-#  - no need to use quotes. Use the single-quoted style (') if characters 
-#    such as " and \ are being used inside the string to avoid escaping them
-#  - pid: should point to the ODISCat 'view' if available, such as https://catalogue.odis.org/view/689
-#         or if not, use format: https://oceaninfohub.org/.well-known/org/[name]
-#  - url: point to sitemap or sitegraph
-#  - changefreq: how often sitemap is updated
-#  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
-#               necessarily when it was included in the ODIS graph)
-#  - headless: false if JSON-LD is embedded in page, or if sitegraph
-#  - cron: how often to harvest the endpoint, defaults to weekly (on Sunday)
-#  - active: ready to include in ODIS
-#  - if a parameter has no value, leave blank (with no quotes)
-# To validate at commandline: execute the following (if the file contains valid 
-# yaml, it will return nothing) :
-#    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
+---
+minio:
+  address:  
+  port:  
+  accessKey:
+  secretKey:
+  ssl:  
+  bucket: oih
+gleaner:
+  runid: oih # this will be the bucket the output is placed in...
+  summon: true # do we want to visit the web sites and pull down the files
+  mill: false
+context:
+  cache: true
+contextmaps:
+- prefix: "https://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+- prefix: "http://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+summoner:
+  after: ""      # "21 May 20 10:00 UTC"   
+  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  threads: 5
+  delay:  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
+  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
+millers:
+  graph: true
 sources:
-  #
-  # Belgian Marine Data Centre
-  #
   - name: bmdc
     propername: Belgian Marine Data Centre (BMDC)
     catalogue: https://metadata.naturalsciences.be/geonetwork/srv/eng/catalog.search#/home
@@ -34,15 +40,11 @@ sources:
     dateadded: 2023-06-20
     cron: 0 6 * * 0
     active: true
-  #
-  # British Oceanographic Data Centre
-  #
   - name: bodc
     propername: British Oceanographic Data Centre (BODC)
     catalogue: https://www.bodc.ac.uk/data/bodc_database/nodb/search/
     domain: https://www.bodc.ac.uk/
     logo: https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/bodc
     sourcetype: sitemap
     url: https://api.linked-systems.uk/sitemap_pap_api.xml
@@ -52,33 +54,11 @@ sources:
     dateadded: 2023-07-10
     cron: 0 7 * * 0 
     active: true
-  #
-  # CIOOS Atlantic
-  #    
-  # - name: cioosatlantic
-  #   propername: CIOOS Atlantic
-  #   catalogue: https://catalogue.cioosatlantic.ca/
-  #   domain: https://cioosatlantic.ca
-  #   logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
-  #   #missing ODISCat entry
-  #   pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
-  #   sourcetype: sitemap
-  #   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
-  #   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-  #   changefreq: as needed
-  #   backend: CKAN  
-  #   headless: false
-  #   dateadded: 2022-06-04
-  #   active: true
-  #
-  # INVEMAR Geospatial
-  #
   - name: invemargeo
     propername: CHM LAC - Geospatial
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarvessels
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/platformgeo?format=json
@@ -88,16 +68,11 @@ sources:
     dateadded: 2023-08-22
     cron: 0 8 * * 0 
     active: true
-  #
-  # Marine Institute Data Catalogue
-  #    
-  #
   - name: marineie
     propername: Marine Institute Data Catalogue (Ireland)
     catalogue: http://data.marine.ie/geonetwork/srv/eng/catalog.search 
     domain: http://data.marine.ie
     logo: https://data.marine.ie/geonetwork/images/logos/b8055c35-285d-400a-a29f-fb308ced07c2.png?random1692727716243
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/marineie  
     sourcetype: sitemap
     url: http://data.marine.ie/geonetwork/srv/eng/portal.sitemap
@@ -107,9 +82,6 @@ sources:
     dateadded: 2023-08-22
     cron: 0 9 * * 0 
     active: true
-  #
-  # MEDIN
-  #
   - name: medin
     propername: Marine Environmental Data and Information Network (MEDIN)
     catalogue: https://portal.medin.org.uk/portal/start.php
@@ -124,15 +96,11 @@ sources:
     dateadded: 2023-05-11
     cron: 0 10 * * 0
     active: true
-  #
-  # NMDIS-China
-  #
   - name: nmdis
     propername: National Marine Data and Information Service (NMDIS)
     catalogue: http://222.186.3.18:8888/erddap/index.html
     domain: https://www.cmoc-china.cn/
     logo: https://www.cmoc-china.cn/assets/imgs/ab555e05d0f33e67c199a84fbb502547.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/nmdis
     sourcetype: sitemap  
     url: http://222.186.3.18:8888/erddap/sitemap.xml
@@ -142,9 +110,6 @@ sources:
     dateadded: 2023-08-22
     cron: 0 11 * * 0 
     active: true  
-  #
-  # Oceanscape Project
-  #  
   - name: oceanscape
     propername: Oceanscape Project
     catalogue: https://oceanscape.org
@@ -153,22 +118,17 @@ sources:
     pid: https://catalogue.odis.org/view/1098
     sourcetype: sitemap
     url: https://oceanscape.org/organisation-sitemap.xml
-    #url: https://oceanscape.org/sitemap_index.xml
     changefreq: as needed   
     backend: WordPress  
     headless: false
     dateadded: 2022-05-18
     cron: 0 12 * * 0 
     active: true
-  #
-  # Pacific Environment Data Portal
-  #
   - name: pedp
     propername: Pacific Environment Data Portal
     catalogue: https://pacific-data.sprep.org/index.php/search
     domain: https://pacific-data.sprep.org/
     logo: https://pacific-data.sprep.org/themes/custom/inform_regional/logo.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/pedp
     sourcetype: sitemap
     url: https://pacific-data.sprep.org/sitemap.xml
@@ -178,9 +138,6 @@ sources:
     dateadded: 2023-08-08
     cron: 0 13 * * 0 
     active: true
-  #
-  # POGO
-  # 
   - name: pogo
     propername: Partnership for Observation of the Global Ocean
     catalogue: https://pogo-ocean.org/
@@ -194,9 +151,6 @@ sources:
     headless: false
     dateadded: 2022-11-30
     active: false
-  #
-  # RDA Australia
-  # 
   - name: rda
     propername: Research Data Australia
     catalogue: https://researchdata.edu.au/
@@ -211,19 +165,3 @@ sources:
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
     active: true  
-  #
-  # VLIZ: Flanders Marine Institute catalogue
-  #   note: VLIZ & EMODNet services were unified in late 2022 
-  # - name: vliz
-  #   propername: VLIZ - Flanders Marine Institute catalogue
-  #   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-  #   domain: http://www.vliz.be/en 
-  #   logo: ""
-  #   #missing ODISCat entry
-  #   pid: https://oceaninfohub.org/.well-known/org/vliz
-  #   sourcetype: sitegraph
-  #   url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-vliz/vliz-simple-graph.json
-  #   backend: GeoNetwork  
-  #   headless: false
-  #   dateadded: 2022-08-03
-  #   active: false

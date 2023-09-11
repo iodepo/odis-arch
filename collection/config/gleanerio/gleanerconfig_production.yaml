@@ -1,31 +1,36 @@
-# Production config file for ODIS nodes, that drives the Dagster pipeline
-# to update the ODIS graph.  Other important notes about this config file:
-#  - sorted alphabetically by 'name' parameter
-#  - no need to use quotes. Use the single-quoted style (') if characters 
-#    such as " and \ are being used inside the string to avoid escaping them
-#  - pid: should point to the ODISCat 'view' if available, such as https://catalogue.odis.org/view/689
-#         or if not, use format: https://oceaninfohub.org/.well-known/org/[name]
-#  - url: point to sitemap or sitegraph
-#  - changefreq: how often sitemap is updated
-#  - dateadded: YYYY-MM-DD (the date that JSON-LD became available, but not
-#               necessarily when it was included in the ODIS graph)
-#  - headless: false if JSON-LD is embedded in page, or if sitegraph
-#  - cron: how often to harvest the endpoint, defaults to weekly (on Sunday)
-#  - active: ready to include in ODIS
-#  - if a parameter has no value, leave blank (with no quotes)
-# To validate at commandline: execute the following (if the file contains valid 
-# yaml, it will return nothing) :
-#    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
+---
+minio:
+  address:  
+  port:  
+  accessKey:
+  secretKey:
+  ssl:  
+  bucket: oih
+gleaner:
+  runid: oih # this will be the bucket the output is placed in...
+  summon: true # do we want to visit the web sites and pull down the files
+  mill: false
+context:
+  cache: true
+contextmaps:
+- prefix: "https://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+- prefix: "http://schema.org/"
+  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+summoner:
+  after: ""      # "21 May 20 10:00 UTC"   
+  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  threads: 5
+  delay:  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
+  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
+millers:
+  graph: true
 sources:
-  #
-  # Africa IOC Data Portal
-  #
   - name: africaioc
     propername: IOC Africa Data Portal
     catalogue: https://ioc-africa.org/dbs/displayData.php
     domain: https://ioc-africa.org
     logo: https://ioc-africa.org/dbs/images/unesco_ioc_logo.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/africaioc
     sourcetype: sitemap
     url: https://ioc-africa.org/sitemap.xml
@@ -35,9 +40,6 @@ sources:
     dateadded: 2023-02-09
     cron: 0 6 * * 0
     active: true
-  #
-  # AquaDocs
-  #
   - name: aquadocs
     propername: AquaDocs
     catalogue: https://aquadocs.org/discover
@@ -52,15 +54,11 @@ sources:
     dateadded: 2021-02-26
     cron: 0 7 * * 0
     active: true
-  #
-  # BeBOP-OBON
-  #
   - name: bebop
     propername: Better Biomolecular Ocean Practices (BeBOP) as part of Ocean Biomolecular Observing Network (OBON)
     catalogue: https://github.com/BeBOP-OBON/odis-interface
     domain: https://oceandecade.org/actions/better-biomolecular-ocean-practices/
     logo: https://en.unesco.org/sites/default/files/styles/banner_sec_col_234x100/public/logo_decade_ocean_science_en.jpg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/bebop
     sourcetype: sitemap
     url: https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml
@@ -70,15 +68,11 @@ sources:
     dateadded: 2023-03-08
     cron: 0 8 * * 0
     active: true
-  #
-  # Benguela Current Convention (BCC) GeoData Portal
-  #
   - name: benguelacc
     propername: Benguela Current Convention (BCC) GeoData Portal
     catalogue: https://geodata.benguelacc.org/
     domain: https://www.benguelacc.org/
     logo: https://static.tildacdn.com/tild3263-3132-4937-a166-373963646533/Skjermbilde_2020-12-.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/benguelacc
     sourcetype: sitegraph
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-simple-graph.json
@@ -88,9 +82,6 @@ sources:
     dateadded: 2022-04-13
     cron: 0 1 * * 0
     active: true
-  #
-  # Caribbean Marine Atlas catalogue
-  #
   - name: caribbeanmarineatlas
     propername: Caribbean Marine Atlas catalogue
     catalogue: https://www.caribbeanmarineatlas.net/home/
@@ -105,9 +96,6 @@ sources:
     dateadded: 2022-04-13
     cron: 0 2 * * 0
     active: true
-  #
-  # CIOOS National
-  #
   - name: cioos
     propername: CIOOS
     catalogue: https://catalogue.cioos.ca/
@@ -122,15 +110,11 @@ sources:
     dateadded: 2023-01-31
     cron: 0 3 * * 0
     active: true
-  #
-  # EDMERP SeaDataNet
-  #
   - name: edmerp
     propername: European Directory of Marine Environmental Research Projects (EDMERP) SeaDataNet
     catalogue: https://edmerp.seadatanet.org/search
     domain: https://edmerp.seadatanet.org
     logo: https://edmerp.seadatanet.org/grfx/edmerp/logo_big.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/edmerp
     sourcetype: sitemap
     url: https://edmerp.seadatanet.org/sitemap.xml
@@ -140,15 +124,11 @@ sources:
     dateadded: 2021-07-26
     cron: 0 4 * * 0
     active: true
-  #
-  # EDMO SeaDataNet
-  #
   - name: edmo
     propername: European Directory of Marine Organisations (EDMO) SeaDataNet
     catalogue: https://edmo.seadatanet.org/search
     domain: https://edmo.seadatanet.org
     logo: https://edmo.seadatanet.org/grfx/edmo/logo.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/edmo
     sourcetype: sitemap
     url: https://edmo.seadatanet.org/sitemap.xml
@@ -158,18 +138,13 @@ sources:
     headless: false
     cron: 0 5 * * 0
     active: true
-  #
-  # EurOcean Organizations
-  #
   - name: euroceanorgs
     propername: EurOcean Organizations
     domain: https://infohub.eurocean.net/
     catalogue: https://infohub.eurocean.net/data/organizations
     logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png
-    #ODISCat entry missing ODIS-arch url & type
     pid: https://catalogue.odis.org/view/2993
     sourcetype: sitemap
-    #sitemap entries link to login page
     url: https://infohub.eurocean.net/sitemap/organizations
     changefreq: daily
     backend: unknown
@@ -177,18 +152,13 @@ sources:
     dateadded: 2022-03-26
     active: true
     cron: 0 6 * * 0
-  #
-  # EurOcean Projects
-  #
   - name: euroceanprojects
     propername: EurOcean Projects
     domain: https://infohub.eurocean.net/
     catalogue: https://infohub.eurocean.net/data/projects
     logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png
-    #ODISCat entry missing ODIS-arch url & type
     pid: https://catalogue.odis.org/view/2993
     sourcetype: sitemap
-    #sitemap entries link to login page
     url: https://infohub.eurocean.net/sitemap/projects
     changefreq: daily
     backend: unknown
@@ -196,18 +166,13 @@ sources:
     dateadded: 2022-03-26
     active: true
     cron: 0 7 * * 0
-  #
-  # EurOcean Vessels
-  #
   - name: euroceanvessels
     propername: EurOcean Vessels
     domain: https://infohub.eurocean.net/
     catalogue: https://infohub.eurocean.net/data/vessels
     logo: https://infohub.eurocean.net/images/under_constrution/eurOcean-logo-color.png
-    #ODISCat entry missing ODIS-arch url & type
     pid: https://catalogue.odis.org/view/2993
     sourcetype: sitemap
-    #sitemap entries link to login page
     url: https://infohub.eurocean.net/sitemap/vessels
     changefreq: daily
     backend: unknown
@@ -215,9 +180,6 @@ sources:
     dateadded: 2022-03-26
     active: true
     cron: 0 8 * * 0
-  #
-  # European Marine Observation and Data Network catalogue
-  #
   - name: emodnet
     propername: European Marine Observation and Data Network catalogue
     domain: https://emodnet.ec.europa.eu/
@@ -232,9 +194,6 @@ sources:
     dateadded: 2022-08-24
     active: true
     cron: 0 9 * * 0
-  #
-  # Indonesia National Oceanic Data Center
-  #
   - name: inanodc
     propername: Indonesia National Oceanic Data Center
     catalogue: https://geonode.nodc.id
@@ -243,22 +202,17 @@ sources:
     pid: https://catalogue.odis.org/view/3246
     sourcetype: sitemap
     url: https://geonode.nodc.id/sitemap.xml
-    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ina-nodc/ina-nodc-simple-graph.json
     changefreq: on demand
     backend: GeoNode
     headless: false
     dateadded: 2022-04-05
     active: true
     cron: 0 10 * * 0
-  #
-  # INVEMAR Documents
-  #
   - name: invemardocuments
     propername: CHM LAC - Documents
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemardocuments
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
@@ -268,15 +222,11 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 11 * * 0
-  #
-  # INVEMAR Experts
-  #
   - name: invemarexperts
     propername: CHM LAC - Experts
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarexpert
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
@@ -286,15 +236,11 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 12 * * 0
-  #
-  # INVEMAR Institutions
-  #
   - name: invemarinstitutions
     propername: CHM LAC - Institutions
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarinstitutions
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
@@ -304,15 +250,11 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 13 * * 0
-  #
-  # INVEMAR Training
-  #
   - name: invemartraining
     propername: CHM LAC - Training
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemartraining
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/training?format=json
@@ -322,15 +264,11 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 14 * * 0
-  #
-  # INVEMAR Vessels
-  #
   - name: invemarvessels
     propername: CHM LAC - Vessels
     catalogue: http://portete.invemar.org.co/chm/
     domain: http://portete.invemar.org.co
     logo: http://portete.invemar.org.co/static/images/logo-web.svg
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarvessels
     sourcetype: sitegraph
     url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
@@ -340,15 +278,11 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 15 * * 0
-  #
-  # Marine Training EU
-  #
   - name: marinetraining
     propername: Marine Training EU
     catalogue: https://marinetraining.eu/search
     domain: https://marinetraining.eu/
     logo: https://marinetraining.eu/sites/default/files/M2.0.png
-    #ODISCat entry missing ODIS-arch url & type
     pid: https://catalogue.odis.org/view/1972
     sourcetype: sitemap
     url: https://www.marinetraining.eu/sitemap.xml
@@ -358,9 +292,6 @@ sources:
     dateadded: 2021-05-26
     active: true
     cron: 0 16 * * 0
-  #
-  # MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
-  #
   - name: maspawio
     propername: MASPAWIO - Marine Spatial Atlas for the Western Indian Ocean
     catalogue: http://maspawio.net/
@@ -375,15 +306,11 @@ sources:
     dateadded: 2022-03-30
     active: true
     cron: 0 17 * * 0
-  #
-  # METS-RCN
-  #
   - name: metsrcn
     propername: Research Coordination Network for Marine Ecological Time Series (METS-RCN)
     catalogue: https://github.com/NicoGEOMAR/METS-RCN
     domain: https://www2.whoi.edu/site/mets-rcn/
     logo: https://www.us-ocb.org/wp-content/uploads/sites/43/2022/05/METS-RCN-slider.png
-    #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/metsrcn
     sourcetype: sitemap
     url: https://raw.githubusercontent.com/NicoGEOMAR/METS-RCN/main/sitemap.xml
@@ -393,15 +320,11 @@ sources:
     dateadded: 2023-04-13
     active: true
     cron: 0 18 * * 0
-  #
-  # OBIS: Ocean Biodiversity Information System
-  #
   - name: obis
     propername: Ocean Biodiversity Information System
     catalogue: https://obis.org
     domain: https://obis.org
     logo: https://obis.org/images/logo.png
-    #ODISCat entry missing ODIS-arch url
     pid: https://catalogue.odis.org/view/343
     sourcetype: sitemap
     url: https://obis.org/sitemap_datasets.xml
@@ -411,9 +334,6 @@ sources:
     dateadded: 2021-02-26
     active: true
     cron: 0 19 * * 0
-  #
-  # Ocean Best Practices
-  #
   - name: obps
     propername: Ocean Best Practices System
     catalogue: https://www.oceanbestpractices.org/repository/
@@ -428,15 +348,11 @@ sources:
     dateadded: 2021-01-26
     active: true
     cron: 0 20 * * 0
-  #
-  # OceanExpert
-  #
   - name: oceanexperts
     propername: OceanExpert UNESCO/IOC Project Office for IODE
     catalogue: https://oceanexpert.org/advancedSearch
     domain: https://oceanexpert.org/
     logo: https://oceanexpert.org/img/logoimageindex.jpg
-    #ODISCat arch url doesn't point to sitemap
     pid: https://catalogue.odis.org/view/4
     sourcetype: sitemap
     url: https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml
@@ -446,9 +362,6 @@ sources:
     dateadded: 2021-08-26
     active: true
     cron: 0 21 * * 0
-  #
-  # Pacific Data Hub
-  #
   - name: pdh
     propername: Pacific Data Hub
     catalogue: https://pacificdata.org/data/dataset
@@ -457,7 +370,6 @@ sources:
     pid: https://catalogue.odis.org/view/689
     sourcetype: sitemap
     url: https://pacificdata.org/organization/sitemap.xml
-    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pacificdatahub/sitemap.xml
     changefreq: as needed
     backend: CKAN
     headless: false
