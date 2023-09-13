@@ -1,0 +1,62 @@
+---
+minio:
+  address:
+  port:
+  accesskey: 
+  secretkey: 
+  bucket: 
+  region: null
+implementation_network:
+  orgname: iow
+context:
+  cache: true
+  strict: true
+contextmaps:
+  - prefix: https://schema.org/
+    file: ./assets/schemaorg-current-https.jsonld
+  - prefix: http://schema.org/
+    file: ./assets/schemaorg-current-http.jsonld
+objects:
+  domain: us-east-1
+  prefix:
+    - prov/counties0
+    - summoned/counties0
+endpoints:
+  - service: oihgraph
+    baseurl: http://coreos.lan:9090/blazegraph/namespace/oihgraph
+    type: blaszgraph
+    authenticate: false
+    username:
+    password:
+    modes:
+      - action: sparql
+        suffix: /sparql
+        accept: application/sparql-results+json
+        method: GET
+      - action: update
+        suffix: /sparql
+        accept: application/sparql-update
+        method: POST
+      - action: bulk
+        suffix: /sparql
+        accept: text/x-nquads
+        method: POST
+   - service: oihprovgraph
+    baseurl: http://coreos.lan:9090/blazegraph/namespace/oihprovgraph
+    type: blaszgraph
+    authenticate: false
+    username:
+    password:
+    modes:
+      - action: sparql
+        suffix: /sparql
+        accept: application/sparql-results+json
+        method: GET
+      - action: update
+        suffix: /sparql
+        accept: application/sparql-update
+        method: POST
+      - action: bulk
+        suffix: /sparql
+        accept: text/x-nquads
+        method: POST         
