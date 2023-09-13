@@ -1,0 +1,69 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/wod_osd_1960.json",
+    "@type": "Dataset",
+    "author": {
+        "@type": "Organization",
+        "name": "Ocean Climate Lab/NCEI",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "citation": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
+    "dateCreated": "2019-11-21",
+    "dateModified": "2019-11-21",
+    "description": "Data for multiple casts from the World Ocean Database",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://noaa-wod-pds.s3.amazonaws.com/1960/wod_osd_1960.nc"
+    },
+    "identifier": {
+        "@type": "PropertyValue",
+        "description": "These identifiers for individual casts are assigned by the World Ocean Database",
+        "propertyID": "/nodc/data/oc5.clim.4/wod_update_nc/1960/wod_osd_1960.nc"
+    },
+    "name": "World Ocean Database - Multi-cast file: 1960/wod_osd_1960.nc",
+    "publisher": {
+        "@type": "Organization",
+        "name": "US DOC; NESDIS; NATIONAL CENTERS FOR ENVIRONMENTAL INFORMATION",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "additionalProperty": [
+            {
+                "name": "Geospatial vertical min",
+                "value": "0.0"
+            },
+            {
+                "name": "Geospatial vertical max",
+                "value": "8274.0"
+            },
+            {
+                "name": "Geospatial vertical units",
+                "value": "meters"
+            },
+            {
+                "name": "Geospatial vertical positive",
+                "value": "down"
+            }
+        ],
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-180.0 -78.13333129882812 180.0 82.086669921875"
+        }
+    },
+    "subjectOf": {
+        "@type": "Event",
+        "description": "About the multi-cast event 1960/wod_osd_1960.nc (such as time of the cast)",
+        "name": "1960/wod_osd_1960.nc",
+        "potentialAction": {
+            "@type": "Action",
+            "endTime": "1960-12-31",
+            "name": "Time of the event for: 1960/wod_osd_1960.nc",
+            "startTime": "1960-01-00"
+        }
+    },
+    "url": "https://noaa-wod-pds.s3.amazonaws.com/"
+}

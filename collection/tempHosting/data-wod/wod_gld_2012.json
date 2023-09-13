@@ -1,0 +1,69 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/wod_gld_2012.json",
+    "@type": "Dataset",
+    "author": {
+        "@type": "Organization",
+        "name": "Ocean Climate Lab/NCEI",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "citation": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
+    "dateCreated": "2021-07-06",
+    "dateModified": "2021-07-06",
+    "description": "Data for multiple casts from the World Ocean Database",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://noaa-wod-pds.s3.amazonaws.com/2012/wod_gld_2012.nc"
+    },
+    "identifier": {
+        "@type": "PropertyValue",
+        "description": "These identifiers for individual casts are assigned by the World Ocean Database",
+        "propertyID": "/nodc/data/OCLAB/OCL/retrieval/monthlies/wod_update_nc/May2021/2012/wod_gld_2012.nc"
+    },
+    "name": "World Ocean Database - Multi-cast file: 2012/wod_gld_2012.nc",
+    "publisher": {
+        "@type": "Organization",
+        "name": "US DOC; NESDIS; NATIONAL CENTERS FOR ENVIRONMENTAL INFORMATION",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "additionalProperty": [
+            {
+                "name": "Geospatial vertical min",
+                "value": "-0.0"
+            },
+            {
+                "name": "Geospatial vertical max",
+                "value": "1027.0"
+            },
+            {
+                "name": "Geospatial vertical units",
+                "value": "meters"
+            },
+            {
+                "name": "Geospatial vertical positive",
+                "value": "down"
+            }
+        ],
+        "geo": {
+            "@type": "GeoShape",
+            "box": "114.53099822998047 -43.69377517700195 8.6903076171875 65.506591796875"
+        }
+    },
+    "subjectOf": {
+        "@type": "Event",
+        "description": "About the multi-cast event 2012/wod_gld_2012.nc (such as time of the cast)",
+        "name": "2012/wod_gld_2012.nc",
+        "potentialAction": {
+            "@type": "Action",
+            "endTime": "2012-12-31",
+            "name": "Time of the event for: 2012/wod_gld_2012.nc",
+            "startTime": "2012-01-01"
+        }
+    },
+    "url": "https://noaa-wod-pds.s3.amazonaws.com/"
+}
