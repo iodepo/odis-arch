@@ -39,15 +39,35 @@ The Ocean InfoHub Knowledge Graph is structured around six key concepts:
 - Training
 - Vessels
 
-Each of these concepts forms a node in the graph, with edges representing the relationships between them. This structure allows for a high degree of interconnectivity and cross-referencing, facilitating a more holistic understanding of the available information.
+Each of these concepts forms a node in the graph, with edges representing the relationships between them. 
+This structure allows for a high degree of interconnectivity and cross-referencing, facilitating a 
+more holistic understanding of the available information.
 
-The knowledge graph leverages **schema.org** as its vocabulary, a semantic framework used for structuring data on the internet. This choice ensures that the data within the graph is organized in a standardized, universally understood manner, making it easier for users to navigate and extract meaningful insights.
+The knowledge graph leverages **schema.org** as its vocabulary, a semantic framework used for 
+structuring data on the internet. This choice ensures that the data within the graph is organized 
+in a standardized, universally understood manner, making it easier for users to navigate and extract 
+meaningful insights.
 
-In essence, the Ocean InfoHub Knowledge Graph is a powerful tool that brings together diverse oceanic information in a structured, accessible, and user-friendly format, promoting better decision-making and sustainable practices for the world's oceans.
+In essence, the Ocean InfoHub Knowledge Graph is a powerful tool that brings together diverse oceanic 
+information in a structured, accessible, and user-friendly format, promoting better decision-making 
+and sustainable practices for the world's oceans.
 
-Initial strides towards making these products available can be explored at the [Ocean InfoHub Graph (OIH-Graph)](https://github.com/iodepo/odis-arch/tree/schema-dev-df/docs/releases). The data housed here can also be accessed through the subsequent links provided. As the project progresses, these resources will be auto-generated, and updated versions of the graph will be periodically released on Zenodo, complete with DOI and citation methodologies, ensuring the traceability and credibility of the information.
 
-The preliminary exploratory code, which probes the application of Natural Language Processing (NLP) for extracting Geopolitical Entities (GPEs) from these resources, can be located in [./dataScience](dataScience/README.md). This signifies the commencement of our journey into exploring potential strategies to maximize the utility of the OIH Graph.
+
+## Release Graph
+
+To better support the use by and the engagment with the ODIS community, the OIH graph is assembled into 
+publishable components.  Additionally, a set of notebooks to provide guidance on how to interact and use
+these components have been developed. 
+
+The resource can be accessed through the links provided below. As the project progresses, 
+these resources will be auto-generated, and updated versions of the graph will be periodically released on 
+Zenodo, complete with DOI and citation methodologies, ensuring the traceability and credibility of the information.
+
+The preliminary exploratory code, which probes the application of Natural Language Processing (NLP) 
+for extracting Geopolitical Entities (GPEs) from these resources, can be located 
+in [./dataScience](dataScience/README.md). This signifies the commencement of our journey into exploring potential 
+strategies to maximize the utility of the OIH Graph.
 
 
 ## Notebooks
