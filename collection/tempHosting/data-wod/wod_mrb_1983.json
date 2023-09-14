@@ -1,0 +1,69 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#"
+    },
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/wod_mrb_1983.json",
+    "@type": "Dataset",
+    "author": {
+        "@type": "Organization",
+        "name": "Ocean Climate Lab/NCEI",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "citation": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
+    "dateCreated": "2022-07-22",
+    "dateModified": "2022-07-22",
+    "description": "Data for multiple casts from the World Ocean Database",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://noaa-wod-pds.s3.amazonaws.com/1983/wod_mrb_1983.nc"
+    },
+    "identifier": {
+        "@type": "PropertyValue",
+        "description": "These identifiers for individual casts are assigned by the World Ocean Database",
+        "propertyID": "/nodc/data/OCLAB/OCL/retrieval/monthlies/wod_update_nc/May2022/1983/wod_mrb_1983.nc"
+    },
+    "name": "World Ocean Database - Multi-cast file: 1983/wod_mrb_1983.nc",
+    "publisher": {
+        "@type": "Organization",
+        "name": "US DOC; NESDIS; NATIONAL CENTERS FOR ENVIRONMENTAL INFORMATION",
+        "url": "http://www.nodc.noaa.gov"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "additionalProperty": [
+            {
+                "name": "Geospatial vertical min",
+                "value": "1.0"
+            },
+            {
+                "name": "Geospatial vertical max",
+                "value": "1679.0"
+            },
+            {
+                "name": "Geospatial vertical units",
+                "value": "meters"
+            },
+            {
+                "name": "Geospatial vertical positive",
+                "value": "down"
+            }
+        ],
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-140.2100067138672 -0.09000000357627869 -21.89801025390625 33.19499969482422"
+        }
+    },
+    "subjectOf": {
+        "@type": "Event",
+        "description": "About the multi-cast event 1983/wod_mrb_1983.nc (such as time of the cast)",
+        "name": "1983/wod_mrb_1983.nc",
+        "potentialAction": {
+            "@type": "Action",
+            "endTime": "1983-12-31",
+            "name": "Time of the event for: 1983/wod_mrb_1983.nc",
+            "startTime": "1983-01-01"
+        }
+    },
+    "url": "https://noaa-wod-pds.s3.amazonaws.com/"
+}

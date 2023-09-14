@@ -16,50 +16,6 @@
 # To validate at commandline: execute the following (if the file contains valid 
 # yaml, it will return nothing) :
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
----
-minio:
-  address: myminio.dev
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-miniogoogle:
-  address: storage.googleapis.com
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-minioaws:
-  address: aws.amazon.com
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-gleaner:
-  runid: runx    # this will be the bucket the output is placed in...
-  summon: true   # do we want to visit the web sites and pull down the files
-  mill: false
-context:
-  cache: true
-contextmaps:
-  - prefix: "https://schema.org/"
-    file: "./schemaorg-current-https.jsonld"
-  - prefix: "http://schema.org/"
-    file: "./schemaorg-current-https.jsonld"
-summoner:
-  after: ""      # "21 May 20 10:00 UTC"
-  mode: full     # full || diff:
-  threads: 5
-  delay:  # ms (1000 = 1 sec) delay between calls (will FORCE threads to 1)
-  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
-millers:
-  graph: true
 sources:
   #
   # Belgian Marine Data Centre
@@ -215,7 +171,8 @@ sources:
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/pedp
     sourcetype: sitemap
-    url: https://pacific-data.sprep.org/sitemap.xml
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pedp/sitemap.xml
+    #url: https://pacific-data.sprep.org/sitemap.xml
     changefreq: as needed
     backend: Drupal
     headless: false
@@ -248,12 +205,30 @@ sources:
     logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
     pid: https://catalogue.odis.org/view/3267
     sourcetype: sitemap
-    url: https://researchdata.edu.au/home/sitemap/?ds=384
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-rda/sitemap.xml    
+    #url: https://researchdata.edu.au/home/sitemap/?ds=384
     changefreq: daily  
     backend: GeoNetwork  
     headless: false
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
+    active: true
+  #
+  # World Ocean Database
+  # 
+  - name: wod
+    propername: World Ocean Database
+    catalogue: https://noaa-wod-pds.s3.amazonaws.com/index.html
+    domain: https://www.ncei.noaa.gov/products/world-ocean-database
+    logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
+    pid: https://catalogue.odis.org/view/182
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/sitemap.xml    
+    changefreq:   
+    backend: AmazonS3  
+    headless: false
+    dateadded: 2023-09-13
+    cron: 0 15 * * 0    
     active: true  
   #
   # VLIZ: Flanders Marine Institute catalogue

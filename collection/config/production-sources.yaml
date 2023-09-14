@@ -16,50 +16,6 @@
 # To validate at commandline: execute the following (if the file contains valid 
 # yaml, it will return nothing) :
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
----
-minio:
-  address: myminio.dev
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-miniogoogle:
-  address: storage.googleapis.com
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-minioaws:
-  address: aws.amazon.com
-  port: 443
-  accessKey:
-  secretKey:
-  ssl: true
-  bucket: gleaner-oih
-  region: US-CENTRAL-1
-gleaner:
-  runid: runx    # this will be the bucket the output is placed in...
-  summon: true   # do we want to visit the web sites and pull down the files
-  mill: false
-context:
-  cache: true
-contextmaps:
-  - prefix: "https://schema.org/"
-    file: "./schemaorg-current-https.jsonld"
-  - prefix: "http://schema.org/"
-    file: "./schemaorg-current-https.jsonld"
-summoner:
-  after: ""      # "21 May 20 10:00 UTC"
-  mode: full     # full || diff:
-  threads: 5
-  delay:  # ms (1000 = 1 sec) delay between calls (will FORCE threads to 1)
-  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
-millers:
-  graph: true
 sources:
   #
   # Africa IOC Data Portal
