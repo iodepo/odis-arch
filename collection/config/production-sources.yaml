@@ -447,6 +447,24 @@ sources:
     active: true
     cron: 0 21 * * 0
   #
+  # Oceanscape Project
+  #  
+  - name: oceanscape
+    propername: Oceanscape Project
+    catalogue: https://oceanscape.org
+    domain: https://geoblueplanet.org/
+    logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
+    pid: https://catalogue.odis.org/view/1098
+    sourcetype: sitemap
+    url: https://oceanscape.org/organisation-sitemap.xml
+    #url: https://oceanscape.org/sitemap_index.xml
+    changefreq: as needed   
+    backend: WordPress  
+    headless: false
+    dateadded: 2022-05-18
+    cron: 0 12 * * 0 
+    active: true    
+  #
   # Pacific Data Hub
   #
   - name: pdh
@@ -464,3 +482,21 @@ sources:
     dateadded: 2022-07-25
     active: true
     cron: 0 22 * * 0
+  #
+  # RDA Australia
+  # 
+  - name: rda
+    propername: Research Data Australia
+    catalogue: https://researchdata.edu.au/
+    domain: https://ardc.edu.au/
+    logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
+    pid: https://catalogue.odis.org/view/3267
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-rda/sitemap.xml    
+    #url: https://researchdata.edu.au/home/sitemap/?ds=384
+    changefreq: daily  
+    backend: GeoNetwork  
+    headless: false
+    dateadded: 2023-03-06
+    cron: 0 14 * * 0    
+    active: true
