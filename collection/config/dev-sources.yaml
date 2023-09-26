@@ -123,24 +123,6 @@ sources:
     headless: false
     dateadded: 2023-05-11
     cron: 0 10 * * 0
-    active: true
-  #
-  # NMDIS-China
-  #
-  - name: nmdis
-    propername: National Marine Data and Information Service (NMDIS)
-    catalogue: http://222.186.3.18:8888/erddap/index.html
-    domain: https://www.cmoc-china.cn/
-    logo: https://www.cmoc-china.cn/assets/imgs/ab555e05d0f33e67c199a84fbb502547.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/nmdis
-    sourcetype: sitemap  
-    url: http://222.186.3.18:8888/erddap/sitemap.xml
-    changefreq: monthly
-    backend: ERDDAP
-    headless: false
-    dateadded: 2023-08-22
-    cron: 0 11 * * 0 
     active: true  
   #
   # Pacific Environment Data Portal
