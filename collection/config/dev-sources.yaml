@@ -108,23 +108,6 @@ sources:
     cron: 0 9 * * 0 
     active: true
   #
-  # MEDIN
-  #
-  - name: medin
-    propername: Marine Environmental Data and Information Network (MEDIN)
-    catalogue: https://portal.medin.org.uk/portal/start.php
-    domain: https://medin.org.uk/
-    logo: https://medin.org.uk/sites/medin/files/images/medin-portal-logo.png
-    pid: https://catalogue.odis.org/view/40
-    sourcetype: sitemap  
-    url: https://portal.medin.org.uk/portal/sitemap.php
-    changefreq: daily
-    backend: MARIS
-    headless: false
-    dateadded: 2023-05-11
-    cron: 0 10 * * 0
-    active: true  
-  #
   # Pacific Environment Data Portal
   #
   - name: pedp
