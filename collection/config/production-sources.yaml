@@ -519,6 +519,25 @@ sources:
     active: true
     cron: 0 22 * * 0
   #
+  # Pacific Environment Data Portal
+  #
+  - name: pedp
+    propername: Pacific Environment Data Portal
+    catalogue: https://pacific-data.sprep.org/index.php/search
+    domain: https://pacific-data.sprep.org/
+    logo: https://pacific-data.sprep.org/themes/custom/inform_regional/logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/pedp
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pedp/sitemap.xml
+    #url: https://pacific-data.sprep.org/sitemap.xml
+    changefreq: as needed
+    backend: Drupal
+    headless: false
+    dateadded: 2023-08-08
+    cron: 0 13 * * 0 
+    active: true    
+  #
   # RDA Australia
   # 
   - name: rda
@@ -535,4 +554,21 @@ sources:
     headless: false
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
+    active: true
+  #
+  # World Ocean Database
+  # 
+  - name: wod
+    propername: World Ocean Database
+    catalogue: https://noaa-wod-pds.s3.amazonaws.com/index.html
+    domain: https://www.ncei.noaa.gov/products/world-ocean-database
+    logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
+    pid: https://catalogue.odis.org/view/182
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/sitemap.xml    
+    changefreq:   
+    backend: AmazonS3  
+    headless: false
+    dateadded: 2023-09-13
+    cron: 0 15 * * 0    
     active: true
