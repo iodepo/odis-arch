@@ -18,23 +18,6 @@
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 sources:
   #
-  # Belgian Marine Data Centre
-  #
-  - name: bmdc
-    propername: Belgian Marine Data Centre (BMDC)
-    catalogue: https://metadata.naturalsciences.be/geonetwork/srv/eng/catalog.search#/home
-    domain: https://www.bmdc.be/
-    logo: https://www.bmdc.be/NODC/images/museum.png
-    pid: https://catalogue.odis.org/view/3271
-    sourcetype: sitemap
-    url: https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap
-    changefreq: daily
-    backend: GeoNetwork
-    headless: false
-    dateadded: 2023-06-20
-    cron: 0 6 * * 0
-    active: true
-  #
   # British Oceanographic Data Centre
   #
   - name: bodc
