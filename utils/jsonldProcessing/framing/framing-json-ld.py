@@ -104,6 +104,11 @@ for jsonldfile in glob.glob(os.path.join(PATH_TO_SOURCE_DATA_FOLDER, '*.jsonld')
         
         #load the JSON-LD
         jsonloaded = json.load(open(jsonldfile, 'r'))
+        
+        #check if exception (possibly caused by an empty "url" parameter)
+        if "code" in jsonloaded and jsonloaded["code"] == "runtime_exception":
+            print("skipping file due to runtime exception in JSON-LD")
+            continue        
                   
         #get the schema url
         if "@vocab" in jsonloaded["@context"]:
