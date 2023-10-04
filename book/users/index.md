@@ -12,7 +12,7 @@ The reference client is available at
 ## Using OIH search in Chrome
 
 It is possible to set Ocean InfoHub as a search shortcut in Chrome.
-To do this go to the _Mange Search ..._ section of your settings. 
+To do this go to the _Manage Search ..._ section of your settings. 
 
 There you will see a button "Add" in the _Site Search_ section.  
 
