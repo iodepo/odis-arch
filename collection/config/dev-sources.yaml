@@ -54,6 +54,24 @@ sources:
   #   dateadded: 2022-06-04
   #   active: true
   #
+  # Observing System Monitoring Center
+  #
+  - name: osmc
+    propername: Observing System Monitoring Center (OSMC)
+    catalogue: https://osmc.noaa.gov/erddap/info/index.html
+    domain: https://www.osmc.noaa.gov/
+    logo: https://www.osmc.noaa.gov/OSMC_logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/osmc
+    sourcetype: sitemap
+    url: https://osmc.noaa.gov/erddap/sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-12
+    cron: 0 10 * * 0 
+    active: true
+  #
   # INVEMAR Geospatial
   #
   - name: invemargeo
