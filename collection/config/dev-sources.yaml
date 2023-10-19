@@ -54,24 +54,6 @@ sources:
   #   dateadded: 2022-06-04
   #   active: true
   #
-  # Observing System Monitoring Center
-  #
-  - name: osmc
-    propername: Observing System Monitoring Center (OSMC)
-    catalogue: https://osmc.noaa.gov/erddap/info/index.html
-    domain: https://www.osmc.noaa.gov/
-    logo: https://www.osmc.noaa.gov/OSMC_logo.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/osmc
-    sourcetype: sitemap
-    url: https://osmc.noaa.gov/erddap/sitemap.xml
-    changefreq: monthly
-    backend: Custom
-    headless: false
-    dateadded: 2023-10-12
-    cron: 0 10 * * 0 
-    active: true
-  #
   # INVEMAR Geospatial
   #
   - name: invemargeo
@@ -108,6 +90,42 @@ sources:
     dateadded: 2023-08-22
     cron: 0 9 * * 0 
     active: true
+  #
+  # ODIS Catalogue
+  #
+  - name: odiscat
+    propername: ODIS Catalogue (ODISCat)
+    catalogue: https://catalogue.odis.org/
+    domain: https://odis.org/
+    logo: https://gatewaygeomatics.com/dl/odis/odis-catalogue-logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/odiscat
+    sourcetype: sitemap
+    url: https://stag.catalogue.odis.org/sitemapIndex.xml
+    changefreq: daily
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-19
+    cron: 0 11 * * 0 
+    active: true     
+  #
+  # Observing System Monitoring Center
+  #
+  - name: osmc
+    propername: Observing System Monitoring Center (OSMC)
+    catalogue: https://osmc.noaa.gov/erddap/info/index.html
+    domain: https://www.osmc.noaa.gov/
+    logo: https://www.osmc.noaa.gov/OSMC_logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/osmc
+    sourcetype: sitemap
+    url: https://osmc.noaa.gov/erddap/sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-12
+    cron: 0 10 * * 0 
+    active: true    
   #
   # POGO
   # 
