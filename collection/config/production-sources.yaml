@@ -89,6 +89,23 @@ sources:
     cron: 0 1 * * 0
     active: true
   #
+  # Belgian Marine Data Centre
+  #
+  - name: bmdc
+    propername: Belgian Marine Data Centre (BMDC)
+    catalogue: https://metadata.naturalsciences.be/geonetwork/srv/eng/catalog.search#/home
+    domain: https://www.bmdc.be/
+    logo: https://www.bmdc.be/NODC/images/museum.png
+    pid: https://catalogue.odis.org/view/3271
+    sourcetype: sitemap
+    url: https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap
+    changefreq: daily
+    backend: GeoNetwork
+    headless: false
+    dateadded: 2023-06-20
+    cron: 0 6 * * 0
+    active: true    
+  #
   # Caribbean Marine Atlas catalogue
   #
   - name: caribbeanmarineatlas
@@ -219,13 +236,14 @@ sources:
   # European Marine Observation and Data Network catalogue
   #
   - name: emodnet
-    propername: European Marine Observation and Data Network catalogue
+    propername: European Marine Observation and Data Network
     domain: https://emodnet.ec.europa.eu/
     catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
     logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
     pid: https://catalogue.odis.org/view/364
     sourcetype: sitemap
-    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-emodnet/sitemap.xml
+    #url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
     changefreq: as needed
     backend: GeoNetwork
     headless: false
@@ -376,6 +394,23 @@ sources:
     active: true
     cron: 0 17 * * 0
   #
+  # MEDIN
+  #
+  - name: medin
+    propername: Marine Environmental Data and Information Network (MEDIN)
+    catalogue: https://portal.medin.org.uk/portal/start.php
+    domain: https://medin.org.uk/
+    logo: https://medin.org.uk/sites/medin/files/images/medin-portal-logo.png
+    pid: https://catalogue.odis.org/view/40
+    sourcetype: sitemap  
+    url: https://portal.medin.org.uk/portal/sitemap.php
+    changefreq: daily
+    backend: MARIS
+    headless: false
+    dateadded: 2023-05-11
+    cron: 0 10 * * 0
+    active: true    
+  #
   # METS-RCN
   #
   - name: metsrcn
@@ -393,6 +428,24 @@ sources:
     dateadded: 2023-04-13
     active: true
     cron: 0 18 * * 0
+  #
+  # NMDIS-China
+  #
+  - name: nmdis
+    propername: National Marine Data and Information Service (NMDIS)
+    catalogue: http://222.186.3.18:8888/erddap/index.html
+    domain: https://www.cmoc-china.cn/
+    logo: https://www.cmoc-china.cn/assets/imgs/ab555e05d0f33e67c199a84fbb502547.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/nmdis
+    sourcetype: sitemap  
+    url: http://222.186.3.18:8888/erddap/sitemap.xml
+    changefreq: monthly
+    backend: ERDDAP
+    headless: false
+    dateadded: 2023-08-22
+    cron: 0 11 * * 0 
+    active: true    
   #
   # OBIS: Ocean Biodiversity Information System
   #
@@ -431,7 +484,7 @@ sources:
   #
   # OceanExpert
   #
-  - name: oceanexperts
+  - name: oceanexpert
     propername: OceanExpert UNESCO/IOC Project Office for IODE
     catalogue: https://oceanexpert.org/advancedSearch
     domain: https://oceanexpert.org/
@@ -446,6 +499,24 @@ sources:
     dateadded: 2021-08-26
     active: true
     cron: 0 21 * * 0
+  #
+  # Oceanscape Project
+  #  
+  - name: oceanscape
+    propername: Oceanscape Project
+    catalogue: https://oceanscape.org
+    domain: https://geoblueplanet.org/
+    logo: https://oceanscape.org/wp-content/uploads/2019/06/Oceanscape-banner-1024x183.png
+    pid: https://catalogue.odis.org/view/1098
+    sourcetype: sitemap
+    url: https://oceanscape.org/organisation-sitemap.xml
+    #url: https://oceanscape.org/sitemap_index.xml
+    changefreq: as needed   
+    backend: WordPress  
+    headless: false
+    dateadded: 2022-05-18
+    cron: 0 12 * * 0 
+    active: true    
   #
   # Pacific Data Hub
   #
@@ -464,3 +535,57 @@ sources:
     dateadded: 2022-07-25
     active: true
     cron: 0 22 * * 0
+  #
+  # Pacific Environment Data Portal
+  #
+  - name: pedp
+    propername: Pacific Environment Data Portal
+    catalogue: https://pacific-data.sprep.org/index.php/search
+    domain: https://pacific-data.sprep.org/
+    logo: https://pacific-data.sprep.org/themes/custom/inform_regional/logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/pedp
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pedp/sitemap.xml
+    #url: https://pacific-data.sprep.org/sitemap.xml
+    changefreq: as needed
+    backend: Drupal
+    headless: false
+    dateadded: 2023-08-08
+    cron: 0 13 * * 0 
+    active: true    
+  #
+  # RDA Australia
+  # 
+  - name: rda
+    propername: Research Data Australia
+    catalogue: https://researchdata.edu.au/
+    domain: https://ardc.edu.au/
+    logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
+    pid: https://catalogue.odis.org/view/3267
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-rda/sitemap.xml    
+    #url: https://researchdata.edu.au/home/sitemap/?ds=384
+    changefreq: daily  
+    backend: GeoNetwork  
+    headless: false
+    dateadded: 2023-03-06
+    cron: 0 14 * * 0    
+    active: true
+  #
+  # World Ocean Database
+  # 
+  - name: wod
+    propername: World Ocean Database
+    catalogue: https://noaa-wod-pds.s3.amazonaws.com/index.html
+    domain: https://www.ncei.noaa.gov/products/world-ocean-database
+    logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
+    pid: https://catalogue.odis.org/view/182
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/sitemap.xml    
+    changefreq:   
+    backend: AmazonS3  
+    headless: false
+    dateadded: 2023-09-13
+    cron: 0 15 * * 0    
+    active: true
