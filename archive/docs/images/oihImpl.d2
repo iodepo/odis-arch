@@ -1,0 +1,88 @@
+direction: right
+
+
+scope: Ocean InfoHub  {
+
+#OIH: {
+#    shape: image
+#    icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/archive/diagrams/content/oih/oih.png
+#}
+
+p: Partners {
+c: Co-Edit Gudiance Documents
+c.width: 300
+
+pub: Publish Resources
+pub.width: 300
+}
+
+
+
+Ops: Operations {
+
+         Harvest {
+
+Gleaner: Gleaner.io {
+    shape: image
+    icon: https://avatars.githubusercontent.com/u/78648155?s=400&u=847909bc0b5d47a163f947b79dc7a7164b95c6cf&v=4
+}
+         }
+
+         Validate {
+
+GitHub Actions: {
+    shape: image
+    icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/archive/diagrams/content/GitHub-Logo.png
+}
+         }
+
+         Indexing : Indexing and \n ETL Operations{
+
+"Nabu": {
+    shape: image
+    icon: https://avatars.githubusercontent.com/u/78648155?s=400&u=847909bc0b5d47a163f947b79dc7a7164b95c6cf&v=4
+}
+
+"Python": {
+    shape: image
+    icon: https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg
+}
+
+
+
+         }
+
+Harvest -> Validate -> Indexing
+
+     }
+
+
+
+
+p -> Ops : Implementation by Partners enables Indexing
+
+Ops -> p : Operations Provide Feedback to Implementers \n via Dashboard, Reports and Communications
+
+prod: Broader Impacts {
+
+s: Search UI
+s.width: 300
+
+g: Graph Releases
+g.width: 300
+
+c: Connections {
+note: |md
+These include alignement work  
+with WMO, CODATA, Polder,  
+and others
+|
+
+}
+c.width: 200
+
+}
+
+Ops -> prod: ODIS Graph supports
+
+}
