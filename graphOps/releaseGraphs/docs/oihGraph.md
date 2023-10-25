@@ -59,7 +59,7 @@ From this MDR we have developed queries that can process the data into products 
 
 One such product is for the OIH Solr text index that is used to power the OIH Search UI.  Solr is used since it provides millisecond text searches across the graph literal values.  Text literal searches is a key user method for searching for resources.  Once a set of resources is found, the graph can then be used to provide more detailed connections.
 
-Additional functions and queries are also be used to extract data for the World Meterological Organization (WMO).
+Additional functions and queries are also be used to extract data for the World Meterological Organization (WMO).  However, WMO uses MQTT, so that would mean we need to express our graph to that representation.  
 
 The graph has also been evaluated for its potential to connect resources both in and outside the graph.  An experiment was done to leverage Machine Learning techniques to connect OIH Graph resources with UN Sustainable Development Goals (SDGs).  This approach is detailed in the attachment (attach Tom's document here somehow).
 

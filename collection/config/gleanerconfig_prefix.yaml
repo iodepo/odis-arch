@@ -14,9 +14,9 @@ context:
   cache: true
 contextmaps:
 - prefix: "https://schema.org/"
-  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+  file: "./assets/jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
 - prefix: "http://schema.org/"
-  file: "./jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+  file: "./assets/jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
 summoner:
   after: ""      # "21 May 20 10:00 UTC"   
   mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
@@ -24,4 +24,4 @@ summoner:
   delay:  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) 
   headless: http://0.0.0.0:9222  # URL for headless see docs/headless
 millers:
-  graph: true
+  graph: false
