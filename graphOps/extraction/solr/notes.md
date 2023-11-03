@@ -72,3 +72,40 @@ Here are the keys extracted from the provided JSON:
 - json_source
 
 These are all the keys present in the JSON object you provided.
+
+
+```python
+
+###
+#  Text address / name / CountryOfLastProcessing to Regions
+#
+# This is a super simple geocoder -- if there's text (in "address", 
+# "name", or "CountryOfLastProcessing" properties) that contains
+# a country that's spelled like the "geoAreaName" value from 
+# the UNSD "GeoArea" API endpoint, we take the
+# region from there. 
+
+# For more on the UNSD API, see https://unstats.un.org/SDGAPI/swagger/
+# and see the JSON results tree for the GeoArea endpoint at 
+# https://unstats.un.org/SDGAPI/v1/sdg/GeoArea/Tree
+# We now connect through the live API, and get the list of all countries 
+# and regions in JSON, which we then parse.  Formerly, we had to 
+# manually download a CSV from 
+# https://unstats.un.org/unsd/methodology/m49/overview
+
+# Algorithim:
+# * lower everything.
+# * removing anything in parens e.g., we want Iran to match, not require
+#   Iran(Islamic Republic of),
+# * Remove stop words.
+# * Split on whitespace
+# * remove ending period e.g. we want "Ghana" from "Accra, Ghana."
+
+# Then, for properties mentioned above, we check to see if any of the 
+# countries are in the address, and map away from there.  Note, 
+# Cote d'Ivoire and Timor Leste are going to potentially have accent issues.
+#
+# Note -- this is a linear search, but there are only 200 countries so it's not that bad.
+
+
+```

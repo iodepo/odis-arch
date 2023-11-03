@@ -1,0 +1,27 @@
+direction:right
+
+s: sources
+os: Object Store
+rg: Release Graph
+
+sbr: OIH Core Results \nParquet
+
+s -> os -> rg
+
+rg -> sbr: ETL via Mercury
+
+wis: WMO WIS 2 \n GeoJSON
+gg: Gloabl Grid GIS \n h3 s2
+v: Similarity Search \n Vectors and Embeddings
+solr: Solr Search UI Core
+gml: Graph Network \n Visualization
+wesr: WESR \n DCAT RDF
+geo: Geo Products \n GeoParquet, GeoPackage, etc
+
+sbr -> wis
+sbr -> gg
+sbr -> v
+sbr -> solr
+sbr -> gml
+sbr -> wesr
+sbr -> geo

@@ -15,6 +15,7 @@ GC: schema:GeoCoodinates {
 
 
 srep: Schema.org Representation {
+ad: Address
     t0: Text\nSimple literal name 
     t1: Text { note: |md 
 BOX ``` 30 10 10 30 ```
@@ -29,7 +30,7 @@ note2: |md
 
 For POINT you need to use the latitude and longitude properties as noted in the diagram.
 
-Schema.org does not explicately declare x,y or y,x.  OIH request you use WKT order of long,lat.
+Schema.org is assumed to be lat/long (ie y,x)
 
 Pairs are to be space separated, so it ends up as a string with out delimiters.
 |
@@ -37,6 +38,7 @@ Pairs are to be space separated, so it ends up as a string with out delimiters.
     t2: Text\nsingle WGS-84 value\n example:\n -122.08585 
 }
 
+p -> srep.ad: schema:address
 P -> srep.t0: schema:name
 
 P -> GS: schema:geo
@@ -69,7 +71,7 @@ LINESTRING (30 10, 10 30, 40 40)
 POLYGON ((30 10, 40 40, 20 40, 10 20, 30 10))
 ```
 
-Note that WKT is x,y so long,lat
+Note that WKT is x,y  so long,lat
 |
 
 }
