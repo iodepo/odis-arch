@@ -36,6 +36,23 @@ sources:
     cron: 0 7 * * 0 
     active: true
   #
+  # Canary Current Large Marine Ecosystem (CCLME)
+  #
+  - name: cclme
+    propername: Canary Current Large Marine Ecosystem (CCLME)
+    catalogue: https://www.fao.org/in-action/canary-current-lme/en
+    domain: https://www.fao.org/in-action/canary-current-lme/en
+    logo: https://www.fao.org/images/corporatelibraries/fao-logo/fao-logo-en.svg?sfvrsn=f64522b4_36
+    pid: https://catalogue.odis.org/view/3276
+    sourcetype: sitemap
+    url: http://www.ideo-cclme.ieo.es/odis/odis_sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-30
+    cron: 0 2 * * 0
+    active: true
+  #
   # CIOOS Atlantic
   #    
   # - name: cioosatlantic
@@ -158,3 +175,20 @@ sources:
   #   headless: false
   #   dateadded: 2022-08-03
   #   active: false
+  #
+  # Leibniz Center for Tropical Marine Research (ZMT)
+  # 
+  - name: zmt
+    propername: Leibniz Center for Tropical Marine Research (ZMT)
+    catalogue: https://dataportal.leibniz-zmt.de/
+    domain: https://www.leibniz-zmt.de/de/
+    logo: https://www.leibniz-zmt.de/templates/hm_teekit_zmt_v1/images/logo/de-DE/zmt_logo_full_edge.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/zmt
+    sourcetype: sitemap
+    url: https://dataportal.leibniz-zmt.de/sitemap.xml
+    changefreq: monthly 
+    backend: Pangaea  
+    headless: false
+    dateadded: 2023-11-02
+    active: true
