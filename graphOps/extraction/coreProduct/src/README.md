@@ -22,3 +22,9 @@ python mdp.py  --source "http://ossapi.oceaninfohub.org/public/graphs/summonedci
 ```
 
 At present, I only support Parquet and CSV output based on the file extension.  
+
+## mdp2solr.py
+
+```Bash
+python mdp2Solr.py --source ./output/cioos.parquet --outputdir ./output/solr
+```

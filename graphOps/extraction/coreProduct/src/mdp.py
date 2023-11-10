@@ -16,7 +16,7 @@ import os
 
 from defs import graphshapers
 from defs import readSource
-
+from defs import spatial
 
 def main():
     parser = argparse.ArgumentParser(description="Process some arguments.")
@@ -47,8 +47,10 @@ def main():
     print("Saving results to file")
     _, file_extension = os.path.splitext(output_file)
 
+    mf['centroid'] = mf['centroid'].astype(str)
+
     if file_extension == '.parquet':
-        mf.to_parquet(output_file)
+        mf.to_parquet(output_file, engine='fastparquet')  # engine must be one of 'pyarrow', 'fastparquet'
     elif file_extension == '.csv':
         mf.to_csv(output_file)
     else:
@@ -145,10 +147,25 @@ def graphProcessor(dg):
 
     ## TODO incorporate geometry cleanup
 
+    print("Processing Stage: Geospatial centroid")
+    merged_df['centroid'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "centroid"))
+
+    print("Processing Stage: Geospatial length")
+    merged_df['length'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "length"))
+
+    print("Processing Stage: Geospatial area")
+    merged_df['area'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "area"))
+
+    print("Processing Stage: Geospatial wkt")
+    merged_df['wkt'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "wkt"))
+
+    print("Processing Stage: Geospatial geojson")
+    merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))
+
     # TODO, incorporate Jeff's code as a Lambda function (will need to support multiple possible regions per entry)
     """### Regions
     Incorporate Jeff's regions.py which needs
-    
+
     * address (Org, person, Course?
     * name (THING, in all)
     * spatialFeature (WKT geom column)
@@ -176,31 +193,72 @@ def graphProcessor(dg):
 
     # transforms needed for aggregation
     merged_df['keywords'] = merged_df['keywords'].astype(str)  # why is this needed?
+    merged_df['geom'] = merged_df['geom'].astype(str)  # why is this needed?
+    merged_df['filteredgeom'] = merged_df['filteredgeom'].astype(str)  # why is this needed?
+    merged_df['centroid'] = merged_df['centroid'].astype(str)  # why is this needed?
 
-    mf = merged_df.groupby('id').agg({'keywords': ', '.join,
-                                      'type': 'first',
-                                      'name': ', '.join,
-                                      'description': ', '.join,
-                                      'url': ', '.join,
-                                      'geotype': 'first',
-                                      'geompred': 'first',
-                                      'geom': 'first',
-                                      'temporalCoverage': 'first',
-                                      'datePublished': 'first',
-                                      'license': 'first',
-                                      'creator': 'first',
-                                      'includedInDataCatalog': 'first',
-                                      'distribution': 'first',
-                                      'publisher': 'first',
-                                      'filteredgeom': 'first',
-                                      'dt_startDate': 'first',
-                                      'dt_endDate': 'first',
-                                      'n_startYear': 'first',
-                                      'n_endYear': 'first'}).reset_index()
+
+    # TODO, define a minimal schema for the final data frame, and add in any missing columns
+
+    # mf = merged_df.groupby('id').agg({'keywords': ', '.join,
+    #                                   'type': 'first',
+    #                                   'name': ', '.join,
+    #                                   'description': ', '.join,
+    #                                   'url': ', '.join,
+    #                                   'geotype': 'first',
+    #                                   'geompred': 'first',
+    #                                   'geom': 'first',
+    #                                   'temporalCoverage': 'first',
+    #                                   'datePublished': 'first',
+    #                                   'license': 'first',
+    #                                   'creator': 'first',
+    #                                   'includedInDataCatalog': 'first',
+    #                                   'distribution': 'first',
+    #                                   'publisher': 'first',
+    #                                   'filteredgeom': 'first',
+    #                                   'dt_startDate': 'first',
+    #                                   'dt_endDate': 'first',
+    #                                   'n_startYear': 'first',
+    #                                   'n_endYear': 'first',
+    #                                   'centroid': 'first',
+    #                                   'length': 'first',
+    #                                   'area': 'first',
+    #                                   'wkt': 'first',
+    #                                   'geojson': 'first'}).reset_index()
+
+    agg_dict = {'keywords': ', '.join,
+                'type': 'first',
+                'name': ', '.join,
+                'description': ', '.join,
+                'url': ', '.join,
+                'geotype': 'first',
+                'geompred': 'first',
+                'geom': 'first',
+                'temporalCoverage': 'first',
+                'datePublished': 'first',
+                'license': 'first',
+                'creator': 'first',
+                'includedInDataCatalog': 'first',
+                'distribution': 'first',
+                'publisher': 'first',
+                'filteredgeom': 'first',
+                'dt_startDate': 'first',
+                'dt_endDate': 'first',
+                'n_startYear': 'first',
+                'n_endYear': 'first',
+                'centroid': 'first',
+                'length': 'first',
+                'area': 'first',
+                'wkt': 'first',
+                'geojson': 'first'}
+
+    for col in agg_dict.copy():
+        if col not in merged_df.columns:
+            del agg_dict[col]
+
+    mf = merged_df.groupby('id').agg(agg_dict).reset_index()
 
     return mf
-
-
 
 if __name__ == '__main__':
     main()

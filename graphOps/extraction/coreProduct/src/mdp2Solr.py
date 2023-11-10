@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 
+import numpy as np
 import pandas as pd
 from objdict import ObjDict
 
@@ -62,31 +63,32 @@ def main():
         data.txt_distribution = [row['distribution']]
         data.txt_publisher = [remove_brackets(row['publisher'])]
 
-        # # geo
-        # if row["filteredgeom"] != np.nan:
-        #      data.geotype = [row['geompred']]
-        #      data.geom = [ row["filteredgeom"]]
-        #  data.geojson_point = [ row["filteredgeom"]]
-        #  data.geojson_simple = [ row["filteredgeom"]]
-        #  data.geojson_geom = [ row["filteredgeom"]]
-        #  data.geom_area = [ row["filteredgeom"]]
-        #  data.geom_length = [ row["filteredgeom"]]
+        # geo
+        if row["filteredgeom"] != np.nan:
+            data.geotype = [row['geompred']]
+            data.geom = [row["filteredgeom"]]
 
-        # temporal
-        data.dt_startDate = [row['dt_startDate']]
-        data.dt_endDate = [row['dt_endDate']]
-        data.n_startYear = [row['n_startYear']]
-        data.n_endYear = [row['n_endYear']]
+        data.geojson_point = [row["centroid"]]
+        data.geojson_simple = [row["geojson"]]
+        data.geojson_geom = [row["geojson"]]
+        data.geom_area = [row["area"]]
+        data.geom_length = [row["length"]]
 
-        # write
-        json_string = data.dumps(indent=4)
+    # temporal
+    data.dt_startDate = [row['dt_startDate']]
+    data.dt_endDate = [row['dt_endDate']]
+    data.n_startYear = [row['n_startYear']]
+    data.n_endYear = [row['n_endYear']]
 
-        # Define the filename based on the row index or a unique identifier from your data
-        filename = os.path.join(output_directory, f'row_{index}.json')
+    # write
+    json_string = data.dumps(indent=4)
 
-        # Write the JSON string to the file
-        with open(filename, 'w') as json_file:
-            json_file.write(json_string)
+    # Define the filename based on the row index or a unique identifier from your data
+    filename = os.path.join(output_directory, f'row_{index}.json')
+
+    # Write the JSON string to the file
+    with open(filename, 'w') as json_file:
+        json_file.write(json_string)
 
 
 def remove_brackets(string):
