@@ -53,14 +53,22 @@ def main():
 
         if not isinstance(row['keywords'], (int, float)):
             data.txt_keywords = [x.strip() for x in row['keywords'].split(',')]
+
         if not isinstance(row['name'], (int, float)):
             data.txt_name = row['name']
+
         data.description = row['description']
         data.txt_url = [row['url']]
         data.txt_license = [row['license']]
         data.txt_creator = [row['creator']]
-        data.txt_includedInDataCatalog = [remove_brackets(row['includedInDataCatalog'])]
-        data.txt_distribution = [row['distribution']]
+
+        #TODO need to add this column check to all the rows
+        if "includedInDataCatalog" in mf.columns:
+            data.txt_includedInDataCatalog = [remove_brackets(row['includedInDataCatalog'])]
+
+        if "distribution" in mf.columns:
+            data.txt_distribution = [row['distribution']]
+
         data.txt_publisher = [remove_brackets(row['publisher'])]
 
         # geo
@@ -74,21 +82,21 @@ def main():
         data.geom_area = [row["area"]]
         data.geom_length = [row["length"]]
 
-    # temporal
-    data.dt_startDate = [row['dt_startDate']]
-    data.dt_endDate = [row['dt_endDate']]
-    data.n_startYear = [row['n_startYear']]
-    data.n_endYear = [row['n_endYear']]
+        # temporal
+        data.dt_startDate = [row['dt_startDate']]
+        data.dt_endDate = [row['dt_endDate']]
+        data.n_startYear = [row['n_startYear']]
+        data.n_endYear = [row['n_endYear']]
 
-    # write
-    json_string = data.dumps(indent=4)
+        # write
+        json_string = data.dumps(indent=4)
 
-    # Define the filename based on the row index or a unique identifier from your data
-    filename = os.path.join(output_directory, f'row_{index}.json')
+        # Define the filename based on the row index or a unique identifier from your data
+        filename = os.path.join(output_directory, f'row_{index}.json')
 
-    # Write the JSON string to the file
-    with open(filename, 'w') as json_file:
-        json_file.write(json_string)
+        # Write the JSON string to the file
+        with open(filename, 'w') as json_file:
+            json_file.write(json_string)
 
 
 def remove_brackets(string):
