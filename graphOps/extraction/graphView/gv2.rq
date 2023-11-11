@@ -5,9 +5,9 @@ PREFIX schema: <https://schema.org/>
 
 SELECT DISTINCT ?source ?type ?target ?sType ?tType
 WHERE {
-  ?source ?type ?target .
   ?source a ?sType .
   ?target a ?tType .
+  ?source ?type ?target .
   FILTER((?sType) IN (schema:Person, schema:Organization, schema:Dataset, schema:Course, schema:Document))
   FILTER((?tType) IN (schema:Person, schema:Organization, schema:Dataset, schema:Course, schema:Document))
 }

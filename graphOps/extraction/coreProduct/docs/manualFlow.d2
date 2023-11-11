@@ -1,0 +1,61 @@
+direction: right
+
+p: Source {
+
+oc: OceanCat
+pp: Partner Platforms
+
+}
+# cg: cliGleaner.sh
+# cn: cliNabu.sh
+os: Sink (object store) {
+  s: Summoned Data Graphs
+  rg: Release Graphs
+  prod: Data Products {
+    mdp: Master Data Product
+    r: Validation reports
+  }
+}
+
+ds: Data Services {
+ts: triplestore
+
+solr: Solr Search
+    }
+
+ux: User Experience {
+    ui: ODIS User Interface
+    d: Dashboard
+    soo: State of thei\n Ocean Data 
+}
+
+# r: Partner Alignment \n Reports
+z: Zenodo
+
+
+# mdp: Master Data Product \n via mdp.py
+# mdp2solr: mdp to solr \n via mdp2solr.py
+
+p -> os.s : via cliGleaner.py { style: { font-size: 36 } }
+os.rg -> ds.ts : via cliNabu.py { style: { font-size: 36 }  }
+
+os.s -> os.rg : via cliNabu.py { style: { font-size: 36 }  }
+
+os.rg -> os.prod.mdp: via mdp.py { style: { font-size: 36 }  }
+
+os.prod.mdp -> ds.solr: via mdp2solr.py { style: { font-size: 36 }  }
+os.prod.mdp -> ux.d: DuckDB 
+ds.solr -> ux.ui: via standard Solr API\n plus schema 
+
+os.rg -> os.prod.r: via rgValidation.py
+os.prod.r -> p.pp: In person  or email
+os.prod.r -> ux.d: DuckDB
+
+# ass: Assessment \n & Analysis
+# os.prod.r -> ass: OpenRefine, DuckDB
+# os.prod.mdp -> ass: OpenRefine, DuckDB
+# os.rg -> ass: SPARQL,\n Network Analysis
+# ds.ts -> ass: SPARQL
+
+os.rg -> z: via rgZenodoPublisher.py
+p.pp <- z:  Credit
