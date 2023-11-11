@@ -197,35 +197,6 @@ def graphProcessor(dg):
     merged_df['filteredgeom'] = merged_df['filteredgeom'].astype(str)  # why is this needed?
     merged_df['centroid'] = merged_df['centroid'].astype(str)  # why is this needed?
 
-
-    # TODO, define a minimal schema for the final data frame, and add in any missing columns
-
-    # mf = merged_df.groupby('id').agg({'keywords': ', '.join,
-    #                                   'type': 'first',
-    #                                   'name': ', '.join,
-    #                                   'description': ', '.join,
-    #                                   'url': ', '.join,
-    #                                   'geotype': 'first',
-    #                                   'geompred': 'first',
-    #                                   'geom': 'first',
-    #                                   'temporalCoverage': 'first',
-    #                                   'datePublished': 'first',
-    #                                   'license': 'first',
-    #                                   'creator': 'first',
-    #                                   'includedInDataCatalog': 'first',
-    #                                   'distribution': 'first',
-    #                                   'publisher': 'first',
-    #                                   'filteredgeom': 'first',
-    #                                   'dt_startDate': 'first',
-    #                                   'dt_endDate': 'first',
-    #                                   'n_startYear': 'first',
-    #                                   'n_endYear': 'first',
-    #                                   'centroid': 'first',
-    #                                   'length': 'first',
-    #                                   'area': 'first',
-    #                                   'wkt': 'first',
-    #                                   'geojson': 'first'}).reset_index()
-
     agg_dict = {'keywords': ', '.join,
                 'type': 'first',
                 'name': ', '.join,
