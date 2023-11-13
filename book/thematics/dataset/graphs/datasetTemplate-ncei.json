@@ -1,0 +1,84 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "Floating microplastics concentration collected from MV Maersk Launcher, MV Maersk Transporter, and RV Professor Kaganovskiy in the eastern North Pacific Ocean from 2015-07-25 to 2019-12-09 (NCEI Accession 0276264)",
+    "description": "This study was carried out to estimate the floating microplastics (plastics from size 0.5mm to 5mm, reported in unit of pieces/m^3) concentration in the North Pacific Ocean. Microplastics data was collected from 2015-07-25 to 2019-12-09 aboard MV Maersk Launcher, MV Maersk Transporter, and RV Professor Kaganovskiy, using manta and neuston nets. This dataset contains the results from all 663 sampling efforts, in a spreadsheet format.",
+    "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:276264",
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": [
+        "Egger, Matthias; Nijhof, Rein; Quiros, Lauren; Leone, Giulia; Royer, Sarah-Jeanne; McWhirter, Andrew; Kantakov, Gennady; Radchenko, Vladimir; Pakhomov, Evgeny; Hunt, Brian; Lebreton, Laurent (2023). Floating microplastics concentration collected from MV Maersk Launcher, MV Maersk Transporter, and RV Professor Kaganovskiy in the eastern North Pacific Ocean from 2015-07-25 to 2019-12-09 (NCEI Accession 0276264). [indicate subset used]. NOAA National Centers for Environmental Information. Dataset. https://www.ncei.noaa.gov/archive/accession/0276264. Accessed [date]."
+    ],
+    "keywords": [
+        "microplastic concentration",
+        "in situ",
+        "oceanography"
+    ],
+    "measurementTechnique": [
+        "Manta net",
+        "Neuston net"
+    ],
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Name of a variable in the dataset",
+            "description": "Extended description of this variable"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Name of a variable in the dataset",
+            "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+            "description": "Extended description of this variable?"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "SamplingDeviceApertureSurfaceArea",
+            "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+            "description": "Extended description of this variable"
+        }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://registryOfCatalogs.org/permanentUrlIdentifiyingCatalog",
+        "@type": "DataCatalog",
+        "url": "https://urlOfDataCatalog.org"
+    },
+    "temporalCoverage": "2007/2007",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
+        "encodingFormat": "text/csv"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@type": "Organization",
+            "legalName": "The Ocean Cleanup",
+            "url": "https://theoceancleanup.com/"
+        },
+        {
+            "@type": "Person",
+            "familyName": "Egger",
+            "givenName": "Matthias",
+            "url": "https://organisationWebsite.org/"
+        }
+    ],
+    "about": {
+        "@type": "DefinedTerm",
+        "identifier": "http://purl.obolibrary.org/obo/ENVO_01000944",
+        "termCode": "ENVO:01000944",
+        "name": "microplastic particle"
+    }
+}
