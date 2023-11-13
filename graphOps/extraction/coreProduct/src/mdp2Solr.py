@@ -23,7 +23,7 @@ def main():
         sys.exit(1)
 
     u = args.source
-    output_dir = args.outputdir
+    od = args.outputdir
 
     _, file_extension = os.path.splitext(u)
     if file_extension != '.parquet':
@@ -31,9 +31,8 @@ def main():
         sys.exit(1)
 
     # Set output directory and make it if it is not present
-    output_directory = output_dir
-    if not os.path.exists(output_directory):
-        os.makedirs(output_directory)
+    if not os.path.exists(od):
+        os.makedirs(od)
 
     # Load the master data product from ODIS
     mf = pd.read_parquet(u)
@@ -106,7 +105,7 @@ def main():
         json_string = data.dumps(indent=4)
 
         # Define the filename based on the row index or a unique identifier from your data
-        filename = os.path.join(output_directory, f'row_{index}.json')
+        filename = os.path.join(od, f'row_{index}.json')
 
         # Write the JSON string to the file
         with open(filename, 'w') as json_file:

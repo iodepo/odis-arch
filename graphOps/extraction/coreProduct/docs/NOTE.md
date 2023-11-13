@@ -3,10 +3,10 @@
 In some ways there are three flows..   but are they all "manual"  ??   they are not
 
 
-don't call it manual, call it community or user 
+advocateFlow:  The interaction in person with the partners
 
-user flow:   source to UX
+abalysisFlow:  The flow to products for the analusis, this is the "State of the Ocean Data Flow"
 
-analysis:  sources to analysis approaches, this is the "State of the Ocean Data"  tool
+interopFlow:   The flow to products or services to interact with other groups
 
-interop:   source to wis2, wesr, etc
+
