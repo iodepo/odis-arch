@@ -37,6 +37,17 @@ for more focused creative work examples.
 :linenos:
 ```
 
+**Note**
+For a generic `encodingFormat` inside a `distribution` block, you can use 
+`image/xyz`, such as for the following, which points to a Digital Terrain Model:
+  ```
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "http://222.186.3.18:8888/erddap/files/BATM_NMDIS_2020_Jinli_Seamount/BATM_NMDIS_2020_Jinli_Seamount.dtm",
+    "encodingFormat": "image/xyz"
+  },
+  ```
+
 ## Demo area  please ignore
 
 This area is being used to test out a new repository structure where the data graphs, 
