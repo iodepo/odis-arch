@@ -1,0 +1,99 @@
+direction:right
+
+
+jld: Graph {
+
+
+context {
+
+    explanation: |json
+    "@context": "https://schema.org/",
+  |
+
+  explanation.width:800
+}
+
+body {
+
+    ts1: |json
+        "@type": "Dataset",
+        "@id": "https://example.org/datasets/1234567890",
+  |
+
+  ts2: |json
+
+  "identifier": "doi:10.1234/1234567890",
+  "name": "Removal of ...",
+  "description": "A description between 50 and 5000 characters.",
+  "url": "https://example.org/datasets/1234567890",
+
+|
+
+ts3: |json
+"version": "2013-11-21",
+"keywords": ["ocean acidification", "OA", "oceans"],
+"license": "CC-BY-4.0",
+"sameAs": "https://doi.org/10.1234/1234567890",
+"isAccessibleForFree": "true"
+|
+
+
+ts1.width: 800
+ts2.width: 800
+ts3.width: 800
+
+}
+
+
+}
+
+s: Shape (really frame) {
+
+sh1: |turtle
+sh:path <http://schema.org/citation>;
+|
+
+
+sh2: |turtle
+sh:path <http://schema.org/citation>;
+|
+
+
+sh3: |turtle
+ecgeo:spatialExtentProperty
+    a sh:PropertyShape ;
+    sh:path schema:spatialCoverage;
+    sh:minCount 1 ;
+    sh:class schema:Place ;
+      sh:or (  [sh:path schema:geo ;
+                  sh:or (  [  sh:class  schema:GeoCoordinates ]
+                           [  sh:class  schema:GeoShape ] )  ;
+	              sh:minCount 1 ;
+	              sh:message "Message here" ;]
+               [sh:path schema:name;
+                  sh:nodeKind sh:Literal;
+                  sh:minCount 1 ]
+      );
+    sh:severity sh:Info ;
+    sh:message "Messag here" ;
+    .
+
+|
+
+sh1.width: 800
+sh2.width: 800
+sh3.width: 800
+
+}
+
+v: Validation (frame) Result {
+    True
+}
+
+jld.body.ts1 -> s.sh1
+jld.body.ts2 -> s.sh2
+jld.body.ts3 -> s.sh3
+
+s.sh1 -> v.True
+s.sh2 -> v.True
+s.sh3 -> v.True

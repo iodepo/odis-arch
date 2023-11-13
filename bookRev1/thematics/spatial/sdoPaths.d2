@@ -1,0 +1,83 @@
+direction: right
+
+P: schame:Place {
+  link: https://schema.org/Place
+}
+
+GS: scheme:GeoShape {
+  link: https://schema.org/GeoShape
+}
+
+GC: schema:GeoCoodinates {
+  link: https://schema.org/GeoCoordinates
+}
+
+
+
+srep: Schema.org Representation {
+ad: Address
+    t0: Text\nSimple literal name 
+    t1: Text { note: |md 
+BOX ``` 30 10 10 30 ```
+
+LINE ``` 30 10 10 30 ```
+
+POLYGON ``` 30 10 40 40 20 40 10 20 30 10 ``` | }
+
+note2: |md
+
+# Notes:
+
+For POINT you need to use the latitude and longitude properties as noted in the diagram.
+
+Schema.org is assumed to be lat/long (ie y,x)
+
+Pairs are to be space separated, so it ends up as a string with out delimiters.
+|
+
+    t2: Text\nsingle WGS-84 value\n example:\n -122.08585 
+}
+
+p -> srep.ad: schema:address
+P -> srep.t0: schema:name
+
+P -> GS: schema:geo
+P -> GC: schema:geo
+
+GS -> srep.t1: schema:box
+GS -> srep.t1: schema:line
+GS -> srep.t1: schema:polygon
+
+GC -> srep.t2: schema:latitude
+GC -> srep.t2: schema:longitude
+
+P -> srep.t2: schema:latitude
+P -> srep.t2: schema:longitude
+
+gsP: geosparql:Point {
+   link: https://github.com/opengeospatial/ogc-geosparql
+}
+
+grep: geoSPARQL represetation {
+gswkt: geosparql:wktLiteral
+
+note1: |md
+
+# WKT Literal examples
+
+```
+POINT (30 10) 
+LINESTRING (30 10, 10 30, 40 40)
+POLYGON ((30 10, 40 40, 20 40, 10 20, 30 10))
+```
+
+Note that WKT is x,y  so long,lat
+|
+
+}
+
+P -> gsP: geosparql:hasGeometry
+gsP -> grep.gswkt: geosparql:asWKT
+
+
+

@@ -1,6 +1,5 @@
 # Graph Operations (graphOps)
 
-
 ## About the OIH Graph
 
 This section houses work related to the OIH Graph. The OIH Graph is a rapidly evolving project, so this section may evolve rapidly as well. If you find things gone that you were looking for, please contact us or raise a GitHub issue. We will get it resolved as soon as possible.

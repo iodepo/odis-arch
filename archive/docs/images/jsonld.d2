@@ -1,0 +1,119 @@
+direction:right
+
+
+jld: datagraph.jsonld {
+
+  context: |json
+  {
+    "@context": "context.jsonld",
+  |
+
+
+body: |json
+{
+  
+    "@id": "https://example.org/id/XYZ",
+    "@type": "Dataset",
+    "name": "Data set name",
+|
+
+
+
+geo: |json
+    "geosparql:hasGeometry": {
+        "@type": "http://www.opengis.net/ont/sf#Point",
+        "geosparql:asWKT": {
+            "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+            "@value": "POINT(-76 -18)"
+        },
+        "geosparql:crs": {
+            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+      }
+|
+
+
+
+end: |json
+}
+|
+
+
+context.width: 700
+body.width: 700
+geo.width: 700
+end.width: 700
+
+}
+
+
+context: context.jsonld {
+
+  context: |json
+  {
+      "@context": {
+  
+  |
+
+  sdo: |json
+ 
+        "@vocab": "https://schema.org/",
+    
+  |
+
+  geo: |json
+ 
+        "geosparql": "http://www.opengis.net/ont/geosparql#" 
+  |
+
+
+  end: |json
+      }, 
+  }
+  |
+
+  context.width: 700
+sdo.width: 700
+geo.width: 700
+end.width: 700
+
+}
+
+
+c: connections {
+
+  note: |md
+  # Notes
+  @id is the subject URI  
+  @type is rdfs:type 
+
+  |
+
+  sdo: |md
+  # Schema.org
+  https://schema.org/name
+
+  |
+
+
+  geo: |md
+  # GeoSPARQL
+  http://www.opengis.net/ont/geosparql#asWKT  
+  http://www.opengis.net/ont/geosparql#crs
+  |
+
+} 
+
+jld.height:750
+context.height:750
+c.height: 650
+
+jld.context -> context.context -> c.note
+jld.body -> context.sdo -> c.sdo
+jld.geo -> context.geo -> c.geo
+
+
+
+
+
+
