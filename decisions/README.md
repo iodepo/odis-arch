@@ -30,6 +30,7 @@ Make ADRs:
 - Assuming that the page supports content negotiation, the @id of the JSON-LD can be the URL of the web page hosting it.  
 - detail how to leverage the sitemap index to point to multiple sitemap and then designate one or more as ones for OIH to index via robots.txt
 - OIH as an aggregator normalizes the node names for reporting and prov
+- When look at goos records, if there is no "value" we don't know, vs 0  This is at the PropertyValue ->  value in records like we have seen in the species property value
 
 Other:
 
