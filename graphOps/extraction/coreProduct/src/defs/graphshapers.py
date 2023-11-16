@@ -5,13 +5,18 @@ warnings.simplefilter(action='ignore', category=FutureWarning)  ## remove pandas
 
 # pop out last element in a quad to make a triple
 def popper(input):
-    lines = input.decode().split('\n')  # Split input into separate lines
-    modified_lines = []
+    # lines = input.decode().split('\n')  # Split input into separate lines  HTTP source
+    # lines = input.split('\n')  # Split input into separate lines
+    if isinstance(input, bytes):
+        lines = input.decode().split('\n')
+    else:
+        lines = input.split('\n')
 
+
+    modified_lines = []
     for line in lines:
         newline = line.replace("http://schema.org", "https://schema.org")
         segments = newline.split(' ')
-
         if len(segments) > 3:
             segments.pop()  # Remove the last two segment
             segments.pop()
@@ -24,12 +29,16 @@ def popper(input):
 
 
 def contextAlignment(input):
-    lines = input.decode().split('\n')  # Split input into separate lines
-    modified_lines = []
+    # lines = input.decode().split('\n')  # Split input into separate lines  HTTP source
+    # lines = input.split('\n')  # Split input into separate lines
+    if isinstance(input, bytes):
+        lines = input.decode().split('\n')
+    else:
+        lines = input.split('\n')
 
+    modified_lines = []
     for line in lines:
         newline = line.replace("http://schema.org", "https://schema.org")
-
         modified_lines.append(newline)
 
     result_string = '\n'.join(modified_lines)
@@ -51,19 +60,19 @@ def publicurls(client, bucket, prefix):
     return urls
 
 
-def to_wkt(polygon_string):
-    # split the input string into pairs
-    pairs = polygon_string.split(',')
-
-    # transform each pair into 'y x' format
-    # transformed_pairs = [' '.join(reversed(pair.split())) for pair in pairs]
-    transformed_pairs = [' '.join(pair.split()) for pair in pairs]
-
-    # join the transformed pairs with a comma and a space
-    transformed_string = ', '.join(transformed_pairs)
-
-    # return the final WKT string
-    return f"POLYGON (({transformed_string}))"
+# def to_wkt(polygon_string):
+#     # split the input string into pairs
+#     pairs = polygon_string.split(',')
+#
+#     # transform each pair into 'y x' format
+#     # transformed_pairs = [' '.join(reversed(pair.split())) for pair in pairs]
+#     transformed_pairs = [' '.join(pair.split()) for pair in pairs]
+#
+#     # join the transformed pairs with a comma and a space
+#     transformed_string = ', '.join(transformed_pairs)
+#
+#     # return the final WKT string
+#     return f"POLYGON (({transformed_string}))"
 
 
 def contains_alpha(s):
