@@ -9,14 +9,20 @@
   "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
   "url": "https://urlToTheDatasetOrLandingPage.org/",
   "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
-  "sameAs": ["https://URLforAnyEquivalentPages.org/"],
+  "sameAs": [
+    "https://URLforAnyEquivalentPages.org/"
+  ],
   "citation": [
     "Citation to other work relevant to this dataset",
     "Citation to other work relevant to this dataset",
     "Citation to other work relevant to this dataset"
   ],
   "version": "2021-04-24T06:34:56.000Z",
-  "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
+  "keywords": [
+    "Keyword 1",
+    "Keyword 2",
+    "Keyword 3"
+  ],
   "encoding": {
     "@type": "MediaObject",
     "encodingFormat": "text/plain",
@@ -25,7 +31,7 @@
   "distribution": {
     "@type": "DataDownload",
     "contentUrl": "http://urlToDirectDownloadOfThisDataset.org/",
-    "encodingFormat": "text/csv"
+    "encodingFormat": "application/octet-stream"
   },
   "potentialAction": {
     "@type": "Action",
@@ -41,7 +47,10 @@
       "@type": "EntryPoint",
       "urlTemplate": "https://us-central1-top-operand-112611.cloudfunctions.net/function-1",
       "httpMethod": "POST",
-      "contentType": ["image/jpeg", "image/png"]
+      "contentType": [
+        "image/jpeg",
+        "image/png"
+      ]
     },
     "object": {
       "@type": "ImageObject",
@@ -115,6 +124,26 @@
       "@type": "PropertyValue",
       "propertyID": "krill.akerbiomarine.com/endTime",
       "value": "2022-02-26 15:01:23.320000"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Name of a variable in the dataset",
+      "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",      
+      "description": "Extended description of this variable"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Name of a variable in the dataset",
+      "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+      "description": "Extended description of this variable?"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "SamplingDeviceApertureSurfaceArea",
+      "url": "http://ontology.org/uriToSemanticDescriptorOfThisVariable",
+      "description": "Extended description of this variable"
     }
   ],
   "about": {
