@@ -17,15 +17,23 @@ p: Source {
 os: Sink (object store) \n Data Lake {
     s: Summoned Data Graphs
     rg: Release Graphs
-    prod: Data Products {
+    prod: Data Products L1 {
         mdp: Master Data Product
         r: Validation reports
     }
+
+l2: Data Products L2 {
+       gpk: OIH GeoPackage
+    }
+
+    prod.mdp -> l2.gpk
 }
 
 ds: Services {
     ts: triplestore
     solr: Solr Search
+    geoapi: GeoAPI \n pygeoapi
+    gql: GraphQL
 }
 
 # Credit Flow
@@ -78,13 +86,18 @@ os.prod.r -> cust.ux.vr: SHACL+SPARQL, OpenRefine
 os.prod.mdp -> cust.ux.d: DuckDB
 ds.solr -> cust.ux.ui: via standard Solr API\n plus schema
 
+os.l2.gpk -> cust.ass.geo
+
+os.l2.gpk -> ds.geoapi
+
+
 # Assessment Flow
 os.rg -> cust.ass.graph: Network Analysis
 os.prod -> cust.ass.graph: Network Analysis \n via \n SPARQL, OpenRefine, DuckDB, Python
 
 # Engagement Flow
 os.prod.mdp -> cust.eng.wis: via mdp2wis2.py
-os.prod.mdp -> cust.eng.wesr: via mdp2wis2.py
+os.prod.mdp -> cust.eng.wesr
 
 
 scenarios: {
