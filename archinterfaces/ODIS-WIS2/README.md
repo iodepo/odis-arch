@@ -2,7 +2,12 @@
 
 ## About
 
-Initial work on aligning OIH holdings to WMO  
+Initial work on aligning OIH holdings to [WMO](https://wmo-im.github.io/wcmp2/standard/wcmp2-DRAFT.html)
+
+## Related GitHub ticket
+
+- https://github.com/iodepo/odis-arch/issues/238 (WMO core metadata profile to ODIS pattern)
+- https://github.com/iodepo/odis-arch/issues/304 (Provide sample mapping/GeoJSON to WMO)
 
 ## Notes and TODOs
 
