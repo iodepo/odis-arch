@@ -17,7 +17,7 @@ execution:
 
 ## About
 
-This section will present an identifer discussion and then focus 
+This section will present an identifier discussion and then focus 
 on approaches publishers can use to provide more source and provenance 
 information.This section is heavily influenced 
 by {cite:ps}`49385` {cite:ps}`googledataset`  and the reader is highly
@@ -45,7 +45,8 @@ and subtypes like Dataset and Map.
 The following example graph shows some of the properties we can use
 to provide source and provenance information about a resource. 
 
-```{literalinclude} ./graphs/creativework.json
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json
 :linenos:
 :emphasize-lines: 8-34
 ```
@@ -62,7 +63,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -74,29 +75,23 @@ jbutils.show_graph(compacted)
 
 ```
 
-
-
 ### identifier
 
 This is the main subject of the start of this section.  Please
 refer there for details on this property.  
 
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [PropertyValue](https://schema.org/PropertyValue)
 * [Text](https://schema.org/Text)
 * [URL](https://schema.org/URL)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [Thing](https://schema.org/Thing)
-+++
-Domain
+
 ````
 
 
@@ -115,7 +110,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -167,17 +162,15 @@ and the descriptive metadata.  That is, the provider actually runs and supports
 the services that presents the resource on the net or otherwise makes the 
 data available. 
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [Organization](https://schema.org/Organization)
 * [Person](https://schema.org/Person)
-+++
-Range
----
+
 
 Used on these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
 * [EducationalOccupationalProgram](https://schema.org/EducationalOccupationalProgram)
 * [Invoice](https://schema.org/Invoice)
@@ -185,8 +178,7 @@ Used on these types
 * [Reservation](https://schema.org/Reservation)
 * [Service](https://schema.org/Service)
 * [Trip](https://schema.org/Trip) 
-+++
-Domain
+
 ````
 
 ```{code-cell}
@@ -204,7 +196,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -237,20 +229,16 @@ The publisher is defined as "The publisher of the creative work".  This is
 viewed as the agent that is primarily responsible for making the content described
 by the structured metadata.  
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [Organization](https://schema.org/Organization)
 * [Person](https://schema.org/Person)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
-+++
-Domain
+
 ````
 
 ```{code-cell}
@@ -268,7 +256,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -309,19 +297,14 @@ as the canonical URL resource.
 The sameAs property should always point to only one resource.  It is not 
 logically consistent to point to multiple sameAs resources.
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [URL](https://schema.org/URL)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [Thing](https://schema.org/Thing)
-+++
-Domain
 ````
 
 ```{code-cell}
@@ -339,7 +322,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -375,21 +358,17 @@ resources is based on.
 The isBasedOn property can be used to link to multiple resources if more 
 than one was used in the generation of this new resource.  
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
 * [Product](https://schema.org/Product)
 * [URL](https://schema.org/URL)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
-+++
-Domain
+
 ````
 
 
@@ -403,20 +382,16 @@ the described resource, although not necessarily a part of it. The subjectOf
 property can be used in an educational framework to indicate the field(s) of
 science or literature the dataset relates to.
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
 * [Event](https://schema.org/Event)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [Thing](https://schema.org/Thing)
-+++
-Domain
+
 ````
 
 The subjectOf property has an inverse-property [about](https://schema.org/about).
@@ -424,21 +399,17 @@ The property about can be used to:
 
 > indicate the subject matter this thing is about
 
-````{panels}
+````{card}
 Values expected to be one of these types
-^^^
+
 * [Thing](https://schema.org/Thing)
-+++
-Range
----
 
 Used on these types
-^^^
+
 * [CreativeWork](https://schema.org/CreativeWork)
 * [Event](https://schema.org/Event)
 * [CommunicateAction](https://schema.org/CommunicateAction)
-+++
-Domain
+
 ````
 
 
@@ -457,7 +428,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("./graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -482,10 +453,4 @@ jbutils.show_graph(framed)
 
 ```
 
-
-## References
-
-```{bibliography}
-:style: unsrt
-```
 

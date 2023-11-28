@@ -1,0 +1,140 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "HOT: Niskin bottle samples",
+  "description": "Monthly measurements of the thermohaline structure, water column chemistry, and primary production were collected at station ALOHA as part of the HOT program.",
+  "url": "https://www.bco-dmo.org/dataset/3773",
+  "sameAs": "https://hahana.soest.hawaii.edu/hot/",
+  "version": "2021-04-19",
+  "keywords": ["ALOHA", "HOT", "Niskin Bottles", "Biogeochemistry"],
+  "isAccessibleForFree": true,
+  "datePublished": "2021-04-19",
+  "identifier": {
+    "@id": "https://doi.org/10.1575/1912/bco-dmo.3773.1",
+    "@type": "PropertyValue",
+    "name": "DOI: 10.1575/1912/bco-dmo.3773.1",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "doi:10.1575/1912/bco-dmo.3773.1",
+    "url": "https://doi.org/10.1575/1912/bco-dmo.3773.1"
+  },
+  "about": 
+  {
+    "@type":"Event",
+    "name": "HOT ALOHA Niskin Bottles",
+    "description": "Monthly measurements of the thermohaline structure, water column chemistry, and primary production were collected at station ALOHA as part of the HOT program.",
+    "startDate": "1988-10-31T00:56:00Z",
+    "endDate": "2019-12-20T08:51:00Z"
+  },
+  "citation": "Karl, D. (2018) Niskin bottle water samples and CTD measurements from the Hawaii Ocean Time-Series cruises from 1988-2016 (HOT project)",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "http://dmoserv3.bco-dmo.org/jg/serv/BCO-DMO/HOT/niskin_v2.html0",
+    "encodingFormat": "application/x-matlab-data"
+  },
+  "temporalCoverage": "1988-10-30/2019-12-20",
+  "location": {
+		"name": "HOT: Stations offshore of Hawaii",
+        "@type": "Place",
+		"description": "North Pacific subtropical gyre",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "23.4375,-158.8575 21.2283,-158.8575 21.2283,-157.4567 23.4375,-157.4567 23.4375,-158.8575"
+        },
+		"additionalProperty":[ {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        },
+       {
+            "@type": "PropertyValue",
+            "propertyID": "GPS Accuracy / Location error",
+            "value": "18",
+			"unitCode": "http://qudt.org/vocab/unit/M"
+        }
+          ]
+    },
+  "creator": [
+    {
+      "@id": "https://www.bco-dmo.org/person/51091",
+      "@type": "Role",
+      "roleName": "Principal Investigator",
+      "creator": {
+        "@id": "https://www.bco-dmo.org/person/51091",
+        "@type": "Person",
+        "name": "Dr Angelique White",
+        "givenName": "Angelique",
+        "familyName": "White",
+        "url": "https://www.bco-dmo.org/person/51091"
+      }
+    },
+    {
+      "@id": "https://www.bco-dmo.org/person/51683",
+      "@type": "Role",
+      "roleName": "Data Manager",
+      "creator": {
+        "@id": "https://www.bco-dmo.org/person/51683",
+        "@type": "Person",
+        "name": "Dr Lance Fujieki",
+        "givenName": "Lance",
+        "familyName": "Fujieki",
+        "url": "https://www.bco-dmo.org/person/51683"
+      }
+    }
+  ],
+  "provider": {
+    "@id": "https://www.bco-dmo.org/",
+    "@type": "Organization",
+    "legalName": "Biological & Chemical Oceanography Data Management Office",
+    "name": "BCO-DMO",
+    "url": "https://www.bco-dmo.org/"
+  },
+  "publisher": {
+    "@id": "https://www.bco-dmo.org/"
+  },
+  "funding": [
+    {
+      "@id": "http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0926766 ",
+      "@type": "MonetaryGrant",
+      "identifier": "OCE-0926766",
+      "name": "Collaborative Research: Nutritional Landscapes of Arctic Caribou: Observations, Experiments, and Models Provide Process-Level Understanding of Forage Traits and Trajectories",
+      "url": "http://www.nsf.gov/awardsearch/showAward.do?AwardNumber=0926766",
+      "funder": {
+        "@id": "http://dx.doi.org/10.13039/100000141",
+        "@type": "Organization",
+        "name": "National Science Foundation",
+        "identifier": [
+          "http://dx.doi.org/10.13039/100000141"
+        ]
+      }
+    }
+  ],
+  "license": "https://spdx.org/licenses/CC-BY-3.0",
+  "prov:wasRevisionOf": { "@id": "10.1575/1912/bco-dmo.3773.1"},
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Latitude",
+      "propertyID":"https://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01/",
+      "url": "https://www.bco-dmo.org/dataset-parameter/849759",
+      "description": "Latitude where water samples were collected; north is positive. Latitude is a geographic coordinate which refers to the angle from a point on the Earth's surface to the equatorial plane",
+      "unitText": "decimal degrees"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "NO2_NO3",
+      "propertyID":"http://vocab.nerc.ac.uk/collection/P01/current/MDMAP006/",
+      "url": "https://www.bco-dmo.org/dataset-parameter/849779",
+      "description": "Nitrate + nitrite concentration per mass seawater",
+      "unitText": "micromole per kilogram (umol/kg)"      
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "QUALT8",
+      "propertyID":"https://exchange-format.readthedocs.io/en/latest/quality.html#quality-codes",
+      "url": "https://www.bco-dmo.org/dataset-parameter/849842",
+      "description": "Nitrate + nitrite quality flag; based on a PI established code; identifies a problem/quality issue with sample(s) from a given water bottle or single observation",
+      "unitText": "WOCE",
+      "instrument": "2-sigma criteria"
+    }
+  ]
+}

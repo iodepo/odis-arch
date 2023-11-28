@@ -1,0 +1,97 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "SoftwareApplication",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "A concise but descriptive name of the dataset",
+    "description": "An extended, free-text description of what's in the dataset, who created it, and other attributes",
+    "url": "https://urlToTheDatasetOrLandingPage.org/",
+    "sameAs": [
+        "http://alternativeUrlToTheDatasetOrLandingPage.org"
+    ],
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": [
+        "Citation to other work relevant to this software",
+        "Citation to other work relevant to this software",
+        "Citation to other work relevant to this software"
+    ],
+    "version": "v19.2.3",
+    "keywords": [
+        "Keyword 1",
+        "Keyword 2",
+        "Keyword 3"
+    ],
+	"applicationCategory": "",
+	"applicationSubCategory": "",
+	"applicationSuite": "",
+	"availableOnDevice": "",
+	"countriesNotSupported": "",
+	"countriesSupported": "",
+	"downloadUrl": "",
+	"featureList": [
+		"feature 1",
+		"feature 2",
+		"feature 3"
+	],
+	"fileSize": "",
+	"installUrl": "",
+	"memoryRequirements": "",
+	"operatingSystem": "",
+	"permissions": "",
+	"processorRequirements": "",
+	"releaseNotes": "",
+	"screenshot": "",
+	"softwareAddOn": "",
+	"softwareHelp": "",
+	"softwareRequirements": "",
+	"softwareVersion": "",
+	"storageRequirements": "",
+	"supportingData": [
+		{
+			"@type": "DataFeed",
+			"dataFeedElement": "",
+			"item": "",
+			"dateCreated": "",
+			"dateDeleted": "",
+			"dateModified": "",
+			"description": ""
+		},
+		{
+			"@type": "Dataset",
+			"url": "",
+			"distribution": "",
+			"name": "",
+			"description": ""	
+			
+			
+		},
+		{
+			"@type": "DataCatalog",
+			"url": "",
+			"name": "",
+			"description": ""
+		}	
+	],
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "10.161667,142.014 18.033833,142.014 18.033833,147.997833 10.161667,147.997833 10.161667,142.014"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@id": "https://registryOfOrganisations.org/identifierOfOrganisation",
+            "@type": "Organization",
+            "legalName": "Legal Name of Organisation which generated the dataset",
+            "name": "Other Name of Organisation which generated the dataset",
+            "url": "https://organisationWebsite.org/"
+        }
+    ]
+}

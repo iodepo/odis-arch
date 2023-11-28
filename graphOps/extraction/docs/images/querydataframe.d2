@@ -1,0 +1,38 @@
+direction:right
+
+ocat: Ocean Catalog
+s: Partner Sources
+s3: Object Store {
+os: JSON-LD Collection
+rg: ODIS Release Graphs \n ttl, nq, rdf
+
+}
+dash: ODIS DashBoard
+
+sbr: ODIS Graph Products \n Validated and normalized  \nParquet, CSV
+
+ocat -> s
+
+s -> s3.os -> s3.rg
+
+s3.rg -> sbr: ETL via Mercury \n SPARQL and dataframe operations
+
+wis: WMO WIS 2 \n GeoJSON
+gg: Gloabl Grid GIS \n h3 s2
+v: Similarity Search \n Vectors and Embeddings
+solr: OIH Search \n Solr Core
+gml: Graph Network \n Visualization
+wesr: WESR \n DCAT RDF
+geo: Geo Products \n GeoParquet, GeoPackage, etc
+
+sbr -> wis
+sbr -> gg
+sbr -> v
+sbr -> solr
+sbr -> gml
+sbr -> wesr
+sbr -> geo
+
+s3.rg -> dash: SHACL results
+sbr -> dash: SQL queries
+s3.rg -> zenodo

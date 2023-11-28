@@ -1,0 +1,96 @@
+{
+	"@context": {
+		"@vocab": "https://schema.org/"
+	},
+	"@type": "SoftwareApplication",
+	"@id": "https://registry.org/permanentUrlToThisJsonDoc",
+	"name": "WIO Symphony",
+	"description": "WIO Symphony is a web tool that supports marine spatial planning in the Western Indian Ocean by assessing environmental impact from human activities. A login is currently needed to use the web-based tool. We develop the tool together with the Nairobi Convention, its ten member states and a Swedish team",
+	"url": [
+		"https://symphony.nairobiconvention.org/",
+		"https://www.nairobiconvention.org/wio-symphony/",
+		"https://www.havochvatten.se/wio-symphony",
+		"https://github.com/WIOSymphony/wiosym"
+	],
+	"license": [
+		"https://spdx.org/licenses/Apache-2.0.html",
+		"https://github.com/havochvatten/MSP-Symphony/blob/develop/LICENSE"
+	],
+	"citation": [
+		"[PENDING] Guide document - how to use the tool",
+		"[PENDING] Journal article 1",
+		"[PENDING] Journal article 2",
+		"https://github.com/WIOSymphony/WIOSym_InfoChannel/wiki/5.-User-manual"
+	],
+	"version": "v1.0",
+	"keywords": [
+		"Western Indian Ocean",
+		"cumulative impact assessment",
+		"ecosystem components",
+		"pressures",
+		"marine spatial planning",
+		"environmental impact",
+		"anthropogenic impact"
+	],
+	"applicationCategory": "ecosystem-based marine spatial planning",
+	"applicationSubCategory": "environmental impact assessment tool",
+	"downloadUrl": "https://github.com/havochvatten/MSP-Symphony",
+	"featureList": [
+		"scenario analysis of changes in anthropogenic pressures",
+		"measurment of cumulative environmental impacts",
+		"mapping of ecosystem components",
+		"mapping of anthropogenic pressures",
+		"automated report generation of human impact on marine ecosystems",
+		"rarity-weighted cumulative impact assessment"
+	],
+	"fileSize": "22MB",
+	"installUrl": "https://github.com/havochvatten/MSP-Symphony",
+	"memoryRequirements": "TODO: Ask Ann",
+	"operatingSystem": [
+		"Windows 7",
+		"Linux server (TODO:ask for details)"
+	],
+	"permissions": "Administrator",
+	"processorRequirements": "TODO: Ask Ann",
+	"releaseNotes": [
+		"https://github.com/havochvatten/MSP-Symphony/tags",
+		"https://github.com/WIOSymphony/WIOSym_InfoChannel/wiki"
+	],
+	"screenshot": "https://www.havochvatten.se/images/18.54631f4185b62ea1fc1ae59/1673941035071/wio-ecosystem-components.png",
+	"softwareHelp": [
+		"wiosym@nairobiconvention.org",
+		"https://github.com/havochvatten/MSP-Symphony/issues"
+	],
+	"softwareRequirements": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).",
+	"softwareVersion": "v1.9.0",
+	"storageRequirements": "TODO: Ask Ann",
+	"supportingData": [
+		"TODO: Mode of data distribution is not yet decided. To be updated."
+	],
+	"spatialCoverage": {
+		"@type": "Place",
+		"geo": {
+			"@type": "GeoShape",
+			"polygon": "15.9999999866134,39.0 15.9999999866134,78.0 -39.9999999931616,78.0 -40.0,8.0 -6.0,8.0 15.9999999866134,39.0"
+		},
+		"additionalProperty": {
+			"@type": "PropertyValue",
+			"propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+			"value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+		}
+	},
+	"provider": [
+		{
+			"@type": "Organization",
+			"legalName": "Nairobi Convention",
+			"name": "NC",
+			"url": "https://www.nairobiconvention.org/"
+		},
+		{
+			"@type": "Organization",
+			"legalName": "Swedish Agency for Marine and Water Management",
+			"name": "SWaM",
+			"url": "https://www.havochvatten.se/"
+		}
+	]
+}

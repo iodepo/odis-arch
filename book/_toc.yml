@@ -9,28 +9,33 @@ parts:
       title: "Personas"
     - file: publishing/publishing
       title: "Publisher"
-    - file: foundation/foundation.md  
+    - file: foundation/foundation.md
+  - caption: Getting Started
+    numbered: False
+    chapters:
+      - file: gettingStarted.md
+        title: "Connecting to the OIH Network"
   - caption: Profiles
     numbered: False
     chapters:
-    - file: thematics/README.md
-    - file: thematics/expinst/README.md
+    - file: thematics/index.md
+    - file: thematics/expinst/index.md
       title: "Core 1: Experts and Institutions"
-    - file: thematics/docs/README.md
+    - file: thematics/docs/index.md
       title: "Core 2a: Documents"
     - file: thematics/dataset/index.md
       title: "Core 2b: Datasets"
     - file: thematics/docs/maps.md 
       title: "Core 3: Spatial Maps"
-    - file: thematics/projects/README.md
+    - file: thematics/projects/index.md
       title: "Core 4: Projects"
-    - file: thematics/training/README.md
+    - file: thematics/training/index.md
       title: "Core 5: Training"
-    - file: thematics/vessels/README.md
+    - file: thematics/vessels/index.md
       title: "Core 6: Vessels"
-    - file: thematics/spatial/README.md
+    - file: thematics/spatial/index.md
       title: "Support 1: Spatial Geometry"
-    - file: thematics/services/README.md
+    - file: thematics/services/index.md
       title: "Support 2: Services"
     - file: thematics/terms/list
       title: "Support 3: Keywords & Defined Terms"
@@ -42,19 +47,18 @@ parts:
       title: "Support 6: Identifier"
     - file: thematics/variables/index.md
       title: "Support 7: EOVs"
-    - file: thematics/license/README.md
+    - file: thematics/license/index.md
       title: "Support 8: Licenses"
   - caption: "Aggregation"
     numbered: False
     chapters:
     - file: indexing/index.md
     - file: indexing/qstart.md
-    - file: indexing/cliDocker/README.md
+    - file: indexing/cliDocker/index.md
     - file: indexing/indexingservices.md
     - file: indexing/dataservices.md
-    - file: indexing/user.md
     - file: indexing/graphpub
-    - file: indexing/prov/README.md
+    - file: indexing/prov/index.md
       title: Indexing Activity Prov
     - file: indexing/alternatives.md
   - caption: "Tooling"
@@ -64,7 +68,7 @@ parts:
   - caption: "Validation"
     numbered: False
     chapters:
-    - file: validation/README
+    - file: validation/index
   - caption: "Interfaces"
     numbered: False
     chapters:
