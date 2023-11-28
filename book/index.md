@@ -10,7 +10,7 @@ The following video provide brief high level context to the Ocean InfoHub projec
 
 [![Ocean Infohub YouTube video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
 
-[Broucher](./assets/IOC_OceanInfoHub_Proposal__summary.pdf)
+<a href="./assets/IOC_OceanInfoHub_Proposal__summary.pdf">Broucher</a>
 
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
@@ -59,7 +59,7 @@ across groups.
 Interested groups can review material addressing these stages at the OIH GitHub
 repository.  Links and descriptions of these stages are described below.  
 
-### [Authoring Thematic Patterns](./thematics/README.md)
+### [Authoring Thematic Patterns](./thematics/index.md)
 
 The ODIS OIH is working across five major thematic areas; Experts and
 Institutions, Documents, Projects, Training, Vessels.   Examples of these
@@ -81,7 +81,7 @@ organizations will be able to leverage the authoring and publishing approaches
 above to index a providers resources.  OIH will be providing reference
 implementations of software that can generate the index.
 
-### [Interfaces and Services](./users/referenceclient.md)
+### [Interfaces and Services](./users/index.md)
 
 During the development of the OIH a basic reference implementation for an
 interface has been generated.  This is a development site meant to test and

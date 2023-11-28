@@ -1,0 +1,83 @@
+format: jb-book
+root: index
+parts:
+  - caption: Introduction
+    numbered: False
+    chapters:
+    - file: content
+    - file: personas/persona.md
+      title: "Personas"
+    - file: publishing/publishing
+      title: "Publisher"
+    - file: foundation/foundation.md  
+  - caption: Profiles
+    numbered: False
+    chapters:
+    - file: thematics/README.md
+    - file: thematics/expinst/README.md
+      title: "Core 1: Experts and Institutions"
+    - file: thematics/docs/README.md
+      title: "Core 2a: Documents"
+    - file: thematics/dataset/index.md
+      title: "Core 2b: Datasets"
+    - file: thematics/docs/maps.md 
+      title: "Core 3: Spatial Maps"
+    - file: thematics/projects/README.md
+      title: "Core 4: Projects"
+    - file: thematics/training/README.md
+      title: "Core 5: Training"
+    - file: thematics/vessels/README.md
+      title: "Core 6: Vessels"
+    - file: thematics/spatial/README.md
+      title: "Support 1: Spatial Geometry"
+    - file: thematics/services/README.md
+      title: "Support 2: Services"
+    - file: thematics/terms/list
+      title: "Support 3: Keywords & Defined Terms"
+    - file: thematics/languages/languages
+      title: "Support 4: Languages"
+    - file: thematics/sdg/index.md
+      title: "Support 5: Linking To Principles"
+    - file: thematics/identifier/id.md
+      title: "Support 6: Identifier"
+    - file: thematics/variables/index.md
+      title: "Support 7: EOVs"
+    - file: thematics/license/README.md
+      title: "Support 8: Licenses"
+  - caption: "Aggregation"
+    numbered: False
+    chapters:
+    - file: indexing/index.md
+    - file: indexing/qstart.md
+    - file: indexing/cliDocker/README.md
+    - file: indexing/indexingservices.md
+    - file: indexing/dataservices.md
+    - file: indexing/user.md
+    - file: indexing/graphpub
+    - file: indexing/prov/README.md
+      title: Indexing Activity Prov
+    - file: indexing/alternatives.md
+  - caption: "Tooling"
+    numbered: False
+    chapters:
+    - file: tooling/index
+  - caption: "Validation"
+    numbered: False
+    chapters:
+    - file: validation/README
+  - caption: "Interfaces"
+    numbered: False
+    chapters:
+    - file: users/index.md
+    - file: users/query.ipynb
+    - file: users/sparql.md
+    - file: users/apis.md
+  - caption: "Appendix"
+    numbered: False
+    chapters:   
+    - file: appendix/index
+      sections: 
+      - file: appendix/annoyances
+      - file: appendix/references
+      - file: appendix/registries
+      - file: appendix/vocabularies

@@ -1,0 +1,77 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Event",
+    "@id": "https://pidOfThisJsonLDdoc.org/",
+    "name": "The event name",
+    "EventStatus": "EventScheduled",
+	"description": "Enter an informative description of your event here",
+    "url": "https://yourTimeSeriesWebsite.org/",
+    "about": "Enter text describing what this event is about (e.g. dolphin sightings, microbial sampling, or harmful algal blooms.",
+	"keywords": ["keyword 1","keyword 2","keyword 3","keyword 4"],
+	"startDate": "2037-03-01T13:00:00Z",
+	"endDate": "2037-05-11T15:30:00Z",
+	"location": {
+		"name": "The name of the place(s) the event is intended to take place in",
+        "@type": "Place",
+		"description": "Enter the geospatial region which encapsulates the intended range of activities in this planned event, see https://book.oceaninfohub.org/thematics/spatial/README.html",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "10.161667,142.014 18.033833,142.014 18.033833,147.997833 10.161667,147.997833 10.161667,142.014"
+        },
+		"additionalProperty":[ {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GPS Accuracy / Location error",
+            "value": "18",
+			"unitCode": "http://qudt.org/vocab/unit/M"
+        }]
+    },
+	"funder": "Funder's Official / Legal Name",
+	"funding": "Official name of grant / funding mechanism",
+    "organizer": "Official name or URL/DOI/URI of the coordinating organization or individual",
+	"subjectOf": [
+		"https://dataPortalAboutThisPlannedEvent.org/",
+		"ISBN:978-3-16-148410-0"
+	],
+	"superevent": ["url to any Events that encapsulate this one"],
+    "citation": [
+		"Enter a DOI for any literature or published work relevant to this time series",
+		"Enter a DOI for any literature or published work relevant to this time series",
+		"Enter a DOI for any literature or published work relevant to this time series"
+	],
+    "contributor": [
+		"A person or organization who contributed to this event series",
+		"A person or organization who contributed to this event series",
+		"A person or organization who contributed to this event series"
+	],
+    "subevent": [{
+        "@type": "Event",
+        "description": "describe the activity.",
+        "name": "Name of any sub-Events encapsulated by this one",
+        "potentialAction": [
+			{
+            "@type": "Action",
+            "name": "March 2037 sample"
+            },
+			{
+             "@type": "Action",
+             "name": "February 2037 sample"
+			}
+        ]
+    }],
+    "provider": [
+        {
+            "@id": "https://oceanexpert.org/institution/INSTITUTE_ID",
+            "@type": "Organization",
+            "legalName": "Example University",
+            "name": "Example University",
+            "url": "https://oceanexpert.org/institution/INSTITUTE_ID"
+        }
+    ]
+}

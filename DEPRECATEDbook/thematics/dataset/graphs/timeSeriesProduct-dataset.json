@@ -1,0 +1,168 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Time-Series Data Synthesis Product",
+  "description": "Synthesis of (presently 12) ship-based biogeochemical time-series stations.",
+  "url": "",
+  "sameAs": "https://www2.whoi.edu/site/mets-rcn/",
+  "version": "2021-04-19",
+  "keywords": ["ALOHA", "CARIACO","KNOT","K2","CVOO","Munida","RADCO","GIFT","DYFAMED","IrmingerSea","IcelandSea","OWSM", "Niskin Bottles", "Biogeochemistry"],
+  "isBasedOn": {
+    "@type": "CreativeWork",
+    "name": "Derivative Work",
+    "publisher": "wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Derivative_work",
+    "identifier": {
+      "@id": "https://doi.org/10.1575/1912/bco-dmo.3773.1",
+      "@type": "PropertyValue",
+      "name": "DOI: 10.1575/1912/bco-dmo.3773.1",
+      "propertyID": "https://registry.identifiers.org/registry/doi",
+      "value": "doi:10.1575/1912/bco-dmo.3773.1",
+      "url": "https://doi.org/10.1575/1912/bco-dmo.3773.1"
+    }
+  },
+  "about": 
+  [{
+      "@type":"Event",
+      "name": "HOT ALOHA Niskin Bottles",
+      "description": "Monthly measurements of the thermohaline structure, water column chemistry, and primary production were collected at station ALOHA as part of the HOT program.",
+      "startDate": "1988-10-31T00:56:00Z",
+      "endDate": "2019-12-20T08:51:00Z"
+  
+  },
+  {"@type":"Event",
+    "name": "CARIACO Niskin Bottles",
+    "description": "################ measurements of the thermohaline structure, water column chemistry, and primary production were collected at station ALOHA as part of the HOT program.",
+    "startDate": "#####",
+    "endDate": "#####"}],
+  "isAccessibleForFree": true,
+  "datePublished": "",
+  "identifier": {
+    "@id": "",
+    "@type": "PropertyValue",
+    "name": "DOI:",
+    "propertyID": "https://registry.identifiers.org/registry/doi",
+    "value": "",
+    "url": "https://doi.org/"
+  },
+  "citation": "Lange et al. (2023): A ship-based biogeochemical time-series data product",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "",
+    "encodingFormat": ""
+  },
+  "temporalCoverage": "1983-01-01/2021-12-31",
+  "location": {
+		"name": "Station locations worldwide",
+        "@type": "Place",
+		"description": "Gloabl",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "-90,-180 90,-180 90,180 -90,180 -90,-180"
+        },
+		"additionalProperty":[ {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        },
+       {
+            "@type": "PropertyValue",
+            "propertyID": "GPS Accuracy / Location error",
+            "value": "18",
+			"unitCode": "http://qudt.org/vocab/unit/M"
+        }
+          ]
+    },
+  "creator": [
+    {
+      "@id": "",
+      "@type": "Role",
+      "roleName": "Contact",
+      "creator": {
+        "@id": "",
+        "@type": "Person",
+        "name": "Nico Lange",
+        "givenName": "Nico",
+        "familyName": "Lange",
+        "url": ""
+      }
+    }
+  ],
+  "provider": {
+    "@id": "https://www.bco-dmo.org/",
+    "@type": "Organization",
+    "legalName": "Biological & Chemical Oceanography Data Management Office",
+    "name": "BCO-DMO",
+    "url": "https://www.bco-dmo.org/"
+  },
+  "publisher": {
+    "@id": "https://www.bco-dmo.org/"
+  },
+  "funding": [
+    {
+      "@id": "http://dx.doi.org/10.3030/862626",
+      "@type": "MonetaryGrant",
+      "identifier": "862626",
+      "name": "EuroSea Project",
+      "url": "https://cordis.europa.eu/project/id/862626",
+      "funder": {
+        "@id": "https://cordis.europa.eu/programme/id/H2020-EU.3.2.",
+        "@type": "Organization",
+        "name": "H2020-EU.3.2. - SOCIETAL CHALLENGES - Food security, sustainable agriculture and forestry, marine, maritime and inland water research, and the bioeconomy ",
+        "identifier": [
+          "https://cordis.europa.eu/programme/id/H2020-EU.3.2."
+        ]
+      }
+    }
+  ],
+  "license": "https://spdx.org/licenses/CC-BY-3.0",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Latitude",
+      "propertyID":"https://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01/",
+      "url": "https://www.bco-dmo.org/dataset-parameter/849759",
+      "description": "Latitude where water samples were collected; north is positive. Latitude is a geographic coordinate which refers to the angle from a point on the Earth's surface to the equatorial plane",
+      "unitText": "decimal degrees"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "NITRAT",
+      "propertyID":"http://vocab.nerc.ac.uk/collection/P01/current/MDMAP005/",
+      "url": "https://www.bco-dmo.org/parameter/1194",
+      "description": "Nitrate concentration per mass seawater",
+      "unitText": "micromole per kilogram (umol/kg)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "NITRAT_FLAG_W",
+      "propertyID":"https://exchange-format.readthedocs.io/en/latest/quality.html#quality-codes",
+      "url": "https://www.bco-dmo.org/parameter/1144",
+      "description": "Nitrate quality flag; based on a PI established code; identifies a problem/quality issue with sample(s) from a given water bottle or single observation",
+      "unitText": "WOCE"
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "NITRAT_BPf",
+        "propertyID":"",
+        "url": "",
+        "description": "Nitrate Best-Practice Flag: Indicates the extent to which Best-Practices have been followed (Lange et al. 2023)"
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "NITRAT_A",
+        "propertyID":"",
+        "url": "",
+        "description": "Nitrate accuracy based on comparisons to reference material",
+        "unitText": "micromole per kilogram (umol/kg)"
+    },
+    {
+        "@type": "PropertyValue",
+        "name": "NITRAT_P",
+        "propertyID":"",
+        "url": "",
+        "description": "Nitrate precision based on comparisons to reference material",
+        "unitText": "micromole per kilogram (umol/kg)"
+    }
+  ]
+}

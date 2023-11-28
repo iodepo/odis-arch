@@ -1,0 +1,166 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "EventSeries",
+    "@id": "https://pidOfThisJsonLDdoc.org/",
+    "name": "HOT ALOHA Niskin Bottles",
+    "description": "Monthly measurements of the thermohaline structure, water column chemistry, and primary production were collected at station ALOHA as part of the HOT program.The objective of this research is to provide a comprehensive description of the ocean at a site representative of the North Pacific subtropical gyre. Cruises are made approximately once per month to the deep-water Station ALOHA located 100 km north of Oahu, Hawaii. Measurements of the thermohaline structure, water column chemistry, currents, optical properties, primary production, plankton community structure, and rates of particle export are made on each cruise.",
+    "url": "",
+    "keywords": [
+        "ALOHA",
+        "HOT",
+        "hydrography",
+        "biogeochemical",
+        "Niskin"
+    ],
+    "startDate": "1988-10-31T00:56:00Z",
+    "endDate": "2019-12-20T08:51:00Z",
+    "location": {
+        "name": "Station ALOHA offshore of Hawaii",
+        "@type": "Place",
+        "description": "North Pacific subtropical gyre",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "22.90,-158.13 22.70,-158.13 22.70,-157.90 22.90,-157.90 22.90,-158.13"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+            },
+            {
+                "@type": "PropertyValue",
+                "propertyID": "GPS Accuracy / Location error",
+                "value": "18",
+                "unitCode": "http://qudt.org/vocab/unit/M"
+            }
+        ]
+    },
+    "funder": "National Science Foundation (NSF)",
+    "funding": "1756517",
+    "subjectOf": [
+        {
+            "@type": "Dataset",
+            "url": "https://www.bco-dmo.org/dataset/3773",
+            "identifier": "DOI:10.1575/1912/bco-dmo.3773.1",
+            "description": "Karl, D. (2018) Niskin bottle water samples and CTD measurements from the Hawaii Ocean Time-Series cruises from 1988-2016 (HOT project). Biological and Chemical Oceanography Data Management Office (BCO-DMO). (Version 1) Version Date 2018-04-18 [if applicable, indicate subset used]. doi:10.1575/1912/bco-dmo.3773.1",
+            "provider": [
+                {
+                    "@id": "https://oceanexpert.org/institution/8691",
+                    "@type": "Organization",
+                    "legalName": "University of Hawaii at Manoa, Department of Oceanography",
+                    "name": "University of Hawaii at Manoa, Department of Oceanography",
+                    "url": "https://www.soest.hawaii.edu/"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-0938-7948",
+                    "@type": "Person",
+                    "legalName": "Angelique White",
+                    "name": "Angelique White"
+                },
+                {
+                    "@id": "https://oceanexpert.org/institution/9783",
+                    "@type": "Organization",
+                    "legalName": "Woods Hole Oceanographic Institution",
+                    "name": "BCO-DMO",
+                    "url": "https://www.bco-dmo.org/"
+                },
+                {
+                    "@type": "Person",
+                    "legalName": "Nico Lange",
+                    "name": "Nico Lange"
+                }
+            ]
+        }
+    ],
+    "citation": [
+        "https://hahana.soest.hawaii.edu/hot/"
+    ],
+    "contributor": [
+        "Angelique White",
+        "David M. Karl",
+        "Lance A Fujieki ",
+        "Dana Stuart Gerlach"
+    ],
+    "potentialAction": [{
+        "@type": "Action",
+        "name": "Detmerination of nitrite and nitrate",
+        "actionStatus": "CompletedActionStatus",
+        "instrument": "Technicon Autoanalyzer II",
+        "object":"Certified reference material (CRM)",
+        "result":[
+            "nitrite and nitrite concentrations per seawtar mass",
+            "Column title NO3_NO2 in https://www.bco-dmo.org/dataset/3773"
+        ]
+    }],    
+    "subevent": [
+        {
+            "@type": "Event",
+            "name": "HOT_001",
+            "description": "Hydrographic measurements at ALOHA station",
+            "instrument": "R/V MOANA WAVE",
+            "startDate": "1988-10-31T00:56:00Z",
+            "endDate": "1988-11-02T08:57:00Z",
+            "location": {
+                "name": "ALOHA",
+                "@type": "Place",
+                "geo": {
+                    "@type": "GeoShape",
+                    "polygon": "22.77,-158.00 22.73,-158.00 22.73,-157.90 22.77,-157.90 22.77,-158.00"
+                },
+                "additionalProperty": [
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+                    },
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "GPS Accuracy / Location error",
+                        "value": "18",
+                        "unitCode": "http://qudt.org/vocab/unit/M"
+                    }
+                ]
+            },
+            "organizer": [
+                "R. Lukas",
+                "D. Karl"
+            ],
+            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf"
+        },
+        {
+            "@type": "Event",
+            "name": "HOT_002",
+            "instrument": "R/V MOANA WAVE",
+            "startDate": "1988-12-01T22:19:00Z",
+            "endDate": "1988-12-04T16:44:00Z",
+            "location": {
+                "name": "ALOHA",
+                "@type": "Place",
+                "geo": {
+                    "@type": "GeoShape",
+                    "polygon": "22.90,-158.13 22.75,-158.12 22.75,-157.92 22.90,-157.92 22.90,-158.12"
+                },
+                "additionalProperty": [
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+                        "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+                    },
+                    {
+                        "@type": "PropertyValue",
+                        "propertyID": "GPS Accuracy / Location error",
+                        "value": "18",
+                        "unitCode": "http://qudt.org/vocab/unit/M"
+                    }
+                ]
+            },
+            "organizer": [
+                "E. Firing"
+            ],
+            "citation": "https://hahana.soest.hawaii.edu/hot/reports/rep_y1.pdf"
+        }
+    ]
+}

@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Publisher &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JSON-LD Foundation" href="../foundation/foundation.html" />
+    <link rel="prev" title="Personas" href="../personas/persona.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Ocean InfoHub Project and the development of the ODIS-architecture</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    The Ocean InfoHub Project
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content.html">
+   Structured Data on the Web
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../personas/persona.html">
+   Personas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Publisher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../foundation/foundation.html">
+   JSON-LD Foundation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Profiles
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/README.html">
+   Thematic Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/expinst/README.html">
+   Core 1: Experts and Institutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/docs/README.html">
+   Core 2a: Documents
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/dataset/index.html">
+   Core 2b: Datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/docs/maps.html">
+   Core 3: Spatial Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/projects/README.html">
+   Core 4: Projects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/training/README.html">
+   Core 5: Training
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/vessels/README.html">
+   Core 6: Vessels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/spatial/README.html">
+   Support 1: Spatial Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/services/README.html">
+   Support 2: Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/terms/list.html">
+   Support 3: Keywords &amp; Defined Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/languages/languages.html">
+   Support 4: Languages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/sdg/index.html">
+   Support 5: Linking To Principles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/identifier/id.html">
+   Support 6: Identifier
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/variables/index.html">
+   Support 7: EOVs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thematics/license/README.html">
+   Support 8: Licenses
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Aggregation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/index.html">
+   Aggregator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/qstart.html">
+   Indexing with Gleaner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/cliDocker/README.html">
+   Gleaner CLI Docker
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/indexingservices.html">
+   Indexing Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/dataservices.html">
+   Data Services
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/user.html">
+   Interfaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/graphpub.html">
+   Graph First Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/prov/README.html">
+   Indexing Activity Prov
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../indexing/alternatives.html">
+   Alternatives
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tooling
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tooling/index.html">
+   Tooling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Validation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../validation/README.html">
+   Validation
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Interfaces
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/index.html">
+   Users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/query.html">
+   SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/sparql.html">
+   OIH SPARQL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../users/apis.html">
+   APIs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/index.html">
+   Appendix
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/annoyances.html">
+     Known Issues
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/references.html">
+     References
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/registries.html">
+     Registries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/vocabularies.html">
+     Controlled Vocabularies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/iodepo/odis-arch"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/iodepo/odis-arch/issues/new?title=Issue%20on%20page%20%2Fpublishing/publishing.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/publishing/publishing.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#architecture-implementation">
+     Architecture Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#including-json-ld-in-your-resource-page">
+     Including JSON-LD in your resource page
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#json-ld-tools-and-references">
+       JSON-LD Tools and References
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validation-with-shacl-or-shex">
+       Validation With SHACL or ShEx
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#validation-tools-and-references">
+         Validation Tools and References
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validation-leveraging-json-schema">
+       Validation Leveraging JSON Schema
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elements-in-detail">
+     Elements in detail
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#robots-txt">
+       robots.txt
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sitemap-xml">
+       sitemap.xml
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#full-workflow">
+   Full Workflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#existing-support-in-software">
+   Existing support in software
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Publisher</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about">
+   About
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#architecture-implementation">
+     Architecture Implementation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#including-json-ld-in-your-resource-page">
+     Including JSON-LD in your resource page
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#json-ld-tools-and-references">
+       JSON-LD Tools and References
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validation-with-shacl-or-shex">
+       Validation With SHACL or ShEx
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#validation-tools-and-references">
+         Validation Tools and References
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#validation-leveraging-json-schema">
+       Validation Leveraging JSON Schema
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#elements-in-detail">
+     Elements in detail
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#robots-txt">
+       robots.txt
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sitemap-xml">
+       sitemap.xml
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#full-workflow">
+   Full Workflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#existing-support-in-software">
+   Existing support in software
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="publisher">
+<h1>Publisher<a class="headerlink" href="#publisher" title="Permalink to this headline">#</a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">#</a></h2>
+<p>This page describes the publishing process for structured data
+on the web approach OIH will use.</p>
+<p>Note many software packages you are using might already
+implement this approach.  See the section:
+<em>Existing support in software</em> at the bottom of this document.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>We also recommend reviewing the document:
+<a class="reference external" href="https://docs.google.com/document/d/1fay3uIqIO2rljVBTk6Sk6i1I3yRnVecn-UTl3JKXLnw/edit">Schema.org for Research Data Managers: A Primer</a></p>
+</div>
+<section id="architecture-implementation">
+<h3>Architecture Implementation<a class="headerlink" href="#architecture-implementation" title="Permalink to this headline">#</a></h3>
+<p>The Ocean Info Hub (OIH) will leverage structured data on the web and web
+architecture patterns to expose metadata about resources of interest to the
+community.  The primary tasks include:</p>
+<ul>
+<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH
+guidance to express the structured metadata for a resource.  This step will
+require experience with using the existing metadata resources within an
+organization.  So any necessary skills needed to access or query existing
+facility data systems will be needed to assemble the information to populate
+the JSON-LD data graph.  The JSON-LD documents need to be generated using the
+tools/languages at the previous reference or through other means.</p></li>
+<li><p>Within the system architecture of the site, a JSON-LD document needs to be
+placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each
+published resource.   The SCRIPT tag pattern is:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span><span class="nx">JSON_LD</span> <span class="nx">content</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Additionally these resources that are marked up with these tags and JSON-LD
+documents should be expressed in an XML sitemap file.  This should follow the
+guidance at <a class="reference external" href="https://www.sitemaps.org/">https://www.sitemaps.org/</a>.  It should also include a lastmod node
+element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should
+indicate the date the resource metadata was last updated and published to the
+web.</p></li>
+<li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH
+profile is evolved.  To aid this we can leverage existing validation tools
+including JSONSchema, W3C SPARQL and more to communicate structure changes.
+These tools exist and need only be implemented using knowledge of command
+line environments.  The results will then indicate revisions needed in the
+JSON-LD.  OIH will provide the necessary templates for the tools to use
+against the authored JSON-LD documents.</p></li>
+</ul>
+<p>Information on the sources, standards and vocabularies to be used can be found
+at: <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/schema-dev/docs">https://github.com/iodepo/odis-arch/tree/schema-dev/docs</a></p>
+</section>
+<section id="including-json-ld-in-your-resource-page">
+<h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Permalink to this headline">#</a></h3>
+<p>To provide detailed and semantically described details on a resource, OIH uses
+a <a class="reference external" href="https://json-ld.org/">JSON-LD</a> snippet or <em>data graph</em>.  This small document
+provides details on the resource.  It can also express any explicate
+connections to other resources an author may wish to express.  The semantic
+nature of the document also means that connections may later be discovered
+through graph queries.</p>
+<p>Pages will need a JSON-LD data graph placed in it via a typed script
+tag/element in the document head element like the following.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>An example data graph can be seen below.   However, check the various
+thematic sections for more examples for a given thematic area.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://foo.org/url/to/metadata/representation&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Course&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In this course you will get an introduction to the main tools and ideas in the data scientist&#39;s toolbox...&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;hasCourseInstance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;courseMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;MOOC&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="s2">&quot;online&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-02-15&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This example is from the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/book/thematics/training">training and courses thematic
+section</a>.  To view all the types
+being developed reference
+the <a class="reference external" href="https://github.com/iodepo/odis-arch/tree/master/book/thematics">Thematic section</a>.</p>
+<p>These JSON-LD documents leverage <a class="reference external" href="http://schema.org">schema.org</a> as the primary vocabulary.
+The examples in the thematic section provide examples for the various type.</p>
+<section id="json-ld-tools-and-references">
+<h4>JSON-LD Tools and References<a class="headerlink" href="#json-ld-tools-and-references" title="Permalink to this headline">#</a></h4>
+<p>A key resource for JSON-LD can be found at <a class="reference external" href="https://json-ld.org/">JSON-LD</a>.
+There is also an interactive <em>playground</em> hosted there.  The <a class="reference external" href="https://json-ld.org/playground/">JSON-LD
+Playground</a> is useful when testing or
+exploring approaches for JSON-LD data graphs.  It will catch basic errors of
+syntax and use.  Note, it will not catch semantic issues such as using
+properties on types that are out of range.  Tools like the <a class="reference external" href="https://search.google.com/structured-data/testing-tool">Structured Data
+Testing Tool</a> are
+better at that.  Also the documents and validation material created here OIH
+will also allow for that sort of testing and feedback.</p>
+<p>Providers may also wish to provide content negotiation for type application/ld+json
+for these resources. Some indexers,  like Gleaner, will attempt to negotiate for
+the specific serialization and this will likely lighten the load on the servers going forward.</p>
+</section>
+<section id="validation-with-shacl-or-shex">
+<h4>Validation With SHACL or ShEx<a class="headerlink" href="#validation-with-shacl-or-shex" title="Permalink to this headline">#</a></h4>
+<p>To help facilitate the interconnection of resource, some application focused validation
+will be developed. Note, this validation does not limit what can be in the graphs.<br />
+Rather, it simply provides insight on to how well a given graph can be
+leveraged for a specific application.  For this project, the application will
+be the OIH search portal.</p>
+<p>Some initial development work for this can be found in the
+<a class="reference internal" href="../validation/README.html"><span class="doc std std-doc">validation directory</span></a></p>
+<section id="validation-tools-and-references">
+<h5>Validation Tools and References<a class="headerlink" href="#validation-tools-and-references" title="Permalink to this headline">#</a></h5>
+<ul class="simple">
+<li><p><a class="reference external" href="https://shacl.org/playground/">SHACL playground</a></p></li>
+<li><p><a class="reference external" href="https://github.com/google/schemarama">Schemarama</a></p></li>
+<li><p><a class="reference external" href="https://github.com/schimatos/schimatos.org">Schimatos.org</a></p>
+<ul>
+<li><p><a class="reference external" href="http://rsmsrv01.nci.org.au:8080/schimatos/">demo</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://book.validatingrdf.com/bookHtml013.html">Comparing ShEx and SHACL</a></p></li>
+</ul>
+</section>
+</section>
+<section id="validation-leveraging-json-schema">
+<h4>Validation Leveraging JSON Schema<a class="headerlink" href="#validation-leveraging-json-schema" title="Permalink to this headline">#</a></h4>
+<p>We have been exploring the potential to use JSON Schema combined with various
+on-line JSON editors (JSON Schema driven) to provide a potential approach to a
+more visual editing workflow. The workflow presented here is very ad hoc but
+exposes a potential route a group might take to develop a usable tool. Such a
+tool might, for example, leverage the Electron app dev environment to evolve
+this approach in a more dedicated tool/manner.</p>
+<p>Use a JSON-LD document (<a class="reference external" href="https://github.com/iodepo/odis-arch/blob/master/book/thematics/sdg/graphs/creativework.json">Example</a>) one could
+load this into something like
+the <a class="reference external" href="https://jsonschema.net/">JSONschema.net tool</a>.</p>
+<p>The results of the above can then been loaded into the online JSON-Editor at
+<a class="reference external" href="https://json-editor.github.io/json-editor/">https://json-editor.github.io/json-editor/</a>. (Ref:
+<a class="reference external" href="https://github.com/json-editor/json-editor">https://github.com/json-editor/json-editor</a>)</p>
+<p>The results of this then can be loaded into <a class="reference external" href="https://json-ld.org/playground/">https://json-ld.org/playground/</a> to
+validate that we have well formed JSON-LD.</p>
+<p>Though this workflow is rather crude and manual it exposes a route to a defined
+workflow based around established schema that leverages other tools and
+software libraries to generate a workable tool.</p>
+</section>
+</section>
+</section>
+<section id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h2>
+<p>The basic activity can be seen in the following diagram:</p>
+<p><img alt="" src="../_images/example1Flow.png" /></p>
+<section id="elements-in-detail">
+<h3>Elements in detail<a class="headerlink" href="#elements-in-detail" title="Permalink to this headline">#</a></h3>
+<section id="robots-txt">
+<h4>robots.txt<a class="headerlink" href="#robots-txt" title="Permalink to this headline">#</a></h4>
+<p>OPTIONAL: Providers may decide to generate or modify their robots.txt
+file to provide guidance to the aggregators.
+The plan is to use the Gleaner software (<a class="reference external" href="http://gleaner.io">gleaner.io</a>) as well as some
+Python based notebooks and a few other approaches in this test.</p>
+<p>Gleaner uses an agent string of EarthCube_DataBot/1.0 and this can be
+used a robots.txt file to specify alternative sitemaps and guidance.
+This also allows a provider to provide guidance to Google and other potential
+indexers both for allow and disallow directives.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Sitemap</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="o">*</span>
+<span class="n">Crawl</span><span class="o">-</span><span class="n">delay</span><span class="p">:</span> <span class="mi">4</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="o">/</span>
+
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="n">Googlebot</span>
+<span class="n">Disallow</span><span class="p">:</span> <span class="o">/</span><span class="nb">id</span>
+
+<span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="n">EarthCube_DataBot</span><span class="o">/</span><span class="mf">1.0</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="o">/</span>
+<span class="n">Sitemap</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+</section>
+<section id="sitemap-xml">
+<h4>sitemap.xml<a class="headerlink" href="#sitemap-xml" title="Permalink to this headline">#</a></h4>
+<p>Providers will need to expose a set of resource
+landing pages using a sitemap.xml file. As noted above, providers
+can expose a sitemap file to just the target agent
+to avoid indexing test pages by commercial providers.  You may wish
+to do this during testing or for other reasons.  Otherwise,
+a sitemap.xml file exposed in general from somewhere in your site is
+perfectly fine.</p>
+<p>Information on the sitemap structure can be found at <a class="reference external" href="http://sitemaps.org">sitemaps.org</a>.</p>
+<p>It is encouraged to use the sitemap lastmod node
+to provide guidance to indexers on page updates.
+Additionally indexers may test ways to evaluate additions and
+removals from the sitemap URL set to manage new or removed resources.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;sitemapindex</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/site0.9&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;sitemap&gt;</span>
+      <span class="nt">&lt;loc&gt;</span>http://samples.earth/sitemap_websites_sampleseaxml<span class="nt">&lt;/loc&gt;</span>
+      <span class="nt">&lt;lastmod&gt;</span>2004-10-01T18:23:17+00:00<span class="nt">&lt;/lastmod&gt;</span>
+   <span class="nt">&lt;/sitemap&gt;</span>
+   <span class="nt">&lt;sitemap&gt;</span>
+      <span class="nt">&lt;loc&gt;</span>http://samples.easitemap_doclouds_igsndatagraphs.xml<span class="nt">&lt;/loc&gt;</span>
+      <span class="nt">&lt;lastmod&gt;</span>2005-01-01<span class="nt">&lt;/lastmod&gt;</span>
+   <span class="nt">&lt;/sitemap&gt;</span>
+<span class="nt">&lt;/sitemapindex&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="full-workflow">
+<h2>Full Workflow<a class="headerlink" href="#full-workflow" title="Permalink to this headline">#</a></h2>
+<p><img alt="" src="../_images/flowv2.png" /></p>
+<p>The architecture defines a workflow for objects seen in the above diagram.</p>
+<p>The documents flow from; authoring, publishing and indexing to
+storage for the objects and the resulting graph.  These resources are
+then ready for use in search and other functions.</p>
+<p>Moving left to right we can review the image.</p>
+<ol class="simple">
+<li><p>Providers are engaged in the process of developing the OIH example
+documents.  These provide a <em>profile</em> to follow to represent the semantic
+metadata.  Note, these are not limiters, simply guidance on minimum and
+recommend elements to address the functional goals of the OIH portal.</p></li>
+<li><p>Providers use these documents to generate the JSON-LD data graphs.<br />
+These can be either static documents or generated and placed in pages
+dynamically with Javascript or server side templates.  These are the
+existing web pages for the resoruces, not enhanced with the
+semantic metadata snippets in the HTML source.</p></li>
+<li><p>These are published to the web and referenced in the sitemap.xml
+document that is also made available.  At this point this material is
+available to anyone who may wish to index it and provide discovery
+for these resources.</p></li>
+<li><p>OIH Portal will then index and validate these resources on a
+recurring bases to maintain a current index.  This index will include
+both the JSON-LD objects and the graph they form.  This graph can
+be used for search, connections and other value add services for the
+community. The graph is also directly available to the community for them
+to use in support of services they may wish to provide.</p></li>
+</ol>
+</section>
+<section id="existing-support-in-software">
+<h2>Existing support in software<a class="headerlink" href="#existing-support-in-software" title="Permalink to this headline">#</a></h2>
+<p>Many content management systems other web based data interfaces
+may already have support for the structured data on the web pattern and
+<a class="reference external" href="http://schema.org">schema.org</a> specifically. While it is beyond the scope of this project to
+detail each one, a few starting points for exploration are provided below
+for some of the more common ones.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.drupal.org/docs/contributed-modules/schemaorg-metatag">Drupal</a></p></li>
+<li><p><a class="reference external" href="https://ckan.org/2018/04/30/make-open-data-discoverable-for-search-engines/">CKAN</a></p></li>
+<li><p><a class="reference external" href="https://journal.code4lib.org/articles/13191">DSpace</a></p></li>
+<li><p><a class="reference external" href="https://dkan.readthedocs.io/en/latest/introduction/index.html">DKAN</a></p></li>
+<li><p><a class="reference external" href="https://www.ncei.noaa.gov/erddap/index.html">ERDDAP (native support)</a></p></li>
+<li><p><a class="reference external" href="https://www.opendap.org/">OPeNDAP (native support)</a></p></li>
+<li><p><a class="reference external" href="https://geonode.org/">GeoNode</a></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/GeoNode/geonode/issues?q=schema.org+">schema.org issue ref</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./publishing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../personas/persona.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Personas</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../foundation/foundation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">JSON-LD Foundation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By IODEPO<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

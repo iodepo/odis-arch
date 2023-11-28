@@ -21,13 +21,13 @@ The OIH triplestore exposes the graph following this pattern for queries.
 ### Examples
 
 ```bash
-curl -X POST http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
+curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
 ```
 
 If run this from the command line we will get something like the following.  
 
 ```bash
-✗ curl -X POST http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
+✗ curl -X POST https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql --data-urlencode 'query=SELECT * { ?s ?p ?o } LIMIT 1' -H 'Accept:application/sparql-results+json'
 
 {
   "head" : {
