@@ -163,6 +163,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../publishing/publishing.html">Publisher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../foundation/foundation.html">JSON-LD Foundation</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../gettingStarted.html">Connecting to the OIH Network</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Profiles</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Thematic Patterns</a></li>
@@ -517,65 +521,6 @@ Any of the properties of Person seen there are valid to use in such a record.</p
 with this documentation is provide a simple example that address some of the search
 and discovery goals of OIH along with those properties most useful in the linking
 of resources between OIH participants.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos"> 4</span>  <span class="p">},</span>
-<span class="hll"><span class="linenos"> 5</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/x&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 6</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 8</span>  <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>  <span class="s2">&quot;workLocation&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-</span><span class="linenos">11</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;54 Ocean Drive, 23521 Ocean City, CountryName&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Place name&quot;</span>
-<span class="linenos">13</span>  <span class="p">},</span>
-<span class="linenos">14</span>  <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>  <span class="s2">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">17</span>    <span class="p">{</span>
-<span class="linenos">18</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Text&quot;</span><span class="p">,</span>
-<span class="linenos">19</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Invasive species in brackish water&quot;</span>
-<span class="linenos">20</span>    <span class="p">},</span>
-<span class="linenos">21</span>    <span class="p">{</span>
-<span class="linenos">22</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">23</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q183368&quot;</span>
-<span class="linenos">24</span>    <span class="p">},</span>
-<span class="linenos">25</span>    <span class="p">{</span>
-<span class="linenos">26</span>      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/x&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos">27</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;In this course ...&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">29</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to the course&quot;</span>
-</span><span class="hll"><span class="linenos">30</span>    <span class="p">}</span>
-</span><span class="hll"><span class="linenos">31</span>  <span class="p">],</span>
-</span><span class="hll"><span class="linenos">32</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">33</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
-<span class="linenos">34</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">35</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/orcid&quot;</span><span class="p">,</span>
-<span class="linenos">36</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
-<span class="linenos">37</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of this record...&quot;</span>
-<span class="linenos">38</span>  <span class="p">},</span>
-<span class="linenos">39</span>  <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">40</span>    <span class="p">{</span>
-<span class="linenos">41</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
-<span class="linenos">42</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span>
-<span class="linenos">43</span>    <span class="p">},</span>
-<span class="linenos">44</span>    <span class="p">{</span>
-<span class="linenos">45</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-<span class="linenos">46</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;</span><span class="p">,</span>
-<span class="linenos">47</span>      <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;UN/LOCODE Code List by Country and Territory&quot;</span><span class="p">,</span>
-<span class="linenos">48</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span>
-<span class="linenos">49</span>      <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;FJ&quot;</span>
-<span class="linenos">50</span>    <span class="p">}</span>
-<span class="linenos">51</span>  <span class="p">],</span>
-<span class="linenos">52</span>  <span class="s2">&quot;knowsLanguage&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">53</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Language&quot;</span><span class="p">,</span>
-<span class="linenos">54</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
-<span class="linenos">55</span>    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span>
-<span class="linenos">56</span>  <span class="p">}</span>
-<span class="linenos">57</span><span class="p">}</span>
-</pre></div>
-</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -606,7 +551,19 @@ of resources between OIH participants.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/3fbc21c94627b8e0b05f78bedcecf20a7c18a90195b30c80d769df9542864c5e.svg" src="../../_images/3fbc21c94627b8e0b05f78bedcecf20a7c18a90195b30c80d769df9542864c5e.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3458</span><span class="o">/</span><span class="mf">528365442.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../book/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../book/thematics/expinst/graphs/person.json&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <section id="details-identifier">
 <h3>Details: Identifier<a class="headerlink" href="#details-identifier" title="Permalink to this heading">#</a></h3>
