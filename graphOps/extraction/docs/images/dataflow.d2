@@ -1,0 +1,191 @@
+direction: right
+
+title:  |md
+  # UNESCO/IODE/ODIS/OIH Data Flow 
+
+  Publically published items  
+  indicated with syndication icon.
+| { near: top-center }
+
+classes: {
+odis: {
+    width: 300
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+partners: {
+    width: 300
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+oih: {
+    width: 300
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+s: Community Source {
+   note: |md
+Community partner published  
+data graphs
+
+* Format: JOSN-LD
+* SHACL: coreset.ttl
+* Published: True
+* Org: Publisher
+   |
+}
+
+dg: Data Graphs {
+   note: |md
+Collected Data Graphs
+
+* Format: JSON-LD
+* SHACL: coreset.ttl
+* Published: False
+* Org: ODIS
+   |
+}
+
+kg: Knowledge Graph {
+   note: |md
+ODIS KG
+
+* Format:  N-Quads
+* SHACL: coreset.ttl
+* Org: ODIS
+* Published: True
+   |
+published: "" {
+  shape: image
+  icon: publish.svg
+  width: 40
+  height: 40
+}
+
+}
+
+mdp: Master Data Package {
+published: "" {
+  shape: image
+  icon: publish.svg
+  width: 30
+  height: 30
+}
+
+   note: |md
+OIH Master Data Package
+
+* Format: Parquet
+* SHACL: N.A.
+* Published: True
+* Org: OIH
+   |
+}
+
+solr: Solr Input JSON  {
+   note: |md
+JSON files for  
+OIH Solr Server
+
+* Format:   JSON
+* SHACL: N.A.
+* Published: False
+* Org: OIH
+   |
+}
+
+gjson: GeoJson {
+published: "" {
+  shape: image
+  icon: publish.svg
+  width: 30
+  height: 30
+}
+
+   note: |md
+Output for the WMO  
+WIS2 integration
+
+* Format:   GeoJSON
+* SHACL: N.A.
+* Published: True
+* Org: OIH
+   |
+}
+
+gpkg: GeoPackage {
+published: "" {
+  shape: image
+  icon: publish.svg
+  width: 30
+  height: 30
+}
+
+
+   note: |md
+Output for WESR  
+integration
+
+* Format:   GeoPackage
+* SHACL: N.A.
+* Published: True
+* Org: OIH
+   |
+
+}
+
+
+n : Graph Network {
+published: "" {
+  shape: image
+  icon: publish.svg
+  width: 30
+  height: 30
+}
+
+   note: |md
+Output for the WMO  
+WIS2 integration
+
+* Format: CSV, GraphML
+* SHACL: network.ttl
+* Published: True
+* Org: OIH
+   |
+}
+
+
+# colors
+dg.class: odis
+kg.class: odis
+
+s.class: partners
+
+n.class: oih
+mdp.class: oih
+solr.class: oih
+gjson.class: oih
+gpkg.class: oih
+
+s.note -> dg.note -> kg.note -> mdp.note 
+kg.note -> n.note
+mdp.note -> solr.note
+mdp.note -> gjson.note
+mdp.note -> gpkg.note

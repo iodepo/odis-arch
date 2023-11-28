@@ -1,0 +1,110 @@
+direction: right
+
+title: {
+  label: ODIS Arch Flow
+  near: bottom-center
+  shape: text
+  style.font-size: 40
+  style.underline: true
+}
+
+p: Source {
+    oc: OceanCat
+    pp: Partner Platforms
+    oc ->pp
+}
+
+os: Sink (object store) \n Data Lake {
+    s: Summoned Data Graphs
+    rg: Release Graphs
+
+    prod: ODIS Data Products {
+        mdp: Master Data Product
+        r: Validation reports
+    }
+
+    l2: OIH Data Products {
+       gpk: OIH GeoPackage
+    }
+
+    prod.mdp -> l2.gpk
+}
+
+# Credit Flow
+z: Zenodo
+os.rg -> z: via rgZenodoPublisher.py
+os.prod -> z: via rgZenodoPublisher.py
+p.pp <- z:  Credit
+p.pp <- os.prod.r: In person  or email
+z <- cust: Citation
+
+
+
+ds: Services {
+    ts: triplestore
+    solr: Solr Search
+    geoapi: GeoAPI \n pygeoapi
+    gql: GraphQL
+}
+
+# ODIS Data Ops
+p -> os.s : via cliGleaner.py { style: { font-size: 36 } }
+os.rg -> ds.ts : via cliNabu.py { style: { font-size: 36 }  }
+os.s -> os.rg : via cliNabu.py { style: { font-size: 36 }  }
+os.rg -> os.prod.mdp: via mdp.py { style: { font-size: 36 }  }
+os.rg -> os.prod.r: via rgValidation.py
+
+
+# OIH Data Ops
+os.prod.mdp -> ds.solr: via mdp2solr.py { style: { font-size: 36 }  }
+os.l2.gpk -> ds.geoapi
+
+cust: Engagemnet {
+
+    # Advocate 
+    ux: Ocean InfoHub {
+        exp: Data Exploring
+        ui: ODIS Search
+        d: Dashboard
+        vr: Validation Reports
+    }
+
+    # Assessment 
+    ass: Assessment \n State of Ocean Data {
+        graph: Graph Analysis
+        lin: Lineage
+        geo: GeoSpatial
+    }
+
+    # Engagement 
+    eng: Engagement {
+        wis: WIS2
+        wesr: WESR
+    }
+
+}
+
+# Advocate Flow
+ds.ts -> cust.ux.exp: SPARQL and/or GraphQL
+os.prod.r -> cust.ux.d: DuckDB
+os.prod.r -> cust.ux.vr: SHACL+SPARQL, OpenRefine
+os.prod.mdp -> cust.ux.d: DuckDB
+ds.solr -> cust.ux.ui: via standard Solr API\n plus schema
+
+# Assessment Flow
+os.l2.gpk -> cust.ass.geo
+os.rg -> cust.ass.graph: Network Analysis
+os.prod -> cust.ass.graph: Network Analysis \n via \n SPARQL, OpenRefine, DuckDB, Python
+
+# Engagement Flow
+os.prod.mdp -> cust.eng.wis: via mdp2wis2.py
+os.prod.mdp -> cust.eng.wesr
+
+
+scenarios: {
+  user: {
+
+   title.lable: User Only
+
+  }
+}
