@@ -53,3 +53,12 @@ Here are key principles of ROA:
 6. **Address-ability:** Every resource has a unique address, typically a URL, which can be bookmarked, typed into a browser, or passed around by an application.
 
 ROA is most notably realized in the design of RESTful APIs, which are intended to interact with web resources. It's focused on leveraging the protocols and technologies of the web (like HTTP, URIs, and MIME types) rather than creating new standards or protocols.
+
+
+## Notes:
+
+* WMO WCMP 2 target April 2024 for 1.0 stamp ref: https://wmo-im.github.io/wcmp2/ 
+* requirements: https://wmo-im.github.io/wcmp2/standard/wcmp2-DRAFT.html#_overview_2 
+* https://github.com/wmo-im/wis2-gdc 
+  * TODO:  SHACL for Table 2. WCMP record core properties 
+* mqtt vs pygeoapi 
