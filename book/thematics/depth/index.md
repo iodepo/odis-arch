@@ -59,6 +59,7 @@ The guidance:
     - For any depth measurements that are part of a dataset itself (i.e. not just in the metadata)
 
         - Use a variableMeasured stanza to describe the depth variables in your dataset, including the right semantic markup (See CODE BLOCK 2) 
+          - The “right” semantic Markup means that the vocabulary, thesaurus, ontology or other DefinedTerm you use is defined exactly as you understand it / have used it in your description. If you disagree with the definition or elements of it, DO NOT use the term and search for an alternative in another trusted semantic resource. Using an undefined vocabulary term or a free text string is BETTER than using a defined term with a poor or inappropriate definition.
 
         - Include values for measurementTechnique and other properties, as we’re now talking about a variable actually in your dataset (rather than in the metadata about your dataset)
 
