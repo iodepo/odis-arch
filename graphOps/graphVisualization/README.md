@@ -9,7 +9,7 @@
    2. When you load the second file, be sure to append it to the project, see image below
 4. Enjoy, play with the animations to spread out the graph and coloring for the node types.
 
-![append second file screen shot](./docs/img.png)
+![append second file screen shot](./images/img.png)
 
 ## Output
 
@@ -26,7 +26,7 @@ Some example output.  Here the colors are:
 > pipeline, not the current product.
 
 
-![large](./visuals/vizSetLarge.png)
+![large](./images/vizSetLarge.png)
 
 
-![small](./visuals/vizSetSmall.png)
+![small](./images/vizSetSmall.png)
