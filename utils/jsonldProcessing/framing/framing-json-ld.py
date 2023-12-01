@@ -57,8 +57,8 @@ Notes:
 """
 
 # define common variables
-PATH_TO_SOURCE_DATA_FOLDER = "/home/apps/minio-buckets-cioos-single/summoned/cioos/"
-PATH_TO_OUTPUT_DATA_FOLDER = "/home/apps/minio-buckets-cioos-single/framed/cioos/"
+PATH_TO_SOURCE_DATA_FOLDER = "/home/apps/minio-buckets-cioos/summoned/cioos/"
+PATH_TO_OUTPUT_DATA_FOLDER = "/home/apps/minio-buckets-cioos/framed/"
 LOGFILE = "./framing-json-ld.log"
 
 """
@@ -79,14 +79,11 @@ logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG,
 
 
 frametext =   {
-    "@context": {"@vocab": "http://schema.org/"},
-    "@type": "Dataset"
-}
-
-frametextHTTPS =   {
     "@context": {"@vocab": "https://schema.org/"},
     "@type": "Dataset"
 }
+
+typesList = ["Dataset", "DigitalDocument", "CreativeWork", "Movie"]
 
 fileNum = 0
 
@@ -116,13 +113,24 @@ for jsonldfile in glob.glob(os.path.join(PATH_TO_SOURCE_DATA_FOLDER, '*.jsonld')
             
         elif "schema" in jsonloaded["@context"]:
             context = jsonloaded["@context"]["schema"]
-        
+            
+        #get the data type
+        for item in jsonloaded["@graph"]:
+            if "@type" in item:
+                for x in typesList:
+                    typeNamespace = "schema:" + x
+                    if item["@type"] == x or item["@type"] == typeNamespace:
+                        print("    " + item["@type"])
+                        type = x
+
+        #modify frametext
+        if "http://" in context:     
+            frametext["@context"] = {"@vocab": "http://schema.org/"}
+        frametext["@type"] = type
+                
         #frame the JSON-LD
-        if "https" in context:        
-            framed = jsonld.frame(jsonloaded, frametextHTTPS)
-        else:
-            framed = jsonld.frame(jsonloaded, frametext)
-        
+        framed = jsonld.frame(jsonloaded, frametext)
+               
         #write the new JSON-LD file to output folder
         with open(PATH_TO_OUTPUT_DATA_FOLDER + filename, 'w') as outfile:
             outfile.write(json.dumps(framed, indent=2))
