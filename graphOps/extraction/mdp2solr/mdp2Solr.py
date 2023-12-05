@@ -8,8 +8,8 @@ from objdict import ObjDict
 # Master Data Product to Solr
 
 def main():
-    parser = argparse.ArgumentParser(description="Process some arguments.")
-    parser.add_argument("--source", type=str, help="Source URL")
+    parser = argparse.ArgumentParser(description="Process arguments")
+    parser.add_argument("--source", type=str, help="Source file/URL")
     parser.add_argument("--outputdir", type=str, help="Output directory")
 
     args = parser.parse_args()
@@ -40,7 +40,6 @@ def main():
     for index, row in mf.iterrows():
 
         data = ObjDict()
-        # sd = ObjDict()
 
         # not in arrays
         if "id" in mf.columns:

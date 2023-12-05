@@ -54,6 +54,7 @@ for list_regions in continentalRegionsChildren:
                     country_map_list.append((datashaping.normalize(countryName), countryName))
 
 
+# TODO  This is a poor way, in terms of memory, to do this
 def mergeRegions(df):
     df['region'] = df[['nregion', 'aregion','cregion', 'fregion']].apply(lambda x: list(set(x[0] + x[1] + x[2]+ x[3])), axis=1)
     del df['nregion']

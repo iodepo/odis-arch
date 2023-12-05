@@ -12,6 +12,7 @@ import numpy as np
 import argparse
 import sys
 import os
+import gc
 # import s3fs
 
 from defs import graphshapers
@@ -61,27 +62,12 @@ def main():
 
 
 def graphProcessor(dg):
-    # load single quad graph into a RDFLIB conjunctive graph
-    # df = urlopen(u)
-    # dg = df.read()
-
     r = graphshapers.contextAlignment(dg)
+
     g = ConjunctiveGraph()
     g.parse(data=r, format="nquads")
     print("Number of quads loaded: {}".format(len(g)))
 
-    # This code is no longer used but, I am keeping in case I want to build a looping set ever
-    # # load all graphs
-    # client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.
-    # urls = graphshapers.publicurls(client, "public", "graph")
-    # g = ConjunctiveGraph()
-    # for u in urls:
-    #   print("loading: {}".format(u))
-    #   df = urlopen(u)
-    #   dg = df.read()
-    #   r = contextAlignment(dg)
-    #   g.parse(data=r, format="nquads")
-    # print(len(g))
 
     # Convert the RDFLIB graph to a kglabs graph
     namespaces = {
@@ -120,7 +106,6 @@ def graphProcessor(dg):
     # NOTE: In many IDEs the vars for qlist will look like an error since these vars are dynamic set at runtime via globals()
     qlist = [datasetrq, sup_georq, sup_temporalrq]
 
-    # m1 = pd.merge(pdf, geodf, on='id', how='outer')  # mf = pd.DataFrame()
     dfl = []
     print(
         "Processing {} SPARQL queries. This will be slow and the progress bar updates only on query completion".format(
@@ -142,6 +127,9 @@ def graphProcessor(dg):
     merged_df['id'].nunique()
 
     # merged_df.info()
+
+    # Hint to the garbage collector that it's cleanup time
+    gc.collect()
 
     ### GeoSpatial
     print("Processing Stage: Geospatial")
@@ -166,12 +154,20 @@ def graphProcessor(dg):
     merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))
 
     # TODO, incorporate Jeff's code as a Lambda function (will need to support multiple possible regions per entry)
-    merged_df['nregion'] = merged_df['name'].apply(lambda x: regionFor.name(x) if x else x)
-    merged_df['aregion'] = merged_df['address'].apply(lambda x: regionFor.address(x) if x else x)
-    merged_df['cregion'] = merged_df['addressCountry'].apply(lambda x: regionFor.countryLastProcessing(x) if x else x)
-    merged_df['fregion'] = merged_df['wkt'].apply(lambda x: regionFor.feature(x) if x else x)
+    if "name" in merged_df.columns:
+        print("Processing region for name")
+        merged_df['nregion'] = merged_df['name'].apply(lambda x: regionFor.name(x) if x else x)
+    if "address" in merged_df.columns:
+        print("Processing region for address")
+        merged_df['aregion'] = merged_df['address'].apply(lambda x: regionFor.address(x) if x else x)
+    if "addressCountrye" in merged_df.columns:
+        print("Processing region for addressCountry")
+        merged_df['cregion'] = merged_df['addressCountry'].apply(lambda x: regionFor.countryLastProcessing(x) if x else x)
+    if "wkt" in merged_df.columns:
+        print("Processing region for wkt")
+        merged_df['fregion'] = merged_df['wkt'].apply(lambda x: regionFor.feature(x) if x else x)
 
-    merged_df = regionFor.mergeRegions(merged_df.copy())
+    # merged_df = regionFor.mergeRegions(merged_df.copy())
 
     ### Temporal shaping
     print("Processing Stage: Temporal")
