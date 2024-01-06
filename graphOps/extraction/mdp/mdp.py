@@ -49,9 +49,6 @@ def main():
     print("Saving results to file")
     _, file_extension = os.path.splitext(output_file)
 
-    ## TODO why is this here?  likely should be down in the geo section
-    mf['centroid'] = mf['centroid'].astype(str)
-
     if file_extension == '.parquet':
         mf.to_parquet(output_file, engine='fastparquet')  # engine must be one of 'pyarrow', 'fastparquet'
     elif file_extension == '.csv':
@@ -84,7 +81,8 @@ def graphProcessor(dg):
     urls = [
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq"
+        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
+        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
     ]
 
     for url in urls:
@@ -104,12 +102,11 @@ def graphProcessor(dg):
             print(f"Error: {e}")
 
     # NOTE: In many IDEs the vars for qlist will look like an error since these vars are dynamic set at runtime via globals()
-    qlist = [datasetrq, sup_georq, sup_temporalrq]
+    qlist = [personrq, datasetrq, sup_georq, sup_temporalrq]
 
     dfl = []
     print(
-        "Processing {} SPARQL queries. This will be slow and the progress bar updates only on query completion".format(
-            len(qlist)))
+        "Processing {} SPARQL queries. Can be slow, progress bar updates on query completion".format(len(qlist)))
     for q in tqdm(qlist):
         df = kg.query_as_df(q)
         if len(df) > 0:  # don't append in empty result sets, breaks the merge
@@ -131,27 +128,51 @@ def graphProcessor(dg):
     # Hint to the garbage collector that it's cleanup time
     gc.collect()
 
+    ### Temporal shaping
+    print("Processing Stage: Temporal")
+
+    if "temporalCoverage" in merged_df.columns:
+        merged_df['temporalCoverage'] = merged_df['temporalCoverage'].astype( 'str')  # fine to make str since we don't use in the solr JSON
+        merged_df['dt_startDate'] = merged_df['temporalCoverage'].apply( lambda x: re.split("/", x)[0] if "/" in x else np.nan)
+        merged_df['dt_endDate'] = merged_df['temporalCoverage'].apply(lambda x: re.split("/", x)[1] if "/" in x else np.nan)
+        merged_df['n_startYear'] = merged_df['dt_startDate'].apply( lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
+        merged_df['n_endYear'] = merged_df['dt_endDate'].apply(lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
+    else:
+        print("NOTE:  no temporal data found")
+
+    # EXIT
+    # sys.exit(0)
+
+    # Check frames after temporal ETL calls
+    # merged_df.info()
+    # merged_df.head()
+
     ### GeoSpatial
     print("Processing Stage: Geospatial")
 
-    merged_df['filteredgeom'] = merged_df['geom'].apply(lambda x: np.nan if graphshapers.contains_alpha(x) else x)
+    if "geom" in merged_df.columns:
+        merged_df['filteredgeom'] = merged_df['geom'].apply(lambda x: np.nan if graphshapers.contains_alpha(x) else x)
 
-    ## Geometry representations
+        ## Geometry representations
 
-    print("Processing Stage: Geospatial centroid")
-    merged_df['centroid'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "centroid"))
+        print("Processing Stage: Geospatial centroid")
+        merged_df['centroid'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "centroid"))
 
-    print("Processing Stage: Geospatial length")
-    merged_df['length'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "length"))
+        print("Processing Stage: Geospatial length")
+        merged_df['length'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "length"))
 
-    print("Processing Stage: Geospatial area")
-    merged_df['area'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "area"))
+        print("Processing Stage: Geospatial area")
+        merged_df['area'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "area"))
 
-    print("Processing Stage: Geospatial wkt")
-    merged_df['wkt'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "wkt"))
+        print("Processing Stage: Geospatial wkt")
+        merged_df['wkt'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "wkt"))
 
-    print("Processing Stage: Geospatial geojson")
-    merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))
+        print("Processing Stage: Geospatial geojson")
+        merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))    
+                                                               
+
+    else:
+        print("NOTE: no geometry data found")
 
     # TODO, incorporate Jeff's code as a Lambda function (will need to support multiple possible regions per entry)
     if "name" in merged_df.columns:
@@ -169,30 +190,24 @@ def graphProcessor(dg):
 
     # merged_df = regionFor.mergeRegions(merged_df.copy())
 
-    ### Temporal shaping
-    print("Processing Stage: Temporal")
 
-    merged_df['temporalCoverage'] = merged_df['temporalCoverage'].astype(
-        'str')  # fine to make str since we don't use in the solr JSON
-    merged_df['dt_startDate'] = merged_df['temporalCoverage'].apply(
-        lambda x: re.split("/", x)[0] if "/" in x else np.nan)
-    merged_df['dt_endDate'] = merged_df['temporalCoverage'].apply(lambda x: re.split("/", x)[1] if "/" in x else np.nan)
-    merged_df['n_startYear'] = merged_df['dt_startDate'].apply(
-        lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
-    merged_df['n_endYear'] = merged_df['dt_endDate'].apply(lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
-
-    # Check frames after temporal ETL calls
-    # merged_df.info()
-    # merged_df.head()
 
     ### Dataframe groupby, aggregation and joins
     print("Processing Stage: Dataframe shaping")
 
+    merged_df['id'] = merged_df['id'].astype(str)  # why is this needed?
+    merged_df['url'] = merged_df['url'].astype(str)  # why is this needed?
+    merged_df['description'] = merged_df['description'].astype(str)  # why is this needed?
+
+
     # transforms needed for aggregation
-    merged_df['keywords'] = merged_df['keywords'].astype(str)  # why is this needed?
-    merged_df['geom'] = merged_df['geom'].astype(str)  # why is this needed?
-    merged_df['filteredgeom'] = merged_df['filteredgeom'].astype(str)  # why is this needed?
-    merged_df['centroid'] = merged_df['centroid'].astype(str)  # why is this needed?
+    if "keywords" in merged_df.columns:
+        merged_df['keywords'] = merged_df['keywords'].astype(str)  # why is this needed?
+
+    if "geom" in merged_df.columns:
+        merged_df['geom'] = merged_df['geom'].astype(str)  # why is this needed?
+        merged_df['filteredgeom'] = merged_df['filteredgeom'].astype(str)  # why is this needed?
+        merged_df['centroid'] = merged_df['centroid'].astype(str)  # why is this needed?
 
     agg_dict = {'keywords': ', '.join,
                 'type': 'first',
@@ -224,6 +239,8 @@ def graphProcessor(dg):
     for col in agg_dict.copy():
         if col not in merged_df.columns:
             del agg_dict[col]
+
+    print(merged_df.head())
 
     mf = merged_df.groupby('id').agg(agg_dict).reset_index()
 
