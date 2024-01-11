@@ -1,0 +1,25 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT (?s as ?id) ?type ?sameAs ?license ?citation ?keywords
+    ?includedInDataCatalog ?distribution ?region ?provider ?publisher ?creator
+WHERE {
+    graph ?g {
+        BIND(schema:Dataset AS ?type)
+        ?s rdf:type ?type .
+
+        OPTIONAL { ?s schema:sameAs ?sameAs . }
+        OPTIONAL { ?s schema:license ?license . }
+        OPTIONAL { ?s schema:citation ?citation . }
+        OPTIONAL { ?s schema:keywords ?keywords . }
+        OPTIONAL { ?s schema:includedInDataCatalog ?includedInDataCatalog . }
+        OPTIONAL { ?s schema:distribution ?distribution . }
+        OPTIONAL { ?s schema:region ?region . }
+        OPTIONAL { ?s schema:provider ?provider . }
+        OPTIONAL { ?s schema:publisher ?publisher . }
+        OPTIONAL { ?s schema:creator ?creator . }
+    }
+}

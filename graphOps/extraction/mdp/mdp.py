@@ -13,12 +13,14 @@ import argparse
 import sys
 import os
 import gc
+from functools import reduce
 # import s3fs
 
 from defs import graphshapers
 from defs import readSource
 from defs import spatial
 from defs import regionFor
+from defs import load_queries
 
 def main():
     parser = argparse.ArgumentParser(description="Process some arguments.")
@@ -78,52 +80,48 @@ def graphProcessor(dg):
                               use_gpus=True, import_graph=g)
 
     # Load Query Section, queries are loading via the net from GitHub URLs
-    urls = [
+    sl = [
+        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/baseQuery.rq",
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
         "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
     ]
 
-    for url in urls:
-        try:
-            response = requests.get(url)
-            if response.status_code == 200:
-                # Extract the file name from the URL and change ".rq" to "rq"
-                file_name = url.split("/")[-1].replace(".rq", "rq")
-                content = response.text
+    sfl = [
+        "./queries/baseQuery.rq",
+        "./queries/sup_geo.rq",
+        "./queries/sup_temporal.rq",
+        "./queries/dataset.rq",
+        "./queries/person.rq"
+    ]
 
-                # Create a variable with the modified name and store the content
-                globals()[file_name] = content
-                print(f"Loaded SPARQL from URL {url}. Status code: {response.status_code}")
-            else:
-                print(f"Failed to download URL {url}. Status code: {response.status_code}")
-        except requests.exceptions.RequestException as e:
-            print(f"Error: {e}")
+    qlist = load_queries.read_files(sfl)
 
-    # NOTE: In many IDEs the vars for qlist will look like an error since these vars are dynamic set at runtime via globals()
-    qlist = [personrq, datasetrq, sup_georq, sup_temporalrq]
-
+    # Processes the queries now
     dfl = []
     print(
         "Processing {} SPARQL queries. Can be slow, progress bar updates on query completion".format(len(qlist)))
-    for q in tqdm(qlist):
+    for q in tqdm(qlist.values()):
         df = kg.query_as_df(q)
         if len(df) > 0:  # don't append in empty result sets, breaks the merge
+            # df.info()
             dfl.append(df)
 
-    common_column = ["id", "type"]  # Replace with the actual common column name
+    common_column = ["id", "type"]
+    merged_df = reduce(lambda left, right: pd.merge(left, right, on=common_column,suffixes=('_left', '_right'), how='outer'), dfl)
 
     # Initialize a merged DataFrame with the first DataFrame
-    merged_df = dfl[0]
+    # merged_df = dfl[0]
+    #
+    # # Iterate through the remaining DataFrames and merge them into the merged_df
+    # common_column = "id"    #, "type"]  # Replace with the actual common column name
+    # for df in dfl[1:]:
+    #     print("Current count : {}".format(merged_df['id'].nunique()))
+    #     merged_df = pd.merge(merged_df, df, on=common_column, how='inner')
+    #     print("Current count : {}".format(merged_df['id'].nunique()))
 
-    # Iterate through the remaining DataFrames and merge them into the merged_df
-    for df in dfl[1:]:
-        merged_df = pd.merge(merged_df, df, on=common_column, how='inner')
-
-    merged_df['id'].nunique()
-
-    # merged_df.info()
+    merged_df.info()
 
     # Hint to the garbage collector that it's cleanup time
     gc.collect()
@@ -174,6 +172,10 @@ def graphProcessor(dg):
     else:
         print("NOTE: no geometry data found")
 
+
+    if "name" in merged_df.columns:
+        merged_df['name'] = merged_df['name'].astype(str)  # why is this needed?
+
     # TODO, incorporate Jeff's code as a Lambda function (will need to support multiple possible regions per entry)
     if "name" in merged_df.columns:
         print("Processing region for name")
@@ -181,7 +183,7 @@ def graphProcessor(dg):
     if "address" in merged_df.columns:
         print("Processing region for address")
         merged_df['aregion'] = merged_df['address'].apply(lambda x: regionFor.address(x) if x else x)
-    if "addressCountrye" in merged_df.columns:
+    if "addressCountry" in merged_df.columns:
         print("Processing region for addressCountry")
         merged_df['cregion'] = merged_df['addressCountry'].apply(lambda x: regionFor.countryLastProcessing(x) if x else x)
     if "wkt" in merged_df.columns:
@@ -190,14 +192,15 @@ def graphProcessor(dg):
 
     # merged_df = regionFor.mergeRegions(merged_df.copy())
 
-
-
     ### Dataframe groupby, aggregation and joins
     print("Processing Stage: Dataframe shaping")
 
-    merged_df['id'] = merged_df['id'].astype(str)  # why is this needed?
-    merged_df['url'] = merged_df['url'].astype(str)  # why is this needed?
-    merged_df['description'] = merged_df['description'].astype(str)  # why is this needed?
+    if "id" in merged_df.columns:
+        merged_df['id'] = merged_df['id'].astype(str)  # why is this needed?
+    if "url" in merged_df.columns:
+        merged_df['url'] = merged_df['url'].astype(str)  # why is this needed?
+    if "description" in merged_df.columns:
+        merged_df['description'] = merged_df['description'].astype(str)  # why is this needed?
 
 
     # transforms needed for aggregation

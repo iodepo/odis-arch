@@ -18,7 +18,14 @@ An example command will be like:
 > NOTE:  A run for a graph the size of CIOOS takes around 4 to 5 minutes
 
 ```Bash
-python mdp.py  --source "http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq  --output "./output/cioos.parquet"
+python mdp.py  --source "http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq"  --output "./output/cioos.parquet"
+```
+
+for s3 something like the following can be used assuming you have set the environment variables
+ MINIO_ACCESS_KEY and  MINIO_SECRET_KEY.
+
+```Bash
+ python mdp.py  --source "s3://nas.local:54321/public/graphs/test1/africaioc_release.nq"  --output "./output/test.parquet"
 ```
 
 At present, I only support Parquet and CSV output based on the file extension.  
