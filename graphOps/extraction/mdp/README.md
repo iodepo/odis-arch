@@ -28,6 +28,12 @@ for s3 something like the following can be used assuming you have set the enviro
  python mdp.py  --source "s3://nas.local:54321/public/graphs/test1/africaioc_release.nq"  --output "./output/test.parquet"
 ```
 
+Can now save to s3 as well:
+
+```Bash
+ python mdp.py  --source "s3://nas.local:54321/public/graphs/test1/africaioc_release.nq"  --output "s3://nas.local:54321/public/graphs/products/africaioc.parquet"
+```
+
 At present, I only support Parquet and CSV output based on the file extension.  
 
 ## mdp2solr.py

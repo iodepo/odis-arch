@@ -11,9 +11,13 @@ from dateutil import parser
 import numpy as np
 import argparse
 import sys
-import os
+import os, io
 import gc
 from functools import reduce
+import pyarrow as pa
+import pyarrow.parquet as pq
+
+
 # import s3fs
 
 from defs import graphshapers
@@ -21,6 +25,9 @@ from defs import readSource
 from defs import spatial
 from defs import regionFor
 from defs import load_queries
+
+from minio import Minio
+
 
 def main():
     parser = argparse.ArgumentParser(description="Process some arguments.")
@@ -44,10 +51,11 @@ def main():
     dg = readSource.read_data(u)
     mf = graphProcessor(dg)
 
-    ### Save
+    ### Reporting
     print("Reporting Stage: The following is the current dataframe shape to exported")
     print(mf.info())
 
+    ### Save to file
     print("Saving results to file")
     _, file_extension = os.path.splitext(output_file)
 
@@ -58,6 +66,29 @@ def main():
     else:
         print(f'Error: unsupported file extension {file_extension}. Support .parquet or .csv only')
         sys.exit(1)
+
+    ## Save to minio
+    print("Saving results to minio")
+
+    sk = os.getenv("MINIO_SECRET_KEY")
+    ak = os.getenv("MINIO_ACCESS_KEY")
+
+    # Create client with access and secret key.
+    mc = Minio("nas.lan:49153", ak, sk, secure=False)
+
+    bucket_name = 'public'
+    object_name =  "graphs/products/{}".format(os.path.basename(output_file))
+
+    # Convert the DataFrame to a parquet file
+    table = pa.Table.from_pandas(mf)
+    buf = io.BytesIO()
+    pq.write_table(table, buf)
+    buf.seek(0)
+
+    try:
+        mc.put_object(bucket_name, object_name,  buf, len(buf.getvalue()))
+    except Exception as e:
+        print(f"Error saving object: {e}")
 
 
 def graphProcessor(dg):
@@ -80,13 +111,13 @@ def graphProcessor(dg):
                               use_gpus=True, import_graph=g)
 
     # Load Query Section, queries are loading via the net from GitHub URLs
-    sl = [
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/baseQuery.rq",
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
-        "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
-    ]
+    # sl = [
+        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/baseQuery.rq",
+        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
+        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
+        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
+        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
+    # ]
 
     sfl = [
         "./queries/baseQuery.rq",
@@ -166,8 +197,8 @@ def graphProcessor(dg):
         merged_df['wkt'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "wkt"))
 
         print("Processing Stage: Geospatial geojson")
-        merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))    
-                                                               
+        merged_df['geojson'] = merged_df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))
+
 
     else:
         print("NOTE: no geometry data found")

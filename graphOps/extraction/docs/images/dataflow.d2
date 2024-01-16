@@ -1,7 +1,7 @@
 direction: right
 
 title:  |md
-  # UNESCO/IODE/ODIS/OIH Data Flow 
+  # ODIS/OIH Data Flow 
 
   Publically published items  
   indicated with syndication icon.
@@ -10,6 +10,7 @@ title:  |md
 classes: {
 odis: {
     width: 300
+    height: 320
                style: {
                      stroke-width: 0
                     fill: "#44C7B1"
@@ -20,6 +21,7 @@ odis: {
 
 partners: {
     width: 300
+    height: 320
                style: {
                      stroke-width: 0
                     fill: lightblue
@@ -30,6 +32,7 @@ partners: {
 
 oih: {
     width: 300
+    height: 320
                style: {
                      stroke-width: 0
                     fill: honeydew
@@ -68,8 +71,8 @@ kg: Knowledge Graph {
 ODIS KG
 
 * Format:  N-Quads
-* SHACL: coreset.ttl
 * Org: ODIS
+* SHACL: coreset.ttl
 * Published: True
    |
 published: "" {
@@ -184,8 +187,8 @@ solr.class: oih
 gjson.class: oih
 gpkg.class: oih
 
-s.note -> dg.note -> kg.note -> mdp.note 
-kg.note -> n.note
-mdp.note -> solr.note
-mdp.note -> gjson.note
-mdp.note -> gpkg.note
+s-> dg-> kg-> mdp
+kg-> n
+mdp-> solr
+mdp-> gjson
+mdp-> gpkg
