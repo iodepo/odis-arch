@@ -1,0 +1,114 @@
+direction: right
+
+title:  |md
+  # ODIS/OIH Activity Flow 
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+jld: JSON-LD Partner\nSource Files
+
+g: Gleaner
+
+s3: ODIS Digital Objects {
+jld:  Harvested JSON-LD \n Files
+nq:  RDF / nq Files
+}
+
+mdpgen: MDP Generator
+
+q: SPARQL \n Queries
+
+prod: Products {
+solr: Solr JSON
+p: Parquet 
+csv: CSV 
+}
+
+jld -> g 
+g -> s3.jld
+g -> s3.nq
+
+m2s: MDP To Solr
+prod.p -> m2s
+m2s -> prod.solr
+
+q -> mdpgen
+s3.nq -> mdpgen -> prod.p
+mdpgen -> prod.csv
+
+rel: MDP Releaser
+
+
+prod.p -> rel
+prod.csv -> rel
+s3.nq -> rel
+
+cloud:  Public Cloud \n Product Objects Releases
+rel -> cloud
+
+z: Zenodo Publisher
+
+cloud -> z
+z -> Zenodo
+
+jld.class: input
+q.class: input
+
+s3.jld.class:data
+s3.nq.class:data
+cloud.class: data
+prod.p.class: data
+prod.csv.class: data
+prod.solr.class: data
+Zenodo.class: data
+
+prod.class: group
+s3.class: group
+
+m2s.class: code
+g.class: code
+mdpgen.class: code
+rel.class: code
+z.class: code

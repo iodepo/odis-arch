@@ -1,0 +1,15 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT (?s as ?id) ?type ?txt_location
+WHERE {
+    graph ?g {
+        BIND(schema:Course AS ?type)
+        ?s rdf:type ?type .
+        ?s schema:hasCourseInstance	 ?instance  .
+        ?instance schema:location ?txt_location .
+     }
+}
