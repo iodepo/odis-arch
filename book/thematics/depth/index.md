@@ -66,6 +66,7 @@ The guidance:
 For external references to geospatial metadata:
 
 - Best to import and add to your own JSON-LD, so you can validate before pushing to ODIS (don’t want an upstream error to corrupt an otherwise valid record)
+- Min max depth URL examples: http://vocab.nerc.ac.uk/collection/P01/current/MAXWDIST/ and http://vocab.nerc.ac.uk/collection/P01/current/MINWDIST/
 
 
 CODE BLOCK [x] - Marine Regions reference

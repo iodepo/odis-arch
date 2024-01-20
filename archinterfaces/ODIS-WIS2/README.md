@@ -62,3 +62,8 @@ ROA is most notably realized in the design of RESTful APIs, which are intended t
 * https://github.com/wmo-im/wis2-gdc 
   * TODO:  SHACL for Table 2. WCMP record core properties 
 * mqtt vs pygeoapi 
+
+Needs 
+- boilerplate about ODIS and the vision of the interop with OIH and WIS2
+- workflow image (need to chat with them about how much to show in that)
+- https://docs.ogc.org/DRAFTS/20-004.html#clause-crawlable-catalog 

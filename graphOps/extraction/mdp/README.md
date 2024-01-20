@@ -25,13 +25,13 @@ for s3 something like the following can be used assuming you have set the enviro
  MINIO_ACCESS_KEY and  MINIO_SECRET_KEY.
 
 ```Bash
- python mdp.py  --source "s3://nas.local:54321/public/graphs/test1/africaioc_release.nq"  --output "./output/test.parquet"
+ python mdp.py  --source "s3://nas.local:49153/public/graphs/test1/africaioc_release.nq"  --output "./output/test.parquet"
 ```
 
 Can now save to s3 as well:
 
 ```Bash
- python mdp.py  --source "s3://nas.local:54321/public/graphs/test1/africaioc_release.nq"  --output "s3://nas.local:54321/public/graphs/products/africaioc.parquet"
+ python mdp.py  --source "s3://nas.local:49153/public/graphs/test1/africaioc_release.nq"  --output "s3://nas.local:54321/public/graphs/products/africaioc.parquet"
 ```
 
 At present, I only support Parquet and CSV output based on the file extension.  
@@ -40,4 +40,10 @@ At present, I only support Parquet and CSV output based on the file extension.
 
 ```Bash
 python mdp2Solr.py --source ./output/cioos.parquet --outputdir ./output/solr
+```
+
+## MDP2Solr
+
+```Bash
+ python mdp2solr.py  --source "s3://nas.local:49153/public/assets/africaioc.parquet"  --output "./output/solr/
 ```

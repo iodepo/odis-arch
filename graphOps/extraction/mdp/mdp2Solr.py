@@ -1,5 +1,5 @@
 import argparse
-import os
+import os, io
 import sys
 import numpy as np
 import pandas as pd
@@ -7,6 +7,8 @@ from objdict import ObjDict
 import boto3
 import pyarrow.parquet as pq
 import s3fs
+
+from defs import readobject
 
 # Master Data Product to Solr
 
@@ -25,23 +27,6 @@ def main():
         print("Error: the --outputdir argument is required")
         sys.exit(1)
 
-    # ---------------------------------------------------------------------
-    # make this part of an "if s3://" block?
-    session = boto3.Session(
-        aws_access_key_id='YOUR_ACCESS_KEY_ID',
-        aws_secret_access_key='YOUR_SECRET_ACCESS_KEY'
-    )
-
-    # s3 = s3fs.S3FileSystem(client_kwargs={'endpoint_url': 'https://your-custom-endpoint'})
-    s3 = s3fs.S3FileSystem(session=session)
-
-    file_path = 's3://your-bucket/your-parquet-file.parquet'
-
-    with s3.open(file_path, 'rb') as f:
-        df = pd.read_parquet(f)
-
-    # ---------------------------------------------------------------------
-
     u = args.source
     od = args.outputdir
 
@@ -55,10 +40,14 @@ def main():
         os.makedirs(od)
 
     # Load the master data product from ODIS
-    mf = pd.read_parquet(u)
+    # mf = pd.read_parquet(u)
+    b =  readobject.getBytes(u)
+    table = pq.read_table(io.BytesIO(b))
+
+    # Convert to pandas dataframe
+    mf = table.to_pandas()
 
     for index, row in mf.iterrows():
-
         data = ObjDict()
 
         # not in arrays
