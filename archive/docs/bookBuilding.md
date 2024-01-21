@@ -44,6 +44,20 @@ Note:  No edits or commits should be done in the _gh_pages_ branch by contributo
 Contributors can also build and view the book locally by using the following command either in their own
 branches or in Master.  
 
+Install dependencies:
+```Bash
+pip install -U jupyter-book
+```
+
+You will also beed to use the [requirements.txt](https://github.com/iodepo/odis-arch/blob/master/book/requirements.txt)
+file to install required elements.
+
+```Bash
+cd ./book
+pip install -r requirements.txt
+```
+
+from inside the _book_ directory use:
 ```bash
 jupyter-book clean . --all; jupyter-book build .;
 ```

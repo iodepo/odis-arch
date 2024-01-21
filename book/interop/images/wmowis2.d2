@@ -1,0 +1,108 @@
+direction: right
+
+title:  |md
+  # ODIS/OIH to WMO WIS2 Activity Diagram
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+                style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+oc: ODIScat
+jld: JSON-LD Partner\nSource Files
+
+g: Gleaner
+
+s3: ODIS Object Store {
+jld:  Harvested JSON-LD \n Files
+nq:  RDF / nq Files
+}
+
+mdpgen: MDP Generator
+
+q: ODIS \n SPARQL
+
+prod: ODIS Products {
+p: Parquet
+csv: CSV
+}
+
+oc -> g
+jld -> g
+g -> s3.jld
+g -> s3.nq
+
+
+q -> mdpgen
+s3.nq -> mdpgen
+mdpgen -> prod.p
+mdpgen -> prod.csv
+
+pprod: System System Interop {
+        wis2: WMO WIS2 \n GeoJSON
+}
+
+mdp2wis2.class: code
+        prod.p -> mdp2wis2
+        mdp2wis2 -> pprod.wis2
+
+wis2: WMO WIS2
+                wis2.shape: cloud
+
+        pprod.wis2 -> wis2
+
+oc.class: input
+jld.class: input
+q.class: input
+
+s3.jld.class:data
+s3.nq.class:data
+ prod.p.class: data
+prod.csv.class: data
+        pprod.wis2.class: data
+
+        pprod.class:group
+prod.class: group
+s3.class: group
+
+ g.class: code
+mdpgen.class: code
