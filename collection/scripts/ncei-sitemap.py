@@ -46,7 +46,7 @@ def printlink(url):
 original_stdout = sys.stdout # Save a reference to the original standard output    
 
 #create sitemap.xml    
-with open('sitemap.xml', 'w', newline='\n') as f:
+with open(NEW_SITEMAP_FILENAME, 'w', newline='\n') as f:
     sys.stdout = f # Change the standard output to the file we created.
     print ('<?xml version="1.0" encoding="UTF-8"?>')
     print ('<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">')
