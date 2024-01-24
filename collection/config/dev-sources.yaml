@@ -209,7 +209,24 @@ sources:
   #   backend: GeoNetwork  
   #   headless: false
   #   dateadded: 2022-08-03
-  #   active: false 
+  #   active: false
+  #
+  # WIO Symphony
+  # 
+  - name: wiosymphony
+    propername: WIO (Western Indian Ocean) Symphony
+    catalogue: https://symphony.nairobiconvention.org/login
+    domain: https://www.nairobiconvention.org/wio-symphony/
+    logo: https://www.nairobiconvention.org/wp-content/uploads/2019/05/nairobic_logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/wiosymphony
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wio-symphony/sitemap.xml
+    changefreq: monthly 
+    backend: Custom  
+    headless: false
+    dateadded: 2024-01-24
+    active: true  
   #
   # Leibniz Center for Tropical Marine Research (ZMT)
   # 
