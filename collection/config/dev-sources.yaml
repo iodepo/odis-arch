@@ -108,6 +108,25 @@ sources:
     cron: 0 9 * * 0 
     active: true
   #
+  # NCEI Marine Microplastics Catalogue
+  #    
+  #
+  - name: ncei
+    propername: NCEI Marine Microplastics Catalogue
+    catalogue: https://experience.arcgis.com/experience/b296879cc1984fda833a8acc93e31476 
+    domain: https://www.ncei.noaa.gov/products/microplastics
+    logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/ncei 
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ncei/sitemap.xml
+    changefreq: monthly
+    backend: custom
+    headless: false
+    dateadded: 2024-01-24
+    cron: 0 2 * * 0 
+    active: true    
+  #
   # ODIS Catalogue
   #
   - name: odiscat
