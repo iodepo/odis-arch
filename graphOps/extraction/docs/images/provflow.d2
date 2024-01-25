@@ -1,0 +1,62 @@
+direction: right
+
+title:  |md
+  # ODIS/OIH PROV Flow
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+
+r: Resources {
+        prov: Native prov \n in schema.org
+}
+a: Activity PROV
+
+kg: OIH Knowledge Graph
+val: SHACL Validation Graph
+
+r <- val: references
+r -> kg
+a <-> val
+a -> r : references

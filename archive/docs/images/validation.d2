@@ -1,0 +1,68 @@
+direction: right
+
+title:  |md
+  # Validation Activity Flow 
+
+| { near: top-center }
+
+classes: {
+data: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+input: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: lightblue
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+code: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: honeydew
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: pink
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+validation: {
+shacl: {
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/archive/diagrams/content/shacl-96.png
+}
+
+jsonld: {
+  icon: https://raw.githubusercontent.com/iodepo/odis-arch/master/archive/diagrams/content/jsonld.png
+}
+
+jsonld <- shacl
+*.class: data
+
+}
+validation.class: code
+
+r: Validation Results \n graph
+r.class: code
+
+validation -> r
