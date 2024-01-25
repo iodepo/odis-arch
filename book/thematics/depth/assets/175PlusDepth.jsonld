@@ -1,0 +1,104 @@
+
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://obis.org/dataset/49bbc435-2bff-432c-8dd4-b2e7b514ada3",
+    "name": "Cold water corals",
+    "description": "Dataset of cold water corals from seamounts.",
+    "url": "https://obis.org/dataset/49bbc435-2bff-432c-8dd4-b2e7b514ada3",
+    "sameAs": [
+        "http://ipt.vliz.be/eurobis/resource?r=obis_corals"
+    ],
+    "license": "This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License",
+    "citation": "Rogers, A. and J. Hall-Spencer. Cold-water Corals. UNEP World Conservation Monitoring Centre (UNEP-WCMC), 2005, Version 2.0.",
+    "version": "2023-09-23T11:41:08.000Z",
+    "keywords": [
+        "Zoobenthos",
+        "Occurrence",
+        "Observation"
+    ],
+    "variableMeasured": [
+            {
+           "@type": "PropertyValue",
+           "name": "minimumDepthInMeters",
+           "description": "Depth (spatial coordinate) relative to water surface in the water body. Definition: The minimum distance of a sensor or sampling point below the sea surface",
+           "propertyID": [
+               "https://dwc.tdwg.org/list/#dwc_minimumDepthInMeters"
+           ],
+           "minValue" : "5",
+           "unitText": "m",
+           "unitCode": [
+               "https://qudt.org/vocab/unit/M"
+           ]
+       },
+         {
+           "@type": "PropertyValue",
+           "name": "maximumDepthInMeters",
+           "description": "Depth (spatial coordinate) relative to water surface in the water body. Definition: The maximum distance of a sensor or sampling point below the sea surface",
+           "propertyID": [
+               "https://dwc.tdwg.org/list/#dwc_maximumDepthInMeters"
+           ],
+            "maxValue" : "3514",
+             "unitText": "m",
+           "unitCode": [
+               "https://qudt.org/vocab/unit/M"
+           ]
+       }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://obis.org",
+        "@type": "DataCatalog",
+        "url": "https://obis.org"
+    },
+    "temporalCoverage": "1868/2005",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://ipt.vliz.be/eurobis/archive.do?r=obis_corals",
+        "encodingFormat": "application/zip"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "-179.979995727539 -73.6800003051758,-179.979995727539 71.3499984741211,180 71.3499984741211,180 -73.6800003051758,-179.979995727539 -73.6800003051758",
+            "elevation": "-3514 m"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@id": "https://oceanexpert.org/institution/5804",
+            "@type": "Organization",
+            "legalName": "University of Plymouth",
+            "name": "University of Plymouth",
+            "url": "https://oceanexpert.org/institution/5804"
+        },
+        {
+            "@id": "https://oceanexpert.org/institution/6223",
+            "@type": "Organization",
+            "legalName": "Vlaams Instituut voor de Zee",
+            "name": "Vlaams Instituut voor de Zee",
+            "url": "https://oceanexpert.org/institution/6223"
+        },
+        {
+            "@id": "https://oceanexpert.org/institution/7168",
+            "@type": "Organization",
+            "legalName": "The Marine Biological Association of the United Kingdom",
+            "name": "The Marine Biological Association of the United Kingdom",
+            "url": "https://oceanexpert.org/institution/7168"
+        },
+        {
+            "@id": "https://oceanexpert.org/institution/13321",
+            "@type": "Organization",
+            "legalName": "National Oceanography Centre, Southampton",
+            "name": "National Oceanography Centre, Southampton",
+            "url": "https://oceanexpert.org/institution/13321"
+        }
+    ]
+}

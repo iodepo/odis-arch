@@ -3,15 +3,13 @@
 ## Introduction
 
 This document introduces approaches for the representation of depth in the
-metadata to aid in the discovery and filtering of resources of interest.
+metadata to aid in the discovery and filtering of resources of interest based
+on depth values.
 
 ## Scope
 
-Note that the scope of this work is related to the metadata and specifically
-leverages schema.org and geoSPARQL vocabularies to do this encoding.  It is
-not focused on the methods associated with depth in the data.
-
-## Depth
+The scope of this work is related to the metadata and specifically
+leverages schema.org and geoSPARQL vocabularies to do this encoding.
 
 We will address two areas in the data model for the representation of depth.
 One is that the depth is expressed in a variable measured.  The other than 
