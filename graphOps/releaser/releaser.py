@@ -3,41 +3,58 @@
 
 from minio import Minio
 from minio.commonconfig import CopySource
-import os
-
+import os, sys
+import argparse
 
 # read  oih/gleaner.oih/graphs/latest
 # copy into/over  public/graphs if not 0
 
 def main():
     # read the items in a prefix
-
     sk = os.getenv("MINIO_SECRET_KEY")
     ak = os.getenv("MINIO_ACCESS_KEY")
 
-    # Create client with access and secret key.
-    client = Minio("nas.lan:49153", ak, sk, secure=False)
+    parser = argparse.ArgumentParser(description="Process some arguments.")
+    parser.add_argument("--source", type=str, help="Source URL")
+    parser.add_argument("--output", type=str, help="Output file")
 
-    sbucket = "gleaner.oih"
-    sprefix = "graphs/latest/"
-    ll = olist(client, sbucket, sprefix)
+    args = parser.parse_args()
+
+    if args.source is None:
+        print("Error: the --source argument is required")
+        sys.exit(1)
+
+    if args.output is None:
+        print("Error: the --output argument is required")
+        sys.exit(1)
+
+    # URL for the release graph to process
+    s_url, s_bucket, s_obj = parse_s3_url(args.source)
+    o_url, o_bucket, o_obj = parse_s3_url(args.output)
+
+    # Create client with access and secret key.
+    client = Minio(s_url, ak, sk, secure=False)
+
+    # sbucket = "gleaner.oih"
+    # sprefix = "graphs/latest/"
+    ll = olist(client, s_bucket, s_obj)
     # for o in ll:
     #     print(o)
 
-    dbucket = "public"
-    dprefix = "graphs/test1/"
-    pl = olist(client, dbucket, dprefix)
+    # dbucket = "public"
+    # dprefix = "graphs/test1/"
+    pl = olist(client, o_bucket, o_obj)
     # for o in pl:
     #     print(o)
 
     print("------------------------")
 
     # dl = diff_lists(ll, pl)
-    dl = diff_lists(remove_prefix(ll, sprefix), remove_prefix(pl, dprefix))
+    dl = diff_lists(remove_prefix(ll, s_obj), remove_prefix(pl, o_obj))
 
     for o in dl:
         print("need to copy over {}".format(o))
-        ocopy(sbucket, sprefix, dbucket, dprefix, o, client)
+        ocopy(s_bucket, s_obj, o_bucket, o_obj, o, client)
 
 
 def ocopy(src_bucket, src_prefix, dst_bucket, dst_prefix, object_name, client):
@@ -81,6 +98,18 @@ def olist(client, bucket, prefix):
 
     return onl
 
+
+def parse_s3_url(s3_url):
+    protocol, url = s3_url.split("://")
+    if protocol != 's3':
+        raise ValueError('URL is not a valid S3 URL')
+
+    split_url = url.split("/")
+    server_url = split_url[0]
+    bucket_name = split_url[1]
+    object_path = "/".join(split_url[2:])
+
+    return server_url, bucket_name, object_path
 
 if __name__ == '__main__':
     main()

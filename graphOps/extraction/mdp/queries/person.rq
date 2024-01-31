@@ -9,6 +9,7 @@ WHERE {
     graph ?g {
         BIND(schema:Person AS ?type)
         ?s rdf:type ?type .
+        FILTER(!regex(str(?s), "genid"))
         OPTIONAL { ?s schema:address ?address . }
         OPTIONAL { ?s schema:knowsAbout ?txt_knowsAbout . }
         OPTIONAL { ?s schema:knowsLanguage ?txt_knowsLanguage . }

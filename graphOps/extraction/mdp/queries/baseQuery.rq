@@ -7,9 +7,16 @@ PREFIX schema: <https://schema.org/>
 
 SELECT DISTINCT (?s as ?id)  ?type ?name ?url ?description ?headline
 WHERE {
-         ?s rdf:type ?type .
+    graph ?g {
+        ?s rdf:type ?type .
+      FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                           schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                           schema:CourseInstance, schema:Event, schema:Vehicle)
+      )
+        FILTER(!regex(str(?s), "genid"))
         OPTIONAL { ?s schema:name ?name . }
         OPTIONAL { ?s schema:description ?description . }
         OPTIONAL { ?s schema:url ?url . }
         OPTIONAL { ?s schema:headline ?headline . }
+    }
  }

@@ -36,6 +36,7 @@ def read_object_to_string(mc, bucket_name, object_name):
     except Exception as e:
         print(e)
 
+
 def parse_s3_url(s3_url):
     protocol, url = s3_url.split("://")
     if protocol != 's3':

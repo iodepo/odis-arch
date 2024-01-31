@@ -1,12 +1,10 @@
 import warnings
-
-warnings.simplefilter(action='ignore', category=FutureWarning)  ## remove pandas future warning
 import pandas as pd
 import requests
 import re
 import kglab
 from tqdm import tqdm
-from rdflib import ConjunctiveGraph  # needed for nquads
+from rdflib import ConjunctiveGraph  # needed for quads
 from dateutil import parser
 import numpy as np
 import argparse
@@ -16,17 +14,15 @@ import gc
 from functools import reduce
 import pyarrow as pa
 import pyarrow.parquet as pq
-
-
-# import s3fs
-
 from defs import graphshapers
 from defs import readSource
 from defs import spatial
 from defs import regionFor
 from defs import load_queries
-
 from minio import Minio
+from defs import readobject
+
+warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas future warning
 
 
 def main():
@@ -46,38 +42,26 @@ def main():
 
     # URL for the release graph to process
     u = args.source
-    output_file = args.output
+    o = args.output
 
     dg = readSource.read_data(u)
     mf = graphProcessor(dg)
 
-    ### Reporting
+    # Reporting
     print("Reporting Stage: The following is the current dataframe shape to exported")
     print(mf.info())
 
-    ### Save to file
-    print("Saving results to file")
-    _, file_extension = os.path.splitext(output_file)
-
-    if file_extension == '.parquet':
-        mf.to_parquet(output_file, engine='fastparquet')  # engine must be one of 'pyarrow', 'fastparquet'
-    elif file_extension == '.csv':
-        mf.to_csv(output_file)
-    else:
-        print(f'Error: unsupported file extension {file_extension}. Support .parquet or .csv only')
-        sys.exit(1)
-
-    ## Save to minio
+    # Save to minio
+    # TODO move to a def file saveopbject.py
     print("Saving results to minio")
 
     sk = os.getenv("MINIO_SECRET_KEY")
     ak = os.getenv("MINIO_ACCESS_KEY")
 
-    # Create client with access and secret key.
-    mc = Minio("nas.lan:49153", ak, sk, secure=False)
+    srv, bkt, obj = readobject.parse_s3_url(o)
 
-    bucket_name = 'public'
-    object_name =  "graphs/products/{}".format(os.path.basename(output_file))
+    # Create client with access and secret key.
+    mc = Minio(srv, ak, sk, secure=False)
 
     # Convert the DataFrame to a parquet file
     table = pa.Table.from_pandas(mf)
@@ -86,7 +70,7 @@ def main():
     buf.seek(0)
 
     try:
-        mc.put_object(bucket_name, object_name,  buf, len(buf.getvalue()))
+        mc.put_object(bkt, obj,  buf, len(buf.getvalue()))
     except Exception as e:
         print(f"Error saving object: {e}")
 
@@ -121,10 +105,11 @@ def graphProcessor(dg):
 
     sfl = [
         "./queries/baseQuery.rq",
-        "./queries/sup_geo.rq",
-        "./queries/sup_temporal.rq",
+        "./queries/course.rq",
         "./queries/dataset.rq",
-        "./queries/person.rq"
+        "./queries/person.rq",
+        "./queries/sup_geo.rq",
+        "./queries/sup_temporal.rq"
     ]
 
     qlist = load_queries.read_files(sfl)

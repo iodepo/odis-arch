@@ -10,7 +10,7 @@ WHERE {
     graph ?g {
         BIND(schema:Dataset AS ?type)
         ?s rdf:type ?type .
-
+        FILTER(!regex(str(?s), "genid"))
         OPTIONAL { ?s schema:sameAs ?sameAs . }
         OPTIONAL { ?s schema:license ?license . }
         OPTIONAL { ?s schema:citation ?citation . }

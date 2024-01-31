@@ -52,19 +52,31 @@ jld: JSON-LD Partner\nSource Files
 g: Gleaner
 
 s3: ODIS Digital Objects {
-jld:  Harvested JSON-LD \n Files
-nq:  RDF / nq Files
+    jld:  Harvested JSON-LD \n Files
+    nq:  RDF / nq Files
 }
 
 mdpgen: MDP Generator
 
 q: SPARQL \n Queries
 
-prod: Products {
-solr: Solr JSON
-p: Parquet 
-csv: CSV 
+prod: ODIS Products {
+    solr: Solr JSON
+    p: Parquet
+    csv: CSV
 }
+
+# Validation
+val: Validation (GitHub Actions) {
+        sh: SHACL Shapes
+        shr: SHACL reports
+sh -> shr
+        sh.class: input
+        shr.class: code
+}
+        val.class: group
+
+s3.nq -> val
 
 jld -> g 
 g -> s3.jld
@@ -72,38 +84,72 @@ g -> s3.nq
 
 m2s: MDP To Solr
 prod.p -> m2s
-m2s -> prod.solr
+prod.solr <- m2s
 
 q -> mdpgen
 s3.nq -> mdpgen -> prod.p
-mdpgen -> prod.csv
+mdpgen -> prod.csv {
+  style: {
+    stroke-dash: 3
+  }
+}
 
 rel: MDP Releaser
 
 
 prod.p -> rel
-prod.csv -> rel
+prod.csv -> rel {
+  style: {
+    stroke-dash: 3
+  }
+}
 s3.nq -> rel
 
-cloud:  Public Cloud \n Product Objects Releases
-rel -> cloud
+pp: Public Products {
+    cloud: Public Cloud \n Product Objects Releases
+}
 
-z: Zenodo Publisher
+ui: Portal {
+        pui: Portal UI
+        solr: Solr
 
-cloud -> z
-z -> Zenodo
+                solr -> pui
+
+        *.class: code
+}
+
+dash: Dashboard {
+        dui: Dashboard UI
+        dui.class: code
+}
+
+        dash.class: group
+
+                prod.p -> dash.dui
+
+ui.class: group
+ prod.solr -> solrloader -> ui.solr
+solrloader.class: code
+rel -> pp.cloud
+
+zp: Zenodo Publisher
+z: Zenodo Objects
+
+pp.cloud -> zp
+zp -> z
 
 jld.class: input
 q.class: input
 
 s3.jld.class:data
 s3.nq.class:data
-cloud.class: data
+pp.cloud.class: data
 prod.p.class: data
 prod.csv.class: data
 prod.solr.class: data
-Zenodo.class: data
+z.class: data
 
+pp.class: group
 prod.class: group
 s3.class: group
 
@@ -111,4 +157,4 @@ m2s.class: code
 g.class: code
 mdpgen.class: code
 rel.class: code
-z.class: code
+zp.class: code

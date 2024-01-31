@@ -9,6 +9,7 @@ WHERE {
     graph ?g {
         BIND(schema:Course AS ?type)
         ?s rdf:type ?type .
+        FILTER(!regex(str(?s), "genid"))
         ?s schema:hasCourseInstance	 ?instance  .
         ?instance schema:location ?txt_location .
      }

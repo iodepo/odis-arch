@@ -18,6 +18,10 @@ An example command will be like:
 > NOTE:  A run for a graph the size of CIOOS takes around 4 to 5 minutes
 
 ```Bash
+ python mdp.py  --source "s3://nas.local:49153/public/graphs/test1/africaioc_release.nq"  --output  "s3://nas.local:49153/public/assets/test1/testjan30.parquet"
+```
+
+```Bash
 python mdp.py  --source "http://ossapi.oceaninfohub.org/public/graphs/summonedcioos_v1_release.nq"  --output "./output/cioos.parquet"
 ```
 
@@ -47,3 +51,28 @@ python mdp2Solr.py --source ./output/cioos.parquet --outputdir ./output/solr
 ```Bash
  python mdp2solr.py  --source "s3://nas.local:49153/public/assets/africaioc.parquet"  --output "./output/solr/
 ```
+
+## Testing with Oxigraph
+
+To test of the queries directly we want to be able to load up the RDF into Oxigraph (or your favorite triplestore) 
+and test our queries there directly.
+
+
+to load the graphs
+```Bash
+ curl -i -X PUT    -H 'Content-Type:text/x-nquads'    --data-binary @file.nq  http://localhost:7878/store
+```
+
+if you are using minio, you can cat the object directly into the triplestore
+
+```Bash
+mc cat nas/public/graphs/test1/africaioc_release.nq | curl -i -X PUT    -H 'Content-Type:text/x-nquads'    --data-binary @-  http://localhost:7878/store
+```
+
+
+to clear the graphs
+```Bash
+ curl -i -X POST -H "Content-Type:application/sparql-update" -d "CLEAR ALL"   http://localhost:7878/update
+```
+
+

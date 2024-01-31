@@ -11,6 +11,7 @@ WHERE {
                          schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
                          schema:CourseInstance, schema:Event, schema:Vehicle )
     )
+    FILTER(!regex(str(?s), "genid"))
     ?s schema:spatialCoverage ?sc .
     ?sc a schema:Place .
     OPTIONAL { ?sc schema:name ?placename } .
