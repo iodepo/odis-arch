@@ -21,6 +21,8 @@ from requests.exceptions import HTTPError
 from emoji import emojize
 import os
 import glob
+from minio import Minio
+import duckdb
 
 #### Set vars & paths
 
@@ -35,6 +37,26 @@ odisArchGitSchemaDevPath = "/home/apps/odis-dashboard/odis-arch-git-schema-dev-D
 dashboardPath = "/home/apps/odis-dashboard"
 
 sparqlTimeout = 1
+
+combinedParquet = "http://ossapi.oceaninfohub.org/public/assets/combined.parquet"
+
+### Setup minio
+
+def publicurls(client, bucket, prefix):
+    urls = []
+    objects = client.list_objects(bucket, prefix=prefix, recursive=True)
+    for obj in objects:
+        result = client.stat_object(bucket, obj.object_name)
+
+        if result.size > 0:  #  how to tell if an objet   obj.is_public  ?????
+            url = client.presigned_get_object(bucket, obj.object_name)
+            # print(f"Public URL for object: {url}")
+            urls.append(url)
+
+    return urls
+
+client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.
+urls = publicurls(client, "public", "assets")
     
 ######
 # page setup
@@ -46,7 +68,7 @@ st.set_page_config(
     page_title="OIH Dashboard",
     page_icon="https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded", ###or "collapsed"
     menu_items={
          'Report a bug': "https://github.com/iodepo/odis-arch/issues",
          'Get Help': 'https://oceaninfohub.org/contact-2/',         
@@ -338,24 +360,38 @@ if graphStatus == 1:
         with sumCol2:
             st.write("Number of Nodes")
             with st.spinner("Executing graph query..."): 
-                dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
-                st.subheader(len(dfOrgs))                
+                #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
+                #st.subheader(len(dfOrgs))
+                #for u in urls:
+                    #st.write(u)
+                # Instantiate the DuckDB connection
+                duckdbConn = duckdb.connect()
+                duckdbConn.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(combinedParquet))  # load from url
+                
+                #query for number of nodes
+                dfCount = duckdbConn.execute("SELECT COUNT(DISTINCT(provder)) as count FROM data").fetchdf()
+                
+                #st.write(dfCount["count"])
+                st.subheader(dfCount['count'].values[0])
+                
             #st.success("Done")            
 
         with sumCol3:
-            st.write("Number of Catalogues")
+            st.write("Number of Entities Described")
             global sparqlNumCatTimeout
             with st.spinner("Executing graph query..."):
-                dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
-                if sparqlTimeout == 0:
-                    dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
-                    dfProv.set_index('orgname', inplace=True)            
-                    st.subheader(dfProv['count'].sum())
-                    sparqlNumCatTimeout = 0
-                else:
-                    sparqlNumCatTimeout = 1
-                    st.write(':cry: *could not process Number of Catalogues query on graph*')               
-        
+                # dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
+                # if sparqlTimeout == 0:
+                    # dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
+                    # dfProv.set_index('orgname', inplace=True)            
+                    # st.subheader(dfProv['count'].sum())
+                    # sparqlNumCatTimeout = 0
+                # else:
+                    # sparqlNumCatTimeout = 1
+                    # st.write(':cry: *could not process Number of Catalogues query on graph*')               
+                dfOrgCount = duckdbConn.execute("SELECT provder, COUNT(*) AS count FROM data GROUP BY provder ORDER BY count DESC" ).fetchdf()
+                st.subheader(dfOrgCount['count'].sum())
+                
         sumCol4, sumCol5, sumCol6 = st.columns(3, gap="medium")
 
         with sumCol4:
@@ -416,12 +452,14 @@ if graphStatus == 1:
                     #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")        
                     
         with sumCol5:
-            st.write("Types indexed")
+            st.write("ODIS patterns indexed")
             #dfTypes.columns = dfTypes.columns.str.replace('type', 'Pattern Type')
             #dfTypes.columns = dfTypes.columns.str.replace('count', 'Count')
-            dfTypes.loc['Total']= dfTypes.sum()
-            st.write(dfTypes.head(50))
-
+            #dfTypes.loc['Total']= dfTypes.sum()
+            #st.write(dfTypes.head(50))
+            dfTypesCount = duckdbConn.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data GROUP BY type order by count desc").fetchdf()
+            st.write(dfTypesCount)
+            
         with sumCol6:
             st.write("Timeline: when added to Graph")
             # #st.write(dfProv.plot.pie(y='count',legend=False, figsize=(10, 10)))
@@ -448,11 +486,13 @@ if graphStatus == 1:
         with sumCol7:
             st.write("Keywords")
             with st.spinner("Executing graph query..."):            
-                dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
-                dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
-                dfKeywords.set_index('keywords', inplace=True)            
-                dfKeywords.loc['Total']= dfKeywords.sum()
-                st.write(dfKeywords.head(50))
+                #dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
+                #dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
+                #dfKeywords.set_index('keywords', inplace=True)            
+                #dfKeywords.loc['Total']= dfKeywords.sum()
+                #st.write(dfKeywords.head(50))
+                dfKeywordsCount = duckdbConn.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data GROUP BY keywords order by count desc").fetchdf()
+                st.write(dfKeywordsCount)
             
         with sumCol8:
             st.write("Predicates")
@@ -489,190 +529,214 @@ if graphStatus == 1:
             dfJoinedDev.loc[dfJoinedDev['Sitemap Status'] == 0, 'Sitemap Status'] = "\u2705"
             dfJoinedDev.loc[dfJoinedDev['Sitemap Status'] == 1, 'Sitemap Status'] = "\u274C"
             dfJoinedDev.to_html(render_links=True, escape=False)
-            st.dataframe(dfJoinedDev)        
+            st.dataframe(dfJoinedDev)
         
     with st.expander("OIH Node Summary", expanded=False):
     
-        if sparqlNumCatTimeout == 0:            
+        #if sparqlNumCatTimeout == 0:            
     
-            #use markdown trick, as st.expander label cannot be styled
-            #      see https://github.com/streamlit/streamlit/issues/2056
-            st.markdown(
-            """
-            <style>
-            .streamlit-expanderHeader {
-              font-size: large;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-            )
+        #use markdown trick, as st.expander label cannot be styled
+        #      see https://github.com/streamlit/streamlit/issues/2056
+        st.markdown(
+        """
+        <style>
+        .streamlit-expanderHeader {
+          font-size: large;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+        )
+        #dfOrgCount = duckdbConn.execute("SELECT provder, COUNT(*) AS count FROM data GROUP BY provder ORDER BY count DESC" ).fetchdf()
 
-            # top-level filters
-            #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
-            node_filter = st.selectbox("Select an ODIS node", dfOrgs, index=8)
-            
-            # creating a single-element container
-            placeholder = st.empty()
-            
-            # dataframe filter
-            dfProvFilter = dfProv[dfProv.index == node_filter]
-            
-            with placeholder.container():
+        dfOrgNames = duckdbConn.execute("SELECT DISTINCT(provder) as provder FROM data ORDER BY provder ASC").fetchdf()
+        #st.dataframe(dfOrgNames)
+
+        #st.dataframe(dfJoined[['Node']])
+        
+        # top-level filters
+        #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
+        #node_filter = st.selectbox("Select an ODIS node", dfOrgs, index=8)
+        #node_filter = st.selectbox("Select an ODIS node", dfOrgNames, index=2)
+        node_filter = st.selectbox("Select an ODIS node", dfJoined[['Node']], index=6)
+        
+        # creating a single-element container
+        placeholder = st.empty()
+        
+        # # dataframe filter
+        # dfProvFilter = dfProv[dfProv.index == node_filter]
+        
+        with placeholder.container():
+         
+            # create four columns
+            nodeCol1, nodeCol2, nodeCol3, nodeCol4 = st.columns([1, 1, 1, 1], gap="small")
              
-                # create four columns
-                nodeCol1, nodeCol2, nodeCol3, nodeCol4 = st.columns([1, 1, 1, 1], gap="small")
+            with nodeCol1:
+                st.write("Sitemap Status")
+                #st.write(dfJoinedRaw.columns.tolist())
+                #st.write(dfJoined.columns.tolist())
+                #st.dataframe(dfJoinedRaw)
+                dfRecord = dfJoinedRaw[dfJoinedRaw['propername_sitemap'] == node_filter]
+                shortName =  dfRecord.index.values[0]
+                #st.dataframe(dfRecord)                
+                nodeStatus = dfRecord[["code"]].values[0].item()
+                #dfName = dfJoinedRaw[['code', 'propername']]
+                #dfName
+                #nodeStatus = dfName.loc[dfName['propername'].casefold() == node_filter.casefold(), 'code'].item()
+                if nodeStatus == 0:
+                    st.subheader(":white_check_mark:" + " Valid")
+                else:
+                    st.subheader(":x:" + " Error")            
                  
-                with nodeCol1:
-                    st.write("Sitemap Status")
-                    #st.write(dfJoinedRaw.columns.tolist())
-                    dfRecord = dfJoinedRaw[dfJoinedRaw['propername'] == node_filter]
-                    nodeStatus = dfRecord[["code"]].values[0].item()
-                    #dfName = dfJoinedRaw[['code', 'propername']]
-                    #dfName
-                    #nodeStatus = dfName.loc[dfName['propername'].casefold() == node_filter.casefold(), 'code'].item()
-                    if nodeStatus == 0:
-                        st.subheader(":white_check_mark:" + " Valid")
-                    else:
-                        st.subheader(":x:" + " Error")            
-                     
-                with nodeCol2:
-                    st.write("Sitemap resources")
-                    sitemapDesc = dfRecord[["description"]].values[0].item()
-                    sitemapType = dfRecord[["type"]].values[0].item()
-                    if sitemapType == "sitemap":
-                        st.subheader(sitemapDesc.split(':')[0].rstrip())
-                    else:
-                        st.subheader("sitegraph: 1")
-                    #st.write(sitemapResources)
-                 
-                with nodeCol3:
-                    st.write("Number of Catalogues")
-                    st.subheader(dfProvFilter['count'].sum())
-                
-                with nodeCol4:
-                    st.write("Date indexed to OIH Graph")
-                    # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
-                    # names = df['propername'].tolist()
-                    # dates = df['dates'].tolist()
-                      # # Convert date strings (e.g. 2014-10-18) to datetime
-                    # dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
-                    # if "INVEMAR" in node_filter: 
-                        # mask = df['propername'].values ==  "INVEMAR"
-                    # else:
-                        # mask = df['propername'].values ==  node_filter
-                    # df_orgDate = df[mask]
-                    # st.subheader(df_orgDate['dates'].values[0])
-                
-                    with open(odisArchGitMasterPath + "/config/production-sources.yaml", 'r') as f:
-                        valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
-                    
-                    sourcesLength = len(valuesYaml['sources'])
-                    #sourcesLength
-                    
-                    #loop through YAML
-                    for recNum in range(0, sourcesLength):
-                        properName = valuesYaml['sources'][recNum]['propername']
-                        #properName
-                        if (properName.casefold() == node_filter.casefold()):
-                            dateAdded = valuesYaml['sources'][recNum]['dateadded']
-                    st.subheader(dateAdded)
-                        
-                nodeCol5, nodeCol6, nodeCol7, nodeCol8 = st.columns([1, 1, 1, 1], gap="small")
-                     
-                with nodeCol5:
-                    st.write("Sitemap URL")
-                    sitemapUrl = dfRecord[["url_sitemap"]].values[0].item()
-                    st.write(sitemapUrl)
-                    
-                with nodeCol6:
-                    st.write("Catalogue Home")
-                    catalogueUrl = dfRecord[["catalogue"]].values[0].item()
-                    st.write(catalogueUrl) 
-                
-                with nodeCol7:
-                    st.empty()   
-                
-                with nodeCol8:
-                    st.write("")
-                    logoUrl = dfRecord[["logo"]].values[0].item()
-                    st.image(logoUrl, width=300)                     
-                    
-                nodeCol9, nodeCol10, nodeCol11 = st.columns(3, gap="medium")
-                
-                with nodeCol9:
-                    st.write("Types indexed")
-                    rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                           PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                           PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                           PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                           PREFIX schema: <https://schema.org/>
-                           PREFIX schemaold: <http://schema.org/>
-                           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-                  
-                  
-                           SELECT   ( COUNT(?type) as ?count) ?type   
-                           WHERE
-                           {
-                   
-                             ?s rdf:type ?type .
-                             ?wat rdf:name ?orgname .
-                             FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
-                           """
-                    rq_types_org2 = "FILTER (?orgname = '" + node_filter + "') ."
-                    rq_types_org3 = """                   
-                           }
-                           GROUP BY ?type  
-                           ORDER BY DESC(?count)
-                           """
+            with nodeCol2:
+                st.write("Sitemap resources")
+                sitemapDesc = dfRecord[["description"]].values[0].item()
+                sitemapType = dfRecord[["type"]].values[0].item()
+                if sitemapType == "sitemap":
+                    st.subheader(dfRecord[["count"]].values[0].item())
+                    #st.subheader(sitemapDesc.split(':')[0].rstrip())
+                    #output = [x for x in sitemapDesc.split() if x.startswith('http://') or x.startswith('https://')]
+                    #st.subheader(output[0])
+                else:
+                    st.subheader("sitegraph: 1")
+                #st.write(sitemapResources)
+             
+            # with nodeCol3:
+                # st.write("Number of Catalogues")
+                # st.subheader(dfProvFilter['count'].sum())
             
-                    #@st.cache(allow_output_mutation=True)
-                    with st.spinner("Executing graph query..."):                
-                        dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
-                        dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
-                        dfTypesOrg.set_index('type', inplace=True)
-                        dfTypesOrg.loc['Total']= dfTypesOrg.sum()
-                        st.write(dfTypesOrg.head(50))
-                        #st.dataframe(data=dfTypesOrg, width=400, height=None)
+            with nodeCol4:
+                st.write("Date indexed to OIH Graph")
+                # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
+                # names = df['propername'].tolist()
+                # dates = df['dates'].tolist()
+                  # # Convert date strings (e.g. 2014-10-18) to datetime
+                # dates = [datetime.strptime(d, "%Y-%m-%d") for d in dates]
+                # if "INVEMAR" in node_filter: 
+                    # mask = df['propername'].values ==  "INVEMAR"
+                # else:
+                    # mask = df['propername'].values ==  node_filter
+                # df_orgDate = df[mask]
+                # st.subheader(df_orgDate['dates'].values[0])
+            
+                with open(odisArchGitMasterPath + "/collection/config/production-sources.yaml", 'r') as f:
+                    valuesYaml = yaml.load(f, Loader=yaml.FullLoader)
+                
+                sourcesLength = len(valuesYaml['sources'])
+                #sourcesLength
+                
+                #loop through YAML
+                for recNum in range(0, sourcesLength):
+                    properName = valuesYaml['sources'][recNum]['propername']
+                    #properName
+                    if (properName.casefold() == node_filter.casefold()):
+                        dateAdded = valuesYaml['sources'][recNum]['dateadded']
+                st.subheader(dateAdded)
                     
-                with nodeCol10:
-                    st.write("Keywords")
-                    rq_keywords_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                        PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                        PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                        PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                        PREFIX schema: <https://schema.org/>
-                        PREFIX schemaold: <http://schema.org/>
-                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            nodeCol5, nodeCol6, nodeCol7, nodeCol8 = st.columns([1, 1, 1, 1], gap="small")
+                 
+            with nodeCol5:
+                st.empty()
+                st.write("Sitemap URL")
+                sitemapUrl = dfRecord[["url_sitemap"]].values[0].item()
+                st.write(sitemapUrl)
                 
-                        SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
-                        WHERE
-                        {
-                           ?s schema:keywords ?keywords .
-                           ?wat rdf:name ?orgname .
-                        """
+            with nodeCol6:
+                st.write("Catalogue Home")
+                catalogueUrl = dfRecord[["catalogue"]].values[0].item()
+                st.write(catalogueUrl) 
+            
+            with nodeCol7:
+                st.empty()   
+            
+            with nodeCol8:
+                st.write("")
+                logoUrl = dfRecord[["logo"]].values[0].item()
+                st.image(logoUrl, width=300)                     
                 
-                    rq_keywords_org2 = "FILTER (?orgname = '" + node_filter + "') ."
-                    rq_keywords_org3 = """        }
-                        GROUP BY ?keywords
-                        ORDER BY DESC(?count)
-                        """        
-                    #@st.cache(allow_output_mutation=True)
-                    with st.spinner("Executing graph query..."):                
-                        dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                        dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
-                        dfKeywordsOrg.set_index('keywords', inplace=True)
-                        #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
-                        st.write(dfKeywordsOrg.head(50))  
-           
-                with nodeCol11:
-                    st.empty() 
+            nodeCol9, nodeCol10, nodeCol11 = st.columns(3, gap="medium")
+            
+            with nodeCol9:
+                st.write("Types indexed")
+                # rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
+                       # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                       # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                       # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                       # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                       # PREFIX schema: <https://schema.org/>
+                       # PREFIX schemaold: <http://schema.org/>
+                       # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+              
+              
+                       # SELECT   ( COUNT(?type) as ?count) ?type   
+                       # WHERE
+                       # {
+               
+                         # ?s rdf:type ?type .
+                         # ?wat rdf:name ?orgname .
+                         # FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
+                       # """
+                # rq_types_org2 = "FILTER (?orgname = '" + node_filter + "') ."
+                # rq_types_org3 = """                   
+                       # }
+                       # GROUP BY ?type  
+                       # ORDER BY DESC(?count)
+                       # """
+        
+                # #@st.cache(allow_output_mutation=True)
+                # with st.spinner("Executing graph query..."):                
+                    # dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
+                    # dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
+                    # dfTypesOrg.set_index('type', inplace=True)
+                    # dfTypesOrg.loc['Total']= dfTypesOrg.sum()
+                    # st.write(dfTypesOrg.head(50))
+                    # #st.dataframe(data=dfTypesOrg, width=400, height=None)
+                #dfTypeCount = duckdbConn.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data WHERE provder = 'cioos' GROUP BY type order by count desc").fetchdf()
+                dfTypeCount = duckdbConn.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data WHERE provder = '" + shortName + "' GROUP BY type order by count desc").fetchdf()                
+                st.write(dfTypeCount)
+                
+            with nodeCol10:
+                st.write("Keywords")
+                # rq_keywords_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
+                    # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                    # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                    # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                    # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    # PREFIX schema: <https://schema.org/>
+                    # PREFIX schemaold: <http://schema.org/>
+                    # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            
+                    # SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
+                    # WHERE
+                    # {
+                       # ?s schema:keywords ?keywords .
+                       # ?wat rdf:name ?orgname .
+                    # """
+            
+                # rq_keywords_org2 = "FILTER (?orgname = '" + node_filter + "') ."
+                # rq_keywords_org3 = """        }
+                    # GROUP BY ?keywords
+                    # ORDER BY DESC(?count)
+                    # """        
+                # #@st.cache(allow_output_mutation=True)
+                # with st.spinner("Executing graph query..."):                
+                    # dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                    # dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
+                    # dfKeywordsOrg.set_index('keywords', inplace=True)
+                    # #st.write(rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
+                    # st.write(dfKeywordsOrg.head(50))
+                dfKeywordsCount = duckdbConn.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data WHERE provder = '" + shortName + "' GROUP BY keywords order by count desc").fetchdf()
+                #dfKeywordsCount = duckdbConn.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data WHERE provder = 'cioos' GROUP BY keywords order by count desc").fetchdf()
+                st.write(dfKeywordsCount)                    
+        
+            with nodeCol11:
+                st.empty() 
 
-        else: 
-            st.write(':cry: *could not query graph to generate Node summary*')     
+        #else: 
+            #st.write(':cry: *could not query graph to generate Node summary*')     
            
+        duckdbConn.close()            
+
     with st.expander("About the Dashboard", expanded=False):
            
         #use markdown trick, as st.expander label cannot be styled
