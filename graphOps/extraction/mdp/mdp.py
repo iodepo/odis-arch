@@ -1,26 +1,23 @@
-import warnings
-import pandas as pd
-import requests
-import re
-import kglab
-from tqdm import tqdm
-from rdflib import ConjunctiveGraph  # needed for quads
-from dateutil import parser
-import numpy as np
 import argparse
-import sys
-import os, io
 import gc
+import re
+import sys
+import warnings
 from functools import reduce
-import pyarrow as pa
-import pyarrow.parquet as pq
+
+import kglab
+import numpy as np
+import pandas as pd
+from dateutil import parser
+from rdflib import ConjunctiveGraph  # needed for quads
+from tqdm import tqdm
+
 from defs import graphshapers
-from defs import readSource
-from defs import spatial
-from defs import regionFor
 from defs import load_queries
-from minio import Minio
-from defs import readobject
+from defs import readSource
+from defs import regionFor
+from defs import spatial
+from defs import saveobject
 
 warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas future warning
 
@@ -52,27 +49,8 @@ def main():
     print(mf.info())
 
     # Save to minio
-    # TODO move to a def file saveopbject.py
-    print("Saving results to minio")
-
-    sk = os.getenv("MINIO_SECRET_KEY")
-    ak = os.getenv("MINIO_ACCESS_KEY")
-
-    srv, bkt, obj = readobject.parse_s3_url(o)
-
-    # Create client with access and secret key.
-    mc = Minio(srv, ak, sk, secure=False)
-
-    # Convert the DataFrame to a parquet file
-    table = pa.Table.from_pandas(mf)
-    buf = io.BytesIO()
-    pq.write_table(table, buf)
-    buf.seek(0)
-
-    try:
-        mc.put_object(bkt, obj,  buf, len(buf.getvalue()))
-    except Exception as e:
-        print(f"Error saving object: {e}")
+    # TODO move to a def file saveobject.py
+    saveobject.write_data(o, mf)
 
 
 def graphProcessor(dg):

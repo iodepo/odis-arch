@@ -41,7 +41,7 @@ def main():
 
     # Load the master data product from ODIS
     # mf = pd.read_parquet(u)
-    b =  readobject.getBytes(u)
+    b =  readobject.get_bytes(u)
     table = pq.read_table(io.BytesIO(b))
 
     # Convert to pandas dataframe

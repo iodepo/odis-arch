@@ -1,9 +1,7 @@
 import os
-import boto3
 from minio import Minio
 
-
-def getBytes(source):
+def write_bytes(source):
     url, bucket, obj = parse_s3_url(source)
 
     sk = os.getenv("MINIO_SECRET_KEY")
@@ -16,6 +14,21 @@ def getBytes(source):
 
     return d
 
+
+def get_bytes(source):
+    url, bucket, obj = parse_s3_url(source)
+
+    sk = os.getenv("MINIO_SECRET_KEY")
+    ak = os.getenv("MINIO_ACCESS_KEY")
+
+    # Create client with access and secret key.
+    mc = Minio(url, ak, sk, secure=False)
+    data = mc.get_object(bucket, obj)
+    d = data.read()
+
+    return d
+
+
 def reads3url(source):
     url, bucket, obj = parse_s3_url(source)
 
@@ -27,6 +40,7 @@ def reads3url(source):
     d = read_object_to_string(mc, bucket, obj)
 
     return d
+
 
 def read_object_to_string(mc, bucket_name, object_name):
     try:
