@@ -6,6 +6,29 @@ This page describes - at a high level - how a digital system with access to the 
 
 Any system providing data (in a broad sense, including documents, software code, etc) and/or services that are relevant to ocean science, management, policy, commerce, or other ocean-relevant activities is welcome to connect to ODIS. A light curation of ODIS nodes is performed by IODE's team, and the entire Federation self-regulates, voicing concern if they believe nodes.
 
+
+## Registering your organisation
+
+Organisations which contribute to the ODIS Federation need an unambiguous identity on the web. This is not (necessarily) the same as your organisation's website: A web identifier is focused on machine-readable metadata and will not change (even if your organisation changes its name). It's important that this digital identity is sanctioned by your organisation's leadership and administration, such that it is an official identifier and kept up to date (like an ORCID for your organisation).
+
+### OceanExpert 
+
+We recommend that your organisation creates and maintains an OceanExpert ID. OceanExpert (OE) is maintained by the IODE and is deeply integrated into ocean data flows. For example, OE is - itself - an ODIS node, thus any data you add there will automatically be shared through the ODIS Federation.
+
+Creating an entry is a matter of a few minutes, and requires no technical skill beyond using a web browser. However, it is key that your organisation is aware of the OE entry and approves its creation. Additionally, an individual should be nominated to maintain the entry. 
+
+
+## Registering your (meta)data node(s)
+
+Now that your organisation has an identifier on the web, you can register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources (ODISCat) is the system we use to register, describe, and interlink data sources that feed into ODIS.
+
+Note: One organisation can operate many such nodes (e.g. for different types of data, services, etc). 
+
+To register a source, simply go to the ODISCat website [TODO: Add link], log in with your OE credentials, and create an entry. This should take around 10 minutes.
+
+ODISCat has a dedicated field to let the ODIS Federation know where your metadata is. Leave that blank for now: we'll come back to this after we prepare content to share via ODIS.
+
+
 ## Preparing content 
 
 All ODIS nodes share metadata about their holdings (datasets, documents, organisational information, etc) and services (APIs, portals) by exposing structured metadata catalogues over the web. 
@@ -43,27 +66,16 @@ What follows will be a few rounds of specification development, before we add th
 
 Now that you have content to share, you'll have to tell other agents on the web where to find it. This should be done by setting up a sitemap, that points to each JSON-LD file you wish the ODIS Federation to be aware of. 
 
-If you have many thousands of entries, or you have subsets of links to share, you can use a 'sitemap of sitemaps'  approach, where one sitemap can point to several others.
+An example ODIS sitemap can be seen here [TODO:Add link]
+
+Note: If you have many thousands of entries, or you have subsets of links to share, you can use a 'sitemap of sitemaps'  approach, where one sitemap can point to several others.
 
 ### Frequency of change
 
 Add metadata on how often you expect records in your sitemap to change - this will tell systems like OIH how often to reindex your holdings.
 
-## Registering your organisation
 
-Once you have some content you're ready to share across the ODIS Federation, you'll have to register your organisation so that it has an unambiguous identity on the web. It's important that this digital identity is sanctioned by your organisation's leadership and administration, such that it is an official identifier and kept up to date (like an ORCID for your organisation).
-
-## OceanExpert 
-
-## Alternatives
-
-## Registering your (meta)data node(s)
-
-Now that your organisation has an identifier on the web, you can register the data systems you wish to connect as ODIS nodes. One organisation can operate many such nodes (e.g. for different types of data, services, etc). 
-
-### ODISCat
-
-ODISCat has a dedicated field for you to let the ODIS Federation where your sitemap is, so they can access your metadata catalogue and explore your holdings.
+## Coming full circle: registering your sitemap in ODISCat
 
 
 
