@@ -143,7 +143,24 @@ sources:
     headless: false
     dateadded: 2023-10-19
     cron: 0 11 * * 0 
-    active: true     
+    active: true
+  #
+  # Aquatic Sciences and Fisheries Abstracts (OpenASFA)
+  #
+  - name: openasfa
+    propername: Aquatic Sciences and Fisheries Abstracts (OpenASFA)
+    catalogue: https://www.fao.org/fishery/en/openasfa
+    domain: https://www.fao.org/fishery/en
+    logo: https://www.fao.org/fishery/assets/fao-logo-blue.svg
+    pid: https://catalogue.odis.org/view/3277
+    sourcetype: sitemap
+    url: https://www.fao.org/fishery/sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2024-02-02
+    cron: 0 11 * * 0 
+    active: true    
   #
   # Observing System Monitoring Center
   #
@@ -166,7 +183,7 @@ sources:
   # POGO
   # 
   - name: pogo
-    propername: Partnership for Observation of the Global Ocean
+    propername: Partnership for Observation of the Global Ocean (POGO)
     catalogue: https://pogo-ocean.org/
     domain: https://geoblueplanet.org/
     logo: https://pogo-ocean.org/wp-content/uploads/2020/02/POGO1_long-01-768x135.png
