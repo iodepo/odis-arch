@@ -537,7 +537,7 @@ if graphStatus == 1:
         numberOfNodes = len(dfJoined.index) + len(dfJoinedDev.index)       
         sumCol2.subheader(numberOfNodes)       
         
-    with st.expander("OIH Node Summary", expanded=False):
+    with st.expander("ODIS Node Summary", expanded=False):
     
         #if sparqlNumCatTimeout == 0:            
     
@@ -612,7 +612,7 @@ if graphStatus == 1:
                 # st.subheader(dfProvFilter['count'].sum())
             
             with nodeCol4:
-                st.write("Date indexed to OIH Graph")
+                st.write("Date indexed to ODIS Graph")
                 # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
                 # names = df['propername'].tolist()
                 # dates = df['dates'].tolist()
