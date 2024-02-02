@@ -65,7 +65,7 @@ urls = publicurls(client, "public", "assets")
 #st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.set_page_config(
-    page_title="OIH Dashboard",
+    page_title="ODIS Dashboard",
     page_icon="https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png",
     layout="wide",
     initial_sidebar_state="expanded", ###or "collapsed"
@@ -77,8 +77,8 @@ st.set_page_config(
 )
 
 # dashboard title
-st.title("OIH Dashboard")
-st.markdown("This dashboard will help monitor the OIH graph, as well as the nodes connected to it.")
+st.title("ODIS Dashboard")
+st.markdown("This dashboard will help monitor the ODIS graph, as well as the nodes connected to it.")
 
 # OpenHub badge source
 openhub_badge_html = f"<script type='text/javascript' src='https://www.openhub.net/p/odis-arch/widgets/project_thin_badge?format=js'></script>"
@@ -100,7 +100,7 @@ with st.sidebar:
     st.subheader('Types')
     st.markdown('The ODIS graph leverages core [thematic patterns](https://book.oceaninfohub.org/thematics/README.html), which are expanded from [schema.org](https://schema.org/docs/full.html) types.')    
 
-with st.expander("OIH Graph Endpoint Status", expanded=True):
+with st.expander("ODIS Graph Endpoint Status", expanded=True):
 
     #use markdown trick, as st.expander label cannot be styled
     #      see https://github.com/streamlit/streamlit/issues/2056
@@ -170,7 +170,7 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         ### Queries
         # 
         # What follows is a set of queries designed to provide a feel 
-        # for the OIH graph
+        # for the ODIS graph
 
         #### Simple Count
         # 
@@ -330,8 +330,8 @@ with st.expander("OIH Graph Endpoint Status", expanded=True):
         # dfWKTCount.set_index('p', inplace=True)
 
 if graphStatus == 1:
-    #st.header("OIH Graph Summary")
-    with st.expander("OIH Graph Summary", expanded=True):
+    #st.header("ODIS Graph Summary")
+    with st.expander("ODIS Graph Summary", expanded=True):
 
         #use markdown trick, as st.expander label cannot be styled
         #      see https://github.com/streamlit/streamlit/issues/2056
@@ -351,7 +351,7 @@ if graphStatus == 1:
         sumCol1, sumCol2, sumCol3 = st.columns(3, gap="medium")
 
         with sumCol1:
-            st.write("Size of OIH graph")
+            st.write("Size of ODIS graph")
             with st.spinner("Executing graph query..."):
                 dfCount = get_sparql_dataframe(oihGraphEndpoint, rq_count)
                 st.subheader(dfCount['Triples'].values[0] + " triples")                
@@ -359,6 +359,7 @@ if graphStatus == 1:
 
         with sumCol2:
             st.write("Number of Nodes")
+            global numberOfNodes
             with st.spinner("Executing graph query..."): 
                 #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
                 #st.subheader(len(dfOrgs))
@@ -372,13 +373,14 @@ if graphStatus == 1:
                 dfCount = duckdbConn.execute("SELECT COUNT(DISTINCT(provder)) as count FROM data").fetchdf()
                 
                 #st.write(dfCount["count"])
-                st.subheader(dfCount['count'].values[0])
+                numberOfNodes = dfCount['count'].values[0]
+                #st.subheader(numberOfNodes)
                 
             #st.success("Done")            
 
         with sumCol3:
             st.write("Number of Entities Described")
-            global sparqlNumCatTimeout
+            #global sparqlNumCatTimeout
             with st.spinner("Executing graph query..."):
                 # dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
                 # if sparqlTimeout == 0:
@@ -449,7 +451,7 @@ if graphStatus == 1:
                     dfJoined.to_html(render_links=True, escape=False)        
                     st.dataframe(dfJoined[['Sitemap Status', 'Node']])
                     st.write("Sitemap status (source [csv](" + sitemapCheckerBlobUrl + "))")                    
-                    #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")        
+                    #st.write("source [csv](" + sitemapCheckerBlobUrl + ")")                                                         
                     
         with sumCol5:
             st.write("ODIS patterns indexed")
@@ -530,6 +532,10 @@ if graphStatus == 1:
             dfJoinedDev.loc[dfJoinedDev['Sitemap Status'] == 1, 'Sitemap Status'] = "\u274C"
             dfJoinedDev.to_html(render_links=True, escape=False)
             st.dataframe(dfJoinedDev)
+         
+        #update node count
+        numberOfNodes = len(dfJoined.index) + len(dfJoinedDev.index)       
+        sumCol2.subheader(numberOfNodes)       
         
     with st.expander("OIH Node Summary", expanded=False):
     
@@ -735,7 +741,7 @@ if graphStatus == 1:
         #else: 
             #st.write(':cry: *could not query graph to generate Node summary*')     
            
-        duckdbConn.close()            
+        duckdbConn.close() 
 
     with st.expander("About the Dashboard", expanded=False):
            
