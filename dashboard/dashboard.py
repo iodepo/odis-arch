@@ -88,7 +88,8 @@ html(openhub_badge_html)
 with st.sidebar:
     st.header('Glossary')
     st.subheader('ODIS')
-    st.markdown('The Ocean Data Information System (ODIS) is managed by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) and is based on a community-maintained Knowledge Graph, that leverages the [schema.org](https://schema.org) framework.  See the [ODIS book](https://book.oceaninfohub.org/) of documentation.')    
+    #st.markdown('The Ocean Data Information System (ODIS) is managed by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) and is based on a community-maintained Knowledge Graph, that leverages the [schema.org](https://schema.org) framework.  See the [ODIS book](https://book.oceaninfohub.org/) of documentation.')    
+    st.markdown('The Ocean Data Information System (ODIS) is a federation of systems that use common conventions to share and exchange their (meta)data. The foundation for ODIS was established by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) project. OIH harvests (meta)data from all ODIS nodes, and builds a collective Knowledge Graph to promote global discovery and action. See the [ODIS book](https://book.oceaninfohub.org/) of documentation for more details.
     st.subheader('Graph')
     st.markdown('Also known as Knowledge Graph, or KG, graphs are a structured way to harvest information on the Web, by representing entities (eg. people, places, objects) as nodes, and relationships between entities.  The connection between 2 nodes is defined by triples.')
     st.subheader('SPARQL Endpoint')
