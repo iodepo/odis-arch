@@ -762,7 +762,8 @@ if graphStatus == 1:
         #else: 
             #st.write(':cry: *could not query graph to generate Node summary*')     
            
-        duckdbConnCombined.close() 
+        duckdbConnCombined.close()
+        duckdbConnFilterByOrg.close()
 
     with st.expander("About the Dashboard", expanded=False):
            
