@@ -755,9 +755,13 @@ if graphStatus == 1:
                         #def queryOrgTypes():
                             #return duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()            
                            
-                        dfTypeCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()                
-                        #dfTypeCount = queryOrgTypes()
-                        st.write(dfTypeCount)
+                        dfOrgTypeExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'type'").fetchdf()
+                        if dfOrgTypeExists['count'].values[0] == 1:
+                            dfTypeCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()                
+                            #dfTypeCount = queryOrgTypes()
+                            st.write(dfTypeCount)
+                        else:
+                            st.write(":x:" + " " + shortName + ".parquet does not contain a 'type' column")
                         
                 else:
                     st.write(":x:" + " " + shortName + ".parquet is not available")
@@ -799,10 +803,13 @@ if graphStatus == 1:
                         #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                         #def queryOrgKeywords():
                             #return duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()            
-                                                 
-                        dfKeywordsCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()
-                        #dfKeywordsCount = queryOrgKeywords()
-                        st.write(dfKeywordsCount)
+                        dfOrgKeywordsExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'keywords'").fetchdf()
+                        if dfOrgKeywordsExists['count'].values[0] == 1:
+                            dfKeywordsCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()
+                            #dfKeywordsCount = queryOrgKeywords()
+                            st.write(dfKeywordsCount)
+                        else:
+                            st.write(":x:" + " " + shortName + ".parquet does not contain a 'keywords' column")                            
                 else:
                     st.write(":x:" + " " + shortName + ".parquet is not available")                        
         
@@ -813,10 +820,14 @@ if graphStatus == 1:
                         #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                         #def queryOrgLicense():
                             #return duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()            
-                                   
-                        dfLicenseCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()
-                        #dfLicenseCount = queryOrgLicense()
-                        st.write(dfLicenseCount)  
+                         
+                        dfOrgLicenseExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'license'").fetchdf()
+                        if dfOrgLicenseExists['count'].values[0] == 1:
+                            dfLicenseCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()
+                            #dfLicenseCount = queryOrgLicense()
+                            st.write(dfLicenseCount)
+                        else:
+                            st.write(":x:" + " " + shortName + ".parquet does not contain a 'license' column")
                 else:
                     st.write(":x:" + " " + shortName + ".parquet is not available")
         #else: 
