@@ -139,7 +139,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
 
         os.chdir(dashboardPath)
 
-        #@st.cache_data(ttl=3600)
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
         def get_sparql_dataframe(service, query):
             """
             Helper function to convert SPARQL results into a Pandas data frame.
@@ -186,7 +186,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
           }
         """
 
-        #@st.cache(allow_output_mutation=True)
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
         #dfCount = get_sparql_dataframe(oihGraphEndpoint, rq_count)
         #dfCount["Triples"] = dfCount["Triples"].astype(int) # convert count c to int
 
@@ -208,7 +208,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
                      }
                     ORDER BY ASC(?orgname)
                   """
-        #@st.cache(allow_output_mutation=True)
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
         #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)
 
         #### PROV: count of catalogues
@@ -232,7 +232,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
                 GROUP BY ?wat ?orgname ?domain
                 """
 
-        #@st.cache(allow_output_mutation=True)     
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)     
         #dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
         #dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
         #dfProv.set_index('orgname', inplace=True)
@@ -263,7 +263,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
                 ORDER BY DESC(?count)
                 """
 
-        #@st.cache(allow_output_mutation=True)        
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)        
         dfTypes = get_sparql_dataframe(oihGraphEndpoint, rq_types)
         dfTypes['count'] = dfTypes["count"].astype(int) # convert count c to int
         dfTypes.set_index('type', inplace=True)
@@ -289,7 +289,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
                 ORDER BY DESC(?count)
                 """
 
-        #@st.cache(allow_output_mutation=True)
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
         #dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
         #dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
         #dfKeywords.set_index('keywords', inplace=True)
@@ -304,7 +304,7 @@ with st.expander("ODIS Graph Endpoint Status", expanded=True):
         }
         GROUP BY ?p
         """
-        #@st.cache(allow_output_mutation=True)
+        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
         #dfPredicates = get_sparql_dataframe(oihGraphEndpoint, rq_pcount)
         #dfPredicates['pCount'] = dfPredicates["pCount"].astype(int) # convert count to int
         #dfPredicates_sorted = dfPredicates.sort_values('pCount', ascending=False)
@@ -363,39 +363,46 @@ if graphStatus == 1:
         with sumCol2:
             st.write("Number of Nodes")
             global numberOfNodes
-            with st.spinner("Executing graph query..."): 
-                #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
-                #st.subheader(len(dfOrgs))
-                #for u in urls:
-                    #st.write(u)
-                # Instantiate the DuckDB connection
-                duckdbConnCombined = duckdb.connect()
-                duckdbConnCombined.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(combinedParquet))  # load from url
+            #with st.spinner("Executing graph query..."): 
+            #dfOrgs = get_sparql_dataframe(oihGraphEndpoint, rq_orgs)                       
+            #st.subheader(len(dfOrgs))
+            #for u in urls:
+                #st.write(u)
+            # Instantiate the DuckDB connection
+            duckdbConnCombined = duckdb.connect()
+            #duckdbConnCombined.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(combinedParquet))  # load from url
+            
+            #query for number of nodes
+            @st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+            def queryCombinedCountOrg():
+                return duckdbConnCombined.execute("SELECT COUNT(DISTINCT(provder)) as count FROM read_parquet('" + combinedParquet + "')").fetchdf()
+            #dfCount = duckdbConnCombined.execute("SELECT COUNT(DISTINCT(provder)) as count FROM data").fetchdf()
+            
+            #st.write(dfCount["count"])
+            dfCount = queryCombinedCountOrg()
+            numberOfNodes = dfCount['count'].values[0]
+            #st.subheader(numberOfNodes)
                 
-                #query for number of nodes
-                dfCount = duckdbConnCombined.execute("SELECT COUNT(DISTINCT(provder)) as count FROM data").fetchdf()
-                
-                #st.write(dfCount["count"])
-                numberOfNodes = dfCount['count'].values[0]
-                #st.subheader(numberOfNodes)
-                
-            #st.success("Done")            
-
         with sumCol3:
             st.write("Number of Entities Described")
             #global sparqlNumCatTimeout
-            with st.spinner("Executing graph query..."):
-                # dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
-                # if sparqlTimeout == 0:
-                    # dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
-                    # dfProv.set_index('orgname', inplace=True)            
-                    # st.subheader(dfProv['count'].sum())
-                    # sparqlNumCatTimeout = 0
-                # else:
-                    # sparqlNumCatTimeout = 1
-                    # st.write(':cry: *could not process Number of Catalogues query on graph*')               
-                dfOrgCount = duckdbConnCombined.execute("SELECT provder, COUNT(*) AS count FROM data GROUP BY provder ORDER BY count DESC" ).fetchdf()
-                st.subheader(dfOrgCount['count'].sum())
+            #with st.spinner("Executing graph query..."):
+            # dfProv = get_sparql_dataframe(oihGraphEndpoint, rq_prov)
+            # if sparqlTimeout == 0:
+                # dfProv['count'] = dfProv["count"].astype(int) # convert count c to int
+                # dfProv.set_index('orgname', inplace=True)            
+                # st.subheader(dfProv['count'].sum())
+                # sparqlNumCatTimeout = 0
+            # else:
+                # sparqlNumCatTimeout = 1
+                # st.write(':cry: *could not process Number of Catalogues query on graph*')               
+            @st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+            def queryCombinedCountEntities():
+                return duckdbConnCombined.execute("SELECT provder, COUNT(*) as count FROM read_parquet('" + combinedParquet + "') GROUP BY provder ORDER BY count DESC").fetchdf()            
+            
+            #dfOrgCount = duckdbConnCombined.execute("SELECT provder, COUNT(*) AS count FROM data GROUP BY provder ORDER BY count DESC" ).fetchdf()
+            dfOrgCount = queryCombinedCountEntities()
+            st.subheader(dfOrgCount['count'].sum())
                 
         sumCol4, sumCol5, sumCol6 = st.columns(3, gap="medium")
 
@@ -462,7 +469,12 @@ if graphStatus == 1:
             #dfTypes.columns = dfTypes.columns.str.replace('count', 'Count')
             #dfTypes.loc['Total']= dfTypes.sum()
             #st.write(dfTypes.head(50))
-            dfTypesCount = duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data GROUP BY type order by count desc").fetchdf()
+            @st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+            def queryCombinedTypes():
+                return duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) as count FROM read_parquet('" + combinedParquet + "') GROUP BY type ORDER BY count DESC").fetchdf()            
+                        
+            #dfTypesCount = duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data GROUP BY type order by count desc").fetchdf()
+            dfTypesCount = queryCombinedTypes() 
             st.write(dfTypesCount)
             
         with sumCol6:
@@ -490,14 +502,19 @@ if graphStatus == 1:
 
         with sumCol7:
             st.write("Keywords")
-            with st.spinner("Executing graph query..."):            
-                #dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
-                #dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
-                #dfKeywords.set_index('keywords', inplace=True)            
-                #dfKeywords.loc['Total']= dfKeywords.sum()
-                #st.write(dfKeywords.head(50))
-                dfKeywordsCount = duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data GROUP BY keywords order by count desc").fetchdf()
-                st.write(dfKeywordsCount)
+            #with st.spinner("Executing graph query..."):            
+            #dfKeywords = get_sparql_dataframe(oihGraphEndpoint, rq_keywords)
+            #dfKeywords['count'] = dfKeywords["count"].astype(int) # convert count c to int
+            #dfKeywords.set_index('keywords', inplace=True)            
+            #dfKeywords.loc['Total']= dfKeywords.sum()
+            #st.write(dfKeywords.head(50))
+            @st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+            def queryCombinedKeywords():
+                return duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) as count FROM read_parquet('" + combinedParquet + "') GROUP BY keywords ORDER BY count DESC").fetchdf()            
+                              
+            #dfKeywordsCount = duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data GROUP BY keywords order by count desc").fetchdf()
+            dfKeywordsCount = queryCombinedKeywords() 
+            st.write(dfKeywordsCount)
             
         with sumCol8:
             st.write("Predicates")
@@ -557,8 +574,12 @@ if graphStatus == 1:
         unsafe_allow_html=True,
         )
         #dfOrgCount = duckdbConnCombined.execute("SELECT provder, COUNT(*) AS count FROM data GROUP BY provder ORDER BY count DESC" ).fetchdf()
+        @st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+        def queryCombinedOrgNames():
+            return duckdbConnCombined.execute("SELECT DISTINCT(provder) as provder FROM read_parquet('" + combinedParquet + "') ORDER BY provder ASC").fetchdf()            
 
-        dfOrgNames = duckdbConnCombined.execute("SELECT DISTINCT(provder) as provder FROM data ORDER BY provder ASC").fetchdf()
+        #dfOrgNames = duckdbConnCombined.execute("SELECT DISTINCT(provder) as provder FROM read_parquet('" + combinedParquet + "') ORDER BY provder ASC").fetchdf()
+        dfOrgNames = queryCombinedOrgNames()
         #st.dataframe(dfOrgNames)
 
         #st.dataframe(dfJoined[['Node']])
@@ -620,7 +641,12 @@ if graphStatus == 1:
                     #duckdbConnFilterByOrg.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(orgParquet))  # load from url                        
                 
                     #dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM data" ).fetchdf()
-                    dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM read_parquet('" + orgParquet + "')" ).fetchdf()
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                    #def queryOrgEntities():
+                        #return duckdbConnFilterByOrg.execute("SELECT COUNT(*) as count FROM read_parquet('" + orgParquet + "')").fetchdf()            
+
+                    dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM read_parquet('" + orgParquet + "')" ).fetchdf()                   
+                    #dfOrgCount = queryOrgEntities()   
                     st.subheader(dfOrgCount['count'].values[0])
                     # st.subheader(dfProvFilter['count'].sum())
                 
@@ -680,31 +706,31 @@ if graphStatus == 1:
                 st.write("Types indexed")                
                 with st.spinner("Executing graph query..."):
                     # rq_types_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                           # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                           # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                           # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                           # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                           # PREFIX schema: <https://schema.org/>
-                           # PREFIX schemaold: <http://schema.org/>
-                           # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                       # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                       # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                       # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                       # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                       # PREFIX schema: <https://schema.org/>
+                       # PREFIX schemaold: <http://schema.org/>
+                       # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
               
               
-                           # SELECT   ( COUNT(?type) as ?count) ?type   
-                           # WHERE
-                           # {
+                       # SELECT   ( COUNT(?type) as ?count) ?type   
+                       # WHERE
+                       # {
                
-                             # ?s rdf:type ?type .
-                             # ?wat rdf:name ?orgname .
-                             # FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
-                           # """
+                         # ?s rdf:type ?type .
+                         # ?wat rdf:name ?orgname .
+                         # FILTER ( ?type IN (schema:ResearchProject, schema:Project, schema:Organization, schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course, schema:CourseInstance, schema:Event, schema:Vehicle) )
+                       # """
                     # rq_types_org2 = "FILTER (?orgname = '" + node_filter + "') ."
                     # rq_types_org3 = """                   
-                           # }
-                           # GROUP BY ?type  
-                           # ORDER BY DESC(?count)
-                           # """
-                        
-                    #@st.cache(allow_output_mutation=True)
+                       # }
+                       # GROUP BY ?type  
+                       # ORDER BY DESC(?count)
+                       # """
+                    
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                     # dfTypesOrg = get_sparql_dataframe(oihGraphEndpoint, rq_types_org1 + rq_types_org2 + rq_types_org3)
                     # dfTypesOrg['count'] = dfTypesOrg["count"].astype(int) # convert count c to int
                     # dfTypesOrg.set_index('type', inplace=True)
@@ -713,35 +739,40 @@ if graphStatus == 1:
                     # #st.dataframe(data=dfTypesOrg, width=400, height=None)
                     #dfTypeCount = duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data WHERE provder = 'cioos' GROUP BY type order by count desc").fetchdf()
                     #dfTypeCount = duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data WHERE provder = '" + shortName + "' GROUP BY type order by count desc").fetchdf()                
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                    #def queryOrgTypes():
+                        #return duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()            
+                           
                     dfTypeCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()                
+                    #dfTypeCount = queryOrgTypes()
                     st.write(dfTypeCount)
                 
             with nodeCol10:
                 st.write("Keywords")
                 with st.spinner("Executing graph query..."):
                     # rq_keywords_org1 = """prefix prov: <http://www.w3.org/ns/prov#>
-                        # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
-                        # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
-                        # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
-                        # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                        # PREFIX schema: <https://schema.org/>
-                        # PREFIX schemaold: <http://schema.org/>
-                        # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                    # PREFIX con: <http://www.ontotext.com/connectors/lucene#>
+                    # PREFIX luc: <http://www.ontotext.com/owlim/lucene#>
+                    # PREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>
+                    # PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                    # PREFIX schema: <https://schema.org/>
+                    # PREFIX schemaold: <http://schema.org/>
+                    # PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             
-                        # SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
-                        # WHERE
-                        # {
-                           # ?s schema:keywords ?keywords .
-                           # ?wat rdf:name ?orgname .
-                        # """
+                    # SELECT DISTINCT  ?keywords  ( COUNT(?keywords) as ?count )
+                    # WHERE
+                    # {
+                       # ?s schema:keywords ?keywords .
+                       # ?wat rdf:name ?orgname .
+                    # """
             
                     # rq_keywords_org2 = "FILTER (?orgname = '" + node_filter + "') ."
                     # rq_keywords_org3 = """        }
-                        # GROUP BY ?keywords
-                        # ORDER BY DESC(?count)
-                        # """
+                    # GROUP BY ?keywords
+                    # ORDER BY DESC(?count)
+                    # """
 
-                    #@st.cache(allow_output_mutation=True)                        
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)                        
                     # dfKeywordsOrg = get_sparql_dataframe(oihGraphEndpoint, rq_keywords_org1 + rq_keywords_org2 + rq_keywords_org3)
                     # dfKeywordsOrg['count'] = dfKeywordsOrg["count"].astype(int) # convert count c to int
                     # dfKeywordsOrg.set_index('keywords', inplace=True)
@@ -749,14 +780,23 @@ if graphStatus == 1:
                     # st.write(dfKeywordsOrg.head(50))
                     #dfKeywordsCount = duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data WHERE provder = '" + shortName + "' GROUP BY keywords order by count desc").fetchdf()
                     #dfKeywordsCount = duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data WHERE provder = 'cioos' GROUP BY keywords order by count desc").fetchdf()
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                    #def queryOrgKeywords():
+                        #return duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()            
+                                                 
                     dfKeywordsCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()
+                    #dfKeywordsCount = queryOrgKeywords()
                     st.write(dfKeywordsCount)                    
         
             with nodeCol11:
                 st.write("License")
                 with st.spinner("Executing graph query..."):
-                    #@st.cache(allow_output_mutation=True)                        
+                    #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                    #def queryOrgLicense():
+                        #return duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()            
+                                   
                     dfLicenseCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()
+                    #dfLicenseCount = queryOrgLicense()
                     st.write(dfLicenseCount)  
 
         #else: 
