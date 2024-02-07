@@ -106,7 +106,9 @@ with st.sidebar:
     st.markdown('The ODIS graph connects information through a triple; *Subject, Predicate, Object*.  In the information "Leonard Nimoy was an actor who played the character Spock", LeonardNimoy is the *Subject*, "played" is the *Predicate*, and "Spock" is the *Object*.')    
     st.subheader('Types')
     st.markdown('The ODIS graph leverages core [thematic patterns](https://book.oceaninfohub.org/thematics/README.html), which are expanded from [schema.org](https://schema.org/docs/full.html) types.')    
-
+    st.subheader('ODIS Node')
+    st.markdown('An ODIS Node (not to be confused with a graph "node", described above) is a data source that is networked into and part of the ODIS Federation. ODIS Nodes are operated by ODIS partner oganisations, which may have one or many Nodes.')
+    
 with st.expander("ODIS Graph Endpoint Status", expanded=True):
 
     #use markdown trick, as st.expander label cannot be styled
