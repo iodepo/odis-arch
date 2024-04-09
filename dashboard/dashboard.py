@@ -664,7 +664,7 @@ if graphStatus == 1:
                 
             
             with nodeCol4:
-                st.write("Date indexed to ODIS Graph")
+                st.write("Date first indexed to ODIS Graph")
                 # df = pd.read_csv('/home/apps/odis-arch-git/code/notebooks/diagrams/data/oihSources.csv')
                 # names = df['propername'].tolist()
                 # dates = df['dates'].tolist()
