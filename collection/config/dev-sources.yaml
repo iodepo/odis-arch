@@ -53,23 +53,23 @@ sources:
     cron: 0 2 * * 0
     active: true
   #
-  # CIOOS Atlantic
-  #    
-  # - name: cioosatlantic
-  #   propername: CIOOS Atlantic
-  #   catalogue: https://catalogue.cioosatlantic.ca/
-  #   domain: https://cioosatlantic.ca
-  #   logo: https://cioosatlantic.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/atlantic/cioos-atlantic_EN.svg?x79655
-  #   #missing ODISCat entry
-  #   pid: https://oceaninfohub.org/.well-known/org/cioosatlantic
-  #   sourcetype: sitemap
-  #   url: https://catalogue.cioosatlantic.ca/sitemap/sitemap.xml
-  #   #url: https://catalogue.cioosatlantic.ca/sitemap/sitemap-1.xml
-  #   changefreq: as needed
-  #   backend: CKAN  
-  #   headless: false
-  #   dateadded: 2022-06-04
-  #   active: true
+  # INCOIS
+  #
+  - name: incois
+    propername: Indian National Centre for Ocean Information Services
+    catalogue: https://incois.gov.in/essdp/
+    domain: https://incois.gov.in/
+    logo: https://incois.gov.in/essdp/images/logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/incois
+    sourcetype: sitemap
+    url: https://incois.gov.in/essdp/xml/sitemap.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-04-15
+    cron: 0 9 * * 0 
+    active: true    
   #
   # INVEMAR Geospatial
   #
@@ -79,7 +79,7 @@ sources:
     domain: https://portete.invemar.org.co
     logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/invemarvessels
+    pid: https://oceaninfohub.org/.well-known/org/invemargeo
     sourcetype: sitegraph
     url: https://portete.invemar.org.co/chm/api/oih/platformgeo?format=json
     changefreq:
@@ -192,23 +192,7 @@ sources:
     backend: CKAN  
     headless: false
     dateadded: 2024-01-22
-    active: true    
-  #
-  # VLIZ: Flanders Marine Institute catalogue
-  #   note: VLIZ & EMODNet services were unified in late 2022 
-  # - name: vliz
-  #   propername: VLIZ - Flanders Marine Institute catalogue
-  #   catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-  #   domain: http://www.vliz.be/en 
-  #   logo: ""
-  #   #missing ODISCat entry
-  #   pid: https://oceaninfohub.org/.well-known/org/vliz
-  #   sourcetype: sitegraph
-  #   url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-vliz/vliz-simple-graph.json
-  #   backend: GeoNetwork  
-  #   headless: false
-  #   dateadded: 2022-08-03
-  #   active: false
+    active: true
   #
   # WIO Symphony
   # 
