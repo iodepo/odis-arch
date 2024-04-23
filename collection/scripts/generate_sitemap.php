@@ -11,8 +11,8 @@
    History:         originally created for COINAtlantic catalogue in 2011
 */
 
-define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/code/notebooks/Exploration/data-ina-nodc');
-define ('JSONLD_ROOT_PATH_URL', 'https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-ina-nodc');
+define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/collection/tempHosting/data-acma');
+define ('JSONLD_ROOT_PATH_URL', 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma');
 
 $basedir = JSONLD_ROOT_PATH_DIRECTORY;
 $baseurl = JSONLD_ROOT_PATH_URL;
@@ -26,9 +26,9 @@ function getdepth($fn){
 function printlink($fn)
 {
     $url = str_replace(JSONLD_ROOT_PATH_DIRECTORY, JSONLD_ROOT_PATH_URL, $fn);
-    echo "  <url>" . "\r\n";
-    echo "    <loc>$url</loc>" . "\r\n";
-    echo "  </url>" . "\r\n";
+    echo "  <url>" . "\n";
+    echo "    <loc>$url</loc>" . "\n";
+    echo "  </url>" . "\n";
     return;
 
 
@@ -61,12 +61,8 @@ function listdir($basedir)
     }    
 } 
 header("Content-type: application/xml");
-echo '<?xml version="1.0" encoding="UTF-8"?>' . "\r\n";
-echo '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">' . "\r\n";
-
+echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+echo '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 listdir($basedir); //this line starts the ball rolling
-
-echo '</urlset>' . "\r\n";
-
+echo '</urlset>';
 ?>
-
