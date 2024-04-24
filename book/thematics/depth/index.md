@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This document introduces approaches for the representation of depth in the
+This document presents approaches for the representation of depth in schema.org
 metadata to aid in the discovery and filtering of resources of interest based
-on depth values.
+on depth.
 
 ## Scope
 
