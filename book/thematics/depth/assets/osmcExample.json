@@ -1,0 +1,654 @@
+
+{
+  "@context": {"@vocab":"https://schema.org/"},
+  "@type": "Dataset",
+  "name": "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, 1988-2020, ADCP",
+  "headline": "pmelTaoDyAdcp",
+  "description": "This dataset has daily Acoustic Doppler Current Profiler (ADCP) water currents data from the\nTAO/TRITON (Pacific Ocean, https://www.pmel.noaa.gov/gtmba/ ),\nRAMA (Indian Ocean, https://www.pmel.noaa.gov/gtmba/pmel-theme/indian-ocean-rama ), and\nPIRATA (Atlantic Ocean, https://www.pmel.noaa.gov/gtmba/pirata/ )\narrays of moored buoys which transmit oceanographic and meteorological data to shore in real-time via the Argos satellite system.  These buoys are major components of the CLIVAR climate analysis project and the GOOS, GCOS, and GEOSS observing systems.  Daily averages are computed starting at 00:00Z and are assigned an observation 'time' of 12:00Z.  ADCP data are available only after mooring recoveries, which are scheduled on an annual basis.  For more information, see\nhttps://www.pmel.noaa.gov/gtmba/mission .\ncdm_data_type=TimeSeries\ncdm_timeseries_variables=array, station, wmo_platform_code, longitude, latitude\nConventions=COARDS, CF-1.6, ACDD-1.3, NCCSV-1.2\nData_Source=Global Tropical Moored Buoy Array Project Office/NOAA/PMEL\nEasternmost_Easting=337.0\nfeatureType=TimeSeries\nFile_info=Contact: Dai.C.McClurg@noaa.gov\ngeospatial_lat_max=8.0\ngeospatial_lat_min=-8.5\ngeospatial_lat_units=degrees_north\ngeospatial_lon_max=337.0\ngeospatial_lon_min=67.0\ngeospatial_lon_units=degrees_east\ngeospatial_vertical_max=475.0\ngeospatial_vertical_min=0.0\ngeospatial_vertical_positive=down\ngeospatial_vertical_units=m\nhistory=This dataset has data from the TAO/TRITON, RAMA, and PIRATA projects.\nThis dataset is a product of the TAO Project Office at NOAA/PMEL.\n2024-04-03 Bob Simons at NOAA/NMFS/SWFSC/ERD (bob.simons@noaa.gov) fully refreshed ERD's copy of this dataset by downloading all of the .cdf files from the PMEL TAO FTP site.  Since then, the dataset has been partially refreshed everyday by downloading and merging the latest version of the last 25 days worth of data.\ninfoUrl=https://www.pmel.noaa.gov/gtmba/mission\ninstitution=NOAA PMEL, TAO/TRITON, RAMA, PIRATA\nkeywords_vocabulary=GCMD Science Keywords\nNorthernmost_Northing=8.0\nproject=TAO/TRITON, RAMA, PIRATA\nRequest_for_acknowledgement=If you use these data in publications or presentations, please acknowledge the GTMBA Project Office of NOAA/PMEL. Also, we would appreciate receiving a preprint and/or reprint of publications utilizing the data for inclusion in our bibliography. Relevant publications should be sent to: GTMBA Project Office, NOAA/Pacific Marine Environmental Laboratory, 7600 Sand Point Way NE, Seattle, WA 98115\nsourceUrl=(local files)\nSouthernmost_Northing=-8.5\nstandard_name_vocabulary=CF Standard Name Table v70\nsubsetVariables=array, station, wmo_platform_code, longitude, latitude\ntime_coverage_end=2020-07-15T12:00:00Z\ntime_coverage_start=1988-05-16T12:00:00Z\nWesternmost_Easting=67.0",
+  "url": "https://osmc.noaa.gov/erddap/tabledap/pmelTaoDyAdcp.html",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "ERDDAP Data Server at OSMC",
+    "sameAs": "https://osmc.noaa.gov/erddap"
+  },
+  "keywords": [
+    "adcp",
+    "buoys",
+    "centered",
+    "circulation",
+    "currents",
+    "daily",
+    "depth",
+    "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+    "eastward",
+    "eastward_sea_water_velocity",
+    "identifier",
+    "noaa",
+    "northward",
+    "northward_sea_water_velocity",
+    "ocean",
+    "oceans",
+    "pirata",
+    "pmel",
+    "quality",
+    "rama",
+    "sea",
+    "seawater",
+    "station",
+    "tao",
+    "time",
+    "triton",
+    "velocity",
+    "water"
+  ],
+  "license": "Request for Acknowledgement: If you use these data in publications or presentations, please acknowledge the GTMBA Project Office of NOAA/PMEL. Also, we would appreciate receiving a preprint and/or reprint of publications utilizing the data for inclusion in our bibliography. Relevant publications should be sent to: GTMBA Project Office, NOAA/Pacific Marine Environmental Laboratory, 7600 Sand Point Way NE, Seattle, WA 98115\n\nThe data may be used and redistributed for free but is not intended\nfor legal use, since it may contain inaccuracies. Neither the data\nContributor, ERD, NOAA, nor the United States Government, nor any\nof their employees or contractors, makes any warranty, express or\nimplied, including warranties of merchantability and fitness for a\nparticular purpose, or assumes any legal liability for the accuracy,\ncompleteness, or usefulness, of this information.",
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "array",
+      "alternateName": "Array",
+      "description": "Array",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Array"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "station",
+      "alternateName": "Station",
+      "description": "Station",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "cf_role",
+          "value": "timeseries_id"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Station"
+        }
+      ]
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "wmo_platform_code",
+      "alternateName": "WMO Platform Code",
+      "description": "WMO Platform Code",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Identifier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "WMO Platform Code"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 2.147483647E9
+        }
+      ],
+      "maxValue": 52321,
+      "minValue": 14040
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "longitude",
+      "alternateName": "Nominal Longitude",
+      "description": "Nominal Longitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lon"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 502
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Nominal Longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "longitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "type",
+          "value": "EVEN"
+        }
+      ],
+      "maxValue": 337,
+      "minValue": 67,
+      "propertyID": "longitude",
+      "unitText": "degrees_east"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "latitude",
+      "alternateName": "Nominal Latitude",
+      "description": "Nominal Latitude",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Lat"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Y"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 500
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Nominal Latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "latitude"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "type",
+          "value": "EVEN"
+        }
+      ],
+      "maxValue": 8,
+      "minValue": -8.5,
+      "propertyID": "latitude",
+      "unitText": "degrees_north"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "time",
+      "alternateName": "Centered Time",
+      "description": "Centered Time",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "T"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Centered Time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "point_spacing",
+          "value": "even"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "time"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "time_origin",
+          "value": "01-JAN-1970 00:00:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "type",
+          "value": "EVEN"
+        }
+      ],
+      "maxValue": "2020-07-15T12:00:00Z",
+      "minValue": "1988-05-16T12:00:00Z",
+      "propertyID": "time"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "depth",
+      "alternateName": "Depth",
+      "description": "Depth",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateAxisType",
+          "value": "Height"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_CoordinateZisPositive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "axis",
+          "value": "Z"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 3
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Location"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "positive",
+          "value": "down"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "depth"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "type",
+          "value": "EVEN"
+        }
+      ],
+      "maxValue": 475,
+      "minValue": 0,
+      "propertyID": "depth",
+      "unitText": "m"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "u_1205",
+      "alternateName": "Eastward Sea Water Velocity",
+      "description": "Eastward Sea Water Velocity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 1205
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "generic_name",
+          "value": "u"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Currents"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Eastward Sea Water Velocity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "name",
+          "value": "u"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "eastward_sea_water_velocity"
+        }
+      ],
+      "maxValue": 244.2879,
+      "minValue": -189.9937,
+      "propertyID": "eastward_sea_water_velocity",
+      "unitText": "cm/s"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "QU_5205",
+      "alternateName": "Eastward Sea Water Velocity Quality",
+      "description": "Eastward Sea Water Velocity Quality",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarContinuous",
+          "value": "false"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 6
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Quality: 0=missing data, 1=highest, 2=standard, 3=lower, 4=questionable, 5=bad, -9=contact Dai.C.McClurg@noaa.gov.  To get probably valid data only, request QU_5205>=1 and QU_5205<=3."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 5205
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "generic_name",
+          "value": "qu"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Quality"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Eastward Sea Water Velocity Quality"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "name",
+          "value": "QU"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "v_1206",
+      "alternateName": "Northward Sea Water Velocity",
+      "description": "Northward Sea Water Velocity",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": -150
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 1206
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "generic_name",
+          "value": "v"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Currents"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Northward Sea Water Velocity"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "name",
+          "value": "v"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "standard_name",
+          "value": "northward_sea_water_velocity"
+        }
+      ],
+      "maxValue": 134.6,
+      "minValue": -127.6,
+      "propertyID": "northward_sea_water_velocity",
+      "unitText": "cm/s"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "QV_5206",
+      "alternateName": "Northward Sea Water Velocity Quality",
+      "description": "Northward Sea Water Velocity Quality",
+      "valueReference": [
+        {
+          "@type": "PropertyValue",
+          "name": "axisOrDataVariable",
+          "value": "data"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "_FillValue",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarContinuous",
+          "value": "false"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMaximum",
+          "value": 6
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "colorBarMinimum",
+          "value": 0
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "description",
+          "value": "Quality: 0=missing data, 1=highest, 2=standard, 3=lower, 4=questionable, 5=bad, -9=contact Dai.C.McClurg@noaa.gov.  To get probably valid data only, request QV_5206>=1 and QV_5206<=3."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "epic_code",
+          "value": 5206
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "generic_name",
+          "value": "qv"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "ioos_category",
+          "value": "Quality"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "long_name",
+          "value": "Northward Sea Water Velocity Quality"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "missing_value",
+          "value": 1.0E35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "name",
+          "value": "QV"
+        }
+      ],
+      "maxValue": 2,
+      "minValue": 0
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "GTMBA Project Office/NOAA/PMEL",
+    "email": "Dai.C.McClurg@noaa.gov",
+    "sameAs": "https://www.pmel.noaa.gov/gtmba/mission"
+  },
+  "identifier": "pmelTaoDyAdcp",
+  "temporalCoverage": "1988-05-16T12:00:00Z/2020-07-15T12:00:00Z",
+  "spatialCoverage": {
+    "@type": "Place",
+    "geo": {
+      "@type": "GeoShape",
+      "box": "-8.5 -180 8 180"
+    }
+  }
+}
