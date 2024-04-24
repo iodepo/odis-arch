@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 from dateutil import parser
 from rdflib import ConjunctiveGraph  # needed for quads
+import polars as pl
 from tqdm import tqdm
 
 from defs import graphshapers
@@ -20,6 +21,10 @@ from defs import spatial
 from defs import saveobject
 
 warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas future warning
+
+
+# References
+* https://www.confessionsofadataguy.com/how-to-join-datasets-in-polars-compared-to-pandas/
 
 
 def main():
@@ -98,14 +103,22 @@ def graphProcessor(dg):
         "Processing {} SPARQL queries. Can be slow, progress bar updates on query completion".format(len(qlist)))
     for q in tqdm(qlist.values()):
         df = kg.query_as_df(q)
-        if len(df) > 0:  # don't append in empty result sets, breaks the merge
+        pdf = pl.from_pandas(df)
+        del df
+        gc.collect()
+        if len(pdf) > 0:  # don't append in empty result sets, breaks the merge
             # df.info()
-            dfl.append(df)
-            del df
-            gc.collect()
+            dfl.append(pdf)
 
-    common_column = ["id", "type"]
-    merged_df = reduce(lambda left, right: pd.merge(left, right, on=common_column,suffixes=('_left', '_right'), how='outer'), dfl)
+    pdfc = pl.concat(dfl, how="align")
+
+    print(len(pdfc))
+    pdfc.head()
+
+    sys.exit(1)
+
+    # common_column = ["id", "type"]
+    # merged_df = reduce(lambda left, right: pd.merge(left, right, on=common_column,suffixes=('_left', '_right'), how='outer'), dfl)
 
     # Initialize a merged DataFrame with the first DataFrame
     # merged_df = dfl[0]

@@ -1,0 +1,35 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?id (GROUP_CONCAT(DISTINCT ?keywords;separator=", ") AS ?keywords)
+(GROUP_CONCAT(DISTINCT ?sameAs;separator=", ") AS ?sameAs)
+(GROUP_CONCAT(DISTINCT ?license;separator=", ") AS ?license)
+(GROUP_CONCAT(DISTINCT ?citation;separator=", ") AS ?citation)
+(GROUP_CONCAT(DISTINCT ?includedInDataCatalog;separator=", ") AS ?includedInDataCatalog)
+(GROUP_CONCAT(DISTINCT ?distribution;separator=", ") AS ?distribution)
+(GROUP_CONCAT(DISTINCT ?region;separator=", ") AS ?region)
+(GROUP_CONCAT(DISTINCT ?provider;separator=", ") AS ?provider)
+(GROUP_CONCAT(DISTINCT ?publisher;separator=", ") AS ?publisher)
+(GROUP_CONCAT(DISTINCT ?creator;separator=", ") AS ?creator)
+
+WHERE {
+    graph ?g {
+        BIND(<SUBJECTIRI> as ?id)
+        ?id rdf:type schema:Dataset .
+        OPTIONAL { ?id schema:keywords ?keywords . }
+        OPTIONAL { ?id schema:sameAs ?sameAs . }
+        OPTIONAL { ?id schema:license ?license . }
+        OPTIONAL { ?id schema:citation ?citation . }
+        OPTIONAL { ?id schema:includedInDataCatalog ?includedInDataCatalog . }
+        OPTIONAL { ?id schema:distribution ?distribution . }
+        OPTIONAL { ?id schema:region ?region . }
+        OPTIONAL { ?id schema:provider ?provider . }
+        OPTIONAL { ?id schema:publisher ?publisher . }
+        OPTIONAL { ?id schema:creator ?creator . }
+    }
+}
+GROUP BY ?id
+
