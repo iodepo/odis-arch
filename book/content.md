@@ -96,7 +96,7 @@ It is arguably not the best or most accurate communications strategy.  It can
 
 ## Intellectual Merit
 
-OIH leverages structured data o the web patterns in the form of of
+OIH leverages structured data on the web patterns in the form of 
 Schema.org and JSON-LD encoding.  This means that much of what is done
 to address OIH implementation by providers also is available both to existing
 commercial indexing approaches as well as emerging community practices  

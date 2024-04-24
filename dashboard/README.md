@@ -5,7 +5,7 @@ This dashboard is meant to help monitor the Ocean Data and Information System (O
 # Docker steps
 
 ```
-cd odis-arch/code/notebooks/Exploration/dashboard
+cd odis-arch/dashboard
 docker build -t dashboard .
 docker run --restart always -p 8501:8501 dashboard
 ```

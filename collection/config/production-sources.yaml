@@ -42,7 +42,7 @@ sources:
     propername: AquaDocs
     catalogue: https://aquadocs.org/discover
     domain: https://aquadocs.org
-    logo: https://aquadocs.org/themes/OR//images/repo-logo.png
+    logo: https://aquadocs.org/themes/OR/images/repo-logo.png
     pid: https://catalogue.odis.org/view/3215
     sourcetype: sitegraph
     url: https://oih.aquadocs.org/aquadocs.json
@@ -126,7 +126,7 @@ sources:
   # CIOOS National
   #
   - name: cioos
-    propername: CIOOS
+    propername: Canadian Integrated Ocean Observing System (CIOOS)
     catalogue: https://catalogue.cioos.ca/
     domain: https://cioos.ca/
     logo: https://cioos.ca/wp-content/themes/cioos-siooc-wordpress-theme/img/national/cioos-national_EN.svg
@@ -236,14 +236,13 @@ sources:
   # European Marine Observation and Data Network catalogue
   #
   - name: emodnet
-    propername: European Marine Observation and Data Network
+    propername: European Marine Observation and Data Network (EMODnet)
     domain: https://emodnet.ec.europa.eu/
     catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/themes/emodnet/component-library/ec/static/media/logo--en.5055ef4f.svg
+    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/emodnet_logos/print/EMODnet_coll_all.png
     pid: https://catalogue.odis.org/view/364
     sourcetype: sitemap
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-emodnet/sitemap.xml
-    #url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
     changefreq: as needed
     backend: GeoNetwork
     headless: false
@@ -272,14 +271,14 @@ sources:
   # INVEMAR Documents
   #
   - name: invemardocuments
-    propername: CHM LAC - Documents
-    catalogue: http://portete.invemar.org.co/chm/
-    domain: http://portete.invemar.org.co
-    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    propername: Latin America and the Caribbean Region (LAC) Documents
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https://portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemardocuments
     sourcetype: sitegraph
-    url: http://portete.invemar.org.co/chm/api/oih/documents?format=json
+    url: https://portete.invemar.org.co/chm/api/oih/documents?format=json
     changefreq:
     backend: INVEMAR CHM
     headless: false
@@ -290,14 +289,14 @@ sources:
   # INVEMAR Experts
   #
   - name: invemarexperts
-    propername: CHM LAC - Experts
-    catalogue: http://portete.invemar.org.co/chm/
-    domain: http://portete.invemar.org.co
-    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    propername: Latin America and the Caribbean Region (LAC) Experts
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https://portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarexpert
     sourcetype: sitegraph
-    url: http://portete.invemar.org.co/chm/api/oih/expert?format=json
+    url: https://portete.invemar.org.co/chm/api/oih/expert?format=json
     changefreq:
     backend: INVEMAR CHM
     headless: false
@@ -308,14 +307,14 @@ sources:
   # INVEMAR Institutions
   #
   - name: invemarinstitutions
-    propername: CHM LAC - Institutions
-    catalogue: http://portete.invemar.org.co/chm/
-    domain: http://portete.invemar.org.co
-    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    propername: Latin America and the Caribbean Region (LAC) Institutions
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https://portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarinstitutions
     sourcetype: sitegraph
-    url: http://portete.invemar.org.co/chm/api/oih/institution?format=json
+    url: https://portete.invemar.org.co/chm/api/oih/institution?format=json
     changefreq:
     backend: INVEMAR CHM
     headless: false
@@ -326,14 +325,14 @@ sources:
   # INVEMAR Training
   #
   - name: invemartraining
-    propername: CHM LAC - Training
-    catalogue: http://portete.invemar.org.co/chm/
-    domain: http://portete.invemar.org.co
-    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    propername: Latin America and the Caribbean Region (LAC) Training
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https://portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemartraining
     sourcetype: sitegraph
-    url: http://portete.invemar.org.co/chm/api/oih/training?format=json
+    url: https://portete.invemar.org.co/chm/api/oih/training?format=json
     changefreq:
     backend: INVEMAR CHM
     headless: false
@@ -344,14 +343,14 @@ sources:
   # INVEMAR Vessels
   #
   - name: invemarvessels
-    propername: CHM LAC - Vessels
-    catalogue: http://portete.invemar.org.co/chm/
-    domain: http://portete.invemar.org.co
-    logo: http://portete.invemar.org.co/static/images/logo-web.svg
+    propername: Latin America and the Caribbean Region (LAC) Vessels
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https//portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
     #missing ODISCat entry
     pid: https://oceaninfohub.org/.well-known/org/invemarvessels
     sourcetype: sitegraph
-    url: http://portete.invemar.org.co/chm/api/oih/vessel?format=json
+    url: https://portete.invemar.org.co/chm/api/oih/vessel?format=json
     changefreq:
     backend: INVEMAR CHM
     headless: false
@@ -380,10 +379,10 @@ sources:
   # MASPAWIO: Marine Spatial Atlas for the Western Indian Ocean
   #
   - name: maspawio
-    propername: MASPAWIO - Marine Spatial Atlas for the Western Indian Ocean
+    propername: Marine Spatial Atlas for the Western Indian Ocean (MASPAWIO)
     catalogue: http://maspawio.net/
     domain: https://cordioea.net/
-    logo: https://cordioea.net/wp-content/uploads/2017/09/Geonde.png
+    logo: https://cordioea.net/wp-content/uploads/2022/11/CORDIO-Pastel-Logo-Defringed.png
     pid: https://catalogue.odis.org/view/351
     sourcetype: sitegraph
     url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json
@@ -449,14 +448,14 @@ sources:
   # OBIS: Ocean Biodiversity Information System
   #
   - name: obis
-    propername: Ocean Biodiversity Information System
+    propername: Ocean Biodiversity Information System (OBIS)
     catalogue: https://obis.org
     domain: https://obis.org
     logo: https://obis.org/images/logo.png
     #ODISCat entry missing ODIS-arch url
     pid: https://catalogue.odis.org/view/343
     sourcetype: sitemap
-    url: https://obis.org/sitemap_datasets.xml
+    url: https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml
     changefreq: weekly
     backend: unknown
     headless: false
@@ -467,10 +466,10 @@ sources:
   # Ocean Best Practices
   #
   - name: obps
-    propername: Ocean Best Practices System
+    propername: Ocean Best Practices System (OBPS)
     catalogue: https://www.oceanbestpractices.org/repository/
     domain: https://www.oceanbestpractices.org/
-    logo: https://search.oceanbestpractices.org/static/media/unesco-ioc-ocb-lockup-2x.713a7ec7.png
+    logo: https://www.oceanbestpractices.org/wp-content/uploads/2023/09/Ocean_Best_Practices_LOGO_WAVES_TEXT_INLINE_Final_outlines_RGB1.jpg
     pid: https://catalogue.odis.org/view/292
     sourcetype: sitegraph
     url: https://oih.oceanbestpractices.org/obps.json
@@ -515,19 +514,36 @@ sources:
     headless: false
     dateadded: 2022-05-18
     cron: 0 12 * * 0 
+    active: true
+  #
+  # Observing System Monitoring Center
+  #
+  - name: osmc
+    propername: Observing System Monitoring Center (OSMC)
+    catalogue: https://osmc.noaa.gov/erddap/info/index.html
+    domain: https://www.osmc.noaa.gov/
+    logo: https://www.osmc.noaa.gov/OSMC_logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/osmc
+    sourcetype: sitemap
+    url: https://osmc.noaa.gov/erddap/sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-12
+    cron: 0 10 * * 0 
     active: true    
   #
   # Pacific Data Hub
   #
   - name: pdh
-    propername: Pacific Data Hub
+    propername: Pacific Data Hub (PDH)
     catalogue: https://pacificdata.org/data/dataset
     domain: https://pacificdata.org
-    logo: https://pacificdata.org/themes/custom/spc/logo.png
+    logo: https://www.gitbook.com/cdn-cgi/image/width=256,dpr=2,height=40,fit=contain,format=auto/https%3A%2F%2F1509476088-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-MDSpD50SdXxsYnU7P9D%252Favatar-rectangle-1596147212769.png%3Fgeneration%3D1596147213229230%26alt%3Dmedia
     pid: https://catalogue.odis.org/view/689
     sourcetype: sitemap
     url: https://pacificdata.org/organization/sitemap.xml
-    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pacificdatahub/sitemap.xml
     changefreq: as needed
     backend: CKAN
     headless: false
@@ -538,7 +554,7 @@ sources:
   # Pacific Environment Data Portal
   #
   - name: pedp
-    propername: Pacific Environment Data Portal
+    propername: Pacific Environment Data Portal (PEDP)
     catalogue: https://pacific-data.sprep.org/index.php/search
     domain: https://pacific-data.sprep.org/
     logo: https://pacific-data.sprep.org/themes/custom/inform_regional/logo.png
@@ -557,14 +573,14 @@ sources:
   # RDA Australia
   # 
   - name: rda
-    propername: Research Data Australia
+    propername: Research Data Australia (RDA)
     catalogue: https://researchdata.edu.au/
     domain: https://ardc.edu.au/
     logo: https://researchdata.edu.au/assets/img/ARDC_Research_Data_RGB_FA_Reverse_sml.png
     pid: https://catalogue.odis.org/view/3267
     sourcetype: sitemap
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-rda/sitemap.xml    
-    #url: https://researchdata.edu.au/home/sitemap/?ds=384
+    url: https://researchdata.edu.au/home/sitemap/?ds=384,393,16
+    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-rda/sitemap.xml    
     changefreq: daily  
     backend: GeoNetwork  
     headless: false
@@ -575,7 +591,7 @@ sources:
   # World Ocean Database
   # 
   - name: wod
-    propername: World Ocean Database
+    propername: World Ocean Database (WOD)
     catalogue: https://noaa-wod-pds.s3.amazonaws.com/index.html
     domain: https://www.ncei.noaa.gov/products/world-ocean-database
     logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
@@ -587,4 +603,20 @@ sources:
     headless: false
     dateadded: 2023-09-13
     cron: 0 15 * * 0    
+    active: true
+  #
+  # Leibniz Center for Tropical Marine Research (ZMT)
+  # 
+  - name: zmt
+    propername: Leibniz Center for Tropical Marine Research (ZMT)
+    catalogue: https://dataportal.leibniz-zmt.de/
+    domain: https://www.leibniz-zmt.de/de/
+    logo: https://www.leibniz-zmt.de/templates/hm_teekit_zmt_v1/images/logo/de-DE/zmt_logo_full_edge.png
+    pid: https://catalogue.odis.org/view/3289
+    sourcetype: sitemap
+    url: https://dataportal.leibniz-zmt.de/sitemap.xml
+    changefreq: monthly 
+    backend: Pangaea  
+    headless: false
+    dateadded: 2023-11-02
     active: true

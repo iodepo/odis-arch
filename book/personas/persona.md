@@ -3,7 +3,7 @@
 ## About 
 
 During the design process of the Ocean InfoHub (OIH), many of the design approached leverage three
-personas that help define the various archtypes of people who engage with OIH.  It should not be assumed
+personas that help define the various archetypes of people who engage with OIH.  It should not be assumed
 these scope all the potential persona or that a person or organization scope only one.  It is quite possible
 to many.   These are simply design approaches representing potential models or characters.   They 
 are tools used in the design process of OIH.
@@ -45,8 +45,8 @@ profiles described in the [Thematic Patterns](../thematics/index.md).
 
 In OIH the Aggregator is a person or organization who is indexing resources on the 
 web using the structured data on the web patterns described in this documentation.  
-Their goal is to efficiently and efficiently index the resources exposed by the Publisher 
-persona and generate usable indexes.  Further, they would work to exposed these indexes in 
+Their goal is to efficiently and effectively index the resources exposed by the Publisher 
+persona and generate usable indexes.  Further, they would work to expose these indexes in 
 a manner that is usable by the User persona.
 Details on the approach used by OIH and potential alternatives can be found in the 
 [Aggregator](../indexing/index.md) section.

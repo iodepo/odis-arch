@@ -1,0 +1,46 @@
+# send build notifications to the #odis IRC channel
+# homepage: https://github.com/marketplace/actions/notify-irc
+
+name: "IRC Push Notification"
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  irc_notify:
+    runs-on: ubuntu-latest
+    #if: github.repository == 'iodepo/odis-arch'
+    steps:
+      - name: irc push
+        uses: rectalogic/notify-irc@v2
+        if: github.event_name == 'push'
+        with:
+          channel: "#odis"
+          server: "irc.libera.chat"
+          nickname: odis-github-notifier
+          message: |
+            ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
+            ${{ join(github.event.commits.*.message) }}
+      - name: irc pull request
+        uses: rectalogic/notify-irc@v2
+        if: github.event_name == 'pull_request'
+        with:
+          channel: "#odis"
+          server: "irc.libera.chat"
+          nickname: odis-github-notifier
+          message: |
+            ${{ github.actor }} opened PR ${{ github.event.pull_request.html_url }}
+            ${{ github.event.pull_request.title }}
+      - name: irc tag created
+        uses: rectalogic/notify-irc@v2
+        if: github.event_name == 'create' && github.event.ref_type == 'tag'
+        with:
+          channel: "#odis"
+          server: "irc.libera.chat"
+          nickname: odis-github-notifier
+          message: |
+            ${{ github.actor }} tagged ${{ github.repository }} ${{ github.event.ref }}
