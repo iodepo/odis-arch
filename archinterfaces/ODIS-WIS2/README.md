@@ -1,4 +1,4 @@
-# WMO OIH interfacing
+# WIS2 (WMO) OIH interfacing
 
 ## About
 
