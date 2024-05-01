@@ -22,7 +22,7 @@ defined and difficult at times to reliably translate to geometries for use in mo
 environments.  
 
 ```{note}
-schema.org expects lat long (Y X) coordinate order, so be aware of that when
+schema.org expects a lat long (Y X) coordinate order, so be aware of that when
 you are defining your spatialCoverage, in the GeoShape or Box parameters.
 ```
 

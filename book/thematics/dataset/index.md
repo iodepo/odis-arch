@@ -38,7 +38,7 @@ for more focused creative work examples.
 ```
 
 ```{note}
-schema.org expects lat long (Y X) coordinate order, so be aware of that when
+schema.org expects a lat long (Y X) coordinate order, so be aware of that when
 you are defining your spatialCoverage, in the GeoShape or Box parameters.
 ```
 
