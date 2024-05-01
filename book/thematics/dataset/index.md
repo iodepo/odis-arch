@@ -37,6 +37,11 @@ for more focused creative work examples.
 :linenos:
 ```
 
+```{note}
+schema.org expects lat long (Y X) coordinate order, so be aware of that when
+you are defining your spatialCoverage, in the GeoShape or Box parameters.
+```
+
 ## Demo area  please ignore
 
 This area is being used to test out a new repository structure where the data graphs, 

@@ -17,9 +17,14 @@ execution:
 ## About
 
 For spatial geometry Ocean InfoHub guidance will be to use the OGC [GeoSPARQL](https://www.ogc.org/standards/geosparql)
-vocabulary to express geometry using Well Known Text (WKT).  The schema.org spatial types and propeties are not well 
+vocabulary to express geometry using Well Known Text (WKT).  The schema.org spatial types and properties are not well 
 defined and difficult at times to reliably translate to geometries for use in more Open Geospatial Consortium (OGC)
 environments.  
+
+```{note}
+schema.org expects lat long (Y X) coordinate order, so be aware of that when
+you are defining your spatialCoverage, in the GeoShape or Box parameters.
+```
 
 ## Simple GeoSPARQL WKT
 
