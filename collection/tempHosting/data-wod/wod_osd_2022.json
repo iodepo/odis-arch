@@ -3,16 +3,16 @@
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/wod_osd_2022.json",
+    "@id": "https://raw.githubusercontent.com/your-repo/wod_osd_2022.json",
     "@type": "Dataset",
     "author": {
         "@type": "Organization",
         "name": "Ocean Climate Lab/NCEI",
         "url": "http://www.nodc.noaa.gov"
     },
-    "citation": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
-    "dateCreated": "2023-03-28",
-    "dateModified": "2023-03-28",
+    "creditText": "World Ocean Database 2018. URL:http://data.nodc.noaa.gov/woa/WOD/DOC/wod_intro.pdf",
+    "dateCreated": "2024-03-12",
+    "dateModified": "2024-03-12",
     "description": "Data for multiple casts from the World Ocean Database",
     "distribution": {
         "@type": "DataDownload",
@@ -21,7 +21,7 @@
     "identifier": {
         "@type": "PropertyValue",
         "description": "These identifiers for individual casts are assigned by the World Ocean Database",
-        "propertyID": "/nodc/data/OCLAB/OCL/retrieval/monthlies/wod_update_nc/Jan2023/2022/wod_osd_2022.nc"
+        "propertyID": "/nodc/data/OCLAB/OCL/retrieval/monthlies/wod_update_nc/Jan2024/2022/wod_osd_2022.nc"
     },
     "name": "World Ocean Database - Multi-cast file: 2022/wod_osd_2022.nc",
     "publisher": {
@@ -34,11 +34,11 @@
         "additionalProperty": [
             {
                 "name": "Geospatial vertical min",
-                "value": "1.6884231567382812"
+                "value": "0.0"
             },
             {
                 "name": "Geospatial vertical max",
-                "value": "6003.0908203125"
+                "value": "6003.1484375"
             },
             {
                 "name": "Geospatial vertical units",
@@ -51,7 +51,7 @@
         ],
         "geo": {
             "@type": "GeoShape",
-            "box": "133.02890014648438 20.99959945678711 -7.0560302734375 59.85342025756836"
+            "box": "-2.3355000019073486 133.02890014648438 59.85342025756836 -7.0560302734375"
         }
     },
     "subjectOf": {
@@ -60,7 +60,7 @@
         "name": "2022/wod_osd_2022.nc",
         "potentialAction": {
             "@type": "Action",
-            "endTime": "2022-07-27",
+            "endTime": "2022-10-16",
             "name": "Time of the event for: 2022/wod_osd_2022.nc",
             "startTime": "2022-05-01"
         }
