@@ -18,24 +18,6 @@
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 sources:
   #
-  # African Coastal and Marine Atlas
-  #
-  - name: acma
-    propername: African Coastal and Marine Atlas catalogue (ACMA)
-    catalogue: https://acma.africanmarineatlas.org
-    domain: https://africanmarineatlas.org
-    logo: https://acma.africanmarineatlas.org/static/mapstore/img/geonode-logo.svg
-    #ODISCat entry contains incorrect urls
-    pid: https://catalogue.odis.org/view/2066
-    sourcetype: sitemap
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma/sitemap.xml
-    changefreq:
-    backend: GeoNode
-    headless: false
-    dateadded: 2024-04-23
-    cron: 0 6 * * 0 
-    active: true
-  #
   # British Oceanographic Data Centre
   #
   - name: bodc
