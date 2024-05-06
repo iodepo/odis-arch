@@ -266,6 +266,23 @@ sources:
     active: true
     cron: 0 9 * * 0
   #
+  # Global Biodiversity Information Facility (GBIF)
+  #
+  - name: gbif
+    propername: Global Biodiversity Information Facility (GBIF)
+    catalogue: https://www.gbif.org/dataset/search
+    domain: https://www.gbif.org/
+    logo: https://upload.wikimedia.org/wikipedia/commons/1/1e/GBIF-2015-full-stacked.png
+    pid: https://catalogue.odis.org/view/3297
+    sourcetype: sitemap
+    url: https://www.gbif.org/sitemap-dataset.xml
+    changefreq: 
+    backend: Custom
+    headless: false
+    dateadded: 2024-05-06
+    cron: 0 1 * * 0
+    active: true    
+  #
   # Indonesia National Oceanic Data Center
   #
   - name: inanodc
