@@ -592,7 +592,7 @@ if graphStatus == 1:
         #node_filter = st.selectbox("Select an ODIS node", ("Marine Training EU", "AquaDocs", "Ocean Biodiversity Information System", "Ocean Best Practices", "OceanExpert UNESCO/IOC Project Office for IODE", "EDMO SeaDataNet", "EDMERP SeaDataNet", "INVEMAR documents", "INVEMAR Experts", "INVEMAR institution", "INVEMAR training", "INVEMAR vessel"))
         #node_filter = st.selectbox("Select an ODIS node", dfOrgs, index=8)
         #node_filter = st.selectbox("Select an ODIS node", dfOrgNames, index=2)
-        node_filter = st.selectbox("Select an ODIS node", dfJoined[['Node']], index=6)
+        node_filter = st.selectbox("Select an ODIS node", dfJoined[['Node']], index=7)
         
         # creating a single-element container
         placeholder = st.empty()
@@ -627,7 +627,7 @@ if graphStatus == 1:
                 sitemapDesc = dfRecord[["description"]].values[0].item()
                 sitemapType = dfRecord[["type"]].values[0].item()
                 if sitemapType == "sitemap":
-                    st.subheader(dfRecord[["count"]].values[0].item())
+                    st.subheader(int(dfRecord[["count"]].values[0].item()))
                     #st.subheader(sitemapDesc.split(':')[0].rstrip())
                     #output = [x for x in sitemapDesc.split() if x.startswith('http://') or x.startswith('https://')]
                     #st.subheader(output[0])
