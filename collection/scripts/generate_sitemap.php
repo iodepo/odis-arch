@@ -5,7 +5,7 @@
    contact email:   info@gatewaygeomatics.com
    Purpose of file: Generate a sitemap.xml file by pointing to a directory containing
                     JSON-LD files (and subfolders if necessary)
-   Steps:           change the first 2 defines below to point to your local install, then
+   Steps:           change the first 3 defines below to point to your local install, then
                     execute it at the commandline with:
    Syntax:          php generate_sitemap.php > sitemap.xml
    History:         originally created for COINAtlantic catalogue in 2011
@@ -13,6 +13,9 @@
 
 define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/collection/tempHosting/data-wod');
 define ('JSONLD_ROOT_PATH_URL', 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod');
+#set how frequently the record is likely to change
+# possible values are: always, hourly, daily, weekly, monthly, yearly, never
+define ('SITEMAP_CHANGE_FREQUENCY', 'monthly');
 
 $basedir = JSONLD_ROOT_PATH_DIRECTORY;
 $baseurl = JSONLD_ROOT_PATH_URL;
@@ -30,7 +33,7 @@ function printlink($fn)
     echo "  <url>" . "\n";
     echo "    <loc>$url</loc>" . "\n";
     echo "    <lastmod>$currentDate</lastmod>" . "\n";
-    echo "    <changefreq>monthly</changefreq>" . "\n";
+    echo "    <changefreq>".SITEMAP_CHANGE_FREQUENCY."</changefreq>" . "\n";
     echo "  </url>" . "\n";
     return;
 }
