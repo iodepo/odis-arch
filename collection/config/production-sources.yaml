@@ -138,6 +138,23 @@ sources:
     dateadded: 2022-04-13
     cron: 0 2 * * 0
     active: true
+ #
+  # Canary Current Large Marine Ecosystem (CCLME)
+  #
+  - name: cclme
+    propername: Canary Current Large Marine Ecosystem (CCLME)
+    catalogue: https://www.fao.org/in-action/canary-current-lme/en
+    domain: https://www.fao.org/in-action/canary-current-lme/en
+    logo: https://www.fao.org/images/corporatelibraries/fao-logo/fao-logo-en.svg?sfvrsn=f64522b4_36
+    pid: https://catalogue.odis.org/view/3276
+    sourcetype: sitemap
+    url: http://www.ideo-cclme.ieo.es/odis/odis_sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-10-30
+    cron: 0 2 * * 0
+    active: true    
   #
   # CIOOS National
   #
