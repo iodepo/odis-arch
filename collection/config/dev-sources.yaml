@@ -18,25 +18,6 @@
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 sources:
   #
-  # British Oceanographic Data Centre
-  #
-  - name: bodc
-    propername: British Oceanographic Data Centre (BODC)
-    catalogue: https://www.bodc.ac.uk/data/bodc_database/nodb/search/
-    domain: https://www.bodc.ac.uk/
-    logo: https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/bodc
-    sourcetype: sitemap
-    url: https://api.linked-systems.uk/sitemap_pap_api.xml
-    changefreq: monthly
-    backend: Custom
-    headless: false
-    dateadded: 2023-07-10
-    cron: 0 7 * * 0 
-    active: true
-
-  #
   # INCOIS
   #
   - name: incois

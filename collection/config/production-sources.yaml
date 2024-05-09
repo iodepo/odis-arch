@@ -120,7 +120,24 @@ sources:
     headless: false
     dateadded: 2023-06-20
     cron: 0 6 * * 0
-    active: true    
+    active: true
+      #
+  # British Oceanographic Data Centre
+  #
+  - name: bodc
+    propername: British Oceanographic Data Centre (BODC)
+    catalogue: https://www.bodc.ac.uk/data/bodc_database/nodb/search/
+    domain: https://www.bodc.ac.uk/
+    logo: https://www.bodc.ac.uk/assets/img/bodc-logo-colour-white.png
+    pid: https://catalogue.odis.org/view/29
+    sourcetype: sitemap
+    url: https://api.linked-systems.uk/sitemap_pap_api.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2023-07-10
+    cron: 0 7 * * 0 
+    active: true
   #
   # Caribbean Marine Atlas catalogue
   #
