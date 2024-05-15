@@ -31,10 +31,11 @@ public/graphs/15022024/nt
 public/graphs/15022024/kuzu
 
 
+
 ```bash
  python releaser.py --source s3://ossapi.oceaninfohub.org/gleaner.oih/graphs/latest \
                     --sourcematch release \
-                    --output s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/test1
+                    --output s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/latest
 ```
 
 ```bash

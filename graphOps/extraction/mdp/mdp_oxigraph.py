@@ -6,13 +6,13 @@ import io
 import warnings
 import datetime
 from functools import reduce
- 
+
 import kglab
 import numpy as np
 import pandas as pd
 from dateutil import parser
 from rdflib import ConjunctiveGraph  # needed for quads
-import polars as pl
+# import polars as pl
 from tqdm import tqdm
 from pyoxigraph import *
 
@@ -31,6 +31,7 @@ def main():
     # Params
     parser = argparse.ArgumentParser(description="Process some arguments.")
     parser.add_argument("--source", type=str, help="Source URL")
+    parser.add_argument("--query", type=str, help="Query URL")
     parser.add_argument("--output", type=str, help="Output file")
 
     args = parser.parse_args()
@@ -39,73 +40,64 @@ def main():
         print("Error: the --source argument is required")
         sys.exit(1)
 
+    if args.query is None:
+        print("Error: the --query argument is required")
+        sys.exit(1)
+
     if args.output is None:
         print("Error: the --output argument is required")
         sys.exit(1)
 
     u = args.source
+    qu = args.query
     o = args.output
 
+    sq = load_queries.read_file(qu)
+    # print(sq)
+
     # Load graph
-    print("RDF download started", datetime.datetime.now())
+    print("RDF downloading", datetime.datetime.now())
     dg = readSource.read_data(u)
-    print("RDF downloaded, starting load stage", datetime.datetime.now())
+    print("RDF loading", datetime.datetime.now())
 
-    mf = graphProcessor(dg)
+    mf = graphProcessor(dg, sq)
 
-    # # Reporting
-    # print("Reporting Stage: The following is the current dataframe shape to exported")
-    # print(mf.info())
-    #
-    # # Save
-    # saveobject.write_data(o, mf)
+    # Save
+    if mf is None:
+        print("No graphs found")
+    else:
+        print(mf.info())
+        saveobject.write_data(o, mf)
 
 
-def graphProcessor(dg):
+# get the value of a triple object from pyoxigraph
+def getvalue(x):
+  return x.value
+
+# Process the graphs
+def graphProcessor(dg, q):
+    print("RDF aligning", datetime.datetime.now())
     r = graphshapers.contextAlignment(dg)
-
-    print("RDF loaded, starting query stage", datetime.datetime.now())
 
     store = Store()
     mime_type = "application/n-quads"
     store.load(io.StringIO(r), mime_type, base_iri=None, to_graph=None)
-    print("RDF loaded, starting query stage", datetime.datetime.now())
+    print("RDF querying", datetime.datetime.now())
 
-    # Load Queries
-    sfl = [
-        "./queries/subjectsTypes.rq",    # q1
-        "./queries/template_dataset.rq",  # q2
-        "./queries/baseQuery.rq",
-        "./queries/course.rq",
-        "./queries/dataset.rq",
-        "./queries/person.rq",
-        "./queries/sup_geo.rq",
-        "./queries/sup_temporal.rq"
-    ]
+    sq = store.query(q)
+    qr = list(sq)
 
-    qlist = load_queries.read_files(sfl)
+    print("Length SPARQL results:  {}".format(len(qr)))
 
-    # conduct initial query for types and associated subject IRIs
-    qr = list(store.query(qlist['q1']))
+    if len(qr) > 0:
+        df = pd.DataFrame(qr)
+        df = df.applymap(lambda x: x.value if x is not None else None)
 
-    print("Length of SPARQL query results:  {}".format(len(qr)))
+        column_names = list(map(getvalue, sq.variables))
+        df.columns = column_names
 
-    qrl = []
-    for r in qr:
-        qrl.append([r['id'].value, r['type'].value])
-
-    # print(qr[0])
-    # print(qr[0]['id'].value)
-    # print(qr[0]['type'].value)
-
-    # for binding in qr:
-    #     print("{}  {}".format(binding['id'].value, binding['type'].value))
-    df = pl.from_records(qrl, schema=["id", "type"])
-    print("Length of Polars data frame:     {}".format(len(df)))
-
-    dsl = polar_calls.dataset_list(df, store, qlist)
-
-    return 0
+        return df
+    return None
 
 
 if __name__ == '__main__':

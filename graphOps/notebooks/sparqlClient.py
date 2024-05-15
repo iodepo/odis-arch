@@ -1,3 +1,11 @@
+import sparqldataframe
+
+
+local = "http://localhost:7878/query"
+oih = "http://graph.oceaninfohub.org/blazegraph/namespace/ocd/sparql"
+
+
+rp1 = """
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -16,3 +24,8 @@ WHERE {
         OPTIONAL { ?s schema:headline ?headline . }
      }
  }
+"""
+
+df = sparqldataframe.query(local, rp1)
+
+print(df.info())

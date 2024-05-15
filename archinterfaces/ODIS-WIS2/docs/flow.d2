@@ -1,0 +1,15 @@
+direction: right
+
+s: Source Resources \n JSON-LD
+rg: Release Graph \n RDF
+ps: OIH Query Results \n Product Set (Parquet)
+wmo: WMO/WIS2 Data Model \n DataFrame \\ Pandas
+gj: WMO/WIS2 \n GeoJSON Serialization
+
+s -> rg: via ODIS \nIndexing Architecture
+
+rg -> ps: via SAPRQL \n (Oxigraph)
+
+ps -> wmo: via SQL \n(DuckDB)
+
+wmo -> gj: via Code \noihProeducts2WIS2.py

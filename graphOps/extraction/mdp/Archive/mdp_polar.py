@@ -24,7 +24,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas 
 
 
 # References
-* https://www.confessionsofadataguy.com/how-to-join-datasets-in-polars-compared-to-pandas/
+# * https://www.confessionsofadataguy.com/how-to-join-datasets-in-polars-compared-to-pandas/
 
 
 def main():

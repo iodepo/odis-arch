@@ -1,0 +1,75 @@
+direction: right
+
+
+classes: {
+data: {
+    width: 350
+               style: {
+                     stroke-width: 0
+                    fill: "honeydew"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+group: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                    fill: "#44C7B1"
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+
+}
+
+prod: ODIS Graph Production Architecture {
+    
+    p: ODIS Graph (VM) {
+    note: |md
+    Knowledge Graph
+    
+    * Graph / Triplestore / SPARQL
+    * Dashboard
+    |
+    }
+    
+    aws: AWS Object Store {
+    note: |md
+    Currently Minio on VLIZ
+    |
+    }
+    
+    ui: Ocean InfoHub (VM) {
+    note: |md
+    User Interface
+    * UI
+    * Solr
+    |
+    }
+    
+    
+
+    indexer: ODIS Generator (VM) {
+    note: |md
+    Builds the graph and products
+    * ODISCat bootstrap
+    * Scheduler
+    * Indexer / Harvesting
+    
+    
+    |
+    }
+
+
+
+aws <- indexer : Object \n interaction    
+aws -> ui: Object \n interaction 
+aws -> p: Object \n interaction 
+
+*.class: data
+
+}
+
+prod.class: group
+

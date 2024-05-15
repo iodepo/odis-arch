@@ -59,7 +59,7 @@ def dataset_list(df, store, qlist):
                     if r[term].value != '':
                         d[term] = r[term].value
 
-        print(d)
+        # print(d)
         if len(d) > 0:
             dl.append(d)
 
@@ -69,5 +69,5 @@ def dataset_list(df, store, qlist):
 
     print(len(df))
 
-    print(df)
+    # print(df)
 

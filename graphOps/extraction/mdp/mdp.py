@@ -60,7 +60,6 @@ def graphProcessor(dg):
     g.parse(data=r, format="nquads")
     print("Number of quads loaded: {}".format(len(g)))
 
-
     # Convert the RDFLIB graph to a kglabs graph
     namespaces = {
         "sh": "http://www.w3.org/ns/shacl#",
@@ -74,11 +73,11 @@ def graphProcessor(dg):
 
     # Load Query Section, queries are loading via the net from GitHub URLs
     # sl = [
-        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/baseQuery.rq",
-        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
-        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
-        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
-        # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
+    # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/baseQuery.rq",
+    # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_geo.rq",
+    # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/sup_temporal.rq",
+    # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/dataset.rq",
+    # "https://raw.githubusercontent.com/iodepo/odis-in/master/SPARQL/searchOIH/person.rq"
     # ]
 
     sfl = [
@@ -105,7 +104,8 @@ def graphProcessor(dg):
             gc.collect()
 
     common_column = ["id", "type"]
-    merged_df = reduce(lambda left, right: pd.merge(left, right, on=common_column,suffixes=('_left', '_right'), how='outer'), dfl)
+    merged_df = reduce(
+        lambda left, right: pd.merge(left, right, on=common_column, suffixes=('_left', '_right'), how='outer'), dfl)
 
     # Initialize a merged DataFrame with the first DataFrame
     # merged_df = dfl[0]
@@ -119,15 +119,20 @@ def graphProcessor(dg):
 
     merged_df.info()
 
-    ### Temporal shaping
+    # Temporal shaping
     print("Processing Stage: Temporal")
 
     if "temporalCoverage" in merged_df.columns:
-        merged_df['temporalCoverage'] = merged_df['temporalCoverage'].astype( 'str')  # fine to make str since we don't use in the solr JSON
-        merged_df['dt_startDate'] = merged_df['temporalCoverage'].apply( lambda x: re.split("/", x)[0] if "/" in x else np.nan)
-        merged_df['dt_endDate'] = merged_df['temporalCoverage'].apply(lambda x: re.split("/", x)[1] if "/" in x else np.nan)
-        merged_df['n_startYear'] = merged_df['dt_startDate'].apply( lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
-        merged_df['n_endYear'] = merged_df['dt_endDate'].apply(lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
+        merged_df['temporalCoverage'] = merged_df['temporalCoverage'].astype(
+            'str')  # fine to make str since we don't use in the solr JSON
+        merged_df['dt_startDate'] = merged_df['temporalCoverage'].apply(
+            lambda x: re.split("/", x)[0] if "/" in x else np.nan)
+        merged_df['dt_endDate'] = merged_df['temporalCoverage'].apply(
+            lambda x: re.split("/", x)[1] if "/" in x else np.nan)
+        merged_df['n_startYear'] = merged_df['dt_startDate'].apply(
+            lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
+        merged_df['n_endYear'] = merged_df['dt_endDate'].apply(
+            lambda x: parser.parse(x).year if "-" in str(x) else np.nan)
     else:
         print("NOTE:  no temporal data found")
 
@@ -165,7 +170,6 @@ def graphProcessor(dg):
     else:
         print("NOTE: no geometry data found")
 
-
     if "name" in merged_df.columns:
         merged_df['name'] = merged_df['name'].astype(str)  # why is this needed?
 
@@ -178,7 +182,8 @@ def graphProcessor(dg):
         merged_df['aregion'] = merged_df['address'].apply(lambda x: regionFor.address(x) if x else x)
     if "addressCountry" in merged_df.columns:
         print("Processing region for addressCountry")
-        merged_df['cregion'] = merged_df['addressCountry'].apply(lambda x: regionFor.countryLastProcessing(x) if x else x)
+        merged_df['cregion'] = merged_df['addressCountry'].apply(
+            lambda x: regionFor.countryLastProcessing(x) if x else x)
     if "wkt" in merged_df.columns:
         print("Processing region for wkt")
         merged_df['fregion'] = merged_df['wkt'].apply(lambda x: regionFor.feature(x) if x else x)
@@ -194,7 +199,6 @@ def graphProcessor(dg):
         merged_df['url'] = merged_df['url'].astype(str)  # why is this needed?
     if "description" in merged_df.columns:
         merged_df['description'] = merged_df['description'].astype(str)  # why is this needed?
-
 
     # transforms needed for aggregation
     if "keywords" in merged_df.columns:
@@ -241,6 +245,7 @@ def graphProcessor(dg):
     mf = merged_df.groupby('id').agg(agg_dict).reset_index()
 
     return mf
+
 
 if __name__ == '__main__':
     main()

@@ -9,7 +9,6 @@ from minio import Minio
 
 from . import readobject
 
-
 def write_data(target, mf):
     if target.startswith('s3://'):
         # it's an S3 based object
@@ -38,7 +37,9 @@ def write_data(target, mf):
         _, file_extension = os.path.splitext(target)
 
         if file_extension == '.parquet':
+            # mf = mf.astype(str) # WARNING do I want this?   if empty colum, perhaps just remove and use schema name mapping? (used exact schema)
             mf.to_parquet(target, engine='fastparquet')  # engine must be one of 'pyarrow', 'fastparquet'
+            # mf.write_parquet(target)  # engine must be one of 'pyarrow', 'fastparquet'
         elif file_extension == '.csv':
             mf.to_csv(target)
         else:
