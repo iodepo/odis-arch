@@ -18,6 +18,23 @@
 #    python -c 'import yaml, sys; yaml.safe_load(sys.stdin)' < sources.yaml
 sources:
   #
+  # CCHDO
+  #
+  - name: cchdo
+    propername: CLIVAR and Carbon Hydrographic Data Office
+    catalogue: https://cchdo.ucsd.edu/
+    domain: https://ucsd.edu/
+    logo: https://cchdo.ucsd.edu/static/svg/logo_cchdo.svg
+    pid: https://oceaninfohub.org/.well-known/org/incois
+    sourcetype: sitemap
+    url: https://cchdo.ucsd.edu/sitemap.xml
+    changefreq:
+    backend: ERDDAP
+    headless: false
+    dateadded: 2024-05-16
+    cron: 0 9 * * 0 
+    active: true  
+  #
   # INCOIS
   #
   - name: incois
