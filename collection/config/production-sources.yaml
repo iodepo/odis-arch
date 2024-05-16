@@ -155,7 +155,24 @@ sources:
     dateadded: 2022-04-13
     cron: 0 2 * * 0
     active: true
- #
+  #
+  # CLIVAR and Carbon Hydrographic Data Office
+  #
+  - name: cchdo
+    propername: CLIVAR and Carbon Hydrographic Data Office (CCHDO)
+    catalogue: https://cchdo.ucsd.edu/
+    domain: https://ucsd.edu/
+    logo: https://cchdo.ucsd.edu/static/svg/logo_cchdo.svg
+    pid: https://catalogue.odis.org/view/3291
+    sourcetype: sitemap
+    url: https://cchdo.ucsd.edu/sitemap.xml
+    changefreq:
+    backend: ERDDAP
+    headless: false
+    dateadded: 2024-05-16
+    cron: 0 9 * * 0 
+    active: true    
+  #
   # Canary Current Large Marine Ecosystem (CCLME)
   #
   - name: cclme
@@ -171,23 +188,6 @@ sources:
     headless: false
     dateadded: 2023-10-30
     cron: 0 2 * * 0
-    active: true
-  #
-  # CCHDO
-  #
-  - name: cchdo
-    propername: CLIVAR and Carbon Hydrographic Data Office (CCHDO)
-    catalogue: https://cchdo.ucsd.edu/
-    domain: https://ucsd.edu/
-    logo: https://cchdo.ucsd.edu/static/svg/logo_cchdo.svg
-    pid: https://catalogue.odis.org/view/3291
-    sourcetype: sitemap
-    url: https://cchdo.ucsd.edu/sitemap.xml
-    changefreq:
-    backend: ERDDAP
-    headless: false
-    dateadded: 2024-05-16
-    cron: 0 9 * * 0 
     active: true
   #
   # CIOOS National
