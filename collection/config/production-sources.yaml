@@ -171,7 +171,24 @@ sources:
     headless: false
     dateadded: 2023-10-30
     cron: 0 2 * * 0
-    active: true    
+    active: true
+  #
+  # CCHDO
+  #
+  - name: cchdo
+    propername: CLIVAR and Carbon Hydrographic Data Office (CCHDO)
+    catalogue: https://cchdo.ucsd.edu/
+    domain: https://ucsd.edu/
+    logo: https://cchdo.ucsd.edu/static/svg/logo_cchdo.svg
+    pid: https://catalogue.odis.org/view/3291
+    sourcetype: sitemap
+    url: https://cchdo.ucsd.edu/sitemap.xml
+    changefreq:
+    backend: ERDDAP
+    headless: false
+    dateadded: 2024-05-16
+    cron: 0 9 * * 0 
+    active: true
   #
   # CIOOS National
   #
@@ -335,6 +352,24 @@ sources:
     active: true
     cron: 0 10 * * 0
   #
+  # INCOIS
+  #
+  - name: incois
+    propername: Indian National Centre for Ocean Information Services (INCOIS)
+    catalogue: https://incois.gov.in/essdp/
+    domain: https://incois.gov.in/
+    logo: https://incois.gov.in/essdp/images/logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/incois
+    sourcetype: sitemap
+    url: https://incois.gov.in/essdp/xml/sitemap.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-04-15
+    cron: 0 9 * * 0 
+    active: true
+  #
   # INVEMAR Documents
   #
   - name: invemardocuments
@@ -370,6 +405,24 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 12 * * 0
+  #
+  # INVEMAR Geospatial
+  #
+  - name: invemargeo
+    propername: Latin America and the Caribbean Region (LAC) Geospatial
+    catalogue: https://portete.invemar.org.co/chm/
+    domain: https://portete.invemar.org.co
+    logo: https://www.invemar.org.co/o/invemar-actual-theme/images/logoWebINVEMAR.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/invemargeo
+    sourcetype: sitegraph
+    url: https://portete.invemar.org.co/chm/api/oih/platformgeo?format=json
+    changefreq:
+    backend: INVEMAR CHM
+    headless: false
+    dateadded: 2023-08-22
+    cron: 0 8 * * 0 
+    active: true    
   #
   # INVEMAR Institutions
   #
@@ -424,6 +477,24 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 15 * * 0
+  #
+  # Marine Institute Data Catalogue
+  #    
+  #
+  - name: marineie
+    propername: Marine Institute Data Catalogue (Ireland)
+    catalogue: https://data.marine.ie/geonetwork/srv/eng/catalog.search
+    domain: https://data.marine.ie
+    logo: https://data.marine.ie/geonetwork/images/logos/494b5d66-a774-4a7e-86f0-c860cc21331b.png
+    pid: https://catalogue.odis.org/view/193
+    sourcetype: sitemap
+    url: https://data.marine.ie/geonetwork/srv/api/sitemap
+    changefreq: daily
+    backend: GeoNetwork
+    headless: false
+    dateadded: 2023-08-22
+    cron: 0 9 * * 0 
+    active: true    
   #
   # Marine Training EU
   #
@@ -494,6 +565,24 @@ sources:
     dateadded: 2023-04-13
     active: true
     cron: 0 18 * * 0
+  #
+  # NCEI Marine Microplastics Catalogue
+  #    
+  #
+  - name: ncei
+    propername: NCEI Marine Microplastics Catalogue
+    catalogue: https://experience.arcgis.com/experience/b296879cc1984fda833a8acc93e31476 
+    domain: https://www.ncei.noaa.gov/products/microplastics
+    logo: https://www.ncei.noaa.gov/themes/custom/ncei/logo.svg
+    pid: https://catalogue.odis.org/view/3295
+    sourcetype: sitemap
+    url: https://www.ncei.noaa.gov/sites/g/files/anmtlf171/files/2024-04/microplastics-sitemap.xml
+    changefreq: monthly
+    backend: ArcGIS
+    headless: false
+    dateadded: 2024-01-24
+    cron: 0 2 * * 0 
+    active: true    
   #
   # NMDIS-China
   #
@@ -601,6 +690,24 @@ sources:
     cron: 0 11 * * 0 
     active: true
   #
+  # Aquatic Sciences and Fisheries Abstracts (OpenASFA)
+  #
+  - name: openasfa
+    propername: Aquatic Sciences and Fisheries Abstracts (OpenASFA)
+    catalogue: https://www.fao.org/fishery/en/openasfa
+    domain: https://www.fao.org/fishery/en
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/FAO_logo.svg/180px-FAO_logo.svg.png
+    pid: https://catalogue.odis.org/view/3277
+    sourcetype: sitemap
+    url: https://www.fao.org/fishery/sitemap/fishery_openasfa_en.xml
+    #url: https://www.fao.org/fishery/sitemap.xml
+    changefreq: monthly
+    backend: Custom
+    headless: false
+    dateadded: 2024-02-02
+    cron: 0 11 * * 0 
+    active: true    
+  #
   # Observing System Monitoring Center
   #
   - name: osmc
@@ -671,6 +778,22 @@ sources:
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
     active: true
+  #
+  # WIO Symphony
+  # 
+  - name: wiosymphony
+    propername: WIO (Western Indian Ocean) Symphony
+    catalogue: https://symphony.nairobiconvention.org/login
+    domain: https://www.nairobiconvention.org/wio-symphony/
+    logo: https://www.nairobiconvention.org/wp-content/uploads/2019/05/nairobic_logo.png
+    pid: https://catalogue.odis.org/view/3290
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/WIOSymphony/wiosym/main/metadata/sitemap.xml
+    changefreq: monthly 
+    backend: Custom  
+    headless: false
+    dateadded: 2024-01-24
+    active: true    
   #
   # World Ocean Database
   # 
