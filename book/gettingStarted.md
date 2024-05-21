@@ -198,7 +198,9 @@ An example sitemap from an ODIS node can be seen [here](https://dataportal.leibn
 
 Add the `<changefreq>` metadata for each sitemap record, on how often you expect 
 records in your sitemap to change - this will tell systems like OIH how often to 
-reindex your holdings, such as:
+reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly`, `monthly`,
+`yearly`, `never`.  Here is a snippet from a sitemap:
+:
 
 ```html
   <url>
