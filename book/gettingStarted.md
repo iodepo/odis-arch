@@ -5,7 +5,7 @@
 This page describes - at a high level - how a digital system with access to the 
 Web can link itself into the ODIS Federation.
 
-![image1](./images/odis-network-small.png)
+![ODIS network](./images/odisNetworkSmall.png)
 
 Any system providing data (in a broad sense, including documents, software code, 
 etc) and/or services that are relevant to ocean science, management, policy, 
@@ -54,7 +54,7 @@ is an official identifier and kept up to date (like an ORCID for your organisati
 
 ### OceanExpert 
 
-![image1](./images/oceanexpert.png)
+![OceanExpert banner](./images/oceanExpert.png)
 
 We recommend that your organisation creates and maintains an OceanExpert ID. 
 [OceanExpert](https://oceanexpert.org/) (OE) is maintained by the IODE and is deeply 
@@ -73,7 +73,7 @@ nominated to maintain the entry.
 
 ## Registering your (meta)data node(s)
 
-![image1](./images/odiscat-logo.png)
+![ODISCat logo](./images/odiscatLogo.png)
 
 Now that your organisation has an identifier on the web (OceanExpert ID), you can 
 register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources 
@@ -230,7 +230,7 @@ there are 2 critical fields to fill for the ODIS connection, as follows:
  - in the "Startpoint URL for ODIS-Arch" field, paste the url to your sitemap.xml file
  - in the "Type of ODIS-Arch URL" field, select "Sitemap"
  
-![image1](./images/odiscat-entry.png)
+![ODISCat entry](./images/odiscatEntry.png)
 
 That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
 
