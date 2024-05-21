@@ -20,12 +20,16 @@ In an increasingly data-driven digital landscape, sharing information about your
 resources on the web has become a vital endeavor. Structured data, presented 
 through JSON-LD, offers an approachable means to achieve this goal, providing 
 context and linked data in a format easily understood by both humans and machines. 
-Through the incorporation of schema.org, a collaborative initiative designed to 
-create, maintain, and promote schemas for structured data on the internet, this 
-guide will help you navigate the process of sharing JSON-LD for your web resources. 
-In this guide, we'll walk you through the key steps to effectively share JSON-LD 
-on the web for your resource, empowering you to enhance discoverability and semantic 
-context for your valuable content.
+Through the incorporation of the [schema.org](https://schema.org/) framework, 
+a collaborative initiative designed to create, maintain, and promote schemas for 
+structured data on the internet, this guide will help you navigate the process of 
+sharing JSON-LD for your web resources. In this guide, we'll walk you through the key 
+steps to effectively share JSON-LD on the web for your resource, empowering you to 
+enhance discoverability and semantic context for your valuable content.
+
+> [!NOTE]
+> Learn more about [Structured Data for the Web](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) 
+> and [JSON-LD](https://json-ld.org/)
 
 The importance of sharing (meta)data about your digital assets - in a form that 
 others can understand - cannot be underemphasised: wihout a common approach, digital 
@@ -35,11 +39,8 @@ and informed action.  The International Oceanographic Data and Information Excha
 oceans information through a common platform.
 
 > [!TIP]
-> ODIS is one of the 3 core programs of the IODE: Ocean Biodiversity Information System 
-> (OBIS), OceanTeacher Global Academy (OTGA), and ODIS.
-
-TODO:Link off to docs about JSON-LD, schema.org, and structured data on the web
-
+> ODIS is one of the 3 core programs of the IODE: 1) Ocean Biodiversity Information System 
+> (OBIS), 2) OceanTeacher Global Academy (OTGA), and 3) ODIS.
 
 ## Registering your organisation
 
