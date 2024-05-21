@@ -32,7 +32,7 @@ enhance discoverability and semantic context for your valuable content.
 > and [JSON-LD](https://json-ld.org/)
 
 The importance of sharing (meta)data about your digital assets - in a form that 
-others can understand - cannot be underemphasised: wihout a common approach, digital 
+others can understand - cannot be underemphasised: without a common approach, digital 
 assets are often invisible to one another, harming collaboration, due diligence, 
 and informed action.  The International Oceanographic Data and Information Exchange 
 (IODE) helps provide ODIS as way for ocean data entities around the world to share
@@ -96,12 +96,12 @@ shape their submissions. Note, however, that any valid schema.org Type can be
 used to share metadata through the Federation. 
 
 Note: To create and test an initial link to ODIS, you don't need to create 
-metadata for all your holdings - a ssmall test set will do.
+metadata for all your holdings - a small test set will do.
 
 Additional semantics (i.e. beyond what schema.org can offer) can be embedded 
 into these files using schema.org's additionalProperty, DefinedTerm, or 
-similar property. More information on how to nest additonal semantics is 
-availabler here: [TODO: Add links] 
+similar property. More information on how to nest additional semantics is 
+available here: [TODO: Add links] 
 
 You can store these files anywhere on the web (under your control), as long 
 as they are accessible using standard web protocols. Many ODIS partners that 
@@ -129,7 +129,7 @@ be discovered and (re)used in predictable ways.
 
 Sometimes, an existing pattern is close you what you need, but there are modifications 
 that would make it a better fit (e.g. modifying spatial metadata to include depth more 
-explicitly). Many of these modifcations are likely to be useful to the whole Federation, 
+explicitly). Many of these modifications are likely to be useful to the whole Federation, 
 thus we encourage you to post an issue on our `odis-arch` GitHub repo [TODO:Add link]. 
 There, you can describe the modification and how it would help improve the description 
 and discovery of ocean data, and the ODIS team can help shape, verify, and integrate 
