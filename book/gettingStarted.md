@@ -39,9 +39,8 @@ and informed action.  The International Oceanographic Data and Information Excha
 oceans information through a common platform.
 
 > [!TIP]
-> ODIS is one of the 3 core programs of the IODE: 1) Ocean Biodiversity Information System 
-> ([OBIS](https://obis.org/), 2) OceanTeacher Global Academy ([OTGA](https://classroom.oceanteacher.org/)), 
-> and 3) ODIS.
+> ODIS is one of the 3 core programs of the IODE: 1) [OBIS](https://obis.org/), 
+> 2) [OTGA](https://classroom.oceanteacher.org/), and 3) [ODIS](https://odis.org).
 
 ## Registering Your Organisation
 
@@ -144,7 +143,7 @@ embed the JSON-LD inside the record's HTML landing page, such as:
 
 ### Reusing ODIS patterns
 
-ODIS Partners have co-developed a library of JSON-LD/schema.org patterns 
+ODIS Partners have co-developed a library of JSON-LD/schema.org [patterns](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
 (i.e. extended examples of how to format JSON-LD files using schema.org Types and 
 properties) to help each other share content in a normative way. In general, these 
 patterns give more complete examples of normative usage, beyond those offered by 
