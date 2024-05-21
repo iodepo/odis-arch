@@ -131,6 +131,7 @@ embed the JSON-LD inside the record's HTML landing page, such as:
     "name": "Role of Antarctic krills in the biogeochemical cycle in the Indian Ocean sector of Southern Ocean",
     "description": "The Antarctic krill is the largest euphausiid, widely distributed in the Southern Ocean...",   
     ....
+  }
   </script>
 ```
 
@@ -141,7 +142,7 @@ embed the JSON-LD inside the record's HTML landing page, such as:
 > CKAN (with the [DCAT extension](https://extensions.ckan.org/extension/dcat/) enabled for the "schemaorg" profile),
 > and many others.
 
-### Reusing patterns
+### Reusing ODIS patterns
 
 ODIS Partners have co-developed a library of JSON-LD/schema.org patterns 
 (i.e. extended examples of how to format JSON-LD files using schema.org Types and 
@@ -158,16 +159,15 @@ pattern as possible. The more "in pattern" your content is, the more likely it w
 be discovered and (re)used in predictable ways.
 
 
-### Requesting modifications to existing patterns
+### Requesting modifications to existing ODIS patterns
 
 Sometimes, an existing pattern is close you what you need, but there are modifications 
 that would make it a better fit (e.g. modifying spatial metadata to include depth more 
 explicitly). Many of these modifications are likely to be useful to the whole Federation, 
-thus we encourage you to post an issue on our `odis-arch` GitHub repo [TODO:Add link]. 
-There, you can describe the modification and how it would help improve the description 
-and discovery of ocean data, and the ODIS team can help shape, verify, and integrate 
+thus we encourage you to post an issue on our [odis-arch](https://github.com/iodepo/odis-arch/issues) 
+GitHub repository. There, you can describe the modification and how it would help improve the description 
+& discovery of ocean data, and then the ODIS team can help shape, verify, and integrate 
 it into the core recommendations.
-
 
 ### Requesting new patterns
 
@@ -175,12 +175,11 @@ If there are no patterns that match your needs, or you feel that you're stretchi
 existing pattern too far, you can request help from the ODIS coordination team to help 
 craft a new one. This process is an excellent opportunity for the  broader ODIS partnership 
 to help review and co-develop the pattern, promoting wider interoperability. As above, 
-post an issue on our `odis-arch` GitHub repo [TODO:Add link] describing the need, and 
-ideally providing some example (meta)data that can be adapted.
+post an issue on our [odis-arch](https://github.com/iodepo/odis-arch/issues) GitHub repository 
+describing the need, and ideally providing some example (meta)data that can be adapted.
 
 What follows will be a few rounds of specification development, before we add the new 
 pattern to the ODIS Book for all to benefit from and interoperate over.
-
 
 ## Creating a Sitemap
 
@@ -188,17 +187,32 @@ Now that you have content to share, you'll have to tell other agents on the web 
 to find it. This should be done by setting up a sitemap, that points to each JSON-LD 
 file you wish the ODIS Federation to be aware of. 
 
-An example ODIS sitemap can be seen here [TODO:Add link]
+An example sitemap from an ODIS node can be seen [here](https://dataportal.leibniz-zmt.de/sitemap.xml)
 
-Note: If you have many thousands of entries, or you have subsets of links to share, 
-you can use a 'sitemap of sitemaps'  approach, where one sitemap can point to several 
-others.
+> [!NOTE] 
+> If you have many thousands of entries, or you have subsets of links to share, 
+> you can use a 'sitemap of sitemaps' approach, where one sitemap can point to several 
+> others.  Here is an example ODIS node with a [sitemap index](https://pacificdata.org/organization/sitemap.xml).
 
 ### Frequency of change
 
-Add metadata on how often you expect records in your sitemap to change - this will 
-tell systems like OIH how often to reindex your holdings.
+Add the `<changefreq>` metadata for each sitemap record, on how often you expect 
+records in your sitemap to change - this will tell systems like OIH how often to 
+reindex your holdings, such as:
 
+```html
+  <url>
+    <loc>
+      https://dataportal.leibniz-zmt.de/oih/dataset_18288.html
+    </loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+```
+
+> [!TIP]
+> There are many sitemap validator websites that you can leverage, to make sure that
+> you have generated your sitemap properly, and that it can be read by machines.
 
 ## Coming full circle: registering your sitemap in ODISCat
 
