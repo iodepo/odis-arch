@@ -3,7 +3,7 @@
 ## Hello World
 
 This page describes - at a high level - how a digital system with access to the 
-Web can link itself into the ODIS Federation. :heavy_check_mark:
+Web can link itself into the ODIS Federation.
 
 ![image1](./images/odis-network-small.png)
 
@@ -232,7 +232,7 @@ there are 2 critical fields to fill for the ODIS connection, as follows:
  
 ![image1](./images/odiscat-entry.png)
 
-That's it, now your node's records can be harvested by ODIS!
+That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
 
 **Section 3: Steps to Share JSON-LD**
 1) Explain the key steps to share JSON-LD for your resource:
