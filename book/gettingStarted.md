@@ -216,8 +216,23 @@ reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly
 > There are many sitemap validator websites that you can leverage, to make sure that
 > you have generated your sitemap properly, and that it can be read by machines.
 
-## Coming full circle: registering your sitemap in ODISCat
+## Coming full circle: Registering your Sitemap in ODISCat
 
+This is arguably the most important step, as the connection between your node & ODIS 
+will be made through the ODISCat entry that you setup earlier through the steps above, but
+there are 2 critical fields to fill for the ODIS connection, as follows:
+
+ - log back into [ODISCat](https://catalogue.odis.org/)
+ - click on the "search" link in the top-left
+ - click on the "Show my records" link on the Search page
+ - click on the "edit record" icon (the pencil) for your record
+ - click on the "Basic Description" tab
+ - in the "Startpoint URL for ODIS-Arch" field, paste the url to your sitemap.xml file
+ - in the "Type of ODIS-Arch URL" field, select "Sitemap"
+ 
+![image1](./images/odiscat-entry.png)
+
+That's it, now your node's records can be harvested by ODIS!
 
 **Section 3: Steps to Share JSON-LD**
 1) Explain the key steps to share JSON-LD for your resource:
