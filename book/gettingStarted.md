@@ -91,32 +91,55 @@ ODISCat has a dedicated field to let the ODIS Federation know where your metadat
 is. Leave that blank for now: we'll come back to this after we prepare content to 
 share via ODIS.
 
-
 ## Preparing content 
 
 All ODIS nodes share metadata about their holdings (datasets, documents, 
-organisational information, etc) and services (APIs, portals) by exposing structured
- metadata catalogues over the web. 
+organisational information, etc) and services (APIs, portals) by exposing structured 
+metadata catalogues over the web. 
 
-The first step towards joining ODIS is to export metadata about your digital 
+The first step towards joining ODIS is to generate metadata about your digital 
 holdings as JSON-LD files, using schema.org Types and properties. Guidelines 
-on how to shape these files is available here [TODO:Add links], and we provide 
-a library of examples [TODO:Add link] and templates in this book to help nodes 
-shape their submissions. Note, however, that any valid schema.org Type can be 
-used to share metadata through the Federation. 
+on how to shape these files is available [here](https://book.oceaninfohub.org/foundation/foundation.html), and we provide 
+a library of examples in the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) repository, 
+and templates in this book to help nodes shape their submissions. Note, however, 
+that any valid [schema.org](https://schema.org/) Type can be used to share metadata 
+through the Federation. 
 
-Note: To create and test an initial link to ODIS, you don't need to create 
-metadata for all your holdings - a small test set will do.
+> [!TIP]
+> Watch a video on "What is JSON-LD?" [here](https://www.youtube.com/watch?v=vioCbTo3C-4)
+
+> [!NOTE]
+> To create and test an initial link to ODIS, you don't need to create 
+> metadata for all your holdings - a small test set will do.
 
 Additional semantics (i.e. beyond what schema.org can offer) can be embedded 
-into these files using schema.org's additionalProperty, DefinedTerm, or 
-similar property. More information on how to nest additional semantics is 
-available here: [TODO: Add links] 
+into these files using schema.org's [additionalProperty](https://schema.org/additionalProperty), [DefinedTerm](https://schema.org/DefinedTerm), 
+or similar property. An example JSON-LD template for ODIS that leverages 
+the additionalProperty parameter can be found [here](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/krillMetadata.json).
 
 You can store these files anywhere on the web (under your control), as long 
 as they are accessible using standard web protocols. Many ODIS partners that 
 have landing pages for their data sets or other digital assets choose to 
-embed the JSON-LD inside HTML webpages [TODO:Add link to example]. 
+embed the JSON-LD inside the record's HTML landing page, such as:
+
+```html
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Dataset",
+    "@id": "https://incois.gov.in/essdp/ViewMetadata?fileid=524fd72e-6b2f-4025-94ea-361dce0e9165",
+    "name": "Role of Antarctic krills in the biogeochemical cycle in the Indian Ocean sector of Southern Ocean",
+    "description": "The Antarctic krill is the largest euphausiid, widely distributed in the Southern Ocean...",   
+    ....
+  </script>
+```
+
+> [!TIP]
+> Today there exists many catalogue software that automatically generates & embeds
+> the necessary JSON-LD into the record's landing page for you, such as: [GeoNetwork](https://geonetwork-opensource.org/) 
+> (since version 3.10), [pygeoapi](https://pygeoapi.io/) (since version 0.15.0), 
+> CKAN (with the [DCAT extension](https://extensions.ckan.org/extension/dcat/) enabled for the "schemaorg" profile),
+> and many others.
 
 ### Reusing patterns
 
