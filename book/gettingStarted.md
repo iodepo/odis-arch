@@ -3,7 +3,9 @@
 ## Hello World
 
 This page describes - at a high level - how a digital system with access to the 
-Web can link itself into the ODIS Federation.
+Web can link itself into the ODIS Federation. :heavy_check_mark:
+
+![image1](./images/odis-network-small.png)
 
 Any system providing data (in a broad sense, including documents, software code, 
 etc) and/or services that are relevant to ocean science, management, policy, 
