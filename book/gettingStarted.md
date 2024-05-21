@@ -40,9 +40,10 @@ oceans information through a common platform.
 
 > [!TIP]
 > ODIS is one of the 3 core programs of the IODE: 1) Ocean Biodiversity Information System 
-> (OBIS), 2) OceanTeacher Global Academy (OTGA), and 3) ODIS.
+> ([OBIS](https://obis.org/), 2) OceanTeacher Global Academy ([OTGA](https://classroom.oceanteacher.org/)), 
+> and 3) ODIS.
 
-## Registering your organisation
+## Registering Your Organisation
 
 Organisations which contribute to the ODIS Federation need an unambiguous identity 
 on the web. This is not (necessarily) the same as your organisation's website: A 
@@ -53,16 +54,22 @@ is an official identifier and kept up to date (like an ORCID for your organisati
 
 ### OceanExpert 
 
+![image1](./images/oceanexpert.png)
+
 We recommend that your organisation creates and maintains an OceanExpert ID. 
-OceanExpert (OE) is maintained by the IODE and is deeply integrated into ocean 
-data flows. For example, OE is - itself - an ODIS node, thus any data you add 
-there will automatically be shared through the ODIS Federation.
+[OceanExpert](https://oceanexpert.org/) (OE) is maintained by the IODE and is deeply 
+integrated into ocean data flows. For example, OE is - itself - an ODIS node, thus 
+any data you add there will automatically be shared through the ODIS Federation.
 
 Creating an entry is a matter of a few minutes, and requires no technical skill 
 beyond using a web browser. However, it is key that your organisation is aware 
 of the OE entry and approves its creation. Additionally, an individual should be 
 nominated to maintain the entry. 
 
+> [!CAUTION]
+> After initially creating your OceanExpert ID, please give 1 business day before
+> trying to use that login in other tools, such as the ODIS Catalogue (as your
+> OE account must first be approved).
 
 ## Registering your (meta)data node(s)
 
