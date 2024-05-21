@@ -68,21 +68,24 @@ nominated to maintain the entry.
 
 > [!CAUTION]
 > After initially creating your OceanExpert ID, please give 1 business day before
-> trying to use that login in other tools, such as the ODIS Catalogue (as your
-> OE account must first be approved).
+> trying to use that login in other tools, such as when logging into the ODIS Catalogue 
+> (as your OE account must first be approved).
 
 ## Registering your (meta)data node(s)
 
-Now that your organisation has an identifier on the web, you can register the 
-data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources 
-(ODISCat) is the system we use to register, describe, and interlink data sources 
+![image1](./images/odiscat-logo.png)
+
+Now that your organisation has an identifier on the web (OceanExpert ID), you can 
+register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources 
+(ODISCat) is the system that we use to register, describe, and interlink data sources 
 that feed into ODIS.
 
-Note: One organisation can operate many such nodes (e.g. for different types of 
-data, services, etc). 
+> [!NOTE] 
+> One organisation can operate many such nodes (e.g. for different types of 
+> data, services, etc). 
 
-To register a source, simply go to the ODISCat website [TODO: Add link], log in 
-with your OE credentials, and create an entry. This should take around 10 minutes.
+To register a source, simply go to the [ODISCat website](https://catalogue.odis.org/), 
+login with your OE credentials, and create an entry. This should take around 10 minutes.
 
 ODISCat has a dedicated field to let the ODIS Federation know where your metadata 
 is. Leave that blank for now: we'll come back to this after we prepare content to 
