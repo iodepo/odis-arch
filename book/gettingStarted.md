@@ -222,7 +222,7 @@ This is arguably the most important step, as the connection between your node & 
 will be made through the ODISCat entry that you setup earlier through the steps above, but
 there are 2 critical fields to fill for the ODIS connection, as follows:
 
- - log back into [ODISCat](https://catalogue.odis.org/)
+ - log back into [ODISCat](https://catalogue.odis.org/) with your OceanExpert ID
  - click on the "search" link in the top-left
  - click on the "Show my records" link on the Search page
  - click on the "edit record" icon (the pencil) for your record
