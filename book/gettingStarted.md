@@ -1,6 +1,6 @@
-# Getting started with ODIS: How to join the ODIS Federation
+# Getting Started with ODIS: How to Join the ODIS Federation
 
-## Hello world
+## Hello World
 
 This page describes - at a high level - how a digital system with access to the 
 Web can link itself into the ODIS Federation.
@@ -28,7 +28,13 @@ context for your valuable content.
 The importance of sharing (meta)data about your digital assets - in a form that 
 others can understand - cannot be underemphasised: wihout a common approach, digital 
 assets are often invisible to one another, harming collaboration, due diligence, 
-and informed action. The IODE ... [TODO: state IODE's role in the ocean space]
+and informed action.  The International Oceanographic Data and Information Exchange 
+(IODE) helps provide ODIS as way for ocean data entities around the world to share
+oceans information through a common platform.
+
+> [!TIP]
+> ODIS is one of the 3 core programs of the IODE: Ocean Biodiversity Information System 
+> (OBIS), OceanTeacher Global Academy (OTGA), and ODIS.
 
 TODO:Link off to docs about JSON-LD, schema.org, and structured data on the web
 
