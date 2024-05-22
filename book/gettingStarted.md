@@ -150,7 +150,7 @@ way. In general, these patterns give more complete examples of normative usage,
 beyond those offered by the schema.org pages. 
 
 If you have digital assets that fall within the patterns in our book, then reusing 
-them is typically just a question of copy, paste, fill in the blanks" and then 
+them is typically just a question of copy, paste, "fill in the blanks" and then 
 verifying the validity of the resulting files with, e.g., the [schema.org validator](https://validator.schema.org/).
 
 We strongly recommend all partners keep their JSON-LD files as close to the recommended 
