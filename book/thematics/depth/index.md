@@ -7,6 +7,8 @@ gepSPARQL, via WKT, to aid in the broad and domain-neutral discovery and filteri
 on depth.  
 
 
+> Note that the term "resource" is used here to mean any digital asset, such as a dataset, software code, applications, etc
+
 ## Scope
 
 The goal is to provide guidance to publishers of metadata records focused on the representation of
