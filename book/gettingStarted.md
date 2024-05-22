@@ -143,11 +143,11 @@ embed the JSON-LD inside the record's HTML landing page, such as:
 
 ### Reusing ODIS patterns
 
-ODIS Partners have co-developed a library of JSON-LD/schema.org [patterns](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
-(i.e. extended examples of how to format JSON-LD files using schema.org Types and 
-properties) to help each other share content in a normative way. In general, these 
-patterns give more complete examples of normative usage, beyond those offered by 
-the schema.org pages. 
+ODIS Partners have co-developed a [library](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
+of JSON-LD/schema.org patterns (i.e. extended examples of how to format JSON-LD files 
+using schema.org Types and properties) to help each other share content in a normative 
+way. In general, these patterns give more complete examples of normative usage, 
+beyond those offered by the schema.org pages. 
 
 If you have digital assets that fall within the patterns in our book, then reusing 
 them is typically just a question of copy, paste, fill in the blanks" and then 
