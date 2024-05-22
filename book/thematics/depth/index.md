@@ -3,31 +3,30 @@
 ## Introduction
 
 This document, in draft form,  presents approaches for the representation of depth in schema.org and
-gepSPARQL, via WKT, to aid in the discovery and filtering of resources of interest based
+gepSPARQL, via WKT, to aid in the broad and domain-neutral discovery and filtering of resources of interest based
 on depth.  
 
 
 ## Scope
 
 The goal is to provide guidance to publishers of metadata records focused on the representation of
-depth and elevation values that can be used for the discovery and filtering of metadata records. 
+depth and elevation values (used interchangeably unless otherwise noted, noting that values may be inverted) that can be used for the discovery and filtering of metadata records in a domain- and discipline-agnostic manner for more global utility.
 
-> It should be noted this is not focused on the representation of depth/elevation in data records, which is more
-> a focus of each given domain.  It is a way to represent those values in the metadata.  
+> It should be noted this guidance is not focused on the representation of depth/elevation in subject data records (i.e. data records of primary interest to an agent), which is typically
+> a domain-specific concern. This guidance is concerned with a way to represent those values in the metadata intended for global interoperability.  
 
-We will address two areas for the representation of depth.
-Depth can be spatial, like Place, or part of the measured variables both
-depending on whether the author is making a positioning claim or
-reporting a result.
+We will address two forms of depth representation. The first is a positioning claim: it associates depth metadata to an entire resource, such as the point, collection of points, or lines that describe the entire depth range a dataset pertains to.  These values should be associated with spatial metadata for the orthogonal plane (x,y, latitude, longitude, and similar measures) for full spatial positioning of a resource's relevance or applicability.
 
-So these two approaches can be summarized as:
+The second form is the reporting of a result, such as a series of depth measurements taken by a device. These should be represented as a measured or calculated variable within an appropriate metadata component.
+
+These two approaches can be summarized as:
 
 1) Where depth is a spatial property on some geometry associated with the resource.
 2) Where depth is expressed in a variable measured.
 
 Note that a resource might have multiple depth values, say min and max, with multiple
 variables measured.  It might also then have some other depth associated with the
-geometry or a spatial feature associated with the resource.
+geometry or a spatial feature associated with the resource. In each case, depth may be accurately and interoperably expressed, as shown below.
 
 
 ### Depth WKT Open GeoSpatial Consortium (OGC) Encoding
@@ -84,8 +83,11 @@ For other geometry types like LineString, Polygon, etc., you can follow a simila
 LINESTRING Z (lon1 lat1 elev1, lon2 lat2 elev2, ...)
 ```
 
+The examples below include cases for a basic POINT, a POINT Z with Z (elevation), a POINT M with M (measurement)
+and an example with POINT ZM which includes both elevation and measurement.  
 
-A simple point reference
+
+A simple point reference expressed in JSON-LD/schema.org:
 
 ```json
 {
@@ -130,7 +132,7 @@ potential downstream users.  An intentionally verbose example follows.
         "geo": [
             {
                 "@type": "GeoShape",
-                "description": "an basic POINT entry",  
+                "description": "a basic POINT entry",  
                 "geosparql:asWKT": {
                     "@value": "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT (30.5 75.2)",
                     "@type": "geosparql:wktLiteral"
@@ -168,21 +170,19 @@ potential downstream users.  An intentionally verbose example follows.
 ```
 
 
-The above example includes four examples for a basic POINT, a POINT Z with Z (elevation), a POINT M with M (measurement)
-and an example with POINT ZM which includes both elevation and measurement.  
+
 
 ### Depth schema.org
 
 It is also possible to use the elevation property in Schema.org (ref: [https://schema.org/elevation](https://schema.org/elevation)).  
-This property is valid on https://schema.org/GeoCoordinates and https://schema.org/GeoShape.
+This property is valid for types https://schema.org/GeoCoordinates and https://schema.org/GeoShape.
 
 An example for GeoCoordinate follows.
 
 ```json
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
     "@id": "https://example.org/id/XYZ",
     "@type": "Dataset",
@@ -210,16 +210,17 @@ For Text, from the schema.org documentation on elevation, the value of the prope
 'NUMBER UNIT_OF_MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should 
 be assumed to be a value in meters. 
 
+We strongly recommend reporting depth in metres, for more global and immediate interoperability.
+
 Note that in this approach elevation would tend to scope an entire geometry and not the individual points that
 make up a geometry.    
 
 ### Depth Measurement
 
 In cases where the depth information is in the data itself and not connected to a reference geometry 
-that can be associated with the metadata, there are still approaches to including depth to aid in discovery in the 
-metadata. 
+that can be associated with the resource described by a metadata set, there are still approaches to include depth at the metadata level to aid in discovery.
 
-In this case you can use the variableMeasured stanza to describe the depth variables in your dataset.
+In this case you can use a stanza in the value space of the schema.org `variableMeasured` property to describe or express the depth variables in your dataset.
 
 variable measured example:
 
@@ -237,11 +238,11 @@ variable measured example:
       "description": "Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface",
       "value": "123.4",
       "propertyID": "https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/",
-      "measurementTechnique": "description of technique used",
+      "measurementTechnique": "description of technique used or link to full method",
       "unitText": "m",
       "unitCode": [
         "https://qudt.org/vocab/unit/M",
-        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+"https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
         "http://dbpedia.org/resource/Metre"
       ]
     }
@@ -249,9 +250,7 @@ variable measured example:
 }
 ```
 
-Note that in the above the type https://schema.org/PropertyValue is presented with a value.  However, in the case
-where there is a large range of values including them is not useful.  However, there are two alternative 
-properties that might be useful.  In the following example, the value has been replaced with the properties
+Note that in the above the type https://schema.org/PropertyValue is presented with a value.  This is not necessary if the goal is to describe the variable, rather tham report its values. However, it is recommended that the range of depth values measured is reported. In the following example, the value has been replaced with the properties
 minValue and maxValue.  
 
 ```json
@@ -272,8 +271,7 @@ minValue and maxValue.
       "measurementTechnique": "description of technique used",
       "unitText": "m",
       "unitCode": [
-        "https://qudt.org/vocab/unit/M",
-        "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+        "https://qudt.org/vocab/unit/M", "https://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
         "http://dbpedia.org/resource/Metre"
       ]
     }
