@@ -7,7 +7,7 @@ gepSPARQL, via WKT, to aid in the broad and domain-neutral discovery and filteri
 on depth.  
 
 
-> Note that the term "resource" is used here to mean any digital asset, such as a dataset, software code, applications, etc
+> Note that the term "resource" is used here to mean any digital asset, such as a dataset, software code, applications, etc. The guidance below is focused on describing datasets, but depth can also be used to qualify the regions where software (such as model) is applicable to (e.g. via the areaServed property in Schema.org: https://schema.org/areaServed)
 
 ## Scope
 
