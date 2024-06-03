@@ -1,5 +1,11 @@
 # Master Data Product 
 
+
+# TODO
+
+* [ ] Add the columns "completeness" and "accreditation" to the products  
+
+
 ## About
 
 This is a quick start for code to generate a "Master Data Product" from a 
@@ -7,9 +13,29 @@ provided OIH Release graph.  The graph needs to be in NQuads format and follow
 the guidance from the OIH Book in order to express resources that align with the 
 queries used.
 
-# TODO
+## Code
 
-* Add the columns "completeness" and "accreditation" to the products 
+* mdp_oxigraph.py
+  * Updated mdp using PyOxigraph and better processing
+* oih_producer.py
+  * Leverages the above and loops through the queires and sources to make products
+
+* mdp.py
+  * Original MDP, still more comprehensive in terms of pre-processing the data
+* objectProcessor.sh
+  * BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_oxigraph.py
+
+* products_solr.py
+  * deprecated pythonic approach to generating the JSON.  Replaced by DuckDB based 
+    approach.
+
+
+## DuckDB
+
+DuckDB is used to query the products and generate pandas dataframes that are converted to JSON.
+
+These are located in the ODIS-IN repository SQL directory. 
+
 
 ## Quickstart
 
