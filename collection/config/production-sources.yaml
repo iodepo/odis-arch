@@ -758,6 +758,23 @@ sources:
     headless: false
     dateadded: 2023-08-08
     cron: 0 13 * * 0 
+    active: true
+  #
+  # R2R
+  # 
+  - name: r2r
+    propername: Rolling Deck to Repository (R2R)
+    catalogue: https://www.rvdata.us/
+    domain: https://lamont.columbia.edu/
+    logo: https://www.rvdata.us/images/Logo.4b1519be.png
+    pid: https://catalogue.odis.org/view/3292
+    sourcetype: sitemap
+    url: https://service.rvdata.us/api/sitemap/
+    changefreq: yearly  
+    backend: unknown  
+    headless: false
+    dateadded: 2024-06-04
+    cron: 0 14 * * 0    
     active: true    
   #
   # RDA Australia
