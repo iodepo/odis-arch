@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../variables/index.html">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
@@ -566,46 +567,52 @@ for more focused creative work examples.</p>
 <span class="linenos">57</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
 <span class="linenos">58</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos">59</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="linenos">60</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;</span>
-<span class="linenos">61</span>        <span class="p">},</span>
-<span class="linenos">62</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">63</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">64</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://dbpedia.org/resource/Spatial_reference_system&quot;</span><span class="p">,</span>
-<span class="linenos">65</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;</span>
-<span class="linenos">66</span>        <span class="p">}</span>
-<span class="linenos">67</span>    <span class="p">},</span>
-<span class="linenos">68</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">69</span>        <span class="p">{</span>
-<span class="linenos">70</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">71</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">72</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Other Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">73</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://organisationWebsite.org/&quot;</span>
-<span class="linenos">74</span>        <span class="p">}</span>
-<span class="linenos">75</span>    <span class="p">],</span>
-<span class="linenos">76</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">77</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
-<span class="linenos">78</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Describe the event which is the subject of this dataset. For example, a cruise ID.&quot;</span><span class="p">,</span>
-<span class="linenos">79</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise and descriptive name of the Event&quot;</span><span class="p">,</span>
-<span class="linenos">80</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">81</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-<span class="linenos">82</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast&quot;</span><span class="p">,</span>
-<span class="linenos">83</span>            <span class="s2">&quot;agent&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">84</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span><span class="p">,</span>
+<span class="linenos">60</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;schema.org expects lat long (Y X) coordinate order&quot;</span><span class="p">,</span>
+<span class="linenos">61</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014&quot;</span>
+<span class="linenos">62</span>        <span class="p">},</span>
+<span class="linenos">63</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">64</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">65</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dbpedia.org/page/Spatial_reference_system&quot;</span><span class="p">,</span>
+<span class="linenos">66</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;</span>
+<span class="linenos">67</span>        <span class="p">}</span>
+<span class="linenos">68</span>    <span class="p">},</span>
+<span class="linenos">69</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">70</span>        <span class="p">{</span>
+<span class="linenos">71</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+<span class="linenos">72</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
+<span class="linenos">73</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Other Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
+<span class="linenos">74</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://organisationWebsite.org/&quot;</span>
+<span class="linenos">75</span>        <span class="p">}</span>
+<span class="linenos">76</span>    <span class="p">],</span>
+<span class="linenos">77</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">78</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+<span class="linenos">79</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Describe the event which is the subject of this dataset. For example, a cruise ID.&quot;</span><span class="p">,</span>
+<span class="linenos">80</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise and descriptive name of the Event&quot;</span><span class="p">,</span>
+<span class="linenos">81</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+<span class="linenos">83</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast&quot;</span><span class="p">,</span>
+<span class="linenos">84</span>            <span class="s2">&quot;agent&quot;</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos">85</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span><span class="p">,</span>
-<span class="linenos">86</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span>
-<span class="linenos">87</span>            <span class="p">],</span>
-<span class="linenos">88</span>            <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T14:45UTC&quot;</span><span class="p">,</span>
-<span class="linenos">89</span>            <span class="s2">&quot;endTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T15:42UTC&quot;</span><span class="p">,</span>
-<span class="linenos">90</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">91</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
-<span class="linenos">92</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor&quot;</span><span class="p">,</span>
-<span class="linenos">93</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ontology.org/uriToSemanticDescriptorOfThisInstrument&quot;</span><span class="p">,</span>
-<span class="linenos">94</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of the sampling instrument&quot;</span>
-<span class="linenos">95</span>            <span class="p">}</span>
-<span class="linenos">96</span>        <span class="p">}</span>
-<span class="linenos">97</span>    <span class="p">}</span>
-<span class="linenos">98</span><span class="p">}</span>
+<span class="linenos">86</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span><span class="p">,</span>
+<span class="linenos">87</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span>
+<span class="linenos">88</span>            <span class="p">],</span>
+<span class="linenos">89</span>            <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T14:45UTC&quot;</span><span class="p">,</span>
+<span class="linenos">90</span>            <span class="s2">&quot;endTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T15:42UTC&quot;</span><span class="p">,</span>
+<span class="linenos">91</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">92</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+<span class="linenos">93</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor&quot;</span><span class="p">,</span>
+<span class="linenos">94</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ontology.org/uriToSemanticDescriptorOfThisInstrument&quot;</span><span class="p">,</span>
+<span class="linenos">95</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of the sampling instrument&quot;</span>
+<span class="linenos">96</span>            <span class="p">}</span>
+<span class="linenos">97</span>        <span class="p">}</span>
+<span class="linenos">98</span>    <span class="p">}</span>
+<span class="linenos">99</span><span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="http://schema.org">schema.org</a> expects a lat long (Y X) coordinate order, so be aware of that when
+you are defining your spatialCoverage, in the GeoShape or Box parameters.</p>
 </div>
 </section>
 <section id="demo-area-please-ignore">

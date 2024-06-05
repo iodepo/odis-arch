@@ -208,22 +208,39 @@ to do this during testing or for other reasons.  Otherwise,
 a sitemap.xml file exposed in general from somewhere in your site is 
 perfectly fine.  
 
-Information on the sitemap structure can be found at sitemaps.org.
+Information on the sitemap structure can be found at [sitemaps.org](https://www.sitemaps.org/).
 
 It is encouraged to use the sitemap lastmod node 
 to provide guidance to indexers on page updates. 
-Additionally indexers may test ways to evaluate additions and 
+Additionally, indexers may test ways to evaluate additions and 
 removals from the sitemap URL set to manage new or removed resources.  
+
+A sitemap file would look like the following.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.example.com/</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+</urlset> 
+```
+
+If you have more than 50,000 entries, you can break the sitemap up into 
+multiple files of less than 50,000.   You would link to these in 
+a sitemap index.  
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/site0.9">
    <sitemap>
-      <loc>http://samples.earth/sitemap_websites_sampleseaxml</loc>
+      <loc>http://example.org/sitemap_a.xml</loc>
       <lastmod>2004-10-01T18:23:17+00:00</lastmod>
    </sitemap>
    <sitemap>
-      <loc>http://samples.easitemap_doclouds_igsndatagraphs.xml</loc>
+       <loc>http://example.org/sitemap_b.xml</loc>
       <lastmod>2005-01-01</lastmod>
    </sitemap>
 </sitemapindex>

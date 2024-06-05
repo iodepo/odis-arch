@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Indexing with Gleaner" href="qstart.html" />
-    <link rel="prev" title="Licenses" href="../thematics/license/index.html" />
+    <link rel="prev" title="Depth - (DRAFT)" href="../thematics/depth/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../thematics/identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../thematics/variables/index.html">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../thematics/license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="current nav bd-sidenav">
@@ -451,7 +452,7 @@ document.write(`
 <h1>Aggregator<a class="headerlink" href="#aggregator" title="Permalink to this heading">#</a></h1>
 <section id="intoduction">
 <h2>Intoduction<a class="headerlink" href="#intoduction" title="Permalink to this heading">#</a></h2>
-<p>This section introduces the the OIH approach to indexing. Currently,  OIH is
+<p>This section introduces the OIH approach to indexing. Currently,  OIH is
 using the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner">Gleaner</a> software to do the indexing and leverages the Gleaner IO
 <a class="reference external" href="https://github.com/gleanerio/gleaner-compose">gleaner-compose</a> Docker
 Compose files for the server side architecture.  For more information on Docker Compose files visit the
@@ -470,11 +471,10 @@ you may run fewer than this.</p>
 <section id="container-overview">
 <h3>Container overview<a class="headerlink" href="#container-overview" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>S3 (Minio / AWS): This is the only container that is required in all cases to run.  Gleaner needs an S3 compatible object store.  By default
-we use the <a class="reference external" href="https://min.io/">Minio</a> object store</p></li>
+<li><p>S3 (Minio / AWS): This is the only container that is required in all cases to run.  Gleaner needs an S3 compatible object store.  By default, we use the <a class="reference external" href="https://min.io/">Minio</a> object store</p></li>
 <li><p>Chrome Headless: In cases where providers place the JSON-LD documents into the pages with Javascript, we need to render the page before
 reading and accessing the DOM.  This is done using Chrome Headless</p></li>
-<li><p>Graph data base:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
+<li><p>Graph database:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
 queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For OIH we
 use the <a class="reference external" href="https://github.com/blazegraph/database">Blazgraph triplestore</a>.</p></li>
 <li><p>Router: If we wish to deploy this setup onto the net, we will route to route all the services through a single domain.  To do this network routing
@@ -513,7 +513,7 @@ designed to address a server setup tht will support indexing and also present th
 <section id="web-ui">
 <h3>Web UI<a class="headerlink" href="#web-ui" title="Permalink to this heading">#</a></h3>
 <p>As mentioned, if you wish to serve a web UI for the index, then you can leverage this setup to serve that.  Again, this is optional and your web site
-can be hosted elsewhere and simply call to the index in compliance with CORS settings. Some tailes on this can be found in the <span class="xref myst">Interfaces</span> section.</p>
+can be hosted elsewhere and simply call to the index in compliance with CORS settings.</p>
 </section>
 <section id="alternatives">
 <h3>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this heading">#</a></h3>
@@ -572,12 +572,12 @@ OIH index.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../thematics/license/index.html"
+       href="../thematics/depth/index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Licenses</p>
+        <p class="prev-next-title">Depth - (DRAFT)</p>
       </div>
     </a>
     <a class="right-next"

@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
@@ -595,54 +596,55 @@ in the data graph represented the detailed sections.</p>
 </span><span class="linenos"> 68</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
 <span class="linenos"> 69</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos"> 70</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="linenos"> 71</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;</span>
-<span class="linenos"> 72</span>        <span class="p">},</span>
-<span class="linenos"> 73</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 74</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos"> 75</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;http://dbpedia.org/resource/Spatial_reference_system&quot;</span><span class="p">,</span>
-<span class="linenos"> 76</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;</span>
-<span class="hll"><span class="linenos"> 77</span>        <span class="p">}</span>
-</span><span class="hll"><span class="linenos"> 78</span>    <span class="p">},</span>
-</span><span class="hll"><span class="linenos"> 79</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll"><span class="linenos"> 80</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 81</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 83</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 84</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 85</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span>
-</span><span class="hll"><span class="linenos"> 86</span>        <span class="p">}</span>
-</span><span class="hll"><span class="linenos"> 87</span>    <span class="p">],</span>
-</span><span class="hll"><span class="linenos"> 88</span>    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 89</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 90</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;describe the activity, might include name here too.&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 91</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 92</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll"><span class="linenos"> 93</span>            <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 94</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 95</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 96</span>                <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 97</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 98</span>                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OceanWaveS WaMoS II 500 waves and surface current radar&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 99</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL0999/&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">100</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The WaMoS II 500 radar is an industry-proven X-band radar-based wave and surface current monitoring system developed by OceanWaveS. This sensor is able to measure and displays essential wave field parameters including wave heights, periods, directions and surface currents. The operating range extends to 4.0 km depending on X-band radar type and installation gemoetry. Requiring a minimum wind speed of 3 m/s and a minimum wave height of about 0.5m.&quot;</span>
-</span><span class="hll"><span class="linenos">101</span>                <span class="p">}</span>
-</span><span class="linenos">102</span>            <span class="p">},</span>
-<span class="linenos">103</span>            <span class="p">{</span>
-<span class="hll"><span class="linenos">104</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-</span><span class="linenos">105</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of ocean stress&quot;</span><span class="p">,</span>
-<span class="linenos">106</span>                <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">107</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
-<span class="linenos">108</span>                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Metek uSonic-3 Scientific {formerly: USA-1} ultrasonic anemometer&quot;</span><span class="p">,</span>
-<span class="linenos">109</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL1402/&quot;</span><span class="p">,</span>
-<span class="linenos">110</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A high precision 3D sonic anemometer. Typical applications for this device include: meteorological systems, meteorological networks, measuring dispersion parameters for pollution modelling, research stations, industrial sites, air quality forecasts, eddy correlation fluxes, marine and offshore platforms, wind shear detection, wind energy, and wake vortex monitoring. This device takes accurate measurement of 3 wind components and turbulence. Constructed with stainless steel. &quot;</span>
-<span class="linenos">111</span>                <span class="p">}</span>
-<span class="linenos">112</span>            <span class="p">}</span>
-<span class="linenos">113</span>        <span class="p">]</span>
-<span class="linenos">114</span>    <span class="p">},</span>
-<span class="linenos">115</span>    <span class="s2">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
-<span class="linenos">116</span>    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
-<span class="linenos">117</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-20/2016-01-22&quot;</span>
-<span class="linenos">118</span><span class="p">}</span>
+<span class="linenos"> 71</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;schema.org expects lat long (Y X) coordinate order&quot;</span><span class="p">,</span>            
+<span class="linenos"> 72</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014&quot;</span>
+<span class="linenos"> 73</span>        <span class="p">},</span>
+<span class="linenos"> 74</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 75</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos"> 76</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dbpedia.org/page/Spatial_reference_system&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 77</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;</span>
+</span><span class="hll"><span class="linenos"> 78</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 79</span>    <span class="p">},</span>
+</span><span class="hll"><span class="linenos"> 80</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos"> 81</span>        <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 82</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 83</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 84</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 85</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 86</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://oceanexpert.org/institution/INSTITUTE_ID&quot;</span>
+</span><span class="hll"><span class="linenos"> 87</span>        <span class="p">}</span>
+</span><span class="hll"><span class="linenos"> 88</span>    <span class="p">],</span>
+</span><span class="hll"><span class="linenos"> 89</span>    <span class="s2">&quot;about&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 90</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 91</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;describe the activity, might include name here too.&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 92</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 93</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos"> 94</span>            <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 95</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 96</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of sea state&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 97</span>                <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 98</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 99</span>                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;OceanWaveS WaMoS II 500 waves and surface current radar&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">100</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL0999/&quot;</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">101</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The WaMoS II 500 radar is an industry-proven X-band radar-based wave and surface current monitoring system developed by OceanWaveS. This sensor is able to measure and displays essential wave field parameters including wave heights, periods, directions and surface currents. The operating range extends to 4.0 km depending on X-band radar type and installation gemoetry. Requiring a minimum wind speed of 3 m/s and a minimum wave height of about 0.5m.&quot;</span>
+</span><span class="linenos">102</span>                <span class="p">}</span>
+<span class="linenos">103</span>            <span class="p">},</span>
+<span class="hll"><span class="linenos">104</span>            <span class="p">{</span>
+</span><span class="linenos">105</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
+<span class="linenos">106</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Measurement of ocean stress&quot;</span><span class="p">,</span>
+<span class="linenos">107</span>                <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">108</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
+<span class="linenos">109</span>                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Metek uSonic-3 Scientific {formerly: USA-1} ultrasonic anemometer&quot;</span><span class="p">,</span>
+<span class="linenos">110</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://vocab.nerc.ac.uk/collection/L22/current/TOOL1402/&quot;</span><span class="p">,</span>
+<span class="linenos">111</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A high precision 3D sonic anemometer. Typical applications for this device include: meteorological systems, meteorological networks, measuring dispersion parameters for pollution modelling, research stations, industrial sites, air quality forecasts, eddy correlation fluxes, marine and offshore platforms, wind shear detection, wind energy, and wake vortex monitoring. This device takes accurate measurement of 3 wind components and turbulence. Constructed with stainless steel. &quot;</span>
+<span class="linenos">112</span>                <span class="p">}</span>
+<span class="linenos">113</span>            <span class="p">}</span>
+<span class="linenos">114</span>        <span class="p">]</span>
+<span class="linenos">115</span>    <span class="p">},</span>
+<span class="linenos">116</span>    <span class="s2">&quot;datePublished&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-29&quot;</span><span class="p">,</span>
+<span class="linenos">117</span>    <span class="s2">&quot;dateModified&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-07-30T14:30Z&quot;</span><span class="p">,</span>
+<span class="linenos">118</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-09-20/2016-01-22&quot;</span>
+<span class="linenos">119</span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -962,18 +964,19 @@ at:  <a class="reference external" href="https://book.oceaninfohub.org/thematics
         &quot;@type&quot;: &quot;Place&quot;,
         &quot;additionalProperty&quot;: {
             &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;propertyID&quot;: &quot;http://dbpedia.org/resource/Spatial_reference_system&quot;,
-            &quot;value&quot;: &quot;http://www.w3.org/2003/01/geo/wgs84_pos#lat_long&quot;
+            &quot;propertyID&quot;: &quot;https://dbpedia.org/page/Spatial_reference_system&quot;,
+            &quot;value&quot;: &quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;
         },
         &quot;geo&quot;: {
             &quot;@type&quot;: &quot;GeoShape&quot;,
-            &quot;polygon&quot;: &quot;142.014 10.161667,142.014 18.033833,147.997833 18.033833,147.997833 10.161667,142.014 10.161667&quot;
+            &quot;description&quot;: &quot;schema.org expects lat long (Y X) coordinate order&quot;,
+            &quot;polygon&quot;: &quot;10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014&quot;
         }
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/56bc592d8fcb74fab78c8ae896bc8b7e5bc35bd574cee880383f07e03f34d710.svg" src="../../_images/56bc592d8fcb74fab78c8ae896bc8b7e5bc35bd574cee880383f07e03f34d710.svg" /></div>
+<img alt="../../_images/c8c0e1f696d858a7b9b036cf2e66c05753c34f120b119321b7c5c580706a5c89.svg" src="../../_images/c8c0e1f696d858a7b9b036cf2e66c05753c34f120b119321b7c5c580706a5c89.svg" /></div>
 </div>
 </section>
 <section id="about">

@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../variables/index.html">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
@@ -498,9 +499,14 @@ document.write(`
 <section id="about">
 <h2>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h2>
 <p>For spatial geometry Ocean InfoHub guidance will be to use the OGC <a class="reference external" href="https://www.ogc.org/standards/geosparql">GeoSPARQL</a>
-vocabulary to express geometry using Well Known Text (WKT).  The <a class="reference external" href="http://schema.org">schema.org</a> spatial types and propeties are not well
+vocabulary to express geometry using Well Known Text (WKT).  The <a class="reference external" href="http://schema.org">schema.org</a> spatial types and properties are not well
 defined and difficult at times to reliably translate to geometries for use in more Open Geospatial Consortium (OGC)
 environments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="http://schema.org">schema.org</a> expects a lat long (Y X) coordinate order, so be aware of that when
+you are defining your spatialCoverage, in the GeoShape or Box parameters.</p>
+</div>
 </section>
 <section id="simple-geosparql-wkt">
 <h2>Simple GeoSPARQL WKT<a class="headerlink" href="#simple-geosparql-wkt" title="Permalink to this heading">#</a></h2>

@@ -3,7 +3,7 @@
 ## Intoduction
 
 
-This section introduces the the OIH approach to indexing. Currently,  OIH is 
+This section introduces the OIH approach to indexing. Currently,  OIH is 
 using the [Gleaner](https://github.com/earthcubearchitecture-project418/gleaner) software to do the indexing and leverages the Gleaner IO 
 [gleaner-compose](https://github.com/gleanerio/gleaner-compose) Docker 
 Compose files for the server side architecture.  For more information on Docker Compose files visit the 
@@ -24,11 +24,10 @@ The various compose options for Gleaner
 
 ### Container overview
 
-* S3 (Minio / AWS): This is the only container that is required in all cases to run.  Gleaner needs an S3 compatible object store.  By default
-  we use the [Minio](https://min.io/) object store
+* S3 (Minio / AWS): This is the only container that is required in all cases to run.  Gleaner needs an S3 compatible object store.  By default, we use the [Minio](https://min.io/) object store
 * Chrome Headless: In cases where providers place the JSON-LD documents into the pages with Javascript, we need to render the page before 
   reading and accessing the DOM.  This is done using Chrome Headless
-* Graph data base:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
+* Graph database:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
   queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For OIH we
   use the [Blazgraph triplestore](https://github.com/blazegraph/database).  
 * Router: If we wish to deploy this setup onto the net, we will route to route all the services through a single domain.  To do this network routing 
@@ -71,7 +70,7 @@ designed to address a server setup tht will support indexing and also present th
 ### Web UI
 
 As mentioned, if you wish to serve a web UI for the index, then you can leverage this setup to serve that.  Again, this is optional and your web site
-can be hosted elsewhere and simply call to the index in compliance with CORS settings. Some tailes on this can be found in the [Interfaces](./user.md) section.
+can be hosted elsewhere and simply call to the index in compliance with CORS settings.
 
 ### Alternatives
 

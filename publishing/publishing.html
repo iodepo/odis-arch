@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../thematics/identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../thematics/variables/index.html">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../thematics/license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thematics/depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
@@ -657,19 +658,33 @@ to avoid indexing test pages by commercial providers.  You may wish
 to do this during testing or for other reasons.  Otherwise,
 a sitemap.xml file exposed in general from somewhere in your site is
 perfectly fine.</p>
-<p>Information on the sitemap structure can be found at <a class="reference external" href="http://sitemaps.org">sitemaps.org</a>.</p>
+<p>Information on the sitemap structure can be found at <a class="reference external" href="https://www.sitemaps.org/">sitemaps.org</a>.</p>
 <p>It is encouraged to use the sitemap lastmod node
 to provide guidance to indexers on page updates.
-Additionally indexers may test ways to evaluate additions and
+Additionally, indexers may test ways to evaluate additions and
 removals from the sitemap URL set to manage new or removed resources.</p>
+<p>A sitemap file would look like the following.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;url&gt;</span>
+<span class="w">      </span><span class="nt">&lt;loc&gt;</span>http://www.example.com/<span class="nt">&lt;/loc&gt;</span>
+<span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2005-01-01<span class="nt">&lt;/lastmod&gt;</span>
+<span class="w">      </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/url&gt;</span>
+<span class="nt">&lt;/urlset&gt;</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>If you have more than 50,000 entries, you can break the sitemap up into
+multiple files of less than 50,000.   You would link to these in
+a sitemap index.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;sitemapindex</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/site0.9&quot;</span><span class="nt">&gt;</span>
 <span class="w">   </span><span class="nt">&lt;sitemap&gt;</span>
-<span class="w">      </span><span class="nt">&lt;loc&gt;</span>http://samples.earth/sitemap_websites_sampleseaxml<span class="nt">&lt;/loc&gt;</span>
+<span class="w">      </span><span class="nt">&lt;loc&gt;</span>http://example.org/sitemap_a.xml<span class="nt">&lt;/loc&gt;</span>
 <span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2004-10-01T18:23:17+00:00<span class="nt">&lt;/lastmod&gt;</span>
 <span class="w">   </span><span class="nt">&lt;/sitemap&gt;</span>
 <span class="w">   </span><span class="nt">&lt;sitemap&gt;</span>
-<span class="w">      </span><span class="nt">&lt;loc&gt;</span>http://samples.easitemap_doclouds_igsndatagraphs.xml<span class="nt">&lt;/loc&gt;</span>
+<span class="w">       </span><span class="nt">&lt;loc&gt;</span>http://example.org/sitemap_b.xml<span class="nt">&lt;/loc&gt;</span>
 <span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2005-01-01<span class="nt">&lt;/lastmod&gt;</span>
 <span class="w">   </span><span class="nt">&lt;/sitemap&gt;</span>
 <span class="nt">&lt;/sitemapindex&gt;</span>

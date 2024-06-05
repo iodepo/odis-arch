@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>How to Join the OIH Network &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
+    <title>Getting Started with ODIS: How to Join the ODIS Federation &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
   
   
   
@@ -185,6 +185,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="thematics/identifier/id.html">Support 6: Identifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematics/variables/index.html">Support 7: EOVs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="thematics/license/index.html">Support 8: Licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thematics/depth/index.html">Support 9: Depth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aggregation</span></p>
 <ul class="nav bd-sidenav">
@@ -416,7 +417,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>How to Join the OIH Network</h1>
+    <h1>Getting Started with ODIS: How to Join the ODIS Federation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -426,9 +427,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-steps">Quick Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-your-organisation">Registering Your Organisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oceanexpert">OceanExpert</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-your-meta-data-node-s">Registering your (meta)data node(s)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-content">Preparing content</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-odis-patterns">Reusing ODIS patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-modifications-to-existing-odis-patterns">Requesting modifications to existing ODIS patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-new-patterns">Requesting new patterns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sitemap">Creating a Sitemap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-of-change">Frequency of change</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-full-circle-registering-your-sitemap-in-odiscat">Coming full circle: Registering your Sitemap in ODISCat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-faq">Frequently asked questions (FAQ)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-provide-feedback-to-odis">How to provide feedback to ODIS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry">How do I see my records, after completing my ODISCat entry?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-json-ld-examples-that-i-can-use">Where are JSON-LD examples that I can use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-sparql-endpoint">Does ODIS have a SPARQL endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-json-endpoint">Does ODIS have a JSON endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-often-does-odis-index-my-records">How often does ODIS index my records?</a></li>
 </ul>
 </li>
 </ul>
@@ -442,64 +466,286 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-join-the-oih-network">
-<h1>How to Join the OIH Network<a class="headerlink" href="#how-to-join-the-oih-network" title="Permalink to this heading">#</a></h1>
-<section id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this heading">#</a></h2>
-<p>In an increasingly data-driven digital landscape, sharing information about your resources on the web has become a vital endeavor. Structured data, presented through JSON-LD, offers an approachable means to achieve this goal, providing context and linked data in a format easily understood by both humans and machines. Through the incorporation of <a class="reference external" href="http://schema.org">schema.org</a>, a collaborative initiative designed to create, maintain, and promote schemas for structured data on the internet, this guide will help you navigate the process of sharing JSON-LD for your web resources. In this guide, we’ll walk you through the key steps to effectively share JSON-LD on the web for your resource, empowering you to enhance discoverability and semantic context for your valuable content.</p>
-<p><strong>Title:</strong> Sharing JSON-LD on the Web for Your Resource</p>
-<p><strong>Section 1: Introduction</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-odis-how-to-join-the-odis-federation">
+<h1>Getting Started with ODIS: How to Join the ODIS Federation<a class="headerlink" href="#getting-started-with-odis-how-to-join-the-odis-federation" title="Permalink to this heading">#</a></h1>
+<section id="quick-steps">
+<h2>Quick Steps<a class="headerlink" href="#quick-steps" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Provide a brief introduction to the purpose of the guide.</p></li>
-<li><p>Explain the importance of sharing structured data for web resources.</p></li>
-</ol>
-<p><strong>Section 2: Getting Started</strong></p>
-<ol class="arabic simple">
-<li><p>Define structured data and JSON-LD.</p></li>
-<li><p>Highlight the role of <a class="reference external" href="http://schema.org">schema.org</a> in creating structured data.</p></li>
-<li><p>Emphasize the benefits of using JSON-LD and web architecture for resource sharing.</p></li>
-</ol>
-<p><strong>Section 3: Steps to Share JSON-LD</strong></p>
-<ol class="arabic simple">
-<li><p>Explain the key steps to share JSON-LD for your resource:</p>
-<ol class="arabic simple">
-<li><p><strong>Authoring JSON-LD Documents:</strong></p>
+<li><p>Register your portal in ODIS Catalogue</p>
 <ul class="simple">
-<li><p>Discuss the process of creating JSON-LD documents aligned with project guidelines.</p></li>
+<li><p>make sure you (or someone in your organization) has an OceanExpertID (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>add your entry into ODIS Catalogue (<span class="xref myst">jump</span> to that below)</p></li>
 </ul>
 </li>
-<li><p><strong>Inserting JSON-LD into Web Pages:</strong></p>
-<ul class="simple">
-<li><p>Describe how to embed JSON-LD into web pages using SCRIPT tags.</p></li>
-</ul>
-</li>
-<li><p><strong>Including JSON-LD in Sitemaps:</strong></p>
-<ul class="simple">
-<li><p>Explain the importance of adding JSON-LD marked resources to XML sitemap files.</p></li>
-</ul>
-</li>
-<li><p><strong>Validation and Iteration:</strong></p>
-<ul class="simple">
-<li><p>Discuss the use of validation tools to ensure well-formed JSON-LD.</p></li>
-<li><p>Emphasize the iterative nature of aligning JSON-LD as the project profile evolves.</p></li>
-</ul>
-</li>
+<li><p>Prepare your JSON-LD metadata (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>Create your sitemap (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>Register your sitemap in your ODIS Catalogue entry (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>Review the FAQ (<span class="xref myst">jump</span> to that below)</p></li>
 </ol>
-</li>
-</ol>
-<p><strong>Section 4: Conclusion</strong></p>
-<ol class="arabic simple">
-<li><p>Summarize the essential steps for sharing JSON-LD on the web.</p></li>
-<li><p>Encourage readers to start implementing structured data for their resources.</p></li>
-<li><p>Provide a closing thought or encouragement for users to explore further.</p></li>
-</ol>
-<section id="id1">
-<h3>1.1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p><strong>Defining Structured Data and JSON-LD:</strong> Structured data is the practice of organizing and presenting data on the web in a way that provides clear context and relationships between different pieces of information. JSON-LD, which stands for JSON for Linked Data, is a popular format for expressing structured data using JSON syntax. It allows you to create machine-readable content that can be easily understood by search engines, making it an effective method for enhancing the visibility and comprehensibility of your web resources.</p>
 </section>
-<section id="id2">
-<h3>1.2<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p><strong>The Role of <a class="reference external" href="http://Schema.org">Schema.org</a> and the FAIR Principles:</strong> <a class="reference external" href="http://Schema.org">Schema.org</a>, a collaborative initiative, plays a crucial role in the structured data landscape. It is closely aligned with the FAIR (Findable, Accessible, Interoperable, Reusable) principles, which aim to improve the accessibility and usability of data. By using <a class="reference external" href="http://schema.org">schema.org</a>, you’re not only making your data more findable but also contributing to its accessibility and interoperability. This means that your structured data becomes more reusable by other systems, researchers, and organizations, reinforcing the FAIR principles and promoting a global data-sharing ecosystem. In this guide, we will show you how to leverage these concepts to efficiently share your JSON-LD data on the web.</p>
+<section id="hello-world">
+<h2>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this heading">#</a></h2>
+<p>This page describes - at a high level - how a digital system with access to the
+Web can link itself into the ODIS Federation.</p>
+<p><img alt="ODIS network" src="_images/odisNetworkSmall.png" /></p>
+<p>Any system providing data (in a broad sense, including documents, software code,
+etc) and/or services that are relevant to ocean science, management, policy,
+commerce, or other ocean-relevant activities is welcome to connect to ODIS. A
+light curation of ODIS nodes is performed by IODE’s team, and the entire Federation
+self-regulates, voicing concern if they believe nodes are sharing data that is
+invalid, misleading, or otherwise of concern.</p>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<p>In an increasingly data-driven digital landscape, sharing information about your
+resources on the web has become a vital endeavor. Structured data, presented
+through JSON-LD, offers an approachable means to achieve this goal, providing
+context and linked data in a format easily understood by both humans and machines.
+Through the incorporation of the <a class="reference external" href="https://schema.org/">schema.org</a> framework,
+a collaborative initiative designed to create, maintain, and promote schemas for
+structured data on the internet, this guide will help you navigate the process of
+sharing JSON-LD for your web resources. In this guide, we’ll walk you through the key
+steps to effectively share JSON-LD on the web for your resource, empowering you to
+enhance discoverability and semantic context for your valuable content.</p>
+<blockquote>
+<div><p>[!NOTE]
+Learn more about <a class="reference external" href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">Structured Data for the Web</a>
+and <a class="reference external" href="https://json-ld.org/">JSON-LD</a></p>
+</div></blockquote>
+<p>The importance of sharing (meta)data about your digital assets - in a form that
+others can understand - cannot be underemphasised: without a common approach, digital
+assets are often invisible to one another, harming collaboration, due diligence,
+and informed action.  The International Oceanographic Data and Information Exchange
+(IODE) helps provide ODIS as way for ocean data entities around the world to share
+oceans information through a common platform.</p>
+<blockquote>
+<div><p>[!TIP]
+ODIS is one of the 3 core programs of the IODE: 1) <a class="reference external" href="https://obis.org/">OBIS</a>,
+2) <a class="reference external" href="https://classroom.oceanteacher.org/">OTGA</a>, and 3) <a class="reference external" href="https://odis.org">ODIS</a>.</p>
+</div></blockquote>
+</section>
+<section id="registering-your-organisation">
+<h2>Registering Your Organisation<a class="headerlink" href="#registering-your-organisation" title="Permalink to this heading">#</a></h2>
+<p>Organisations which contribute to the ODIS Federation need an unambiguous identity
+on the web. This is not (necessarily) the same as your organisation’s website: A
+web identifier is focused on machine-readable metadata and will not change (even
+if your organisation changes its name). It’s important that this digital identity
+is sanctioned by your organisation’s leadership and administration, such that it
+is an official identifier and kept up to date (like an ORCID for your organisation).</p>
+<section id="oceanexpert">
+<h3>OceanExpert<a class="headerlink" href="#oceanexpert" title="Permalink to this heading">#</a></h3>
+<p><img alt="OceanExpert banner" src="_images/oceanExpert.png" /></p>
+<p>We recommend that your organisation creates and maintains an OceanExpert ID.
+<a class="reference external" href="https://oceanexpert.org/">OceanExpert</a> (OE) is maintained by the IODE and is deeply
+integrated into ocean data flows. For example, OE is - itself - an ODIS node, thus
+any data you add there will automatically be shared through the ODIS Federation.</p>
+<p>Creating an entry is a matter of a few minutes, and requires no technical skill
+beyond using a web browser. However, it is key that your organisation is aware
+of the OE entry and approves its creation. Additionally, an individual should be
+nominated to maintain the entry.</p>
+<blockquote>
+<div><p>[!CAUTION]
+After initially creating your OceanExpert ID, please give 1 business day before
+trying to use that login in other tools, such as when logging into the ODIS Catalogue
+(as your OE account must first be approved).</p>
+</div></blockquote>
+</section>
+</section>
+<section id="registering-your-meta-data-node-s">
+<h2>Registering your (meta)data node(s)<a class="headerlink" href="#registering-your-meta-data-node-s" title="Permalink to this heading">#</a></h2>
+<p><img alt="ODISCat logo" src="_images/odiscatLogo.png" /></p>
+<p>Now that your organisation has an identifier on the web (OceanExpert ID), you can
+register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources
+(ODISCat) is the system that we use to register, describe, and interlink data sources
+that feed into ODIS.</p>
+<blockquote>
+<div><p>[!NOTE]
+One organisation can operate many such nodes (e.g. for different types of
+data, services, etc).</p>
+</div></blockquote>
+<p>To register a source, simply go to the <a class="reference external" href="https://catalogue.odis.org/">ODISCat website</a>,
+login with your OE credentials, and create an entry. This should take around 10 minutes.</p>
+<p>ODISCat has a dedicated field to let the ODIS Federation know where your metadata
+is. Leave that blank for now: we’ll come back to this after we prepare content to
+share via ODIS.</p>
+</section>
+<section id="preparing-content">
+<h2>Preparing content<a class="headerlink" href="#preparing-content" title="Permalink to this heading">#</a></h2>
+<p>All ODIS nodes share metadata about their holdings (datasets, documents,
+organisational information, etc) and services (APIs, portals) by exposing structured
+metadata catalogues over the web.</p>
+<p>The first step towards joining ODIS is to generate metadata about your digital
+holdings as JSON-LD files, using <a class="reference external" href="http://schema.org">schema.org</a> Types and properties. Guidelines
+on how to shape these files is available <a class="reference external" href="https://book.oceaninfohub.org/foundation/foundation.html">here</a>, and we provide
+a library of examples in the <a class="reference external" href="https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics">odis-in</a> repository,
+and templates in this book to help nodes shape their submissions. Note, however,
+that any valid <a class="reference external" href="https://schema.org/">schema.org</a> Type can be used to share metadata
+through the Federation.</p>
+<blockquote>
+<div><p>[!TIP]
+Watch a video on “What is JSON-LD?” <a class="reference external" href="https://www.youtube.com/watch?v=vioCbTo3C-4">here</a></p>
+</div></blockquote>
+<blockquote>
+<div><p>[!NOTE]
+To create and test an initial link to ODIS, you don’t need to create
+metadata for all your holdings - a small test set will do.</p>
+</div></blockquote>
+<p>Additional semantics (i.e. beyond what <a class="reference external" href="http://schema.org">schema.org</a> can offer) can be embedded
+into these files using <a class="reference external" href="http://schema.org">schema.org</a>’s <a class="reference external" href="https://schema.org/additionalProperty">additionalProperty</a>, <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>,
+or similar property. An example JSON-LD template for ODIS that leverages
+the additionalProperty parameter can be found <a class="reference external" href="https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/krillMetadata.json">here</a>.</p>
+<p>You can store these files anywhere on the web (under your control), as long
+as they are accessible using standard web protocols. Many ODIS partners that
+have landing pages for their data sets or other digital assets choose to
+embed the JSON-LD inside the record’s HTML landing page, such as:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;@context&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;@id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://incois.gov.in/essdp/ViewMetadata?fileid=524fd72e-6b2f-4025-94ea-361dce0e9165&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Role of Antarctic krills in the biogeochemical cycle in the Indian Ocean sector of Southern Ocean&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;The Antarctic krill is the largest euphausiid, widely distributed in the Southern Ocean...&quot;</span><span class="p">,</span><span class="w">   </span>
+<span class="w">    </span><span class="p">....</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>[!TIP]
+Today there exists many catalogue software that automatically generates &amp; embeds
+the necessary JSON-LD into the record’s landing page for you, such as: <a class="reference external" href="https://geonetwork-opensource.org/">GeoNetwork</a>
+(since version 3.10), <a class="reference external" href="https://pygeoapi.io/">pygeoapi</a> (since version 0.15.0),
+CKAN (with the <a class="reference external" href="https://extensions.ckan.org/extension/dcat/">DCAT extension</a> enabled for the “schemaorg” profile),
+and many others.</p>
+</div></blockquote>
+<section id="reusing-odis-patterns">
+<h3>Reusing ODIS patterns<a class="headerlink" href="#reusing-odis-patterns" title="Permalink to this heading">#</a></h3>
+<p>ODIS Partners have co-developed a <a class="reference external" href="https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics">library</a>
+of JSON-LD/schema.org patterns (i.e. extended examples of how to format JSON-LD files
+using <a class="reference external" href="http://schema.org">schema.org</a> Types and properties) to help each other share content in a normative
+way. In general, these patterns give more complete examples of normative usage,
+beyond those offered by the <a class="reference external" href="http://schema.org">schema.org</a> pages.</p>
+<p>If you have digital assets that fall within the patterns in our book, then reusing
+them is typically just a question of copy, paste, “fill in the blanks” and then
+verifying the validity of the resulting files with, e.g., the <a class="reference external" href="https://validator.schema.org/">schema.org validator</a>.</p>
+<p>We strongly recommend all partners keep their JSON-LD files as close to the recommended
+pattern as possible. The more “in pattern” your content is, the more likely it will
+be discovered and (re)used in predictable ways.</p>
+</section>
+<section id="requesting-modifications-to-existing-odis-patterns">
+<h3>Requesting modifications to existing ODIS patterns<a class="headerlink" href="#requesting-modifications-to-existing-odis-patterns" title="Permalink to this heading">#</a></h3>
+<p>Sometimes, an existing pattern is close you what you need, but there are modifications
+that would make it a better fit (e.g. modifying spatial metadata to include depth more
+explicitly). Many of these modifications are likely to be useful to the whole Federation,
+thus we encourage you to post an issue on our <a class="reference external" href="https://github.com/iodepo/odis-arch/issues">odis-arch</a>
+GitHub repository. There, you can describe the modification and how it would help improve the description
+&amp; discovery of ocean data, and then the ODIS team can help shape, verify, and integrate
+it into the core recommendations.</p>
+</section>
+<section id="requesting-new-patterns">
+<h3>Requesting new patterns<a class="headerlink" href="#requesting-new-patterns" title="Permalink to this heading">#</a></h3>
+<p>If there are no patterns that match your needs, or you feel that you’re stretching an
+existing pattern too far, you can request help from the ODIS coordination team to help
+craft a new one. This process is an excellent opportunity for the  broader ODIS partnership
+to help review and co-develop the pattern, promoting wider interoperability. As above,
+post an issue on our <a class="reference external" href="https://github.com/iodepo/odis-arch/issues">odis-arch</a> GitHub repository
+describing the need, and ideally providing some example (meta)data that can be adapted.</p>
+<p>What follows will be a few rounds of specification development, before we add the new
+pattern to the ODIS Book for all to benefit from and interoperate over.</p>
+</section>
+</section>
+<section id="creating-a-sitemap">
+<h2>Creating a Sitemap<a class="headerlink" href="#creating-a-sitemap" title="Permalink to this heading">#</a></h2>
+<p>Now that you have content to share, you’ll have to tell other agents on the web where
+to find it. This should be done by setting up a sitemap, that points to each JSON-LD
+file you wish the ODIS Federation to be aware of.</p>
+<p>An example sitemap from an ODIS node can be seen <a class="reference external" href="https://dataportal.leibniz-zmt.de/sitemap.xml">here</a></p>
+<blockquote>
+<div><p>[!NOTE]
+If you have many thousands of entries, or you have subsets of links to share,
+you can use a ‘sitemap of sitemaps’ approach, where one sitemap can point to several
+others.  Here is an example ODIS node with a <a class="reference external" href="https://pacificdata.org/organization/sitemap.xml">sitemap index</a>.</p>
+</div></blockquote>
+<section id="frequency-of-change">
+<h3>Frequency of change<a class="headerlink" href="#frequency-of-change" title="Permalink to this heading">#</a></h3>
+<p>Add the <code class="docutils literal notranslate"><span class="pre">&lt;changefreq&gt;</span></code> metadata for each sitemap record, on how often you expect
+records in your sitemap to change - this will tell systems like OIH how often to
+reindex your holdings. Possible values are: <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">daily</span></code>, <code class="docutils literal notranslate"><span class="pre">weekly</span></code>, <code class="docutils literal notranslate"><span class="pre">monthly</span></code>,
+<code class="docutils literal notranslate"><span class="pre">yearly</span></code>, <code class="docutils literal notranslate"><span class="pre">never</span></code>.  Here is a snippet from a sitemap:
+:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">url</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">loc</span><span class="p">&gt;</span>
+      https://dataportal.leibniz-zmt.de/oih/dataset_18288.html
+    <span class="p">&lt;/</span><span class="nt">loc</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">lastmod</span><span class="p">&gt;</span>2023-12-12<span class="p">&lt;/</span><span class="nt">lastmod</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">changefreq</span><span class="p">&gt;</span>monthly<span class="p">&lt;/</span><span class="nt">changefreq</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">url</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>[!TIP]
+There are many sitemap validator websites that you can leverage, to make sure that
+you have generated your sitemap properly, and that it can be read by machines.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="coming-full-circle-registering-your-sitemap-in-odiscat">
+<h2>Coming full circle: Registering your Sitemap in ODISCat<a class="headerlink" href="#coming-full-circle-registering-your-sitemap-in-odiscat" title="Permalink to this heading">#</a></h2>
+<p>This is arguably the most important step, as the connection between your node &amp; ODIS
+will be made through the ODISCat entry that you setup earlier through the steps above, but
+there are 2 critical fields to fill for the ODIS connection, as follows:</p>
+<ul class="simple">
+<li><p>log back into <a class="reference external" href="https://catalogue.odis.org/">ODISCat</a> with your OceanExpert ID</p></li>
+<li><p>click on the “search” link in the top-left</p></li>
+<li><p>click on the “Show my records” link on the Search page</p></li>
+<li><p>click on the “edit record” icon (the pencil) for your record</p></li>
+<li><p>click on the “Basic Description” tab</p></li>
+<li><p>in the “Startpoint URL for ODIS-Arch” field, paste the url to your sitemap.xml file</p></li>
+<li><p>in the “Type of ODIS-Arch URL” field, select “Sitemap”</p></li>
+</ul>
+<p><img alt="ODISCat entry" src="_images/odiscatEntry.png" /></p>
+<p>That’s it, now your node’s records can be harvested by ODIS! :heavy_check_mark:</p>
+</section>
+<section id="frequently-asked-questions-faq">
+<h2>Frequently asked questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permalink to this heading">#</a></h2>
+<section id="how-to-provide-feedback-to-odis">
+<h3>How to provide feedback to ODIS?<a class="headerlink" href="#how-to-provide-feedback-to-odis" title="Permalink to this heading">#</a></h3>
+<p>You can use the <a class="reference external" href="https://github.com/iodepo/odis-arch/issues">odis-arch</a> issue tracker
+on GitHub, to file any issues or questions for the ODIS team.</p>
+</section>
+<section id="how-do-i-see-my-records-after-completing-my-odiscat-entry">
+<h3>How do I see my records, after completing my ODISCat entry?<a class="headerlink" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry" title="Permalink to this heading">#</a></h3>
+<p>The ODIS <a class="reference external" href="http://dashboard.oceaninfohub.org/">Dashboard</a> can be used to monitor your node
+inside the ODIS graph.</p>
+<p>In terms of seeing your records in the results of the ODIS front-end <a class="reference external" href="https://odis.org">search</a>:
+we will use the frequency values set in your sitemap, to automated the harvesting
+and display of your records in the search results.</p>
+</section>
+<section id="where-are-json-ld-examples-that-i-can-use">
+<h3>Where are JSON-LD examples that I can use?<a class="headerlink" href="#where-are-json-ld-examples-that-i-can-use" title="Permalink to this heading">#</a></h3>
+<p>The ODIS <a class="reference external" href="https://book.oceaninfohub.org/thematics/index.html">Book</a> has good
+examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is
+the <a class="reference external" href="https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics">odis-in</a>
+repository where all of the JSON-LD templates often drafted together with partners are stored,
+for example see a <a class="reference external" href="https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/datasetTemplate.json">datasetTemplate</a>
+there.</p>
+</section>
+<section id="does-odis-have-a-sparql-endpoint">
+<h3>Does ODIS have a SPARQL endpoint?<a class="headerlink" href="#does-odis-have-a-sparql-endpoint" title="Permalink to this heading">#</a></h3>
+<p>Yes, the SPARQL endpoint for ODIS is: <a class="reference external" href="http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql">http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql</a></p>
+<p>You can find more help on how to use the ODIS SPARQL endpoint <a class="reference external" href="https://book.oceaninfohub.org/users/sparql.html">here</a>.
+An interface such as <a class="reference external" href="https://yasgui.triply.cc/">Yasgui</a> can be used to generate your queries.</p>
+</section>
+<section id="does-odis-have-a-json-endpoint">
+<h3>Does ODIS have a JSON endpoint?<a class="headerlink" href="#does-odis-have-a-json-endpoint" title="Permalink to this heading">#</a></h3>
+<p>A JSON endpoint is in discussion for ODIS.  ODIS does have Parquet files that are
+automatically generated for each node (you can get the url for that Parquet file
+by selecting a node in the “ODIS Node Summary” section of the <a class="reference external" href="http://dashboard.oceaninfohub.org/">Dashboard</a>.</p>
+</section>
+<section id="how-often-does-odis-index-my-records">
+<h3>How often does ODIS index my records?<a class="headerlink" href="#how-often-does-odis-index-my-records" title="Permalink to this heading">#</a></h3>
+<p>ODIS will use the frequency values set in your sitemap, to automated the harvesting
+and display of your records in the search results.</p>
 </section>
 </section>
 </section>
@@ -571,9 +817,32 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about">About</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-steps">Quick Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world">Hello World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-your-organisation">Registering Your Organisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oceanexpert">OceanExpert</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registering-your-meta-data-node-s">Registering your (meta)data node(s)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-content">Preparing content</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reusing-odis-patterns">Reusing ODIS patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-modifications-to-existing-odis-patterns">Requesting modifications to existing ODIS patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-new-patterns">Requesting new patterns</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-sitemap">Creating a Sitemap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-of-change">Frequency of change</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-full-circle-registering-your-sitemap-in-odiscat">Coming full circle: Registering your Sitemap in ODISCat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-faq">Frequently asked questions (FAQ)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-provide-feedback-to-odis">How to provide feedback to ODIS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry">How do I see my records, after completing my ODISCat entry?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-json-ld-examples-that-i-can-use">Where are JSON-LD examples that I can use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-sparql-endpoint">Does ODIS have a SPARQL endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-json-endpoint">Does ODIS have a JSON endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-often-does-odis-index-my-records">How often does ODIS index my records?</a></li>
 </ul>
 </li>
 </ul>
