@@ -602,6 +602,28 @@ Below we can see the addition of the geosparql context in line 4 and the use of 
 <p>If we wanted to use other vocabularies like DCAT or FOAF, we would add them to the context with a
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
 following the same prefix:term pattern.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>      <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span>
+</span><span class="linenos"> 5</span>    <span class="p">},</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">10</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">12</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
+<span class="linenos">13</span>            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
+<span class="linenos">14</span>        <span class="p">},</span>
+<span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">16</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+<span class="linenos">17</span>        <span class="p">}</span>
+<span class="linenos">18</span>    <span class="p">}</span>
+<span class="linenos">19</span><span class="p">}</span>
+<span class="linenos">20</span>  
+</pre></div>
+</div>
 </section>
 <section id="graph">
 <h2>Graph<a class="headerlink" href="#graph" title="Permalink to this heading">#</a></h2>
