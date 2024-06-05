@@ -264,7 +264,7 @@ and display of your records in the search results.
 The ODIS [Book](https://book.oceaninfohub.org/thematics/index.html) has good 
 examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is 
 the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
-repository where all of the JSON-LD templates often drafted by partners are stored,
+repository where all of the JSON-LD templates often drafted together with partners are stored,
 for example see a [datasetTemplate](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/datasetTemplate.json) 
 there.
 
