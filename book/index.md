@@ -10,7 +10,7 @@ The following video provide brief high level context to the Ocean InfoHub projec
 
 [![Ocean Infohub YouTube video](https://img.youtube.com/vi/KrxeZrPg0u8/0.jpg)](https://www.youtube.com/watch?v=KrxeZrPg0u8)
 
-(read the original [ODIS Proposal](./assets/IOC_OceanInfoHub_Proposal__summary.pdf)
+*(read the original [ODIS Proposal](./assets/IOC_OceanInfoHub_Proposal__summary.pdf))*
 
 Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
 
