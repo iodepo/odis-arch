@@ -12,8 +12,10 @@ Notes:
 > Need to align to [https://github.com/iodepo/odis-arch/issues/304#issuecomment-1681333608](https://github.com/iodepo/odis-arch/issues/304#issuecomment-1681333608)   ref: [WMO Core Metadata Profile (WCMP) Version 2
 ](https://wmo-im.github.io/wcmp2/standard/wcmp2-DRAFT.html)
 
-
-
+Notes:
+* _crawl-able catalog_ : Collection will be a collection.json (stac ish) that points to our S3 objects via https URL
+* SSSOM that maps my SQL to WIS2.0 
+* resolve prov via IANA described by that points to the JSON-LD
 
 - [ ] ID:  unique ID in catalog that align to the follow pattern.  We can build this and
   add that action to the PROV graph?  We need an agreement to allow these records to be sent to WMO 
@@ -28,7 +30,7 @@ Notes:
 - [ ] conformsTo BOILERPLATE
 - [ ] properties.theme, need at least one from   "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
 - [ ] conforms to, points to json schema  (need to get this)   https://github.com/wmo-im/wcmp2/blob/main/schemas/wcmp2-bundled.json  
-- [ ] properties.contacts  What is this in our case? Do we have what we need in ODIS/OIH ODISCat to address this?
+- [ ] properties.contacts  Need URL for code list: What is this in our case? Do we have what we need in ODIS/OIH ODISCat to address this?
 - [ ] properties.type All datasets for now, maybe services coming? (ref: https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv)
 - [ ] properties.created is the date the metadata record was created (required) 
 	- [ ] may need to be the prov
