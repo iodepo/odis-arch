@@ -247,13 +247,30 @@ That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
 
 ### How do I see my records, after completing my ODISCat entry?
 
+The ODIS [Dashboard](http://dashboard.oceaninfohub.org/) can be used to monitor your node 
+inside the ODIS graph.
+
+In terms of seeing your records in the results of the ODIS front-end [search](https://odis.org): 
+we will use the frequency values set in your sitemap, to automated the harvesting 
+and display of your records in the search results.
+
 ### Does ODIS have a SPARQL endpoint?
+
+Yes, the SPARQL endpoint for ODIS is: http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql
+
+You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.oceaninfohub.org/users/sparql.html).  
+An interface such as [Yasgui](https://yasgui.triply.cc/) can be used to generate your queries.
 
 ### Does ODIS have a JSON endpoint?
 
+A JSON endpoint is in discussion for ODIS.  ODIS does have Parquet files that are 
+automatically generated for each node (you can get the url for that Parquet file
+by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http://dashboard.oceaninfohub.org/).
+
 ### How often does ODIS index my records?
 
-
+ODIS will use the frequency values set in your sitemap, to automated the harvesting 
+and display of your records in the search results.
 
 
 
