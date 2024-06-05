@@ -8,7 +8,7 @@
 2. Prepare your JSON-LD metadata ([jump](#preparing-content) to that below)
 3. Create your sitemap ([jump](#creating-a-sitemap) to that below)
 4. Register your sitemap in your ODIS Catalogue entry ([jump](#coming-full-circle-registering-your-sitemap-in-odiscat) to that below)
-5. Review the FAQ
+5. Review the FAQ ([jump](#frequently-asked-questions-faq) to that below)
 
 ## Hello World
 
