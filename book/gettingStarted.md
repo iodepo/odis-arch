@@ -3,8 +3,8 @@
 ## Quick Steps
 
 1. Register your portal in ODIS Catalogue 
- * make sure you (or someone in your organization) has an OceanExpertID ([jump](#oceanexpert) to that below)
- * add your entry into ODIS Catalogue ([jump](#registering-your-metadata-nodes) to that below)
+   * make sure you (or someone in your organization) has an OceanExpertID ([jump](#oceanexpert) to that below)
+   * add your entry into ODIS Catalogue ([jump](#registering-your-metadata-nodes) to that below)
 2. Prepare your JSON-LD metadata ([jump](#preparing-content) to that below)
 3. Create your sitemap ([jump](#creating-a-sitemap) to that below)
 4. Register your sitemap in your ODIS Catalogue entry ([jump](#coming-full-circle-registering-your-sitemap-in-odiscat) to that below)
