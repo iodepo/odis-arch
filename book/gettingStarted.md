@@ -37,9 +37,10 @@ sharing JSON-LD for your web resources. In this guide, we'll walk you through th
 steps to effectively share JSON-LD on the web for your resource, empowering you to 
 enhance discoverability and semantic context for your valuable content.
 
-> [!NOTE]
-> Learn more about [Structured Data for the Web](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) 
-> and [JSON-LD](https://json-ld.org/)
+```{note}
+Learn more about [Structured Data for the Web](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) 
+and [JSON-LD](https://json-ld.org/)
+```
 
 The importance of sharing (meta)data about your digital assets - in a form that 
 others can understand - cannot be underemphasised: without a common approach, digital 
@@ -48,9 +49,10 @@ and informed action.  The International Oceanographic Data and Information Excha
 (IODE) helps provide ODIS as way for ocean data entities around the world to share
 oceans information through a common platform.
 
-> [!TIP]
-> ODIS is one of the 3 core programs of the IODE: 1) [OBIS](https://obis.org/), 
-> 2) [OTGA](https://classroom.oceanteacher.org/), and 3) [ODIS](https://odis.org).
+```{tip}
+ODIS is one of the 3 core programs of the IODE: 1) [OBIS](https://obis.org/), 
+2) [OTGA](https://classroom.oceanteacher.org/), and 3) [ODIS](https://odis.org).
+```
 
 ## Registering Your Organisation
 
@@ -75,10 +77,11 @@ beyond using a web browser. However, it is key that your organisation is aware
 of the OE entry and approves its creation. Additionally, an individual should be 
 nominated to maintain the entry. 
 
-> [!CAUTION]
-> After initially creating your OceanExpert ID, please give 1 business day before
-> trying to use that login in other tools, such as when logging into the ODIS Catalogue 
-> (as your OE account must first be approved).
+```{caution}
+After initially creating your OceanExpert ID, please give 1 business day before
+trying to use that login in other tools, such as when logging into the ODIS Catalogue 
+(as your OE account must first be approved).
+```
 
 ## Registering your (meta)data node(s)
 
@@ -89,9 +92,10 @@ register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue 
 (ODISCat) is the system that we use to register, describe, and interlink data sources 
 that feed into ODIS.
 
-> [!NOTE] 
-> One organisation can operate many such nodes (e.g. for different types of 
-> data, services, etc). 
+```{note} 
+One organisation can operate many such nodes (e.g. for different types of 
+data, services, etc).
+```
 
 To register a source, simply go to the [ODISCat website](https://catalogue.odis.org/), 
 login with your OE credentials, and create an entry. This should take around 10 minutes.
@@ -114,12 +118,14 @@ and templates in this book to help nodes shape their submissions. Note, however,
 that any valid [schema.org](https://schema.org/) Type can be used to share metadata 
 through the Federation. 
 
-> [!TIP]
-> Watch a video on "What is JSON-LD?" [here](https://www.youtube.com/watch?v=vioCbTo3C-4)
+```{tip} 
+Watch a video on "What is JSON-LD?" [here](https://www.youtube.com/watch?v=vioCbTo3C-4)
+```
 
-> [!NOTE]
-> To create and test an initial link to ODIS, you don't need to create 
-> metadata for all your holdings - a small test set will do.
+```{note} 
+To create and test an initial link to ODIS, you don't need to create 
+metadata for all your holdings - a small test set will do.
+```
 
 Additional semantics (i.e. beyond what schema.org can offer) can be embedded 
 into these files using schema.org's [additionalProperty](https://schema.org/additionalProperty), [DefinedTerm](https://schema.org/DefinedTerm), 
@@ -144,12 +150,13 @@ embed the JSON-LD inside the record's HTML landing page, such as:
   </script>
 ```
 
-> [!TIP]
-> Today there exists many catalogue software that automatically generates & embeds
-> the necessary JSON-LD into the record's landing page for you, such as: [GeoNetwork](https://geonetwork-opensource.org/) 
-> (since version 3.10), [pygeoapi](https://pygeoapi.io/) (since version 0.15.0), 
-> CKAN (with the [DCAT extension](https://extensions.ckan.org/extension/dcat/) enabled for the "schemaorg" profile),
-> and many others.
+```{tip} 
+Today there exists many catalogue software that automatically generates & embeds
+the necessary JSON-LD into the record's landing page for you, such as: [GeoNetwork](https://geonetwork-opensource.org/) 
+(since version 3.10), [pygeoapi](https://pygeoapi.io/) (since version 0.15.0), 
+CKAN (with the [DCAT extension](https://extensions.ckan.org/extension/dcat/) enabled for the "schemaorg" profile),
+and many others.
+```
 
 ### Reusing ODIS patterns
 
@@ -198,10 +205,11 @@ file you wish the ODIS Federation to be aware of.
 
 An example sitemap from an ODIS node can be seen [here](https://dataportal.leibniz-zmt.de/sitemap.xml)
 
-> [!NOTE] 
-> If you have many thousands of entries, or you have subsets of links to share, 
-> you can use a 'sitemap of sitemaps' approach, where one sitemap can point to several 
-> others.  Here is an example ODIS node with a [sitemap index](https://pacificdata.org/organization/sitemap.xml).
+```{note}  
+If you have many thousands of entries, or you have subsets of links to share, 
+you can use a 'sitemap of sitemaps' approach, where one sitemap can point to several 
+others.  Here is an example ODIS node with a [sitemap index](https://pacificdata.org/organization/sitemap.xml).
+```
 
 ### Frequency of change
 
@@ -221,9 +229,10 @@ reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly
   </url>
 ```
 
-> [!TIP]
-> There are many sitemap validator websites that you can leverage, to make sure that
-> you have generated your sitemap properly, and that it can be read by machines.
+```{tip} 
+There are many sitemap validator websites that you can leverage, to make sure that
+you have generated your sitemap properly, and that it can be read by machines.
+```
 
 ## Coming full circle: Registering your Sitemap in ODISCat
 
