@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Connecting to the OIH Network</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Connecting to the ODIS Federation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Profiles</span></p>
 <ul class="nav bd-sidenav">
@@ -473,14 +473,14 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Register your portal in ODIS Catalogue</p>
 <ul class="simple">
-<li><p>make sure you (or someone in your organization) has an OceanExpertID (<span class="xref myst">jump</span> to that below)</p></li>
-<li><p>add your entry into ODIS Catalogue (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>make sure you (or someone in your organization) has an OceanExpertID (<a href=#oceanexpert>jump</a> to that below)</p></li>
+<li><p>add your entry into ODIS Catalogue (<a href=#registering-your-meta-data-node-s>jump</a> to that below)</p></li>
 </ul>
 </li>
-<li><p>Prepare your JSON-LD metadata (<span class="xref myst">jump</span> to that below)</p></li>
-<li><p>Create your sitemap (<span class="xref myst">jump</span> to that below)</p></li>
-<li><p>Register your sitemap in your ODIS Catalogue entry (<span class="xref myst">jump</span> to that below)</p></li>
-<li><p>Review the FAQ (<span class="xref myst">jump</span> to that below)</p></li>
+<li><p>Prepare your JSON-LD metadata (<a href=#preparing-content>jump</a> to that below)</p></li>
+<li><p>Create your sitemap (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
+<li><p>Register your sitemap in your ODIS Catalogue entry (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)</p></li>
+<li><p>Review the FAQ (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
 </ol>
 </section>
 <section id="hello-world">
@@ -507,22 +507,22 @@ structured data on the internet, this guide will help you navigate the process o
 sharing JSON-LD for your web resources. In this guide, we’ll walk you through the key
 steps to effectively share JSON-LD on the web for your resource, empowering you to
 enhance discoverability and semantic context for your valuable content.</p>
-<blockquote>
-<div><p>[!NOTE]
-Learn more about <a class="reference external" href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">Structured Data for the Web</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Learn more about <a class="reference external" href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">Structured Data for the Web</a>
 and <a class="reference external" href="https://json-ld.org/">JSON-LD</a></p>
-</div></blockquote>
+</div>
 <p>The importance of sharing (meta)data about your digital assets - in a form that
 others can understand - cannot be underemphasised: without a common approach, digital
 assets are often invisible to one another, harming collaboration, due diligence,
 and informed action.  The International Oceanographic Data and Information Exchange
 (IODE) helps provide ODIS as way for ocean data entities around the world to share
 oceans information through a common platform.</p>
-<blockquote>
-<div><p>[!TIP]
-ODIS is one of the 3 core programs of the IODE: 1) <a class="reference external" href="https://obis.org/">OBIS</a>,
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ODIS is one of the 3 core programs of the IODE: 1) <a class="reference external" href="https://obis.org/">OBIS</a>,
 2) <a class="reference external" href="https://classroom.oceanteacher.org/">OTGA</a>, and 3) <a class="reference external" href="https://odis.org">ODIS</a>.</p>
-</div></blockquote>
+</div>
 </section>
 <section id="registering-your-organisation">
 <h2>Registering Your Organisation<a class="headerlink" href="#registering-your-organisation" title="Permalink to this heading">#</a></h2>
@@ -543,12 +543,12 @@ any data you add there will automatically be shared through the ODIS Federation.
 beyond using a web browser. However, it is key that your organisation is aware
 of the OE entry and approves its creation. Additionally, an individual should be
 nominated to maintain the entry.</p>
-<blockquote>
-<div><p>[!CAUTION]
-After initially creating your OceanExpert ID, please give 1 business day before
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>After initially creating your OceanExpert ID, please give 1 business day before
 trying to use that login in other tools, such as when logging into the ODIS Catalogue
 (as your OE account must first be approved).</p>
-</div></blockquote>
+</div>
 </section>
 </section>
 <section id="registering-your-meta-data-node-s">
@@ -558,11 +558,11 @@ trying to use that login in other tools, such as when logging into the ODIS Cata
 register the data systems you wish to connect as ODIS nodes. The ODIS Catalogue of Sources
 (ODISCat) is the system that we use to register, describe, and interlink data sources
 that feed into ODIS.</p>
-<blockquote>
-<div><p>[!NOTE]
-One organisation can operate many such nodes (e.g. for different types of
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One organisation can operate many such nodes (e.g. for different types of
 data, services, etc).</p>
-</div></blockquote>
+</div>
 <p>To register a source, simply go to the <a class="reference external" href="https://catalogue.odis.org/">ODISCat website</a>,
 login with your OE credentials, and create an entry. This should take around 10 minutes.</p>
 <p>ODISCat has a dedicated field to let the ODIS Federation know where your metadata
@@ -581,15 +581,15 @@ a library of examples in the <a class="reference external" href="https://github.
 and templates in this book to help nodes shape their submissions. Note, however,
 that any valid <a class="reference external" href="https://schema.org/">schema.org</a> Type can be used to share metadata
 through the Federation.</p>
-<blockquote>
-<div><p>[!TIP]
-Watch a video on “What is JSON-LD?” <a class="reference external" href="https://www.youtube.com/watch?v=vioCbTo3C-4">here</a></p>
-</div></blockquote>
-<blockquote>
-<div><p>[!NOTE]
-To create and test an initial link to ODIS, you don’t need to create
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch a video on “What is JSON-LD?” <a class="reference external" href="https://www.youtube.com/watch?v=vioCbTo3C-4">here</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To create and test an initial link to ODIS, you don’t need to create
 metadata for all your holdings - a small test set will do.</p>
-</div></blockquote>
+</div>
 <p>Additional semantics (i.e. beyond what <a class="reference external" href="http://schema.org">schema.org</a> can offer) can be embedded
 into these files using <a class="reference external" href="http://schema.org">schema.org</a>’s <a class="reference external" href="https://schema.org/additionalProperty">additionalProperty</a>, <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>,
 or similar property. An example JSON-LD template for ODIS that leverages
@@ -610,14 +610,14 @@ embed the JSON-LD inside the record’s HTML landing page, such as:</p>
 <span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>[!TIP]
-Today there exists many catalogue software that automatically generates &amp; embeds
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Today there exists many catalogue software that automatically generates &amp; embeds
 the necessary JSON-LD into the record’s landing page for you, such as: <a class="reference external" href="https://geonetwork-opensource.org/">GeoNetwork</a>
 (since version 3.10), <a class="reference external" href="https://pygeoapi.io/">pygeoapi</a> (since version 0.15.0),
 CKAN (with the <a class="reference external" href="https://extensions.ckan.org/extension/dcat/">DCAT extension</a> enabled for the “schemaorg” profile),
 and many others.</p>
-</div></blockquote>
+</div>
 <section id="reusing-odis-patterns">
 <h3>Reusing ODIS patterns<a class="headerlink" href="#reusing-odis-patterns" title="Permalink to this heading">#</a></h3>
 <p>ODIS Partners have co-developed a <a class="reference external" href="https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics">library</a>
@@ -660,12 +660,12 @@ pattern to the ODIS Book for all to benefit from and interoperate over.</p>
 to find it. This should be done by setting up a sitemap, that points to each JSON-LD
 file you wish the ODIS Federation to be aware of.</p>
 <p>An example sitemap from an ODIS node can be seen <a class="reference external" href="https://dataportal.leibniz-zmt.de/sitemap.xml">here</a></p>
-<blockquote>
-<div><p>[!NOTE]
-If you have many thousands of entries, or you have subsets of links to share,
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have many thousands of entries, or you have subsets of links to share,
 you can use a ‘sitemap of sitemaps’ approach, where one sitemap can point to several
 others.  Here is an example ODIS node with a <a class="reference external" href="https://pacificdata.org/organization/sitemap.xml">sitemap index</a>.</p>
-</div></blockquote>
+</div>
 <section id="frequency-of-change">
 <h3>Frequency of change<a class="headerlink" href="#frequency-of-change" title="Permalink to this heading">#</a></h3>
 <p>Add the <code class="docutils literal notranslate"><span class="pre">&lt;changefreq&gt;</span></code> metadata for each sitemap record, on how often you expect
@@ -682,11 +682,11 @@ reindex your holdings. Possible values are: <code class="docutils literal notran
   <span class="p">&lt;/</span><span class="nt">url</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<blockquote>
-<div><p>[!TIP]
-There are many sitemap validator websites that you can leverage, to make sure that
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There are many sitemap validator websites that you can leverage, to make sure that
 you have generated your sitemap properly, and that it can be read by machines.</p>
-</div></blockquote>
+</div>
 </section>
 </section>
 <section id="coming-full-circle-registering-your-sitemap-in-odiscat">
