@@ -1,5 +1,15 @@
 # Getting Started with ODIS: How to Join the ODIS Federation
 
+## Quick Steps
+
+1. Register your portal in ODIS Catalogue 
+    a) make sure you (or someone in your organization) has an OceanExpertID ([jump](#oceanexpert) to that below)
+    b) add your entry into ODIS Catalogue ([jump](#registering-your-metadata-nodes) to that below)
+2. Prepare your JSON-LD metadata ([jump](#preparing-content) to that below)
+3. Create your sitemap ([jump](#creating-a-sitemap) to that below)
+4. Register your sitemap in your ODIS Catalogue entry ([jump](#coming-full-circle-registering-your-sitemap-in-odiscat) to that below)
+5. Review the FAQ
+
 ## Hello World
 
 This page describes - at a high level - how a digital system with access to the 
@@ -233,45 +243,17 @@ there are 2 critical fields to fill for the ODIS connection, as follows:
 
 That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
 
-**Section 3: Steps to Share JSON-LD**
-1) Explain the key steps to share JSON-LD for your resource:
-    1) **Authoring JSON-LD Documents:**
-        - Discuss the process of creating JSON-LD documents aligned with project guidelines.
-    1) **Inserting JSON-LD into Web Pages:**
-        - Describe how to embed JSON-LD into web pages using SCRIPT tags.
-    1) **Including JSON-LD in Sitemaps:**
-        - Explain the importance of adding JSON-LD marked resources to XML sitemap files.
-    1) **Validation and Iteration:**
-        - Discuss the use of validation tools to ensure well-formed JSON-LD.
-        - Emphasize the iterative nature of aligning JSON-LD as the project profile evolves.
+## Frequently asked questions (FAQ)
 
-**Section 4: Conclusion**
-1) Summarize the essential steps for sharing JSON-LD on the web.
-1) Encourage readers to start implementing structured data for their resources.
-1) Provide a closing thought or encouragement for users to explore further.
+### How do I see my records, after completing my ODISCat entry?
+
+### Does ODIS have a SPARQL endpoint?
+
+### Does ODIS have a JSON endpoint?
+
+### How often does ODIS index my records?
 
 
-### 1.1
-
-**Defining Structured Data and JSON-LD:** Structured data is the practice of organizing 
-and presenting data on the web in a way that provides clear context and relationships 
-between different pieces of information. JSON-LD, which stands for JSON for Linked Data, 
-is a popular format for expressing structured data using JSON syntax. It allows you to 
-create machine-readable content that can be easily understood by search engines, making 
-it an effective method for enhancing the visibility and comprehensibility of your web 
-resources.
-
-### 1.2
-
-**The Role of Schema.org and the FAIR Principles:** Schema.org, a collaborative initiative, 
-plays a crucial role in the structured data landscape. It is closely aligned with the FAIR 
-(Findable, Accessible, Interoperable, Reusable) principles, which aim to improve the 
-accessibility and usability of data. By using schema.org, you're not only making your 
-data more findable but also contributing to its accessibility and interoperability. This 
-means that your structured data becomes more reusable by other systems, researchers, and 
-organizations, reinforcing the FAIR principles and promoting a global data-sharing ecosystem. 
-In this guide, we will show you how to leverage these concepts to efficiently share your 
-JSON-LD data on the web.
 
 
 
