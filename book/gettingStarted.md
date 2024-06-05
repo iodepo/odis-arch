@@ -245,6 +245,11 @@ That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
 
 ## Frequently asked questions (FAQ)
 
+### How to provide feedback to ODIS?
+
+You can use the [odis-arch](https://github.com/iodepo/odis-arch/issues) issue tracker 
+on GitHub, to file any issues or questions for the ODIS team.
+
 ### How do I see my records, after completing my ODISCat entry?
 
 The ODIS [Dashboard](http://dashboard.oceaninfohub.org/) can be used to monitor your node 
@@ -253,6 +258,15 @@ inside the ODIS graph.
 In terms of seeing your records in the results of the ODIS front-end [search](https://odis.org): 
 we will use the frequency values set in your sitemap, to automated the harvesting 
 and display of your records in the search results.
+
+### Where are JSON-LD examples that I can use?
+
+The ODIS [Book](https://book.oceaninfohub.org/thematics/index.html) has good 
+examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is 
+the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
+repository where all of the JSON-LD templates often drafted by partners are stored,
+for example see a [datasetTemplate](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/datasetTemplate.json) 
+there.
 
 ### Does ODIS have a SPARQL endpoint?
 
