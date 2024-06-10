@@ -26,6 +26,6 @@ jobs:
           git fetch --unshallow
           git checkout publication
           git pull
-          git merge --no-ff master -m "Auto-merge master back to publication"
+          git merge master -m "Auto-merge master back to publication"
           git push
 
