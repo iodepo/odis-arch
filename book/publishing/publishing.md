@@ -201,7 +201,7 @@ Sitemap: https://example.org/sitemap.xml
 #### sitemap.xml
 
 Providers will need to expose a set of resource
-landing pages using a sitemap.xml file. As noted above, providers 
+landing pages using a `sitemap.xml` file. As noted above, providers 
 can expose a sitemap file to just the target agent 
 to avoid indexing test pages by commercial providers.  You may wish 
 to do this during testing or for other reasons.  Otherwise, 
@@ -210,7 +210,12 @@ perfectly fine.
 
 Information on the sitemap structure can be found at [sitemaps.org](https://www.sitemaps.org/).
 
-It is encouraged to use the sitemap lastmod node 
+```{tip}
+The Google Search developer documentation also has [useful tips](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#xml) 
+for creating a sitemap.xml file.
+```
+
+It is encouraged to use the sitemap `lastmod` property 
 to provide guidance to indexers on page updates. 
 Additionally, indexers may test ways to evaluate additions and 
 removals from the sitemap URL set to manage new or removed resources.  
@@ -270,7 +275,7 @@ dynamically with Javascript or server side templates.  These are the
 existing web pages for the resoruces, not enhanced with the 
 semantic metadata snippets in the HTML source.  
 
-3. These are published to the web and referenced in the sitemap.xml 
+3. These are published to the web and referenced in the `sitemap.xml` 
 document that is also made available.  At this point this material is 
 available to anyone who may wish to index it and provide discovery 
 for these resources.  
