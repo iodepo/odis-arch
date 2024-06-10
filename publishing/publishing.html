@@ -664,8 +664,12 @@ perfectly fine.</p>
 <p>The Google Search developer documentation also has <a class="reference external" href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#xml">useful tips</a>
 for creating a sitemap.xml file.</p>
 </div>
-<p>It is encouraged to use the sitemap <code class="docutils literal notranslate"><span class="pre">lastmod</span></code> property
-to provide guidance to indexers on page updates.
+<p>It is encouraged to use the sitemap <code class="docutils literal notranslate"><span class="pre">lastmod</span></code> parameter
+to provide guidance to indexers on page updates.  You can also add the
+<code class="docutils literal notranslate"><span class="pre">&lt;changefreq&gt;</span></code> parameter, for how often you expect records in your sitemap
+to change - this will tell systems like ODIS how often to
+reindex your holdings - possible values are: <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">daily</span></code>,
+<code class="docutils literal notranslate"><span class="pre">weekly</span></code>, <code class="docutils literal notranslate"><span class="pre">monthly</span></code>,<code class="docutils literal notranslate"><span class="pre">yearly</span></code>, <code class="docutils literal notranslate"><span class="pre">never</span></code>.
 Additionally, indexers may test ways to evaluate additions and
 removals from the sitemap URL set to manage new or removed resources.</p>
 <p>A sitemap file would look like the following.</p>
