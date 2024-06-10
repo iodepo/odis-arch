@@ -228,12 +228,17 @@ A sitemap file would look like the following.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>http://www.example.com/</loc>
-      <lastmod>2005-01-01</lastmod>
+      <loc>https://example.org/landingpage1</loc>
+      <lastmod>2024-06-10</lastmod>
       <changefreq>monthly</changefreq>
    </url>
+   <url>
+      <loc>https://example.org/landingpage2</loc>
+      <lastmod>2024-01-31</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>  
 </urlset> 
 ```
 
@@ -245,14 +250,14 @@ a sitemap index, as follows.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/site0.9">
+<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
    <sitemap>
-      <loc>http://example.org/sitemap_a.xml</loc>
-      <lastmod>2004-10-01T18:23:17+00:00</lastmod>
+      <loc>https://example.org/sitemap_a.xml</loc>
+      <lastmod>2024-06-10</lastmod>
    </sitemap>
    <sitemap>
-       <loc>http://example.org/sitemap_b.xml</loc>
-      <lastmod>2005-01-01</lastmod>
+       <loc>https://example.org/sitemap_b.xml</loc>
+      <lastmod>2024-01-01</lastmod>
    </sitemap>
 </sitemapindex>
 ```
