@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - 'publication'
+  workflow_run:
+    workflows: ["Weekly book publish"]
+    types:
+      - completed      
 
 jobs:
   deploy-book:
