@@ -14,13 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
+    
     - name: Set Git config
       run: |
         git config --global user.email "github-actions@example.com"
         git config --global user.name "GitHub Actions"    
     
     - name: Merge master into publication
-      uses: actions/checkout@v4
       run: |      
           git fetch --unshallow
           git checkout publication
