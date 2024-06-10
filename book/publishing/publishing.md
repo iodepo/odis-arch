@@ -215,7 +215,7 @@ The Google Search developer documentation also has [useful tips](https://develop
 for creating a sitemap.xml file.
 ```
 
-It is encouraged to use the sitemap `lastmod` parameter 
+It is encouraged to use the sitemap `<lastmod>` parameter 
 to provide guidance to indexers on page updates.  You can also add the 
 `<changefreq>` parameter, for how often you expect records in your sitemap 
 to change - this will tell systems like ODIS how often to 
