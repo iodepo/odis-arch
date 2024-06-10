@@ -228,9 +228,11 @@ A sitemap file would look like the following.
 </urlset> 
 ```
 
-If you have more than 50,000 entries, you can break the sitemap up into 
-multiple files of less than 50,000.   You would link to these in 
-a sitemap index.  
+```{caution}
+If you have more than 50,000 entries, you must break the sitemap up into 
+multiple files of less than 50,000. You would link to these through 
+a sitemap index, as follows.
+```
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

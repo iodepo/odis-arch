@@ -674,9 +674,12 @@ removals from the sitemap URL set to manage new or removed resources.</p>
 <span class="nt">&lt;/urlset&gt;</span><span class="w"> </span>
 </pre></div>
 </div>
-<p>If you have more than 50,000 entries, you can break the sitemap up into
-multiple files of less than 50,000.   You would link to these in
-a sitemap index.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If you have more than 50,000 entries, you must break the sitemap up into
+multiple files of less than 50,000. You would link to these through
+a sitemap index, as follows.</p>
+</div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;sitemapindex</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.sitemaps.org/schemas/site0.9&quot;</span><span class="nt">&gt;</span>
 <span class="w">   </span><span class="nt">&lt;sitemap&gt;</span>
