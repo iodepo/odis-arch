@@ -652,14 +652,19 @@ indexers both for allow and disallow directives.</p>
 <section id="sitemap-xml">
 <h4>sitemap.xml<a class="headerlink" href="#sitemap-xml" title="Permalink to this heading">#</a></h4>
 <p>Providers will need to expose a set of resource
-landing pages using a sitemap.xml file. As noted above, providers
+landing pages using a <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code> file. As noted above, providers
 can expose a sitemap file to just the target agent
 to avoid indexing test pages by commercial providers.  You may wish
 to do this during testing or for other reasons.  Otherwise,
 a sitemap.xml file exposed in general from somewhere in your site is
 perfectly fine.</p>
 <p>Information on the sitemap structure can be found at <a class="reference external" href="https://www.sitemaps.org/">sitemaps.org</a>.</p>
-<p>It is encouraged to use the sitemap lastmod node
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Google Search developer documentation also has <a class="reference external" href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#xml">useful tips</a>
+for creating a sitemap.xml file.</p>
+</div>
+<p>It is encouraged to use the sitemap <code class="docutils literal notranslate"><span class="pre">lastmod</span></code> property
 to provide guidance to indexers on page updates.
 Additionally, indexers may test ways to evaluate additions and
 removals from the sitemap URL set to manage new or removed resources.</p>
@@ -714,7 +719,7 @@ These can be either static documents or generated and placed in pages
 dynamically with Javascript or server side templates.  These are the
 existing web pages for the resoruces, not enhanced with the
 semantic metadata snippets in the HTML source.</p></li>
-<li><p>These are published to the web and referenced in the sitemap.xml
+<li><p>These are published to the web and referenced in the <code class="docutils literal notranslate"><span class="pre">sitemap.xml</span></code>
 document that is also made available.  At this point this material is
 available to anyone who may wish to index it and provide discovery
 for these resources.</p></li>
