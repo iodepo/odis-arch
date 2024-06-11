@@ -565,6 +565,24 @@ sources:
     active: true
     cron: 0 18 * * 0
   #
+  # MIMS
+  #
+  - name: mims
+    propername: Marine Information Management System (MIMS)
+    catalogue: https://data.ocean.gov.za/mims/catalog/
+    domain: https://data.ocean.gov.za
+    logo: https://data.ocean.gov.za/mims/static/images/mims-logo.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/mims
+    sourcetype: sitemap
+    url: https://data.ocean.gov.za/mims/catalog/sitemap.xml
+    changefreq: as needed
+    backend: SAEON
+    headless: false
+    dateadded: 2024-06-11
+    active: true
+    cron: 0 11 * * 0
+  #
   # NCEI Marine Microplastics Catalogue
   #    
   #
