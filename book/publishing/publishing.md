@@ -201,30 +201,63 @@ Sitemap: https://example.org/sitemap.xml
 #### sitemap.xml
 
 Providers will need to expose a set of resource
-landing pages using a sitemap.xml file. As noted above, providers 
+landing pages using a `sitemap.xml` file. As noted above, providers 
 can expose a sitemap file to just the target agent 
 to avoid indexing test pages by commercial providers.  You may wish 
 to do this during testing or for other reasons.  Otherwise, 
 a sitemap.xml file exposed in general from somewhere in your site is 
 perfectly fine.  
 
-Information on the sitemap structure can be found at sitemaps.org.
+Information on the sitemap structure can be found at [sitemaps.org](https://www.sitemaps.org/).
 
-It is encouraged to use the sitemap lastmod node 
-to provide guidance to indexers on page updates. 
-Additionally indexers may test ways to evaluate additions and 
+```{tip}
+The Google Search developer documentation also has [useful tips](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#xml) 
+for creating a sitemap.xml file.
+```
+
+It is encouraged to use the sitemap `<lastmod>` parameter 
+to provide guidance to indexers on page updates.  You can also add the 
+`<changefreq>` parameter, for how often you expect records in your sitemap 
+to change - this will tell systems like ODIS how often to 
+reindex your holdings - possible values are: `always`, `hourly`, `daily`, 
+`weekly`, `monthly`,`yearly`, `never`.
+Additionally, indexers may test ways to evaluate additions and 
 removals from the sitemap URL set to manage new or removed resources.  
+
+A sitemap file would look like the following.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/site0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://example.org/landingpage1</loc>
+      <lastmod>2024-06-10</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://example.org/landingpage2</loc>
+      <lastmod>2024-01-31</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>  
+</urlset> 
+```
+
+```{caution}
+If you have more than 50,000 entries, you must break the sitemap up into 
+multiple files of less than 50,000. You would link to these through 
+a sitemap index, as follows.
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
    <sitemap>
-      <loc>http://samples.earth/sitemap_websites_sampleseaxml</loc>
-      <lastmod>2004-10-01T18:23:17+00:00</lastmod>
+      <loc>https://example.org/sitemap_a.xml</loc>
+      <lastmod>2024-06-10</lastmod>
    </sitemap>
    <sitemap>
-      <loc>http://samples.easitemap_doclouds_igsndatagraphs.xml</loc>
-      <lastmod>2005-01-01</lastmod>
+       <loc>https://example.org/sitemap_b.xml</loc>
+      <lastmod>2024-01-01</lastmod>
    </sitemap>
 </sitemapindex>
 ```
@@ -251,7 +284,7 @@ dynamically with Javascript or server side templates.  These are the
 existing web pages for the resoruces, not enhanced with the 
 semantic metadata snippets in the HTML source.  
 
-3. These are published to the web and referenced in the sitemap.xml 
+3. These are published to the web and referenced in the `sitemap.xml` 
 document that is also made available.  At this point this material is 
 available to anyone who may wish to index it and provide discovery 
 for these resources.  

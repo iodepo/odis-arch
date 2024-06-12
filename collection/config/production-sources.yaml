@@ -565,6 +565,23 @@ sources:
     active: true
     cron: 0 18 * * 0
   #
+  # MIMS
+  #
+  - name: mims
+    propername: Marine Information Management System (MIMS)
+    catalogue: https://data.ocean.gov.za/mims/catalog/
+    domain: https://data.ocean.gov.za
+    logo: https://data.ocean.gov.za/mims/static/images/mims-logo.png
+    pid: https://catalogue.odis.org/view/3303
+    sourcetype: sitemap
+    url: https://data.ocean.gov.za/mims/catalog/sitemap.xml
+    changefreq: as needed
+    backend: SAEON
+    headless: false
+    dateadded: 2024-06-11
+    active: true
+    cron: 0 11 * * 0
+  #
   # NCEI Marine Microplastics Catalogue
   #    
   #
@@ -758,6 +775,23 @@ sources:
     headless: false
     dateadded: 2023-08-08
     cron: 0 13 * * 0 
+    active: true
+  #
+  # R2R
+  # 
+  - name: r2r
+    propername: Rolling Deck to Repository (R2R)
+    catalogue: https://www.rvdata.us/
+    domain: https://lamont.columbia.edu/
+    logo: https://www.rvdata.us/images/Logo.4b1519be.png
+    pid: https://catalogue.odis.org/view/3292
+    sourcetype: sitemap
+    url: https://service.rvdata.us/api/sitemap/
+    changefreq: yearly  
+    backend: unknown  
+    headless: false
+    dateadded: 2024-06-04
+    cron: 0 14 * * 0    
     active: true    
   #
   # RDA Australia

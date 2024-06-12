@@ -112,7 +112,7 @@ prefix and then the vocabulary namespace.  We could then use terms from that voc
 following the same prefix:term pattern.
 
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/spatial/graphs/geosparqlsimple.json
+```{literalinclude} ../../odis-in/dataGraphs/thematics/spatial/graphs/geosparqlsimple.json
 :emphasize-lines: 4, 9, 11, 15
 :linenos:
 ```
