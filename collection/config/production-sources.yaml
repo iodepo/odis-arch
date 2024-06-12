@@ -477,6 +477,23 @@ sources:
     active: true
     cron: 0 15 * * 0
   #
+  # MARCO-BOLO
+  #
+  - name: marcobolo
+    propername: MARine COastal BiOdiversity Long-term Observations (MARCO-BOLO)
+    catalogue: https://github.com/marco-bolo
+    domain: https://marcobolo-project.eu/
+    logo: https://marcobolo-project.eu/wp-content/uploads/2020/09/MARCO-BOLO_logo_col-1.png
+    pid: https://catalogue.odis.org/view/3305
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/marco-bolo/dataset-catalogue/main/datasets/sitemap.xml
+    changefreq:
+    backend: custom
+    headless: false
+    dateadded: 2024-06-12
+    active: true
+    cron: 0 15 * * 0    
+  #
   # Marine Institute Data Catalogue
   #    
   #
