@@ -351,24 +351,6 @@ sources:
     cron: 0 1 * * 0
     active: true
   #
-  # Indonesia National Oceanic Data Center
-  #
-  - name: inanodc
-    propername: Indonesia National Oceanic Data Center
-    catalogue: https://geonode.nodc.id
-    domain: https://nodc.id
-    logo: https://nodc.id/dist/img/brin.png
-    pid: https://catalogue.odis.org/view/3246
-    sourcetype: sitemap
-    url: https://geonode.nodc.id/sitemap.xml
-    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ina-nodc/ina-nodc-simple-graph.json
-    changefreq: on demand
-    backend: GeoNode
-    headless: false
-    dateadded: 2022-04-05
-    active: true
-    cron: 0 10 * * 0
-  #
   # INCOIS
   #
   - name: incois
