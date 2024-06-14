@@ -260,6 +260,23 @@ sources:
     cron: 0 5 * * 0
     active: true
   #
+  # European Marine Observation and Data Network catalogue
+  #
+  - name: emodnet
+    propername: European Marine Observation and Data Network (EMODnet)
+    domain: https://emodnet.ec.europa.eu/
+    catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/emodnet_logos/print/EMODnet_coll_all.png
+    pid: https://catalogue.odis.org/view/364
+    sourcetype: sitemap
+    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+    changefreq: as needed
+    backend: GeoNetwork
+    headless: false
+    dateadded: 2022-08-24
+    active: true
+    cron: 0 9 * * 0    
+  #
   # EurOcean Organizations
   #
   - name: euroceanorgs
@@ -316,23 +333,6 @@ sources:
     dateadded: 2022-03-26
     active: true
     cron: 0 8 * * 0
-  #
-  # European Marine Observation and Data Network catalogue
-  #
-  - name: emodnet
-    propername: European Marine Observation and Data Network (EMODnet)
-    domain: https://emodnet.ec.europa.eu/
-    catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/emodnet_logos/print/EMODnet_coll_all.png
-    pid: https://catalogue.odis.org/view/364
-    sourcetype: sitemap
-    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
-    changefreq: as needed
-    backend: GeoNetwork
-    headless: false
-    dateadded: 2022-08-24
-    active: true
-    cron: 0 9 * * 0
   #
   # Global Biodiversity Information Facility (GBIF)
   #
