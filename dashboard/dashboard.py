@@ -77,7 +77,7 @@ st.set_page_config(
     initial_sidebar_state="expanded", ###or "collapsed"
     menu_items={
          'Report a bug': "https://github.com/iodepo/odis-arch/issues",
-         'Get Help': 'https://oceaninfohub.org/contact-2/',         
+         'Get Help': 'https://oceaninfohub.org/contact/',         
          'About': "Dashboard demo by [jmckenna](https://github.com/jmckenna)"
     }   
 )
