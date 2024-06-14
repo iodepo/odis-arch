@@ -82,6 +82,9 @@ st.set_page_config(
     }   
 )
 
+#logo
+st.logo("https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png", link="https://oceaninfohub.org/")
+
 # dashboard title
 st.title("ODIS Dashboard")
 st.markdown("This dashboard will help monitor the ODIS graph, as well as the nodes connected to it.")
