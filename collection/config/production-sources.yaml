@@ -70,6 +70,23 @@ sources:
     cron: 0 7 * * 0
     active: true
   #
+  # ARGOVIS
+  #
+  - name: argovis
+    propername: Argovis ARGO Collection
+    catalogue: https://argovis.colorado.edu/argoURLhelper
+    domain: https://argovis.colorado.edu
+    logo: https://argovis.colorado.edu/fulllogo.png
+    pid: https://catalogue.odis.org/view/3304
+    sourcetype: sitemap
+    url: https://argovis.colorado.edu/argo_sitemap.xml
+    changefreq:
+    backend: custom
+    headless: false
+    dateadded: 2024-06-14
+    cron: 1 7 * * 0
+    active: true    
+  #
   # BeBOP-OBON
   #
   - name: bebop
