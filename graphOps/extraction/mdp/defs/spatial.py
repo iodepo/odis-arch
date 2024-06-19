@@ -1,4 +1,4 @@
-import shapely
+import shapely  ## need to be fairly recent like >2.o
 from pyproj import Geod
 
 
@@ -15,12 +15,12 @@ def make_pairs(ll):
 def gj(geom, value):
     if geom == None:
         return None
-    test = geom.split()
-    test = [float(x) for x in test]
-    if len(test) < 2:
+    ges = geom.split()
+    ges = [float(x) for x in ges]
+    if len(ges) < 2:
         return None
 
-    cp = make_pairs(test)
+    cp = make_pairs(ges)
 
     if len(cp) == 1:
         # print("POINT")

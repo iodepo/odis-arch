@@ -11,7 +11,9 @@ import s3fs
 from defs import readobject
 
 # Master Data Product to Solr
-
+# * products_json_solr.py
+#   * deprecated pythonic approach to generating the JSON.  Replaced by DuckDB based
+#     approach.
 def main():
     parser = argparse.ArgumentParser(description="Process arguments")
     parser.add_argument("--source", type=str, help="Source file/URL")

@@ -1,8 +1,22 @@
 # Master Data Product 
 
-# TODO
+## TODO
 
 * [ ] Add the columns "completeness" and "accreditation" to the products  
+
+### Temporal
+
+The temporal coverage all comes from the "temporalCoverage".   We get the 
+start, end dates and start end years from processing the temporalCoverage.    Need
+to put this in python time package and pull these and augment the temporal parquet
+
+###  Geometry
+
+Need to do apply the spatial functions to the filteredgeom
+
+Need to apply Jeff's transforms
+
+
 
 ## About
 
@@ -15,17 +29,15 @@ queries used.
 
 * mdp_oxigraph.py
   * Updated mdp using PyOxigraph and better processing
-* oih_producer.py
+* oih_engine.py
   * Leverages the above and loops through the queries and sources to make products
 
 * mdp.py
   * Original MDP, still more comprehensive in terms of pre-processing the data
-* objectProcessor.sh
+* Morgue/objectProcessor.sh
   * BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_oxigraph.py
 
-* products_solr.py
-  * deprecated pythonic approach to generating the JSON.  Replaced by DuckDB based 
-    approach.
+
 
 
 ## Commands (new)

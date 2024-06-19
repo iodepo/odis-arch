@@ -1,31 +1,16 @@
 import argparse
-import gc
-import re
-import sys
-import io
-import warnings
 import datetime
-from functools import reduce
-
-import kglab
-import numpy as np
+import io
+import sys
+import warnings
 import pandas as pd
-from dateutil import parser
-from rdflib import ConjunctiveGraph  # needed for quads
-# import polars as pl
-from tqdm import tqdm
 from pyoxigraph import *
-
 from defs import graphshapers
 from defs import load_queries
 from defs import readSource
-from defs import polar_calls
-from defs import regionFor
-from defs import spatial
 from defs import saveobject
 
 warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas future warning
-
 
 def main():
     # Params
@@ -60,14 +45,14 @@ def main():
     dg = readSource.read_data(u)
     print("RDF loading", datetime.datetime.now())
 
-    mf = graphProcessor(dg, sq)
+    df = graphProcessor(dg, sq)
 
     # Save
-    if mf is None:
+    if df is None:
         print("No graphs found")
     else:
-        print(mf.info())
-        saveobject.write_data(o, mf)
+        print(df.info())
+        saveobject.write_data(o, df)
 
 
 # get the value of a triple object from pyoxigraph
