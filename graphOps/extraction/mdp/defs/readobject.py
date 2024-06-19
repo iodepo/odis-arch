@@ -1,18 +1,22 @@
 import os
 from minio import Minio
+import pandas as pd
+import pyarrow.parquet as pq
+import pyarrow as pa
+from io import BytesIO
 
-def write_bytes(source):
-    url, bucket, obj = parse_s3_url(source)
-
-    sk = os.getenv("MINIO_SECRET_KEY")
-    ak = os.getenv("MINIO_ACCESS_KEY")
-
-    # Create client with access and secret key.
-    mc = Minio(url, ak, sk, secure=False)
-    data = mc.get_object(bucket, obj)
-    d = data.read()
-
-    return d
+# def write_bytes(source):
+#     url, bucket, obj = parse_s3_url(source)
+#
+#     sk = os.getenv("MINIO_SECRET_KEY")
+#     ak = os.getenv("MINIO_ACCESS_KEY")
+#
+#     # Create client with access and secret key.
+#     mc = Minio(url, ak, sk, secure=False)
+#     data = mc.get_object(bucket, obj)
+#     d = data.read()
+#
+#     return d
 
 
 def get_bytes(source):
@@ -62,3 +66,29 @@ def parse_s3_url(s3_url):
     object_path = "/".join(split_url[2:])
 
     return server_url, bucket_name, object_path
+
+
+def get_object(target):
+    # it's an S3 based object
+    print("Reading object from minio")
+
+    sk = os.getenv("MINIO_SECRET_KEY")
+    ak = os.getenv("MINIO_ACCESS_KEY")
+    srv, bkt, obj = parse_s3_url(target)
+
+    # Create client with access and secret key.
+    mc = Minio(srv, ak, sk, secure=False)
+
+    try:
+        data = mc.get_object(bkt, obj)
+        buffer = BytesIO(data.read())
+
+        # Use PyArrow to read the Parquet file into a Table
+        table = pq.read_table(buffer)
+
+        # Convert the PyArrow Table into a pandas DataFrame
+        df = table.to_pandas()
+        return df
+    except Exception as e:
+        print(f"Error getting object: {e}")
+

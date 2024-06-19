@@ -1,22 +1,22 @@
 import argparse
-import datetime
 import sys
-from io import BytesIO
-import pandas as pd
-import s3fs
-import os
+
 import numpy as np
 
-from defs import spatial
 from defs import graphshapers
+from defs import readobject
+from defs import saveobject
+from defs import spatial
+from defs import regionFor
+
 
 def main():
     # Params
-    parser = argparse.ArgumentParser(description="Process some arguments.")
-    parser.add_argument("--source", type=str, help="Source URL")
-    parser.add_argument("--output", type=str, help="Output file")
+    p = argparse.ArgumentParser(description="Process some arguments.")
+    p.add_argument("--source", type=str, help="Source URL")
+    p.add_argument("--output", type=str, help="Output file")
 
-    args = parser.parse_args()
+    args = p.parse_args()
 
     if args.source is None:
         print("Error: the --source argument is required")
@@ -29,17 +29,7 @@ def main():
     u = args.source
     o = args.output
 
-    # Load graph
-    print("Parquet loading", datetime.datetime.now())
-    # LOAD PARQUET TO Pandas
-    endpoint = 'http://ossapi.oceaninfohub.org'
-    access_key = os.getenv('MINIO_ACCESS_KEY')
-    secret_key = os.getenv('MINIO_SECRET_KEY')
-
-    fs = s3fs.S3FileSystem(anon=False, client_kwargs={'endpoint_url': endpoint}, key=access_key, secret=secret_key)  # Use 'anon=True' for public data
-
-    with fs.open(u) as f:
-        df = pd.read_parquet(f)
+    df = readobject.get_object(u)
 
     #process the dataframe
     print("Processing Stage: Geospatial centroid")
@@ -48,6 +38,7 @@ def main():
 
     print("Processing Stage: Geospatial centroid")
     df['centroid'] = df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "centroid"))
+    df['centroid'] = df['centroid'].astype(str)
 
     print("Processing Stage: Geospatial length")
     df['length'] = df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "length"))
@@ -57,18 +48,33 @@ def main():
 
     print("Processing Stage: Geospatial wkt")
     df['wkt'] = df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "wkt"))
+    df['wkt'] = df['wkt'].astype(str)
 
     print("Processing Stage: Geospatial geojson")
     df['geojson'] = df['filteredgeom'].apply(lambda x: spatial.gj(str(x), "geojson"))
+    df['geojson'] = df['geojson'].astype(str)
 
     print(df.head())
 
-    # Save
-    # buf = BytesIO()
-    # df.to_parquet(buf)
-    #
-    # obj = s3.Object(bucket_name=bucket, key='new_' + key)
-    # obj.put(Body=buf.getvalue())
+    if "name" in df.columns:
+        df['name'] = df['name'].astype(str)  # why is this needed?
+
+        # TODO, incorporate Jeff's code as a Lambda function (will need to support multiple possible regions per entry)
+    if "name" in df.columns:
+        print("Processing region for name")
+        df['nregion'] = df['name'].apply(lambda x: regionFor.name(x) if x else x)
+    if "address" in df.columns:
+        print("Processing region for address")
+        df['aregion'] = df['address'].apply(lambda x: regionFor.address(x) if x else x)
+    if "addressCountry" in df.columns:
+        print("Processing region for addressCountry")
+        df['cregion'] = df['addressCountry'].apply(
+            lambda x: regionFor.countryLastProcessing(x) if x else x)
+    if "wkt" in df.columns:
+        print("Processing region for wkt")
+        df['fregion'] = df['wkt'].apply(lambda x: regionFor.feature(x) if x else x)
+
+    saveobject.write_data(o, df)
 
 if __name__ == "__main__":
     main()
