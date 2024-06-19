@@ -1,10 +1,8 @@
 # Master Data Product 
 
-
 # TODO
 
 * [ ] Add the columns "completeness" and "accreditation" to the products  
-
 
 ## About
 
@@ -18,7 +16,7 @@ queries used.
 * mdp_oxigraph.py
   * Updated mdp using PyOxigraph and better processing
 * oih_producer.py
-  * Leverages the above and loops through the queires and sources to make products
+  * Leverages the above and loops through the queries and sources to make products
 
 * mdp.py
   * Original MDP, still more comprehensive in terms of pre-processing the data
@@ -28,6 +26,27 @@ queries used.
 * products_solr.py
   * deprecated pythonic approach to generating the JSON.  Replaced by DuckDB based 
     approach.
+
+
+## Commands (new)
+
+Indexing via the scheduling system for ODIS places the resulting summoned documents into 
+the buckets _gleaner.oih/summoned/PARTNER_ with the generated graphs being placed in 
+_gleaner.oih/graphs/latest/PARTNER_release.nq_ and _gleaner.oih/graphs/latest/PARTNER_prov.nq_ 
+
+At established times these graphs are placed into prefix _commons/ODIS-KG-MAIN/18042024/_ where
+the last item is the time stamp of the time the snapshot was made.  
+
+From these graphs in the latest prefix, we can generate the resulting products via
+
+```bash
+ python mdp_oxigraph.py  --source "s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/18042024/cioos_release.nq"  --query "./queries/baseQuery.rq"  --output  "s3://ossapi.oceaninfohub.org/commons/OIH-PROD/18042024/cioos.parquet"
+```
+
+This both pulls from the ODIS object store and pushed the results back to the object store.  
+
+The code _oih_producer.py_ is used to apply all queries to all objects in a given prefix.  
+
 
 
 ## DuckDB

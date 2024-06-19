@@ -63,3 +63,6 @@ jupyter-book clean . --all; jupyter-book build .;
 ```
 
 
+## Push Changes to Publish
+
+- 

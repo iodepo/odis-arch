@@ -1,40 +1,19 @@
-import argparse
-import sys
-import re
-import os
-import io
-import subprocess
-import warnings
 import datetime
-from pyoxigraph import *
-import pandas as pd
+import io
+import os
+import re
+import warnings
 
-from defs import readSource
-from defs import saveobject
+import pandas as pd
 from minio import Minio
+from pyoxigraph import *
 
 from defs import graphshapers
 from defs import load_queries
 from defs import readSource
-from defs import polar_calls
-from defs import regionFor
-from defs import spatial
 from defs import saveobject
 
 warnings.simplefilter(action='ignore', category=FutureWarning)  # remove pandas future warning
-# def publicurls(client, bucket, prefix):
-#     urls = []
-#     objects = client.list_objects(bucket, prefix=prefix, recursive=True)
-#     for obj in objects:
-#         result = client.stat_object(bucket, obj.object_name)
-#
-#         if result.size > 0:  #  how to tell if an objet   obj.is_public  ?????
-#             url = client.presigned_get_object(bucket, obj.object_name)
-#             url = client.get
-#             # print(f"Public URL for object: {url}")
-#             urls.append(url)
-#
-#     return urls
 
 def main():
     ak = 'MINIO_ACCESS_KEY'  # Replace ENV_VAR_NAME with your actual environment variable name
@@ -51,14 +30,12 @@ def main():
     else:
         print(f'Environment variable {sk} is not set.')
 
-    ep="192.168.202.114:49153"
-    bucket = "odis"
-    prefix = "latest"
+    ep="ossapi.oceaninfohub.org"
+    bucket = "commons"
+    prefix = "ODIS-KG-MAIN/18042024"
 
     # client = Minio("ossapi.oceaninfohub.org:80", secure=False)  # Create client with anonymous access.
     client = Minio(endpoint=ep, access_key=akvar, secret_key=skvar, secure=False)  # Create client with secure access.
-
-    # urls = publicurls(client, bucket=bucket, prefix=prefix)
 
     objects = client.list_objects(
             bucket_name=bucket, prefix=prefix, recursive=True,
@@ -105,7 +82,7 @@ def graphProcessor(dg, oname):
         sq = store.query(sparql)
         qr = list(sq)
 
-        o = f"./output/{provider_name}_{query_name}.parquet"
+        o = f"s3://ossapi.oceaninfohub.org/commons/OIH-PROD/18042024/{provider_name}_{query_name}.parquet"
 
         print("Length SPARQL results:  {}".format(len(qr)))
 
