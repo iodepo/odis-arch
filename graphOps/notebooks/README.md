@@ -72,7 +72,7 @@ strategies to maximize the utility of the OIH Graph.
 
 ## Notebooks
 
-[Release Builder](./release_builder.ipynb) :  Used to gather the various release graphs built by 
+[Release Builder](./sparqlGeoPandas.ipynb) :  Used to gather the various release graphs built by 
 Gleaner and Nabu into publishable products.
 
 [Asset Listing ](./assetListing.ipynb) : A simple template that calls out to the current assets 
@@ -106,11 +106,11 @@ Alternatively, the files can also be accessed via the URLs provided in the subse
 
 ### OIH Assets
 
-Assets similar to those generated in the [release_builder.ipynb](release_builder.ipynb) are available. These primarily consist of SPARQL queries executed against the provider graph, with the results stored in parquet files.
+Assets similar to those generated in the [release_builder.ipynb](sparqlGeoPandas.ipynb) are available. These primarily consist of SPARQL queries executed against the provider graph, with the results stored in parquet files.
 
 The [extraction_OIHDashboard.ipynb](extraction_OIHDashboard.ipynb) showcases how DuckDB can be used to query the combined.parquet file. Some users may find the use of SQL beneficial in certain scenarios.
 
-For those interested in utilizing SPARQL, the [release_builder.ipynb](release_builder.ipynb) is a valuable resource. This notebook loads the release graphs into RDFLib and executes SPARQL queries against them, providing a practical demonstration of its operation.
+For those interested in utilizing SPARQL, the [release_builder.ipynb](sparqlGeoPandas.ipynb) is a valuable resource. This notebook loads the release graphs into RDFLib and executes SPARQL queries against them, providing a practical demonstration of its operation.
 
 We always appreciate any improvements, issue reports, and pull requests.
 
