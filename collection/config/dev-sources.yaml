@@ -35,19 +35,3 @@ sources:
     dateadded: 2022-04-05
     active: true
     cron: 0 10 * * 0      
-  #
-  # UNEP Data Catalogue (also referred to as "WESR" or "GEMS Ocean")
-  # 
-  - name: unep
-    propername: UNEP Data Catalogue
-    catalogue: https://datacatalog.unep.org/app 
-    domain: https://www.unep.org/
-    logo: https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UNEP_logo.svg/195px-UNEP_logo.svg.png
-    pid: https://catalogue.odis.org/view/3288
-    sourcetype: sitemap
-    url: https://datacatalog.unep.org/en/oceans_sitemap.xml
-    changefreq: monthly 
-    backend: CKAN  
-    headless: false
-    dateadded: 2024-01-22
-    active: true

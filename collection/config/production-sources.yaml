@@ -828,6 +828,22 @@ sources:
     cron: 0 14 * * 0    
     active: true
   #
+  # UNEP Data Catalogue (also referred to as "WESR" or "GEMS Ocean")
+  # 
+  - name: unep
+    propername: UNEP Data Catalogue
+    catalogue: https://data.unep.org/app
+    domain: https://www.unep.org/
+    logo: https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UNEP_logo.svg/195px-UNEP_logo.svg.png
+    pid: https://catalogue.odis.org/view/3288
+    sourcetype: sitemap
+    url: https://data.unep.org/oceans_sitemap2.xml 
+    changefreq: monthly 
+    backend: CKAN  
+    headless: false
+    dateadded: 2024-01-22
+    active: true    
+  #
   # WIO Symphony
   # 
   - name: wiosymphony
