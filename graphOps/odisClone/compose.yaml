@@ -1,0 +1,12 @@
+---
+version: '3.7'
+
+services:
+
+    t1:
+        image: oxigraph/oxigraph
+        restart: unless-stopped
+        ports:
+            - "7878:7878"
+        volumes:
+            - ./db:/data

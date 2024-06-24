@@ -1,0 +1,20 @@
+[
+  {
+    "kind": 1,
+    "language": "markdown",
+    "value": "# Demo Notebook",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "prefix prov: <http://www.w3.org/ns/prov#>\nPREFIX con: <http://www.ontotext.com/connectors/lucene#>\nPREFIX luc: <http://www.ontotext.com/owlim/lucene#>\nPREFIX con-inst: <http://www.ontotext.com/connectors/lucene/instance#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX schema: <https://schema.org/>\nPREFIX schemaold: <http://schema.org/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\nSELECT   ( COUNT(?kw) as ?count) ?kw\nWHERE\n{\n    graph ?g {\n       ?s schema:keywords ?kw\n    }\n}\nGROUP BY ?kw\nORDER BY DESC(?count)",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "",
+    "metadata": {}
+  }
+]
