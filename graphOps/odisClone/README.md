@@ -13,11 +13,13 @@ http://localhost:7878/ .
 ## Commands
 
 Download the graph files
+
 ```bash
  python odisClone.py download --source http://notimplemented.org --outputdir ./data
  ```
 
 Load them to oxigraph on http://localhost:7878  (will make a flag)
+
 ```bash
 python odisClone.py load  --sourcedir ./data
 ```
@@ -25,9 +27,10 @@ python odisClone.py load  --sourcedir ./data
 ## TODO
 
 - [ ] Update script with help and command line options to remove the hard coded elements in there now (odisClone.py)
-- [ ] Add schema alignment to the download script (odisClone.py)
-- [ ] Integrate SemSpect into the Docker compose file
+- [ ] Add schema alignment to the script (odisClone.py)
 - [ ] Integrate AWS SPARQL client into the Docker compose file
+- [ ] Option to stream directly into a triplestore
+- [ ] Add information about parquet products
 
 ## Command line examples for oxigraph
 
@@ -45,6 +48,19 @@ Clean all data (DANGEROUS:  empties the triplestore to start fresh)
 ```bash
 curl -i -X POST -H "Content-Type:application/sparql-update" -d "CLEAR ALL"   http://localhost:7878/update
 ```
+
+## Notes on schema alignment
+
+It is the nature of schema.org that both the _http://schema.org/_
+and _https://schema.org/_ namespace are used.   At present
+the graphs downloaded do not normalize to a single one.  
+
+Due to this, your SPARQL queries can miss IRIs from the other
+prefix.
+
+To address this, I have coded a function to normalize the namespaces.
+This is not currently in the code, but I have it elsewhere and I will 
+add it.  
 
 ## Notes on SPARQL
 
@@ -90,6 +106,7 @@ those elements.
 Query a default graph only
 ```sparql
 PREFIX schema: <https://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT DISTINCT ?s ?type ?name ?address ?description ?courseName ?location
 WHERE {
