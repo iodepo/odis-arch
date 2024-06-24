@@ -42,8 +42,8 @@ in the data graph represented the detailed sections.
 ## References:
 
 * [GOOS reference](https://www.goosocean.org/index.php?option=com_content&view=article&layout=edit&id=283&Itemid=441)
-* [Goos example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and
-* [OBIS examples](https://manual.obis.org/examples/)
+* [GOOS example spec sheet](https://www.goosocean.org/index.php?option=com_oe&task=viewDocumentRecord&docID=17465) and
+* [OBIS examples](https://manual.obis.org/examples.html)
 
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/variables/graphs/obisData2.json
