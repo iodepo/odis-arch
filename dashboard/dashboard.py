@@ -37,28 +37,18 @@ odisArchGitSchemaDevPath = "/home/apps/odis-dashboard/odis-arch-git-schema-dev-D
 dashboardPath = "/home/apps/odis-dashboard"
 
 sparqlTimeout = 1
+orgParquetStatus = 0
+orgParquetUrl = ""
+orgParquetLastModified = ""
 
 odisParquetObjectsBase = "http://ossapi.oceaninfohub.org/public/assets/"
 #odisParquetObjectsBase = "/home/apps/odis-dashboard/dashboard/data/assets/"
 combinedParquet = odisParquetObjectsBase + "combined.parquet"
 
-### Setup minio
-
-def publicurls(client, bucket, prefix):
-    urls = []
-    objects = client.list_objects(bucket, prefix=prefix, recursive=True)
-    for obj in objects:
-        result = client.stat_object(bucket, obj.object_name)
-
-        if result.size > 0:  #  how to tell if an objet   obj.is_public  ?????
-            url = client.presigned_get_object(bucket, obj.object_name)
-            # print(f"Public URL for object: {url}")
-            urls.append(url)
-
-    return urls
-
-client = Minio("ossapi.oceaninfohub.org:80",  secure=False) # Create client with anonymous access.
-urls = publicurls(client, "public", "assets")
+# setup minio
+address = "ossapi.oceaninfohub.org:80"
+bucket = "public"
+prefix = "assets"
 
 # Instantiate the DuckDB connections
 duckdbConnCombined = duckdb.connect()
@@ -640,30 +630,52 @@ if graphStatus == 1:
              
             with nodeCol3:
                 st.write("Number of Entities Described in ODIS Graph")
-                orgParquet = odisParquetObjectsBase + shortName + ".parquet"
-                try:
-                    headers = {'User-Agent': 'Mozilla/5.0'}
-                    r = requests.get(orgParquet, headers=headers)
-                    r.raise_for_status()
-                except HTTPError:
-                    st.write(":x:" + " " + shortName + ".parquet is not available")
-                    orgParquetStatus = 0
-                else:
-                    #st.subheader(":white_check_mark:" + " Graph SPARQL Endpoint is up")        
-                    orgParquetStatus = 1
-        
-                    with st.spinner("Executing graph query..."):
-                        #duckdbConnFilterByOrg.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(orgParquet))  # load from url                        
-                
-                        #dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM data" ).fetchdf()
-                        #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
-                        #def queryOrgEntities():
-                            #return duckdbConnFilterByOrg.execute("SELECT COUNT(*) as count FROM read_parquet('" + orgParquet + "')").fetchdf()            
 
-                        dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM read_parquet('" + orgParquet + "')" ).fetchdf()                   
-                        #dfOrgCount = queryOrgEntities()   
-                        st.subheader(dfOrgCount['count'].values[0])
-                        # st.subheader(dfProvFilter['count'].sum())
+                parquetFileName = shortName + ".parquet"
+                client = Minio(address, secure=False) # Create client with anonymous access.
+                for item in client.list_objects(bucket, prefix=prefix, recursive=True):
+                    if parquetFileName in item.object_name.lower() and "test" not in item.object_name.lower() and "old" not in item.object_name.lower():
+                        orgParquetStatus = 1
+                        orgParquetUrl = client.presigned_get_object(bucket, item.object_name)
+                        result = client.stat_object(bucket, item.object_name)
+                        orgParquetLastModified = result.last_modified.strftime('%Y-%m-%d')
+                        with st.spinner("Executing graph query..."):
+                            #duckdbConnFilterByOrg.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(orgParquetUrl))  # load from url                        
+                    
+                            #dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM data" ).fetchdf()
+                            #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                            #def queryOrgEntities():
+                                #return duckdbConnFilterByOrg.execute("SELECT COUNT(*) as count FROM read_parquet('" + orgParquetUrl + "')").fetchdf()            
+
+                            dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM read_parquet('" + orgParquetUrl + "')" ).fetchdf()                   
+                            #dfOrgCount = queryOrgEntities()   
+                            st.subheader(dfOrgCount['count'].values[0])
+                            # st.subheader(dfProvFilter['count'].sum())         
+                
+                # orgParquet = odisParquetObjectsBase + shortName + ".parquet"
+                # try:
+                    # headers = {'User-Agent': 'Mozilla/5.0'}
+                    # r = requests.get(orgParquet, headers=headers)
+                    # r.raise_for_status()
+                # except HTTPError:
+                    # st.write(":x:" + " " + shortName + ".parquet is not available")
+                    # orgParquetStatus = 0
+                # else:
+                    # #st.subheader(":white_check_mark:" + " Graph SPARQL Endpoint is up")        
+                    # orgParquetStatus = 1
+        
+                    # with st.spinner("Executing graph query..."):
+                        # #duckdbConnFilterByOrg.execute("CREATE TABLE data AS SELECT row_number() OVER () AS idx, * FROM read_parquet('{}')".format(orgParquet))  # load from url                        
+                
+                        # #dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM data" ).fetchdf()
+                        # #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
+                        # #def queryOrgEntities():
+                            # #return duckdbConnFilterByOrg.execute("SELECT COUNT(*) as count FROM read_parquet('" + orgParquet + "')").fetchdf()            
+
+                        # dfOrgCount = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM read_parquet('" + orgParquet + "')" ).fetchdf()                   
+                        # #dfOrgCount = queryOrgEntities()   
+                        # st.subheader(dfOrgCount['count'].values[0])
+                        # # st.subheader(dfProvFilter['count'].sum())
                 
             
             with nodeCol4:
@@ -758,11 +770,11 @@ if graphStatus == 1:
                         #dfTypeCount = duckdbConnCombined.execute("SELECT DISTINCT type, COUNT(*) AS count FROM data WHERE provder = '" + shortName + "' GROUP BY type order by count desc").fetchdf()                
                         #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                         #def queryOrgTypes():
-                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()            
+                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) as count FROM read_parquet('" + orgParquetUrl + "') GROUP BY type order by count desc").fetchdf()            
                            
-                        dfOrgTypeExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'type'").fetchdf()
+                        dfOrgTypeExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquetUrl + "') WHERE name = 'type'").fetchdf()
                         if dfOrgTypeExists['count'].values[0] == 1:
-                            dfTypeCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY type order by count desc").fetchdf()                
+                            dfTypeCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT type, COUNT(*) AS count FROM read_parquet('" + orgParquetUrl + "') GROUP BY type order by count desc").fetchdf()                
                             #dfTypeCount = queryOrgTypes()
                             st.write(dfTypeCount)
                         else:
@@ -807,10 +819,10 @@ if graphStatus == 1:
                         #dfKeywordsCount = duckdbConnCombined.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM data WHERE provder = 'cioos' GROUP BY keywords order by count desc").fetchdf()
                         #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                         #def queryOrgKeywords():
-                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()            
-                        dfOrgKeywordsExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'keywords'").fetchdf()
+                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) as count FROM read_parquet('" + orgParquetUrl + "') GROUP BY keywords order by count desc").fetchdf()            
+                        dfOrgKeywordsExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquetUrl + "') WHERE name = 'keywords'").fetchdf()
                         if dfOrgKeywordsExists['count'].values[0] == 1:
-                            dfKeywordsCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY keywords order by count desc").fetchdf()
+                            dfKeywordsCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT keywords, COUNT(*) AS count FROM read_parquet('" + orgParquetUrl + "') GROUP BY keywords order by count desc").fetchdf()
                             #dfKeywordsCount = queryOrgKeywords()
                             st.write(dfKeywordsCount)
                         else:
@@ -824,11 +836,11 @@ if graphStatus == 1:
                     with st.spinner("Executing graph query..."):
                         #@st.cache_data(show_spinner="Executing graph query...", ttl=3600)
                         #def queryOrgLicense():
-                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) as count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()            
+                            #return duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) as count FROM read_parquet('" + orgParquetUrl + "') GROUP BY license order by count desc").fetchdf()            
                          
-                        dfOrgLicenseExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquet + "') WHERE name = 'license'").fetchdf()
+                        dfOrgLicenseExists = duckdbConnFilterByOrg.execute("SELECT COUNT(*) AS count FROM PARQUET_SCHEMA('" + orgParquetUrl + "') WHERE name = 'license'").fetchdf()
                         if dfOrgLicenseExists['count'].values[0] == 1:
-                            dfLicenseCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) AS count FROM read_parquet('" + orgParquet + "') GROUP BY license order by count desc").fetchdf()
+                            dfLicenseCount = duckdbConnFilterByOrg.execute("SELECT DISTINCT license, COUNT(*) AS count FROM read_parquet('" + orgParquetUrl + "') GROUP BY license order by count desc").fetchdf()
                             #dfLicenseCount = queryOrgLicense()
                             st.write(dfLicenseCount)
                         else:
@@ -842,7 +854,7 @@ if graphStatus == 1:
         duckdbConnFilterByOrg.close()
         
         if orgParquetStatus == 1:
-            st.write(":arrow_down:" + " download the associated Parquet file locally to query: " + orgParquet)
+            st.write(":arrow_down:" + " download the associated Parquet file locally to query: " + orgParquetUrl + " *(file last modified: " + orgParquetLastModified + ")*")
 
     with st.expander("About the Dashboard", expanded=False):
            
