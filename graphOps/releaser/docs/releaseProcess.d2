@@ -1,0 +1,28 @@
+direction: right
+
+
+po: ODIS Workflow Objects {
+    go:  PROJ/summoned
+    gp:  PROJ/prov
+    nr:  PROJ/graphs/latest
+}
+
+rdo: ODIS/OIH Commons: {
+    pg: ODIS Graphs \n s3://ossapi.oceaninfhub.org/commons/ODIS-KG-MAIN/<date> 
+    pgp: ODIS Prov  \n s3://ossapi.oceaninfhub.org/commons/ODIS-KG-PROV/<date> 
+    pplatest: OIH Products LATEST \n s3://ossapi.oceaninfhub.org/commons/OIH-PROD/LATEST
+    oihkg : OIH Graph \n s3://ossapi.oceaninfhub.org/commons/OIH-KG/<date> 
+    pp: OIH Products \n s3://ossapi.oceaninfhub.org/commons/OIH-PROD/<date> 
+
+    pg -> oihkg: via releaser.py \n with content alignment
+    pplatest -> pp: via releaser.py
+}
+
+po.go -> po.nr: via Nabu \n  release command
+po.gp -> po.nr: via Nabu \n  release command
+po.nr -> rdo.pg: via releaser.py
+po.nr -> rdo.pgp: via releaser.py
+
+
+po.nr -> rdo.pplatest: via mdp.py
+

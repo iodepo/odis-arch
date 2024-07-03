@@ -94,7 +94,7 @@ def olist(client, bucket, prefix, zeros):
             # print("{} is {} ".format(o, obj_info.size))
             if obj_info.size <= 0:
                 znl.append(o)
-                # print("found 0 len object {}".format(o))
+                # print("Skipping 0 len object {}".format(o))
         except Exception as e:
             print(e)
 
