@@ -70,6 +70,23 @@ sources:
     cron: 0 7 * * 0
     active: true
   #
+  # ARGOVIS
+  #
+  - name: argovis
+    propername: Argovis ARGO Collection
+    catalogue: https://argovis.colorado.edu/argoURLhelper
+    domain: https://argovis.colorado.edu
+    logo: https://argovis.colorado.edu/fulllogo.png
+    pid: https://catalogue.odis.org/view/3304
+    sourcetype: sitemap
+    url: https://argovis.colorado.edu/argo_sitemap.xml
+    changefreq:
+    backend: custom
+    headless: false
+    dateadded: 2024-06-14
+    cron: 1 7 * * 0
+    active: true    
+  #
   # BeBOP-OBON
   #
   - name: bebop
@@ -243,6 +260,23 @@ sources:
     cron: 0 5 * * 0
     active: true
   #
+  # European Marine Observation and Data Network catalogue
+  #
+  - name: emodnet
+    propername: European Marine Observation and Data Network (EMODnet)
+    domain: https://emodnet.ec.europa.eu/
+    catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
+    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/emodnet_logos/print/EMODnet_coll_all.png
+    pid: https://catalogue.odis.org/view/364
+    sourcetype: sitemap
+    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
+    changefreq: as needed
+    backend: GeoNetwork
+    headless: false
+    dateadded: 2022-08-24
+    active: true
+    cron: 0 9 * * 0    
+  #
   # EurOcean Organizations
   #
   - name: euroceanorgs
@@ -300,23 +334,6 @@ sources:
     active: true
     cron: 0 8 * * 0
   #
-  # European Marine Observation and Data Network catalogue
-  #
-  - name: emodnet
-    propername: European Marine Observation and Data Network (EMODnet)
-    domain: https://emodnet.ec.europa.eu/
-    catalogue: https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/home
-    logo: https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/emodnet_logos/print/EMODnet_coll_all.png
-    pid: https://catalogue.odis.org/view/364
-    sourcetype: sitemap
-    url: https://emodnet.ec.europa.eu/geonetwork/srv/eng/portal.sitemap
-    changefreq: as needed
-    backend: GeoNetwork
-    headless: false
-    dateadded: 2022-08-24
-    active: true
-    cron: 0 9 * * 0
-  #
   # Global Biodiversity Information Facility (GBIF)
   #
   - name: gbif
@@ -333,24 +350,6 @@ sources:
     dateadded: 2024-05-06
     cron: 0 1 * * 0
     active: true
-  #
-  # Indonesia National Oceanic Data Center
-  #
-  - name: inanodc
-    propername: Indonesia National Oceanic Data Center
-    catalogue: https://geonode.nodc.id
-    domain: https://nodc.id
-    logo: https://nodc.id/dist/img/brin.png
-    pid: https://catalogue.odis.org/view/3246
-    sourcetype: sitemap
-    url: https://geonode.nodc.id/sitemap.xml
-    #url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-ina-nodc/ina-nodc-simple-graph.json
-    changefreq: on demand
-    backend: GeoNode
-    headless: false
-    dateadded: 2022-04-05
-    active: true
-    cron: 0 10 * * 0
   #
   # INCOIS
   #
@@ -476,6 +475,23 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 15 * * 0
+  #
+  # MARCO-BOLO
+  #
+  - name: marcobolo
+    propername: MARine COastal BiOdiversity Long-term Observations (MARCO-BOLO)
+    catalogue: https://github.com/marco-bolo
+    domain: https://marcobolo-project.eu/
+    logo: https://marcobolo-project.eu/wp-content/uploads/2020/09/MARCO-BOLO_logo_col-1.png
+    pid: https://catalogue.odis.org/view/3305
+    sourcetype: sitemap
+    url: https://lab.marcobolo-project.eu/dataset-catalogue/sitemap.xml
+    changefreq:
+    backend: custom
+    headless: false
+    dateadded: 2024-06-12
+    active: true
+    cron: 0 15 * * 0    
   #
   # Marine Institute Data Catalogue
   #    
@@ -811,6 +827,22 @@ sources:
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
     active: true
+  #
+  # UNEP Data Catalogue (also referred to as "WESR" or "GEMS Ocean")
+  # 
+  - name: unep
+    propername: UNEP Data Catalogue
+    catalogue: https://data.unep.org/app
+    domain: https://www.unep.org/
+    logo: https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UNEP_logo.svg/195px-UNEP_logo.svg.png
+    pid: https://catalogue.odis.org/view/3288
+    sourcetype: sitemap
+    url: https://data.unep.org/oceans_sitemap2.xml 
+    changefreq: monthly 
+    backend: CKAN  
+    headless: false
+    dateadded: 2024-01-22
+    active: true    
   #
   # WIO Symphony
   # 
