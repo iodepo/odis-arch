@@ -2,9 +2,9 @@
 
 ## About
 
-A bit of code to pull down ODIS/OIH graph and load into a local triplestore for more intensive query and use.
+A bit of code to pull down ODIS/OIH graph and load into a local triplestore for a more intensive query and use.
 
-> Note:  You will need a minimum of 7 to 10 Gb of
+> Note: You will need a minimum of 7 to 10 Gb of
 > free memory for oxigraph when you install the graph.  
 
 Once you get [oxigraph](https://github.com/oxigraph/oxigraph) running, you can visit the built in UI at
@@ -26,7 +26,7 @@ python odisClone.py load  --sourcedir ./data
 
 ## TODO
 
-- [ ] Update script with help and command line options to remove the hard coded elements in there now (odisClone.py)
+- [ ] Update the script with help and command line options to remove the hard coded elements in there now (odisClone.py)
 - [ ] Add schema alignment to the script (odisClone.py)
 - [ ] Integrate AWS SPARQL client into the Docker compose file
 - [ ] Option to stream directly into a triplestore

@@ -42,7 +42,6 @@ Digital object flow.
 ![release sequence diagram](./sequence1.png)
 
 
-
 #### ODIS-KG-MAIN
 This is the primary ODIS graph set of products.  There is one graph per provider in this prefix.  Note, due to the ambiguity in schema.org namespace.   Reference the Vocabulary Definition Files at https://schema.org/docs/developers.html.  
 
