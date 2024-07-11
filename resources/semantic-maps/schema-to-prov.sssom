@@ -14,4 +14,17 @@
 #  provo: "http://www.w3.org/ns/prov#"
 #  orcid: "https://orcid.org/"
 #  skos: "http://www.w3.org/2004/02/skos/core#"
-subject_id	subject_label	object_id	object_label	predicate_id	mapping_justification	comment
+subject_id	subject_label	object_id	object_label	predicate_id	mapping_justification	comment																		
+schema:Thing	Thing	provo:Entity	Entity	skos:closeMatch		These are essentially interchangeable																			
+schema:Action	Action	provo:Activity	Activity	skos:closeMatch		While not exact, these classes are interchangeable in many applications 																			
+schema:Person	Person	provo:Agent	Agent	skos:narrowMatch		One can specify that a Person is an agent by using it as the value of the schema:agent property																			
+schema:Organization	Organization	provo:Agent	Agent	skos:narrowMatch		One can specify that an Organization is an agent by using it as the value of the schema:agent property																			
+schema:Thing	Thing	provo:Agent	Agent	skos:relatedMatch		Other things, aside from schema:Person or schema:Organization instances, can be prov:Agents (such as machines, AIs, etc). The semantic relation is weaker here, as schema:Things also include processual entities, which cannot be agents.																			
+schema:agent	agent	provo:wasAssociatedWith	wasAssociatedWith	skos:closeMatch		In PROV, an Activity is associated with an agent, which matches the identification of a schema:agent in an Action type																			
+schema:participant	participant	provo:wasAssociatedWith	wasAssociatedWith	skos:broadMatch		schema:participant can be used to identify secondary agents in an Action																			
+schema:isBasedOn	isBasedOn	provo:wasDerivedFrom	wasDerivedFrom	skos:broadMatch		schema:isBasedOn is used for CreativeWorks, so its dormain and range are narrower than prov:Entities																			
+schema:object	object	provo:wasDerivedFrom	wasDerivedFrom	skos:relatedMatch		schema.org does not have a property on schema:Thing that can directly indicate it was derived from some other instance of Thing, thus there's no 1:1 mapping to prov:wasDerivedFrom. However, by expressing what schema:Action intervened to convert one thing to another, one can use the schema:object and schema:result properties for the Action Type to express what thing (the value of object) was converted to another (the value of result).																			
+schema:result	result	provo:wasDerivedFrom	wasDerivedFrom	skos:relatedMatch		schema.org does not have a property on schema:Thing that can directly indicate it was derived from some other instance of Thing, thus there's no 1:1 mapping to prov:wasDerivedFrom. However, by expressing what schema:Action intervened to convert one thing to another, one can use the schema:object and schema:result properties for the Action Type to express what thing (the value of object) was converted to another (the value of result).																			
+schema:object	object	provo:used	used	skos:relatedMatch		schema:Action has a property "object" which indicated what Things and Action is carried out upon. This is a fuzzy match to provo:used																			
+schema:result	result	provo:generated	generated	skos:closeMatch		schema doesn't have an inverse property for schema:result, so there's no match to wasGeneratedBy, but PROVO does provide an inverse to wasGeneratedBy, generated, which can be mapped to schema:result																			
+schema:instrument	instrument	provo:used	used	skos:closeMatch		schema:instrument can be used to describe any non-consumed Thing used in an Action, which is very similar to the PROV Activity uses Entity pattern.																			
