@@ -1,0 +1,166 @@
+direction: right
+
+classes: {
+    input: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: "#44C7B1"
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+
+    products: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: lightblue
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+
+    code: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: honeydew
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+
+        codeset: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: orange
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+
+                ssset: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: lightgreen
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+
+    group: {
+        width: 200
+                   style: {
+                         stroke-width: 0
+                        fill: pink
+                        shadow: true
+                        border-radius: 5
+                   }
+          }
+}
+
+d: Indexed \n Digital Objects
+
+
+odis: ODIS-KG-MAIN {
+      note: |md
+       ### Format(s)
+        * n-quads (.nq)
+    |
+}
+odisprov: ODIS-KG-PROV {
+      note: |md
+       ### Format(s)
+        * n-quads (.nq)
+    |
+}
+oih: OIH-KG-MAIN{
+      note: |md
+       ### Format(s)
+        * n-quads (.nq)
+    |
+}
+prod: OIH-PROD{
+      note: |md
+       ### Format(s)
+        * parquet (.parquet)
+    |
+}
+
+odis.class: products
+odisprov.class: products
+oih.class: products
+prod.class: products
+
+
+mdp: Extraction Set {
+    e: mdp.py
+    oihe: oih_engine.py
+    oih_spat: oih_processSpatial.py
+    oih_time: oih_processTemporal.py
+
+        *.class: code
+
+    oihe -> e
+    oihe -> oih_spat
+    oihe -> oih_time
+
+}
+
+        sql: SQL Set {
+        doih: duckOps_oih.py
+
+
+        *.class: code
+}
+
+        sql.class: codeset
+
+mdp.class: codeset
+
+r: releasing \n (releaser.py)
+c: odisClone \n (odisClone.py)
+p: publishing \n (releasepub.py)
+
+u: user
+z: Zenodo
+h: HuggingFace
+
+d.class: input
+c.class: code
+r.class: code
+p.class: code
+
+z.class: group
+h.class: group
+u.class: group
+
+ssset: System to System {
+oih: OIH Search UI
+        dash: OIH Dashboard
+wis: WIS2
+        wesr: WESR
+
+        *.class:group
+}
+ssset.class: ssset
+
+d -> r -> odis
+d -> r -> odisprov
+d -> r -> oih
+
+oih -> mdp
+mdp ->  prod
+odis -> p -> z
+odis -> p -> h
+
+odis -> c -> u
+oih -> c -> u
+prod -> c -> u
+
+prod -> sql.doih -> ssset.oih
+prod -> sql.dwis -> ssset.wis
+
