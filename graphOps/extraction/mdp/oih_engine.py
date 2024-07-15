@@ -59,13 +59,18 @@ def graphProcessor(dg, oname):
     print("RDF querying", datetime.datetime.now())
 
     # Query sources
-    sfl = [
+    sflFull = [
         "./queries/baseQuery.rq",
         "./queries/course.rq",
         "./queries/dataset.rq",
         "./queries/person.rq",
         "./queries/sup_geo.rq",
         "./queries/sup_temporal.rq"
+    ]
+
+    # Query sources
+    sfl = [
+        "./queries/sup_geo.rq"
     ]
 
     qlist = load_queries.read_files(sfl)
@@ -99,7 +104,3 @@ def graphProcessor(dg, oname):
 
 if __name__ == '__main__':
     main()
-
-
-
-

@@ -31,7 +31,7 @@ def main():
 
     df = readobject.get_object(u)
 
-    #process the dataframe
+    # process the dataframe
     print("Processing Stage: Geospatial centroid")
 
     df['filteredgeom'] = df['geom'].apply(lambda x: np.nan if graphshapers.contains_alpha(x) else x)

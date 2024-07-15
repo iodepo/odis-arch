@@ -8,7 +8,7 @@
 
 The temporal coverage all comes from the "temporalCoverage".   We get the 
 start, end dates and start end years from processing the temporalCoverage.    Need
-to put this in python time package and pull these and augment the temporal parquet
+to put this into the python time package and pull these and augment the temporal parquet
 
 ###  Geometry
 
@@ -17,25 +17,33 @@ Need to do apply the spatial functions to the filteredgeom
 Need to apply Jeff's transforms
 
 
-
 ## About
 
 This is a quick start for code to generate a "Master Data Product" from a 
 provided OIH Release graph.  The graph needs to be in NQuads format and follow
-the guidance from the OIH Book in order to express resources that align with the 
+the guidance from the OIH Book to express resources that align with the 
 queries used.
+
+
 
 ## Code
 
-* mdp_oxigraph.py
+* mdp_v2.py
   * Updated mdp using PyOxigraph and better processing
 * oih_engine.py
   * Leverages the above and loops through the queries and sources to make products
+* oih_processSpatial.py
+  * flesh out the spatial elements
+* oih_processTemporal.py
+  * flesh out the temporal elements
+
+
+q
 
 * mdp.py
   * Original MDP, still more comprehensive in terms of pre-processing the data
 * Morgue/objectProcessor.sh
-  * BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_oxigraph.py
+  * BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_v2.py
 
 
 
@@ -52,7 +60,7 @@ the last item is the time stamp of the time the snapshot was made.
 From these graphs in the latest prefix, we can generate the resulting products via
 
 ```bash
- python mdp_oxigraph.py  --source "s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/18042024/cioos_release.nq"  --query "./queries/baseQuery.rq"  --output  "s3://ossapi.oceaninfohub.org/commons/OIH-PROD/18042024/cioos.parquet"
+ python mdp_v2.py  --source "s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/18042024/cioos_release.nq"  --query "./queries/baseQuery.rq"  --output  "s3://ossapi.oceaninfohub.org/commons/OIH-PROD/18042024/cioos.parquet"
 ```
 
 This both pulls from the ODIS object store and pushed the results back to the object store.  
