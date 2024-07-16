@@ -4,7 +4,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX schema: <https://schema.org/>
 PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
 
-SELECT DISTINCT (?s as ?id) ?type ?placename ?geotype ?geompred ?geom ?lat ?long ?g
+SELECT DISTINCT (?s as ?id) ?type ?placename ?geotype ?geompred ?geom ?lat ?long ?wkt ?g
 WHERE {
   graph ?g {
     ?s rdf:type ?type .

@@ -165,13 +165,16 @@ The concept of interop with these release graphs might be addressed with the use
 
 ### Accessing ODIS/OIH resources with in-process tooling
 
-A key goal of this workflow is to enable in-process access and analytics of the data with minimal infrastructure and associated support.  To do this, the workflow leverages several cloud native approaches such as S3 based objects stores and cloud native formats such as Parquet.  
+A key goal of this workflow is to enable in-process access and analytics of the data with minimal infrastructure and associated support.  To do this, the workflow leverages several cloud-native approaches such as S3 based objects stores and cloud native formats such as Parquet.  
 
-In doing so a set of open source and cross platform tooling becomes available to the community.  Two examples of these include DuckDB (https://duckdb.org/) and Kuzu (https://kuzudb.com/).   There are many more examples like Polars, Pandas and other packages that can leverage this same distribution approach to enable online analytical processing (OLAP) operations.
+In doing so a set of open source and cross platform tooling becomes available to the community. 
+Two examples of these include DuckDB (https://duckdb.org/) and Kuzu (https://kuzudb.com/).
+There are many more examples like Polars, Pandas, and other packages that can leverage this same 
+distribution approach to enable online analytical processing (OLAP) operations.
 
-This enables ODIS/OIH to support broad community interest in and use of the resources in the commons without major infrastructure investment.  As online transaction processing (OLTP) operations are not use cases of ODIS/OIH no system are presently needed to support this approach. 
+This enables ODIS/OIH to support broad community interest in and use of the resources in the commons without major infrastructure investment.  As online transaction processing (OLTP) operations are not use cases of ODIS/OIH no system is presently needed to support this approach. 
 
-Examples of these in-process OLAP approaches in easy to share and document notebooks are in development.  
+Examples of these in-process OLAP approaches in easy-to-share and document notebooks are in development.  
 
 
 ## Appendix

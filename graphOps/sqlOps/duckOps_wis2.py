@@ -3,6 +3,11 @@ import geopandas as gpd
 import shapely
 from shapely import wkt
 from shapely.geometry import Polygon, MultiPolygon, shape, mapping
+import warnings
+
+# Suppress FutureWarnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 
 consoleCode = """CREATE TABLE base (id VARCHAR, type VARCHAR, name VARCHAR, url VARCHAR, description VARCHAR, headline VARCHAR, g VARCHAR );
 CREATE TABLE dataset (id VARCHAR, type VARCHAR, sameAs VARCHAR, license VARCHAR, citation VARCHAR, keyword VARCHAR, includedInDataCatalog VARCHAR, distribution VARCHAR, region VARCHAR, provider VARCHAR, publisher VARCHAR, creator VARCHAR);
@@ -79,5 +84,12 @@ gdf = gpd.GeoDataFrame(df_geomtrue, geometry='geometry')
 # export to json
 gdf.to_file('wis2.geojson', driver='GeoJSON', orient='records', lines=True)
 
+# Iterate through each row and save as GeoJSON
+for idx, row in gdf.iterrows():
+    row_gdf = gpd.GeoDataFrame([row])
+    row_gdf.to_file(f'output/row_{idx}.geojson', driver='GeoJSON')
+
+
 # save to pandas (should be geopandas?)
 df.to_parquet('wis2.parquet')
+

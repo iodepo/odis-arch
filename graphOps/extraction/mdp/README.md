@@ -38,7 +38,6 @@ queries used.
   * flesh out the temporal elements
 
 
-q
 
 * mdp.py
   * Original MDP, still more comprehensive in terms of pre-processing the data
