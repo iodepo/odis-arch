@@ -30,7 +30,7 @@ def modeLoad(args):
     # Load to Minio
     # curl -v -X POST -H 'Content-Type:text/x-nquads' --data-binary @./data/cioos_release.nt http://localhost:7878/store
 
-    directory_path = "./data"
+    directory_path = "data"
 
     for f in os.listdir(directory_path):
         fp = os.path.join(directory_path, f)

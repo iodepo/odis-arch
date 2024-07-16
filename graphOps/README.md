@@ -11,11 +11,11 @@ For workflows desrigned for individual users or data science operations
 look at:  
 
 
-Cloning: [README.md](odisClone/README.md)
+Cloning: [README.md](users/odisClone/README.md)
 
 Notebooks:  [README.md](notebooks/README.md)
 
-Graph Visualizations: [README.md](graphVisualization/README.md)
+Graph Visualizations: [README.md](users/graphVisualization/README.md)
 
 
 ## ODIS / OIH Workflows
