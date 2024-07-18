@@ -32,7 +32,8 @@ In JSON(-LD) syntax, anything inside a pair of braces is an [object](https://dat
 
 [Add simple representation]
 
-Some JSON-LD objects are, de facto, FAIR Digital Objects, assuming they have a reference node (see below) with a persistent, unique, and dereferenceable identifier, well-described semantics, license and provenance information, and other attributes described in the FAIR Data Principles.
+> [!NOTE]
+> Some JSON-LD objects are, de facto, FAIR Digital Objects, assuming they have a reference node (see below) with a persistent, unique, and dereferenceable identifier, well-described semantics, license and provenance information, and other attributes described in the FAIR Data Principles.
 
 ### Nodes
 
