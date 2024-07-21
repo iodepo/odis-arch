@@ -9,30 +9,6 @@ Initial work on aligning OIH holdings to [WMO](https://wmo-im.github.io/wcmp2/st
 - https://github.com/iodepo/odis-arch/issues/238 (WMO core metadata profile to ODIS pattern)
 - https://github.com/iodepo/odis-arch/issues/304 (Provide sample mapping/GeoJSON to WMO)
 
-## Notes and TODOs
-
-- [ ] ID:  unique ID in catalog that align to the follow pattern.  We can build this and
-  add it to the PROV graph.  We need an agreement to allow these records to be sent to WMO 
-  ``` 
-      "id": "urn:x-wmo:md:xxg:odis:$LOCAL_ID"
-      xxg  iso 3166 country list
-      g = region association a-f  
-  ```
-- [ ] keywords -> free, properties.themes (concepts and schema)
-- [ ] time, can be null, interval, instant  iso8601
-- [ ] properties.theme, need at least one from   "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
-- [ ] conforms to, points to json schema  (need to get this)   https://github.com/wmo-im/wcmp2/blob/main/schemas/wcmp2-bundled.json  
-- [ ] properties.contacts requires:  name and org  (can be one to many)   roles is from a vocabulary
-- [ ] look at properties.type for "process"
-- [ ] properties.created is the date the metadata record was created (required) 
-	- [ ] may need to be the prov
-	- [ ] may need to make required
-    - [ ] properties.updated is optional
-- [ ] properties.wmo:dataPolicy (put recommended for now, while we sort out the details)
-- [ ] properties.links (the subject URI)  (can be URI or URL to the landing page)
-- [ ] need to the JSON-schema and WMO SHACL for these generated records
-- [ ] KPI (key performance indicators)  validation / ranking...   related to FAIR CODATA  ???  would love links to this KPI checks
-
 
 #### ROA
 

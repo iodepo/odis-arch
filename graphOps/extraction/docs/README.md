@@ -26,11 +26,11 @@ This is an example of flowing the data from graph to h3
 
 See [README.md](graphOps/graphVisualization/README.md)
 
-![vizSetLarge.png](..%2F..%2F..%2FgraphVisualization%2Fvisuals%2FvizSetLarge.png)
+![vizSetLarge.png](../../users/graphVisualization/images/vizSetLarge.png)
 
 
 
-![vizSetSmall.png](..%2F..%2F..%2FgraphVisualization%2Fvisuals%2FvizSetSmall.png)
+![vizSetSmall.png](../../users/graphVisualization/images/vizSetSmall.png)
 
 
 

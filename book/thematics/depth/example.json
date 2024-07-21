@@ -1,0 +1,107 @@
+
+{
+    "@context": {"@vocab":"https://schema.org/"},
+    "@type": "Dataset",
+    "@id": "https://obis.org/dataset/d7bdf4c6-7418-4c4a-9845-311d5b9475a3",
+    "name": "HELCOM/OSPAR Lithuania ports water sampling",
+    "description": "This dataset includes the data used in in the HELCOM/OSPAR Ballast Water Exemptions Decision Support Tool. This tool was developed in 2013 based on the overall IMO framework, the 21 Baltic and North-East Atlantic coastal states and the EU. It allows user to define 'low risk' routes, as well as other necessary steps in granting exemptions under regulation A-4 of the IMO Ballast Water Management Convention (BWMC)",
+    "url": "https://obis.org/dataset/d7bdf4c6-7418-4c4a-9845-311d5b9475a3",
+    "sameAs": [
+        "http://ipt.vliz.be/eurobis/resource?r=helcom_ospar_lithuania_ports_water_sampling"
+    ],
+    "license": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the  Public Domain (CC0 1.0)",
+    "citation": "HELCOM/OSPAR Joint Ballast Water Exemptions Decision Support Tool: https://maps.helcom.fi/website/RA_tool/ HELCOM and OSPAR, 2020",
+    "version": "2022-09-06T11:00:19.000Z",
+    "keywords": [
+        "Harbours",
+        "Invasive species",
+        "OSPAR Joint Assessment and Monitoring Programme",
+        "Samplingevent"
+    ],
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "BOTTOM_DEPTH",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/MBANZZZZ/",
+            "description": "BOTTOM_DEPTH"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "TURBIDITY",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/SECCSDNX/",
+            "description": "TURBIDITY"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "DEPTH",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/MBANZZZZ/",
+            "description": "DEPTH"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "SAMPLING_DURATION",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/AZDRZZ01/",
+            "description": "SAMPLING_DURATION"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "SAMPLING_METH",
+            "url": "http://vocab.nerc.ac.uk/collection/Q01/current/Q0100002/",
+            "description": "SAMPLING_METH"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "DEPTH_PENETRATION (m)",
+            "description": "DEPTH_PENETRATION (m)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "WATER_VOL",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/VOLXXXXX/",
+            "description": "WATER_VOL"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "AREA_COVER_(m2)_WATER_VOL (m3)",
+            "description": "AREA_COVER_(m2)_WATER_VOL (m3)"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "count",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/OCOUNT01/",
+            "description": "count"
+        }
+    ],
+    "includedInDataCatalog": {
+        "@id": "https://obis.org",
+        "@type": "DataCatalog",
+        "url": "https://obis.org"
+    },
+    "temporalCoverage": "2015/2015",
+    "distribution": {
+        "@type": "DataDownload",
+        "contentUrl": "https://ipt.vliz.be/eurobis/archive.do?r=helcom_ospar_lithuania_ports_water_sampling",
+        "encodingFormat": "application/zip"
+    },
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "21.101889 55.664,21.101889 55.719357,21.148 55.719357,21.148 55.664,21.101889 55.664"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyID": "http://dbpedia.org/resource/Spatial_reference_system",
+            "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+        }
+    },
+    "provider": [
+        {
+            "@id": "https://oceanexpert.org/institution/6223",
+            "@type": "Organization",
+            "legalName": "Vlaams Instituut voor de Zee",
+            "name": "Vlaams Instituut voor de Zee",
+            "url": "https://oceanexpert.org/institution/6223"
+        }
+    ]
+}

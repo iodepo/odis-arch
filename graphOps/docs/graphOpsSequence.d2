@@ -1,0 +1,72 @@
+Product Operations \n Assumes Successful Runs: {
+  shape: sequence_diagram
+
+  index: Indexing \n gleaner/graphs
+  graphrel: Graph Release Operations \n ODIS resources
+  oih: Product Generation \n OIH products
+  si: System System \n Integration products
+#   clone: Cloning for 3rd party use
+    z: Publishing \n(Zenodo)
+
+# links below
+
+  index.{
+"This sequence diagram starts \nfrom the indexed  data and prov \n graphs in n-quads files."  { style: {font-size: 30 }}
+}
+
+
+ copy data and prov graphs: {
+        index."Process copies both the \n *_release.nq and *_prov.nq files" { style: {font-size: 30 }}
+         index -> graphrel: "releaser.py" { style: {font-size: 30 }}
+}
+
+
+mdp operations {
+        graphrel -> oih: oih_engine.py + mdpv2.py { style: {font-size: 30 }}
+        oih."Generates Parquet files\n based on SPARQL result sets" { style: {font-size: 30 }}
+
+        Calculated/translated value {
+        oih."New columns added to the\n parquet files."  {style: {font-size: 30}}
+oih -> oih: oih_processSpatial.py {style: {font-size: 28}}
+oih -> oih: oih_processTemporal.py  {style: {font-size: 28}}
+}
+
+        *.style: {
+font-size: 32
+}
+}
+
+OIH Portal {
+        oih -> si: duckOps_oih.py { style: {font-size: 30 }}
+}
+
+WIS2 {
+        oih -> si: duckOps_wis2.py { style: {font-size: 30 }}
+}
+
+
+#
+# cops: Clone data for 3rd party use {
+#                 graphrel."This is a 3rd party run manual \n event. odisClone.py is a provided \n reference implementation of code \nto do this"
+#
+#         graphrel -> clone: odisClone.py
+#         oih -> clone: odisClone.py
+#         si -> clone : odisClone.py
+#
+# }
+
+Publish to Zenodo {
+        graphrel -> z: releasepub.py { style: {font-size: 30 }}
+                z."Publishes only the\n unmodified graphs "  {style: {font-size: 30}}
+
+}
+
+*.style: {
+font-size: 32
+}
+
+}
+
+*.style: {
+font-size: 48
+}

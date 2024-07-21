@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?source ?type ?target ?sType ?tType
+WHERE {
+  ?source a ?sType .
+  ?target a ?tType .
+  ?source ?type ?target .
+  FILTER((?sType) IN (schema:Person, schema:Organization, schema:Dataset, schema:Course, schema:Document))
+  FILTER((?tType) IN (schema:Person, schema:Organization, schema:Dataset, schema:Course, schema:Document))
+}

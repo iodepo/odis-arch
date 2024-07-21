@@ -1,4 +1,4 @@
-import shapely
+import shapely  ## need to be fairly recent like >2.o
 from pyproj import Geod
 
 
@@ -11,16 +11,21 @@ def make_pairs(ll):
 
     return coords
 
-
 def gj(geom, value):
     if geom == None:
         return None
-    test = geom.split()
-    test = [float(x) for x in test]
-    if len(test) < 2:
+
+    ges = geom.split()
+
+    try:
+        ges = [float(x) for x in ges]
+    except ValueError:
         return None
 
-    cp = make_pairs(test)
+    if len(ges) < 2:
+        return None
+
+    cp = make_pairs(ges)
 
     if len(cp) == 1:
         # print("POINT")
@@ -37,17 +42,59 @@ def gj(geom, value):
         # print("POLYGON")
         geom = shapely.Polygon(cp)
 
-    if value == "centroid":
-        return geom.centroid
-    elif value == "length":
-        return geom.length
-    elif value == "area":
-        geod = Geod(ellps="WGS84")
-        area = abs(geod.geometry_area_perimeter(geom)[0])
-        return area
-    elif value == "wkt":
-        return shapely.to_wkt(geom)
-    elif value == "geojson":
-        return shapely.to_geojson(geom)
-    else:
+    augs = get_geometry_property(value, geom)
+
+    return augs
+
+    # if value == "centroid":
+    #     return geom.centroid
+    # elif value == "length":
+    #     return geom.length
+    # elif value == "area":
+    #     geod = Geod(ellps="WGS84")
+    #     area = abs(geod.geometry_area_perimeter(geom)[0])
+    #     return area
+    # elif value == "wkt":
+    #     return shapely.to_wkt(geom)
+    # elif value == "geojson":
+    #     return shapely.to_geojson(geom)
+    # else:
+    #     return None
+
+
+
+def get_geometry_property(value, geom):
+    try:
+        if value == "centroid":
+            return geom.centroid
+    except Exception:
         return None
+
+    try:
+        if value == "length":
+            return geom.length
+    except Exception:
+        return None
+
+    try:
+        if value == "area":
+            geod = Geod(ellps="WGS84")
+            area = abs(geod.geometry_area_perimeter(geom)[0])
+            return area
+    except Exception:
+        return None
+
+    try:
+        if value == "wkt":
+            return shapely.to_wkt(geom)
+    except Exception:
+        return None
+
+    try:
+        if value == "geojson":
+            return shapely.to_geojson(geom)
+    except Exception:
+        return None
+
+    return None
+

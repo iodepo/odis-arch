@@ -1,16 +1,78 @@
 # Graph Operations (graphOps)
 
-## About the OIH Graph
+## Intro
 
-This section houses work related to the OIH Graph. The OIH Graph is a rapidly evolving project, so this section may evolve rapidly as well. If you find things gone that you were looking for, please contact us or raise a GitHub issue. We will get it resolved as soon as possible.
+![graphOps.png](docs/graphOps.png)
 
-## Sections
 
-The OIH Graph is divided into the following sections:
+## User Workflows
 
-* **[analytics](./analytics)**: This section holds some early and simple tests on analyzing the OIH Graph.
-* **[extraction](./extraction)**: This section is where we will work on SPARQL and other query or extraction approaches on the OIH Graph.
-* **[geoKGComplete](./geoKGComplete)**: This section is some work on extracting geopolitical entities from the graph.
-* **[releaseGraph](./releaseGraphs)**: This is the main section focused on generating citable graph assets from the work with the OIH partners.
+For workflows desrigned for individual users or data science operations
+look at:  
 
-We hope you find this section useful! If you have any questions, please don't hesitate to contact us.
+
+Cloning: [README.md](users/odisClone/README.md)
+
+Notebooks:  [README.md](notebooks/README.md)
+
+Graph Visualizations: [README.md](users/graphVisualization/README.md)
+
+
+## ODIS / OIH Workflows
+
+### Indexing 
+
+Gleaner operations via Scheduler (Dagster)
+
+### Release Process
+
+See notes at:  [README.md](releasing/README.md)
+
+```bash
+releaser.py
+```
+
+### Product Generation
+
+[README.md](extraction/mdp/README.md)
+
+```bash
+oih_engine.py + mdpv2.py
+```
+
+```bash
+oih_processSpatial.py
+```
+
+```bash
+oih_processTemporal.py
+```
+
+### System System Integration Products
+
+[README.md](sqlOps/README.md)
+
+#### OIH Portal
+
+```bash
+duckOps_oih.py
+```
+
+#### WIS 
+
+```bash
+duckOps_wis2.py
+```
+
+### Publishing
+
+[README.md](publishing/README.md)
+
+```bash
+releasepub.py
+```
+
+
+## Sequence Diagram
+
+![graphOpsSequence.png](docs/graphOpsSequence.png)
