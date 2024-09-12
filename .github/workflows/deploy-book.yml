@@ -39,7 +39,7 @@ jobs:
       uses: finnp/create-file-action@master
       env:
         FILE_NAME: "./book/_build/html/CNAME"
-        FILE_DATA: "book.oceaninfohub.org"
+        FILE_DATA: "book.odis.org"
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
