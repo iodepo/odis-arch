@@ -828,6 +828,23 @@ sources:
     cron: 0 14 * * 0    
     active: true
   #
+  # Space Physics Archive (NASA-Helio)
+  # 
+  - name: spase
+    propername: Space Physics Archive Search and Extract (SPASE)
+    catalogue: https://spase-group.org/
+    domain: https://spase-group.org/
+    logo: https://hdrl.gsfc.nasa.gov/SPASE.png
+    pid: https://catalogue.odis.org/view/3310
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/lechatpito/NASA-ODIS-Examples/main/sitemap.xml
+    changefreq: as needed  
+    backend: custom  
+    headless: false
+    dateadded: 2024-09-12
+    cron: 0 14 * * 0    
+    active: true    
+  #
   # UNEP Data Catalogue (also referred to as "WESR" or "GEMS Ocean")
   # 
   - name: unep
