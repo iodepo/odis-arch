@@ -58,7 +58,7 @@ _Gleaner (harvesting)_
 
 Gleaner is the name of the software package used by OIH to do the indexing of the resources described and encoded by the previous section.  
 However, this package simply uses web architecture approaches, mostly http/https to access the resources.  There are 
-several [alternatives](https://book.oceaninfohub.org/indexing/alternatives.html) that groups could use to address this stage.
+several [alternatives](https://book.odis.org/indexing/alternatives.html) that groups could use to address this stage.
 
 Standards or approaches used:
 * https://www.w3.org/TR/dwbp/
