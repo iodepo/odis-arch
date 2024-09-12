@@ -112,7 +112,7 @@ metadata catalogues over the web.
 
 The first step towards joining ODIS is to generate metadata about your digital 
 holdings as JSON-LD files, using schema.org Types and properties. Guidelines 
-on how to shape these files is available [here](https://book.oceaninfohub.org/foundation/foundation.html), and we provide 
+on how to shape these files is available [here](https://book.odis.org/foundation/foundation.html), and we provide 
 a library of examples in the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) repository, 
 and templates in this book to help nodes shape their submissions. Note, however, 
 that any valid [schema.org](https://schema.org/) Type can be used to share metadata 
@@ -270,7 +270,7 @@ and display of your records in the search results.
 
 ### Where are JSON-LD examples that I can use?
 
-The ODIS [Book](https://book.oceaninfohub.org/thematics/index.html) has good 
+The ODIS [Book](https://book.odis.org/thematics/index.html) has good 
 examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is 
 the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
 repository where all of the JSON-LD templates often drafted together with partners are stored,
@@ -281,7 +281,7 @@ there.
 
 Yes, the SPARQL endpoint for ODIS is: http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql
 
-You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.oceaninfohub.org/users/sparql.html). 
+You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.odis.org/users/sparql.html). 
 An interface such as [Yasgui](https://yasgui.triply.cc/) can be used to generate your queries.
 
 ### Does ODIS have a JSON endpoint?
