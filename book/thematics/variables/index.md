@@ -168,7 +168,7 @@ jbutils.show_graph(framed)
 
 ## publishingPrinciples
 
-As defined in the [Linking to Principles](https://book.oceaninfohub.org/thematics/sdg/index.html#publishingprinciples) 
+As defined in the [Linking to Principles](https://book.odis.org/thematics/sdg/index.html#publishingprinciples) 
 section on publishing principles, This can be used to connect CreativeWork, Organization, or Person to either of 
 CreativeWork or URL. So this allows us to link a CreativeWork to a policy or principle statement. 
 This has some very useful use cases where resources can be grouped based on their connection to those principles and policies.
@@ -220,7 +220,7 @@ jbutils.show_graph(framed)
 ## spatialCoverage
 
 More details on spatial elements are found
-at:  [Spatial Geometry](https://book.oceaninfohub.org/thematics/spatial/README.html)
+at:  [Spatial Geometry](https://book.odis.org/thematics/spatial/README.html)
 
 ```{code-cell}
 :tags: [hide-input]
@@ -268,7 +268,7 @@ connected Action type.
 
 
 ```{seealso}
-See also [Identifier and Prov subjectOf and inverse about](https://book.oceaninfohub.org/thematics/identifier/id.html#subjectof-and-inverse-about).
+See also [Identifier and Prov subjectOf and inverse about](https://book.odis.org/thematics/identifier/id.html#subjectof-and-inverse-about).
 [schema:about](https://schema.org/about) connects the subject matter of the content.
 ```
 

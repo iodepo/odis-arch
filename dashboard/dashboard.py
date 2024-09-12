@@ -87,18 +87,18 @@ html(openhub_badge_html)
 with st.sidebar:
     st.header('Glossary')
     st.subheader('ODIS')
-    #st.markdown('The Ocean Data Information System (ODIS) is managed by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) and is based on a community-maintained Knowledge Graph, that leverages the [schema.org](https://schema.org) framework.  See the [ODIS book](https://book.oceaninfohub.org/) of documentation.')    
-    st.markdown('The Ocean Data Information System (ODIS) is a federation of systems that use common conventions to share and exchange their (meta)data. The foundation for ODIS was established by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) project. OIH harvests (meta)data from all ODIS nodes, and builds a collective Knowledge Graph to promote global discovery and action. See the [ODIS book](https://book.oceaninfohub.org/) of documentation for more details.')
+    #st.markdown('The Ocean Data Information System (ODIS) is managed by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) and is based on a community-maintained Knowledge Graph, that leverages the [schema.org](https://schema.org) framework.  See the [ODIS book](https://book.odis.org/) of documentation.')    
+    st.markdown('The Ocean Data Information System (ODIS) is a federation of systems that use common conventions to share and exchange their (meta)data. The foundation for ODIS was established by the [Ocean InfoHub](https://oceaninfohub.org/) (OIH) project. OIH harvests (meta)data from all ODIS nodes, and builds a collective Knowledge Graph to promote global discovery and action. See the [ODIS book](https://book.odis.org/) of documentation for more details.')
     st.subheader('Graph')
     st.markdown('Also known as Knowledge Graph, or KG, graphs are a structured way to harvest information on the Web, by representing entities (eg. people, places, objects) as nodes, and relationships between entities.  The connection between 2 nodes is defined by triples.')
     st.subheader('SPARQL Endpoint')
-    st.markdown('SPARQL (SPARQL Protocol and RDF Query Language) is the query language that is used to query graphs.  ODIS has a [SPARQL Endpoint](http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql) that allows you to directly query the ODIS graph. See the [ODIS book](https://book.oceaninfohub.org/users/sparql.html) for example queries.')
+    st.markdown('SPARQL (SPARQL Protocol and RDF Query Language) is the query language that is used to query graphs.  ODIS has a [SPARQL Endpoint](http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql) that allows you to directly query the ODIS graph. See the [ODIS book](https://book.odis.org/users/sparql.html) for example queries.')
     st.subheader('Node')
     st.markdown('The ODIS graph consists of many nodes, which represent organizations, each with their own catalogue of data.')
     st.subheader('Triple')
     st.markdown('The ODIS graph connects information through a triple; *Subject, Predicate, Object*.  In the information "Leonard Nimoy was an actor who played the character Spock", LeonardNimoy is the *Subject*, "played" is the *Predicate*, and "Spock" is the *Object*.')    
     st.subheader('Types')
-    st.markdown('The ODIS graph leverages core [thematic patterns](https://book.oceaninfohub.org/thematics/index.html), which are expanded from [schema.org](https://schema.org/docs/full.html) types.')    
+    st.markdown('The ODIS graph leverages core [thematic patterns](https://book.odis.org/thematics/index.html), which are expanded from [schema.org](https://schema.org/docs/full.html) types.')    
     st.subheader('ODIS Node')
     st.markdown('An ODIS Node (not to be confused with a graph "node", described above) is a data source that is networked into and part of the ODIS Federation. ODIS Nodes are operated by ODIS partner oganisations, which may have one or many Nodes.')
     
@@ -875,6 +875,6 @@ if graphStatus == 1:
              shows live queries related to 
              the ODIS Graph, including describing each node in the 
              network.  More information about how to connect to the
-             ODIS network can be found at [https://book.oceaninfohub.org/](https://book.oceaninfohub.org/)
+             ODIS network can be found at [https://book.odis.org/](https://book.odis.org/)
         """)
         st.image("https://oceaninfohub.org/wp-content/uploads/2020/12/logo_OIH_PNG-RGB-1.png", width=300)

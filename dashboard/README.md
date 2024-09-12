@@ -13,7 +13,7 @@ docker run --restart always -p 8501:8501 dashboard
 # ODIS Documentation
 
 Please see the ODIS Book, for getting started with 
-your contributions: https://book.oceaninfohub.org/
+your contributions: https://book.odis.org/
 
 # Contributions
 

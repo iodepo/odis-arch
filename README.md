@@ -6,7 +6,7 @@
 Repository for the development of the ODIS (Ocean Data and 
 Information System) architecture, as part of the [OIH](https://oceaninfohub.org/) 
 (Ocean InfoHub) Project. The reference documentation in the [book](book) folder is 
-published to https://book.oceaninfohub.org/.
+published to https://book.odis.org/.
 
 ## License
 
