@@ -609,6 +609,14 @@ for more focused creative work examples.</p>
 <span class="linenos">99</span><span class="p">}</span>
 </pre></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>&#64;id should point to whatever resolves eventually to the JSON-LD - if you only
+have an external JSON-LD file (and not embedded into
+the html <script> tag) then the &#64;id should point to the .json file itself.<br />
+Otherwise, &#64;id should point to the landing page of the record (HTML page), that embeds
+the JSON-LD.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="http://schema.org">schema.org</a> expects a lat long (Y X) coordinate order, so be aware of that when

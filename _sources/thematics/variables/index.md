@@ -51,6 +51,14 @@ in the data graph represented the detailed sections.
 :emphasize-lines: 10,13,14-30,31,32-50,56-67,77-101,104
 ```
 
+```{tip}
+@id should point to whatever resolves eventually to the JSON-LD - if you only 
+have an external JSON-LD file (and not embedded into 
+the html <script> tag) then the @id should point to the .json file itself.  
+Otherwise, @id should point to the landing page of the record (HTML page), that embeds 
+the JSON-LD.
+```
+
 ## license
 
 As licenses are an important cross-cutting item there is a separate section on licenses
