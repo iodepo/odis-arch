@@ -38,11 +38,10 @@ for more focused creative work examples.
 ```
 
 ```{tip}
-@id should point to whatever resolves eventually to the JSON-LD - if you only 
-have an external JSON-LD file (and not embedded into 
-the html <script> tag) then the @id should point to the .json file itself.  
-Otherwise, @id should point to the landing page of the record (HTML page), that embeds 
-the JSON-LD.
+@id should point to whatever resolves eventually to the JSON-LD - if you only
+have an external JSON-LD file (and not embedded into the html <script> tag)
+then the @id should point to the .json file itself. Otherwise, @id should point
+to the landing page of the record (HTML page), that embeds the JSON-LD.
 ```
 
 ```{note}
