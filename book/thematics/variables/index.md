@@ -48,7 +48,7 @@ in the data graph represented the detailed sections.
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/variables/graphs/obisData2.json
 :linenos:
-:emphasize-lines: 10,13,14-30,31,32-50,56-67,77-101,104
+:emphasize-lines: 6,10,13,14-30,31,32-50,56-67,77-101,104
 ```
 
 ```{tip}
