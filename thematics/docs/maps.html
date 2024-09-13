@@ -519,7 +519,7 @@ indicate the type of document it is through a mimetype via encoding.</p>
 <span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
 <span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/XYZ&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
 <span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
 <span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
 <span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
@@ -548,6 +548,13 @@ indicate the type of document it is through a mimetype via encoding.</p>
 <span class="linenos">32</span>    <span class="p">]</span>
 <span class="linenos">33</span><span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>&#64;id around line#6 should point to whatever resolves eventually to the JSON-LD - if you only
+have an external JSON-LD file (and not embedded into the html <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tag)
+then the &#64;id should point to the .json file itself. Otherwise, &#64;id should point
+to the landing page of the record (HTML page), that embeds the JSON-LD.</p>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -579,7 +586,7 @@ indicate the type of document it is through a mimetype via encoding.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/c18813db9348ebf828252bc9d46d631397a1fe1e2f52d39c7caac65499d64839.svg" src="../../_images/c18813db9348ebf828252bc9d46d631397a1fe1e2f52d39c7caac65499d64839.svg" /></div>
+<img alt="../../_images/c223458fc06f4baf3cf41588fb67357d18e6b48f117fa3636daba544cfe1dc35.svg" src="../../_images/c223458fc06f4baf3cf41588fb67357d18e6b48f117fa3636daba544cfe1dc35.svg" /></div>
 </div>
 <section id="details-identifier">
 <h3>Details: Identifier<a class="headerlink" href="#details-identifier" title="Permalink to this heading">#</a></h3>
@@ -636,7 +643,7 @@ a resource.</p>
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
     },
-    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
     &quot;@type&quot;: &quot;Map&quot;,
     &quot;identifier&quot;: {
         &quot;@id&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
@@ -648,7 +655,7 @@ a resource.</p>
 }
 </pre></div>
 </div>
-<img alt="../../_images/216ebd94310c36951347e8fa2ea2da162d80031ab1907224462fd0b4fa69d66e.svg" src="../../_images/216ebd94310c36951347e8fa2ea2da162d80031ab1907224462fd0b4fa69d66e.svg" /></div>
+<img alt="../../_images/2274a1db6375a41aba82f70bbdbc8717f909adda440fb806fc24e04b06e262c6.svg" src="../../_images/2274a1db6375a41aba82f70bbdbc8717f909adda440fb806fc24e04b06e262c6.svg" /></div>
 </div>
 </section>
 <section id="keywords">
@@ -704,7 +711,7 @@ a resource.</p>
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
     },
-    &quot;@id&quot;: &quot;https://example.org/id/XYZ&quot;,
+    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
     &quot;@type&quot;: &quot;Map&quot;,
     &quot;keywords&quot;: [
         {
@@ -725,7 +732,7 @@ a resource.</p>
 }
 </pre></div>
 </div>
-<img alt="../../_images/34da86593613f9c28211ce3464e33edb1c4f68480a14b11e1a0846cfa36ac1b4.svg" src="../../_images/34da86593613f9c28211ce3464e33edb1c4f68480a14b11e1a0846cfa36ac1b4.svg" /></div>
+<img alt="../../_images/772d00babe5f555f3dae57f71b9af66b14ecdaeed588108e335358fcc1aa91cf.svg" src="../../_images/772d00babe5f555f3dae57f71b9af66b14ecdaeed588108e335358fcc1aa91cf.svg" /></div>
 </div>
 </section>
 <section id="references">
