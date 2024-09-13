@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        submodules: recursive
+        submodules: true
     
     - name: Set Git config
       run: |
@@ -28,11 +28,9 @@ jobs:
 
     - name: Update odis-in submodule
       run: |      
-          git fetch --unshallow
-          git checkout master
-          git submodule update --remote --merge
-          git commit odis-in -m "Auto update odis-in submodule"
-          git push        
+          git pull --recurse-submodules
+          git submodule update --remote --recursive
+          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"       
     
     - name: Merge master into publication
       run: |      
