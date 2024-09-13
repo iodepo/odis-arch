@@ -5,7 +5,7 @@ on:
     branches:
       - 'publication'
   workflow_run:
-    workflows: ["Weekly book publish"]
+    workflows: ["Publish on Push to GitHub"]
     types:
       - completed      
 
