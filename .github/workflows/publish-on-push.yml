@@ -30,7 +30,7 @@ jobs:
       run: |      
           git pull --recurse-submodules
           git submodule update --remote --recursive
-          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"       
+          git commit -am "Auto-update submodule" && git push || echo "No changes to commit"       
     
     - name: Merge master into publication
       run: |      
