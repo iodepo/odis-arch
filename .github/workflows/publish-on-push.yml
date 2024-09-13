@@ -22,7 +22,15 @@ jobs:
     - name: Set Git config
       run: |
         git config --global user.email "github-actions@example.com"
-        git config --global user.name "GitHub Actions"    
+        git config --global user.name "GitHub Actions"
+
+    - name: Update odis-in submodule
+      run: |      
+          git fetch --unshallow
+          git checkout master
+          git submodule update --remote --merge
+          git commit odis-in -m "Auto update odis-in submodule"
+          git push        
     
     - name: Merge master into publication
       run: |      
