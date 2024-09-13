@@ -1,13 +1,16 @@
-#schedule a book publish weekly, on Sundays, by merging
+#publish the book when a Push is made on GitHub, by merging
 # master into the publication branch (which will then trigger the
 # deploy-book.yml action)
 
-name: "Weekly book publish"
+name: "Publish on Push to GitHub"
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
-  schedule:
-    - cron: '30 6 * * 0'
+  #schedule:
+    #- cron: '30 6 * * 0'
 
 jobs:
   build:
