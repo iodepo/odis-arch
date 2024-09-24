@@ -6,7 +6,7 @@ On the [Local Contexts Hub](https://localcontextshub.org), we use the term "Loca
 ## Example: Local Contexts Project Graph
 The following graph represents a basic record we might use for a Local Contexts Project.
 
-As Ocean InfoHub is leveraging Schema.org we are using schema.org/Project for this type. Any of the properties of Project seen there are valid to use in such a record.
+As Ocean InfoHub is leveraging Schema.org we are using [schema.org/Project](https://schema.org/Project) for this type. Any of the properties of Project seen there are valid to use in such a record.
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/local-contexts-project-example.json
 :linenos:

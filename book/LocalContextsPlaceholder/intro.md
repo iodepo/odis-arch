@@ -13,3 +13,11 @@ The primary objectives of Local Contexts are to enhance and legitimize locally b
 Indigenous and local communities can reinforce rights with the Traditional Knowledge (TK) and Biocultural (BC) Labels. The Engagement, Disclosure, and Collections Care Notices are a strategy for institutions, organizations, and researchers to disclose Indigenous interests and rights.
 
 The Labels and Notices are extra-legal, educational strategies focused on provenance, protocols, and permissions that connect people and places to knowledge and data. Together, the Labels and Notices function to advance aspirations for Indigenous data sovereignty and Indigenous innovation.
+
+[//]: # (Comment for the team:
+    Sections
+        1. Intro
+        2. Projects
+        3. Labels
+        4. Notices
+)

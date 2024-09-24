@@ -1,7 +1,7 @@
 # Local Contexts Notices
 
 ## About
-The Notices are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests in collections and data.  The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority. They activate researcher and institutional responsibility to identify potential Indigenous rights and interests in historical and future collections, also operationalizing the CARE Principles.
+The [Local Contexts Notices](https://localcontexts.org/notices/) are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests in collections and data.  The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority. They activate researcher and institutional responsibility to identify potential Indigenous rights and interests in historical and future collections, also operationalizing the CARE Principles.
 
 There are two categories of Notices that are used within the Hub: Engagement and Disclosure Notices.
 
@@ -10,3 +10,10 @@ The **Engagement Notice** is used to indicate a researcher, institution, or serv
 The **Disclosure Notices** are used to identify Indigenous collections and data and to recognize there could be accompanying cultural rights, protocols, and responsibilities. The Disclosure Notices are for use by collecting institutions, data repositories, and organizations who engage in collaborative curation with Indigenous and other marginalized communities who have been traditionally excluded from processes of documentation and record keeping. The Notices are applied via Local Contexts Projects and can function as place-holders on collections, data, or in a sample field until a Label(s) is added by a community.
 
 ## Example: Local Contexts Notice Graph
+The following graph represents a basic record we might use for a Local Contexts Notice.
+
+As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks for this type. Any of the properties of Label seen there are valid to use in such a record.
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/CreativeWork/graphs/local-contexts-notice.json
+:linenos:
+```
