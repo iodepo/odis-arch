@@ -5,6 +5,10 @@ The [Local Contexts Labels](https://localcontexts.org/labels/) are tools for Ind
 
 There are two categories of Labels that are used within the Hub: Traditional Knowledge (TK) Labels and Biocultural (BC) Labels. The **Traditional Knowledge (TK) Labels** identify and clarify community-specific rules and responsibilities regarding access and future use of traditional knowledge. The **Biocultural (BC) Labels** define community expectations about the appropriate use of biocultural collections and data.
 
+```{warning}
+Although there may be similar fields used for multiple Labels, each Label should still be represented as the text for that Label may have different indications or restrictions that should be acknowledged.
+```
+
 ## Example: Local Contexts Label Graph
 The following graph represents a basic record we might use for a Local Contexts Label.
 
@@ -15,7 +19,7 @@ As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks 
 ```
 Label records should be added to a base dataset's metadata or to a Local Contexts Project metadata. Each Label below will indicate what section(s) that Label's record should be added to.
 
-## Example: Community Contact Graph
+## Example: Community Agent Graph
 The only required information here is `type` and `name`. All other fields are optional and should be added by the Community. We are using [schema.org/Organization](https://schema.org/Organization) for this type. Any of the properties of Organization seen there are valid to use in such a record.
 
 ```json
@@ -57,54 +61,20 @@ Added to the dataset.
     "subjectOf" :{
         "correction": {
             "@type": "CorrectionComment",
-            "name": [
-                {
-                    "@language": "en",
-                    "@value": "TK Attribution - English Label Title"
-                }
-            ],
-            "author": "Example Community",
-            "text": [
-                {
-                    "@language": "en",
-                    "@value": "Customized English Label text."
-                }
-            ],
-            "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
-            "image": [
-                {
-                    "@type": "ImageObject",
-                    "url": "https://example.org/label-icon.png",
-                    "encodingFormat": "image/png"
-                },
-                {
-                    "@type": "ImageObject",
-                    "url": "https://example.org/label-icon.svg",
-                    "encodingFormat": "image/svg"
-                }
-            ],
-            "audio" : [
-                {
-                    "@type": "AudioObject",
-                    "url": "https://example.org/label-icon.mpg",
-                    "encodingFormat": "audio/mpeg"
-                }
-            ],
-            "dateCreated" : "2024-09-23T15:00:00.000Z",
-            "dateModified" : "2024-09-23T15:00:00.000Z"
+            *include Label Mapping*
         }
     }
 }
 ```
 
-### TK Clan
-Added to the dataset. Organization type added for each Community included in this Label.
+### TK Clan, TK Family, TK Multiple Communities
+Added to the dataset.
 
 ```json
 {
     ...
-   "conditionsOfAccess": "Customized English Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
-   "potentialAction": {
+    "conditionsOfAccess": "Customized Label Title: Customized Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
+    "potentialAction": {
         "@type": "ControlAction",
         "actionStatus": "ActiveActionStatus",
         "agent": [
@@ -116,21 +86,78 @@ Added to the dataset. Organization type added for each Community included in thi
     }
 }
 ```
+
+For the TK Multiple Communities Label, the `agent` property should be included for all communities added to the Label.
+
 ```{seealso}
-For [schema.org/agent](https://schema.org/agent), see Community Contact for additional optional information.
+For [schema.org/agent](https://schema.org/agent), see Community Agent for additional optional information.
 ```
 
-### TK Family
-
-
-### TK Multiple Communities
-
-
 ### TK Community Voice
+Added to the Local Contexts Project metadata.
 
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Project",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Example Project Title",
+    "foundingDate": "2024-09-23T15:00:00.000Z",
+    "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "description": "Local Contexts Project Description.",
+    "sameAs": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "identifier": [
+        {
+            "@id": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "@type": "PropertyValue",
+            "propertyID": "https://localcontextshub.org/projects",
+            "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "value": "00000000-00000000-00000000-00000000"
+        }
+    ],
+    "potentialAction": {
+        "@type": "InviteAction",
+        "agent": [
+            {
+                "@type": "Organization",
+                "name": "Example Community Name"
+            }
+        ],
+        "name": [
+            {
+                "@language": "en",
+                "@value": "TK Community Voice - English Label Title"
+            }
+        ],
+        "description": [
+            {
+                "@language": "en",
+                "@value": "Customized English Label text."
+            }
+        ],
+        "actionStatus": "ActiveActionStatus",
+        "object": {
+            "@type": "Organization",
+            "name": "Example Community Name"
+        }
+    }
+}
+```
 
 ### TK Creative
+Added to the dataset.
 
+```json
+{
+    ...
+    "creditText": "Customized Label Title: Customized Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
+    "publishingPrinciples": {
+        *include Label Mapping*
+    }
+}
+```
 
 ### TK Verified
 
