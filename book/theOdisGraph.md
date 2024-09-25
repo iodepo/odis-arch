@@ -64,8 +64,8 @@ Some nodes in a JSON-LD graph can be "typed" - in other words, classified as rep
   },
   "@id": "http://me.markus-lanthaler.com/",
   "@type": "Person",
-  "name": "Markus Lanthaler",
-...
+  "name": "Markus Lanthaler"
+}
 ```
 
 In other words, the node with `@id` "http://me.markus-lanthaler.com/" (which resolves to a JSON-LD document) is declared to be of type "http://schema.org/Person". 
