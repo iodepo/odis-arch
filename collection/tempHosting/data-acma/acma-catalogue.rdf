@@ -1,22 +1,18 @@
 @base <https://example.org/id/> .
 @prefix : <https://schema.org/> .
-@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-0dde4807-79ad-436f-b226-5640c816166f.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.4 4.316944, 3.4 6.4622474, 7.24 6.4622474, 7.24 4.316944, 3.4 4.316944))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "An island or isle is any any piece of sub-continental land that is surrounded by water. Very small islands such as emergent land features on atolls can be called islets, cays or keys. An island in a river or an island in a lake may be called an holm. A grouping of geographically or geologically related islands is called an archipelago. An island may still be described as such despite the presence of an artificial land bridge, or delta islands. Some places may even retain \"island\" in their names for historical reasons after being connected to a larger landmass by a wide land bridge. Conversely, when a piece of land is separated from the mainland by a man-made canal, it is generally not considered an island. There are Six (6) pronounced Islands in the nation." ;
     :keywords "ATLAS",
         "Human Dimensions | Islands | Places|Beaches|Monitoring Stations|",
         "Nigeria" ;
     :name "Nigeria Islands" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.316944 3.4 6.4622474 7.24" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/42" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-189b4971-ce42-4255-bcab-47eac9e1c36c.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.24011993408203 -23.767911911010742, 43.24011993408203 -11.958700180053711, 49.99799346923828 -11.958700180053711, 49.99799346923828 -23.767911911010742, 43.24011993408203 -23.767911911010742))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Madagascar has the highest surface area of mangroves in the Eastern African region. Mangroves in Madagascar are the breeding grounds for several globally threatened species, including the endangered Madagascar teal (Anas bernieri) and the critically endangered Madagascar fish eagle (Haliaeetus vociferoides. They are also nurseries for a wide range of commercially and artisanally important fish, crustaceans and mollusks which are important to both numerous local western coastal communities and the country’s fisheries, one of the primary industries in Madagascar. Mangroves are under increasing pressure as terrestrial forests dwindle, Agricultural lands are fully occupied elsewhere leading to migration into once undisturbed mangroves. The reduction in terrestrial forest cover has led to more and more harvesting of mangrove timber which, at the same time, is increasingly prized for its construction versatility, value as charcoal and resistance to parasites. The search for new agricultural lands has led to locally extensive clearing of mangroves. This increasese the risks of negative ecological and humanitarian impacts through flooding as sea levels rise." ;
     :keywords " Assesment",
         " Climate Change",
@@ -28,12 +24,12 @@
         "Madagascar",
         "Mangroves" ;
     :name "Madagascar: Mangroves Hot spots areas" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-23.767911911010742 43.24011993408203 -11.958700180053711 49.99799346923828" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/7" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-18f8f0e0-4ec3-441f-9475-c76eafa595b3.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((40.359036342531994 -22.339760708873058, 40.359036342531994 -4.430079610119688, 55.54139793687514 -4.430079610119688, 55.54139793687514 -22.339760708873058, 40.359036342531994 -22.339760708873058))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Cinq espèces de tortues marines sont présentes dans l’Océan Indien Occidental. Les plus abondantes sont la tortue verte (Chelonia mydas) et la tortue imbriquée (Eretmochelys imbricata) pour lesquelles l’OIO regroupe des sites de pontes parmi les plus importants au monde. De nombreuses plages et sites autour de Madagascar sont fréquentés par les tortues vertes. Les Seychelles et les îles de Nosy Hara et Radama au nord-ouest de Madagascar sont des zones importantes pour l’alimentation des tortues imbriquées. Les îles du canal du Mozambique (Europa, Juan de Nova et Glorieuses) ainsi que Moheli et Mayotte sont très fréquentées par les juvéniles de tortue imbriquée.(Source: RAMP-COI, 2011)" ;
     :keywords " Biosphere",
         " Madagascar",
@@ -42,12 +38,12 @@
         "Biology",
         "Madagascar" ;
     :name "Turtle nesting points (Eretmochelys imbricata)" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-22.339760708873058 40.359036342531994 -4.430079610119688 55.54139793687514" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/2" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-1fd72a93-3f66-4739-a943-7ff06bfc1727.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.318023681640625 -25.466215133666992, 43.318023681640625 -12.043371200561523, 57.779964447021484 -12.043371200561523, 57.779964447021484 -25.466215133666992, 43.318023681640625 -25.466215133666992))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Madagascar montre une très grande hétérogénéité dans la répartition et le potentiel de ses ressources en eau. Il existe ainsi des régions qui ne semblent pas exploiter suffisamment les ressources disponibles, alors que d'autres régions n'en disposent pas assez. Malgré le fait qu'aucune étude systématique n'a encore été effectuée jusqu'à présent pour une évaluation des ressources en eau, notamment souterraines, il sera esquissé dans les paragraphes qui suivent une présentation sommaire des caractéristiques des principales potentialités aquatiques de Madagascar. Madagascar dispose de plus de 3.000 km environ de fleuves et rivières. Le réseau hydrographique est naturellement divisé en cinq ensembles d'importance très inégale" ;
     :keywords " Madagascar",
         " main rivers",
@@ -56,44 +52,44 @@
         "Land Surface",
         "Madagascar" ;
     :name "Madagascar: Fleuves et Rivieres" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.466215133666992 43.318023681640625 -12.043371200561523 57.779964447021484" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/4" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-1fdb3bda-0431-4bda-98ca-65ec5f98f597.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((33.9493859 -4.663867, 33.9493859 4.5455407, 41.8772814 4.5455407, 41.8772814 -4.663867, 33.9493859 -4.663867))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "This data is from OSM and was downloaded Sept 22, 2024" ;
     :keywords "" ;
     :name "Kenya Points of Interest from OpenStreetMap, 2024" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-4.663867 33.9493859 4.5455407 41.8772814" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/48" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-21a5ddda-c9d8-4485-907e-732920e85ed1.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.255556 6.614444, 3.255556 13.530556, 12.014167 13.530556, 12.014167 6.614444, 3.255556 6.614444))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Dam is a structure built across a stream, river or estuary to retain water. Some dams are tall and thin, while others are short and thick. Dams are made from a variety of materials such as rock, steel and wood. This activity concentrates on dams made from concrete, a complex material, because it is important for the construction of large dams. The importance of the dams for irrigation, electrical supply and recreation." ;
     :keywords "ATLAS",
         "Human Dimensions | Boundaries | Places|Dams",
         "Nigeria" ;
     :name "Nigeria Dams" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "6.614444 3.255556 13.530556 12.014167" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/39" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-29bf6500-0644-48e2-86bc-60ed802279de.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.069673217232584 -25.604974776321917, 43.069673217232584 -11.982498957183896, 50.630815651383045 -11.982498957183896, 50.630815651383045 -25.604974776321917, 43.069673217232584 -25.604974776321917))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Lors du Congrès Mondial des Aires Protégées à Durban (Afrique du Sud) en 2003, Madagascar annonçait au monde entier la décision du Gouvernement Malgache de tripler avant 2008 la surface des aires protégées à Madagascar en se référant aux catégories des aires protégées de l'UICN. Ainsi, dans le cadre de la Politique Générale de l’Etat (PGE), Le Gouvernement a décidé de fixer un objectif de création de un million d’hectares d’aires protégées nouvelles au cours de l’année 2005, , . Les axes d’objectifs pour le Système d’Aires Protégées de Madagascar (SAPM) sont : Conserver l’ensemble de la biodiversité unique de Madagascar (écosystèmes, espèces, variabilité génétique) ; Conserver le patrimoine culturel Malagasy ; Maintenir les services écologiques et l’utilisation durable des ressources naturelles pour la réduction de la pauvreté et le développement durable" ;
     :keywords " Madagascar",
         "Africa",
         "Aires protegees",
         "Land Surface" ;
     :name "Madagascar AOI : Les Aires Protegees Marines" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.604974776321917 43.069673217232584 -11.982498957183896 50.630815651383045" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/9" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-2b962cb8-0f76-44b1-aee3-0778fbd6693e.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((37.00000000000006 -31.83679141085293, 37.00000000000006 -4.99999999999995, 57.0 -4.99999999999995, 57.0 -31.83679141085293, 37.00000000000006 -31.83679141085293))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Comminication cables sourcesd from Greg's Cable Map which is an attempt to consolidate all the available information about the undersea communications infrastructure. The initial data was harvested from Wikipedia, and further information was gathered by  googling and transcribing data into a GIS format." ;
     :keywords "Africa",
         "Economy",
@@ -101,12 +97,12 @@
         "Infrastructure",
         "Madagascar" ;
     :name "Madagascar AOI Communication Cables" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-31.83679141085293 37.00000000000006 -4.99999999999995 57.0" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/16" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-2df256d1-f528-4257-ae69-0c2001d76e28.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.22848450372746 -25.57046994414094, 43.22848450372746 -11.963613701983933, 50.4754880363888 -11.963613701983933, 50.4754880363888 -25.57046994414094, 43.22848450372746 -25.57046994414094))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Avec 20 millions d’habitants pour une superficie atteignant 587 041 km², soit un peu supérieure à celle de la France, Madagascar n’a qu’une faible densité démographique d’un peu plus de 30 habitants au km2. Et comme cette population n’est urbanisée qu’à environ 15%, on comprendra que les grandes agglomérations soient rares. Les plus importantes sont Antananarivo, la capitale nationale et les cinq chefs-lieux des anciennes Provinces, soit par ordre alphabétique, Antsiranana, Fianarantsoa, Mahajanga, Toamasina et Toliara. Aux temps coloniaux, bien avant la suppression des six provinces et leur remplacement par les vingt-deux régions actuelles, le nom de ces six villes que les colonisateurs ne parvenaient pas à prononcer avait été changé en Tananarive, Diégo Suarez, Fianarantsoa, Majunga, Tamatave et Tuléar, des noms qui ont toujours été rejetés par les autochtones. Ces villes ont fini par retrouver leur identité initiale peu après l’indépendance en 1960. Avec le grand changement politique de 2002 et la mise en place de la décentralisation, elles ont presque toutes perdu une bonne partie de leur importance administrative et politique, mais non leur poids démographique et économique. C’est d’ailleurs ce dernier facteur qui nous a conduit à leur ajouter deux ports : l’un à l’extrême Sud-est qui se développe énormément en raison de l’exploitation et l’exportation de l’ilménite, minerais dont on extrait le titane et le second dans le creux de la côte ouest, avec un arrière-pays prometteur au plan charbonnier (Sakoa) et pétrolier (Bemolanga). Il s’agit respectivement de Taolagnaro, nom original de Fort Dauphin, et de Morondava." ;
     :keywords " Madagascar",
         " localites",
@@ -115,35 +111,35 @@
         "Madagascar",
         "Villes" ;
     :name "Madagascar AOI: Les villes et villages" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.57046994414094 43.22848450372746 -11.963613701983933 50.4754880363888" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/5" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-311c7478-eab5-4855-a0f7-c02287573318.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.580080000000066 5.095920000000092, 3.580080000000066 12.586983029810439, 14.449463377526971 12.586983029810439, 14.449463377526971 5.095920000000092, 3.580080000000066 5.095920000000092))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Nigeria is blessed with rich and unique array of ecosystems, and a great variety of wild fauna and flora. This rich natural endowment is a product of the climatic variations resulting into various north-south gradations of habitats and ecosystems. The habitats support more than 1,340 species of animals among which is 274 mammalian species, making it the 8th highest in Africa. A National Park is a reserve of natural or semi-natural land, declared or owned by a government, that is restricted from most development and is set aside for human recreation and environmental protection. National Parks are generally understood to be administered by national governments (hence the name). There are several National Parks of Nigeria. The Nigeria National Park Service (NNPS) is responsible for preserving, enhancing, protecting and managing vegetation and wild animals in the National Parks of Nigeria. The NNPS is a parastatal under the Federal Ministry of the Environment, and is headed by a Conservator General. It works closely with the Nigerian Tourism Development Corporation." ;
     :keywords "ATLAS",
         "Human Dimensions | National Reserves|Boundaries | Places|Parks|",
         "Nigeria" ;
     :name "Nigeria National Parks" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "5.095920000000092 3.580080000000066 12.586983029810439 14.449463377526971" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/27" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-3fdf4aad-c1a6-4752-9ec2-f0ef52bef27a.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.675009433770539 4.300012570731512, 2.675009433770539 13.891662619319797, 14.683343806053585 13.891662619319797, 14.683343806053585 4.300012570731512, 2.675009433770539 4.300012570731512))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Shapefile of inland water features in Nigeria. This dataset originates from the Digital Chart of the World 1:1000000. The waterbodies have been characterized as rivers, canals and lakes with seperate files for line and area features." ;
     :keywords "ATLAS",
         "Nigeria",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | LAKES",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | RIVERS/STREAMS" ;
     :name "Nigeria AOI: Inland Water Network" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.300012570731512 2.675009433770539 13.891662619319797 14.683343806053585" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/37" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-43535f37-226d-4ac9-9a5a-66ba030c5403.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((42.69229475339948 -25.480620390124606, 42.69229475339948 -11.508745465318887, 50.457031152306335 -11.508745465318887, 50.457031152306335 -25.480620390124606, 42.69229475339948 -25.480620390124606))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Reef development is more limited on the island’s eastern coast, where in many places the shore and continental shelf are sheer. But the northeast, with its somewhat more convoluted aspect, supports coral communities at places like Toamasina and the Masoala Peninsula. Divers off Nosy Boraha--also known as Sainte Marie Island--can explore diverse reef communities, searching for grouper, barracuda, skates and other undersea denizens. Masoala National Park, comprised of both terrestrial and marine ecosystems, features 164 species of reef-building corals and hundreds of kinds of associated animals, from sea turtles to sharks. Besides the vibrant reefs, the park protects important mangrove forests." ;
     :keywords " Madagascar",
         " Topography",
@@ -154,23 +150,23 @@
         "Land Surface",
         "Madagascar" ;
     :name "Madagascar: Hot spot Coral reef ecosystems" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.480620390124606 42.69229475339948 -11.508745465318887 50.457031152306335" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/8" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-46924493-fcc9-4199-90e7-fddb5116cf99.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.321 4.642, 3.321 13.008, 13.081 13.008, 13.081 4.642, 3.321 4.642))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "An airport is a location where aircraft such as fixed-wing aircraft, helicopters, and blimps take off and land. Aircraft may be stored or maintained at an airport. An airport consists of at least one surface such as a runway for a plane to take off and land, a helipad, or water for takeoffs and landings, and often includes buildings such as control towers, hangars and terminal buildings. Larger airports may have fixed base operator services, seaplane docks and ramps, air traffic control, passenger facilities such as restaurants and lounges, and emergency services. A military airport is known as an airbase or air station. The terms aerodrome, airdrome, airfield, and airstrip may also be used to refer to airports, and the terms heliport, seaplane base, and STOLport refer to airports dedicated exclusively to helicopters, seaplanes, or short take-off and landing aircraft. There are Four (4) International Airports, Seven (7) Major Domestic Airports and Eleven (11) Other Domestic Airports in Nigera." ;
     :keywords "ATLAS",
         "Human Dimensions | Boundaries | Places|Airports|Air Spaces|",
         "Nigeria" ;
     :name "Nigeria Airports" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.642 3.321 13.008 13.081" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/38" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-49edd26a-d539-4d27-8063-dcb4be15f450.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((47.03845589099999 -22.148622523526598, 47.03845589099999 -17.6418209445266, 49.40401836109758 -17.6418209445266, 49.40401836109758 -22.148622523526598, 47.03845589099999 -22.148622523526598))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "L’âge des chemins de fer à Madagascar risque fort d’avoir été bref. De 1901, qui vit l’ouverture du premier chantier, à 1936, un embryon de réseau de quelque 860 kilomètres fut constitué. Mais, en 2001 sur les 4 lignes qui le composaient, seul le FCE (Fianarantsoa-Côte-Est, 163 km) était encore animé par un modeste convoi quotidien, alors même que le problème des transports était plus aigu que jamais. Depuis, le TCE (Tananarive-Côte-Est, 369 km) a repris du service pour l’acheminement de pondéreux, les hydrocarbures principalement. Mais la tentative de remise en service du TA (Tananarive-Antsirabe, 158 km) s’est soldée par un déraillement de bien mauvais augure. Dans le contexte politique et idéologique actuel qui privilégie la privatisation de toutes les activités économiques, l’avenir des chemins de fer malgaches est plus qu’incertain. 2 Or incriminer la mauvaise gestion des Républiques successives depuis 1960 n’est pas une explication suffisante. Car une analyse remontant aux origines de ces voies ferrées fait apparaître clairement que l’entreprise a été dès l’origine mal pensée et encore plus mal exécutée. Le calcul économique resta déficient, ce qui rendait illusoires les espérances de développement, elles-mêmes obérées par de sévères contraintes, qu’il s’agisse des conditions de financement, du parasitisme d’intérêts particuliers ou d’effets pervers source de blocage économique. Et surtout, la réalisation fut menée au prix d’un coût social et humain très élevé, qui éclaire notamment les origines de l’insurrection de 1947 dont les chemins de fer furent les axes et la cible, et au-delà, l’hostilité des populations à une modernité toujours perçue comme oppressive." ;
     :keywords " Madagascar",
         " transport",
@@ -178,12 +174,12 @@
         "Cemin de fer",
         "Cemin de fre" ;
     :name "Madagascar AOI: Railways" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-22.148622523526598 47.03845589099999 -17.6418209445266 49.40401836109758" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/20" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-4df6f25a-3d74-4c5c-900b-1cb160e4f828.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.51276 -26.717665, 43.51276 -13.26286, 50.516666666666666 -13.26286, 50.516666666666666 -26.717665, 43.51276 -26.717665))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Megaptere Novaengliae Sites de localisations. Humpback Whales site locations." ;
     :keywords " Madagascar",
         " Western",
@@ -192,12 +188,12 @@
         "Indian Ocean",
         "Madagascar" ;
     :name "Megaptere Novaengliae Sites de localisations" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-26.717665 43.51276 -13.26286 50.516666666666666" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/3" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-5a031640-0656-4876-afde-465e850b5710.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((29.267965786682574 -31.85499157446087, 29.267965786682574 -0.452187832564795, 57.80828899134398 -0.452187832564795, 57.80828899134398 -31.85499157446087, 29.267965786682574 -31.85499157446087))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Mangroves are the breeding grounds for several globally threatened species, including the endangered Madagascar teal (Anas bernieri) and the critically endangered Madagascar fish eagle (Haliaeetus vociferoides. They are also nurseries for a wide range of commercially and artisanally important fish, crustaceans and mollusks which are important to both numerous local western coastal communities fisheries. Mangroves are under increasing pressure as terrestrial forests dwindle, Agricultural lands are fully occupied elsewhere leading to migration into once undisturbed mangroves. The reduction in terrestrial forest cover has led to more and more harvesting of mangrove timber which, at the same time, is increasingly prized for its construction versatility, value as charcoal and resistance to parasites. The search for new agricultural lands has led to locally extensive clearing of mangroves. This increasese the risks of negative ecological and humanitarian impacts through flooding as sea levels rise." ;
     :keywords " Assesment",
         " Climate Change",
@@ -209,12 +205,12 @@
         "Madagascar",
         "Mangroves" ;
     :name "Eastern African Mangroves Hot spots areas" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-31.85499157446087 29.267965786682574 -0.452187832564795 57.80828899134398" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/1" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-72f044b4-7333-4d68-abd0-c7c83ffad21e.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.188194000000124 -25.606249999999932, 43.188194000000124 -11.948749999999961, 50.48652700000008 -11.948749999999961, 50.48652700000008 -25.606249999999932, 43.188194000000124 -25.606249999999932))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Administrative boundaries of the second sub-national level." ;
     :keywords "Administrative Divisions",
         "Africa",
@@ -223,47 +219,47 @@
         "Madagascar",
         "Political Divisions" ;
     :name "Administrative Areas Level 2 for Madagascar" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.606249999999932 43.188194000000124 -11.948749999999961 50.48652700000008" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/11" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-775794dd-0f78-41a7-8360-421fe9bafb95.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((38.7910527563798 -25.48062038981892, 38.7910527563798 -4.999999999999972, 56.71252829274667 -4.999999999999972, 56.71252829274667 -25.48062038981892, 38.7910527563798 -25.48062038981892))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The dataset represents the Madagascar regional distribution of warm water coral reefs. It has been created from multiple sources and supercedes the dataset used in the World Atlas of Coral Reefs (2001), although some aspects of this product still originate from that datasource.  This global coral reef dataset should be seen an 'interim' global product .It has been compiled from a number of data sources which have been merged together by UNEP-WCMC and the WorldFish Center in collaboration with WRI and TNC. The Approximate % coverage of data sources are as follows - Millennium Coral Reefs (Unvalidated) 50%- Millennium Coral Reefs (Validated) 30 %- Other sources 20%" ;
     :keywords "Africa",
         "Coral Reef",
         "Habitat",
         "Madagascar" ;
     :name "Madagascar: Warm water coral reefs" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.48062038981892 38.7910527563798 -4.999999999999972 56.71252829274667" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/23" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-7e1f759c-d724-4276-a221-01649fb8cd54.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.24164345473169 -25.582077828218765, 43.24164345473169 -11.958135264831853, 50.47736082978478 -11.958135264831853, 50.47736082978478 -25.582077828218765, 43.24164345473169 -25.582077828218765))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Les routes nationales avancent bien dans les zones goudronnées. Il manque en général les obstacles de type gués et radiers. Il y a de petites différences entre les longueurs constatées dans OSM et les chiffres gouvernementaux. Pour les N6 et N7, il manque certainement quelques longueurs dans les villes terminus mais ça n'explique pas toute la différence. Certains virages tracés sommairement dans OSM peuvent aussi réduire le total. Enfin, les chiffres gouvernementaux ne sont pas fiables non plus. Le Document de stratégie pays pour Madagascar au titre du 9ième FED a adopté comme secteurs prioritaires de financement pour la période 2000-2007: les infrastructures routières et le développement rural. Les interventions, initialement déployées dans tout Madagascar, ont été concentrées depuis 2002 sur les régions du Sud (Fianarantsoa et Toliara), zones identifiées alors comme les plus pauvres. Dans le domaine des infrastructures, le bilan global est positif. De nombreux ouvrages ont été inaugurés et le réseau routier national s'est nettement amélioré, notamment le réseau reliant la capitale aux quatre principaux ports du pays et les autres routes nationales, desservant les régions productrices de cultures à l'exportation. L'amélioration des cultures de rente et des filières d'exportation a porté sur la diversification horticole, la normalisation agricole, la promotion des cultures de rente et la surveillance des pêches. Les programmes de structuration du monde rural ont permis de renforcer l'environnement productif du monde paysan (micro finances, services agricoles) et ont facilité l'émergence de leaders dans le milieu rural. Les programmes de développement local ont reflété, quant à eux, une évolution importante de la coopération avec la CE, des micro réalisations vers le financement direct et l'aménagement du territoire local. Pour de plus amples informations sur les projets et programmes à Madagascar financés par le FED et le budget général de l'UE, veuillez visiter la section projet du site de la Délégation de l'Union européenne à Madagascar." ;
     :keywords "Africa",
         "Land Surface",
         "infrastructures",
         "routes" ;
     :name "Madagascar AOI: Les Routes" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.582077828218765 43.24164345473169 -11.958135264831853 50.47736082978478" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/21" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-80fddc3d-647e-4903-a69b-e0f0f6ec6f63.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.666960000000074 4.536310000000071, 2.666960000000074 12.924161862541487, 13.02983000000006 12.924161862541487, 13.02983000000006 4.536310000000071, 2.666960000000074 4.536310000000071))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "A game reserve is an area of land set aside for conservation purposes. Many game reserves are located in Africa. Most are open to the public, and tourists commonly take sightseeing safaris. A game reserve is more than just a piece of land or a place to keep wildlife; it is a place where ecosystems are protected and conservation is a key. Indigenous wildlife in its natural habitat makes for an ideal situation as this helps in providing an environment where growth in numbers at a natural rate can occur. Some game reserves boast more than one ecosystem, sometimes even five, ranging from valley bushveld, savannah grassland and fynbos to riverine forest and acacia woodland; this provides a dramatic improvement on the types of wildlife that are present and the numerous species of birds that thrive on in these environments. Nigeria is blessed with rich and unique array of ecosystems, and a great variety of wild fauna and flora. This rich natural endowment is a product of the climatic variations resulting into various north-south gradations of habitats and ecosystems. The habitats support more than 1,340 species of animals among which is 274 mammalian species, making it the 8th highest in Africa." ;
     :keywords "ATLAS",
         "Human Dimensions | National Reserves|Games Resrves| Places|Parks|",
         "Nigeria" ;
     :name "Nigeria Games Reserves" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.536310000000071 2.666960000000074 12.924161862541487 13.02983000000006" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/25" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-8a087495-1f7a-46c1-9294-edb8c0efa909.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.18819400000001 -25.60624999999999, 43.18819400000001 -11.948749999999961, 50.486527000000024 -11.948749999999961, 50.486527000000024 -25.60624999999999, 43.18819400000001 -25.60624999999999))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Administrative boundaries of the fourth sub-national level." ;
     :keywords "Administrative Divisions",
         "Africa",
@@ -272,57 +268,57 @@
         "Madagascar",
         "Political Divisions" ;
     :name "Administrative Areas Level 4 for Madagascar" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.60624999999999 43.18819400000001 -11.948749999999961 50.486527000000024" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/13" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-908d40a7-b3f2-486b-b8e3-cc82996afb35.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.668430999999941 4.270418000000063, 2.668430999999941 13.892010000000084, 14.680070000000114 13.892010000000084, 14.680070000000114 4.270418000000063, 2.668430999999941 4.270418000000063))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GADM is a spatial database of the location of the world's administrative areas (or adminstrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces, departments, bibhag, bundeslander, daerah istimewa, fivondronana, krong, landsvæðun, opština, sous-préfectures, counties, and thana. GADM describes where these administrative areas are (the \"spatial features\"), and for each area it provides some attributes, foremost being the name and variant names." ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS",
         "HUMAN DIMENSIONS | BOUNDARIES | POLITICAL DIVISIONS",
         "Nigeria" ;
     :name "Nigeria AOI: Administrative Level 2 Boundaries for Nigeria from GADM" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.270418000000063 2.668430999999941 13.892010000000084 14.680070000000114" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/33" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-92693b55-ae25-44a6-a33e-a08dcf799eb4.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.8311591719579052 4.292270356473857, 2.8311591719579052 6.425469603856056, 7.991038289649413 6.425469603856056, 7.991038289649413 4.292270356473857, 2.8311591719579052 4.292270356473857))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The Nigerian coastal zone sprawls a total of nine states, out of the thirty-six states of the federation, namely: Akwa-Ibom, Bayelsa, Cross River, Delta, Edo, Lagos, Ogun, Ondo and Rivers. The coastal states are estimated to account for 25% of the national population. The coastal areas stretch inland for a distance of about 15km in Lagos in the West to about 150km in the Niger Delta and about 25km East of the Niger Delta. The coastline stretches for about 853km comprising inshore waters, coastal lagoons, estuaries and mangrove especially in the Niger Delta. The zone experiences a tropical climate consisting of a rainy season (April- October) and a dry season (November- March) with diurnal temperature as high as 34 to 35°C and high relative humidity rarely below 60%. There are Seven (7) erosion monitoring stations in the nation." ;
     :keywords "ATLAS",
         "Human Dimensions | Erosion | Places|Beaches|Monitoring Stations|Erosion Stations",
         "Nigeria" ;
     :name "Nigeria Erosion Monitoring Stations" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.292270356473857 2.8311591719579052 6.425469603856056 7.991038289649413" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/40" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-97449ec4-2040-47a7-9d04-8877165f79b7.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.920452380999999 4.810867810473397, 2.920452380999999 12.878725930473394, 13.179305096999997 12.878725930473394, 13.179305096999997 4.810867810473397, 2.920452380999999 4.810867810473397))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The railways sector from DIVA_GIS" ;
     :keywords "ATLAS",
         "Nigeria",
         "RAILROADS|RAILWAYS|BOUNDARIES|ADMINISTRATIVE DIVISIONS" ;
     :name "Nigeria AOI:Railway Networks from DIVA GIS" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.810867810473397 2.920452380999999 12.878725930473394 13.179305096999997" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/34" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-9f1c8bdc-b686-4b29-825a-e8ccb2382042.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.678745000991292 4.529137102038566, 2.678745000991292 13.874735185564742, 14.653366532601883 13.874735185564742, 14.653366532601883 4.529137102038566, 2.678745000991292 4.529137102038566))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "The road networks system from DIVA - GIS" ;
     :keywords "ATLAS",
         "Nigeria",
         "ROADS|HUMAN DIMENSIONS|BOUNDARIES|" ;
     :name "NIgeria AOI:Road Networks from DIVA" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.529137102038566 2.678745000991292 13.874735185564742 14.653366532601883" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/35" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-a2760b6e-1959-4d9d-a5c7-70730540654e.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.188194000000124 -25.606249999999932, 43.188194000000124 -11.948749999999961, 50.48652700000008 -11.948749999999961, 50.48652700000008 -25.606249999999932, 43.188194000000124 -25.606249999999932))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Administrative boundaries of the first sub-national level." ;
     :keywords "Administrative Divisions",
         "Africa",
@@ -330,24 +326,24 @@
         "Human Dimensions",
         "Political Divisions" ;
     :name "Administrative Areas Level 1 for Madagascar" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.606249999999932 43.188194000000124 -11.948749999999961 50.48652700000008" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/10" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-a4ad5270-99e5-4ff2-9a4a-5e3af693de5e.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.708342390632652 4.280745978466257, 2.708342390632652 13.749995987285274, 14.683344401785234 13.749995987285274, 14.683344401785234 4.280745978466257, 2.708342390632652 4.280745978466257))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Shapefile of inland water features in Nigeria. This dataset originates from the Digital Chart of the World 1:1000000. The waterbodies have been characterized as rivers, canals and lakes with seperate files for line and area features." ;
     :keywords "ATLAS",
         "Nigeria",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | LAKES",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | RIVERS/STREAMS" ;
     :name "Nigeria AOI: Inland Water Network" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.280745978466257 2.708342390632652 13.749995987285274 14.683344401785234" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/36" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-a5b73a55-b383-43f3-8d0c-ad7641133348.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((40.359036342531994 -22.339760708873058, 40.359036342531994 -4.430079610119688, 55.54139793687514 -4.430079610119688, 55.54139793687514 -22.339760708873058, 40.359036342531994 -22.339760708873058))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Cinq espèces de tortues marines sont présentes dans l’Océan Indien Occidental. Les plus abondantes sont la tortue verte (Chelonia mydas) et la tortue imbriquée (Eretmochelys imbricata) pour lesquelles l’OIO regroupe des sites de pontes parmi les plus importants au monde.De nombreuses plages et sites autour de Madagascar sont fréquentés par les tortues vertes.Les Seychelles et les îles de Nosy Hara et Radama au nord-ouest de Madagascar sont des zones importantes pour l’alimentation des tortues imbriquées. Les îles du canal du Mozambique (Europa, Juan de Nova et Glorieuses) ainsi que Moheli et Mayotte sont très fréquentées par les juvéniles de tortue imbriquée.(Source: RAMP-COI, 2011)" ;
     :keywords "Africa",
         "Biology",
@@ -355,36 +351,36 @@
         "Madagascar",
         "Reptiles" ;
     :name "Green Turtle nesting points (Chelonia mydas)" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-22.339760708873058 40.359036342531994 -4.430079610119688 55.54139793687514" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/15" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-a72df6e5-7b1b-49e7-95b5-92d08804dbb6.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((23.2266666665 -34.773333333499984, 23.2266666665 4.7533336155000185, 69.75333366550001 4.7533336155000185, 69.75333366550001 -34.773333333499984, 23.2266666665 -34.773333333499984))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Les écosystèmes côtiers et marins de la planète, y compris ceux de l’OIO, sont de plus en plus exposés à une multitude de facteurs de changement. L’identification, la quantification et la cartographie des facteurs de changement représentent une étape importante dans le processus de planification de la conservation et pour la gestion des écosystèmes. Dans cette étude, nous avons identifié 15 facteurs de changement anthropiques qui peuvent être regroupés en 8 catégories : pêche industrielle pélagique, pêche côtière, pêche à pied, sédimentation terrigène, pollution des bassins versants par les activités urbaines et agricoles, dégradations locales dues aux activités urbaines, tourisme et transport maritime. Les facteurs de changement ont été cartographiés en utilisant plusieurs techniques d’analyse spatiale dont celle de la logique floue, de l’analyse de voisinage et l’analyse d’image satellite océanographique. Les 8 catégories de facteurs de changement ont ensuite été classées et pondérées par des experts de la région réunis au cours d’un atelier, sur la base de leur impact potentiel sur les cinq principaux types d’habitats : récifs coralliens, mangroves, herbiers, autres habitats côtiers et habitats pélagiques profondeur > 200m, distance de la côte > 25km). Afin de développer un système de pondération valide, nous avons utilisé un processus analytique de hiérarchie basé sur la comparaison par paires de facteurs de changement. L’objectif était d’étudier une partie des facteurs de changement (FdC) dans l’OIO et de cartographier leur distribution spatiale et leur intensité en se basant sur des données de télédétection et socio-économiques et en utilisant les techniques de modélisation spatiale des SIG. La technique de logique floue et l’analyse d’images satellites ont été utilisées pour cartographier les FdC. La logique floue est une orme d’algèbre utilisant une gamme de valeurs comprises entre « vrai » et faux » qui est appliquée dans la cartographie de données imprécises ou peu sûres (Ross 2004). Les données sont codées de 0 à 1 rapportant à une fonction d’appartenance floue. Par exemple, une valeur de 1 indique qu’un site est fortement affecté par un FdC alors qu’une valeur de 0 indique que le site ne fait pas partie de la catégorie des sites affectés." ;
     :keywords " Madagascar",
         " pecherie industrialisee",
         "Africa",
         "Facteur de changement" ;
     :name "Madagascar AOI: Influences de la pecherie pelagique industrialisee" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-34.773333333499984 23.2266666665 4.7533336155000185 69.75333366550001" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/17" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-ac70c975-ca31-4621-a919-293117403592.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.668430999999941 4.270418000000063, 2.668430999999941 13.892010000000084, 14.680070000000114 13.892010000000084, 14.680070000000114 4.270418000000063, 2.668430999999941 4.270418000000063))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GADM is a spatial database of the location of the world's administrative areas (or adminstrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces, departments, bibhag, bundeslander, daerah istimewa, fivondronana, krong, landsvæðun, opština, sous-préfectures, counties, and thana. GADM describes where these administrative areas are (the \"spatial features\"), and for each area it provides some attributes, foremost being the name and variant names." ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS",
         "HUMAN DIMENSIONS | BOUNDARIES | POLITICAL DIVISIONS",
         "Nigeria" ;
     :name "Nigeria AOI: Administrative Level 1 Boundaries for Nigeria from GADM" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.270418000000063 2.668430999999941 13.892010000000084 14.680070000000114" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/32" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-b549f013-59ec-438f-b338-914d91dd0bab.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.238014221191406 -25.39976692199707, 43.238014221191406 -11.95983600616455, 50.459938049316406 -11.95983600616455, 50.459938049316406 -25.39976692199707, 43.238014221191406 -25.39976692199707))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "A historical review of vegetation classification in Madagascar reveals that the classical map and \"phytogeographic\" territories of Perrier de la Bâthie and Humbert are largely a subjective reflection of climatological factors, and do not adequately reflect fundamental biogeographic patterns. Delimitation of phytochoria based on the distribution patterns of taxa provides an objective framework for comparing and mapping vegetation types using a simple physiognomic classification. The application of this approach in Madagascar would make it possible to test the validity of the classical divisions and circumscribe alternative ones, and to determine the current extent of natural and anthropogenic formations (principally secondary grasslands, often called \"prairies\", \"pseudosteppes\", etc., which cover about three quarters of the country). Before the arrival of man, the original woody vegetation types in the drier west (forest, woodland, bushland, etc.) were in a fragile equilibrium and could quickly have been converted to secondary grassland by fires; in the moister center more active human intervention (clearing) was likely required to alter the vegetation. Contrary to recent claims, native grasslands were not widespread immediately prior to the arrival of humans, but were probably restricted to small patches. Today, human impacts can be seen in all Malagasy vegetation types, even supposedly undisturbed \"native\" forest." ;
     :keywords " Landforms",
         " vegetation",
@@ -392,23 +388,23 @@
         "Land Surface",
         "Madagascar" ;
     :name "Madagascar: Remaining vegetation" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.39976692199707 43.238014221191406 -11.95983600616455 50.459938049316406" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/6" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-b5507232-188e-4407-af01-18a25af10d85.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((1.790541666679928 4.274291666679346, 1.790541666679928 14.45159722223616, 15.682819444456982 14.45159722223616, 15.682819444456982 4.274291666679346, 1.790541666679928 4.274291666679346))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "A wetland is a land area that is saturated with water, either permanently or seasonally, such that it takes on the characteristics of a distinct ecosystem. Primarily, the factor that distinguishes wetlands from other land forms or water bodies is the characteristic vegetation that is adapted to its unique soil conditions: Wetlands consist primarily of hydric soil, which supports aquatic plants. The water found in wetlands can be saltwater, freshwater, or brackish. Main wetland types include swamps, marshes, bogs and fens while Sub-types include mangrove, carr, pocosin, and varzea. Simply put, wetlands are in-between areas that have something of both dry uplands and open water environments: they are neither land nor water - they are a transition zone, which is what makes them so interesting. Wetlands have both upland and aquatic characteristics, and, thus, they often have a richer flora and fauna than other environments. This dataset was re-shaped from the global distribution of wetlands. It was produced at UNEP-WCMC from various sources alongside the publication 'Wetlands in Danger\", Dugan, P ed. (1993)." ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | BIOSPHERE |WETLAND|COASTAL",
         "Nigeria" ;
     :name "Nigeria Coastal Wetland" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.274291666679346 1.790541666679928 14.45159722223616 15.682819444456982" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/45" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-b9590c47-d8ff-447f-9503-8eb083825022.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((21.19998 -44.96667, 21.19998 9.99999, 79.99997 9.99999, 79.99997 -44.96667, 21.19998 -44.96667))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Le relief des fonds sous-marins de WIOMER (Western Indian Ocean Marine Ecoregion) est caracterise par la presence de plus de 650 monts-sous-marins. La profondeur du sommet de ces monts sous-marins varie de 1 a 4.163 m dont environ 30% sont situes a moins de 2.000 m. Quelques zones sont particulierement caracterisees par la presence de monts sous-marins peu profonds. Beaucoup sont situes le long de la dorsale sud-ouest indienne. A l'ouest de Rodrigues, dans la zone du banc de Soudan se trouve un alignement particulier de nombreux monts sous-marins dont le sommet est a 500 m de profondeur." ;
     :keywords " Terrain Elevation",
         " Topography",
@@ -418,57 +414,57 @@
         "Land Surface",
         "Madagascar" ;
     :name "Madagascar: Regional WIOMER seamounts" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-44.96667 21.19998 9.99999 79.99997" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/19" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-bb3594cc-1397-48d7-ac74-6577ddd76c4b.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.318023428453444 -25.285774049069687, 43.318023428453444 -12.74208603738748, 50.236171434896505 -12.74208603738748, 50.236171434896505 -25.285774049069687, 43.318023428453444 -25.285774049069687))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Shapefile of water area features in Madagascar. This dataset originates from the Diva-GIS site." ;
     :keywords "ATLAS",
         "Madagascar",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | LAKES",
         "TERRESTRIAL HYDROSPHERE | SURFACE WATER | RIVERS/STREAMS" ;
     :name "Madagascar: Inland Water Network (Water Areas)" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.285774049069687 43.318023428453444 -12.74208603738748 50.236171434896505" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/14" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-be144135-465f-4588-8e7e-6f3beb3394bd.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.708460000000059 4.632015150776756, 3.708460000000059 13.384602677552516, 14.206603437568461 13.384602677552516, 14.206603437568461 4.632015150776756, 3.708460000000059 4.632015150776756))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "A wetland is a land area that is saturated with water, either permanently or seasonally, such that it takes on the characteristics of a distinct ecosystem. Primarily, the factor that distinguishes wetlands from other land forms or water bodies is the characteristic vegetation that is adapted to its unique soil conditions: Wetlands consist primarily of hydric soil, which supports aquatic plants. The water found in wetlands can be saltwater, freshwater, or brackish. Main wetland types include swamps, marshes, bogs and fens. Sub-types include mangrove, carr, pocosin, and varzea. Wetlands play a number of roles in the environment, principally water purification, flood control, and shoreline stability. Wetlands are also considered the most biologically diverse of all ecosystems, serving as home to a wide range of plant and animal life. Wetlands occur naturally on every continent except Antarctica. They can also be constructed artificially as a water management tool, which may play a role in the developing field of water-sensitive urban design. Nigeria is blessed with rich and unique array of ecosystems, and a great variety of wild fauna and flora. This rich natural endowment is a product of the climatic variations resulting into various north-south gradations of habitats and ecosystems. The habitats support more than 1,340 species of animals among which is 274 mammalian species, making it the 8th highest in Africa." ;
     :keywords "ATLAS",
         "Human Dimensions | National Reserves|Special Reserves| Places|Parks|",
         "Nigeria" ;
     :name "Nigeria Special Reserves" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.632015150776756 3.708460000000059 13.384602677552516 14.206603437568461" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/46" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-c08e0714-c31a-4c58-b945-735fa33d7d22.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.83112149199716 4.279139825581258, 2.83112149199716 6.4387434919721, 8.415961785005354 6.4387434919721, 8.415961785005354 4.279139825581258, 2.83112149199716 4.279139825581258))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Nigeria Beaches are some of the most attractive tourist spots, which provides a sense of relaxation and calmness to the minds and bodies of the tired travelers to the country. Nigeria beaches are located in the coastal regions of the country. There are many beach resorts and hotels that provide good accommodation to the foreign travelers who come to visit these beaches." ;
     :keywords "ATLAS",
         "Human Dimensions | Boundaries | Places|Airports|Air Spaces|",
         "Nigeria" ;
     :name "Nigeria Beaches" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.279139825581258 2.83112149199716 6.4387434919721 8.415961785005354" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/41" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-c1a67868-1175-40f2-b471-d34e8946e45d.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.666960000000074 4.424786195814402, 2.666960000000074 13.771780000000092, 14.284090000000049 13.771780000000092, 14.284090000000049 4.424786195814402, 2.666960000000074 4.424786195814402))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "A reserve forest or a reserved forest is a specific term for designating forests and other natural areas which enjoy judicial and / or constitutional protection under the legal systems of many countries. The term forest reserve may also be used in some contexts in these countries. Reserved forests have rights to all activities like hunting and grazing are banned unless specific orders are issued by the government A protected forest is a specific term to denote forests with some amount of legal, and / or constitutional protection in certain countries, besides being a generic term to denote forests where the habitat and resident species are legally accorded protection and are protected from any further depletion. Nigeria is blessed with rich and unique array of ecosystems, and a great variety of wild fauna and flora. This rich natural endowment is a product of the climatic variations resulting into various north-south gradations of habitats and ecosystems. The habitats support more than 1,340 species of animals among which is 274 mammalian species, making it the 8th highest in Africa." ;
     :keywords "ATLAS",
         "Human Dimensions | National Reserves|Forest Reserves| Places|Parks|",
         "Nigeria" ;
     :name "Nigeria Forest Reserves" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.424786195814402 2.666960000000074 13.771780000000092 14.284090000000049" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/24" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-d399d472-8ffd-481c-aa38-24cbc12a59d9.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.20351962256978 -25.276258600544434, 43.20351962256978 -13.23746876941507, 50.46019562882542 -13.23746876941507, 50.46019562882542 -25.276258600544434, 43.20351962256978 -25.276258600544434))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Madagascar’s west coast contains the greatest diversity of coral reefs. Here, a great “river” of seawater, the Agulhas Current, warms the shallows over a broad continental shelf, and a variety of reef types--including fringing, barrier and bank reefs--have developed. The world’s third-largest network of coral reefs lies off the southwestern coast. Called the Toliara or Tulear reef system, this tract spans close to 200 miles between the vicinity of the Mangoky River mouth to the north and the community of Androka to the south. According to the \"World Atlas of Coral Reefs,\" the Tulear reefs sport at least 130 species of stony coral and 700 kinds of fish. Andavadoaka-area reefs, only recently systematically surveyed, are also species-rich. But, like many coral systems worldwide, they have suffered mightily from bleaching, wherein coral polyps lose their symbiotic algae. In 2006, National Geographic reported that a survey of the reefs off the southwestern coast by the groups Blue Ventures, and the Wildlife Conservation Society suggested that some corals there might be resistant to bleaching." ;
     :keywords " Landforms",
         " Topography",
@@ -479,12 +475,12 @@
         "Land Surface",
         "Madagascar" ;
     :name "Madagascar: Coral reef ecosystems" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.276258600544434 43.20351962256978 -13.23746876941507 50.46019562882542" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/22" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-d784d759-fff5-4445-ab36-d2e6d16cb08f.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.188194000000124 -25.606249999999932, 43.188194000000124 -11.948749999999961, 50.48652700000008 -11.948749999999961, 50.48652700000008 -25.606249999999932, 43.188194000000124 -25.606249999999932))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Administrative boundaries of the third sub-national level." ;
     :keywords "Administrative Divisions",
         "Africa",
@@ -493,23 +489,23 @@
         "Madagascar",
         "Political Divisions" ;
     :name "Administrative Areas Level 3 for Madagascar" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.606249999999932 43.188194000000124 -11.948749999999961 50.48652700000008" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/12" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-e0453b24-6357-4ed4-b3a5-6f3f3c863218.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.718090512641197 4.13353921800001, 2.718090512641197 6.43523704100005, 7.619263100000012 6.43523704100005, 7.619263100000012 4.13353921800001, 2.718090512641197 4.13353921800001))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Seagrasses are unusual marine flowering plants which grows in the sea. They are grass-like flowering plants that live completely submerged in marine and estuarine waters. Many species leaves are long and narrow, and these plants often grow in large meadows which look like grassland: in other words many of the species of seagrasses superficially resemble terrestrial grasses of the family Poaceae. The canopy of seagrass protects smaller marine animals, including the young of such species as drums, sea bass, snappers and grunts from larger predators. Some animals, such as manatees, urchins, conches and sea turtles, eat seagrass blades. Other animals derive nutrition from eating algae and small animals that live upon seagrass leaves. Bottlenose dolphins and a variety of wading and diving birds also use seagrass beds as feeding grounds. Seagrass-based detritus formed by the microbial breakdown of leaves and roots is also an important food source. The seagrass dataset has been compiled by UNEP-WCMC in collaboration with Dr Frederick T. Short, University of New Hampshire, USA to show the global distribution of seagrass species. This dataset has been created from multiple sources and was used in the creation of the World Atlas of Seagrasses(2003). This polygon feature dataset is an update of the data used in the Atlas and is a unique data holding about the state of the world’s seagrasses.\"" ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | BIOSPHERE |SEAGRASS",
         "Nigeria" ;
     :name "Nigeria Seagrass Area" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.13353921800001 2.718090512641197 6.43523704100005 7.619263100000012" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/44" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-eda23369-1898-493d-a62b-ab66f30b0c57.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((43.06967321723259 -25.45696467576, 43.06967321723259 -11.98249895707104, 50.47724461161199 -11.98249895707104, 50.47724461161199 -25.45696467576, 43.06967321723259 -25.45696467576))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Particulièrement choyée par la nature, Madagascar, île de l’océan Indien, est mondialement réputée pour la richesse de sa biodiversité. La faune et la flore malgaches possèdent un taux d’endémicité très élevé : 80 % des espèces animales et 90% de la végétation n’existent que sur l’île. À l’échelle mondiale, Madagascar est représentative d’une mégadiversité impressionnante. En effet, Madagascar, île de l’océan Indien occidental (COI) fait partie des 34 hot-spots de la biodiversité mondiale. C’est un label plutôt flatteur car il fait de la Grande île l’une des plus importantes régions en termes d’habitats rares et d’espèces phares. La conservation de ces richesses naturelles est ainsi inscrite dans l’agenda international. La mise en place d'aires protégées marines figure parmi les priorités de la politique de Madagascar en matière de préservation de l'environnement. Au vu de l’importance de ces zones marines et côtières et dans le but de les préserver face aux menaces et pressions d’origine anthropique et naturelle, Madagascar s’est résolument investie dans la création et la mise en place d’aires marines protégées et de réserves marines afin de contribuer au bien-être des communautés locales qui en dépendent. La première aire marine protégée a été officiellement créée en 1989 avec le parc marin de Nosy Antafana intégré à la Réserve de Biosphère de Mananara Nord, suivie par les trois parcelles marines du Parc National de Masoala. Vingt ans après le premier parc marin, de nouvelles aires marines protégées et réserves marines ont été créées ou sont en voie de création dans l’attente de l’obtention de leur statut définitif1. Les aires protégées sur les rivages et dans les eaux malgaches sont le fruit d’un travail réalisé dans un étroit partenariat avec les communautés locales pour assurer une bonne gestion des parcs dont le contrôle et la surveillance, le suivi écologique et l’application des régulations du parc et le développement des activités liées au tourisme." ;
     :keywords " Madagascar",
         " Marines",
@@ -517,40 +513,43 @@
         "Africa",
         "Aires" ;
     :name "Madagascar AOI: Les Aires Marines Protegees" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "-25.45696467576 43.06967321723259 -11.98249895707104 50.47724461161199" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/18" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-f147ded5-ec23-4a8b-9aef-575b2a5d18bd.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((3.933333 3.883333, 3.933333 6.266667, 8.233333 6.266667, 8.233333 3.883333, 3.933333 3.883333))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "Submarine Canyon, any of a class of narrow, steep-sided valleys that originate on the continental shelf and cut into continental slopes and continental rises of the oceans. They are rare on continental margins that have extremely steep continental slopes or escarpments. Submarine canyons are so called because they resemble canyons made by rivers on land. A submarine canyon is a sharply angled valley on the floor of the ocean of the continental incline. Submarine canyons act as conduits to bring sand-sized sediments from the continental margins to the deep sea. During lowstands of sea level, rivers empty directly into the heads of many Atlantic canyons. Sand and mud are carried down these systems, many times bypassing the slope-rise system to be carried directly out onto the abyssal plains of the ocean floor." ;
     :keywords "ATLAS",
         "BIOSPHERE | Boundaries | Places|CANYONS|SUBMARINE|",
         "Nigeria" ;
     :name "Nigeria Canyons" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "3.883333 3.933333 6.266667 8.233333" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/43" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-f161801d-a951-44bf-9036-d927e408ec9c.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.668430999999941 4.270418000000063, 2.668430999999941 7.970606000000032, 9.468808000000024 7.970606000000032, 9.468808000000024 4.270418000000063, 2.668430999999941 4.270418000000063))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GADM is a spatial database of the location of the world's administrative areas (or adminstrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces, departments, bibhag, bundeslander, daerah istimewa, fivondronana, krong, landsvæðun, opština, sous-préfectures, counties, and thana. GADM describes where these administrative areas are (the \"spatial features\"), and for each area it provides some attributes, foremost being the name and variant names." ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS|LOCAL GOVERNMENT AREA|",
         "Nigeria",
         "| POLITICAL DIVISIONS|COASTAL DISTRICT|L.G.A.|" ;
     :name "Nigeria: Coastal District Administrative Boundaries" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.270418000000063 2.668430999999941 7.970606000000032 9.468808000000024" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/31" .
 
 <https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-fc203057-9c62-43ee-baaa-33a30ec56a29.json> a :Dataset ;
-    geosparql:hasGeometry [ a <http://www.opengis.net/ont/sf#Polygon> ;
-            geosparql:asWKT "POLYGON((2.668430999999941 4.270418000000063, 2.668430999999941 7.970606000000032, 9.468808000000024 7.970606000000032, 9.468808000000024 4.270418000000063, 2.668430999999941 4.270418000000063))"^^geosparql:wktLiteral ;
-            geosparql:crs <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ] ;
     :description "GADM is a spatial database of the location of the world's administrative areas (or adminstrative boundaries) for use in GIS and similar software. Administrative areas in this database are countries and lower level subdivisions such as provinces, departments, bibhag, bundeslander, daerah istimewa, fivondronana, krong, landsvæðun, opština, sous-préfectures, counties, and thana. GADM describes where these administrative areas are (the \"spatial features\"), and for each area it provides some attributes, foremost being the name and variant names." ;
     :keywords "ATLAS",
         "HUMAN DIMENSIONS | BOUNDARIES | ADMINISTRATIVE DIVISIONS",
         "Nigeria",
         "| POLITICAL DIVISIONS|COASTAL STATES|" ;
     :name "Nigeria: Coastal States Administrative Boundaries" ;
+    :spatialCoverage [ a :Place ;
+            :geo [ a :GeoShape ;
+                    :box "4.270418000000063 2.668430999999941 7.970606000000032 9.468808000000024" ] ] ;
     :url "https://acma.africanmarineatlas.org/catalogue/#/dataset/29" .
 
