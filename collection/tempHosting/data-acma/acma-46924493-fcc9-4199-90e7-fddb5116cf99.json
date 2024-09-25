@@ -5,16 +5,6 @@
     },
     "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-46924493-fcc9-4199-90e7-fddb5116cf99.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((3.321 4.642, 3.321 13.008, 13.081 13.008, 13.081 4.642, 3.321 4.642))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "An airport is a location where aircraft such as fixed-wing aircraft, helicopters, and blimps take off and land. Aircraft may be stored or maintained at an airport. An airport consists of at least one surface such as a runway for a plane to take off and land, a helipad, or water for takeoffs and landings, and often includes buildings such as control towers, hangars and terminal buildings. Larger airports may have fixed base operator services, seaplane docks and ramps, air traffic control, passenger facilities such as restaurants and lounges, and emergency services. A military airport is known as an airbase or air station. The terms aerodrome, airdrome, airfield, and airstrip may also be used to refer to airports, and the terms heliport, seaplane base, and STOLport refer to airports dedicated exclusively to helicopters, seaplanes, or short take-off and landing aircraft. There are Four (4) International Airports, Seven (7) Major Domestic Airports and Eleven (11) Other Domestic Airports in Nigera.",
     "keywords": [
         "ATLAS",
@@ -22,5 +12,12 @@
         "Nigeria"
     ],
     "name": "Nigeria Airports",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "4.642 3.321 13.008 13.081"
+        }
+    },
     "url": "https://acma.africanmarineatlas.org/catalogue/#/dataset/38"
 }
