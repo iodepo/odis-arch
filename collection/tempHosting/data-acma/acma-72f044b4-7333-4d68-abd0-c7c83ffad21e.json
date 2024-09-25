@@ -5,16 +5,6 @@
     },
     "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/acma-72f044b4-7333-4d68-abd0-c7c83ffad21e.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((43.188194000000124 -25.606249999999932, 43.188194000000124 -11.948749999999961, 50.48652700000008 -11.948749999999961, 50.48652700000008 -25.606249999999932, 43.188194000000124 -25.606249999999932))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Administrative boundaries of the second sub-national level.",
     "keywords": [
         "Boundaries",
@@ -25,5 +15,12 @@
         "Africa"
     ],
     "name": "Administrative Areas Level 2 for Madagascar",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-25.606249999999932 43.188194000000124 -11.948749999999961 50.48652700000008"
+        }
+    },
     "url": "https://acma.africanmarineatlas.org/catalogue/#/dataset/11"
 }
