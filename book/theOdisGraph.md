@@ -1,10 +1,12 @@
 # About this page
 
-This page is aimed at technical teams who wish to link their (meta)data to the ODIS Federation. It clarifies how ODIS Partners should interpret the specifications and standards which are used to share the metadata needed to construct the knowledge graphs used for discovery and other purposes facilitated by linked open data.
+This page is aimed at technical teams who wish to link their (meta)data to the ODIS Federation. It clarifies how ODIS Partners should interpret the specifications and standards which are used to share the metadata needed to construct the knowledge graphs used for discovery and other purposes.
 
 # Background
 
-Each ODIS Partner in the ODIS Federation shares at least one metadata catalogue which lists their digital assets (datasets, software, services, etc). Each of these catalogues can be harvested over the Web converted into a knowledge graph, and they can be combined to form a Federation-wide knowledge graph to help agents discover, access, and use each Partner's capacities.
+Each ODIS Partner in the ODIS Federation shares at least one metadata catalogue which lists their digital assets (datasets, software, services, etc), using JSON-LD serialisation/format and, primarily, schema.org semantics. Each of these catalogues can be harvested over the Web and converted into a collective knowledge graph (or other construct, like a triplestore). 
+
+IODE provides coordination of the ODIS Federation, through its ODIS Programme Component (https://odis.org). To do so, it harvests all ODIS Partner asset catalogues and constructs a knowledge graph which it serves back to the Federation and any other user on the Web. 
 
 A "graph" is an object that consists of "nodes" (which represent things) and the "edges" that connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
 
@@ -12,13 +14,13 @@ This page documents some particulars of how the ODIS discovery graph is implemen
 
 # The ODIS discovery graph: Describing and linking assets across a global partnership
 
-The ODIS discovery graph is built from the asset catalogues of the partner systems in the ODIS Federation. Those asset catalogues:
+As noted above, the ODIS discovery graph is built from the asset catalogues of the partner systems in the ODIS Federation. Those asset catalogues:
  - tell the Web what entities each ODIS Partner is concerned with (e.g. datasets hosted, services provided, material objects interacted with), representing them as nodes in the graph,
  - provide selected (meta)data about that asset to aid in its discovery and basic characterisation,
  - link (meta)data about each asset to that about others with well-defined relations (graph edges), and
- - link back to the more complete digital representations of their component assets (where available).
+ - link back to the more complete digital representations, subject data, or service endpoints of the assets described (where available).
 
-As such, the ODIS discovery graph describes and links a wide range of entities that the global partners in the ODIS Federation works with. 
+As such, the ODIS discovery graph describes and links a wide range of entities that the global partners in the ODIS Federation work with. 
 
 More technically, the ODIS discovery graph is a linked data graph, which conforms to [the Resource Description Framework (RDF) specifications](https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph). It is built from asset catalogues serialised in [Java Script Object Notation for Linked Data (JSON-LD)](https://www.w3.org/TR/json-ld/), primarily using [schema.org semantics](https://schema.org/). The sections below will explore this in more detail.
 
@@ -28,7 +30,7 @@ JSON-LD allows graph-friendly representation of digital objects and their proper
 
 ### Objects
 
-In JSON(-LD) syntax, anything inside a pair of braces is an [object](https://datatracker.ietf.org/doc/html/rfc8259#section-4), and one object may have one or more other objects nested within it.  
+In JSON(-LD) syntax, anything inside a pair of braces ("{}") is an [object](https://datatracker.ietf.org/doc/html/rfc8259#section-4), and one object may have one or more other objects nested within it.  
 
 [Add simple representation]
 
@@ -47,11 +49,31 @@ JSON-LD nodes are equivalent to RDF nodes:
 
 #### Typed nodes
 
-[JSON-LD 1.1 specification - Typed values](https://www.w3.org/TR/json-ld/#typed-values)
+>A value with an associated type, also known as a typed value, is indicated by associating a value with an IRI which indicates the value's type.
+>[JSON-LD 1.1 specification - Typed values](https://www.w3.org/TR/json-ld/#typed-values)
 
-#### Reference nodes
+Some nodes in a JSON-LD graph can be "typed" - in other words, classified as representing a particular entity. This can be read as "this node is of type X". In the ODIS graph, the primary mode of typing follows the node typing convention specified here: https://www.w3.org/TR/json-ld/#dfn-node-type
 
-In a true linked (open) data implementation, one should be able to unambiguously and efficiently identify any node. In theory, every node could have an IRI or other dereferenceable (persistent) identifier; however, this would dramatically inflate the number of triples, and thus the size of a graph, immensely. Instead, one can provide a dereferenceable IRI or PID for _one node_ for every JSON-LD _file_ that defines a (relatively small) graph describing one thing (like a Person, Organization, Dataset, etc). This identified node is known as the _reference node_. Other nodes that are linked to the reference node may not have their own identifiers, but they aren't far away (logically or topologically) from the reference node.
+> ... associates a node type (http://schema.org/BlogPosting) with the node, which is expressed using the @id keyword.
+
+```json
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "image": { "@type": "@id" }
+  },
+  "@id": "http://me.markus-lanthaler.com/",
+  "@type": "Person",
+  "name": "Markus Lanthaler",
+...
+```
+
+In other words, the node with `@id` "http://me.markus-lanthaler.com/" (which resolves to a JSON-LD document) is declared to be of type "http://schema.org/Person". 
+
+
+#### Reference nodes and the use of `@id`
+
+In a true linked (open) data implementation, one should be able to unambiguously and efficiently identify any node. In theory, every node could have an IRI or other dereferenceable (persistent) identifier; however, this would dramatically inflate the number of triples, and thus the size of a graph. Instead, one can provide a dereferenceable IRI or PID for _one node_ for every JSON-LD _record_ that defines a (relatively small) graph describing one thing (like a Person, Organization, Dataset, etc). This identified node is known as the _reference node_. Other nodes that are linked to the reference node may not have their own identifiers, but they aren't far away (logically or topologically) from the reference node.
 
 [Add simple visual]
 
@@ -62,7 +84,7 @@ In a JSON-LD file, one should define a reference node using the JSON-specific `@
 > In JSON-LD, a node is identified using the @id keyword:
 [JSON-LD 1.1 specification - node identifiers](https://www.w3.org/TR/json-ld/#node-identifiers)
 
-The value of the `@type` keyword defines what the thing described by some metadata is supposed to be. When used in conjunction with an `@id` keyword, this becomes a [node type](https://www.w3.org/TR/json-ld/#dfn-node-type) which tells us what that reference node (and the nodes that describe it) is supposed to represent (e.g. a Person, Dataset, Vehicle, or Software)
+As described above, value of the `@type` keyword defines what the thing described by some metadata is supposed to be. When used in conjunction with an `@id` keyword, this becomes a [node type](https://www.w3.org/TR/json-ld/#dfn-node-type) which tells us what that reference node (and the nodes that describe it) is supposed to represent (e.g. a Person, Dataset, Vehicle, or Software).
 
 >type map
 >A type map is a map value of a term defined with @container set to @type, whose keys are interpreted as IRIs representing the @type of the associated node object; the value must be a node object, or array of node objects. If the value contains a term expanding to @type, its values are merged with the map value when expanding. See the Type Maps section of JSON-LD 1.1 for a normative description.
