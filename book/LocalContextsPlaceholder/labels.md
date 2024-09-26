@@ -159,10 +159,105 @@ Added to the dataset.
 }
 ```
 
-### TK Verified
+### TK Verified (NEED TO REVIEW)
+This Label will be added in two places.
+
+Added to the dataset.
+
+```json
+{
+    ...
+    "@type": "AssessAction",
+    "agent": {
+        "@type": "Organization",
+        "name": "Example Community Name"
+    }
+}
+```
+
+Added to the Local Contexts Project metadata.
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Project",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Example Project Title",
+    "foundingDate": "2024-09-23T15:00:00.000Z",
+    "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "description": "Local Contexts Project Description.",
+    "sameAs": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "identifier": [
+        {
+            "@id": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "@type": "PropertyValue",
+            "propertyID": "https://localcontextshub.org/projects",
+            "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "value": "00000000-00000000-00000000-00000000"
+        }
+    ],
+    "hasCertification": {
+        "@type": "Certification",
+        "issuedBy": {
+            "@type": "Organization",
+            "name": "Example Community Name"
+        },
+        "certificationStatus": "CertificationActive"
+        *include Label Mapping*
+    }
+}
+```
 
 
-### TK Non-Verified
+### TK Non-Verified (NEED TO REVIEW)
+This Label will be added in two places.
+
+Added to the dataset.
+
+```json
+{
+    ...
+    "@type": "AssessAction",
+    "agent": {
+        "@type": "Organization",
+        "name": "Example Community Name"
+    }
+}
+```
+
+Added to the Local Contexts Project metadata.
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Project",
+    "@id": "https://example.org/id/XYZ",
+    "name": "Example Project Title",
+    "foundingDate": "2024-09-23T15:00:00.000Z",
+    "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "description": "Local Contexts Project Description.",
+    "sameAs": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+    "identifier": [
+        {
+            "@id": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "@type": "PropertyValue",
+            "propertyID": "https://localcontextshub.org/projects",
+            "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
+            "value": "00000000-00000000-00000000-00000000"
+        }
+    ],
+    "hasCertification": {
+        "@type": "Certification",
+        "issuedBy": "Example Community Name",
+        "certificationStatus": "CertificationActive"
+        *include Label Mapping*
+    }
+}
+```
 
 
 ### TK Seasonal
