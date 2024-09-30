@@ -1,4 +1,4 @@
-# Depth - (DRAFT)
+# Depth
 
 ## Introduction
 
