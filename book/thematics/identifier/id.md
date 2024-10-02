@@ -46,7 +46,7 @@ The following example graph shows some of the properties we can use
 to provide source and provenance information about a resource. 
 
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json
 :linenos:
 :emphasize-lines: 8-34
 ```
@@ -63,7 +63,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -110,7 +110,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -196,7 +196,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -256,7 +256,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -322,7 +322,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -428,7 +428,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/identifier/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
