@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>SPARQL &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
   
@@ -15,52 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'users/query';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -75,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +137,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -141,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="The Ocean InfoHub Project and the development of the ODIS-architecture - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="The Ocean InfoHub Project and the development of the ODIS-architecture - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -227,13 +250,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/annoyances.html">Known Issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/references.html">References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/registries.html">Registries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/vocabularies.html">Controlled Vocabularies</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -249,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -258,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -290,14 +313,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/iodepo/odis-arch/blob/master/book/users/query.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -418,26 +441,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -486,12 +511,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sparql">
-<h1>SPARQL<a class="headerlink" href="#sparql" title="Permalink to this heading">#</a></h1>
+<h1>SPARQL<a class="headerlink" href="#sparql" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>This notebook will go over some concepts for querying the graph that is generated by the Ocean InfoHub.</p>
 <p>The product of the publishing and indexing process is a graph.  This graph follows the W3C Resource Description
 Framework (RDF).   RDF is a data model that can be represented in various text encodings.  Among these
@@ -506,12 +531,12 @@ allow you to download and run this notebook on your own machine if you wish.  Th
 is SPARQL.</p>
 </section>
 <section id="id1">
-<h2>SPARQL<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>SPARQL<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>SPARQL (SPARQL Protocol and RDF Query Language) is the query language that is used to query RDF graphs.  It
 is a W3C recommendation documented at <a class="reference external" href="https://www.w3.org/TR/sparql11-query/">SPARQL 1.1 Query Language</a>.</p>
 </section>
 <section id="load-a-graph">
-<h2>Load a Graph<a class="headerlink" href="#load-a-graph" title="Permalink to this heading">#</a></h2>
+<h2>Load a Graph<a class="headerlink" href="#load-a-graph" title="Link to this heading">#</a></h2>
 <p>For this demonstration we will be using Python to load the graph and do our queries.  However, there are many
 languages and libraries for working with graphs and SPARQL.   Also, you can often query a graph using web UIs
 infront of your graph database or even with simple direct HTTP requests.  Examples of some of these can be
@@ -534,7 +559,7 @@ found in other sections of the OIH documentation.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="let-s-define-our-first-query">
-<h1>Let’s define our first query<a class="headerlink" href="#let-s-define-our-first-query" title="Permalink to this heading">#</a></h1>
+<h1>Let’s define our first query<a class="headerlink" href="#let-s-define-our-first-query" title="Link to this heading">#</a></h1>
 <p>This is a simple query that will return all the triples in the graph.   Recall an RDF graph is make of triples defined by a subject, predicate and object.  You can review RDF at the W3C RDF Primer (<a class="reference external" href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>).  SPARQL allows us to do a type of pattern matching on the graph by defining a pattern we a relooking for.</p>
 <p>Here we define <code class="docutils literal notranslate"><span class="pre">?s</span> <span class="pre">?p</span> <span class="pre">?o</span></code> as the pattern we are looking for.  The <code class="docutils literal notranslate"><span class="pre">?</span></code> is a variable that can be used to match any value.  In this case, we are looking for all the triples in the graph.  We have used s, p and o to as simple names for our subject, predicate, object elements of the RDF triple.</p>
 <p>Since this would match ALL the values in the graph, which would be a lot, we have added a LIMIT option to reduce the number of resutls returned.</p>
@@ -554,7 +579,7 @@ found in other sections of the OIH documentation.</p>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="run-the-query">
-<h1>Run the query<a class="headerlink" href="#run-the-query" title="Permalink to this heading">#</a></h1>
+<h1>Run the query<a class="headerlink" href="#run-the-query" title="Link to this heading">#</a></h1>
 <p>We will run this query, and print out the results</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -581,7 +606,7 @@ ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;Introduction to Ocean D
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="nicer-formatting">
-<h1>Nicer formatting<a class="headerlink" href="#nicer-formatting" title="Permalink to this heading">#</a></h1>
+<h1>Nicer formatting<a class="headerlink" href="#nicer-formatting" title="Link to this heading">#</a></h1>
 <p>We can do a bit of formatting to see our results in a nicer way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,7 +636,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="kglab">
-<h1>KGLab<a class="headerlink" href="#kglab" title="Permalink to this heading">#</a></h1>
+<h1>KGLab<a class="headerlink" href="#kglab" title="Link to this heading">#</a></h1>
 <p>As mentioned, this intro is based on the nice work done by KGLab (<a class="reference external" href="https://derwen.ai/docs/kgl/">https://derwen.ai/docs/kgl/</a>) both in their library and documentation.  We wll import kglab here and take advantage of some of their nice features.  In particular some nice functioons to load our graph and query it with results into a Dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -665,7 +690,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="prefix">
-<h1>PREFIX<a class="headerlink" href="#prefix" title="Permalink to this heading">#</a></h1>
+<h1>PREFIX<a class="headerlink" href="#prefix" title="Link to this heading">#</a></h1>
 <p>Let’s do another query.  We will use the PREFIX keyword to define a prefix for the namespace.  This is a way to leverage namespace in our query.  Note the use of schema:name vs the <a class="reference external" href="https://schema.org/location">https://schema.org/location</a>.  The latter is a URI and the former is a prefix.  The prefix is defined in the PREFIX keyword.   The schema:name is the name of the property that we are querying, the prefix can expand it to a URI.  The <a class="reference external" href="https://schema.org/location">https://schema.org/location</a> is the URI of the property directly, without use of a prefix.   Both work, the prefix can simply make life easier for you and also help avoid hard to find typos where you may miss-type a URI.</p>
 <p>Let’s do a query to see all the location names in our group for training.</p>
 <div class="cell docutils container">
@@ -742,7 +767,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="location-counts">
-<h1>Location Counts<a class="headerlink" href="#location-counts" title="Permalink to this heading">#</a></h1>
+<h1>Location Counts<a class="headerlink" href="#location-counts" title="Link to this heading">#</a></h1>
 <p>The above is nice, but it doesn’t tell us much about the number of events in each location. We can modify our query to do this.  We can leverage the COUNT and GROUP BY capacity of SPARQL to do this.  We can then add in ORDER BY to sort the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -825,7 +850,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="filter">
-<h1>FILTER<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h1>
+<h1>FILTER<a class="headerlink" href="#filter" title="Link to this heading">#</a></h1>
 <p>Graphs are great for showing relations between objects but our approaches to searching or selecting data can often leverage pattern matching on text strings.  We do have some tools in SPARQL for this in the form of FILTER.  We can use regex pattern in the FILTER to match text.  Let’s use this to find all the locations with “Peru” in the name.</p>
 <p>In the following we will do a simple FILTER with a regular expression, but you can also do things like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT DISTINCT ?s 
@@ -907,11 +932,11 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="peru">
-<h1>PERU<a class="headerlink" href="#peru" title="Permalink to this heading">#</a></h1>
+<h1>PERU<a class="headerlink" href="#peru" title="Link to this heading">#</a></h1>
 <p>So we see we have three entries in our graph that have Peru in the name.  This is where connecting our group to a shared concept of what Peru is like the WikiData entry for Peru at <a class="reference external" href="https://www.wikidata.org/wiki/Q419">https://www.wikidata.org/wiki/Q419</a> would help.  That’s a topic for another day.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="dates">
-<h1>Dates<a class="headerlink" href="#dates" title="Permalink to this heading">#</a></h1>
+<h1>Dates<a class="headerlink" href="#dates" title="Link to this heading">#</a></h1>
 <p>Let’s look at the dates that are available in the graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -993,7 +1018,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="a-bit-of-pandas">
-<h1>A bit of Pandas<a class="headerlink" href="#a-bit-of-pandas" title="Permalink to this heading">#</a></h1>
+<h1>A bit of Pandas<a class="headerlink" href="#a-bit-of-pandas" title="Link to this heading">#</a></h1>
 <p>Here we will mix in a bit of Pandas to convert our dates to Pandas dates, group and plot.  This is not
 SPARQL but rather just some post processing in Pandas.  It does still give us an idea of some of the
 information we can extract from our graph.</p>
@@ -1012,16 +1037,17 @@ goals among the participants.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" src="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" /></div>
+<img alt="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" src="../_images/879352180e9be5c4f06533d2f0a00f34fdf34c8213cf074293e1ce38da158dfb.svg" />
+</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="more-on-query">
-<h1>More on Query<a class="headerlink" href="#more-on-query" title="Permalink to this heading">#</a></h1>
+<h1>More on Query<a class="headerlink" href="#more-on-query" title="Link to this heading">#</a></h1>
 <p>Here we have gone through an introdcution to the SPARQL query language and how to use it to query our graph.<br />
 We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
 <p>This is a just a quick overview of the SPARQL language.  You can find a large amount of information online.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://derwen.ai/docs/kgl/ex4_0/">https://derwen.ai/docs/kgl/ex4_0/</a></p></li>
@@ -1056,11 +1082,10 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
@@ -1080,10 +1105,7 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1091,6 +1113,7 @@ We can look at the SPARQL we use on the larger Ocean Infohub graph.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1138,9 +1161,10 @@ By IODEPO
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1164,8 +1188,8 @@ By IODEPO
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

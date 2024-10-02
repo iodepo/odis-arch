@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Indexing with Gleaner &#8212; The Ocean InfoHub Project and the development of the ODIS-architecture</title>
   
@@ -15,52 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'indexing/qstart';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -75,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +137,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -141,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="The Ocean InfoHub Project and the development of the ODIS-architecture - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="The Ocean InfoHub Project and the development of the ODIS-architecture - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -227,13 +250,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/annoyances.html">Known Issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/references.html">References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/registries.html">Registries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../appendix/vocabularies.html">Controlled Vocabularies</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -249,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -258,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -387,26 +410,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -463,13 +488,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="indexing-with-gleaner">
-<h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Permalink to this heading">#</a></h1>
+<h1>Indexing with Gleaner<a class="headerlink" href="#indexing-with-gleaner" title="Link to this heading">#</a></h1>
 <p><img alt="compose options" src="../_images/composeOptions.png" /></p>
 <section id="gleaner-app">
-<h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Permalink to this heading">#</a></h2>
+<h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Link to this heading">#</a></h2>
 <p>The Gleaner applications performs the retrieval and loading of JSON-LD documents
 from the web following structured data on the web patterns.  Gleaner is available for Linux, Mac OS X and Windows.</p>
 <p>While Gleaner is a stand alone app, it needs to interact with
@@ -482,7 +507,7 @@ such as Mac OS X.   If you are on Windows, there may be some issues.  If you can
 you may experience better results.  We will test with Windows eventually and update documentation as needed.</p>
 </div>
 <section id="quick-start-steps">
-<h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Permalink to this heading">#</a></h3>
+<h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Link to this heading">#</a></h3>
 <p>This quick start guide is focused on setting up and testing Gleaner in a local environnement.  It is similar to
 how you might run Gleaner in a production environment but lacks the routing and other features likely desired for
 such a situation.</p>
@@ -499,8 +524,8 @@ you should issue in this admonition style box.</p>
 </div>
 <p>In the end, this is the table of applications and config files you will need.  In this guide we will go through
 downloading, setting them up and running Gleaner to index documents from the web.</p>
-<table class="table" id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Required Applications and Their Config Files</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Required Applications and Their Config Files</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Gleaner</p></th>
 <th class="head"><p>Docker</p></th>
@@ -518,8 +543,9 @@ downloading, setting them up and running Gleaner to index documents from the web
 </tr>
 </tbody>
 </table>
+</div>
 <section id="grab-gleaner-and-the-support-files-we-need">
-<h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Permalink to this heading">#</a></h4>
+<h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Link to this heading">#</a></h4>
 <p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file
 template.  To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
 and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> drop down you should see the files we need.  Get:</p>
@@ -563,7 +589,7 @@ It also should work to do something similar to the following:</p>
 </div>
 </section>
 <section id="about-the-compose-file-s">
-<h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Permalink to this heading">#</a></h4>
+<h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Link to this heading">#</a></h4>
 <p>The above steps have collected the resources for the indexer.   We now want to set up the services that
 Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
 Podman or others.   For this example, we will assume you are using the Docker client.</p>
@@ -587,7 +613,7 @@ section.</p>
 </div>
 </section>
 <section id="edit-environment-variables-setup-script">
-<h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Permalink to this heading">#</a></h4>
+<h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Link to this heading">#</a></h4>
 <p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
 to be populated to provide the local hosts information needed to run.  You can set these yourself or
 use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
@@ -613,7 +639,7 @@ having permission issues.</p>
 use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
 </section>
 <section id="spin-up-the-containers">
-<h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Permalink to this heading">#</a></h4>
+<h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Link to this heading">#</a></h4>
 <p>Load our environment variables to the shell:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
@@ -644,7 +670,7 @@ ca08c24963a0<span class="w">        </span>minio/minio:latest<span class="w">   
 </div>
 </section>
 <section id="edit-gleaner-config-file">
-<h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Permalink to this heading">#</a></h4>
+<h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Link to this heading">#</a></h4>
 <p>We have all the files we need and we have our support services running.  The next and
 final step is to edit our Gleaner configuration file.  This will let Gleaner know
 the location of the support services, the JSON-LD context file and the locations
@@ -719,7 +745,7 @@ of the resources we wish to index.</p>
 </pre></div>
 </div>
 <section id="object-store">
-<h5>Object store<a class="headerlink" href="#object-store" title="Permalink to this heading">#</a></h5>
+<h5>Object store<a class="headerlink" href="#object-store" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">minio</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">address</span><span class="p">:</span> <span class="mf">0.0.0.0</span>
 <span class="linenos">3</span>  <span class="n">port</span><span class="p">:</span> <span class="mi">9000</span>
@@ -735,7 +761,7 @@ if you were to use Ceph or AWS S3, this section is still labeled minio.  You sim
 need to update the property values.</p>
 </section>
 <section id="gleaner">
-<h5>Gleaner<a class="headerlink" href="#gleaner" title="Permalink to this heading">#</a></h5>
+<h5>Gleaner<a class="headerlink" href="#gleaner" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">gleaner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">runid</span><span class="p">:</span> <span class="n">oih</span> <span class="c1"># this will be the bucket the output is placed in...</span>
 <span class="linenos">3</span>  <span class="n">summon</span><span class="p">:</span> <span class="n">true</span> <span class="c1"># do we want to visit the web sites and pull down the files</span>
@@ -750,7 +776,7 @@ need to update the property values.</p>
 </ul>
 </section>
 <section id="context-sections">
-<h5>Context sections<a class="headerlink" href="#context-sections" title="Permalink to this heading">#</a></h5>
+<h5>Context sections<a class="headerlink" href="#context-sections" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">context</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">3</span><span class="n">contextmaps</span><span class="p">:</span>
@@ -763,7 +789,7 @@ need to update the property values.</p>
 <p>Comments for the context sections</p>
 </section>
 <section id="summoner-section">
-<h5>Summoner section<a class="headerlink" href="#summoner-section" title="Permalink to this heading">#</a></h5>
+<h5>Summoner section<a class="headerlink" href="#summoner-section" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">summoner</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
 <span class="linenos">3</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
@@ -775,7 +801,7 @@ need to update the property values.</p>
 <p>Comments for the summoner sections</p>
 </section>
 <section id="millers-section">
-<h5>Millers section<a class="headerlink" href="#millers-section" title="Permalink to this heading">#</a></h5>
+<h5>Millers section<a class="headerlink" href="#millers-section" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">millers</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">graph</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">3</span>  <span class="c1">#geojson: false</span>
@@ -784,7 +810,7 @@ need to update the property values.</p>
 <p>Comments for the miller sections</p>
 </section>
 <section id="site-graphs-section">
-<h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Permalink to this heading">#</a></h5>
+<h5>Site graphs section<a class="headerlink" href="#site-graphs-section" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sitegraphs</span><span class="p">:</span>
 <span class="linenos">2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">aquadocs</span>
 <span class="linenos">3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">oih</span><span class="o">.</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aquadocs</span><span class="o">.</span><span class="n">json</span> 
@@ -797,7 +823,7 @@ need to update the property values.</p>
 <p>Comments for the sitegrpah sections</p>
 </section>
 <section id="sources-section">
-<h5>Sources section<a class="headerlink" href="#sources-section" title="Permalink to this heading">#</a></h5>
+<h5>Sources section<a class="headerlink" href="#sources-section" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">sources</span><span class="p">:</span>
 <span class="linenos"> 2</span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">samplesearth</span>
 <span class="linenos"> 3</span>  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">samples</span><span class="o">.</span><span class="n">earth</span><span class="o">/</span><span class="n">sitemap</span><span class="o">.</span><span class="n">xml</span>
@@ -835,7 +861,7 @@ need to update the property values.</p>
 </section>
 </section>
 <section id="run-gleaner">
-<h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Permalink to this heading">#</a></h4>
+<h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Link to this heading">#</a></h4>
 <p>For this example we are going to run Gleaner directly.  In a deployed instance you may
 run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
 <p>We can do a quick test of the setup.</p>
@@ -861,12 +887,12 @@ contents.</p>
 </section>
 </section>
 <section id="load-results-to-a-graph-and-test">
-<h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Permalink to this heading">#</a></h3>
+<h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Link to this heading">#</a></h3>
 <p>You have set up the server environment and Gleaner and done your run.  Things look good
 but you don’t have a graph you can work with yet.    You need to load the JSON-LD into
 the triplestore in order to start playing.</p>
 <section id="minio-object-store">
-<h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Permalink to this heading">#</a></h4>
+<h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Link to this heading">#</a></h4>
 <p>To view the object store you could use your browser and point it on the default minio
 port at 9000.  This typically something like localhost:9000.</p>
 <p>If you wish to continue to use the command line you can use the Minio client at
@@ -880,7 +906,7 @@ port at 9000.  This typically something like localhost:9000.</p>
 </div>
 </section>
 <section id="load-triplestore">
-<h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Permalink to this heading">#</a></h4>
+<h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Link to this heading">#</a></h4>
 <p>We now want to load these objects, which are JSON-LD files holding RDF based graph
 data, into a graph database.  We use the term, triplestore, to define a graph database
 designed to work with the RDF data model and provide SPARQL query support over that
@@ -894,7 +920,7 @@ graph data.</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>The following are some reference which may provide more information on the various
 technologies used in this approach.</p>
 <ul class="simple">
@@ -933,11 +959,10 @@ technologies used in this approach.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="index.html"
@@ -957,10 +982,7 @@ technologies used in this approach.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -968,6 +990,7 @@ technologies used in this approach.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1023,9 +1046,10 @@ By IODEPO
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1049,8 +1073,8 @@ By IODEPO
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
