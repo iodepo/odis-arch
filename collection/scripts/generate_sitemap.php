@@ -11,8 +11,8 @@
    History:         originally created for COINAtlantic catalogue in 2011
 */
 
-define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/collection/tempHosting/data-wod');
-define ('JSONLD_ROOT_PATH_URL', 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod');
+define ('JSONLD_ROOT_PATH_DIRECTORY', '/home/apps/odis-arch-git/collection/tempHosting/data-acma');
+define ('JSONLD_ROOT_PATH_URL', 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma');
 #set how frequently the record is likely to change
 # possible values are: always, hourly, daily, weekly, monthly, yearly, never
 define ('SITEMAP_CHANGE_FREQUENCY', 'monthly');
