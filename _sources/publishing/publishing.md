@@ -148,7 +148,7 @@ exposes a potential route a group might take to develop a usable tool. Such a
 tool might, for example, leverage the Electron app dev environment to evolve
 this approach in a more dedicated tool/manner.
 
-Use a JSON-LD document ([Example](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/sdg/graphs/creativeWork.json)) one could
+Using a JSON-LD document ([example](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/sdg/graphs/creativeWork.json)), one could
 load this into something like 
 the [JSONschema.net tool](https://jsonschema.net/).
 
