@@ -604,7 +604,19 @@ for more focused creative work examples.</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/6b144c024f1bda29aaf0fe5eae85ac075457f5a29f4377e98ae796b8f1df82e9.svg" src="../../_images/6b144c024f1bda29aaf0fe5eae85ac075457f5a29f4377e98ae796b8f1df82e9.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3025</span><span class="o">/</span><span class="mf">1588687293.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> 
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <section id="details-indentifier">
 <h3>Details: Indentifier<a class="headerlink" href="#details-indentifier" title="Permalink to this heading">#</a></h3>
@@ -628,7 +640,7 @@ a resource.</p>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -698,7 +710,7 @@ of type <code class="docutils literal notranslate"><span class="pre">Organizatio
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -773,7 +785,7 @@ case we can look closer at the author property which points to a type Person.</p
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
@@ -840,7 +852,7 @@ case we can look closer at the author property which points to a type Person.</p
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">lib</span> <span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
