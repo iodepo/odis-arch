@@ -100,7 +100,7 @@ thematic sections for more examples for a given thematic area.
 This example is from the [training and courses thematic
 section](https://github.com/iodepo/odis-arch/tree/master/book/thematics/training).  To view all the types
 being developed reference
-the [Thematic section](https://github.com/iodepo/odis-arch/tree/master/book/thematics).
+the [Thematic section](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics).
 
 These JSON-LD documents leverage schema.org as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.  
