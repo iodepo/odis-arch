@@ -261,7 +261,7 @@ on GitHub, to file any issues or questions for the ODIS team.
 
 ### How do I see my records, after completing my ODISCat entry?
 
-The ODIS [Dashboard](http://dashboard.oceaninfohub.org/) can be used to monitor your node 
+The ODIS [Dashboard](http://dashboard.odis.org/) can be used to monitor your node 
 inside the ODIS graph.
 
 In terms of seeing your records in the results of the ODIS front-end [search](https://odis.org): 
@@ -288,7 +288,7 @@ An interface such as [Yasgui](https://yasgui.triply.cc/) can be used to generate
 
 A JSON endpoint is in discussion for ODIS.  ODIS does have Parquet files that are 
 automatically generated for each node (you can get the url for that Parquet file
-by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http://dashboard.oceaninfohub.org/).
+by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http://dashboard.odis.org/).
 
 ### How often does ODIS index my records?
 
