@@ -195,6 +195,8 @@ Added to the dataset.
 ```
 
 ### TK Verified <!-- Review -->
+This Label will be added in two places.
+
 Added to the dataset.
 
 ```json
@@ -235,7 +237,10 @@ Added to the Local Contexts Project metadata.
     ],
     "hasCertification": {
         "@type": "Certification",
-        "issuedBy": "Example Community Name",
+        "issuedBy": {
+            "@type": "Organization",
+            "name": "Example Community Name"
+        },
         "certificationStatus": "CertificationActive",
         *include Label Mapping*
     }
@@ -250,7 +255,10 @@ Added to the dataset.
     ...
     "hasCertification": {
         "@type": "Certification",
-        "issuedBy": "Example Community Name",
+        "issuedBy": {
+            "@type": "Organization",
+            "name": "Example Community Name"
+        },
         "certificationStatus": "CertificationInactive",
         *include Label Mapping*
     }
