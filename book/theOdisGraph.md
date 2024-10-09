@@ -4,13 +4,14 @@ This page is aimed at technical teams who wish to link their (meta)data to the O
 
 # Background
 
+This page documents some particulars of how the ODIS discovery graph is co-implemented by the partners in the ODIS Federation. Consistency in this implementation across Partners is essential for interoperability. 
+
 Each ODIS Partner in the ODIS Federation shares at least one metadata catalogue which lists their digital assets (datasets, software, services, etc), using JSON-LD serialisation/format and, primarily, schema.org semantics. Each of these catalogues can be harvested over the Web and converted into a collective knowledge graph (or other construct, like a triplestore). 
 
-IODE provides coordination of the ODIS Federation, through its ODIS Programme Component (https://odis.org). To do so, it harvests all ODIS Partner asset catalogues and constructs a knowledge graph which it serves back to the Federation and any other user on the Web. 
+> [!NOTE]
+> A "graph" is an object that consists of "nodes" (which represent things) and the "edges" that connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
 
-A "graph" is an object that consists of "nodes" (which represent things) and the "edges" that connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
-
-This page documents some particulars of how the ODIS discovery graph is implemented. Consistency in this implementation across Partners is essential for interoperability. 
+IODE provides coordination of the ODIS Federation, through its ODIS Programme Component (https://odis.org). To do so, it harvests all ODIS Partner asset catalogues and constructs a knowledge graph which it serves back to the Federation and any other user on the Web. To enable such integration by IODE (or any other user), it its vital that all partners of the ODIS Federation share common implementation norms for their asset catalogues.
 
 # The ODIS discovery graph: Describing and linking assets across a global partnership
 
