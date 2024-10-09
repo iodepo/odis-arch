@@ -17,3 +17,26 @@ As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/CreativeWork/graphs/local-contexts-notice.json
 :linenos:
 ```
+
+Notice records should be added to a base dataset's metadata or to a Local Contexts Project metadata. Each Notice below will indicate what section(s) that Notices's record should be added to.
+
+In addition to the mappings below, the Notice records can also be added to `usageInfo`, `ethicsPolicy`, or `publishingPrinciples` fields based on when or how the data was gathered, used, or shared.
+
+| Label Type | usageInfo | ethicsPolicy | publishingPrinciples |
+| --- | :---: |  :---: | :---: |
+| Traditional Knowledge Notice |  | X |  |
+| Biocultural Notice |  | X |  |
+| Attribution Incomplete Notice |  |  |  |
+| Open to Collaborate Notice |  |  |  |
+
+## Engagement Notice
+
+### Open to Collaborate Notice
+
+## Disclosure Notices
+
+### Traditional Knowledge (TK) Notice
+
+### Biocultural (BC) Notice
+
+### Attribution Incomplete Notice
