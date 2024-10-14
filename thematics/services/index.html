@@ -671,21 +671,21 @@ about the image.</p>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
 
-<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:46,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">rdf</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>     <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">46</span>     <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>     <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="c1"># Apply different styles to the nodes based on whether they&#39;re</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># literals, ConceptNet URLs, or other URLs</span>
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:47,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">rdf</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">47</span>     <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span>     <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>     <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># Apply different styles to the nodes based on whether they&#39;re</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="c1"># literals, ConceptNet URLs, or other URLs</span>
 
-<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:24,</span> in <span class="ni">short_name</span><span class="nt">(value, max_length)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># If the URL is too long, hide it</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">24</span>     <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">else</span><span class="p">:</span>
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:25,</span> in <span class="ni">short_name</span><span class="nt">(value, max_length)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="c1"># If the URL is too long, hide it</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">else</span><span class="p">:</span>
 
 <span class="ne">NameError</span>: name &#39;split_uri&#39; is not defined
 </pre></div>
