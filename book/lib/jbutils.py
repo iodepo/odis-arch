@@ -1,5 +1,6 @@
 from pyld import jsonld
 import graphviz
+import rdflib
 
 API_ROOT = 'https://schema.org/'
 
