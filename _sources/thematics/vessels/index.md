@@ -63,7 +63,10 @@ Schema.org itself, something they encourage.
 :tags: [hide-input]
 
 import json
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
+from rdflib.extras.external_graph_libs import rdflib_to_networkx_graph
 from pyld import jsonld
+import graphviz
 import os, sys
 
 currentdir = os.path.dirname(os.path.abspath(''))
