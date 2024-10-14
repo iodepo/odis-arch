@@ -625,35 +625,7 @@ potentially revisiting the current OIH type Vessel, may involve engagement with
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">compacted</span><span class="p">)</span>
-
-<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:48,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="n">subj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">48</span> <span class="n">pred</span> <span class="o">=</span> <span class="n">short_name</span><span class="p">(</span><span class="n">edge</span><span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">if</span> <span class="n">subj</span> <span class="ow">and</span> <span class="n">obj</span> <span class="ow">and</span> <span class="n">pred</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="c1"># Apply different styles to the nodes based on whether they&#39;re</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="c1"># literals, ConceptNet URLs, or other URLs</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="c1"># Literal values</span>
-
-<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:25,</span> in <span class="ni">short_name</span><span class="nt">(value, max_length)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="c1"># If the URL is too long, hide it</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="n">pieces</span> <span class="o">=</span> <span class="n">split_uri</span><span class="p">(</span><span class="n">short_url</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">return</span> <span class="n">join_uri</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;...&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">NameError</span>: name &#39;split_uri&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/6ec56274b4f43f64779190efc85e7608bcbb2cde163cabd690408dcef91fb9e7.svg" src="../../_images/6ec56274b4f43f64779190efc85e7608bcbb2cde163cabd690408dcef91fb9e7.svg" />
 </div>
 </div>
 <section id="details-indentifier">
@@ -723,7 +695,7 @@ a resource.</p>
 }
 </pre></div>
 </div>
-<img alt="../../_images/b521e0701c0f4aa9b46b654c9b2d1567f60140a45fbe3dc6d4018c6fe9d2f735.svg" src="../../_images/b521e0701c0f4aa9b46b654c9b2d1567f60140a45fbe3dc6d4018c6fe9d2f735.svg" />
+<img alt="../../_images/b816fa017cf724cf253dcc4116fc7068c9003ea7b965bf388ad27c11ab863158.svg" src="../../_images/b816fa017cf724cf253dcc4116fc7068c9003ea7b965bf388ad27c11ab863158.svg" />
 </div>
 </div>
 </section>
@@ -798,7 +770,7 @@ domain specific metadata records.</p>
 }
 </pre></div>
 </div>
-<img alt="../../_images/e57a30b6667bf0e915476997b24a66c342eea6226063d569de588d9ff7c6773e.svg" src="../../_images/e57a30b6667bf0e915476997b24a66c342eea6226063d569de588d9ff7c6773e.svg" />
+<img alt="../../_images/76711a97c17b1a8a481163224c4512b16197e43266afe9d7fd2bd4cf9f38adb8.svg" src="../../_images/76711a97c17b1a8a481163224c4512b16197e43266afe9d7fd2bd4cf9f38adb8.svg" />
 </div>
 </div>
 </section>
