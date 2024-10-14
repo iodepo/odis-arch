@@ -219,14 +219,20 @@ reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly
 `yearly`, `never`.  Here is a snippet from a sitemap:
 :
 
-```html
-  <url>
-    <loc>
-      https://dataportal.leibniz-zmt.de/oih/dataset_18288.html
-    </loc>
-    <lastmod>2023-12-12</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://example.org/landingpage1</loc>
+      <lastmod>2024-06-10</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>https://example.org/landingpage2</loc>
+      <lastmod>2024-01-31</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>  
+</urlset> 
 ```
 
 ```{tip} 
