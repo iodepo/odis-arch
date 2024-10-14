@@ -698,13 +698,19 @@ records in your sitemap to change - this will tell systems like ODIS how often t
 reindex your holdings. Possible values are: <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">daily</span></code>, <code class="docutils literal notranslate"><span class="pre">weekly</span></code>, <code class="docutils literal notranslate"><span class="pre">monthly</span></code>,
 <code class="docutils literal notranslate"><span class="pre">yearly</span></code>, <code class="docutils literal notranslate"><span class="pre">never</span></code>.  Here is a snippet from a sitemap:
 :</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">url</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">loc</span><span class="p">&gt;</span>
-      https://dataportal.leibniz-zmt.de/oih/dataset_18288.html
-    <span class="p">&lt;/</span><span class="nt">loc</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">lastmod</span><span class="p">&gt;</span>2023-12-12<span class="p">&lt;/</span><span class="nt">lastmod</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">changefreq</span><span class="p">&gt;</span>monthly<span class="p">&lt;/</span><span class="nt">changefreq</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">url</span><span class="p">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;url&gt;</span>
+<span class="w">      </span><span class="nt">&lt;loc&gt;</span>https://example.org/landingpage1<span class="nt">&lt;/loc&gt;</span>
+<span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2024-06-10<span class="nt">&lt;/lastmod&gt;</span>
+<span class="w">      </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/url&gt;</span>
+<span class="w">   </span><span class="nt">&lt;url&gt;</span>
+<span class="w">      </span><span class="nt">&lt;loc&gt;</span>https://example.org/landingpage2<span class="nt">&lt;/loc&gt;</span>
+<span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2024-01-31<span class="nt">&lt;/lastmod&gt;</span>
+<span class="w">      </span><span class="nt">&lt;changefreq&gt;</span>monthly<span class="nt">&lt;/changefreq&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/url&gt;</span><span class="w">  </span>
+<span class="nt">&lt;/urlset&gt;</span><span class="w"> </span>
 </pre></div>
 </div>
 <div class="admonition tip">
