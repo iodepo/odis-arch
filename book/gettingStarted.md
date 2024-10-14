@@ -220,6 +220,7 @@ reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly
 :
 
 ```xml
+:emphasize-lines: 6, 11
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
