@@ -97,7 +97,7 @@ A simple point reference expressed in JSON-LD/schema.org:
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#" 
     },
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "@type": "Dataset",
     "name": "Data set name",
     "spatialCoverage": {
@@ -125,7 +125,7 @@ potential downstream users.  An intentionally verbose example follows.
         "@vocab": "https://schema.org/",
         "geosparql": "http://www.opengis.net/ont/geosparql#" 
     },
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "@type": "Dataset",
     "name": "Data set name",
     "url": "http://example.org/dataset/X",
@@ -186,7 +186,7 @@ An example for GeoCoordinate follows.
     "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "@type": "Dataset",
     "name": "Data set name",
     "spatialCoverage": {
@@ -231,7 +231,7 @@ variable measured example:
   "@context": {
     "@vocab": "https://schema.org/"
   },
-  "@id": "https://example.org/dataset/12345",
+  "@id": "https://example.org/permanentUrlToThisJsonDoc",
   "@type": "Dataset",
   "variableMeasured": [
     {
@@ -260,7 +260,7 @@ minValue and maxValue.
   "@context": {
     "@vocab": "https://schema.org/"
   },
-  "@id": "https://example.org/dataset/12345",
+  "@id": "https://example.org/permanentUrlToThisJsonDoc",
   "@type": "Dataset",
   "variableMeasured": [
     {
