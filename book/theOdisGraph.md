@@ -1,25 +1,28 @@
 # About this page
 
-This page is aimed at technical teams who wish to link their (meta)data to the ODIS Federation. It clarifies how ODIS Partners should interpret the specifications and standards which are used to share the metadata needed to construct the knowledge graphs used for discovery and other purposes.
+This page is aimed at technical teams who wish to link their (meta)data to the ODIS Federation and its allied networks. It clarifies how ODIS Partners should interpret the specifications and standards which are used to share the metadata needed to construct knowledge graphs used for discovery and other purposes.
 
 # Background
 
-This page documents some particulars of how the ODIS discovery graph is co-implemented by the partners in the ODIS Federation. Consistency in this implementation across Partners is essential for interoperability. 
-
-Each ODIS Partner in the ODIS Federation shares at least one metadata catalogue which lists their digital assets (datasets, software, services, etc), using JSON-LD serialisation/format and, primarily, schema.org semantics. Each of these catalogues can be harvested over the Web and converted into a collective knowledge graph (or other construct, like a triplestore). 
 
 > [!NOTE]
 > A "graph" is an object that consists of "nodes" (which represent things) and the "edges" that connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
 
-IODE provides coordination of the ODIS Federation, through its ODIS Programme Component (https://odis.org). To do so, it harvests all ODIS Partner asset catalogues and constructs a knowledge graph which it serves back to the Federation and any other user on the Web. To enable such integration by IODE (or any other user), it its vital that all partners of the ODIS Federation share common implementation norms for their asset catalogues.
+This page documents some particulars of how the ODIS discovery graph is co-implemented by the partners in the ODIS Federation (henceforth, "Partners"). Consistency in this implementation across Partners is essential for interoperability. 
+
+Each ODIS Partner in the ODIS Federation shares at least one metadata catalogue which lists their digital assets (datasets, software, services, etc), using JSON-LD serialisation/format and, primarily, schema.org semantics. 
+
+Each of these catalogues can be harvested over the Web and converted into a collective knowledge graph (or other construct, like a triplestore).
+
+IODE provides coordination of the ODIS Federation, through its ODIS Programme Component (https://odis.org). To do so, it harvests all ODIS Partner asset catalogues and constructs a knowledge graph which it serves back to the Federation and any other user on the Web. To enable such integration by IODE (or any other user), it is vital that all partners of the ODIS Federation share common implementation norms for their asset / metadata catalogues.
 
 # The ODIS discovery graph: Describing and linking assets across a global partnership
 
 As noted above, the ODIS discovery graph is built from the asset catalogues of the partner systems in the ODIS Federation. Those asset catalogues:
- - tell the Web what entities each ODIS Partner is concerned with (e.g. datasets hosted, services provided, material objects interacted with), representing them as nodes in the graph,
- - provide selected (meta)data about that asset to aid in its discovery and basic characterisation,
- - link (meta)data about each asset to that about others with well-defined relations (graph edges), and
- - link back to the more complete digital representations, subject data, or service endpoints of the assets described (where available).
+ - tell the Web what entities/resources each ODIS Partner is concerned with (e.g. datasets hosted, services provided, material objects interacted with), representing them as nodes in the graph,
+ - provide selected (meta)data about each asset to aid in its discovery and basic characterisation,
+ - link (meta)data about each asset to that about others with well-defined relations (i.e. graph edges qualified by, primarily, schema.org terms), and
+ - link back to complete digital representations, subject data, or service endpoints of the assets described (where available).
 
 As such, the ODIS discovery graph describes and links a wide range of entities that the global partners in the ODIS Federation work with. 
 
@@ -31,12 +34,44 @@ JSON-LD allows graph-friendly representation of digital objects and their proper
 
 ### Objects
 
+> [!NOTE]
+> Some JSON-LD objects are, de facto, FAIR Digital Objects, assuming they are accessible, have a reference node (see below) with a persistent, unique, and dereferenceable identifier, well-described semantics, license and provenance information, and other attributes described in the FAIR Data Principles. All ODIS JSON-LD documents are FAIR Digital Objects.
+
+
 In JSON(-LD) syntax, anything inside a pair of braces ("{}") is an [object](https://datatracker.ietf.org/doc/html/rfc8259#section-4), and one object may have one or more other objects nested within it.  
 
-[Add simple representation]
+This is a basic object 
+```json
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://example.org/id/x",
+  "@type": "Person",
+  "name": "Jane Doe"
+}
+```
 
-> [!NOTE]
-> Some JSON-LD objects are, de facto, FAIR Digital Objects, assuming they have a reference node (see below) with a persistent, unique, and dereferenceable identifier, well-described semantics, license and provenance information, and other attributes described in the FAIR Data Principles.
+Below, the same "Person" object has another object describing a "Place" nested within it, as the value of the `schema:workLocation` property. In the graph world, this means that the nodes (see below) that are linked to and describe the reference node "https://example.org/id/x" are linked (via the workLocation edge) to another cluster of nodes describing a "Place", with reference node "https://place-ids.org/25432".
+
+```json
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@id": "https://example.org/id/x",
+  "@type": "Person",
+  "name": "Jane Doe",
+  "workLocation": {
+    "@type": "Place",
+    "@id": "https://place-ids.org/25432",
+    "address": "54 Ocean Drive, 23521 Ocean City, CountryName",
+    "name": "Place name"
+  }
+}
+
+```
+
 
 ### Nodes
 
@@ -48,6 +83,16 @@ JSON-LD nodes are equivalent to RDF nodes:
 > A node in an RDF graph, either the subject and object of at least one triple. Note that a node can play both roles (subject and object) in a graph, even in the same triple.
 [JSON-LD 1.1 specification - terms imported from other specifications](https://www.w3.org/TR/json-ld/#terms-imported-from-other-specifications)
 
+The JSON-LD examples above translate into the following graphs, where each value is a node and each property is an edge. Depending on which side of an edge a node is, it can be understood as an RDF subject or object. For example, the subject of "name" is the reference node "https://example.org/id/x", and the object of "name" is "Jane Doe", i.e. "the name of the resource identified as 'https://example.org/id/x' in the knowledge graph is 'Jane Doe'".
+
+The basic object describing "Jane Doe" represented as a graph structure looks like: 
+![image](https://github.com/user-attachments/assets/c7635c29-a043-4a50-85a0-e23a754bb587)
+
+The "Jane Doe" object with the nested "Place" object represented as a graph structure looks like: 
+
+![image](https://github.com/user-attachments/assets/a3e5ae13-472d-4529-b928-d6cfc0abd017)
+
+
 #### Typed nodes
 
 >A value with an associated type, also known as a typed value, is indicated by associating a value with an IRI which indicates the value's type.
@@ -55,13 +100,12 @@ JSON-LD nodes are equivalent to RDF nodes:
 
 Some nodes in a JSON-LD graph can be "typed" - in other words, classified as representing a particular entity. This can be read as "this node is of type X". In the ODIS graph, the primary mode of typing follows the node typing convention specified here: https://www.w3.org/TR/json-ld/#dfn-node-type
 
-> ... associates a node type (http://schema.org/BlogPosting) with the node, which is expressed using the @id keyword.
+As an example, dervied from the JSON-LD specification, consider:
 
 ```json
 {
   "@context": {
-    "@vocab": "http://schema.org/",
-    "image": { "@type": "@id" }
+    "@vocab": "http://schema.org/"
   },
   "@id": "http://me.markus-lanthaler.com/",
   "@type": "Person",
@@ -70,6 +114,43 @@ Some nodes in a JSON-LD graph can be "typed" - in other words, classified as rep
 ```
 
 In other words, the node with `@id` "http://me.markus-lanthaler.com/" (which resolves to a JSON-LD document) is declared to be of type "http://schema.org/Person". 
+
+The Types used in ODIS are always [schema.org Types](https://schema.org/docs/full.html) to ensure cross-Federation interoperability. However, schema.org often lacks domain- or application-specific Types. To resolve this, partners can choose the closest schema.org Type relevant to their asset, and then add further classification (e.g. from other semantic resources) using the schema.org `additionalType` property.
+
+For example, schema.org does not have a Type for "Sensor" (which could be used as a value for schema:`instrument`). One can thus use the schema:`Product` Type, and use semantics from the [Semantic Sensor Network Ontology](https://www.w3.org/TR/vocab-ssn/) to add an additional Sensor Type:
+
+```json
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "@id": "http://my-sensor-catalogue.org/23526",
+  "@type": "Product",
+  "additionalType": "http://www.w3.org/ns/sosa/Sensor",
+  "name": "RX-462 magnetometer"
+}
+```
+A more refined way to do this - with richer metadata on the additional type to boost its discoverability, would be:
+
+```json
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "@id": "http://my-sensor-catalogue.org/23526",
+  "@type": "Product",
+  "additionalType": {
+    "@type": "PropertyValue",
+    "propertyID": "http://www.w3.org/ns/sosa/Sensor",
+    "value": {
+       "": 
+       "": "http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC/"
+    } 
+    ,
+   },
+  "name": "Acoustic sensor"
+}
+```
 
 
 #### Reference nodes and the use of `@id`
