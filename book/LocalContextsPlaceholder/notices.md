@@ -32,6 +32,51 @@ In addition to the mappings below, the Notice records can also be added to `usag
 ## Engagement Notice
 
 ### Open to Collaborate Notice
+Added to the dataset.
+
+```json
+{
+    ...
+    "offers": {
+        "@type": "Offer",
+        "offerBy": {
+            {
+                "@type": "Organization",
+                "name": "Example Organization Name"
+            }
+        },
+        "category": "Collaboration",
+        "eligibleCustomerType": "Indigenous Communities",
+        "eligibleRegion": {
+            "@type": "Place",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3280,
+                "longitude": 120.1633
+            },
+            "name": "Textual name of the area served",
+            "description": "Description of the area served"
+        },
+        "ineligibleRegion": {
+            "@type": "Place",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.3280,
+                "longitude": 120.1633
+            },
+            "name": "Textual name of the area served",
+            "description": "Description of the area served"
+        },
+        "validFrom": "2024-09-23T15:00:00.000Z",
+        "validThrough": "2024-09-23T15:00:00.000Z"
+    }
+}
+```
+Only the `type` and `offerBy` sections are required. The rest of the fields are optional. The use of [`category`](https://schema.org/category) should be based on offer being provided (in this case, collaboration). This can be edited to better match whatever the community is offering. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is a specific entity that the community is open to negotiating with. The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or [`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is a specific location or region that the community is or is not open to negotiating with. The use of [`validFrom`](https://schema.org/validFrom) and/or [`validThrough`](https://schema.org/validThrough) should be set if there is a timeframe when the community is interested in collaborating with others.
+
+These are meant to specify the type of data, item, etc. that the Label is being applied to and, thus, will be the thing that the community is requesting negotiations for commercial opportunities.
+
+Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be added to `offers`.
 
 ## Disclosure Notices
 

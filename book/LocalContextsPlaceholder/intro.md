@@ -14,6 +14,9 @@ Indigenous and local communities can reinforce rights with the Traditional Knowl
 
 The Labels and Notices are extra-legal, educational strategies focused on provenance, protocols, and permissions that connect people and places to knowledge and data. Together, the Labels and Notices function to advance aspirations for Indigenous data sovereignty and Indigenous innovation.
 
+## Label Verification
+
+
 [//]: # (Comment for the team:
     Sections
         1. Intro
@@ -21,3 +24,6 @@ The Labels and Notices are extra-legal, educational strategies focused on proven
         3. Labels
         4. Notices
 )
+
+<!-- add Labels and Notices image -->
+<!-- Project Link should be included. Add website certification information so it can be verified, Section: Label Verification -->
