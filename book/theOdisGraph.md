@@ -6,7 +6,7 @@ This page is aimed at technical teams who wish to link their (meta)data to the O
 
 
 > [!NOTE]
-> A "graph" is an object that consists of "nodes" (which represent things) and the "edges" that connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
+> A "graph" is an object that consists of "nodes" (which represent things) and the "edgest connect them (and define how the nodes relate to each other). Intuitively, a graph looks like a network (which is, itself, a kind of graph). 
 
 This page documents some particulars of how the ODIS discovery graph is co-implemented by the partners in the ODIS Federation (henceforth, "Partners"). Consistency in this implementation across Partners is essential for interoperability. 
 
@@ -40,7 +40,8 @@ JSON-LD allows graph-friendly representation of digital objects and their proper
 
 In JSON(-LD) syntax, anything inside a pair of braces ("{}") is an [object](https://datatracker.ietf.org/doc/html/rfc8259#section-4), and one object may have one or more other objects nested within it.  
 
-This is a basic object 
+Below, is a very simple JSON-LD record which contains two objects, one defining the semantic context of the record (i.e. the schema.org vocabulary) which is nested in an object describing a Person named Jane Doe.
+
 ```json
 {
   "@context": {
@@ -83,12 +84,12 @@ JSON-LD nodes are equivalent to RDF nodes:
 > A node in an RDF graph, either the subject and object of at least one triple. Note that a node can play both roles (subject and object) in a graph, even in the same triple.
 [JSON-LD 1.1 specification - terms imported from other specifications](https://www.w3.org/TR/json-ld/#terms-imported-from-other-specifications)
 
-The JSON-LD examples above translate into the following graphs, where each value is a node and each property is an edge. Depending on which side of an edge a node is, it can be understood as an RDF subject or object. For example, the subject of "name" is the reference node "https://example.org/id/x", and the object of "name" is "Jane Doe", i.e. "the name of the resource identified as 'https://example.org/id/x' in the knowledge graph is 'Jane Doe'".
+The JSON-LD records above encode graphs, where each value is a node and each property is an edge. Depending on which side of an edge a node is, it can be understood as an RDF subject or object. For example, the subject of "name" is the reference node "https://example.org/id/x", and the object of "name" is "Jane Doe", i.e. "the name of the resource identified as 'https://example.org/id/x' in the knowledge graph is 'Jane Doe'".
 
 The basic object describing "Jane Doe" represented as a graph structure looks like: 
 ![image](https://github.com/user-attachments/assets/c7635c29-a043-4a50-85a0-e23a754bb587)
 
-The "Jane Doe" object with the nested "Place" object represented as a graph structure looks like: 
+The "Jane Doe" object with the nested "Place" object visualised: 
 
 ![image](https://github.com/user-attachments/assets/a3e5ae13-472d-4529-b928-d6cfc0abd017)
 
@@ -98,7 +99,7 @@ The "Jane Doe" object with the nested "Place" object represented as a graph stru
 >A value with an associated type, also known as a typed value, is indicated by associating a value with an IRI which indicates the value's type.
 >[JSON-LD 1.1 specification - Typed values](https://www.w3.org/TR/json-ld/#typed-values)
 
-Some nodes in a JSON-LD graph can be "typed" - in other words, classified as representing a particular entity. This can be read as "this node is of type X". In the ODIS graph, the primary mode of typing follows the node typing convention specified here: https://www.w3.org/TR/json-ld/#dfn-node-type
+Some nodes in a JSON-LD graph can be "typed" - in other words, classified as representative of a particular entity. This can be read as "this node is of type X". In the ODIS graph, the primary mode of typing follows the node typing convention specified here: https://www.w3.org/TR/json-ld/#dfn-node-type
 
 As an example, dervied from the JSON-LD specification, consider:
 
@@ -126,31 +127,15 @@ For example, schema.org does not have a Type for "Sensor" (which could be used a
   },
   "@id": "http://my-sensor-catalogue.org/23526",
   "@type": "Product",
-  "additionalType": "http://www.w3.org/ns/sosa/Sensor",
+  "additionalType": [
+    "http://www.w3.org/ns/sosa/Sensor",
+    "Sensor"
+  ]
   "name": "RX-462 magnetometer"
 }
 ```
-A more refined way to do this - with richer metadata on the additional type to boost its discoverability, would be:
 
-```json
-{
-  "@context": {
-    "@vocab": "http://schema.org/"
-  },
-  "@id": "http://my-sensor-catalogue.org/23526",
-  "@type": "Product",
-  "additionalType": {
-    "@type": "PropertyValue",
-    "propertyID": "http://www.w3.org/ns/sosa/Sensor",
-    "value": {
-       "": 
-       "": "http://vocab.nerc.ac.uk/collection/R25/current/ACOUSTIC/"
-    } 
-    ,
-   },
-  "name": "Acoustic sensor"
-}
-```
+Notice that both a URL and textual value is included in an array (the value of `additionalType`). This is done to ensure discoverability with both defined URIs/URLs and common string-based names. Text strings used here can be multilingual, to further increase discovery. 
 
 
 #### Reference nodes and the use of `@id`
@@ -171,6 +156,70 @@ As described above, value of the `@type` keyword defines what the thing describe
 >type map
 >A type map is a map value of a term defined with @container set to @type, whose keys are interpreted as IRIs representing the @type of the associated node object; the value must be a node object, or array of node objects. If the value contains a term expanding to @type, its values are merged with the map value when expanding. See the Type Maps section of JSON-LD 1.1 for a normative description.
 [JSON-LD 1.1 specification - type map](https://www.w3.org/TR/json-ld/#dfn-type-map)
+
+#### Multi-typing
+
+JSON(-LD) allows objects to have multiple types, which allows the use of properties from any of the types included (i.e. a superset of all permissable properties for each type). 
+
+While this will pass technical/syntactic validation in many systems, one must be very careful not to type a (reference) node with semantically incompatible type, simply because one wants to use a bigger set of properties. For example, if one types an object as an "Action" and a "Dataset", a semantic conflict occurs: There is no thing in the world that is both an Action and a Dataset at the same time. 
+
+❌Incompatible type semantics
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://myJSONfiles.org/2534645.json",
+    "@type": [
+      "Action",
+      "Dataset"
+    ],
+...
+```
+
+Some types, however, can co-exist. For example, something like a JSON-LD record can be understood as both a "Dataset" and a "DigitalDocument". 
+
+✔️ Compatible type semantics
+
+Fine - compatible semantics
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "https://myJSONfiles.org/2534645.json",
+    "@type": [
+      "DigitalDocument",
+      "Dataset"
+    ],
+...
+```
+
+
+
+TODO: explain why the StructuredValue + other variable type works
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@id": "URL:  Optional. A URL that resolves to *this* JSON-LD document, NOT the URL of the CreativeWork that this JSON-LD document describes. To link to the CreativeWork itself, please use 'url' and/or 'identifier')",
+    "@type": "Action",
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "propertyID": "https://schema.org/hasDigitalDocumentPermission",
+      "value": {
+        "@type": [
+          "StructuredValue",
+          "DigitalDocumentPermission"
+          ],
+        "permissionType": "ReadPermission"
+        }
+    },
+    "actionStatus":  {"@type": "ActionStatusType"},
+...
+```
 
 ### Edges
 
