@@ -159,7 +159,7 @@ sources:
   # California Cooperative Oceanic Fisheries Investigations 
   #
   - name: calcofi
-    propername: California Cooperative Oceanic Fisheries Investigations 
+    propername: California Cooperative Oceanic Fisheries Investigations (CalCOFI)
     catalogue: https://calcofi.org/data/
     domain: https://calcofi.org/
     logo: https://calcofi.org/wp-content/uploads/2021/03/cropped-calcofirose_512_favicon.png
@@ -493,6 +493,23 @@ sources:
     dateadded: 2022-01-26
     active: true
     cron: 0 15 * * 0
+  #
+  # International Seabed Authority
+  #
+  - name: isa
+    propername: International Seabed Authority (ISA)
+    catalogue: https://data.isa.org.jm/
+    domain: https://www.isa.org.jm/
+    logo: https://data.isa.org.jm/static/img/logo.png
+    pid: https://catalogue.odis.org/view/893
+    sourcetype: sitemap
+    url: https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-10-22
+    active: true
+    cron: 0 15 * * 0    
   #
   # MARCO-BOLO
   #
