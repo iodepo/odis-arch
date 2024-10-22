@@ -156,6 +156,24 @@ sources:
     cron: 0 7 * * 0 
     active: true
   #
+  # California Cooperative Oceanic Fisheries Investigations 
+  #
+  - name: calcofi
+    propername: California Cooperative Oceanic Fisheries Investigations 
+    catalogue: https://calcofi.org/data/
+    domain: https://calcofi.org/
+    logo: https://calcofi.org/wp-content/uploads/2021/03/cropped-calcofirose_512_favicon.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/calcofi
+    sourcetype: sitegraph
+    url: https://calcofi.io/workflows/datasets/sitemap.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-10-22
+    cron: 0 2 * * 0
+    active: true
+  #
   # Caribbean Marine Atlas catalogue
   #
   - name: caribbeanmarineatlas
