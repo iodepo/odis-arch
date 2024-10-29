@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-535dcf04-f9a3-11eb-987c-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-535dcf04-f9a3-11eb-987c-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.16666603088379 -30.6666679382324, 8.16666603088379 -17.25, 16.5 -17.25, 16.5 -30.6666679382324, 8.16666603088379 -30.6666679382324))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Commercial longline industry targeting tunas, swordfish, sharks and other large pelagic groups.",
     "keywords": [
         "Fishing",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM EBSA Large pelagic longline fishing (effort)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.6666679382324 8.16666603088379 -17.25 16.5"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_Longline_Effort"
 }

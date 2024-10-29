@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-2695c3da-6192-11ec-9598-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-2695c3da-6192-11ec-9598-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.24328708648682 -30.6581401824951, 8.24328708648682 -17.2429466247559, 16.4548759460449 -17.2429466247559, 16.4548759460449 -30.6581401824951, 8.24328708648682 -30.6581401824951))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The United Nations Convention on Law of the Sea (UNCLOS) indicates that the exclusive economic zone (EEZ) of a coastal state extends 200 nm from the baseline. Within this area, the coastal nation has sole exploitation rights over all natural resources.\nNamibia has ratified this convention. \nDATA SOURCE: Flanders Marine Institute (2019). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 11.  available online at http://www.marineregions.org/.  https://doi.org/10.14284/38",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR EEZ",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.6581401824951 8.24328708648682 -17.2429466247559 16.4548759460449"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_EEZ_area"
 }

@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-a25c909c-0468-11ed-abec-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-a25c909c-0468-11ed-abec-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,7072668075562 -17,2626495361328, 11,7072668075562 -5,56267786026001, 13,8439455032349 -5,56267786026001, 13,8439455032349 -17,2626495361328, 11,7072668075562 -17,2626495361328))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Locais.Método-Digitalização dos Dados em Campo.",
+    "keywords": [
+        "Locais",
+        "Angola"
+    ],
+    "name": "AGO Locais 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.2626495361328 11.7072668075562 -5.56267786026001 13.8439455032349"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_LOC",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_LOC",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_LOC"
 }

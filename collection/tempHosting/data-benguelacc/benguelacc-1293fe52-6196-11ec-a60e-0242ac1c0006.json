@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-1293fe52-6196-11ec-a60e-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-1293fe52-6196-11ec-a60e-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.24328708648682 -30.6581401824951, 8.24328708648682 -17.2429466247559, 16.4548759460449 -17.2429466247559, 16.4548759460449 -30.6581401824951, 8.24328708648682 -30.6581401824951))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Namibian Marine Spatial Planning Areas",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR MSP Areas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.6581401824951 8.24328708648682 -17.2429466247559 16.4548759460449"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_planning_areas0"
 }

@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-4ef2881e-f9a4-11eb-bdfe-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-4ef2881e-f9a4-11eb-bdfe-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.16666603088379 -30.6666679382324, 8.16666603088379 -17.25, 16.5 -17.25, 16.5 -30.6666679382324, 8.16666603088379 -30.6666679382324))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Base data were collated by Dr Carola Kirchner as part of the BCC Spatial Biodiversity Assessment and Spatial Management, including Marine Protected Areas Project, from information held by the National Marine Information and Research Centre (NatMIRC). Effort is given as the number of traps set, and catch in terms of mass (kg). This was normalised into a scale of 0-1, and coded to 5' grid cells.",
     "keywords": [
         "pressures",
         "Namibia"
     ],
     "name": "NAM EBSA Deep sea red crab fishing (effort)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.6666679382324 8.16666603088379 -17.25 16.5"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_Crab_Effort"
 }

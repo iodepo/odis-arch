@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-e3c3016e-63f6-11ec-8fb1-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-e3c3016e-63f6-11ec-8fb1-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.5649785995483 -29.3056163787842, 14.5649785995483 -28.4418983459473, 16.238639831543 -28.4418983459473, 16.238639831543 -29.3056163787842, 14.5649785995483 -29.3056163787842))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Spatial allocation of hydrocarbons (gas) licences within the Namibia ocean space. Licences are granted as predetermined blocks.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Gas fields",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.3056163787842 14.5649785995483 -28.4418983459473 16.238639831543"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_GREE_gas_fields"
 }

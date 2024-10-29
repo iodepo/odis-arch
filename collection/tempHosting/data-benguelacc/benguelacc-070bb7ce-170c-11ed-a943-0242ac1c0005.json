@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-070bb7ce-170c-11ed-a943-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-070bb7ce-170c-11ed-a943-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,6695585250854 -17,2732696533203, 11,6695585250854 -4,99951696395874, 13,8655052185059 -4,99951696395874, 13,8655052185059 -17,2732696533203, 11,6695585250854 -17,2732696533203))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "A linha de costa tem uma extensão de 1.650 Km, é representada por 7 províncias (Cabinda, Zaire, Bengo, Luanda, Cuanza Sul, Benguela e Namibe).  Existem 8 grandes cidades (Cabinda, Soyo, Luanda, Sumbe, Lobito, Benguela, Namibe e Tômbwa).Método-Imagens aéreas da costa Angolana do Google Earth 2011 foram salvas como uma série de imagens georreferenciadas usando o plug-in Shape2Earth para o programa de código aberto MapWindow GIS (disponível em: http://shape2earth.com). As imagens foram capturadas em uma escala consistente (barra de escala do Google Earth a 900 m), embora algumas exceções fossem necessárias devido à qualidade e resolução variadas das imagens do Google Earth. As imagens capturadas foram importadas para ArcMap 10 (ESRI), e serviram como a linha de base em que os shapefiles de habitat costeiro foram digitalizados. A digitalização foi geralmente realizada em uma escala de 1: 8000, embora, como acima, a resolução variada das imagens ocasionalmente necessitasse de um zoom de mais ou menos a partir desta escala de base. A projeção WGS84 (Universal Transverse Mercator) foi usada para todos os shapefiles.",
+    "keywords": [
+        "Costa",
+        "Angola"
+    ],
+    "name": "AGO Linha de Costa 2011",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.2732696533203 11.6695585250854 -4.99951696395874 13.8655052185059"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "Linha_de_costa",
-        "features",
-        "Global"
-    ],
-    "name": "Linha_de_costa_",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:Linha_de_costa"
 }

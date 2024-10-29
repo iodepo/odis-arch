@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-d1fb9b72-67d3-11ec-b131-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-d1fb9b72-67d3-11ec-b131-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.4707698822021 -22.9188232421875, 14.4707698822021 -22.9130229949951, 14.4770364761353 -22.9130229949951, 14.4770364761353 -22.9188232421875, 14.4707698822021 -22.9188232421875))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Inactive spoilground in the Walvis Bay port area",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Inactive spoilground",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-22.9188232421875 14.4707698822021 -22.9130229949951 14.4770364761353"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_MTP_inactive_spoilground0"
 }

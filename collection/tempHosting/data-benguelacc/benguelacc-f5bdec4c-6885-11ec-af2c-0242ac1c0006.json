@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-f5bdec4c-6885-11ec-af2c-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-f5bdec4c-6885-11ec-af2c-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((15.1604299545288 -28.4518508911133, 15.1604299545288 -26.617208480835, 16.2255172729492 -26.617208480835, 16.2255172729492 -28.4518508911133, 15.1604299545288 -28.4518508911133))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Sites where seawater is abstracted for desalination, salt production or industrial use in the southern area.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Seawater abstraction (south)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.4518508911133 15.1604299545288 -26.617208480835 16.2255172729492"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_WA_water_abstraction_south_DWA_2020"
 }

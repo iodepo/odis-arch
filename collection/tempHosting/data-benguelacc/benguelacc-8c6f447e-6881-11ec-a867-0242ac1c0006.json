@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-8c6f447e-6881-11ec-a867-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-8c6f447e-6881-11ec-a867-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.82934284210205 -30.5659313201904, 8.82934284210205 -17.2499980926514, 14.5275173187256 -17.2499980926514, 14.5275173187256 -30.5659313201904, 8.82934284210205 -30.5659313201904))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "West Africa Cable System (WACS), Africa Coast to Europe (ACE) cablesyst em, South Atlantic 3 (SAT-3) and disused South Atlantic 1 (SAT-1) submarine cable.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Underwater cables",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.5659313201904 8.82934284210205 -17.2499980926514 14.5275173187256"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_UI_underwater_cables_202111"
 }

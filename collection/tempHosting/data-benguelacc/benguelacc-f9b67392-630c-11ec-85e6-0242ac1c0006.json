@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-f9b67392-630c-11ec-85e6-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-f9b67392-630c-11ec-85e6-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.3662452697754 -23.3254871368408, 14.3662452697754 -22.8989028930664, 14.5000677108765 -22.8989028930664, 14.5000677108765 -23.3254871368408, 14.3662452697754 -23.3254871368408))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Areas in which a person may not harvest Kabeljou (Argyrosomus Hololepidotus) from January to March each year (Government Gazette  No 5986, 2015)",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Areas resticted for kob fishing",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-23.3254871368408 14.3662452697754 -22.8989028930664 14.5000677108765"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_FISH_kob_restriction_area"
 }

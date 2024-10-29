@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-8cca7e36-694c-11ec-8e87-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-8cca7e36-694c-11ec-8e87-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((7.677234554696233 -29.97835405565207, 7.677234554696233 -16.5192511983747, 15.512244252128317 -16.5192511983747, 15.512244252128317 -29.97835405565207, 7.677234554696233 -29.97835405565207))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Fishing intensity of pelagic longline and pole-line (tuna and swordfish)\nMETHODS:\n· VMS point location data for all vessels in each of the nine fisheries were collated for the period 2014 – 2017. The data were cleaned, including removal of clear errors (e.g. points on land) and clipped to the study area.\n· Points were converted into a raster density layer, using a kernel density approach. This used a 0.005° cell size and a 0.075° search distance using planar units.\n· Density layers were then iteratively explored using a quantile based approach to identify the cut-off for very low density use areas and areas used for transit only, which for all industries identified the bottom 10% - 15% of used areas as being low use or transit only. The calibration was done on an expert basis. It identified the mean density of transit only zones, and then rounded this value up to the next 5 percentile mark. For the next steps only values above this threshold were evaluated.\n· Remaining areas were then split into 10 quantiles, from lower intensity use to highest\nintensity use.\n· The raster was then converted to a polygon layer.\n· Isolated port and anchorage polygons (which would have had high intensity values as vessels are often found there) were manually identified and exclude from the datasets.\n· The above approach gives a set of 10 intensity of use categories from lower intensity use (1) to highest intensity use (10). The areas deliberately exclude very low use areas.",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Fishing intensity of pelagic longline and pole-line",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.97835405565207 7.677234554696233 -16.5192511983747 15.512244252128317"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_FISH_intensity_large_pelagic0"
 }

@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-35e25f66-0466-11ed-abec-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-35e25f66-0466-11ed-abec-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,1544990539551 -28,6421127319336, 11,1544990539551 -3,94752788543701, 16,4741401672363 -3,94752788543701, 16,4741401672363 -28,6421127319336, 11,1544990539551 -28,6421127319336))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Fonte-Harris, LR 2012. Mapeamento da linha costeira do Grande Ecossistema Marinho da Corrente de Benguela 2011: Empreendido para o projeto da Comissão da Corrente de Benguela (BCC) “Avaliação da Biodiversidade Espacial (BCC-SBA) e Gestão Espacial, incluindo Áreas Marinhas Protegidas”. Universidade Metropolitana Nelson Mandela, Port Elizabeth, África do Sul.",
     "keywords": [
-        "AGO_OEM_BASE_coastline_missing_pieces",
-        "features",
-        "Global"
+        "Linha de Costa",
+        "Angola"
     ],
-    "name": "AGO_OEM_BASE_coastline_missing_pieces",
+    "name": "AGO coastline missing pieces 2022",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.6421127319336 11.1544990539551 -3.94752788543701 16.4741401672363"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_coastline_missing_pieces"
 }

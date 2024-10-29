@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-8309bf8e-6874-11ec-8561-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-8309bf8e-6874-11ec-8561-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((12.4245014190674 -28.8953857421875, 12.4245014190674 -16.9876079559326, 25.2362613677979 -16.9876079559326, 25.2362613677979 -28.8953857421875, 12.4245014190674 -28.8953857421875))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Outlines all gazetted district roads for all 14 Regions in Namibia.\nDATA SOURCE: Roads Authority, Road Management System Division, available via NSDI",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR District Roads",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.8953857421875 12.4245014190674 -16.9876079559326 25.2362613677979"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_LI_district_roads"
 }

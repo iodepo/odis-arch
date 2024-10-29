@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-bd00bdbc-5f39-11ec-8d16-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-bd00bdbc-5f39-11ec-8d16-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.24328708648682 -30.6581401824951, 8.24328708648682 -17.2499980926514, 13.9209156036377 -17.2499980926514, 13.9209156036377 -30.6581401824951, 8.24328708648682 -30.6581401824951))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Bathometry features found in Namibian sea, prominent by Walvis Ridge,few canyons and seamounts.\nDATA SOURCE: Harris, P.T., Macmillan-Lawler, M., Rupp, J., Baker, E.K. 2014. Geomorphology\nof the oceans. Marine Geology, 352: 4-24. GEBCO (General Bathymetric Chart of the Oceans) Available at http://www.gebco.net/\ndata_and_poducts/gridded_bathymetry_data/.\nGeomorphology map from www.bluehabitats.org\nMETHODS: Slight manual revision of the Blue Habitats / Harris 2014 global geomorphology\nmap",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Abyssal Classification",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.6581401824951 8.24328708648682 -17.2499980926514 13.9209156036377"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_GREE_abyssal_classification"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-1b0ac7e4-e7d0-11ec-823d-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-1b0ac7e4-e7d0-11ec-823d-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((3.0 -20.0, 3.0 -2.0, 13.4973001480103 -2.0, 13.4973001480103 -20.0, 3.0 -20.0))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Descrição-Em geral a batimetria da costa angolana é caracterizada pela plataforma continental que varia em profundidade. O declive da plataforma ocorre a cerca de 30 a 40km da costa, partir destas profundidades. O acidente mais notável na batimetria ao largo da costa angolana é pronunciado pelo canhão existente na foz do rio congo.",
     "keywords": [
         "AGO_OEM_BASE_BAT",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "AGO_OEM_BASE_BAT",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-20.0 3.0 -2.0 13.4973001480103"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_BAT"
 }

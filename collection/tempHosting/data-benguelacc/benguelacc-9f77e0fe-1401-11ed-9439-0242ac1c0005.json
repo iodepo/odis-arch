@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-9f77e0fe-1401-11ed-9439-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-9f77e0fe-1401-11ed-9439-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((12.994538564979669 -9.111678717408864, 12.994538564979669 -8.860803628588108, 13.160220195157917 -8.860803628588108, 13.160220195157917 -9.111678717408864, 12.994538564979669 -9.111678717408864))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Peninsula do Mussulo",
+    "keywords": [
+        "Mussulo",
+        "Angola"
+    ],
+    "name": "AGO Peninsula do Mussulo 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-9.111678717408864 12.994538564979669 -8.860803628588108 13.160220195157917"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_TUR_PENINSULA_MUSSULO",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_TUR_PENINSULA_MUSSULO",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_TUR_PENINSULA_MUSSULO"
 }

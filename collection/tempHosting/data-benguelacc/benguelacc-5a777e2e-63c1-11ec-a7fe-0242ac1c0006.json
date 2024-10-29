@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-5a777e2e-63c1-11ec-a7fe-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-5a777e2e-63c1-11ec-a7fe-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.65106201171875 -30.5857734680176, 8.65106201171875 -16.2845668792725, 16.6999702453613 -16.2845668792725, 16.6999702453613 -30.5857734680176, 8.65106201171875 -30.5857734680176))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Ecologically or Biologically Significant Marine Areas (EBSA) are regarded as priority areas with ecological properties within our ocean space and require special management of human activities.",
     "keywords": [
         "Current Status Report",
@@ -23,5 +12,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Ecologically or Biologically Significant Marine Areas (EBSA)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.5857734680176 8.65106201171875 -16.2845668792725 16.6999702453613"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_Eco_Bio_Sign_Areas0"
 }

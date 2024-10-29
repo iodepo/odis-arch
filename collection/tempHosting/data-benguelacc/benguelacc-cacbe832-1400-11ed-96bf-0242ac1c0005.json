@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-cacbe832-1400-11ed-96bf-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-cacbe832-1400-11ed-96bf-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((12,1763153076172 -14,7569446563721, 12,1763153076172 -5,56345891952515, 13,4592666625977 -5,56345891952515, 13,4592666625977 -14,7569446563721, 12,1763153076172 -14,7569446563721))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Praias. Método-Digitalização dos Dados levantados em Campo.",
+    "keywords": [
+        "Praia",
+        "Angola"
+    ],
+    "name": "AGO Praia 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-14.7569446563721 12.1763153076172 -5.56345891952515 13.4592666625977"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_AMB_PRAIAS",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_AMB_PRAIAS",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_AMB_PRAIAS"
 }
