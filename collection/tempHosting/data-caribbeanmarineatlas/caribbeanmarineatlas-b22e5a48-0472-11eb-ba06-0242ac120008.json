@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b22e5a48-0472-11eb-ba06-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b22e5a48-0472-11eb-ba06-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-75.918396 9.723159999685478, -75.918396 10.239188999669489, -75.720558 10.239188999669489, -75.720558 9.723159999685478, -75.918396 9.723159999685478))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Representa las zonas donde se ha establecido la presencia de nodriza y desove de la especie Strombus Gigas\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "areas_de_desove_y_nodriza_de_strombus_gigas",
@@ -22,5 +11,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Zonas donde se ha establecido la presencia de nodriza y desove de la especie Strombus Gigas - 2009",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9.723159999685478 -75.918396 10.239188999669489 -75.720558"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:areas_de_desove_y_nodriza_de_strombus_gigas"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-84b85aae-0379-11eb-be6b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-84b85aae-0379-11eb-be6b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-62,5902366638184 11,9853296279907, -62,5902366638184 17,6754035949707, -61,2899894714355 17,6754035949707, -61,2899894714355 11,9853296279907, -62,5902366638184 11,9853296279907))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A mock-up to demonstrate what a climate change initiative layer could look like, possibly to show operational extents or location of the \"blue economy\" or green climate funds.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Global"
     ],
     "name": "CLME: Prototype Climate Change Initiative Locations",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11,9853296279907 -62,5902366638184 17,6754035949707 -61,2899894714355"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:oecs_climate_initiatives"
 }

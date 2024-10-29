@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-fa1d7c9c-0672-11eb-9978-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-fa1d7c9c-0672-11eb-9978-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-173,233306884766 -65,25, -173,233306884766 78,0667037963867, 179,195205688477 78,0667037963867, 179,195205688477 -65,25, -173,233306884766 -65,25))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Global Linear Relative Mean Sea Level (MSL) trends and 95% Confidence Intervals (CI) in mm/year and in ft/century",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Global"
     ],
     "name": "TM_globalstations_linearsealeveltrends",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-65,25 -173,233306884766 78,0667037963867 179,195205688477"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_globalstations_linearsealeveltrends"
 }

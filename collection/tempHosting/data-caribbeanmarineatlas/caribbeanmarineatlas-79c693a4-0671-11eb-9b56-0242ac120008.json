@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-79c693a4-0671-11eb-9b56-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-79c693a4-0671-11eb-9b56-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-88,9637069702148 15,890887260437, -88,9637069702148 18,4901638031006, -87,3767547607422 18,4901638031006, -87,3767547607422 15,890887260437, -88,9637069702148 15,890887260437))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Coastal Planning Regions 3km zone of influence: Produced in 2010 by CZMAI with a preferential scale of 1:100,000.  With a national coverage in polygon format.",
     "keywords": [
         "coastal",
@@ -25,5 +14,12 @@
         "Belize"
     ],
     "name": "TM-BELIZE-Coastal Planning Regions-100.000-2010",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "15,890887260437 -88,9637069702148 18,4901638031006 -87,3767547607422"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:cp_regions_3kmbufferv2"
 }

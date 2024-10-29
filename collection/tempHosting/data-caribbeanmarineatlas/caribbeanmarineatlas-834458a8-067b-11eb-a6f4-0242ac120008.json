@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-834458a8-067b-11eb-a6f4-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-834458a8-067b-11eb-a6f4-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.63815467661484 13.059074491228632, -59.63815467661484 13.33957041070141, -59.444858722720085 13.33957041070141, -59.444858722720085 13.059074491228632, -59.63815467661484 13.059074491228632))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This datasets displays Important Bird & Biodiversity Areas (IBA)  located around the island of Barbados. They are appoximately 8 sites.  This data was provided  by Bird Life Data Zone c.a 1997.",
     "keywords": [
         "export_output",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Important Bird Areas (IBA) - 2009 -1:10000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.059074491228632 -59.63815467661484 13.33957041070141 -59.444858722720085"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:export_output"
 }

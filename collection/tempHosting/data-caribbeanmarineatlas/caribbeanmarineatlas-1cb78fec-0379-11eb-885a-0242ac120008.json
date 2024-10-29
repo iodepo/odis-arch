@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1cb78fec-0379-11eb-885a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1cb78fec-0379-11eb-885a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parties that have ratified/acceded the Minamata Convention on Mercury, in the Americas as of March 2020. The Convention, a global treaty to protect human health and the environment from the adverse effects of mercury, was agreed at the fifth session of the Intergovernmental Negotiating Committee on mercury in Geneva, Switzerland on 19 January 2013 and adopted in Kumamoto, Japan on 10 October 2013 at a Diplomatic Conference (Conference of Plenipotentiaries). The Convention entered into force on 16 August 2017, on the 90th day after the date of deposit of the 50th instrument of ratification, acceptance, approval or accession.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Minamata Convention Ratification Status",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_minamataconvention_geonode"
 }

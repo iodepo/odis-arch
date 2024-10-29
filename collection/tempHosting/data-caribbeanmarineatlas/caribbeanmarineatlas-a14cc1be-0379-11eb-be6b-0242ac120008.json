@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-a14cc1be-0379-11eb-be6b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-a14cc1be-0379-11eb-be6b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76,3085784912109 22,1159038543701, -76,3085784912109 38,5420303344727, -43,6129264831543 38,5420303344727, -43,6129264831543 22,1159038543701, -76,3085784912109 22,1159038543701))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Sargasso Sea Commission was established pursuant to the Hamilton Declaration (March 2014).  The description of the Sargasso Sea Geographical \"Area of Collaboration\" in the Hamilton Declaration in Annex I is a description of the Sargasso Sea ecosystem, excluding the Exclusive Economic Zone (EEZ) and Territorial Sea around Bermuda.",
     "keywords": [
         "3 Regional Coordination",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Sargasso Sea Geographical Area of Collaboration",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "22,1159038543701 -76,3085784912109 38,5420303344727 -43,6129264831543"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:igo_sargassoseageographicalareaofcollaboratio"
 }

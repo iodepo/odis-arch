@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-93a0e7b4-0448-11eb-9acc-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-93a0e7b4-0448-11eb-9acc-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71.85748405046475 17.632923753963375, -71.85748405046475 19.92727559271961, -68.31904349620585 19.92727559271961, -68.31904349620585 17.632923753963375, -71.85748405046475 17.632923753963375))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Zona de Mangles de la República Dominicana",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Dominican Republic"
     ],
     "name": "TV_DOM_Manglares",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17.632923753963375 -71.85748405046475 19.92727559271961 -68.31904349620585"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mangles_1"
 }

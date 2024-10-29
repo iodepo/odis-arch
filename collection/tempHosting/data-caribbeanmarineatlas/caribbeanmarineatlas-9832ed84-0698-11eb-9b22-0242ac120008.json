@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-9832ed84-0698-11eb-9b22-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-9832ed84-0698-11eb-9b22-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71,9686813354492 10,0465211868286, -71,9686813354492 12,8167085647583, -61,7522201538086 12,8167085647583, -61,7522201538086 10,0465211868286, -71,9686813354492 10,0465211868286))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El conjunto de datos contenidos en este archivo corresponde a las zonas de alimentación de aves de distribución marina y costera en el área correspondiente al Mar Caribe venezolano hasta una latitud de trece grados norte.",
     "keywords": [
         "alimentacion_aves",
@@ -23,5 +12,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-VENEZUELA-Alimentación aves",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0465211868286 -71,9686813354492 12,8167085647583 -61,7522201538086"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:alimentacion_aves"
 }

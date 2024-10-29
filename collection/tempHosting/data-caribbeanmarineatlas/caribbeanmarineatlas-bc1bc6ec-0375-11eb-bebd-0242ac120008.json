@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-bc1bc6ec-0375-11eb-bebd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-bc1bc6ec-0375-11eb-bebd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Participating countries in the Global Environment Facility (GEF) Caribbean Regional Fund for Wastewater Management (CReW) project: \"CReW+: An Integrated Approach to Water and Wastewater Management Using Innovative Solutions and Promoting Financing Mechanisms in the Wider Caribbean Region,\" as of March 2020.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: GEF Caribbean Regional Fund for Wastewater Management Project (CReW+)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:prj_crewplus_geonode"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-25319774-0371-11eb-b6ad-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-25319774-0371-11eb-b6ad-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Member states of the Central American Commission for Environment and Development (CCAD by its Spanish initials), which is the environmental body of the Central American Integration System or SICA by its Spanish acronym, as of March 2020.",
     "keywords": [
         "4 Coral Subecosystem",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: CCAD Members",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:igo_sica_ccad_geonode"
 }

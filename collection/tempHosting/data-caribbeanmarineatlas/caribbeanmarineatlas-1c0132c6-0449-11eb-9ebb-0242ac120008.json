@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1c0132c6-0449-11eb-9ebb-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1c0132c6-0449-11eb-9ebb-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-92,1394500732422 13,8088884353638, -92,1394500732422 17,2597236633301, -88,5916595458984 17,2597236633301, -88,5916595458984 13,8088884353638, -92,1394500732422 13,8088884353638))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Guatemala"
     ],
     "name": "TV_GTM_Estaciones_meteorologicas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13,8088884353638 -92,1394500732422 17,2597236633301 -88,5916595458984"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:guatemala_estaciones_meteorologicas"
 }

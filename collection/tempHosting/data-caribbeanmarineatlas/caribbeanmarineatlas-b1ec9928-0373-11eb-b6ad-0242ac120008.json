@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b1ec9928-0373-11eb-b6ad-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b1ec9928-0373-11eb-b6ad-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76,34326171875 -10,0, -76,34326171875 36,0000038146973, -19,9999980926514 36,0000038146973, -19,9999980926514 -10,0, -76,34326171875 -10,0))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer displays the area of competence of the Western Central Atlantic Fishery Commission (WECAFC). It includes FAO Statistical Area 31 and the northern part of Statistical Area 41. The WECAFC competence area covers the entire CLME+ region plus the Gulf of Mexico LME.",
     "keywords": [
         "2 Sustainable Fisheries",
@@ -23,5 +12,12 @@
         "Global"
     ],
     "name": "CLME: FAO WECAFC Area of Competence",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-10,0 -76,34326171875 36,0000038146973 -19,9999980926514"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_wcr_fao_wecafc_outline_20171117_noscale"
 }

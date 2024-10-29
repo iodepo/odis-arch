@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-17b81884-0376-11eb-996b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-17b81884-0376-11eb-996b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-109,236808776855 -0,722361981868744, -109,236808776855 31,8040676116943, -43,9065475463867 31,8040676116943, -43,9065475463867 -0,722361981868744, -109,236808776855 -0,722361981868744))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the competence area of the IOC Sub-Commission for the Caribbean and Adjacent Regions (IOCaribe). The area extends from Cape Hatteras (North Carolina, United States) in the north to the mouth of the Amazon river (Pará State, Brazil) in the south.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: IOCARIBE Area",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-0,722361981868744 -109,236808776855 31,8040676116943 -43,9065475463867"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:iocaribe_area_contour"
 }

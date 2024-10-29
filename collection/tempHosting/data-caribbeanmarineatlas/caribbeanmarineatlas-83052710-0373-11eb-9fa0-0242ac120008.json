@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-83052710-0373-11eb-9fa0-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-83052710-0373-11eb-9fa0-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parties that have ratified/acceded the Regional Agreement on Access to Information, Public Participation and Justice in Environmental Matters (The Escazú Agreement), as of March 2020. The Escazú Agreement was adopted at Escazú, Costa Rica, on 4 March 2018 and shall be ratified by eleven states to enter into force. The objective of the Escazú Agreement is to guarantee the full and effective implementation in Latin America and the Caribbean of the rights of access to environmental information, public participation in the environmental decision-making process and access to justice in environmental matters, and the creation and strengthening of capacities and cooperation, contributing to the protection of the right of every person of present and future generations to live in a healthy environment and to sustainable development.",
     "keywords": [
         "3 Regional Coordination",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Escazú Agreement Ratification Status",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_escazuagreement_geonode"
 }

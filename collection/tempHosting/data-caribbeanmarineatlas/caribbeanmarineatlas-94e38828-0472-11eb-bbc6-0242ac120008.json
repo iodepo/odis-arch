@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-94e38828-0472-11eb-bbc6-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-94e38828-0472-11eb-bbc6-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-81.842728 8.326137999729267, -81.842728 13.400253999574076, -71.26736499999998 13.400253999574076, -71.26736499999998 8.326137999729267, -81.842728 8.326137999729267))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Las praderas de fanerógamas marinas son el ambiente sedimentario somero más productivo. Este ecosistema es reconocido por su efecto estabilizador de la línea de costa, por ser hábitat y refugio de un gran número de especies marinas. En Colombia se encuentran 5 especies de pastos marinos: Thalassia testudinum, Halodule wrightii, Syringodium filiforme, Halophila baillonis y Halophila decipiens.\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Praderas de fanerógamas - 2009",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.326137999729267 -81.842728 13.400253999574076 -71.26736499999998"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:fondos_vegetados_por_fanerogamas"
 }

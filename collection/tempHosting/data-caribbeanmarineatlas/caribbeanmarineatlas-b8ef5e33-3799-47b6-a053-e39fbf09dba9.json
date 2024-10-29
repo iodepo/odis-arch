@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b8ef5e33-3799-47b6-a053-e39fbf09dba9.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b8ef5e33-3799-47b6-a053-e39fbf09dba9.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-89,2031046069999 1,17836496800004, -89,2031046069999 23,2435700000001, -53,9815299999999 23,2435700000001, -53,9815299999999 1,17836496800004, -89,2031046069999 1,17836496800004))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Protected areas of the Caribbean (source IUCN and UNEP-WCMC (2015), The World Database on Protected Areas (WDPA) [On-line], [June 2015], Cambridge, UK: UNEP-WCMC. Available at: www.protectedplanet.net.",
     "keywords": [
         "caribbean_wdpa2015",
@@ -22,5 +11,12 @@
         "Caribbean"
     ],
     "name": "Protected Areas of the Caribbean",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1,17836496800004 -89,2031046069999 23,2435700000001 -53,9815299999999"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:caribbean_wdpa2015"
 }

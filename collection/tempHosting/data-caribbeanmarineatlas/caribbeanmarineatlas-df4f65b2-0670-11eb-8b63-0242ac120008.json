@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-df4f65b2-0670-11eb-8b63-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-df4f65b2-0670-11eb-8b63-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-118,291854858398 16,8333320617676, -118,291854858398 31,8482341766357, -99,9166641235352 31,8482341766357, -99,9166641235352 16,8333320617676, -118,291854858398 16,8333320617676))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Estaciones Mareográficas y Meteorológicas Costeras MEXICO (CICESE, 2018).",
     "keywords": [
         "Direcci�n viento",
@@ -30,5 +19,12 @@
         "Mexico"
     ],
     "name": "tm_MEX_estoceanograficas_cic_2018_200000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "16,8333320617676 -118,291854858398 31,8482341766357 -99,9166641235352"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_mexico_estoceanograficas_cic_2018_200000"
 }

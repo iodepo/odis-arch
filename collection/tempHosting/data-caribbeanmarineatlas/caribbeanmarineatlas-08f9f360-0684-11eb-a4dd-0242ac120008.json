@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-08f9f360-0684-11eb-a4dd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-08f9f360-0684-11eb-a4dd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.42375550809226 7.760625752241838, -77.42375550809226 12.455985162963044, -71.10733603151714 12.455985162963044, -71.10733603151714 7.760625752241838, -77.42375550809226 7.760625752241838))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Este producto contiene información temática de Geomorfología en la costa caribe colombiana, actualizada a partir de los  diferentes estudios existentes. Esta disponible en formato análogo a esacala 1:100.000 y formato digital.\n\nPosada, P., Blanca Oliva u Henao P., William, 2008. Diagnóstico de la erosión en la zona costera del Caribe colombiano. INVEMAR. Serie de publicaciones especiales No. 13, Santa Marta, 200 paginas.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Geomorfología-2009-100.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.760625752241838 -77.42375550809226 12.455985162963044 -71.10733603151714"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:geomorfologia"
 }

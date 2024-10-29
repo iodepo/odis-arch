@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-878840c0-0449-11eb-830b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-878840c0-0449-11eb-830b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-83.063896 1.4305299999528402, -83.063896 14.989465999527996, -71.853287 14.989465999527996, -71.853287 1.4305299999528402, -83.063896 1.4305299999528402))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Áreas Marinas y Costeras Protegidas de Colombia",
     "keywords": [
         "AMP",
@@ -25,5 +14,12 @@
         "Colombia"
     ],
     "name": "TV_CO_AreasMarinasYCosterasProtegidas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1.4305299999528402 -83.063896 14.989465999527996 -71.853287"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_co_areasmarinasprotegidas"
 }

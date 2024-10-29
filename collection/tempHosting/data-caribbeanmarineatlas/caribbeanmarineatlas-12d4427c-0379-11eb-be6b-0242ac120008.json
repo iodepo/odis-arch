@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-12d4427c-0379-11eb-be6b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-12d4427c-0379-11eb-be6b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-98.0010604858398 10.0903844833374, -98.0010604858398 31.0033702850342, -60.6640434265137 31.0033702850342, -60.6640434265137 10.0903844833374, -98.0010604858398 10.0903844833374))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Approximate boundaries of marine spatial planning efforts in the wider Caribbean region with associated phase in planning.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Global"
     ],
     "name": "CLME: Marine Spatial Planning (MSP) Areas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.0903844833374 -98.0010604858398 31.0033702850342 -60.6640434265137"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:gov_mspefforts_2020"
 }

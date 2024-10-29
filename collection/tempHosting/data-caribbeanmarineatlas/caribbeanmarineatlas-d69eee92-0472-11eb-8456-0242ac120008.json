@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-d69eee92-0472-11eb-8456-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-d69eee92-0472-11eb-8456-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-81.736069 7.893856999742957, -81.736069 13.391539999574325, -72.001549 13.391539999574325, -72.001549 7.893856999742957, -81.736069 7.893856999742957))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Red de Vigilancia para la Conservación y Protección de las Aguas Marinas y Costeras de Colombia\n\nLa Red de Monitoreo de la Calidad de aguas marinas y costeras de Colombia (REDCAM), es un programa de carácter interinstitucional y es una herramienta útil para la gestión y toma de decisiones del Ministerio del Ambiente y Desarrollo Sostenible (MADS) y de las Corporaciones Autónomas Regionales con injerencia costeras y en general del SINA, en temas de contaminación marina-costera.",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM_COLOMBIA_Estaciones REDCAM",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.893856999742957 -81.736069 13.391539999574325 -72.001549"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:redcam"
 }

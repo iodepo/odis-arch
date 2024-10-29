@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-411cd032-0684-11eb-bbe0-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-411cd032-0684-11eb-bbe0-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76.943542 8.017886999739023, -76.943542 10.223014999669987, -75.535385 10.223014999669987, -75.535385 8.017886999739023, -76.943542 8.017886999739023))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Describe las áreas donde se observa presencia de playones fluviomarinos, son planos que se forman en la desembocaduras de ríos que arrastran un gran volumen de sedimentos.\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "Colombia",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Playones Fluviomarinos-2009-500.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.017886999739023 -76.943542 10.223014999669987 -75.535385"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:playones_fluviomarinos"
 }

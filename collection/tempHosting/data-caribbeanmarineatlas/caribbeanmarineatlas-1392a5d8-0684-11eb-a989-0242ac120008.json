@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1392a5d8-0684-11eb-a989-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1392a5d8-0684-11eb-a989-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.13266 7.6457969997508375, -77.13266 8.254552999731532, -76.737091 8.254552999731532, -76.737091 7.6457969997508375, -77.13266 7.6457969997508375))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Describe las áreas donde se observa presencia de bosques de panganales. Esta asociación ocupa una gran extensión en la zona delto-estuarina del río Atrato. Corresponde a una palma, familia Arecaceae, cuya especie es Raphia taediguera conocida como palma pangana.\n\nAlonso, D., Ramirez, L. F., Segura- Quintero, C. y P.\nCastillo-Torres. 2007. Planificación Ecorregional para la conservación de la biodiversidad in situ marino costera del Caribe continental colombiano. Informe técnico\nfinal. INVEMAR-TNC, Santa Marta-Colombia, 94 p.+ anexos.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Panganales",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.6457969997508375 -77.13266 8.254552999731532 -76.737091"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:panganales_costeros"
 }

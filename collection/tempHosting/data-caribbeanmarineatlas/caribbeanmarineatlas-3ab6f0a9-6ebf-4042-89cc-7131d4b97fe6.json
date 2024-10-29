@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-3ab6f0a9-6ebf-4042-89cc-7131d4b97fe6.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-3ab6f0a9-6ebf-4042-89cc-7131d4b97fe6.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178.8792965014462 -53.5702819912373, -178.8792965014462 76.25612640593101, 178.58825600378378 76.25612640593101, 178.58825600378378 -53.5702819912373, -178.8792965014462 -53.5702819912373))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "UBC-003-SAU-Estuaries2003-Polygons",
     "keywords": [
         "ArcGIS REST MapServer",
@@ -28,5 +17,12 @@
         "Kiribati"
     ],
     "name": "UBC-003-SAU-Estuaries2003-Polygons",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-53.5702819912373 -178.8792965014462 76.25612640593101 178.58825600378378"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpec2-54-204-216-109compute-1amazonawscom6080arcgisrestservicesmarineubc_003_sau_estuariesmapserver:0-ubc-003-sau-estuaries2003-polygons"
 }

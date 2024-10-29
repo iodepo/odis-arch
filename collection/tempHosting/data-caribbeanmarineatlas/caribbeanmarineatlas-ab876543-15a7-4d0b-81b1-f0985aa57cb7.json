@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-ab876543-15a7-4d0b-81b1-f0985aa57cb7.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-ab876543-15a7-4d0b-81b1-f0985aa57cb7.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.66600322925972 13.031412702558404, -59.66600322925972 13.351630420224227, -59.40052330571333 13.351630420224227, -59.40052330571333 13.031412702558404, -59.66600322925972 13.031412702558404))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Land cover map of Barbados. Forest formation and land cover maps for several Caribbean islands were developed from satellite imagery as part of a multi-organizational project. For the map of Barbados (Helmer et al., 2008), we used decision tree software as the original approach to classify Landsat ETM+ images. Unfortunately the high cloud cover in the available Landsat images led to a low-quality classified map in many areas. Ikonos images for the years 2001 and 2002 where obtained and used as the basis to classify most of the island by \"heads-up\" digitizing. The forest classification scheme relates closely to that of Areces-Malea et al. (Areces-Mallea et al., 1999), with modifications similar to those in Helmer et al. (Helmer et al., 2002).\nThis is version 2 of the Barbados map. In this version, the high resolution imagery viewable on Google Earth was used to interpret land cover in areas that were cloud-obscured in the original map and imagery. In addition, a projection problem was corrected.\nCitation: Helmer, E.H.; Kennaway, T.A.; Pedreros, D.H.; Clark, M.L.; Marcano-Vega, H.; Tieszen, L.L., Ruzycki, T.R.; Schill, S.R.; Carrington, C.M.S. 2008. Land cover and forest formation distributions for St. Kitts, Nevis, St. Eustatius, Grenada and Barbados from decision tree classification of cloud-cleared satellite imagery. Caribbean Journal of Science. 44(2):175-198.\nData are posted at the FSGeodata Clearinghouse (<https://data.fs.usda.gov/geodata/>).",
     "keywords": [
         "geonode_iitf_cjs44_barbados_landcov_v2_geotiff",
@@ -24,5 +13,12 @@
         "Barbados"
     ],
     "name": "BARBADOS LAND COVER v2",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.031412702558404 -59.66600322925972 13.351630420224227 -59.40052330571333"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:geonode_iitf_cjs44_barbados_landcov_v2_geotiff"
 }

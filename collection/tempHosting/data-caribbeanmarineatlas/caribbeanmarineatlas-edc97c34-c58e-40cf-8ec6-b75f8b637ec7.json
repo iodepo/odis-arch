@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-edc97c34-c58e-40cf-8ec6-b75f8b637ec7.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-edc97c34-c58e-40cf-8ec6-b75f8b637ec7.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-180.0 -50.315000337, -180.0 30.372393704, 180.0 30.372393704, 180.0 -50.315000337, -180.0 -50.315000337))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "International Park fees (USD $) obtained from Van Zyl et al. 2019 National park entrance fees: a global benchmarking focused on affordability PARKS VOL 25.1 MAY 2019",
     "keywords": "Global",
     "name": "International Park fees",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-50.315000337 -180.0 30.372393704 180.0"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:int_park_fees_lit"
 }

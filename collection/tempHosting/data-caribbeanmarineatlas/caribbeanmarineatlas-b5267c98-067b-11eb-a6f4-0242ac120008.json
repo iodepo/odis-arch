@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b5267c98-067b-11eb-a6f4-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b5267c98-067b-11eb-a6f4-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.581903594127425 13.045896771048776, -59.581903594127425 13.070279550104498, -59.530279289726515 13.070279550104498, -59.530279289726515 13.045896771048776, -59.581903594127425 13.045896771048776))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset shows the seagrass beds around the south and west coast of the island .This data was provided by the Coastal Zone Management Unit of Barbados ca.1997.",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Seagrass Beds - 1997 - 1:5000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.045896771048776 -59.581903594127425 13.070279550104498 -59.530279289726515"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:seagrass_2"
 }

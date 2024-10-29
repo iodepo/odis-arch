@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b9a41df0-0457-11eb-8edd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b9a41df0-0457-11eb-8edd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,7294464111328 9,83194351196289, -61,7294464111328 12,3314275741577, -57,2869148254395 12,3314275741577, -57,2869148254395 9,83194351196289, -61,7294464111328 9,83194351196289))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The marine zone S3 used for ICZM.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_and_Tobago_ICZM_marine_zone_s3_EEZ_2014_25000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9,83194351196289 -61,7294464111328 12,3314275741577 -57,2869148254395"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_trinidad_and_tobago_iczm_marine_zone_s3_ee"
 }

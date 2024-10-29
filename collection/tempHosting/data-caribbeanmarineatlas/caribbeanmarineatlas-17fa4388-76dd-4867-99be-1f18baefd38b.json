@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-17fa4388-76dd-4867-99be-1f18baefd38b.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-17fa4388-76dd-4867-99be-1f18baefd38b.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179,961274445 -50,233333333, -179,961274445 23,2275097150001, 179,844382436 23,2275097150001, 179,844382436 -50,233333333, -179,961274445 -50,233333333))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Marine Habitat Structure indicators:\n- The Habitat Complexity Indicator (HCI) is obtained using the GEBCO data set of bathymetry (1Km resolution). We calculated the standard deviation of bathymetry. Bathymetry documents the changing morphology of the substrate and its standard deviation provides information on the vertical relief variability. We used the standard deviation + the minimum and the maximum of the bathymetry of each MPAs to run a multivariate analyses and classify the habitats most likely to support a larger variety of species as topographic complexity is correlated to species diversity. The value range is from 1 (flat) to 10 (high complexity);",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "Marine Habitat Structure indicators - Habitat Complexity Indicator (HCI)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-50,233333333 -179,961274445 23,2275097150001 179,844382436"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:wdpa_bath_class_acp_wgs84"
 }

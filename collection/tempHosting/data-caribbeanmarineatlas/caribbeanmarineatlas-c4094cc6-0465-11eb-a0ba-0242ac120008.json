@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-c4094cc6-0465-11eb-a0ba-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-c4094cc6-0465-11eb-a0ba-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-96,1333312988281 9,34999942779541, -96,1333312988281 29,9500007629395, -59,6166687011719 29,9500007629395, -59,6166687011719 9,34999942779541, -96,1333312988281 9,34999942779541))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": [
         "car_cruise_ship_ports",
@@ -22,5 +11,12 @@
         "Caribbean"
     ],
     "name": "BM-CARIBBEAN-Cruise ship ports",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9,34999942779541 -96,1333312988281 29,9500007629395 -59,6166687011719"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:car_cruise_ship_ports"
 }

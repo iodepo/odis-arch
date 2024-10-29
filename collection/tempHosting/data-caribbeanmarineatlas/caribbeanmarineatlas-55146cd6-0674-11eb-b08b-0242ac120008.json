@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-55146cd6-0674-11eb-b08b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-55146cd6-0674-11eb-b08b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.653996998326946 13.045260404412016, -59.653996998326946 13.330770494646478, -59.418943075504345 13.330770494646478, -59.418943075504345 13.045260404412016, -59.653996998326946 13.045260404412016))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dateset displays beaches around the island of Barbados.  This dataset began with a compilation of various datasets, supplemented with any original digitization efforts. This information was then checked against high resolution satellite imagery where available from Bing and Esri imagery basemaps. Errors and misrepresentations in the base information were modified through heads up digitization from the high resolution imagery. Omissions of coverage were corrected by creating new polygons to match visible beaches.",
     "keywords": [
         "beaches",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Beaches - 2015 -1 :5000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.045260404412016 -59.653996998326946 13.330770494646478 -59.418943075504345"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:beaches0"
 }

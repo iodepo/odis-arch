@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-d0ea00d0-0455-11eb-8cbd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-d0ea00d0-0455-11eb-8cbd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-60,8417320251465 11,1351490020752, -60,8417320251465 11,3283100128174, -60,5269050598145 11,3283100128174, -60,5269050598145 11,1351490020752, -60,8417320251465 11,1351490020752))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Shoreline stability measures (eroding, accreting or in dynamic equilibrium) for beaches monitored by the IMA as part of the Coastal Conservation programme from 2004 to 2008",
     "keywords": [
         "accrete",
@@ -27,5 +16,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Tobago_shoreline_stability_assessment_2008_25000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11,1351490020752 -60,8417320251465 11,3283100128174 -60,5269050598145"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_tobago_shoreline_stability_assessment_2008"
 }

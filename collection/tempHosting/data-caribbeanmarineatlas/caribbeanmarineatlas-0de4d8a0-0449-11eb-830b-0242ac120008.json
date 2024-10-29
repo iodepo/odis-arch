@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-0de4d8a0-0449-11eb-830b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-0de4d8a0-0449-11eb-830b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-175,134521484375 -32,1938743591309, -175,134521484375 40,4433517456055, 179,999603271484 40,4433517456055, 179,999603271484 -32,1938743591309, -175,134521484375 -32,1938743591309))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "UNEP-WCMC (1999). Global distribution of sea turtle nesting sites (version 1.1, updated by UNEP-WCMC). Cambridge (UK): UNEP World Conservation Monitoring\nCentre. URL: http://data.unep-wcmc.org/datasets/22\n\nThis dataset shows the known locations of sea turtle nesting sites, for all seven species: hawksbill turtle (Eretmochelys imbricata), Kemp's ridley turtle\n(Lepidochelys kempii), leatherback turtle (Dermochelys coriacea), green turtle (Chelonia mydas), loggerhead turtle (Caretta caretta), olive ridley turtle (Lepidochelys olivacea), and flatback turtle (Natator depressus).",
     "keywords": [
         "_014_001_wcmc007_turtlenestingsites1999_v1_1",
@@ -30,5 +19,12 @@
         "Global"
     ],
     "name": "TV_Global Distribution of Sea Turtle Nesting Sites (1999)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-32,1938743591309 -175,134521484375 40,4433517456055 179,999603271484"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a__014_001_wcmc007_turtlenestingsites1999_v1_1"
 }

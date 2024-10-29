@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-8aef3042-0684-11eb-877c-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-8aef3042-0684-11eb-877c-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.38286599999999 7.732553999748078, -77.38286599999999 12.756206999593127, -70.503616 12.756206999593127, -70.503616 7.732553999748078, -77.38286599999999 7.732553999748078))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Usos del suelo de la costa Caribe\n\nINVEMAR. Programa holandés de asistencia para estudios en cambio climático NCCSAP: Colombia. Definición de la vulnerabilidad de los sistemas bio-geofísicos y socioeconómicos debido a un cambio en el nivel del mar en la zona costera colombiana (Caribe continental, Caribe insular y Pacífico) y medidas para su adaptación. Vides, M. Editor.  Instituto de Investigaciones Marinas y Costeras \"José Benito Vives de Andréis\". Santa Marta. 2003.",
     "keywords": [
         "Colombia",
@@ -25,5 +14,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Usos del suelo-2003-300.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.732553999748078 -77.38286599999999 12.756206999593127 -70.503616"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:usoactual"
 }

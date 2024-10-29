@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-f4ff8e48-0470-11eb-ba3b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-f4ff8e48-0470-11eb-ba3b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76.92617 8.02300599973886, -76.92617 12.434866999602713, -71.554993 12.434866999602713, -71.554993 8.02300599973886, -76.92617 8.02300599973886))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Este vector muestra el objeto de conservación referente a las áreas donde se ha tenido reporte de presencia de crocodylus acutus.\n\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.\n\n\nA pesar de que se tienen identificadas las áreas donde se localiza esta especie, no se dispone de información georeferenciada que permita representarlas  gráficamente. En este caso la estrategia utilizada fue demarcar con ayuda de los expertos los sitios con poblaciones de C. acutus en el SIG y posteriormente generar un buffer de 500 a 1000 m según el área. Los puntos se marcaron de acuerdo a los sitos reportados,\nasociados a desembocaduras de los caños en las Ciénagas o en los Estuarios (Ulloa, com. pers., 2006).",
     "keywords": [
         "concentracion_de_crocodrylus_acutus",
@@ -22,5 +11,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Área con presencia de Crocodylus acutus - 2009",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.02300599973886 -76.92617 12.434866999602713 -71.554993"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:concentracion_de_crocodrylus_acutus"
 }

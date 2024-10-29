@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-3a66bc6e-044d-11eb-a0f3-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-3a66bc6e-044d-11eb-a0f3-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-78,3467025756836 17,8657608032227, -78,3467025756836 18,5237731933594, -76,242805480957 18,5237731933594, -76,242805480957 17,8657608032227, -78,3467025756836 17,8657608032227))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Data was created under the Jamaican Coastal Project in 1997. The output of the project, A Coastal Atlas of Jamaica, was prepared by the Natural Resources Conservation Authority (NRCA) and Uppsala University, Sweden.",
     "keywords": [
         "a_roads_1",
@@ -23,5 +12,12 @@
         "Jamaica"
     ],
     "name": "TV_JAM_JAMAICA-Class A Roads",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17,8657608032227 -78,3467025756836 18,5237731933594 -76,242805480957"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a_roads_10"
 }

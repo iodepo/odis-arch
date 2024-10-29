@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e8ff88a5-ee1a-486c-9dc5-23697d73259e.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e8ff88a5-ee1a-486c-9dc5-23697d73259e.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-99.00100747375966 19.284116364154677, -99.00100747375966 36.118637629270424, -79.09370243483018 36.118637629270424, -79.09370243483018 19.284116364154677, -99.00100747375966 19.284116364154677))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "CMECS - Chlorophyll - Summer",
     "keywords": [
         "Global",
@@ -25,5 +14,12 @@
         "Kiribati"
     ],
     "name": "CMECS - Chlorophyll - Summer",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "19.284116364154677 -99.00100747375966 36.118637629270424 -79.09370243483018"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpsgisngdcnoaagovarcgisrestservicesgulfdataatlascmecs_chlorophyllmapserver:3-cmecs-chlorophyll-summer"
 }

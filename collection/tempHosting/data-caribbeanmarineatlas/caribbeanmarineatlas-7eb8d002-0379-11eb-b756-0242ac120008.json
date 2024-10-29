@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-7eb8d002-0379-11eb-b756-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-7eb8d002-0379-11eb-b756-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parties that have ratified/acceded and/or have regional regulation of the Agreement on Port State Measures to Prevent, Deter and Eliminate Illegal, Unreported and Unregulated Fishing (PSMA), in the Americas as of March 2020. The Agreement was approved by the United Nations Food and Agriculture Organization (FAO) at its FAO Conference Thirty-sixth Session in Rome, Italy on 18-23 November 2009 under paragraph 1 of Article XIV of the FAO Constitution, through Resolution No 12/2009 dated 22 November 2009. The Agreement entered into force on 5 June 2016.",
     "keywords": [
         "2 Sustainable Fisheries",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Parties to the Agreement on Port State Measures (PSMA)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_fao_pmsa_geonode"
 }

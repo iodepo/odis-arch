@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-4f91f542-0671-11eb-8b63-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-4f91f542-0671-11eb-8b63-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,9302024841309 10,0438718795776, -61,9302024841309 11,3466835021973, -60,5172920227051 11,3466835021973, -60,5172920227051 10,0438718795776, -61,9302024841309 10,0438718795776))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Population_coastal_municipalities_2000",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TM_TTO_Population_coastal_municipalities_2000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0438718795776 -61,9302024841309 11,3466835021973 -60,5172920227051"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_tto_population_coastal_municipalities_rp"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-23a25c50-f2e5-45d2-ad0f-8529b8f5e816.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-23a25c50-f2e5-45d2-ad0f-8529b8f5e816.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-97.54828828821904 23.992992104168856, -97.54828828821904 31.19547816403668, -79.88386154688851 31.19547816403668, -79.88386154688851 23.992992104168856, -97.54828828821904 23.992992104168856))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Harmful Algal Blooms (K. brevis)",
     "keywords": [
         "Global",
@@ -25,5 +14,12 @@
         "Kiribati"
     ],
     "name": "Harmful Algal Blooms (K. brevis)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "23.992992104168856 -97.54828828821904 31.19547816403668 -79.88386154688851"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpscoastnoaagovarcgisrestservicesoceanreportingtoolharmfulalgalbloomsmapserver:0-harmful-algal-blooms-k-brevis"
 }

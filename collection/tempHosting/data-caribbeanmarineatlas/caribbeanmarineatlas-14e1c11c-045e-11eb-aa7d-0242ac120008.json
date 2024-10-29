@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-14e1c11c-045e-11eb-aa7d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-14e1c11c-045e-11eb-aa7d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,1898956298828 9,84134483337402, -61,1898956298828 10,8881664276123, -60,2703704833984 10,8881664276123, -60,2703704833984 9,84134483337402, -61,1898956298828 9,84134483337402))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The substrait type off the east coast was gathered based upon participatory mapping of fisherkfolk.",
     "keywords": [
         "features",
@@ -27,5 +16,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_substrait_type_off_east_coast_Trinidad_2002",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9,84134483337402 -61,1898956298828 10,8881664276123 -60,2703704833984"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_trinidad_substrait_type_off_east_coast_tri"
 }
