@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-cd9eb630-0457-11eb-9e32-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-cd9eb630-0457-11eb-9e32-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.497889327390894 10.543917718896092, -61.497889327390894 10.624933925080324, -61.425452077989604 10.624933925080324, -61.425452077989604 10.543917718896092, -61.497889327390894 10.543917718896092))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Human pressures have placed many tropical estuaries in developing countries under increased levels of stress. The Caroni Swamp Ramsar Site, the largest mangrove swamp along the west coast of Trinidad, has been subjected to high levels of anthropogenic impacts including hydrological alteration and pollution from land-based sources since the 1920’s. While most of these impacts have been well documented, limited information exists on the macrobenthic communities in the swamp. This study addresses the paucity of information. The macrobenthic fauna in the main waterways of Caroni Swamp was sampled at 12 locations using a Van Veen 0.025 m2 grab, once in the dry (April) and wet (August) season of 2015 with a total of 144 samples.",
     "keywords": [
         "abund",
@@ -25,5 +14,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_Caroni_Swamp_Macrobenthic_Abundance_2015",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.543917718896092 -61.497889327390894 10.624933925080324 -61.425452077989604"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:abund"
 }

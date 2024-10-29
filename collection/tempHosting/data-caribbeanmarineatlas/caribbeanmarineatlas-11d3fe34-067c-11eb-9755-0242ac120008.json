@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-11d3fe34-067c-11eb-9755-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-11d3fe34-067c-11eb-9755-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-89,8333358764648 8,39999866485596, -89,8333358764648 23,209300994873, -61,0199966430664 23,209300994873, -61,0199966430664 8,39999866485596, -89,8333358764648 8,39999866485596))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": [
         "features",
@@ -26,5 +15,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-Caribbean-invasive_species",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8,39999866485596 -89,8333358764648 23,209300994873 -61,0199966430664"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:invasive_species_r"
 }

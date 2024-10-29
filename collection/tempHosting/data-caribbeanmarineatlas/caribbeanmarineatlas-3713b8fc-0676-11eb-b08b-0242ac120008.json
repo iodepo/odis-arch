@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-3713b8fc-0676-11eb-b08b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-3713b8fc-0676-11eb-b08b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-88,9362487792969 15,8897151947021, -88,9362487792969 18,1994819641113, -87,4560775756836 18,1994819641113, -87,4560775756836 15,8897151947021, -88,9362487792969 15,8897151947021))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Produced in 2010 by CZMAI/Natural Capital Project with a preferential scale of 1:100,000.  With a national coverage in polygon format.",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Belize"
     ],
     "name": "TM_BELIZE_Seagrass_100.000_2010",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "15,8897151947021 -88,9362487792969 18,1994819641113 -87,4560775756836"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:seagrassv2"
 }

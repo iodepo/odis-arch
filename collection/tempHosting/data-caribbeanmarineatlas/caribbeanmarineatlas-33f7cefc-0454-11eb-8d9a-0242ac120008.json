@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-33f7cefc-0454-11eb-8d9a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-33f7cefc-0454-11eb-8d9a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-60.84582722414322 11.131881990529854, -60.84582722414322 11.349243802542215, -60.517071404636894 11.349243802542215, -60.517071404636894 11.131881990529854, -60.84582722414322 11.131881990529854))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "In the development of the Integrated Coastal Zone policy for Trinidad and Tobago zones were needed to develop targeted policies. This zone was determined largely based upon elevation, threats from storm surges and projected sea level rise.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Tobago_ICZM_terrestrial_zone_T1_area_of_immediate_impact_2014_25000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11.131881990529854 -60.84582722414322 11.349243802542215 -60.517071404636894"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:zone_t1_tobago"
 }

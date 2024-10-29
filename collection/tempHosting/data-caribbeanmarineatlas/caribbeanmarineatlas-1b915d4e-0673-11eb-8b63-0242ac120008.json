@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1b915d4e-0673-11eb-8b63-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1b915d4e-0673-11eb-8b63-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-180,000015258789 -89,9000015258789, -180,000015258789 86,9194030761719, 180,0 86,9194030761719, 180,0 -89,9000015258789, -180,000015258789 -89,9000015258789))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions.\nsee http://www.marineregions.org/sources.php#meow",
     "keywords": [
         "Biogeography",
@@ -26,5 +15,12 @@
         "Global"
     ],
     "name": "TM_Marine Ecoregions of the World (MEOW)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-89,9000015258789 -180,000015258789 86,9194030761719 180,0"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:meow_ecos"
 }

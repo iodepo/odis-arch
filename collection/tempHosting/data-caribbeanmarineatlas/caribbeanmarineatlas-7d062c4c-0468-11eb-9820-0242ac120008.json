@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-7d062c4c-0468-11eb-9820-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-7d062c4c-0468-11eb-9820-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-78.40526016267286 17.460770311665208, -78.40526016267286 18.517732375074967, -76.18050185442092 18.517732375074967, -76.18050185442092 17.460770311665208, -78.40526016267286 17.460770311665208))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Protected Areas across Jamaica, including game reserves, protected areas, marine parks, national parks and forest reserves. Both declared and proposed protected areas are shown, along with details pertaining to the act under which each was declared and the date of declaration.\n\nNational Environment and Planning Agency (NEPA) and Mona GeoInformatics Institute (MGI)",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Jamaica"
     ],
     "name": "BV_JAM_Jamaica, Caribbean, Protected Areas, 2010, 1:1,280,000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17.460770311665208 -78.40526016267286 18.517732375074967 -76.18050185442092"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:protected_areas"
 }

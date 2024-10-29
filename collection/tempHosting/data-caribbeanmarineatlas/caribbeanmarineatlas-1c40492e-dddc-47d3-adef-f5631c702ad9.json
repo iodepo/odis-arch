@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1c40492e-dddc-47d3-adef-f5631c702ad9.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1c40492e-dddc-47d3-adef-f5631c702ad9.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179,9999999999 -46,9803396039999, -179,9999999999 26,5862205282548, 180,0000000001 26,5862205282548, 180,0000000001 -46,9803396039999, -179,9999999999 -46,9803396039999))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Entirely terrestrial protected areas of the entire ACP region (79 countries plus S. Sudan, plus disputed territories) (source IUCN and UNEP-WCMC (2015), The World Database on Protected Areas (WDPA) [On-line], [July 2015], Cambridge, UK: UNEP-WCMC. Available at: www.protectedplanet.net.\n\nIncludes all PAs with Marine = 0. Combines polygons and buffered points.",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "Terrestrial Protected Areas of Africa, Caribbean, Pacific (ACP)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-46,9803396039999 -179,9999999999 26,5862205282548 180,0000000001"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:wdpa_july2015_mergpolspnts_acp_terr_all"
 }

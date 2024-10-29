@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-799781fe-067b-11eb-a9ca-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-799781fe-067b-11eb-a9ca-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.64436022983627 13.061529516058975, -59.64436022983627 13.249656391484555, -59.460663993476025 13.249656391484555, -59.460663993476025 13.061529516058975, -59.64436022983627 13.061529516058975))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset delineates Barbados national mangrove cover based on satellite-based mapping of Barbados mangroves . This dataset was provided in 2012.",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Mangroves - 2012 - 1:5000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.061529516058975 -59.64436022983627 13.249656391484555 -59.460663993476025"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mangroves"
 }

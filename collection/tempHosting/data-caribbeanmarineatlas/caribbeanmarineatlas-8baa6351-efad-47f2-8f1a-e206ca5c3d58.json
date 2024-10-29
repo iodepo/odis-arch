@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-8baa6351-efad-47f2-8f1a-e206ca5c3d58.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-8baa6351-efad-47f2-8f1a-e206ca5c3d58.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179.99998856633965 -84.9999999996801, -179.99998856633965 83.62360016318955, 179.99998856633965 83.62360016318955, 179.99998856633965 -84.9999999996801, -179.99998856633965 -84.9999999996801))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "cntry_id",
     "keywords": [
         "ArcGIS REST MapServer",
@@ -28,5 +17,12 @@
         "Kiribati"
     ],
     "name": "cntry_id",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-84.9999999996801 -179.99998856633965 83.62360016318955 179.99998856633965"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/http23202215arcgisrestservicesohi2014mapserver:0-cntry_id"
 }

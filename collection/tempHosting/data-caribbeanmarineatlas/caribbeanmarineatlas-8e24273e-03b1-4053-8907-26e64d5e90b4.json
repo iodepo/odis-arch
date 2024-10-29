@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-8e24273e-03b1-4053-8907-26e64d5e90b4.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-8e24273e-03b1-4053-8907-26e64d5e90b4.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179.999988600612 -54.0805852935843, -179.999988600612 77.762534010013, 179.999988600612 77.762534010013, 179.999988600612 -54.0805852935843, -179.999988600612 -54.0805852935843))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WWF’s Global 200 project analyzed global patterns of biodiversity to identify a set of the Earth's terrestrial, freshwater, and marine ecoregions that harbor exceptional biodiversity and are representative of its ecosystems. This process yielded 238 ecoregions--the Global 200--comprised of 142 terrestrial, 53 freshwater, and 43 marine priority ecoregions. Effective conservation in these ecoregions would help conserve the most outstanding and representative habitats for biodiversity on this planet.",
     "keywords": [
         "Ecoregion",
         "Global"
     ],
     "name": "WWF's Global 200 terrestrial priority ecoregions 2002",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-54.0805852935843 -179.999988600612 77.762534010013 179.999988600612"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:global200_terr_2002_pol"
 }

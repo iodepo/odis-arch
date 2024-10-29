@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e1f0d1a6-045f-11eb-9fb2-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e1f0d1a6-045f-11eb-9fb2-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.89893515274117 10.052779456750853, -61.89893515274117 10.84869673545869, -60.90900404314609 10.84869673545869, -60.90900404314609 10.052779456750853, -61.89893515274117 10.052779456750853))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Using landcover for Trinidad and Tobago the area above 90m (roughly 300 feet) was found to be relatively unaffected by significant human activity. The area between the zone of immediate impact (5m) and 90m was identified as the area of influence.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_ICZM_terrestrial_zone_T2_area_of_influence_2014_25000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.052779456750853 -61.89893515274117 10.84869673545869 -60.90900404314609"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:zone_t2_trinidad0"
 }

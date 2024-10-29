@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-851c9a4e-0380-11eb-827f-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-851c9a4e-0380-11eb-827f-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-141,006881713867 -55,9840278625488, -141,006881713867 83,1104278564453, -28,84694480896 83,1104278564453, -28,84694480896 -55,9840278625488, -141,006881713867 -55,9840278625488))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Status of National Intersectoral Coordination Mechanisms (NICs).  Status as of June 2019.",
     "keywords": [
         "3 Regional Coordination",
@@ -23,5 +12,12 @@
         "Global"
     ],
     "name": "CLME: Status of National Intersectoral Coordination Mechanisms (NICs)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,9840278625488 -141,006881713867 83,1104278564453 -28,84694480896"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:gov_nic_status2"
 }

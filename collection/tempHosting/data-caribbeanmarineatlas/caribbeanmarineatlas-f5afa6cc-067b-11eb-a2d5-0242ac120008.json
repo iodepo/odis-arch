@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-f5afa6cc-067b-11eb-a2d5-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-f5afa6cc-067b-11eb-a2d5-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-89,4166717529297 0,399999976158142, -89,4166717529297 30,8000011444092, -52,1166648864746 30,8000011444092, -52,1166648864746 0,399999976158142, -89,4166717529297 0,399999976158142))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Sitios Ramsar para la cuenca Caribe (área de estudio CMA2)",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Caribbean"
     ],
     "name": "TM-CARIBBEAN-Sitios Ramsar para la cuenca Caribe",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "0,399999976158142 -89,4166717529297 30,8000011444092 -52,1166648864746"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:ramsar_cma"
 }

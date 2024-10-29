@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e101287c-067b-11eb-9a11-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e101287c-067b-11eb-9a11-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-89,7428207397461 4,89881992340088, -89,7428207397461 30,7057418823242, -52,2608985900879 30,7057418823242, -52,2608985900879 4,89881992340088, -89,7428207397461 4,89881992340088))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "OBIS WIDECAST",
     "keywords": [
         "car_sea_turtle_nesting_sites_obis_widecast",
@@ -23,5 +12,12 @@
         "Caribbean"
     ],
     "name": "TM-CARIBBEAN-Sea turtle nesting sites",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "4,89881992340088 -89,7428207397461 30,7057418823242 -52,2608985900879"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:car_sea_turtle_nesting_sites_obis_widecast"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-01a9b226-de4e-40d0-a26b-8e4c5765f96d.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-01a9b226-de4e-40d0-a26b-8e4c5765f96d.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-88,8364077065788 11,9886832643371, -88,8364077065788 18,8326580053939, -59,5326748099035 18,8326580053939, -59,5326748099035 11,9886832643371, -88,8364077065788 11,9886832643371))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset provides information for the areas in the Caribbean area where Socio-economic Monitoring for Coastal Management (SocMon) Assessments were conducted. The information was provided by the Centre for Resource Management & Environmental Studies. The creators of this dataset are Jehroum Wood and Jason Williams.",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Caribbean"
     ],
     "name": "Socio-economic Monitoring for Coastal Management (SocMon) Assessments, Caribbean",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11,9886832643371 -88,8364077065788 18,8326580053939 -59,5326748099035"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:socmon_sites_actual"
 }

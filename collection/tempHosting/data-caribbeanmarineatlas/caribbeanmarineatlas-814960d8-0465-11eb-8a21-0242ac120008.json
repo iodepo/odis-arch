@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-814960d8-0465-11eb-8a21-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-814960d8-0465-11eb-8a21-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((264552,125 1757221,5, 264552,125 2044640,625, 453433,8125 2044640,625, 453433,8125 1757221,5, 264552,125 1757221,5))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer illustrates all types of protected areas in Belize, both marine and terrestrial.",
     "keywords": [
         "belize_protected_areas_all",
@@ -22,5 +11,12 @@
         "Belize"
     ],
     "name": "BM-BELIZE-CENTRAL AMERICA- ALL PROTECTED AREAS",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1757221,5 264552,125 2044640,625 453433,8125"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:belize_protected_areas_all"
 }

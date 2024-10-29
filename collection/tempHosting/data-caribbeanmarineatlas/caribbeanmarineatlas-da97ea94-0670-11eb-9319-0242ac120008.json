@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-da97ea94-0670-11eb-9319-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-da97ea94-0670-11eb-9319-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-116,907783508301 14,6177768707275, -116,907783508301 32,7152786254883, -86,8202743530273 32,7152786254883, -86,8202743530273 14,6177768707275, -116,907783508301 14,6177768707275))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Estaciones Meteorologicas OPERATIVAS en MEXICO / CLICOM (SMN, 2018).\n\nSMN-Conagua (2018),  [On-line], \n[22/03/2018 of the version downloaded]. \nhttp://smn1.conagua.gob.mx/emas/\n\nSensores que integran cada Estación:\n            - Velocidad del viento\n            - Dirección del viento\n            - Presión atmosférica \n            - Temperatura y Humedad relativa\n            - Radiación solar\n            - Precipitación\n\nCENDO(2018), Sergio Larios. slarios@uabc.edu.mx",
     "keywords": [
         "Direcci�n viento",
@@ -28,5 +17,12 @@
         "Mexico"
     ],
     "name": "tm_MEX_estmeteorologicas_clicom_op_2018_200000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "14,6177768707275 -116,907783508301 32,7152786254883 -86,8202743530273"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_mexico_estmeteorologicas_clicom_op_2018_20"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-f187b418-0455-11eb-9e32-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-f187b418-0455-11eb-9e32-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.904689061396404 10.128334444653959, -61.904689061396404 10.676512193886818, -61.45825720752002 10.676512193886818, -61.45825720752002 10.128334444653959, -61.904689061396404 10.128334444653959))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The level of chromium trace metal in sediments in the wet season 1998 and dry 1999 was derived for sampling locations throughout the Gulf of Paria.",
     "keywords": [
         "chromium",
@@ -25,5 +14,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_total_and_extractable_chromium_trace_metal_in_sediments_from_Gulf_of_Paria",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.128334444653959 -61.904689061396404 10.676512193886818 -61.45825720752002"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:total_and_extractable_chromium_concentration_"
 }

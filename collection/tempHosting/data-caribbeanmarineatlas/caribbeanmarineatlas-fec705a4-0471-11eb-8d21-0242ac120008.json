@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-fec705a4-0471-11eb-8d21-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-fec705a4-0471-11eb-8d21-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.38286599999999 7.732553999748078, -77.38286599999999 12.756206999593127, -70.503616 12.756206999593127, -70.503616 7.732553999748078, -77.38286599999999 7.732553999748078))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Cuerpos sedimentarios con características homogéneas\n\nCIOH",
     "keywords": [
         "Colombia",
@@ -25,5 +14,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Facies Sedimentarias-1999-300.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.732553999748078 -77.38286599999999 12.756206999593127 -70.503616"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:faciessedimentarias"
 }

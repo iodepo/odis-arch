@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-a7424890-066d-11eb-b22d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-a7424890-066d-11eb-b22d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59,6662712097168 13,0247421264648, -59,6662712097168 13,3505754470825, -59,3954429626465 13,3505754470825, -59,3954429626465 13,0247421264648, -59,6662712097168 13,0247421264648))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset displays Contours derived from a bathymetric surface gridded from a LIDAR survey of Barbados performed in 1999. Aerial LIDAR has a maximum water penetration of about 40m and as such the LIDAR information (and resulting contours) do not extend far beyond this depth. LIDAR information was originally collected in the Barbados National Grid coordinate system and subsequently converted to WGS84 via a coordinate frame transformation.",
     "keywords": [
         "Barbados",
@@ -24,5 +13,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Bathymetry-1999-2m Resolution",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13,0247421264648 -59,6662712097168 13,3505754470825 -59,3954429626465"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:lidarcontours_wgs_1984_newwww"
 }

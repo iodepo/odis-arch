@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e67bf0da-0670-11eb-989e-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e67bf0da-0670-11eb-989e-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-117,058349609375 14,696720123291, -117,058349609375 32,3414459228516, -86,8053207397461 32,3414459228516, -86,8053207397461 14,696720123291, -117,058349609375 14,696720123291))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Red Nacional de Estaciones Oceanográficas, Mareográficas y Meteorológicas (RENEOM / IMT, 2018)",
     "keywords": [
         "Altura",
@@ -34,5 +23,12 @@
         "Mexico"
     ],
     "name": "tm_MEX_estoceanograficas_imt_2018_200000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "14,696720123291 -117,058349609375 32,3414459228516 -86,8053207397461"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_mexico_estoceanograficas_imt_2018_200000"
 }

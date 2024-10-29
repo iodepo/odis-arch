@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1a855954-0471-11eb-8de9-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1a855954-0471-11eb-8de9-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76.320892 8.95886999970935, -76.320892 12.438190999602616, -71.52211 12.438190999602616, -71.52211 8.95886999970935, -76.320892 8.95886999970935))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Describe las áreas donde se ha tenido reportes de aves playeras. Las Aves playeras se asocian a playas, lagunas costeras y ciénagas\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Técnico: Planificación ecorregional para la conservación in situ de la biodiversidad marina y costera en el Caribe y Pacífico continental colombiano. Alonso, D., Ramírez, L. F., Segura- Quintero, C., Castillo-Torres, P., Díaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "areas_de_congregacion_de_aves_playeras",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Áreas de congregación de aves playeras - 2009",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.95886999970935 -76.320892 12.438190999602616 -71.52211"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:areas_de_congregacion_de_aves_playeras"
 }

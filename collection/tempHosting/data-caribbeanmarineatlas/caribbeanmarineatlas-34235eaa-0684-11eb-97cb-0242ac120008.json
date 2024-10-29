@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-34235eaa-0684-11eb-97cb-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-34235eaa-0684-11eb-97cb-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-78.980934 1.6008429999472311, -78.980934 12.444883999602416, -71.285294 12.444883999602416, -71.285294 1.6008429999472311, -78.980934 1.6008429999472311))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Las playas de baja energía corresponden a sitios protegidos como bahías, incluso pueden estar localizadas dentro de trayectos de línea de costas expuestas pero que por el tipo de geomorfología están protegidas del oleaje y el viento representando sistemas de mayor estabilidad.\n\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Playas baja energia",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1.6008429999472311 -78.980934 12.444883999602416 -71.285294"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:playas_baja_energia"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-c36e2768-0457-11eb-9e32-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-c36e2768-0457-11eb-9e32-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.88132767164414 10.092373414737146, -61.88132767164414 10.096258590991479, -61.853281466399196 10.096258590991479, -61.853281466399196 10.092373414737146, -61.88132767164414 10.092373414737146))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A bacteriological water quality survey was conducted during the period 23 April, 2014 to 22 July, 2014 along the coastline at Cedros Bay on the southwest coast of Trinidad, from Bonasse Village to Fullerton Village, Cedros. Bonasse Beach and Fullerton Beach are used for recreational activities by beach-goers and both are also fish landing sites. Fifteen (15) sampling stations were located nearshore along Cedros Bay, from Bonasse Village to Fullerton Village. Nine (9)stations were also established at two rivers, at a stream and at six drains which discharged into nearshore waters and were potential sources of pollution for this section of Cedros Bay. Water samples were collected on five occasions at the 15 nearshore stations, as well as at 9 potential sources of pollution. Faecal coliforms, Escherichia coli and enterococci bacteria were used as indicators of possible faecal contamination or water pollution from sewage",
     "keywords": [
         "_201610_bobe_pwgs84_bathing_beach_water_quality_bonasse_beach",
@@ -28,5 +17,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_Bonasse_bathing_beach_water_quality_2014",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.092373414737146 -61.88132767164414 10.096258590991479 -61.853281466399196"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a__201610_bobe_pwgs84_bathing_beach_water_quali"
 }

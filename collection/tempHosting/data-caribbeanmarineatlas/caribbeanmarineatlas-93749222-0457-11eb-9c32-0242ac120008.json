@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-93749222-0457-11eb-9c32-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-93749222-0457-11eb-9c32-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.93040184614993 10.035569510100636, -61.93040184614993 11.351148991322606, -60.49441507205357 11.351148991322606, -60.49441507205357 10.035569510100636, -61.93040184614993 10.035569510100636))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Utilizing remotely sensed imagery and GNSS surveying\ntechniques through a multi-epoch approach (from 1994 to 2007) to shoreline change analysis, the degree to which\nthe horizontal shoreline position expanded or retreat was accurately assessed for Trinidad and\nTobago and areas of erosion and accretion identified.",
     "keywords": [
         "accretion",
@@ -25,5 +14,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_and_Tobago_erosion_and_accretion_of_coastal_vegetation_line_1994_to_2007",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.035569510100636 -61.93040184614993 11.351148991322606 -60.49441507205357"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:garb1_2"
 }

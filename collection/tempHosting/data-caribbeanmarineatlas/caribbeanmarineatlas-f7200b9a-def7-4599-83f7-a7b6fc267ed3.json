@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-f7200b9a-def7-4599-83f7-a7b6fc267ed3.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-f7200b9a-def7-4599-83f7-a7b6fc267ed3.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-17.395510581306116 35.844932225378884, -17.395510581306116 72.4332925257924, 17.184029915770928 72.4332925257924, 17.184029915770928 35.844932225378884, -17.395510581306116 35.844932225378884))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "14_001_WCMC001_ColdCorals2017_v4_Py",
     "keywords": [
         "Global",
@@ -25,5 +14,12 @@
         "Kiribati"
     ],
     "name": "14_001_WCMC001_ColdCorals2017_v4_Py",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "35.844932225378884 -17.395510581306116 72.4332925257924 17.184029915770928"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpec2-54-204-216-109compute-1amazonawscom6080arcgisrestservicesmarinewcmc_001_coldwatercorals2017mapserver:1-14_001_wcmc001_coldcorals2017_v4_py"
 }

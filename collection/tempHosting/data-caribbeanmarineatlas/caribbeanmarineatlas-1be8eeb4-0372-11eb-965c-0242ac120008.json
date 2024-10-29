@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1be8eeb4-0372-11eb-965c-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1be8eeb4-0372-11eb-965c-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parties that have ratified/acceded the Convention on Biological Diversity (CBD), in the Americas as of March 2020. The Convention was adopted by the Intergovernmental Negotiating Committee for a Convention on Biological Diversity, during its Fifth session, held at Nairobi from 11 to 22 May 1992. The Convention was open for signature at Rio de Janeiro by all States and regional economic integration organizations from 5 June 1992 until 14 June 1992, and remained open at the United Nations Headquarters in New York until 4 June 1993. The Convention was entered into force on 29 December 1993, in accordance with article 36(1).",
     "keywords": [
         "1 Marine Environment",
         "Americas"
     ],
     "name": "CLME: Convention on Biological Diversity (CBD) Ratification Status",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_cbd_geonode"
 }

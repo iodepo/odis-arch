@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e00864d2-06a1-11eb-acdd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e00864d2-06a1-11eb-acdd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-70,0159530639648 10,4383420944214, -70,0159530639648 12,9991035461426, -61,7212944030762 12,9991035461426, -61,7212944030762 10,4383420944214, -70,0159530639648 10,4383420944214))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El conjunto de datos contenidos en este archivo corresponde a zonas de distribución de especies pelágicas mayores del área correspondiente al Mar Caribe venezolano hasta una latitud de trece grados norte.",
     "keywords": [
         "Especies",
@@ -23,5 +12,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-VENEZUELA-Distribucion de especies pelagicas mayores",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,4383420944214 -70,0159530639648 12,9991035461426 -61,7212944030762"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:especies_pelagicas_mayores"
 }

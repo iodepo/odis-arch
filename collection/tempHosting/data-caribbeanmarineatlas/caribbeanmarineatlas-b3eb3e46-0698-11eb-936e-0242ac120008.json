@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b3eb3e46-0698-11eb-936e-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b3eb3e46-0698-11eb-936e-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71,9844436645508 10,0380353927612, -71,9844436645508 13,0053329467773, -61,8768615722656 13,0053329467773, -61,8768615722656 10,0380353927612, -71,9844436645508 10,0380353927612))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El conjunto de datos contenidos en este archivo corresponde a la suma ponderada de las diferentes amenaza , en los objetos de conservación, en el área correspondiente al Mar Caribe venezolano hasta una latitud de trece grados norte.",
     "keywords": [
         "Amenazas",
@@ -26,5 +15,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-VENEZUELA-Amenaza total",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0380353927612 -71,9844436645508 13,0053329467773 -61,8768615722656"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:amenazas_total_new"
 }

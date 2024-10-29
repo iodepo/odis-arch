@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-242ba4ae-0471-11eb-ba3b-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-242ba4ae-0471-11eb-ba3b-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.258041 8.023869999738835, -77.258041 12.27040699960764, -71.961029 12.27040699960764, -71.961029 8.023869999738835, -77.258041 8.023869999738835))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Describe las áreas donde se ha tenido reportes de presencia de mamiferos marinos y acuaticos. (cetáceos, manatíes, nutrias)\n\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Técnico: Planificación ecorregional para la conservación in situ de la biodiversidad marina y costera en el Caribe y Pacífico continental colombiano. Alonso, D., Ramírez, L. F., Segura- Quintero, C., Castillo-Torres, P., Díaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "congregacion_y_alimentacion_mamiferos_acuaticos",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Áreas de congregación, alimentación, reproducción de mamíferos acuáticos (cetáceos, manatíes, nutrias) - 2009",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.023869999738835 -77.258041 12.27040699960764 -71.961029"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:congregacion_y_alimentacion_mamiferos_acuatic"
 }

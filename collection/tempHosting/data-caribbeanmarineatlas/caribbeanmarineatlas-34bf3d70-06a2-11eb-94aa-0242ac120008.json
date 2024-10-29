@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-34bf3d70-06a2-11eb-94aa-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-34bf3d70-06a2-11eb-94aa-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71,9686737060547 10,0595216751099, -71,9686737060547 12,1156482696533, -61,9431610107422 12,1156482696533, -61,9431610107422 10,0595216751099, -71,9686737060547 10,0595216751099))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El conjunto de datos contenidos en este archivo corresponde a zonas de distribución de tortugas marinas del área correspondiente al Mar Caribe venezolano hasta una latitud de trece grados norte.",
     "keywords": [
         "Biodiversidad",
@@ -26,5 +15,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-VENEZUELA-Distribución de tortugas marinas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0595216751099 -71,9686737060547 12,1156482696533 -61,9431610107422"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tortugas_marinas"
 }

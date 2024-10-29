@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-37a06cf2-0671-11eb-9b6a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-37a06cf2-0671-11eb-9b6a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76.396652 9.147225999703446, -76.396652 12.337229999605636, -72.05646499999999 12.337229999605636, -72.05646499999999 9.147225999703446, -76.396652 9.147225999703446))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Este vector muestra el objeto de conservación referente a las áreas identificadas como de alta importancia para la congregación de peces. \n\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "areas_de_desove_y_nodriza_de_peces",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM_ODC_areas_de_desove_y_nodriza_de_peces",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9.147225999703446 -76.396652 12.337229999605636 -72.05646499999999"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:areas_de_desove_y_nodriza_de_peces"
 }

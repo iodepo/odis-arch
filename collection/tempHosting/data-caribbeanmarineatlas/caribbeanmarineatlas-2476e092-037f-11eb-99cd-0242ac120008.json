@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2476e092-037f-11eb-99cd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2476e092-037f-11eb-99cd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-113,919998168945 -20,4749755859375, -113,919998168945 49,680004119873, -40,1455078125 49,680004119873, -40,1455078125 -20,4749755859375, -113,919998168945 -20,4749755859375))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This shapefile represents the wider Caribbean terrestrial drainage area. This area is a large portion of North and South American, drained by their main rivers which carry huge amounts of sediments, nutrients and contaminants to the sea, ocean or gulf.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Wider Caribbean Drainage Area",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-20,4749755859375 -113,919998168945 49,680004119873 -40,1455078125"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_wcr_drainage_areaall_m_20171201_scale"
 }

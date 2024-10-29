@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-4e293bae-045d-11eb-aa7d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-4e293bae-045d-11eb-aa7d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.930612986565635 10.038169394655355, -61.930612986565635 10.848832518011829, -60.907496441010736 10.848832518011829, -60.907496441010736 10.038169394655355, -61.930612986565635 10.038169394655355))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A geomorphological classification of the  coastline of Trinidad.",
     "keywords": [
         "coastline",
@@ -34,5 +23,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_coastline_type_2014_1000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.038169394655355 -61.930612986565635 10.848832518011829 -60.907496441010736"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_tto_trinidad_coastline_type_1000"
 }

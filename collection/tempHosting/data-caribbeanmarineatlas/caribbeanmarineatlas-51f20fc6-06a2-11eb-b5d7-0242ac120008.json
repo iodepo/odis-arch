@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-51f20fc6-06a2-11eb-b5d7-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-51f20fc6-06a2-11eb-b5d7-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71,6893920898438 10,1647596359253, -71,6893920898438 12,5632963180542, -62,0106239318848 12,5632963180542, -62,0106239318848 10,1647596359253, -71,6893920898438 10,1647596359253))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El conjunto de datos contenidos en este archivo corresponde a zonas de fondos duros del área correspondiente al Mar Caribe venezolano hasta una latitud de trece grados norte.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM-VENEZUELA-Fondos duros",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,1647596359253 -71,6893920898438 12,5632963180542 -62,0106239318848"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:fondos_duros"
 }

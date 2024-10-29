@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-9cbf08ae-0465-11eb-afdf-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-9cbf08ae-0465-11eb-afdf-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.65334815261558 13.043994433308116, -59.65334815261558 13.334838464728673, -59.42156253313573 13.334838464728673, -59.42156253313573 13.043994433308116, -59.65334815261558 13.043994433308116))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Barbados road network was digitized from the 1:10000 (12 sheets) topographic maps produced by the Directorate of Overseas Surveys, Ordnance Survey, United Kingdom 1986.  Each topographic map was scanned and registered to the Barbados National Grid and then reprojected to WGS84 Zone 20 before digitizing.  Digitization was preformed in ArcGIS 8.3 and enhanced with the ArcScan extension.  IKONOS imagery from 2000-2001 was then used to update the islands road network as well as differentiate between main highways, secondary highways, paved, and unpaved roads.",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "BM-BRB_Road Infrastructure - 2001 - 1:10000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.043994433308116 -59.65334815261558 13.334838464728673 -59.42156253313573"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:roads_wgs84"
 }

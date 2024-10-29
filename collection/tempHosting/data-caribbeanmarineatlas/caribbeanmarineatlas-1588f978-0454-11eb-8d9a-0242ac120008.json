@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1588f978-0454-11eb-8d9a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1588f978-0454-11eb-8d9a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-60,8374481201172 11,1662187576294, -60,8374481201172 11,1816253662109, -60,8210754394531 11,1816253662109, -60,8210754394531 11,1662187576294, -60,8374481201172 11,1662187576294))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Locations and extents of seagrasses in Buccoo, Tobago. Digitized from Google Earth Imagery captured in 2019.",
     "keywords": [
         "coastal ecosystems",
@@ -26,5 +15,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Tobago_Buccoo_Seagrasses_2019_1000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11,1662187576294 -60,8374481201172 11,1816253662109 -60,8210754394531"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:final_seagrass_2019"
 }

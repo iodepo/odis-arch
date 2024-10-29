@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-3d5375a6-0471-11eb-b7b9-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-3d5375a6-0471-11eb-b7b9-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.898048 6.990193999771754, -77.898048 10.814365999651793, -74.820259 10.814365999651793, -74.820259 6.990193999771754, -77.898048 6.990193999771754))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Las Áreas de manejo especial  son unas áreas que se delimitan para la administración, manejo y protección del ambiente y de los recursos naturales renovables (Artículo 308, Decreto Ley 2811 de 1974).",
     "keywords": [
         "ame",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Areas de manejo especial",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "6.990193999771754 -77.898048 10.814365999651793 -74.820259"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:ame"
 }

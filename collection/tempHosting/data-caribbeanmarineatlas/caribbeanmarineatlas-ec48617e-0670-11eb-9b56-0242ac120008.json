@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-ec48617e-0670-11eb-9b56-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-ec48617e-0670-11eb-9b56-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-118,291572570801 16,0513477325439, -118,291572570801 32,4149398803711, -86,7418441772461 32,4149398803711, -86,7418441772461 16,0513477325439, -118,291572570801 16,0513477325439))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Red Mareográfica Nacional de la Secretaría de Marina (SEMAR, 2018)\n22 de Marzo del 2018 (Fechas de Descarga de http://oceanografia.semar.gob.mx/estaciones.html)",
     "keywords": [
         "Altura",
@@ -34,5 +23,12 @@
         "Mexico"
     ],
     "name": "tm_MEX_estoceanograficas_semar_2018_200000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "16,0513477325439 -118,291572570801 32,4149398803711 -86,7418441772461"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_mexico_estoceanograficas_semar_2018_200000"
 }

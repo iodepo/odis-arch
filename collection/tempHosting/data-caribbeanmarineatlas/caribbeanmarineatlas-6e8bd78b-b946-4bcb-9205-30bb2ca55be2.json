@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-6e8bd78b-b946-4bcb-9205-30bb2ca55be2.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-6e8bd78b-b946-4bcb-9205-30bb2ca55be2.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-90.5354837861779 5.78644396624821, -90.5354837861779 25.0542049613117, -55.2329554769354 25.0542049613117, -55.2329554769354 5.78644396624821, -90.5354837861779 5.78644396624821))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Country Capitals in the Caribbean Region",
     "keywords": [
         "capital",
         "Global"
     ],
     "name": "Country Capitals in the Caribbean Region",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "5.78644396624821 -90.5354837861779 25.0542049613117 -55.2329554769354"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:car_poli_capitals_wgs84"
 }

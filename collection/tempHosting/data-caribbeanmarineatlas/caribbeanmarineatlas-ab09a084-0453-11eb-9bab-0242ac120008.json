@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-ab09a084-0453-11eb-9bab-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-ab09a084-0453-11eb-9bab-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-60,9208984375 11,0541172027588, -60,9208984375 11,3561019897461, -60,4926795959473 11,3561019897461, -60,4926795959473 11,0541172027588, -60,9208984375 11,0541172027588))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The coral reefs of Tobago were mapped using Landsat satellite imagery",
     "keywords": [
         "Coral",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_coral_reefs_2005_25000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11,0541172027588 -60,9208984375 11,3561019897461 -60,4926795959473"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_tobago_coral_reefs_2005_25000"
 }

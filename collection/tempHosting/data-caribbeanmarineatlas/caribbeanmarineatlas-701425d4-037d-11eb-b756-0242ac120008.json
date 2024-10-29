@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-701425d4-037d-11eb-b756-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-701425d4-037d-11eb-b756-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-98,7179794311523 -4,51249933242798, -98,7179794311523 31,1250686645508, -40,0343017578125 31,1250686645508, -40,0343017578125 -4,51249933242798, -98,7179794311523 -4,51249933242798))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "LMEs are natural regions of ocean space encompassing coastal waters from river basins and estuaries to the seaward boundary of continental shelves and the outer margins of coastal currents. They are relatively large regions of 200,000 km2 or greater, the natural boundaries of which are based on four ecological criteria: bathymetry, hydrography, productivity, and trophically related populations.\n\nThe theory, measurement, and modeling relevant to monitoring the changing states of LMEs are imbedded in reports on ecosystems with multiple steady states, and on the pattern formation and spatial diffusion within ecosystems.  The concept that critical processes controlling the structure and function of biological communities can best be addressed on a regional basis has been applied to the ocean by using LMEs as the distinct units for marine resources assessment, monitoring, and management.\n\nCombining this layer with a land file will provide an approximate representation of the marine coverage of these LMEs.",
     "keywords": [
         "1 Marine Environment",
@@ -26,5 +15,12 @@
         "South America"
     ],
     "name": "CLME: The 3 Large Marine Ecosystems of the Wider Caribbean",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4,51249933242798 -98,7179794311523 31,1250686645508 -40,0343017578125"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:the_3_lmes_1"
 }
