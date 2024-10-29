@@ -31,7 +31,7 @@ NEW_RDF_FILENAME = "maspawio-catalogue.rdf"
 HOSTNAME = "http://maspawio.net"
 LOGFILE = "maspawio-harvest.log"
 SHORTNAME = "maspawio" #must not contain spaces, but can contain hyphen
-ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-maspawio/"
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/"
 
 """
 #########################
