@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-c84b69fc-67e9-11ec-84c5-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-c84b69fc-67e9-11ec-84c5-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7582998275757 -28.9656867980957, 11.7582998275757 -16.9659080505371, 25.2628898620605 -16.9659080505371, 25.2628898620605 -28.9656867980957, 11.7582998275757 -28.9656867980957))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Locations of rivers in Namibia\nDATA SOURCE: Directorate of Hydrology, Ministry of Agriculture, Water & Forestry, available via NSDI.\nMETHODS: The shapefile was obtained from the HYMNAM project and amended to fit the\ncountry borders used in the Atlas of Namibia. Main rivers were separated from minor\nrivers based on the original Geological Survey river data set. One addition was made i.e. omuramba owambo. One exclusion was made i.e. Sechomib.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Rivers",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.9656867980957 11.7582998275757 -16.9659080505371 25.2628898620605"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_rivers"
 }

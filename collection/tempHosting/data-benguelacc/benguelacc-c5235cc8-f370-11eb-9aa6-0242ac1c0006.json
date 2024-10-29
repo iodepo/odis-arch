@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-c5235cc8-f370-11eb-9aa6-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-c5235cc8-f370-11eb-9aa6-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.65106201171875 -37.8018264770508, 8.65106201171875 -5.15656185150146, 33.7448616027832 -5.15656185150146, 33.7448616027832 -37.8018264770508, 8.65106201171875 -37.8018264770508))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Revised boundaries of the Ecologically or Biologically Significant Marine Areas in Angola, Namibia and South Africa (updated in 2020). This shapefile presents the revised EBSA boundaries without their proposed zonation.",
     "keywords": [
         "Biodiversity",
@@ -25,5 +14,12 @@
         "Angola"
     ],
     "name": "REG EBSA Revised 2020",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-37.8018264770508 8.65106201171875 -5.15656185150146 33.7448616027832"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:REG_EBSA_nozone_20200224_dd"
 }

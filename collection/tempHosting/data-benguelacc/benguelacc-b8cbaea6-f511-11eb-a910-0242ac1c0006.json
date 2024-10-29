@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-b8cbaea6-f511-11eb-a910-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-b8cbaea6-f511-11eb-a910-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-8.43387508392334 -49.5210418701172, -8.43387508392334 -8.73772144317627, 56.9033470153809 -8.73772144317627, 56.9033470153809 -49.5210418701172, -8.43387508392334 -49.5210418701172))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The original boundaries of EBSAs in Angola, Namibia and South Africa, from the CBD website: https://www.cbd.int/ebsa/",
     "keywords": [
         "Biodiversity",
@@ -26,5 +15,12 @@
         "Angola"
     ],
     "name": "REG EBSA Original 2014",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-49.5210418701172 -8.43387508392334 -8.73772144317627 56.9033470153809"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:EBSAs_CBD_2014"
 }

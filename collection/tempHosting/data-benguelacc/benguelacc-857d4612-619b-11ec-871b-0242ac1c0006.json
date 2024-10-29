@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-857d4612-619b-11ec-871b-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-857d4612-619b-11ec-871b-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((13.9495887756348 -21.8563461303711, 13.9495887756348 -21.7556495666504, 14.0544853210449 -21.7556495666504, 14.0544853210449 -21.8563461303711, 13.9495887756348 -21.8563461303711))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Cape Cross Seal Reserve.\nDATA SOURCE: Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia: A portrait of the land and its people. David Philip Publishers, Cape Town, South Africa.\nhttp://www.the-eis.com/\nMETHODS: Created based on government gazettes. Where possible, boundaries were created from coordinates provided in the gazettes. Where landmarks had no specific coordinates, other shapefiles were used (e.g. farms shapefile, rivers shapefile, 1:250000 maps etc.).",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Cape Cross Seal Reserve",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-21.8563461303711 13.9495887756348 -21.7556495666504 14.0544853210449"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_national_park_Cape_Cross_Seal_Res"
 }

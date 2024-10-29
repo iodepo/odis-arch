@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-3cc916f6-6193-11ec-8e57-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-3cc916f6-6193-11ec-8e57-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.5257692337036 -28.7977275848389, 11.5257692337036 -17.2429466247559, 16.8284358978271 -17.2429466247559, 16.8284358978271 -28.7977275848389, 11.5257692337036 -28.7977275848389))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Territorial waters, in international law, is the area of the sea immediately adjacent to the shores of a state and subject to the territorial jurisdiction of that state. With the negotiation of the 1982 United Nations Law of the Sea Convention, the allowed breadth of a territorial sea claim was extended to 12 nautical miles (22 kilometers).",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Territorial Waters",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.7977275848389 11.5257692337036 -17.2429466247559 16.8284358978271"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_territorial_waters_12nm"
 }

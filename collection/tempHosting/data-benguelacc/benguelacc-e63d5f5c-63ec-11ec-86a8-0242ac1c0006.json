@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-e63d5f5c-63ec-11ec-86a8-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-e63d5f5c-63ec-11ec-86a8-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7363405227661 -28.6300563812256, 11.7363405227661 -17.2357406616211, 16.4546794891357 -17.2357406616211, 16.4546794891357 -28.6300563812256, 11.7363405227661 -28.6300563812256))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Aerial imagery of the Namibian coast from Google Earth© 2011 was saved as series of georeferenced images using the Shape2Earth plugin for the opensource\nprogramme MapWindow GIS (available at: http://shape2earth.com). Images were captured at a consistent scale (Google Earth scale bar at 900 m), although some\nexceptions to this were necessary because of the varied quality and resolution of the\nGoogle Earth imagery. The captured images were imported into ArcMap 10 (ESRI), and\nserved as the baseline that the coastal-habitat shapefiles were digitized onto. Digitizing was generally performed at a 1:8000 scale, although, as above, the varied resolution of the imagery occasionally necessitated zooming in or out from this base scale. The WGS84 (Universal Transverse Mercator) projection was used for all shapefiles. The coastline was dissolved and the new Walvis Bay container terminal added manually.\nDATA SOURCE: Harris, L.R. 2012. Shoreline mapping of the Benguela Current Large\nMarine Ecosystem 2011: Undertaken for the Benguela Current Commission (BCC) project\n“Spatial Biodiversity Assessment (BCC-SBA) and Spatial Management, including Marine\nProtected Areas”. Nelson Mandela Metropolitan University, Port Elizabeth, South Africa.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Coastline",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.6300563812256 11.7363405227661 -17.2357406616211 16.4546794891357"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_coastline"
 }

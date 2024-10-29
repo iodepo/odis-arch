@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-01062a52-8f09-11ec-8819-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-01062a52-8f09-11ec-8819-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.231640522 -30.658138482, 8.231640522 -17.246196504, 17.073816534 -17.246196504, 17.073816534 -30.658138482, 8.231640522 -30.658138482))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "DESCRIPTION: Shipping is an important use of marine areas in Namibia. Associated\nimpacts from shipping are underwater noise pollution, oil spillage and other pollutants,\npropeller and wake damage in shallow areas, dumping of waste (especially plastic) into\nthe ocean, direct strikes on cetaceans, invasion pathways for alien species and associated\ninfrastructure (ports and anchorages).",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Shipping intensity",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.658138482 8.231640522 -17.246196504 17.073816534"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/NAM_CSR_MTP_shipping_intensity:geonode:NAM_CSR_MTP_shipping_intensity"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-e761b74a-6246-11ec-baac-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-e761b74a-6246-11ec-baac-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.929515838623 -28.6325283050537, 14.929515838623 -25.9997272491455, 16.8871784210205 -25.9997272491455, 16.8871784210205 -28.6325283050537, 14.929515838623 -28.6325283050537))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Tsau //Khaeb (Sperrgebiet) National Park. \nDATA SOURCE: Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia: A portrait of the land and its people. David Philip Publishers, Cape Town, South Africa. http://www.the-eis.com/",
     "keywords": [
         "EBSAs",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Tsau //Khaeb (Sperrgebiet) Park",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.6325283050537 14.929515838623 -25.9997272491455 16.8871784210205"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_national_park_Tsau_Khaeb_Sperrgeb"
 }

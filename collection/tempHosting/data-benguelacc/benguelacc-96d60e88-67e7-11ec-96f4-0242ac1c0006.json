@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-96d60e88-67e7-11ec-96f4-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-96d60e88-67e7-11ec-96f4-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.5334529876709 -22.8804874420166, 14.5334529876709 -22.8154163360596, 14.5420618057251 -22.8154163360596, 14.5420618057251 -22.8804874420166, 14.5334529876709 -22.8804874420166))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Dolphin sanctuary in the Walvis Bay area",
     "keywords": [
         "Biodiversity",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Dolphin sanctuary",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-22.8804874420166 14.5334529876709 -22.8154163360596 14.5420618057251"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_TOUR_dolphin_sanctuary_WVB"
 }

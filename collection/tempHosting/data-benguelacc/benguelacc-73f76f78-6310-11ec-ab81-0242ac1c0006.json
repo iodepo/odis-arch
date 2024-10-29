@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-73f76f78-6310-11ec-ab81-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-73f76f78-6310-11ec-ab81-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.4404048919678 -29.6687297821045, 11.4404048919678 -17.2431449890137, 16.4518775939941 -17.2431449890137, 16.4518775939941 -29.6687297821045, 11.4404048919678 -29.6687297821045))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Restricted areas for trawling, long lining or recreational fishing along the Namibia coast.\nDATA SOURCE: De Cauwer, V. 2007. Mapping of the BCLME shoreline, shallow water and marine habitats. Final report for the BCLME project BEP/BAC/03/02 Government Gazette 2657, December 2007 (The areas restricted to trawling and longlining have been published in Government Gazette 5721, April 2015, before they were a condition attached to fishing licences). Areas prohibited for shore-based recreational fishing and boat-based line fishing (as per Gazette 2657) were redrawn in 2020 by the MARISMA project.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Restricted areas for fishing",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.6687297821045 11.4404048919678 -17.2431449890137 16.4518775939941"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_FISH_areas_restricted_to_fishing1"
 }

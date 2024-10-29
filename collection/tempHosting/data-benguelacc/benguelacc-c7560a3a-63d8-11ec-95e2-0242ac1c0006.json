@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-c7560a3a-63d8-11ec-95e2-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-c7560a3a-63d8-11ec-95e2-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7537536621094 -23.5503921508789, 11.7537536621094 -17.236385345459, 14.5334968566895 -17.236385345459, 14.5334968566895 -23.5503921508789, 11.7537536621094 -23.5503921508789))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Ramsar wetlands are wetlands of international importance listed under the Convention on Wetlands. The aim of the convention is to halt the worldwide loss of wetlands and to conserve those that remain.",
     "keywords": [
         "Biodiversity",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Wetland of international importance (RAMSAR site)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-23.5503921508789 11.7537536621094 -17.236385345459 14.5334968566895"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_Ramsar_areas"
 }

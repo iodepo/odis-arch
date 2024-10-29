@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-2a022a7e-14a5-11ed-9664-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-2a022a7e-14a5-11ed-9664-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.641861996291713 -18.105003314512683, 11.641861996291713 -4.293597438621827, 24.362327600695224 -4.293597438621827, 24.362327600695224 -18.105003314512683, 11.641861996291713 -18.105003314512683))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Divisão Político-Administrativa (DPA).Método- Shapefile baixada",
+    "keywords": [
+        "Provincia",
+        "Angola"
+    ],
+    "name": "AGO Provincias 2020",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-18.105003314512683 11.641861996291713 -4.293597438621827 24.362327600695224"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_PROV",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_PROV0",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_PROV0"
 }

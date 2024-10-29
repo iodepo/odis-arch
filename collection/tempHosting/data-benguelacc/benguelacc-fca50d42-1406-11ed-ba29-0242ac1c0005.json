@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-fca50d42-1406-11ed-ba29-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-fca50d42-1406-11ed-ba29-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,901349067688 -13,0623874664307, 11,901349067688 -6,33542251586914, 13,8478584289551 -6,33542251586914, 13,8478584289551 -13,0623874664307, 11,901349067688 -13,0623874664307))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Espécies Aquáticas. Método- Vectorização das Informações Contida no Relatório.",
+    "keywords": [
+        "Peixe",
+        "Angola"
+    ],
+    "name": "AGO Horse Mackerel 2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-13.0623874664307 11.901349067688 -6.33542251586914 13.8478584289551"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_NOR_DAT_HORSE_MACKEREL",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_NOR_DAT_HORSE_MACKEREL",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_NOR_DAT_HORSE_MACKEREL"
 }

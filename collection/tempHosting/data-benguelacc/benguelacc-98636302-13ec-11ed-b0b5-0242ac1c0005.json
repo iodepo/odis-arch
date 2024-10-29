@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-98636302-13ec-11ed-b0b5-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-98636302-13ec-11ed-b0b5-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,8435592651367 -15,8058271408081, 11,8435592651367 -5,68875885009766, 13,586841583252 -5,68875885009766, 13,586841583252 -15,8058271408081, 11,8435592651367 -15,8058271408081))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Digitalização dos Dados, Fornecidos pelo Ministério da Defesa.",
+    "keywords": [
+        "Defesa",
+        "Angola"
+    ],
+    "name": "AGO Unidades Militares 2022",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-15.8058271408081 11.8435592651367 -5.68875885009766 13.586841583252"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_DEF_UNID_MIL",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_DEF_UNID_MIL",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_DEF_UNID_MIL"
 }

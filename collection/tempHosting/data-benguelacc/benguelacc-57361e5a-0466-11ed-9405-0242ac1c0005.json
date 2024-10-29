@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-57361e5a-0466-11ed-9405-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-57361e5a-0466-11ed-9405-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,6689491271973 -17,2513294219971, 11,6689491271973 -5,03156852722168, 13,7966966629028 -5,03156852722168, 13,7966966629028 -17,2513294219971, 11,6689491271973 -17,2513294219971))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Linha de Base.Método-Shapefile fornecido pelo CIDEMA",
+    "keywords": [
+        "Linha",
+        "Angola"
+    ],
+    "name": "AGO Linha de Base 2022",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.2513294219971 11.6689491271973 -5.03156852722168 13.7966966629028"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_LINHA_BASE",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_LINHA_BASE",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_LINHA_BASE"
 }

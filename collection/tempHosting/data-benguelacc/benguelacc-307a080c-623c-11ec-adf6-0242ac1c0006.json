@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-307a080c-623c-11ec-adf6-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-307a080c-623c-11ec-adf6-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7364120483398 -21.1936912536621, 11.7364120483398 -17.1512336730957, 13.959716796875 -17.1512336730957, 13.959716796875 -21.1936912536621, 11.7364120483398 -21.1936912536621))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Skeleton Coast National Park. DATA SOURCE: Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia: A portrait of the land and its people. David Philip Publishers, Cape Town, South Africa. http://www.the-eis.com/",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Skeleton Coast Park",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-21.1936912536621 11.7364120483398 -17.1512336730957 13.959716796875"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_national_park_Skeleton_Coast_Park"
 }

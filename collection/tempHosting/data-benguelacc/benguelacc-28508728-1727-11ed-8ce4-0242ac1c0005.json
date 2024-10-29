@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-28508728-1727-11ed-8ce4-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-28508728-1727-11ed-8ce4-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((10.4137411117554 -8.5845947265625, 10.4137411117554 -5.02650260925293, 13.3964872360229 -5.02650260925293, 13.3964872360229 -8.5845947265625, 10.4137411117554 -8.5845947265625))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
-    "description": "bla bla",
+    "description": "Blocos Petrolíferos. Georreferenciação do Mapa e posterior vectorização dos dados importantes.",
     "keywords": [
-        "petroleum",
+        "Petroleo",
         "Angola"
     ],
-    "name": "AGO OEM PET BLOCOS INSTALACOES 2022",
+    "name": "AGO  Blocos Com  Instalacoes Petroliferas 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-8.5845947265625 10.4137411117554 -5.02650260925293 13.3964872360229"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_PET_BLOCOS_INSTALACOES0"
 }

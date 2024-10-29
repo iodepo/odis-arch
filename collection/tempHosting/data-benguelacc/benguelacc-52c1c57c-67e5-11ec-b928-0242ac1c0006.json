@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-52c1c57c-67e5-11ec-b928-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-52c1c57c-67e5-11ec-b928-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7518396377563 -28.5142555236816, 11.7518396377563 -17.135274887085, 16.6416511535645 -17.135274887085, 16.6416511535645 -28.5142555236816, 11.7518396377563 -28.5142555236816))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Dunes along the coast of Namibia.\nDATA SOURCE: De Cauwer, V. 2007. Mapping of the BCLME shoreline, shallow water and marine habitats. Final report for the BCLME project BEP/BAC/03/02 \nMETHODS: The high sand dune areas in the Namib desert were digitised up to about 50\nkm inland. Landsat images of 2000 were the main source, the topographic maps were\nused in a lesser extent and mainly where in doubt on the Landsat images.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Dunes along the coast of Namibia",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.5142555236816 11.7518396377563 -17.135274887085 16.6416511535645"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_TOUR_dunes"
 }

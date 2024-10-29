@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-d275153c-6252-11ec-9f53-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-d275153c-6252-11ec-9f53-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((12.0099992752075 -27.7023544311523, 12.0099992752075 -18.4499988555908, 15.534351348877 -18.4499988555908, 15.534351348877 -27.7023544311523, 12.0099992752075 -27.7023544311523))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Locations of the twenty- six seal colonies along the coastline.\nDATA SOURCE: BCLME project BEHP/BAC/03/03. Original data from NatMIRC\nMETHODS: GPS point location converted to shapefiles, Sylvia Hill seal colony coordinates\nupdated in 2021",
     "keywords": [
         "Biodiversity",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Seal Colonies",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.7023544311523 12.0099992752075 -18.4499988555908 15.534351348877"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_seal_colonies"
 }

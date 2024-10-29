@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-61dd854a-6877-11ec-9103-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-61dd854a-6877-11ec-9103-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.5669832229614 -28.587121963501, 14.5669832229614 -22.4623432159424, 16.4453830718994 -22.4623432159424, 16.4453830718994 -28.587121963501, 14.5669832229614 -28.587121963501))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Airports along the central Namibian coast.\nDATA SOURCE: Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia:\nA portrait of the land and its people. David Philip Publishers, Cape Town, South Africa.\n(www.the-eis.com)",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Airports",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.587121963501 14.5669832229614 -22.4623432159424 16.4453830718994"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_LI_airports_coast"
 }
