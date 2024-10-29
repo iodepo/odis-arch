@@ -19,7 +19,7 @@ Note:    This assumes that you have checked out the repo files to your
 
 # define common variables
 GITHUB_REPO_LOCAL_PATH = "E:/iodepo/odis-arch-git/collection/tempHosting/data-maspawio"
-GITHUB_REPO_RAW_BASE_URL = "https://raw.githubusercontent.com/iodepo/odis-arch/refs/heads/master/collection/tempHosting/data-maspawio/"
+GITHUB_REPO_RAW_BASE_URL = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/"
 NEW_SITEMAP_FILENAME = "sitemap.xml"
 
 """
