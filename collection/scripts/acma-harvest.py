@@ -29,7 +29,7 @@ NEW_RDF_FILENAME = "acma-catalogue.rdf"
 HOSTNAME = "https://acma.africanmarineatlas.org"
 LOGFILE = "acma-harvest.log"
 SHORTNAME = "acma" #must be hyphen
-ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/"
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma/"
 
 """
 #########################
