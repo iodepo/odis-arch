@@ -307,7 +307,7 @@ def main():
     print("Generated YAML:")
     # print(remove_none_values(full))
 
-    # cleaned_dict = remove_none_values(full)
+    cleaned_dict = remove_none_values(full)
 
     # Save cleaned dictionary to a YAML file
     with open('gleanerconfig.yaml', 'w') as file:
