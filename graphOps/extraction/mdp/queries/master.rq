@@ -1,0 +1,92 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+
+
+SELECT DISTINCT (?s as ?id)  ?type ?name ?url ?description ?headline
+    ?sameAs ?license ?citation ?keywords ?includedInDataCatalog ?distribution ?region ?provider ?publisher ?creator
+    ?txt_location
+    ?address ?txt_knowsAbout ?txt_knowsLanguage
+    ?placename ?geotype ?geompred ?geom ?lat ?long ?wkt ?g
+    ?temporalCoverage ?dateModified ?datePublished
+
+WHERE {
+    {
+        ?s rdf:type ?type .
+        OPTIONAL { ?s schema:name ?name . }
+        OPTIONAL { ?s schema:description ?description . }
+        OPTIONAL { ?s schema:url ?url . }
+        OPTIONAL { ?s schema:headline ?headline . }
+        FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                             schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                             schema:CourseInstance, schema:Event, schema:Vehicle)
+        )
+        FILTER (!regex(str(?s), "genid"))
+
+    } UNION {
+        BIND(schema:Dataset AS ?type)
+        ?s rdf:type ?type .
+        FILTER (!regex(str(?s), "genid"))
+        OPTIONAL { ?s schema:sameAs ?sameAs . }
+        OPTIONAL { ?s schema:license ?license . }
+        OPTIONAL { ?s schema:citation ?citation . }
+        OPTIONAL { ?s schema:keywords ?keywords . }
+        OPTIONAL { ?s schema:includedInDataCatalog ?includedInDataCatalog . }
+        OPTIONAL { ?s schema:distribution ?distribution . }
+        OPTIONAL { ?s schema:region ?region . }
+        OPTIONAL { ?s schema:provider ?provider . }
+        OPTIONAL { ?s schema:publisher ?publisher . }
+        OPTIONAL { ?s schema:creator ?creator . }
+    } UNION {
+        BIND(schema:Course AS ?type)
+        ?s rdf:type ?type .
+        FILTER (!regex(str(?s), "genid"))
+        ?s schema:hasCourseInstance ?instance .
+        ?instance schema:location ?txt_location .
+    } UNION {
+        BIND(schema:Person AS ?type)
+        ?s rdf:type ?type .
+        FILTER (!regex(str(?s), "genid"))
+        OPTIONAL { ?s schema:address ?address . }
+        OPTIONAL { ?s schema:knowsAbout ?txt_knowsAbout . }
+        OPTIONAL { ?s schema:knowsLanguage ?txt_knowsLanguage . }
+    } UNION {
+        ?s rdf:type ?type .
+        FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                             schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                             schema:CourseInstance, schema:Event, schema:Vehicle )
+        )
+        FILTER (!regex(str(?s), "genid"))
+        ?s schema:spatialCoverage ?sc .
+        ?sc a schema:Place .
+        OPTIONAL { ?sc schema:name ?placename } .
+        OPTIONAL {
+            ?sc schema:latitude ?lat .
+            ?sc schema:longitude ?long .
+        }
+        OPTIONAL {
+            ?sc schema:geo ?geo .
+            ?geo a ?geotype .
+            ?geo ?geompred ?geom .
+            FILTER (!isIRI(?geom))
+        }
+        OPTIONAL {
+            ?gs geosparql:asWKT ?wkt
+        }
+    } UNION {
+        ?s rdf:type ?type .
+        FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                             schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                             schema:CourseInstance, schema:Event, schema:Vehicle )
+        )
+        FILTER (!regex(str(?s), "genid"))
+        OPTIONAL { ?s schema:temporalCoverage ?temporalCoverage }
+        OPTIONAL { ?s schema:dataModified ?dataModified }
+        OPTIONAL { ?s schema:datePublished ?datePublished }
+
+    }
+
+}
