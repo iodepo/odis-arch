@@ -1,0 +1,33 @@
+Releasing Operations: {
+  shape: sequence_diagram
+  index: Operations \n gleaner/graphs
+  odis: ODIS \n commons/ODIS-KG-MAIN/-date-
+  odisprov: ODIS \n commons/ODIS-KG-PROV/-date-
+  oih: OIH \n commons/OIH-KG-MAIN/-date-
+  prod: OIH \n commons/OIH-PROD/-date-
+
+  copy release graphs: {
+      index -> odis: copy _release.nq
+  }
+
+  copy prov graphs: {
+      index -> odisprov: copy _prov.nq
+  }
+
+  ETL release graphs: {
+      odis -> oih
+  }
+
+  Generate products (WIS2, WESR, etc) {
+     oih -> prod
+}
+odis.style.fill: honeydew
+odisprov.style.fill: honeydew
+
+oih.style.fill: "#f4a261"
+prod.style.fill: "#f4a261"
+
+
+}
+
+

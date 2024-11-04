@@ -1,0 +1,18 @@
+direction: right
+
+
+wmo: WMO/WIS2 \n GeoJSON Serialization
+oih: OIH Search products
+
+b: Base ODIS Workflow {
+s: Source Resources \n JSON-LD
+rg: Release Graph \n RDF
+ps: OIH Query Results \n Product Set (Parquet)
+s -> rg: via ODIS \nIndexing Architecture
+
+rg -> ps: via SAPRQL \n (Oxigraph)
+
+}
+
+b.ps -> oih: via  SQL \n(DuckDB) + Pandas
+b.ps -> wmo: via SQL \n(DuckDB) + geoPandas

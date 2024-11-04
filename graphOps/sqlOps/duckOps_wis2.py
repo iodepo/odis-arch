@@ -1,3 +1,4 @@
+import json
 import duckdb
 import geopandas as gpd
 import shapely
@@ -24,16 +25,15 @@ COPY person FROM '/home/fils/src/Projects/OIH/odis-arch/graphOps/extraction/mdp/
 COPY sup_geo FROM '/home/fils/src/Projects/OIH/odis-arch/graphOps/extraction/mdp/output/active/*_sup_geo.parquet';
 """
 
-sql = """SELECT base_agg.id,
-       base_agg.type_list,
-       base_agg.name_list,
-       dataset_agg.kw_list,
-       base_agg.b_url,
-       base_agg.b_desc,
-       base_agg.b_headline,
+# removed from the select clause:  geo_agg.geojson,  base_agg.b_headline AS headline,
+sql = """SELECT base_agg.id AS externalIds,
+       base_agg.type_list AS type,
+       base_agg.name_list AS title,
+       dataset_agg.kw_list AS keywords,
+       base_agg.b_url AS url,
+       base_agg.b_desc AS description,
        geo_agg.geom_list,
        geo_agg.wkt_list,
-       geo_agg.geojson,
        temporal_agg.tc_list,
        temporal_agg.dp_list
 FROM (SELECT id,
@@ -71,7 +71,7 @@ df = con.execute(sql).fetchdf()
 
 # print(df.info())
 
-# make a new dataframe with None geometry removed
+# Makes a new dataframe with None geometry removed
 # these are not the best lines to have in the code, would be good to remove them if possible
 df_geomtrue = df.dropna(subset=['wkt_list'])
 df_geomtrue = df_geomtrue[df_geomtrue['wkt_list'] != 'None']
@@ -81,14 +81,36 @@ df_geomtrue = df_geomtrue[~df_geomtrue['wkt_list'].str.contains('None')]
 df_geomtrue['geometry'] = df_geomtrue['wkt_list'].apply(wkt.loads)
 gdf = gpd.GeoDataFrame(df_geomtrue, geometry='geometry')
 
-# export to json
+# TODO put in the H3 grid cell generation here
+
+# export to json  ERROR does not work for WIS2 since I need to add in some elements for WIS2
 gdf.to_file('wis2.geojson', driver='GeoJSON', orient='records', lines=True)
+
+## TODO move def to external file
+def wis2mods(file_path, identifier, link):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+
+    # We are a dict here..   but keep the list code around
+    if isinstance(data, list):
+        for item in data:
+            item["id"] = "OIH_ID_X_LIST"
+    elif isinstance(data, dict):
+        data["id"] = f"OIH_ID_{identifier}"
+        data["conformsTo"] = "https://example.org/conformsTo"
+        data["links"] = [link]
+    else:
+        raise ValueError("Unsupported JSON structure")
+
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4)
 
 # Iterate through each row and save as GeoJSON
 for idx, row in gdf.iterrows():
     row_gdf = gpd.GeoDataFrame([row])
     row_gdf.to_file(f'output/row_{idx}.geojson', driver='GeoJSON')
-
+    # add in some custom elements to this JSON
+    wis2mods(f'output/row_{idx}.geojson', idx, str(row_gdf['url'].values[0]))
 
 # save to pandas (should be geopandas?)
 df.to_parquet('wis2.parquet')
