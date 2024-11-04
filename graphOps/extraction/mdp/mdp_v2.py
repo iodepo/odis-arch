@@ -64,11 +64,13 @@ def graphProcessor(dg, q):
     print("RDF aligning", datetime.datetime.now())
     r = graphshapers.contextAlignment(dg)
 
+
+    print("RDF Loading", datetime.datetime.now())
     store = Store()
     mime_type = "application/n-quads"
     store.load(io.StringIO(r), mime_type, base_iri=None, to_graph=None)
-    print("RDF querying", datetime.datetime.now())
 
+    print("RDF querying", datetime.datetime.now())
     sq = store.query(q)
     qr = list(sq)
 
