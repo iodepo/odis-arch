@@ -891,7 +891,24 @@ sources:
     backend: CKAN  
     headless: false
     dateadded: 2024-01-22
-    active: true    
+    active: true
+  #
+  # Universal Plastic
+  # 
+  - name: universalplastic
+    propername: Universal Plastic
+    catalogue: https://universalplastic.io/nuestra-app-informe-esg/
+    domain: https://universalplastic.io/
+    logo: https://universalplastic.io/wp-content/uploads/2024/08/logo-oscuro.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/universalplastic
+    sourcetype: sitemap
+    url: https://unesco.universalplastic.io/unesco/sitemap.xml
+    changefreq: monthly 
+    backend: Custom  
+    headless: false
+    dateadded: 2024-11-05
+    active: true     
   #
   # WIO Symphony
   # 
