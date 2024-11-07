@@ -49,7 +49,8 @@ schema.org expects a lat long (Y X) coordinate order, so be aware of that when
 you are defining your spatialCoverage, in the GeoShape polygon or box parameters.
 ```
 
-Using a bounding box is recommended, as it is easy to query downstream, such as:
+Using a bounding box for your spatialCoverage is recommended, as it is easy to query 
+downstream, such as:
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate-Box.json
 :linenos:
