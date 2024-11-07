@@ -628,6 +628,22 @@ subtype of <a class="reference external" href="https://schema.org/GeoShape">GeoS
 </span><span class="linenos">16</span><span class="p">}</span>
 </pre></div>
 </div>
+<p>Using a bounding box is recommended, as it is easy to query downstream, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 2</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
+<span class="linenos"> 3</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 4</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
+<span class="linenos"> 5</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;schema.org expects lat long (Y X) coordinate order.  Box syntax is: miny minx maxy maxx&quot;</span><span class="p">,</span>
+<span class="linenos"> 6</span>            <span class="s2">&quot;box&quot;</span><span class="p">:</span> <span class="s2">&quot;-90 -180 90 -180&quot;</span>
+<span class="linenos"> 7</span>        <span class="p">},</span>
+<span class="linenos"> 8</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 9</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
+<span class="linenos">10</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dbpedia.org/page/Spatial_reference_system&quot;</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;</span>
+<span class="linenos">12</span>        <span class="p">}</span>
+<span class="linenos">13</span>    <span class="p">},</span>
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">

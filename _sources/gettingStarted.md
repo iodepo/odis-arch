@@ -256,7 +256,7 @@ there are 2 critical fields to fill for the ODIS connection, as follows:
  
 ![ODISCat entry](./images/odiscatEntry.png)
 
-That's it, now your node's records can be harvested by ODIS! :heavy_check_mark:
+That's it, now your node's records can be harvested by ODIS! &#x2705;
 
 ## Frequently asked questions (FAQ)
 
@@ -298,7 +298,7 @@ by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http:/
 
 ### How often does ODIS index my records?
 
-ODIS will use the frequency values set in your sitemap, to automated the harvesting 
+ODIS will use the frequency values set in your sitemap, to automate the harvesting 
 and display of your records in the search results.
 
 
