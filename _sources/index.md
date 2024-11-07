@@ -1,10 +1,13 @@
 ![splash](./images/splash.png)
 
-# The Ocean InfoHub Project
+# The Ocean InfoHub Project & ODIS
 
 ## Introduction
 
-The Ocean InfoHub aims to build a sustainable, interoperable, and inclusive digital ecosystem for all Ocean data centres. Existing and emerging data systems are linked, with the ultimate goal of coordinating action and capacity to improve access to Ocean data and knowledge.
+The Ocean InfoHub aims to build a sustainable, interoperable, and inclusive digital 
+ecosystem for all Ocean data centres. Existing and emerging data systems are linked, 
+with the ultimate goal of coordinating action and capacity to improve access to Ocean 
+data and knowledge.
 
 The following video provide brief high level context to the Ocean InfoHub project.
 
@@ -12,11 +15,26 @@ The following video provide brief high level context to the Ocean InfoHub projec
 
 *(read the original [ODIS Proposal](./assets/IOC_OceanInfoHub_Proposal__summary.pdf))*
 
-Organizations are increasingly exposing data and resources on the Web.   A popular approach to this is using web architecture to expose structured data on the web using the schema.org vocabulary.   Doing this makes resources discoverable by a range of organizations leveraging this architecture to build indexes.  These include major commercial indexes, large domain focused groups and community focused services.
+Organizations are increasingly exposing data and resources on the Web.   A popular 
+approach to this is using web architecture to expose structured data on the web using 
+the schema.org vocabulary.   Doing this makes resources discoverable by a range of 
+organizations leveraging this architecture to build indexes.  These include major 
+commercial indexes, large domain focused groups and community focused services.
 
-The Ocean Data and Information System (ODIS) will provide a schema.org based interoperability layer and supporting technology to allow existing and emerging ocean data and information systems, from any stakeholder, to interoperate with one another. This will enable and accelerate more effective development and dissemination of digital technology and sharing of ocean data, information, and knowledge. As such, ODIS will not be a new portal or centralized system, but will provide a collaborative solution to interlink distributed systems for common goals. Together with global project partners and partners in the three regions, a process of co-design will enable a number of global and regional nodes to test the proof of concept for the ODIS.
+The Ocean Data and Information System (ODIS) will provide a schema.org based 
+interoperability layer and supporting technology to allow existing and emerging ocean 
+data and information systems, from any stakeholder, to interoperate with one another. 
+This will enable and accelerate more effective development and dissemination of digital 
+technology and sharing of ocean data, information, and knowledge. As such, ODIS will 
+not be a new portal or centralized system, but will provide a collaborative solution to 
+interlink distributed systems for common goals. Together with global project partners and 
+partners in the three regions, a process of co-design will enable a number of global and 
+regional nodes to test the proof of concept for the ODIS.
 
-The ODIS-architecture development is being supported by the Ocean InfoHub Project, and it has been tested initially on IOC and partner databases. However, the system and standards are open for any institution or initiative that is interested in accessing the global data ecosystem to adopt and implement.
+The ODIS-architecture development is being supported by the Ocean InfoHub Project, and it 
+has been tested initially on IOC and partner databases. However, the system and standards 
+are open for any institution or initiative that is interested in accessing the global data 
+ecosystem to adopt and implement.
 
 ## Guidance for the implementation of the ODIS-architecture
 
@@ -25,7 +43,9 @@ architecture including authoring, publishing, indexing and interfaces.
 
 The basics of this approach can be described as:
 
-* Providers publish HTML pages for a resource.  This may be a publication, course description, research instrument or other.   The core themes for OIH are described in the Authoring section below.
+* Providers publish HTML pages for a resource.  This may be a publication, course 
+  description, research instrument or other.   The core themes for OIH are described 
+  in the Authoring section below.
 * A HTML page then has a small JSON based snippet added to the HTML.  This is
   described in the Including JSON-LD in your resource page in the Publishing
   resource below. 
