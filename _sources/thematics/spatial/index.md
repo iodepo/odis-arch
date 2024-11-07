@@ -117,7 +117,7 @@ Using a bounding box is recommended, as it is easy to query downstream, such as:
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate-Box.json
 :linenos:
 :lines: 56-68
-:emphasize-lines: 59-61
+:emphasize-lines: 4-6
 ```
 
 ```{code-cell}
