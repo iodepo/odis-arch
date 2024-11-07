@@ -23,7 +23,7 @@ environments.
 
 ```{note}
 schema.org expects a lat long (Y X) coordinate order, so be aware of that when
-you are defining your spatialCoverage, in the GeoShape or Box parameters.
+you are defining your spatialCoverage, in the GeoShape polygon or box parameters.
 ```
 
 ## Simple GeoSPARQL WKT

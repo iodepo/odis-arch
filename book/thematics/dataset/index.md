@@ -46,7 +46,7 @@ to the landing page of the record (HTML page), that embeds the JSON-LD.
 
 ```{note}
 schema.org expects a lat long (Y X) coordinate order, so be aware of that when
-you are defining your spatialCoverage, in the GeoShape or Box parameters.
+you are defining your spatialCoverage, in the GeoShape polygon or box parameters.
 ```
 
 Using a bounding box is recommended, as it is easy to query downstream, such as:
