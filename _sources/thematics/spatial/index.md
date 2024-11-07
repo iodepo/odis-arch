@@ -113,7 +113,7 @@ Schema.org spatial relations are guided by [DE-9IM](https://en.wikipedia.org/wik
 ```
 
 Using a bounding box for your spatialCoverage is recommended, as it is easy to query 
-downstream, such as:
+& display downstream, such as:
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate-Box.json
 :linenos:
