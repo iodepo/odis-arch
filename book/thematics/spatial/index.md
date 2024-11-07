@@ -112,6 +112,14 @@ Schema.org spatial relations are guided by [DE-9IM](https://en.wikipedia.org/wik
 :emphasize-lines: 8-15
 ```
 
+Using a bounding box is recommended, as it is easy to query downstream, such as:
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate-Box.json
+:linenos:
+:lines: 56-68
+:emphasize-lines: 59-61
+```
+
 ```{code-cell}
 :tags: [hide-input]
 

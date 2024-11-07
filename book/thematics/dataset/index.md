@@ -49,6 +49,14 @@ schema.org expects a lat long (Y X) coordinate order, so be aware of that when
 you are defining your spatialCoverage, in the GeoShape or Box parameters.
 ```
 
+Using a bounding box is recommended, as it is easy to query downstream, such as:
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/dataset/graphs/datasetTemplate-Box.json
+:linenos:
+:lines: 56-68
+:emphasize-lines: 59-61
+```
+
 ## Demo area  please ignore
 
 This area is being used to test out a new repository structure where the data graphs, 
