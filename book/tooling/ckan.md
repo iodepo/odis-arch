@@ -499,18 +499,18 @@ as follows:
          sudo apt-get upgrade
          sudo apt-get install redis
        ```
-    - start the redis server
-      ```
-        sudo service redis-server start
-      ```
-   - test it by running: `redis-cli`
-     ```
-       127.0.0.1:6379>
-       127.0.0.1:6379>ping
-         PONG
-     ```
+     - start the redis server
+       ```
+         sudo service redis-server start
+       ```
+     - test it by running: `redis-cli`
+       ```
+         127.0.0.1:6379>
+         127.0.0.1:6379>ping
+           PONG
+       ```
      
-     ![redis install3](./images/redis-install3.png)     
+       ![redis install3](./images/redis-install3.png)     
   
 ## Create the CKAN database tables
 
