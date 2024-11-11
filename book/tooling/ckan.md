@@ -485,7 +485,7 @@ as follows:
          sudo apt-get update
          sudo apt-get upgrade
          sudo apt-get install redis
-      ```
+       ```
      - if error "Failed to take /etc/passwd lock: Invalid argument", execute:
        ```
          sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
@@ -498,7 +498,7 @@ as follows:
          sudo apt-get update
          sudo apt-get upgrade
          sudo apt-get install redis
-      ```
+       ```
     - start the redis server
       ```
         sudo service redis-server start
