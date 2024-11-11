@@ -16,7 +16,7 @@ The intended audience of these steps is for a technical person to follow, as
 the steps require familiarity with running commands at the commandline, and 
 executing various scripts.
 
-## Windows Version
+## Windows Versions Supported
 
 The following steps were created on Windows Server 2022, but should work on 
 Windows 11 or 10.  You will be required to have full Administrator access on 
