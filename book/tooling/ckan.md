@@ -301,10 +301,12 @@ Several tools for CKAN require that we install Java, as follows:
 ```
 - use MSI installer for x64 platform
 - run installer (use all defaults)
-- test: open a new CMD window and execute: java --version
+- test: open a new CMD window and execute: `java --version`
+  ![OpenJDK install1](./images/openjdk-install1.png) 
 - check your system Environment Variables list to make sure JAVA_HOME is set
     - set it to: 
         `C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot`
+      ![OpenJDK install2](./images/openjdk-install2.png)
 
 ## Install strawberry Perl
 
