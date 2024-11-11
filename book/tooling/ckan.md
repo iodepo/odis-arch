@@ -489,12 +489,14 @@ as follows:
   ckan -c ckan.ini db init
 ```
 - you should see a green message: "Upgrading DB: SUCCESS"
+  ![CKAN install tables1](./images/ckan-install-tables1.png)
 - test with psql command:
   ```
     psql -U ckanuser -p 5432 -d ckandb -c "\d"
       password: odis
   ```
-  you should see 32 rows of tables
+- you should see 32 rows of tables
+  ![CKAN install tables2](./images/ckan-install-tables2.png)
 
 ## Add CKAN user
 
