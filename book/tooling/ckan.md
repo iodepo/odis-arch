@@ -531,6 +531,10 @@ as follows:
 
 ## Add CKAN user
 
+We will create an initial user `admin` for CKAN, with full
+`sysadmin` powers, to manage the catalogue.  Open a CMD window and 
+execute:
+
 ```  
 cd C:/working/ckan-site
 C:\working\ckan-venv\Scripts\activate
@@ -538,7 +542,7 @@ ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
   password: odisckan
 ```
 
-- promote "admin" user to sysadmin
+- then promote the "admin" user to sysadmin
   ```
     ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
   ```
@@ -547,6 +551,8 @@ ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
 ![CKAN home](./images/ckan-create-user.png)
 
 ## Run CKAN
+
+We can use the internal "development server" to serve CKAN, as follows:
 
 ```
 C:\working\ckan-venv\Scripts\activate
