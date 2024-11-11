@@ -438,7 +438,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Intended Audience</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-version">Windows Version</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
@@ -488,72 +487,47 @@ executing various scripts.</p>
 Windows 11 or 10.  You will be required to have full Administrator access on
 your server.</p>
 </section>
-<section id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Install recommended tools</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://notepad-plus-plus.org/downloads/">Notepad++</a> editor</p></li>
-<li><p><a class="reference external" href="https://www.7-zip.org/">7-Zip</a> (recommended tool to manage archives)</p></li>
-<li><p><a class="reference external" href="https://www.mozilla.org/firefox/">Firefox</a>  browser (and set as default)</p></li>
-</ul>
-</li>
-<li><p>Install PostgreSQL (<a href=#preparing-content>jump</a> to that below)</p></li>
-<li><p>Install Python (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
-<li><p>Install Git (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)</p></li>
-<li><p>Create a working directory (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
-<li><p>Create virtualenv in Python (<a href=#preparing-content>jump</a> to that below)</p></li>
-<li><p>Upgrade pip (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
-<li><p>Checkout CKAN source and build CKAN (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)</p></li>
-<li><p>Add PostgreSQL utils to PATH (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
-<li><p>Create ckan db (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
-<li><p>Install PostGIS extension in ckandb (<a href=#preparing-content>jump</a> to that below)</p></li>
-<li><p>Generate config file for CKAN (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
-<li><p>Install Java JRE (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)</p></li>
-<li><p>Install strawberry Perl (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
-<li><p>Install Solr (<a href=#preparing-content>jump</a> to that below)</p></li>
-<li><p>Install Redis (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
-<li><p>Install Java JRE (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)</p></li>
-<li><p>Create the CKAN database tables (<a href=#frequently-asked-questions-faq>jump</a> to that below)</p></li>
-<li><p>Add CKAN user (<a href=#preparing-content>jump</a> to that below)</p></li>
-<li><p>Run CKAN (<a href=#creating-a-sitemap>jump</a> to that below)</p></li>
-</ol>
-</section>
 <section id="install-postgresql">
 <h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Link to this heading">#</a></h2>
 <p>PostgreSQL is a popular Open Source database, that will store tables leveraged by
 CKAN.  It also has a very strong spatial engine, PostGIS.  We will now install both
 PostgreSQL and PostGIS, as follows:</p>
-<ul class="simple">
+<ul>
 <li><p>goto <a class="reference external" href="https://www.postgresql.org/download/windows/">https://www.postgresql.org/download/windows/</a></p></li>
 <li><p>near the top, click on “Download the installer certified by EDB”</p></li>
 <li><p>click the latest for “Windows x86-64”</p></li>
 <li><p>double-click the installer file</p></li>
-<li><p>leave default install directory as-is (C:/Program Files/PostgreSQL/17/)
-<img alt="PG install1" src="../_images/pg-install1.png" /></p></li>
-<li><p>leave default components as-is
-<img alt="PG install2" src="../_images/pg-install2.png" /></p></li>
+<li><p>leave default install directory as-is (C:/Program Files/PostgreSQL/17/)</p>
+<p><img alt="PG install1" src="../_images/pg-install1.png" /></p>
+</li>
+<li><p>leave default components as-is</p>
+<p><img alt="PG install2" src="../_images/pg-install2.png" /></p>
+</li>
 <li><p>leave data directory as-is (C:/Program Files/PostgreSQL/17/data/)</p></li>
 <li><p>for superuser password, use “postgres”
 <img alt="PG install3" src="../_images/pg-install3.png" /></p></li>
-<li><p>leave port as-s (5432)
-<img alt="PG install4" src="../_images/pg-install4.png" /></p></li>
+<li><p>leave port as-s (5432)</p>
+<p><img alt="PG install4" src="../_images/pg-install4.png" /></p>
+</li>
 <li><p>leave locale as-is</p></li>
 <li><p>install</p></li>
-<li><p>make sure “Stack Builder” is selected and then click “Finish”
-<img alt="PG install5" src="../_images/pg-install5.png" /></p></li>
+<li><p>make sure “Stack Builder” is selected and then click “Finish”</p>
+<p><img alt="PG install5" src="../_images/pg-install5.png" /></p>
+</li>
 <li><p>in the “Stack Builder” window, select your installation in the dropdown
 (“PostgreSQL 17 on port 5432”) and then click “Next”</p></li>
-<li><p>expand “Spatial Extensions” and click the checkbox for “PostGIS x.x Bundle for PostgreSQL”
-<img alt="PG install6" src="../_images/pg-install6.png" /></p></li>
+<li><p>expand “Spatial Extensions” and click the checkbox for “PostGIS x.x Bundle for PostgreSQL”</p>
+<p><img alt="PG install6" src="../_images/pg-install6.png" /></p>
+</li>
 <li><p>leave download directory as-is, click “Next”</p></li>
 <li><p>wait for the PostGIS installer to download</p></li>
 <li><p>click “Next” to begin PostGIS install</p></li>
 <li><p>click “I Agree” to the PostGIS license</p></li>
 <li><p>leave components as-is</p></li>
 <li><p>leave destination folder as-is</p></li>
-<li><p>click “Finish” to end the installation
-<img alt="PG install8" src="../_images/pg-install8.png" /></p></li>
+<li><p>click “Finish” to end the installation</p>
+<p><img alt="PG install8" src="../_images/pg-install8.png" /></p>
+</li>
 </ul>
 </section>
 <section id="install-python">
@@ -571,18 +545,21 @@ later in this document.</p>
 <code class="docutils literal notranslate"><span class="pre">C:/Python</span></code></p></li>
 <li><p>download 3.12.7 “Windows installer (64-bit)” from <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
 <li><p>double-click the file “python-3.12.7-amd64.exe” to install</p></li>
-<li><p>choose “Customize installation” &amp; check the checkbox for “add python.exe to PATH”
-<img alt="Python install1" src="../_images/python-install1.png" /></p></li>
+<li><p>choose “Customize installation” &amp; check the checkbox for “add python.exe to PATH”</p>
+<p><img alt="Python install1" src="../_images/python-install1.png" /></p>
+</li>
 <li><p>leave “Optional Features” as-is</p></li>
 <li><p>for “Advanced Options”, click on the “Browse” button, to select the install location,
-and choose the <code class="docutils literal notranslate"><span class="pre">C:/Python</span></code> folder
-<img alt="Python install2" src="../_images/python-install2.png" /></p></li>
+and choose the <code class="docutils literal notranslate"><span class="pre">C:/Python</span></code> folder</p>
+<p><img alt="Python install2" src="../_images/python-install2.png" /></p>
+</li>
 <li><p>click the “Install” button</p></li>
 <li><p>test with a CMD command</p>
 <ul>
 <li><p>in the Windows search bar, type “CMD” and press <enter> on your keyboard</p></li>
-<li><p>make sure you right-click on the icon and select “Run as Administrator”
-<img alt="CMD as administrator" src="tooling/images/cmd-admin1.png" /></p></li>
+<li><p>make sure you right-click on the icon and select “Run as Administrator”</p>
+<p><img alt="CMD as administrator" src="tooling/images/cmd-admin1.png" /></p>
+</li>
 <li><p>at the command prompt, type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>python<span class="w"> </span>--version
 </pre></div>
@@ -606,28 +583,33 @@ option in the Start Menu, that you may prefer for a more visual experience.  The
 are also other visual tools that you can install instead, such as
 <a class="reference external" href="https://github.com/apps/desktop">GitHub Desktop</a>.</p>
 </div>
-<ul class="simple">
+<ul>
 <li><p>goto <a class="reference external" href="https://git-scm.com/downloads/win">https://git-scm.com/downloads/win</a> and select “Click here to download” the
 64-bit version of Git for Windows</p></li>
 <li><p>run the installer</p></li>
-<li><p>select “Checkout as-is, commit as-is”
-<img alt="Git install1" src="../_images/git-windows1.png" /></p></li>
-<li><p>select “Use Windows’ default console window”
-<img alt="Git install2" src="../_images/git-windows2.png" /></p></li>
-<li><p>select “Fast-forward or merge” for ‘git pull’
-<img alt="Git install3" src="../_images/git-windows3.png" /></p></li>
-<li><p>default credential manager (no changes)
-<img alt="Git install4" src="../_images/git-windows4.png" /></p></li>
+<li><p>select “Checkout as-is, commit as-is”</p>
+<p><img alt="Git install1" src="../_images/git-windows1.png" /></p>
+</li>
+<li><p>select “Use Windows’ default console window”</p>
+<p><img alt="Git install2" src="../_images/git-windows2.png" /></p>
+</li>
+<li><p>select “Fast-forward or merge” for ‘git pull’</p>
+<p><img alt="Git install3" src="../_images/git-windows3.png" /></p>
+</li>
+<li><p>default credential manager (no changes)</p>
+<p><img alt="Git install4" src="../_images/git-windows4.png" /></p>
+</li>
 <li><p>select “Enable file system caching”</p></li>
-<li><p>test by opening a CMD window and executing: git –version
-<img alt="Git install6" src="../_images/git-windows6.png" /></p></li>
+<li><p>test by opening a CMD window and executing: git –version</p>
+<p><img alt="Git install6" src="../_images/git-windows6.png" /></p>
+</li>
 </ul>
 </section>
 <section id="create-a-working-directory">
 <h2>Create a working directory<a class="headerlink" href="#create-a-working-directory" title="Link to this heading">#</a></h2>
 <p>Using Windows File Explorer, create a new folder named “working” at the
-<code class="docutils literal notranslate"><span class="pre">C:/</span></code> drive root, so you have the existing path <code class="docutils literal notranslate"><span class="pre">C:/working</span></code>
-<img alt="File Explorer" src="../_images/working-folder.png" /></p>
+<code class="docutils literal notranslate"><span class="pre">C:/</span></code> drive root, so you have the existing path <code class="docutils literal notranslate"><span class="pre">C:/working</span></code></p>
+<p><img alt="File Explorer" src="../_images/working-folder.png" /></p>
 </section>
 <section id="create-virtual-environment-in-python">
 <h2>Create virtual environment in Python<a class="headerlink" href="#create-virtual-environment-in-python" title="Link to this heading">#</a></h2>
@@ -639,8 +621,8 @@ a CMD window, and execute the following to create a new <code class="docutils li
 <span class="w">  </span>C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </pre></div>
 </div>
-<p>You should now see a prompt that looks like the following:
-<img alt="venv" src="../_images/python-venv.png" /></p>
+<p>You should now see a prompt that looks like the following:</p>
+<p><img alt="venv" src="../_images/python-venv.png" /></p>
 <p>You can also execute <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> to exit that <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> virtual environment,
 and then execute <code class="docutils literal notranslate"><span class="pre">C:\working\ckan-venv\Scripts\activate</span></code> to reactivate.</p>
 </section>
@@ -667,27 +649,31 @@ environment.  Open a CMD window, and execute:</p>
 </pre></div>
 </div>
 <p><img alt="CKAN install1" src="../_images/ckan-install1.png" /></p>
-<p>You can now try to a test, to see the usage, such as:
-<img alt="CKAN install2" src="../_images/ckan-install2.png" /></p>
+<p>You can now try to a test, to see the usage, such as:</p>
+<p><img alt="CKAN install2" src="../_images/ckan-install2.png" /></p>
 </section>
 <section id="add-postgresql-utils-to-path">
 <h2>Add PostgreSQL utils to PATH<a class="headerlink" href="#add-postgresql-utils-to-path" title="Link to this heading">#</a></h2>
 <p>We will need to run various PostgreSQL tools from the commandline, so we need
 to make sure that they are found on the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable on your
 server.  To set the system PATH, execute the following:</p>
-<ul class="simple">
+<ul>
 <li><p>in the Windows search bar, searcg for “env” and choose “Edit the system environment variables”</p></li>
-<li><p>click on the bottom “Environment variables” button
-<img alt="PG env1" src="../_images/pg-env1.png" /></p></li>
+<li><p>click on the bottom “Environment variables” button</p>
+<p><img alt="PG env1" src="../_images/pg-env1.png" /></p>
+</li>
 <li><p>select <code class="docutils literal notranslate"><span class="pre">Path</span></code> in the lower “System variables” section and click the “Edit…”
-button
-<img alt="PG env2" src="../_images/pg-env2.png" /></p></li>
-<li><p>click “New” and then “Browse” to C:/Program Files/PostgreSQL/xx/bin/”
-<img alt="PG env3" src="../_images/pg-env3.png" /></p></li>
+button</p>
+<p><img alt="PG env2" src="../_images/pg-env2.png" /></p>
+</li>
+<li><p>click “New” and then “Browse” to C:/Program Files/PostgreSQL/xx/bin/”</p>
+<p><img alt="PG env3" src="../_images/pg-env3.png" /></p>
+</li>
 <li><p>click “OK”</p></li>
 <li><p>close your CMD window, and re-open it</p></li>
-<li><p>test by executing: <code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">--version</span></code>
-<img alt="PG env4" src="../_images/pg-env4.png" /></p></li>
+<li><p>test by executing: <code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">--version</span></code></p>
+<p><img alt="PG env4" src="../_images/pg-env4.png" /></p>
+</li>
 </ul>
 </section>
 <section id="create-the-ckan-database">
@@ -725,8 +711,8 @@ You see a response as <code class="docutils literal notranslate"><span class="pr
 <span class="w">  </span>ALTER<span class="w"> </span>DATABASE<span class="w"> </span>ckandb<span class="w"> </span>SET<span class="w"> </span>client_min_messages<span class="w"> </span>TO<span class="w"> </span>WARNING<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
 </pre></div>
 </div>
-<p>Again execute to list all tables (you should see more tables now) : <code class="docutils literal notranslate"><span class="pre">\d</span> <span class="pre">&lt;enter&gt;</span></code>
-<img alt="PG table install" src="../_images/postgis-table-install.png" /></p>
+<p>Again execute to list all tables (you should see more tables now) : <code class="docutils literal notranslate"><span class="pre">\d</span> <span class="pre">&lt;enter&gt;</span></code></p>
+<p><img alt="PG table install" src="../_images/postgis-table-install.png" /></p>
 <p>to quit, execute: <code class="docutils literal notranslate"><span class="pre">\q</span> <span class="pre">&lt;enter&gt;</span></code></p>
 </section>
 <section id="generate-config-file-for-ckan">
@@ -769,16 +755,18 @@ and set the following:</p>
 <p class="admonition-title">Tip</p>
 <p>JDK 21 is recommended for latest Solr through GitHub</p>
 </div>
-<ul class="simple">
+<ul>
 <li><p>use MSI installer for x64 platform</p></li>
 <li><p>run installer (use all defaults)</p></li>
-<li><p>test: open a new CMD window and execute: <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">--version</span></code>
-<img alt="OpenJDK install1" src="../_images/openjdk-install1.png" /></p></li>
+<li><p>test: open a new CMD window and execute: <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">--version</span></code></p>
+<p><img alt="OpenJDK install1" src="../_images/openjdk-install1.png" /></p>
+</li>
 <li><p>check your system Environment Variables list to make sure JAVA_HOME is set</p>
 <ul>
 <li><p>set it to:
-<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Microsoft\jdk-17.0.13.11-hotspot</span></code>
-<img alt="OpenJDK install2" src="../_images/openjdk-install2.png" /></p></li>
+<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Microsoft\jdk-17.0.13.11-hotspot</span></code></p>
+<p><img alt="OpenJDK install2" src="../_images/openjdk-install2.png" /></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -813,8 +801,8 @@ execute the following in a CMD window:</p>
 </pre></div>
 </div>
 <p><img alt="Solr install2" src="../_images/solr-install2.png" /></p>
-<p>In your web browser goto: <a class="reference external" href="http://localhost:8983/solr">http://localhost:8983/solr</a>
-<img alt="Solr install3" src="../_images/solr-install3.png" /></p>
+<p>In your web browser goto: <a class="reference external" href="http://localhost:8983/solr">http://localhost:8983/solr</a></p>
+<p><img alt="Solr install3" src="../_images/solr-install3.png" /></p>
 <ul class="simple">
 <li><p>Now check Solr status with <code class="docutils literal notranslate"><span class="pre">bin\solr.cmd</span> <span class="pre">status</span></code></p></li>
 </ul>
@@ -852,10 +840,12 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 <ul class="simple">
 <li><p>in your web browser, check the <code class="docutils literal notranslate"><span class="pre">ckan</span></code> core</p>
 <ul>
-<li><p><a class="reference external" href="http://localhost:8983/solr/#/ckan/core-overview">http://localhost:8983/solr/#/ckan/core-overview</a>
-<img alt="Solr install4" src="../_images/solr-install4.png" /></p></li>
+<li><p><a class="reference external" href="http://localhost:8983/solr/#/ckan/core-overview">http://localhost:8983/solr/#/ckan/core-overview</a></p></li>
 </ul>
 </li>
+</ul>
+<p><img alt="Solr install4" src="../_images/solr-install4.png" /></p>
+<ul class="simple">
 <li><p>get status of one core (“ckan”)</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8983</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">cores</span><span class="o">/</span><span class="n">ckan</span>
@@ -1001,16 +991,18 @@ sudo apt-get install redis
 </pre></div>
 </div>
 <ul>
-<li><p>you should see a green message: “Upgrading DB: SUCCESS”
-<img alt="CKAN install tables1" src="../_images/ckan-install-tables1.png" /></p></li>
+<li><p>you should see a green message: “Upgrading DB: SUCCESS”</p>
+<p><img alt="CKAN install tables1" src="../_images/ckan-install-tables1.png" /></p>
+</li>
 <li><p>test with psql command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
     <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
 </pre></div>
 </div>
 </li>
-<li><p>you should see 32 rows of tables
-<img alt="CKAN install tables2" src="../_images/ckan-install-tables2.png" /></p></li>
+<li><p>you should see 32 rows of tables</p>
+<p><img alt="CKAN install tables2" src="../_images/ckan-install-tables2.png" /></p>
+</li>
 </ul>
 </section>
 <section id="add-ckan-user">
@@ -1027,9 +1019,9 @@ sudo apt-get install redis
 </pre></div>
 </div>
 </li>
-<li><p>you should see “Added admin as sysadmin”
-<img alt="CKAN home" src="../_images/ckan-create-user.png" /></p></li>
+<li><p>you should see “Added admin as sysadmin”</p></li>
 </ul>
+<p><img alt="CKAN home" src="../_images/ckan-create-user.png" /></p>
 </section>
 <section id="run-ckan">
 <h2>Run CKAN<a class="headerlink" href="#run-ckan" title="Link to this heading">#</a></h2>
@@ -1044,9 +1036,9 @@ sudo apt-get install redis
 </pre></div>
 </div>
 </li>
-<li><p>in your browser, goto: <a class="reference external" href="http://localhost:5000/">http://localhost:5000/</a>
-<img alt="CKAN home" src="../_images/ckan-initial-home.png" /></p></li>
+<li><p>in your browser, goto: <a class="reference external" href="http://localhost:5000/">http://localhost:5000/</a></p></li>
 </ul>
+<p><img alt="CKAN home" src="../_images/ckan-initial-home.png" /></p>
 </section>
 </section>
 
@@ -1118,7 +1110,6 @@ sudo apt-get install redis
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Intended Audience</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-version">Windows Version</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
