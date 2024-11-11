@@ -509,7 +509,7 @@ as follows:
        ```
        - which should bring you to a prompt of `127.0.0.1:6379>`, so then type
          `ping <enter>`
-         - the response should be `PONG` 
+         - the response should be `PONG` if successful
            ```
              127.0.0.1:6379>
              127.0.0.1:6379>ping
