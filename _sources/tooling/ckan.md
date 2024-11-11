@@ -396,10 +396,14 @@ bin\solr.cmd stop -p 8983
   
 ![Solr install4](./images/solr-install4.png)
 
-- get status of one core ("ckan")
-```
-curl -X GET http://localhost:8983/api/cores/ckan
+- you can also check the status of the core at the commandline, by executing:
 
+  ```
+    curl -X GET http://localhost:8983/api/cores/ckan
+  ```
+- which should give a response such as:
+  
+  ```json
         {
           "responseHeader":{
             "status":0,
@@ -433,7 +437,7 @@ curl -X GET http://localhost:8983/api/cores/ckan
             }
           }
         }
-```
+  ```
 
 ## Install Redis
 

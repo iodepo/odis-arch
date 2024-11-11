@@ -846,46 +846,50 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 </li>
 </ul>
 <p><img alt="Solr install4" src="../_images/solr-install4.png" /></p>
-<ul class="simple">
-<li><p>get status of one core (“ckan”)</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8983</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">cores</span><span class="o">/</span><span class="n">ckan</span>
-
-        <span class="p">{</span>
-          <span class="s2">&quot;responseHeader&quot;</span><span class="p">:{</span>
-            <span class="s2">&quot;status&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;QTime&quot;</span><span class="p">:</span><span class="mi">4</span>
-          <span class="p">},</span>
-          <span class="s2">&quot;initFailures&quot;</span><span class="p">:{</span> <span class="p">},</span>
-          <span class="s2">&quot;status&quot;</span><span class="p">:{</span>
-            <span class="s2">&quot;ckan&quot;</span><span class="p">:{</span>
-              <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;ckan&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;instanceDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">working</span><span class="se">\\</span><span class="s2">solr-git-main</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">packaging</span><span class="se">\\</span><span class="s2">build</span><span class="se">\\</span><span class="s2">dev</span><span class="se">\\</span><span class="s2">server</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">ckan&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;dataDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">working</span><span class="se">\\</span><span class="s2">solr-git-main</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">packaging</span><span class="se">\\</span><span class="s2">build</span><span class="se">\\</span><span class="s2">dev</span><span class="se">\\</span><span class="s2">server</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">ckan</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;config&quot;</span><span class="p">:</span><span class="s2">&quot;solrconfig.xml&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;schema&quot;</span><span class="p">:</span><span class="s2">&quot;managed-schema.xml&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;startTime&quot;</span><span class="p">:</span><span class="s2">&quot;2024-11-09T20:33:09.309Z&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;uptime&quot;</span><span class="p">:</span><span class="mi">253492</span><span class="p">,</span>
-              <span class="s2">&quot;index&quot;</span><span class="p">:{</span>
-                <span class="s2">&quot;numDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;maxDoc&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;deletedDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;version&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
-                <span class="s2">&quot;segmentCount&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-                <span class="s2">&quot;current&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span>
-                <span class="s2">&quot;hasDeletions&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span>
-                <span class="s2">&quot;directory&quot;</span><span class="p">:</span><span class="s2">&quot;org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@C:</span><span class="se">\\</span><span class="s2">working</span><span class="se">\\</span><span class="s2">solr-git-main</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">packaging</span><span class="se">\\</span><span class="s2">build</span><span class="se">\\</span><span class="s2">dev</span><span class="se">\\</span><span class="s2">server</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">ckan</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">index lockFactory=org.apache.lucene.store.NativeFSLockFactory@17a1916f; maxCacheMB=48.0 maxMergeSizeMB=4.0)&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segmentsFile&quot;</span><span class="p">:</span><span class="s2">&quot;segments_1&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segmentsFileSizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
-                <span class="s2">&quot;userData&quot;</span><span class="p">:{</span> <span class="p">},</span>
-                <span class="s2">&quot;sizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
-                <span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="s2">&quot;69 bytes&quot;</span>
-              <span class="p">}</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
+<ul>
+<li><p>you can also check the status of the core at the commandline, by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8983</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">cores</span><span class="o">/</span><span class="n">ckan</span>
 </pre></div>
 </div>
+</li>
+<li><p>which should give a response such as:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;responseHeader&quot;</span><span class="p">:{</span>
+<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;QTime&quot;</span><span class="p">:</span><span class="mi">4</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;initFailures&quot;</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:{</span>
+<span class="w">          </span><span class="nt">&quot;ckan&quot;</span><span class="p">:{</span>
+<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;ckan&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;instanceDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;dataDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="s2">&quot;solrconfig.xml&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="s2">&quot;managed-schema.xml&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;startTime&quot;</span><span class="p">:</span><span class="s2">&quot;2024-11-09T20:33:09.309Z&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;uptime&quot;</span><span class="p">:</span><span class="mi">253492</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;index&quot;</span><span class="p">:{</span>
+<span class="w">              </span><span class="nt">&quot;numDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;maxDoc&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;deletedDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;segmentCount&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;current&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;hasDeletions&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;directory&quot;</span><span class="p">:</span><span class="s2">&quot;org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@17a1916f; maxCacheMB=48.0 maxMergeSizeMB=4.0)&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;segmentsFile&quot;</span><span class="p">:</span><span class="s2">&quot;segments_1&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;segmentsFileSizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;userData&quot;</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">&quot;sizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="s2">&quot;69 bytes&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
 </section>
 <section id="install-redis">
 <h2>Install Redis<a class="headerlink" href="#install-redis" title="Link to this heading">#</a></h2>
