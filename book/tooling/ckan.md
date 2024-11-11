@@ -407,85 +407,83 @@ curl -X GET http://localhost:8983/api/cores/ckan
 
 ## install Redis
 
-- install WSL (Windows Subsystem for Linux)
-
+To install Redis (required for CKAN), we must install the WSL (Windows Subsystem for Linux),
+as follows:
   - follow https://learn.microsoft.com/en-us/windows/wsl/install
-  
   - open CMD window and execute:
-  
     - see list of all Linux distribution names
-    
-       wsl --list --online
-  
-    wsl --install --enable-wsl1 --distribution "Ubuntu-24.04 LTS"
-    
+      ```
+        wsl --list --online
+      ```
+    - now install Ubuntu
+      ```
+        wsl --install --enable-wsl1 --distribution "Ubuntu-24.04 LTS"
+      ```
   - reboot machine
-  
   - you should see a progress bar for installing Ubuntu
-  
-  - username: odis
-    password: odis
-    
+  - when asked to create a new user, enter:
+    ```
+      username: odis
+      password: odis
+    ```
   - to run: goto Start menu, choose "WSL"
-  
-      CMD window should open with an odis@ prompt
-      
+    - CMD window should open with an odis@ prompt
   - to check the Ubuntu version, run:
-  
+    ```
       lsb_release -a
       
          Distributor ID: Ubuntu
          Description:    Ubuntu 24.04 LTS
          Release:        24.04
          Codename:       noble
-         
+    ```   
    - install the redis package
-   
-     (follow steps at https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
-   
-     curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-     echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-     sudo apt-get update
-     sudo apt-get upgrade
-     sudo apt-get install redis
-     
-     
-     if error "Failed to take /etc/passwd lock: Invalid argument"
-     
-        sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
-        sudo mkdir /var/lib/dpkg/info
-        sudo apt-get update
-        sudo apt-get -f install
-        sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
-        sudo rm -rf /var/lib/dpkg/info
-        sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
-        sudo apt-get update
-        sudo apt-get upgrade
-        sudo apt-get install redis
-      
-   #start the redis server
-   sudo service redis-server start
-
-   test it by running: redis-cli
-
-     127.0.0.1:6379>
-     127.0.0.1:6379>ping
-       PONG     
+     - (follow steps at https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
+       ```
+         curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+         echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+         sudo apt-get update
+         sudo apt-get upgrade
+         sudo apt-get install redis
+      ```
+     - if error "Failed to take /etc/passwd lock: Invalid argument", execute:
+       ```
+         sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
+         sudo mkdir /var/lib/dpkg/info
+         sudo apt-get update
+         sudo apt-get -f install
+         sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
+         sudo rm -rf /var/lib/dpkg/info
+         sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
+         sudo apt-get update
+         sudo apt-get upgrade
+         sudo apt-get install redis
+      ```
+    - start the redis server
+      ```
+        sudo service redis-server start
+      ```
+   - test it by running: `redis-cli`
+     ```
+       127.0.0.1:6379>
+       127.0.0.1:6379>ping
+         PONG
+     ```         
   
 ## Create the CKAN database tables
 
-- open new CMD window
-
-C:\working\ckan-venv\Scripts\activate
-cd C:\working\ckan-site
-ckan -c ckan.ini db init
- 
-   green message: "Upgrading DB: SUCCESS"
-   
-test with psql command:
-  psql -U ckanuser -p 5432 -d ckandb -c "\d"
-    password: odis
-    
+- open new CMD window, and execute:
+```
+  C:\working\ckan-venv\Scripts\activate
+  cd C:\working\ckan-site
+  ckan -c ckan.ini db init
+```
+- you should see a green message: "Upgrading DB: SUCCESS"
+- test with psql command:
+  ```
+    psql -U ckanuser -p 5432 -d ckandb -c "\d"
+      password: odis
+  ```
   you should see 32 rows of tables
 
 
