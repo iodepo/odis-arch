@@ -326,12 +326,12 @@ Several tools for CKAN require that we install Java, as follows:
         
       ![OpenJDK install2](./images/openjdk-install2.png)
 
-## Install strawberry Perl
+## Install Strawberry Perl
 
 - download: https://strawberryperl.com/
 - use MSI installer
 - leave defaults as-is
-- test with new CMD window, executing: `perl --version`
+- test in new CMD window, executing: `perl --version`
 
 ## Install Solr
 
