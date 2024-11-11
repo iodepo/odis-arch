@@ -412,7 +412,7 @@ curl -X GET http://localhost:8983/api/cores/ckan
         }
 ```
 
-## install Redis
+## Install Redis
 
 To install Redis (required for CKAN), we must install the WSL (Windows Subsystem for Linux),
 as follows:
