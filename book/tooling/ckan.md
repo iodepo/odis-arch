@@ -503,14 +503,20 @@ as follows:
        ```
          sudo service redis-server start
        ```
-     - test it by running: `redis-cli`
+     - test it by running: 
        ```
-         127.0.0.1:6379>
-         127.0.0.1:6379>ping
-           PONG
+         redis-cli
        ```
-     
-       ![redis install3](./images/redis-install3.png)     
+       - which should bring you to a prompt of `127.0.0.1:6379>`, so then type
+         `ping <enter>`
+         - the response should be `PONG` 
+           ```
+             127.0.0.1:6379>
+             127.0.0.1:6379>ping
+             PONG
+           ```
+           
+           ![redis install3](./images/redis-install3.png)     
   
 ## Create the CKAN database tables
 
