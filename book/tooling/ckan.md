@@ -20,32 +20,6 @@ The following steps were created on Windows Server 2022, but should work on
 Windows 11 or 10.  You will be required to have full Administrator access on 
 your server.
 
-## Steps
-
-1. Install recommended tools 
-   * [Notepad++](https://notepad-plus-plus.org/downloads/) editor
-   * [7-Zip](https://www.7-zip.org/) (recommended tool to manage archives)
-   * [Firefox](https://www.mozilla.org/firefox/)  browser (and set as default)
-2. Install PostgreSQL (<a href=#preparing-content>jump</a> to that below)
-3. Install Python (<a href=#creating-a-sitemap>jump</a> to that below)
-4. Install Git (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)
-5. Create a working directory (<a href=#frequently-asked-questions-faq>jump</a> to that below)
-6. Create virtualenv in Python (<a href=#preparing-content>jump</a> to that below)
-7. Upgrade pip (<a href=#creating-a-sitemap>jump</a> to that below)
-8. Checkout CKAN source and build CKAN (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)
-9. Add PostgreSQL utils to PATH (<a href=#frequently-asked-questions-faq>jump</a> to that below)
-10. Create ckan db (<a href=#frequently-asked-questions-faq>jump</a> to that below)
-11. Install PostGIS extension in ckandb (<a href=#preparing-content>jump</a> to that below)
-12. Generate config file for CKAN (<a href=#creating-a-sitemap>jump</a> to that below)
-13. Install Java JRE (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)
-14. Install strawberry Perl (<a href=#frequently-asked-questions-faq>jump</a> to that below)
-15. Install Solr (<a href=#preparing-content>jump</a> to that below)
-16. Install Redis (<a href=#creating-a-sitemap>jump</a> to that below)
-17. Install Java JRE (<a href=#coming-full-circle-registering-your-sitemap-in-odiscat>jump</a> to that below)
-18. Create the CKAN database tables (<a href=#frequently-asked-questions-faq>jump</a> to that below)
-19. Add CKAN user (<a href=#preparing-content>jump</a> to that below)
-20. Run CKAN (<a href=#creating-a-sitemap>jump</a> to that below)
-
 ## Install PostgreSQL
 
 PostgreSQL is a popular Open Source database, that will store tables leveraged by
@@ -57,22 +31,32 @@ PostgreSQL and PostGIS, as follows:
 - click the latest for "Windows x86-64"
 - double-click the installer file
 - leave default install directory as-is (C:/Program Files/PostgreSQL/17/)
-![PG install1](./images/pg-install1.png)
+
+  ![PG install1](./images/pg-install1.png)
+  
 - leave default components as-is
-![PG install2](./images/pg-install2.png)
+
+  ![PG install2](./images/pg-install2.png)
+  
 - leave data directory as-is (C:/Program Files/PostgreSQL/17/data/)
 - for superuser password, use "postgres"
-![PG install3](./images/pg-install3.png)
+  ![PG install3](./images/pg-install3.png)
 - leave port as-s (5432)
-![PG install4](./images/pg-install4.png)
+
+  ![PG install4](./images/pg-install4.png)
+  
 - leave locale as-is
 - install
 - make sure "Stack Builder" is selected and then click "Finish"
-![PG install5](./images/pg-install5.png)
+
+  ![PG install5](./images/pg-install5.png)
+  
 - in the "Stack Builder" window, select your installation in the dropdown 
   ("PostgreSQL 17 on port 5432") and then click "Next"
 - expand "Spatial Extensions" and click the checkbox for "PostGIS x.x Bundle for PostgreSQL"
-![PG install6](./images/pg-install6.png)  
+
+  ![PG install6](./images/pg-install6.png)
+  
 - leave download directory as-is, click "Next"
 - wait for the PostGIS installer to download
 - click "Next" to begin PostGIS install
@@ -80,7 +64,8 @@ PostgreSQL and PostGIS, as follows:
 - leave components as-is
 - leave destination folder as-is
 - click "Finish" to end the installation
-![PG install8](./images/pg-install8.png)
+
+  ![PG install8](./images/pg-install8.png)
 
 ## Install Python
 
@@ -98,20 +83,27 @@ later in this document.
 - download 3.12.7 "Windows installer (64-bit)" from https://www.python.org/downloads/windows/
 - double-click the file "python-3.12.7-amd64.exe" to install
 - choose "Customize installation" & check the checkbox for "add python.exe to PATH"
-![Python install1](./images/python-install1.png)
+
+  ![Python install1](./images/python-install1.png)
+  
 - leave "Optional Features" as-is
 - for "Advanced Options", click on the "Browse" button, to select the install location,
   and choose the `C:/Python` folder
-![Python install2](./images/python-install2.png)
+  
+  ![Python install2](./images/python-install2.png)
+  
 - click the "Install" button
 - test with a CMD command
   - in the Windows search bar, type "CMD" and press <enter> on your keyboard
   - make sure you right-click on the icon and select "Run as Administrator"
+  
     ![CMD as administrator](./images/cmd-admin1.png)
+    
   - at the command prompt, type: 
     ```bash
       python --version
     ```
+    
     ![Python install3](./images/python-install3.png)
 
 ## Install Git
@@ -131,21 +123,31 @@ are also other visual tools that you can install instead, such as
   64-bit version of Git for Windows
 - run the installer
 - select "Checkout as-is, commit as-is"
+
   ![Git install1](./images/git-windows1.png)
+  
 - select "Use Windows' default console window"
+
   ![Git install2](./images/git-windows2.png)
+  
 - select "Fast-forward or merge" for 'git pull'
+
   ![Git install3](./images/git-windows3.png)
+  
 - default credential manager (no changes)
+
   ![Git install4](./images/git-windows4.png)
+  
 - select "Enable file system caching"
 - test by opening a CMD window and executing: git --version
+
   ![Git install6](./images/git-windows6.png)
 
 ## Create a working directory
 
 Using Windows File Explorer, create a new folder named "working" at the 
 `C:/` drive root, so you have the existing path `C:/working`
+
 ![File Explorer](./images/working-folder.png)
 
 ## Create virtual environment in Python
@@ -159,6 +161,7 @@ a CMD window, and execute the following to create a new `ckan-venv` environment:
   C:\working\ckan-venv\Scripts\activate
 ```
 You should now see a prompt that looks like the following:
+
 ![venv](./images/python-venv.png)
 
 You can also execute `deactivate` to exit that `ckan-venv` virtual environment, 
@@ -186,9 +189,11 @@ environment.  Open a CMD window, and execute:
   python -m pip install python-magic-bin
   python -m pip install -e .
 ```
+
 ![CKAN install1](./images/ckan-install1.png)
 
 You can now try to a test, to see the usage, such as:
+
 ![CKAN install2](./images/ckan-install2.png)
 
 ## Add PostgreSQL utils to PATH
@@ -199,15 +204,22 @@ server.  To set the system PATH, execute the following:
 
 - in the Windows search bar, searcg for "env" and choose "Edit the system environment variables"
 - click on the bottom "Environment variables" button
+
   ![PG env1](./images/pg-env1.png)
+  
 - select `Path` in the lower "System variables" section and click the "Edit..."
   button
+  
   ![PG env2](./images/pg-env2.png)
+  
 - click "New" and then "Browse" to C:/Program Files/PostgreSQL/xx/bin/"
+
   ![PG env3](./images/pg-env3.png)
+  
 - click "OK"
 - close your CMD window, and re-open it
 - test by executing: `psql --version`
+
   ![PG env4](./images/pg-env4.png)
 
 ## Create the ckan database
@@ -252,6 +264,7 @@ Next execute:
   ALTER DATABASE ckandb SET client_min_messages TO WARNING;  <enter>
 ```
 Again execute to list all tables (you should see more tables now) : `\d <enter>`
+
 ![PG table install](./images/postgis-table-install.png)
 
 to quit, execute: `\q <enter>`
@@ -302,10 +315,13 @@ Several tools for CKAN require that we install Java, as follows:
 - use MSI installer for x64 platform
 - run installer (use all defaults)
 - test: open a new CMD window and execute: `java --version`
+
   ![OpenJDK install1](./images/openjdk-install1.png) 
+  
 - check your system Environment Variables list to make sure JAVA_HOME is set
     - set it to: 
         `C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot`
+        
       ![OpenJDK install2](./images/openjdk-install2.png)
 
 ## Install strawberry Perl
@@ -328,16 +344,20 @@ execute the following in a CMD window:
   gradlew dev
   cd C:\working\solr-git-main\solr\packaging\build\dev
 ```
+
 ![Solr install1](./images/solr-install1.png)
+
 - Test Solr by executing: `bin\solr.cmd --help`
     
 - Now we must start Solr in "standalone mode"
 ```bash
   bin\solr.cmd start --user-managed -p 8983
 ```
+
 ![Solr install2](./images/solr-install2.png)
 
   In your web browser goto: http://localhost:8983/solr
+  
 ![Solr install3](./images/solr-install3.png)
 
 - Now check Solr status with `bin\solr.cmd status`
@@ -371,6 +391,7 @@ bin\solr.cmd stop -p 8983
 ```
 - in your web browser, check the `ckan` core
   - http://localhost:8983/solr/#/ckan/core-overview
+  
 ![Solr install4](./images/solr-install4.png)
 
 - get status of one core ("ckan")
@@ -426,7 +447,9 @@ as follows:
       ```
         wsl --install --enable-wsl1 --distribution "Ubuntu-24.04 LTS"
       ```
+      
       ![redis install1](./images/redis-install1.png)
+      
   - reboot machine
   - you should see a progress bar for installing Ubuntu
   - when asked to create a new user, enter:
@@ -445,7 +468,9 @@ as follows:
          Release:        24.04
          Codename:       noble
     ```
-    ![redis install2](./images/redis-install2.png)    
+    
+    ![redis install2](./images/redis-install2.png) 
+    
    - install the redis package
      - (follow steps at https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
        ```
@@ -478,6 +503,7 @@ as follows:
        127.0.0.1:6379>ping
          PONG
      ```
+     
      ![redis install3](./images/redis-install3.png)     
   
 ## Create the CKAN database tables
@@ -489,13 +515,16 @@ as follows:
   ckan -c ckan.ini db init
 ```
 - you should see a green message: "Upgrading DB: SUCCESS"
+
   ![CKAN install tables1](./images/ckan-install-tables1.png)
+  
 - test with psql command:
   ```
     psql -U ckanuser -p 5432 -d ckandb -c "\d"
       password: odis
   ```
 - you should see 32 rows of tables
+
   ![CKAN install tables2](./images/ckan-install-tables2.png)
 
 ## Add CKAN user
@@ -512,6 +541,7 @@ ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
     ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
   ```
 - you should see "Added admin as sysadmin"
+
 ![CKAN home](./images/ckan-create-user.png)
 
 ## Run CKAN
@@ -526,6 +556,7 @@ ckan -c C:/working/ckan-site/ckan.ini run
     2024-11-10 12:11:18,107 INFO  [ckan.cli] Using configuration file C:\working\ckan-site\ckan.ini
   ```
 - in your browser, goto: http://localhost:5000/
+
 ![CKAN home](./images/ckan-initial-home.png)
 
 
