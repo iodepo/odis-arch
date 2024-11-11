@@ -890,43 +890,63 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 </section>
 <section id="install-redis">
 <h2>install Redis<a class="headerlink" href="#install-redis" title="Link to this heading">#</a></h2>
-<ul>
-<li><p>install WSL (Windows Subsystem for Linux)</p>
+<p>To install Redis (required for CKAN), we must install the WSL (Windows Subsystem for Linux),
+as follows:</p>
 <ul>
 <li><p>follow <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</a></p></li>
 <li><p>open CMD window and execute:</p>
 <ul>
 <li><p>see list of all Linux distribution names</p>
-<p>wsl –list –online</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
+</pre></div>
+</div>
+</li>
+<li><p>now install Ubuntu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl1</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
+</pre></div>
+</div>
 </li>
 </ul>
-<p>wsl –install –enable-wsl1 –distribution “Ubuntu-24.04 LTS”</p>
 </li>
 <li><p>reboot machine</p></li>
 <li><p>you should see a progress bar for installing Ubuntu</p></li>
-<li><p>username: odis
-password: odis</p></li>
+<li><p>when asked to create a new user, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">username</span><span class="p">:</span> <span class="n">odis</span>
+  <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+</pre></div>
+</div>
+</li>
 <li><p>to run: goto Start menu, choose “WSL”</p>
-<p>CMD window should open with an odis&#64; prompt</p>
+<ul class="simple">
+<li><p>CMD window should open with an odis&#64; prompt</p></li>
+</ul>
 </li>
 <li><p>to check the Ubuntu version, run:</p>
-<p>lsb_release -a</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Distributor ID: Ubuntu
- Description:    Ubuntu 24.04 LTS
- Release:        24.04
- Codename:       noble
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+  
+     <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
+     <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
+     <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
+     <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
 </pre></div>
 </div>
 </li>
 <li><p>install the redis package</p>
-<p>(follow steps at <a class="reference external" href="https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/">https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/</a></p>
-<p>curl -fsSL <a class="reference external" href="https://packages.redis.io/gpg">https://packages.redis.io/gpg</a> | sudo gpg –dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-echo “deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] <a class="reference external" href="https://packages.redis.io/deb">https://packages.redis.io/deb</a> $(lsb_release -cs) main” | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install redis</p>
-<p>if error “Failed to take /etc/passwd lock: Invalid argument”</p>
-<p>sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
+<ul>
+<li><p>(follow steps at <a class="reference external" href="https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/">https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+  <span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">list</span>
+  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="k">if</span> <span class="n">error</span> <span class="s2">&quot;Failed to take /etc/passwd lock: Invalid argument&quot;</span><span class="p">,</span> <span class="n">execute</span><span class="p">:</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
 sudo mkdir /var/lib/dpkg/info
 sudo apt-get update
 sudo apt-get -f install
@@ -935,31 +955,50 @@ sudo rm -rf /var/lib/dpkg/info
 sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install redis</p>
+sudo apt-get install redis
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </li>
 </ul>
-<p>#start the redis server
-sudo service redis-server start</p>
-<p>test it by running: redis-cli</p>
-<p>127.0.0.1:6379&gt;
-127.0.0.1:6379&gt;ping
-PONG</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- start the redis server
+  ```
+    sudo service redis-server start
+  ```
+</pre></div>
+</div>
+<ul>
+<li><p>test it by running: <code class="docutils literal notranslate"><span class="pre">redis-cli</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">6379</span><span class="o">&gt;</span>
+  <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">6379</span><span class="o">&gt;</span><span class="n">ping</span>
+    <span class="n">PONG</span>
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
 <section id="create-the-ckan-database-tables">
 <h2>Create the CKAN database tables<a class="headerlink" href="#create-the-ckan-database-tables" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>open new CMD window</p></li>
+<li><p>open new CMD window, and execute:</p></li>
 </ul>
-<p>C:\working\ckan-venv\Scripts\activate
-cd C:\working\ckan-site
-ckan -c ckan.ini db init</p>
-<p>green message: “Upgrading DB: SUCCESS”</p>
-<p>test with psql command:
-psql -U ckanuser -p 5432 -d ckandb -c “\d”
-password: odis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+  <span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
+  <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">db</span> <span class="n">init</span>
+</pre></div>
+</div>
+<ul>
+<li><p>you should see a green message: “Upgrading DB: SUCCESS”</p></li>
+<li><p>test with psql command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
+    <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+</pre></div>
+</div>
 <p>you should see 32 rows of tables</p>
+</li>
+</ul>
 </section>
 </section>
 
