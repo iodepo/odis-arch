@@ -454,6 +454,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">install Redis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
 </ul>
             </nav>
         </div>
@@ -1000,6 +1002,41 @@ sudo apt-get install redis
 </li>
 </ul>
 </section>
+<section id="add-ckan-user">
+<h2>Add CKAN user<a class="headerlink" href="#add-ckan-user" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
+<span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+<span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">user</span> <span class="n">add</span> <span class="n">admin</span> <span class="n">email</span><span class="o">=</span><span class="n">info</span><span class="nd">@gatewaygeomatics</span><span class="o">.</span><span class="n">com</span>
+  <span class="n">password</span><span class="p">:</span> <span class="n">odisckan</span>
+</pre></div>
+</div>
+<ul>
+<li><p>promote “admin” user to sysadmin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">sysadmin</span> <span class="n">add</span> <span class="n">admin</span>
+</pre></div>
+</div>
+</li>
+<li><p>you should see “Added admin as sysadmin”
+<img alt="CKAN home" src="../_images/ckan-create-user.png" /></p></li>
+</ul>
+</section>
+<section id="run-ckan">
+<h2>Run CKAN<a class="headerlink" href="#run-ckan" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+<span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">run</span>
+</pre></div>
+</div>
+<ul>
+<li><p>should see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="mi">2024</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">10</span> <span class="mi">12</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span><span class="mi">815</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">ckan</span><span class="o">.</span><span class="n">cli</span><span class="o">.</span><span class="n">server</span><span class="p">]</span> <span class="n">Running</span> <span class="n">CKAN</span> <span class="n">on</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">5000</span>
+  <span class="mi">2024</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">10</span> <span class="mi">12</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span><span class="mi">107</span> <span class="n">INFO</span>  <span class="p">[</span><span class="n">ckan</span><span class="o">.</span><span class="n">cli</span><span class="p">]</span> <span class="n">Using</span> <span class="n">configuration</span> <span class="n">file</span> <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">site</span>\<span class="n">ckan</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+</li>
+<li><p>in your browser, goto: <a class="reference external" href="http://localhost:5000/">http://localhost:5000/</a>
+<img alt="CKAN home" src="../_images/ckan-initial-home.png" /></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1086,6 +1123,8 @@ sudo apt-get install redis
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">install Redis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
 </ul>
   </nav></div>
 
