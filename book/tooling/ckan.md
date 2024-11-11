@@ -257,7 +257,7 @@ psql -U ckanuser -p 5432 -d ckandb
 You should now be at a prompt like `ckandb=>`
 
 Then execute to list all tables: `\d <enter>`
-You see a response as `Did not find any relations`
+You should see a response as `Did not find any relations`
 
 Next execute:
 ```bash
