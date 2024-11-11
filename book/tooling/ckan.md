@@ -486,4 +486,34 @@ as follows:
   ```
   you should see 32 rows of tables
 
+## Add CKAN user
+
+```  
+cd C:/working/ckan-site
+C:\working\ckan-venv\Scripts\activate
+ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
+  password: odisckan
+```
+
+- promote "admin" user to sysadmin
+  ```
+    ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
+  ```
+- you should see "Added admin as sysadmin"
+![CKAN home](./images/ckan-create-user.png)
+
+## Run CKAN
+
+```
+C:\working\ckan-venv\Scripts\activate
+ckan -c C:/working/ckan-site/ckan.ini run
+```
+- should see:
+  ```
+    2024-11-10 12:11:15,815 INFO  [ckan.cli.server] Running CKAN on http://localhost:5000
+    2024-11-10 12:11:18,107 INFO  [ckan.cli] Using configuration file C:\working\ckan-site\ckan.ini
+  ```
+- in your browser, goto: http://localhost:5000/
+![CKAN home](./images/ckan-initial-home.png)
+
 
