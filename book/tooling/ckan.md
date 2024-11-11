@@ -424,6 +424,7 @@ as follows:
       ```
         wsl --install --enable-wsl1 --distribution "Ubuntu-24.04 LTS"
       ```
+      ![redis install1](./images/redis-install1.png)
   - reboot machine
   - you should see a progress bar for installing Ubuntu
   - when asked to create a new user, enter:
@@ -441,7 +442,8 @@ as follows:
          Description:    Ubuntu 24.04 LTS
          Release:        24.04
          Codename:       noble
-    ```   
+    ```
+    ![redis install2](./images/redis-install2.png)    
    - install the redis package
      - (follow steps at https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
        ```
@@ -473,7 +475,8 @@ as follows:
        127.0.0.1:6379>
        127.0.0.1:6379>ping
          PONG
-     ```         
+     ```
+     ![redis install3](./images/redis-install3.png)     
   
 ## Create the CKAN database tables
 
