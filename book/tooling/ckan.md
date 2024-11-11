@@ -326,14 +326,18 @@ execute the following in a CMD window:
   gradlew dev
   cd C:\working\solr-git-main\solr\packaging\build\dev
 ```
+![Solr install1](./images/solr-install1.png)
 - Test Solr by executing: `bin\solr.cmd --help`
     
 - Now we must start Solr in "standalone mode"
 ```bash
   bin\solr.cmd start --user-managed -p 8983
 ```
+![Solr install2](./images/solr-install2.png)
+
   In your web browser goto: http://localhost:8983/solr
-  
+![Solr install3](./images/solr-install3.png)
+
 - Now check Solr status with `bin\solr.cmd status`
 
 ```
@@ -365,6 +369,7 @@ bin\solr.cmd stop -p 8983
 ```
 - in your web browser, check the `ckan` core
   - http://localhost:8983/solr/#/ckan/core-overview
+![Solr install4](./images/solr-install4.png)
 
 - get status of one core ("ckan")
 ```
