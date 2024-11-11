@@ -1008,6 +1008,9 @@ sudo apt-get install redis
 </section>
 <section id="add-ckan-user">
 <h2>Add CKAN user<a class="headerlink" href="#add-ckan-user" title="Link to this heading">#</a></h2>
+<p>We will create an initial user <code class="docutils literal notranslate"><span class="pre">admin</span></code> for CKAN, with full
+<code class="docutils literal notranslate"><span class="pre">sysadmin</span></code> powers, to manage the catalogue.  Open a CMD window and
+execute:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
 <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
 <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">user</span> <span class="n">add</span> <span class="n">admin</span> <span class="n">email</span><span class="o">=</span><span class="n">info</span><span class="nd">@gatewaygeomatics</span><span class="o">.</span><span class="n">com</span>
@@ -1015,7 +1018,7 @@ sudo apt-get install redis
 </pre></div>
 </div>
 <ul>
-<li><p>promote “admin” user to sysadmin</p>
+<li><p>then promote the “admin” user to sysadmin</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">sysadmin</span> <span class="n">add</span> <span class="n">admin</span>
 </pre></div>
 </div>
@@ -1026,6 +1029,7 @@ sudo apt-get install redis
 </section>
 <section id="run-ckan">
 <h2>Run CKAN<a class="headerlink" href="#run-ckan" title="Link to this heading">#</a></h2>
+<p>We can use the internal “development server” to serve CKAN, as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
 <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">run</span>
 </pre></div>
