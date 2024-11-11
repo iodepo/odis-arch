@@ -772,11 +772,13 @@ and set the following:</p>
 <ul class="simple">
 <li><p>use MSI installer for x64 platform</p></li>
 <li><p>run installer (use all defaults)</p></li>
-<li><p>test: open a new CMD window and execute: java –version</p></li>
+<li><p>test: open a new CMD window and execute: <code class="docutils literal notranslate"><span class="pre">java</span> <span class="pre">--version</span></code>
+<img alt="OpenJDK install1" src="../_images/openjdk-install1.png" /></p></li>
 <li><p>check your system Environment Variables list to make sure JAVA_HOME is set</p>
 <ul>
 <li><p>set it to:
-<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Microsoft\jdk-17.0.13.11-hotspot</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Microsoft\jdk-17.0.13.11-hotspot</span></code>
+<img alt="OpenJDK install2" src="../_images/openjdk-install2.png" /></p></li>
 </ul>
 </li>
 </ul>
@@ -911,6 +913,7 @@ as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl1</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
 </pre></div>
 </div>
+<p><img alt="redis install1" src="../_images/redis-install1.png" /></p>
 </li>
 </ul>
 </li>
@@ -936,6 +939,7 @@ as follows:</p>
      <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
 </pre></div>
 </div>
+<p><img alt="redis install2" src="../_images/redis-install2.png" /></p>
 </li>
 <li><p>install the redis package</p>
 <ul>
@@ -982,6 +986,7 @@ sudo apt-get install redis
     <span class="n">PONG</span>
 </pre></div>
 </div>
+<p><img alt="redis install3" src="../_images/redis-install3.png" /></p>
 </li>
 </ul>
 </section>
@@ -996,14 +1001,16 @@ sudo apt-get install redis
 </pre></div>
 </div>
 <ul>
-<li><p>you should see a green message: “Upgrading DB: SUCCESS”</p></li>
+<li><p>you should see a green message: “Upgrading DB: SUCCESS”
+<img alt="CKAN install tables1" src="../_images/ckan-install-tables1.png" /></p></li>
 <li><p>test with psql command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
     <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
 </pre></div>
 </div>
-<p>you should see 32 rows of tables</p>
 </li>
+<li><p>you should see 32 rows of tables
+<img alt="CKAN install tables2" src="../_images/ckan-install-tables2.png" /></p></li>
 </ul>
 </section>
 <section id="add-ckan-user">
