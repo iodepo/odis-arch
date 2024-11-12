@@ -306,7 +306,7 @@ and set the following:
 Using Windows File Explorer, then create a new `data` folder inside 
 `C:\working\ckan-site`
 
-##Install Java JRE
+## Install Java JRE
 
 Several tools for CKAN require that we install Java, as follows:
 
