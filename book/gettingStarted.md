@@ -104,6 +104,11 @@ ODISCat has a dedicated field to let the ODIS Federation know where your metadat
 is. Leave that blank for now: we'll come back to this after we prepare content to 
 share via ODIS.
 
+```{note} 
+If the person responsible for maintaining your ODISCat entry changes, they should 
+<a href="mailto:info@odis.org">contact the ODIS team</a> to transfer the role to another OceanExpert account.
+```
+
 ## Preparing content 
 
 All ODIS nodes share metadata about their holdings (datasets, documents, 
