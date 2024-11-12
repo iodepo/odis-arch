@@ -218,7 +218,7 @@ others.  Here is an example ODIS node with a [sitemap index](https://pacificdata
 
 ### Frequency of change
 
-Add the `<changefreq>` metadata for each sitemap record, on how often you expect 
+Add the `<changefreq>` metadata for each sitemap record, for how often you expect 
 records in your sitemap to change - this will tell systems like ODIS how often to 
 reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly`, `monthly`,
 `yearly`, `never`.  Here is a snippet from a sitemap:
