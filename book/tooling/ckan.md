@@ -284,7 +284,7 @@ CMD window and execute:
   ckan generate config ckan.ini
 ```
 
-Now open in Notepad++: C:\working\ckan-site\ckan.ini
+Now open in Notepad++: `C:\working\ckan-site\ckan.ini`
 and set the following:
 
 ```
