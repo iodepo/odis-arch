@@ -552,13 +552,13 @@ ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
   password: odisckan
 ```
 
+![CKAN home](./images/ckan-create-user.png)
+
 - then promote the "admin" user to sysadmin
   ```
     ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
   ```
-- you should see "Added admin as sysadmin"
-
-![CKAN home](./images/ckan-create-user.png)
+- you should see a message of "Added admin as sysadmin"
 
 ## Run CKAN
 
