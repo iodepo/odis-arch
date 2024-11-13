@@ -3,7 +3,7 @@
 ## Introduction
 
 This document, in draft form,  presents approaches for the representation of depth in schema.org and
-gepSPARQL, via WKT, to aid in the broad and domain-neutral discovery and filtering of resources of interest based
+geoSPARQL, via WKT, to aid in the broad and domain-neutral discovery and filtering of resources of interest based
 on depth.  
 
 
