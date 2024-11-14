@@ -50,8 +50,7 @@ and informed action.  The International Oceanographic Data and Information Excha
 oceans information through a common platform.
 
 ```{tip}
-ODIS is one of the 3 core programs of the IODE: 1) [OBIS](https://obis.org/), 
-2) [OTGA](https://classroom.oceanteacher.org/), and 3) [ODIS](https://odis.org).
+[ODIS](https://odis.org) is one of the 3 core Programme Components of IOC-UNESCO's [IODE](https://iode.org/), along with [OBIS](https://obis.org/) and [OTGA](https://classroom.oceanteacher.org/).
 ```
 
 ## Registering Your Organisation
