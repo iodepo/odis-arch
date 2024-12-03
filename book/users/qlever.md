@@ -19,10 +19,10 @@ configuration files.
 Make sure the command ```qlever``` is now in your PATH variable.  You may need
 to modify your path variable to ensure it is.
 
-First, creat a working directory for the ODIS graph to live in on your system.
+First, create a working directory for the ODIS graph to live in on your system.
 Call this anything you wish, here I will use ```odis-oih-graph```.
 
-Then change diretory, cd, into that new directory and run the
+Then change directory, cd, into that new directory and run the
 following commands from there.
 
 ```bash
@@ -37,7 +37,7 @@ The raw SPARQL endpoint should be on port 7019 if you wish to use your own
 SPARQL client.   See [GleanerIO Architype Tooling](https://github.com/gleanerio/archetype/blob/master/docs/tooling.md)
 for some references to clients and other related tooling.
 
-If you also ran the UI command you should get
+If you also ran the UI command, you should get
 
 ```
 The QLever UI should now be up at http://localhost:8176 ...You can log in as QLever UI admin with username and password "demo"
