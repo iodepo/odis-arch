@@ -84,7 +84,24 @@ sources:
     headless: false
     dateadded: 2024-06-14
     cron: 1 7 * * 0
-    active: true    
+    active: true
+  #
+  # BCO-DMO
+  #
+  - name: bcodmo
+    propername: Biological & Chemical Oceanography Data Management Office (BCO-DMO)
+    catalogue: https://www.bco-dmo.org/page/accessing-data-bco-dmo
+    domain: https://www.bco-dmo.org/
+    logo: https://www.bco-dmo.org/sites/all/themes/bcodmo/logo.png
+    pid: https://catalogue.odis.org/view/3287
+    sourcetype: sitemap
+    url: https://www.bco-dmo.org/sitemap.xml
+    changefreq: as needed
+    backend: Custom
+    headless: false
+    dateadded: 2024-12-03
+    cron: 0 8 * * 0
+    active: true
   #
   # BeBOP-OBON
   #
