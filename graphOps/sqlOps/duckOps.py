@@ -1,6 +1,6 @@
 import json
 import duckdb
-import geopandas as gpd
+import pandas as pd
 import shapely
 from shapely import wkt
 from shapely.geometry import Polygon, MultiPolygon, shape, mapping
@@ -73,47 +73,10 @@ df = con.execute(sql).fetchdf()
 
 # print(df.info())
 
-# Makes a new dataframe with None geometry removed
-# these are not the best lines to have in the code, would be good to remove them if possible
-df_geomtrue = df.dropna(subset=['wkt_list'])
-df_geomtrue = df_geomtrue[df_geomtrue['wkt_list'] != 'None']
-df_geomtrue = df_geomtrue[~df_geomtrue['wkt_list'].str.contains('None')]
-
-# convert to geopandas and then save to geojson
-df_geomtrue['geometry'] = df_geomtrue['wkt_list'].apply(wkt.loads)
-gdf = gpd.GeoDataFrame(df_geomtrue, geometry='geometry')
-
-# TODO put in the H3 grid cell generation here
-
-# export to json  ERROR does not work for WIS2 since I need to add in some elements for WIS2
-# gdf.to_file('wis2.geojson', driver='GeoJSON', orient='records', lines=True)
-gdf.to_file('wis2.geojson', driver='GeoJSON')
-
-## TODO move def to external file
-def wis2mods(file_path, identifier, link):
-    with open(file_path, 'r') as file:
-        data = json.load(file)
-
-    # We are a dict here..   but keep the list code around
-    if isinstance(data, list):
-        for item in data:
-            item["id"] = "OIH_ID_X_LIST"
-    elif isinstance(data, dict):
-        data["id"] = f"OIH_ID_{identifier}"
-        data["conformsTo"] = "https://example.org/conformsTo"
-        data["links"] = [link]
-    else:
-        raise ValueError("Unsupported JSON structure")
-
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=4)
-
 # Iterate through each row and save as GeoJSON
-for idx, row in gdf.iterrows():
-    row_gdf = gpd.GeoDataFrame([row])
-    row_gdf.to_file(f'output/row_{idx}.geojson', driver='GeoJSON')
-    # add in some custom elements to this JSON
-    wis2mods(f'output/row_{idx}.geojson', idx, str(row_gdf['url'].values[0]))
+for idx, row in df.iterrows():
+    row_df = pd.DataFrame([row])
+    row_df.to_json(f'output/row_{idx}.json')
 
 # save to pandas (should be geopandas?)
-df.to_parquet('wis2.parquet')
+df.to_parquet('typeDataSetResults.parquet')
