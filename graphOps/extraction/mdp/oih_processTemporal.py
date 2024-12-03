@@ -14,8 +14,12 @@ def main():
     p = argparse.ArgumentParser(description="Process some arguments.")
     p.add_argument("--source", type=str, help="Source URL")
     p.add_argument("--output", type=str, help="Output file")
+    p.add_argument("--ssl", type=lambda x: (str(x).lower() == 'true'), help="Enable SSL flag")
 
     args = p.parse_args()
+
+    if args.ssl:
+        print("SSL is enabled")
 
     if args.source is None:
         print("Error: the --source argument is required")
@@ -27,8 +31,9 @@ def main():
 
     u = args.source
     o = args.output
+    ssl = args.ssl
 
-    df = readobject.get_object(u)
+    df = readobject.get_object(u, ssl)
 
     #process the dataframe
     print("Processing Stage: Temporal")
@@ -49,7 +54,7 @@ def main():
 
     print(df.head())
 
-    saveobject.write_data(o, df)
+    saveobject.write_data(o, df, ssl)
 
 if __name__ == "__main__":
     main()
