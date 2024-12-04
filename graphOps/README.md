@@ -2,42 +2,20 @@
 
 ## Intro
 
-![graphOps.png](docs/graphOps.png)
-
-
-## User Workflows
-
-For workflows desrigned for individual users or data science operations
-look at:  
-
-
-Cloning: [README.md](users/odisClone/README.md)
-
-Notebooks:  [README.md](notebooks/README.md)
-
-Graph Visualizations: [README.md](users/graphVisualization/README.md)
-
+![graphOps](./docs/graphOps.png)
 
 ## ODIS / OIH Workflows
 
-### Indexing 
+### Indexing & Release Graph generation
 
 Gleaner operations via Scheduler (Dagster)
-
-### Release Process
-
-See notes at:  [README.md](releasing/README.md)
-
-```bash
-releaser.py
-```
 
 ### Product Generation
 
 [README.md](extraction/mdp/README.md)
 
 ```bash
-oih_engine.py + mdpv2.py
+mdpv2.py  [runner.sh]
 ```
 
 ```bash
@@ -58,7 +36,7 @@ oih_processTemporal.py
 duckOps_oih.py
 ```
 
-#### WIS 
+#### WIS
 
 ```bash
 duckOps_wis2.py
@@ -72,7 +50,17 @@ duckOps_wis2.py
 releasepub.py
 ```
 
-
 ## Sequence Diagram
 
-![graphOpsSequence.png](docs/graphOpsSequence.png)
+![graphOpsSequence.png](./docs/graphOpsSequence.png)
+
+## User Workflows
+
+For workflows desrigned for individual users or data science operations
+look at:
+
+Cloning: [README.md](users/odisClone/README.md)
+
+Notebooks:  [README.md](notebooks/README.md)
+
+Graph Visualizations: [README.md](users/graphVisualization/README.md)

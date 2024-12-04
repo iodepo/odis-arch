@@ -9,7 +9,7 @@ from minio import Minio
 
 from . import readobject
 
-def write_data(target, mf):
+def write_data(target, mf, ssl):
     if target.startswith('s3://'):
         # it's an S3 based object
         print("Saving results to minio")
@@ -18,14 +18,26 @@ def write_data(target, mf):
         ak = os.getenv("MINIO_ACCESS_KEY")
         srv, bkt, obj = readobject.parse_s3_url(target)
 
-        # Create client with access and secret key.
-        mc = Minio(srv, ak, sk, secure=False)
+        # Create a client with access and secret key.
+        mc = Minio(srv, ak, sk, secure=ssl)
 
         # Convert the DataFrame to a parquet file
-        table = pa.Table.from_pandas(mf)
-        buf = io.BytesIO()
-        pq.write_table(table, buf)
-        buf.seek(0)
+        try:
+            table = pa.Table.from_pandas(mf)
+            buf = io.BytesIO()
+            # Write to buffer with compression
+            compression='snappy'
+            pq.write_table(
+                table,
+                buf,
+                compression=compression,
+                use_dictionary=True,
+                write_statistics=True
+            )
+            buf.seek(0)
+        except Exception as e:
+            print(f"Error converting DataFrame to parquet: {str(e)}")
+            raise
 
         try:
             mc.put_object(bkt, obj, buf, len(buf.getvalue()))
