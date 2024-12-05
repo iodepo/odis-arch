@@ -262,6 +262,11 @@ there are 2 critical fields to fill for the ODIS connection, as follows:
 
 That's it, now your node's records can be harvested by ODIS! &#x2705;
 
+```{note}  
+If your new entry in ODISCat states that `This resource is offline`: ODISCat checks your 
+"Datasource URL" daily, so if you have just created a new entry in ODISCat, give it a day 
+and check back then to see if the online/offine status is correct.
+
 ## Frequently asked questions (FAQ)
 
 ### How to provide feedback to ODIS?
