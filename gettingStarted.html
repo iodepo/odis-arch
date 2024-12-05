@@ -454,6 +454,15 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-full-circle-registering-your-sitemap-in-odiscat">Coming full circle: Registering your Sitemap in ODISCat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-faq">Frequently asked questions (FAQ)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-provide-feedback-to-odis">How to provide feedback to ODIS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry">How do I see my records, after completing my ODISCat entry?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-json-ld-examples-that-i-can-use">Where are JSON-LD examples that I can use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-sparql-endpoint">Does ODIS have a SPARQL endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-json-endpoint">Does ODIS have a JSON endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-often-does-odis-index-my-records">How often does ODIS index my records?</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -719,35 +728,49 @@ there are 2 critical fields to fill for the ODIS connection, as follows:</p>
 <p>If your new entry in ODISCat states that <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">resource</span> <span class="pre">is</span> <span class="pre">offline</span></code>: ODISCat checks your
 “Datasource URL” daily, so if you have just created a new entry in ODISCat, give it a day
 and check back then to see if the online/offine status is correct.</p>
-<h2 class="rubric" id="frequently-asked-questions-faq">Frequently asked questions (FAQ)</h2>
-<h3 class="rubric" id="how-to-provide-feedback-to-odis">How to provide feedback to ODIS?</h3>
+</div>
+</section>
+<section id="frequently-asked-questions-faq">
+<h2>Frequently asked questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Link to this heading">#</a></h2>
+<section id="how-to-provide-feedback-to-odis">
+<h3>How to provide feedback to ODIS?<a class="headerlink" href="#how-to-provide-feedback-to-odis" title="Link to this heading">#</a></h3>
 <p>You can use the <a class="reference external" href="https://github.com/iodepo/odis-arch/issues">odis-arch</a> issue tracker
 on GitHub, to file any issues or questions for the ODIS team.</p>
-<h3 class="rubric" id="how-do-i-see-my-records-after-completing-my-odiscat-entry">How do I see my records, after completing my ODISCat entry?</h3>
+</section>
+<section id="how-do-i-see-my-records-after-completing-my-odiscat-entry">
+<h3>How do I see my records, after completing my ODISCat entry?<a class="headerlink" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry" title="Link to this heading">#</a></h3>
 <p>The ODIS <a class="reference external" href="http://dashboard.odis.org/">Dashboard</a> can be used to monitor your node
 inside the ODIS graph.</p>
 <p>In terms of seeing your records in the results of the ODIS front-end <a class="reference external" href="https://odis.org">search</a>:
 we will use the frequency values set in your sitemap, to automated the harvesting
 and display of your records in the search results.</p>
-<h3 class="rubric" id="where-are-json-ld-examples-that-i-can-use">Where are JSON-LD examples that I can use?</h3>
+</section>
+<section id="where-are-json-ld-examples-that-i-can-use">
+<h3>Where are JSON-LD examples that I can use?<a class="headerlink" href="#where-are-json-ld-examples-that-i-can-use" title="Link to this heading">#</a></h3>
 <p>The ODIS <a class="reference external" href="https://book.odis.org/thematics/index.html">Book</a> has good
 examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is
 the <a class="reference external" href="https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics">odis-in</a>
 repository where all of the JSON-LD templates often drafted together with partners are stored,
 for example see a <a class="reference external" href="https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/dataset/graphs/datasetTemplate.json">datasetTemplate</a>
 there.</p>
-<h3 class="rubric" id="does-odis-have-a-sparql-endpoint">Does ODIS have a SPARQL endpoint?</h3>
+</section>
+<section id="does-odis-have-a-sparql-endpoint">
+<h3>Does ODIS have a SPARQL endpoint?<a class="headerlink" href="#does-odis-have-a-sparql-endpoint" title="Link to this heading">#</a></h3>
 <p>Yes, the SPARQL endpoint for ODIS is: <a class="reference external" href="http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql">http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql</a></p>
 <p>You can find more help on how to use the ODIS SPARQL endpoint <a class="reference external" href="https://book.odis.org/users/sparql.html">here</a>.
 An interface such as <a class="reference external" href="https://yasgui.triply.cc/">Yasgui</a> can be used to generate your queries.</p>
-<h3 class="rubric" id="does-odis-have-a-json-endpoint">Does ODIS have a JSON endpoint?</h3>
+</section>
+<section id="does-odis-have-a-json-endpoint">
+<h3>Does ODIS have a JSON endpoint?<a class="headerlink" href="#does-odis-have-a-json-endpoint" title="Link to this heading">#</a></h3>
 <p>A JSON endpoint is in discussion for ODIS.  ODIS does have Parquet files that are
 automatically generated for each node (you can get the url for that Parquet file
 by selecting a node in the “ODIS Node Summary” section of the <a class="reference external" href="http://dashboard.odis.org/">Dashboard</a>.</p>
-<h3 class="rubric" id="how-often-does-odis-index-my-records">How often does ODIS index my records?</h3>
+</section>
+<section id="how-often-does-odis-index-my-records">
+<h3>How often does ODIS index my records?<a class="headerlink" href="#how-often-does-odis-index-my-records" title="Link to this heading">#</a></h3>
 <p>ODIS will use the frequency values set in your sitemap, to automate the harvesting
 and display of your records in the search results.</p>
-</div>
+</section>
 </section>
 </section>
 
@@ -835,6 +858,15 @@ and display of your records in the search results.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-full-circle-registering-your-sitemap-in-odiscat">Coming full circle: Registering your Sitemap in ODISCat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-asked-questions-faq">Frequently asked questions (FAQ)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-provide-feedback-to-odis">How to provide feedback to ODIS?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-see-my-records-after-completing-my-odiscat-entry">How do I see my records, after completing my ODISCat entry?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-json-ld-examples-that-i-can-use">Where are JSON-LD examples that I can use?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-sparql-endpoint">Does ODIS have a SPARQL endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#does-odis-have-a-json-endpoint">Does ODIS have a JSON endpoint?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-often-does-odis-index-my-records">How often does ODIS index my records?</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
