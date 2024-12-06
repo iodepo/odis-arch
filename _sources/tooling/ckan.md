@@ -8,7 +8,8 @@ The following document explains how to set up a full metadata catalogue software
 architecture, with settings enabled to connect the catalogue to ODIS.
 
 The initial steps are for [CKAN](https://ckan.org/), and specifically on 
-Windows.  This will later be expanded for Docker steps, and other methods.
+Windows.  This will later be expanded for [Docker steps](https://github.com/ckan/ckan-docker), 
+and other methods.
 
 ## Intended Audience
 
