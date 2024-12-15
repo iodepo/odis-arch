@@ -138,7 +138,8 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   ```
     #use vi to open the .env file
     vi .env
-    #to make your changes, press your "i" key (for INSERT mode)
+    #to make your changes, first press your "i" key (for INSERT mode), and
+      #then edit the desired lines
     #then save with the command
     :wq
   ```
