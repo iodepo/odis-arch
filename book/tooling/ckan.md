@@ -8,7 +8,7 @@ The following document explains how to set up a full metadata catalogue software
 architecture, with settings enabled to connect the catalogue to ODIS.
 
 The initial steps are for [CKAN](https://ckan.org/), and specifically on 
-Windows.  You will have a choice to install CKAN through [Docker](https://github.com/ckan/ckan-docker), 
+Windows.  You will have a choice to install CKAN through [Docker](https://www.docker.com/), 
 which is recommended, or to install CKAN (and its dependencies) manually, 
 which is much more difficult.
 
@@ -138,7 +138,8 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   ```
     #use vi to open the .env file
     vi .env
-    #make your changes, then save with the command
+    #to make your changes, press your "i" key (for INSERT mode)
+    #then save with the command
     :wq
   ```
   
