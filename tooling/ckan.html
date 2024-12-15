@@ -438,24 +438,35 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Intended Audience</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-versions-supported">Windows Versions Supported</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-working-directory">Create a working directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment-in-python">Create virtual environment in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrade-pip">Upgrade pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-ckan-source-code-and-build-ckan">Checkout the CKAN source code and build CKAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-postgresql-utils-to-path">Add PostgreSQL utils to PATH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database">Create the ckan database</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-postgis-extension-in-ckandb">Install the PostGIS extension in ckandb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-config-file-for-ckan">Generate config file for CKAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-java-jre">Install Java JRE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-strawberry-perl">Install Strawberry Perl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">Install Redis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-install-ckan-through-docker-recommended">Option 1: Install CKAN through Docker (recommended)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-wsl">Install WSL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-docker-engine">Install Docker Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-ckan-docker-repository-locally">Clone the ckan-docker repository locally</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-build-and-run-ckan-plus-dependencies">Install (build and run) CKAN plus dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goto-ckan-s-landing-page">Goto CKAN’s landing page</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-install-ckan-dependencies-manually">Option 2: Install CKAN &amp; dependencies manually</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-working-directory">Create a working directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment-in-python">Create virtual environment in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrade-pip">Upgrade pip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-ckan-source-code-and-build-ckan">Checkout the CKAN source code and build CKAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-postgresql-utils-to-path">Add PostgreSQL utils to PATH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database">Create the ckan database</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-postgis-extension-in-ckandb">Install the PostGIS extension in ckandb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-config-file-for-ckan">Generate config file for CKAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-java-jre">Install Java JRE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-strawberry-perl">Install Strawberry Perl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">Install Redis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -475,8 +486,9 @@
 <p>The following document explains how to set up a full metadata catalogue software
 architecture, with settings enabled to connect the catalogue to ODIS.</p>
 <p>The initial steps are for <a class="reference external" href="https://ckan.org/">CKAN</a>, and specifically on
-Windows.  This will later be expanded for <a class="reference external" href="https://github.com/ckan/ckan-docker">Docker steps</a>,
-and other methods.</p>
+Windows.  You will have a choice to install CKAN through <a class="reference external" href="https://github.com/ckan/ckan-docker">Docker</a>,
+which is recommended, or to install CKAN (and its dependencies) manually,
+which is much more difficult.</p>
 </section>
 <section id="intended-audience">
 <h2>Intended Audience<a class="headerlink" href="#intended-audience" title="Link to this heading">#</a></h2>
@@ -490,8 +502,176 @@ executing various scripts.</p>
 Windows 11 or 10.  You will be required to have full Administrator access on
 your server.</p>
 </section>
+<section id="option-1-install-ckan-through-docker-recommended">
+<h2>Option 1: Install CKAN through Docker (recommended)<a class="headerlink" href="#option-1-install-ckan-through-docker-recommended" title="Link to this heading">#</a></h2>
+<p>We will follow the <a class="reference external" href="https://github.com/ckan/ckan-docker/blob/master/README.md">Docker Compose steps for CKAN</a>.</p>
+<section id="install-wsl">
+<h3>Install WSL<a class="headerlink" href="#install-wsl" title="Link to this heading">#</a></h3>
+<p>To install Docker, we must install the WSL (Windows Subsystem for Linux),
+as follows:</p>
+<ul>
+<li><p>follow <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</a></p></li>
+<li><p>open CMD window and execute:</p>
+<ul>
+<li><p>set the version of WSL to 2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">version</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>see list of all Linux distribution names</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
+</pre></div>
+</div>
+</li>
+<li><p>now install Ubuntu</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04&quot;</span>
+</pre></div>
+</div>
+<p><img alt="wsl install1" src="../_images/wsl-install1.png" /></p>
+</li>
+</ul>
+</li>
+<li><p>reboot machine</p></li>
+<li><p>you should see a progress bar for installing Ubuntu</p></li>
+<li><p>when asked to create a new user, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">username</span><span class="p">:</span> <span class="n">odis</span>
+  <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+</pre></div>
+</div>
+</li>
+<li><p>to run: goto Start menu, choose “WSL”</p>
+<ul class="simple">
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>to check the Ubuntu version, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+  
+     <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
+     <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
+     <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
+     <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
+</pre></div>
+</div>
+<p><img alt="wsl install2" src="../_images/wsl-install2.png" /></p>
+</li>
+</ul>
+</section>
+<section id="install-docker-engine">
+<h3>Install Docker Engine<a class="headerlink" href="#install-docker-engine" title="Link to this heading">#</a></h3>
+<p>We will follow the steps <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a>.</p>
+<ul>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute the following, to update your Ubuntu packages</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+  <span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+<li><p>remove conflicking packages</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+</pre></div>
+</div>
+</li>
+<li><p>setup Docker’s <code class="docutils literal notranslate"><span class="pre">apt</span></code> repository</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  # Add Docker&#39;s official GPG key:
+  sudo apt-get update
+  sudo apt-get install ca-certificates curl
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+  # Add the repository to Apt sources:
+  echo \
+    &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+    sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+  sudo apt-get update
+</pre></div>
+</div>
+</li>
+<li><p>now install the Docker packages</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span> <span class="n">docker</span><span class="o">-</span><span class="n">buildx</span><span class="o">-</span><span class="n">plugin</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">-</span><span class="n">plugin</span>
+</pre></div>
+</div>
+<p>if successful, the response should contain the message <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">from</span> <span class="pre">Docker!</span></code>.</p>
+<p><img alt="docker install1" src="../_images/docker-install1.png" /></p>
+<p>you can also try a <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">version</span></code> command</p>
+<p><img alt="docker install2" src="../_images/docker-install2.png" /></p>
+</li>
+</ul>
+</section>
+<section id="clone-the-ckan-docker-repository-locally">
+<h3>Clone the ckan-docker repository locally<a class="headerlink" href="#clone-the-ckan-docker-repository-locally" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute the following, to clone the <code class="docutils literal notranslate"><span class="pre">ckan-docker</span></code> repo locally</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">.</span><span class="n">git</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span>
+</pre></div>
+</div>
+<p><img alt="git install1" src="../_images/git-install1.png" /></p>
+</li>
+</ul>
+</section>
+<section id="install-build-and-run-ckan-plus-dependencies">
+<h3>Install (build and run) CKAN plus dependencies<a class="headerlink" href="#install-build-and-run-ckan-plus-dependencies" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>execute <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ckan-docker-git-master</span></code></p></li>
+<li><p>make a copy the the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file for our needs</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">cp</span> <span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">example</span> <span class="o">.</span><span class="n">env</span>
+</pre></div>
+</div>
+</li>
+<li><p>you can optionally change the .env values for your needs, such as
+for the admin user/password</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="c1">#use vi to open the .env file</span>
+  <span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
+  <span class="c1">#make your changes, then save with the command</span>
+  <span class="p">:</span><span class="n">wq</span>
+</pre></div>
+</div>
+<p><img alt="env install1" src="../_images/env-install1.png" /></p>
+</li>
+<li><p>build the Docker images</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">docker</span> <span class="n">compose</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>you should see a response that states <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">ckan:</span> <span class="pre">Built</span></code></p>
+<p><img alt="build install1" src="../_images/build-install1.png" /></p>
+</li>
+<li><p>start the Docker containers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+<p>you should see a response that states that 6 containers are <code class="docutils literal notranslate"><span class="pre">Healthy</span></code></p>
+<p><img alt="compose install1" src="../_images/compose-install1.png" /></p>
+</li>
+</ul>
+</section>
+<section id="goto-ckan-s-landing-page">
+<h3>Goto CKAN’s landing page<a class="headerlink" href="#goto-ckan-s-landing-page" title="Link to this heading">#</a></h3>
+<p>Now you are ready to open your CKAN instance in your web browser.</p>
+<ul>
+<li><p>in FireFox or Chrome, goto: <a class="reference external" href="https://localhost:8443/">https://localhost:8443/</a></p>
+<p><img alt="ckan wsl install1" src="../_images/ckan-wsl-install1.png" /></p>
+</li>
+</ul>
+</section>
+</section>
+<section id="option-2-install-ckan-dependencies-manually">
+<h2>Option 2: Install CKAN &amp; dependencies manually<a class="headerlink" href="#option-2-install-ckan-dependencies-manually" title="Link to this heading">#</a></h2>
 <section id="install-postgresql">
-<h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Link to this heading">#</a></h2>
+<h3>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Link to this heading">#</a></h3>
 <p>PostgreSQL is a popular Open Source database, that will store tables leveraged by
 CKAN.  It also has a very strong spatial engine, PostGIS.  We will now install both
 PostgreSQL and PostGIS, as follows:</p>
@@ -534,7 +714,7 @@ PostgreSQL and PostGIS, as follows:</p>
 </ul>
 </section>
 <section id="install-python">
-<h2>Install Python<a class="headerlink" href="#install-python" title="Link to this heading">#</a></h2>
+<h3>Install Python<a class="headerlink" href="#install-python" title="Link to this heading">#</a></h3>
 <p>CKAN 2.11 (the latest release as of writing this document) supports Python versions
 3.9 to 3.12. This document will explain how to install Python 3.12, as follows:</p>
 <div class="admonition note">
@@ -574,7 +754,7 @@ and choose the <code class="docutils literal notranslate"><span class="pre">C:/P
 </ul>
 </section>
 <section id="install-git">
-<h2>Install Git<a class="headerlink" href="#install-git" title="Link to this heading">#</a></h2>
+<h3>Install Git<a class="headerlink" href="#install-git" title="Link to this heading">#</a></h3>
 <p>We will use git to “checkout” (which means to get locally) the latest changes in
 software that is required for CKAN (as often the released code contains errors, that
 are fixed in the software’s GitHub repository).  We will also be using git through
@@ -609,13 +789,13 @@ are also other visual tools that you can install instead, such as
 </ul>
 </section>
 <section id="create-a-working-directory">
-<h2>Create a working directory<a class="headerlink" href="#create-a-working-directory" title="Link to this heading">#</a></h2>
+<h3>Create a working directory<a class="headerlink" href="#create-a-working-directory" title="Link to this heading">#</a></h3>
 <p>Using Windows File Explorer, create a new folder named “working” at the
 <code class="docutils literal notranslate"><span class="pre">C:/</span></code> drive root, so you have the existing path <code class="docutils literal notranslate"><span class="pre">C:/working</span></code></p>
 <p><img alt="File Explorer" src="../_images/working-folder.png" /></p>
 </section>
 <section id="create-virtual-environment-in-python">
-<h2>Create virtual environment in Python<a class="headerlink" href="#create-virtual-environment-in-python" title="Link to this heading">#</a></h2>
+<h3>Create virtual environment in Python<a class="headerlink" href="#create-virtual-environment-in-python" title="Link to this heading">#</a></h3>
 <p>We will use a <code class="docutils literal notranslate"><span class="pre">venv</span></code> virtual environment in Python, to make sure that
 the installation does not conflict with others on your server.  Open
 a CMD window, and execute the following to create a new <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> environment:</p>
@@ -630,7 +810,7 @@ a CMD window, and execute the following to create a new <code class="docutils li
 and then execute <code class="docutils literal notranslate"><span class="pre">C:\working\ckan-venv\Scripts\activate</span></code> to reactivate.</p>
 </section>
 <section id="upgrade-pip">
-<h2>Upgrade pip<a class="headerlink" href="#upgrade-pip" title="Link to this heading">#</a></h2>
+<h3>Upgrade pip<a class="headerlink" href="#upgrade-pip" title="Link to this heading">#</a></h3>
 <p>Open a CMD window, and make sure that your <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> is activated, and then
 upgrade pip as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
@@ -638,7 +818,7 @@ upgrade pip as follows:</p>
 </div>
 </section>
 <section id="checkout-the-ckan-source-code-and-build-ckan">
-<h2>Checkout the CKAN source code and build CKAN<a class="headerlink" href="#checkout-the-ckan-source-code-and-build-ckan" title="Link to this heading">#</a></h2>
+<h3>Checkout the CKAN source code and build CKAN<a class="headerlink" href="#checkout-the-ckan-source-code-and-build-ckan" title="Link to this heading">#</a></h3>
 <p>We will use git to get the latest source code direct from the CKAN
 repository on GitHub, and then build CKAN inside the <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> virtual
 environment.  Open a CMD window, and execute:</p>
@@ -656,7 +836,7 @@ environment.  Open a CMD window, and execute:</p>
 <p><img alt="CKAN install2" src="../_images/ckan-install2.png" /></p>
 </section>
 <section id="add-postgresql-utils-to-path">
-<h2>Add PostgreSQL utils to PATH<a class="headerlink" href="#add-postgresql-utils-to-path" title="Link to this heading">#</a></h2>
+<h3>Add PostgreSQL utils to PATH<a class="headerlink" href="#add-postgresql-utils-to-path" title="Link to this heading">#</a></h3>
 <p>We will need to run various PostgreSQL tools from the commandline, so we need
 to make sure that they are found on the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable on your
 server.  To set the system PATH, execute the following:</p>
@@ -680,7 +860,7 @@ button</p>
 </ul>
 </section>
 <section id="create-the-ckan-database">
-<h2>Create the ckan database<a class="headerlink" href="#create-the-ckan-database" title="Link to this heading">#</a></h2>
+<h3>Create the ckan database<a class="headerlink" href="#create-the-ckan-database" title="Link to this heading">#</a></h3>
 <p>We will now create a user profile in <code class="docutils literal notranslate"><span class="pre">ckanuser</span></code> PostgreSQL.  Open a CMD window
 and execute:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>createuser<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-s<span class="w"> </span>-D<span class="w"> </span>-r<span class="w"> </span>-P<span class="w"> </span>ckanuser
@@ -697,7 +877,7 @@ execute:</p>
 </div>
 </section>
 <section id="install-the-postgis-extension-in-ckandb">
-<h2>Install the PostGIS extension in ckandb<a class="headerlink" href="#install-the-postgis-extension-in-ckandb" title="Link to this heading">#</a></h2>
+<h3>Install the PostGIS extension in ckandb<a class="headerlink" href="#install-the-postgis-extension-in-ckandb" title="Link to this heading">#</a></h3>
 <p>You likely will need spatial tables inside the <code class="docutils literal notranslate"><span class="pre">ckandb</span></code> database, so it
 is recommended to enable the PostGIS extension, by executing in your
 CMD window as follows:</p>
@@ -719,7 +899,7 @@ You should see a response as <code class="docutils literal notranslate"><span cl
 <p>to quit, execute: <code class="docutils literal notranslate"><span class="pre">\q</span> <span class="pre">&lt;enter&gt;</span></code></p>
 </section>
 <section id="generate-config-file-for-ckan">
-<h2>Generate config file for CKAN<a class="headerlink" href="#generate-config-file-for-ckan" title="Link to this heading">#</a></h2>
+<h3>Generate config file for CKAN<a class="headerlink" href="#generate-config-file-for-ckan" title="Link to this heading">#</a></h3>
 <p>We will run the built <code class="docutils literal notranslate"><span class="pre">ckan</span></code> tool to generate a config file for CKAN.  Open a
 CMD window and execute:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
@@ -751,7 +931,7 @@ and set the following:</p>
 <code class="docutils literal notranslate"><span class="pre">C:\working\ckan-site</span></code></p>
 </section>
 <section id="install-java-jre">
-<h2>Install Java JRE<a class="headerlink" href="#install-java-jre" title="Link to this heading">#</a></h2>
+<h3>Install Java JRE<a class="headerlink" href="#install-java-jre" title="Link to this heading">#</a></h3>
 <p>Several tools for CKAN require that we install Java, as follows:</p>
 <ul class="simple">
 <li><p>download “Open JDK 21.x” from <a class="reference external" href="https://learn.microsoft.com/en-ca/java/openjdk/download">https://learn.microsoft.com/en-ca/java/openjdk/download</a></p></li>
@@ -777,7 +957,7 @@ and set the following:</p>
 </ul>
 </section>
 <section id="install-strawberry-perl">
-<h2>Install Strawberry Perl<a class="headerlink" href="#install-strawberry-perl" title="Link to this heading">#</a></h2>
+<h3>Install Strawberry Perl<a class="headerlink" href="#install-strawberry-perl" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>download: <a class="reference external" href="https://strawberryperl.com/">https://strawberryperl.com/</a></p></li>
 <li><p>use MSI installer</p></li>
@@ -786,7 +966,7 @@ and set the following:</p>
 </ul>
 </section>
 <section id="install-solr">
-<h2>Install Solr<a class="headerlink" href="#install-solr" title="Link to this heading">#</a></h2>
+<h3>Install Solr<a class="headerlink" href="#install-solr" title="Link to this heading">#</a></h3>
 <p>CKAN leverages Solr for its fast indexing/searches.  To install Solr
 execute the following in a CMD window:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
@@ -896,7 +1076,7 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 </ul>
 </section>
 <section id="install-redis">
-<h2>Install Redis<a class="headerlink" href="#install-redis" title="Link to this heading">#</a></h2>
+<h3>Install Redis<a class="headerlink" href="#install-redis" title="Link to this heading">#</a></h3>
 <p>To install Redis (required for CKAN), we must install the WSL (Windows Subsystem for Linux),
 as follows:</p>
 <ul>
@@ -909,7 +1089,7 @@ as follows:</p>
 </div>
 </li>
 <li><p>now install Ubuntu</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl1</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl2</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
 </pre></div>
 </div>
 <p><img alt="redis install1" src="../_images/redis-install1.png" /></p>
@@ -995,7 +1175,7 @@ as follows:</p>
 </ul>
 </section>
 <section id="create-the-ckan-database-tables">
-<h2>Create the CKAN database tables<a class="headerlink" href="#create-the-ckan-database-tables" title="Link to this heading">#</a></h2>
+<h3>Create the CKAN database tables<a class="headerlink" href="#create-the-ckan-database-tables" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>open new CMD window, and execute:</p></li>
 </ul>
@@ -1020,7 +1200,7 @@ as follows:</p>
 </ul>
 </section>
 <section id="add-ckan-user">
-<h2>Add CKAN user<a class="headerlink" href="#add-ckan-user" title="Link to this heading">#</a></h2>
+<h3>Add CKAN user<a class="headerlink" href="#add-ckan-user" title="Link to this heading">#</a></h3>
 <p>We will create an initial user <code class="docutils literal notranslate"><span class="pre">admin</span></code> for CKAN, with full
 <code class="docutils literal notranslate"><span class="pre">sysadmin</span></code> powers, to manage the catalogue.  Open a CMD window and
 execute:</p>
@@ -1041,7 +1221,7 @@ execute:</p>
 </ul>
 </section>
 <section id="run-ckan">
-<h2>Run CKAN<a class="headerlink" href="#run-ckan" title="Link to this heading">#</a></h2>
+<h3>Run CKAN<a class="headerlink" href="#run-ckan" title="Link to this heading">#</a></h3>
 <p>We can use the internal “development server” to serve CKAN, as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
 <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">run</span>
@@ -1057,6 +1237,7 @@ execute:</p>
 <li><p>in your browser, goto: <a class="reference external" href="http://localhost:5000/">http://localhost:5000/</a></p></li>
 </ul>
 <p><img alt="CKAN home" src="../_images/ckan-initial-home.png" /></p>
+</section>
 </section>
 </section>
 
@@ -1128,24 +1309,35 @@ execute:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Intended Audience</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-versions-supported">Windows Versions Supported</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-working-directory">Create a working directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment-in-python">Create virtual environment in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrade-pip">Upgrade pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-ckan-source-code-and-build-ckan">Checkout the CKAN source code and build CKAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-postgresql-utils-to-path">Add PostgreSQL utils to PATH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database">Create the ckan database</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-postgis-extension-in-ckandb">Install the PostGIS extension in ckandb</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-config-file-for-ckan">Generate config file for CKAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-java-jre">Install Java JRE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-strawberry-perl">Install Strawberry Perl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">Install Redis</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-install-ckan-through-docker-recommended">Option 1: Install CKAN through Docker (recommended)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-wsl">Install WSL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-docker-engine">Install Docker Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-ckan-docker-repository-locally">Clone the ckan-docker repository locally</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-build-and-run-ckan-plus-dependencies">Install (build and run) CKAN plus dependencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goto-ckan-s-landing-page">Goto CKAN’s landing page</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-install-ckan-dependencies-manually">Option 2: Install CKAN &amp; dependencies manually</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-postgresql">Install PostgreSQL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-working-directory">Create a working directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment-in-python">Create virtual environment in Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upgrade-pip">Upgrade pip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-ckan-source-code-and-build-ckan">Checkout the CKAN source code and build CKAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-postgresql-utils-to-path">Add PostgreSQL utils to PATH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database">Create the ckan database</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-postgis-extension-in-ckandb">Install the PostGIS extension in ckandb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-config-file-for-ckan">Generate config file for CKAN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-java-jre">Install Java JRE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-strawberry-perl">Install Strawberry Perl</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-solr">Install Solr</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-redis">Install Redis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-ckan-database-tables">Create the CKAN database tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ckan-user">Add CKAN user</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-ckan">Run CKAN</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

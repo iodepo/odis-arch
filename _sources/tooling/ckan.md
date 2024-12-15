@@ -8,8 +8,9 @@ The following document explains how to set up a full metadata catalogue software
 architecture, with settings enabled to connect the catalogue to ODIS.
 
 The initial steps are for [CKAN](https://ckan.org/), and specifically on 
-Windows.  This will later be expanded for [Docker steps](https://github.com/ckan/ckan-docker), 
-and other methods.
+Windows.  You will have a choice to install CKAN through [Docker](https://github.com/ckan/ckan-docker), 
+which is recommended, or to install CKAN (and its dependencies) manually, 
+which is much more difficult.
 
 ## Intended Audience
 
@@ -23,7 +24,153 @@ The following steps were created on Windows Server 2022, but should work on
 Windows 11 or 10.  You will be required to have full Administrator access on 
 your server.
 
-## Install PostgreSQL
+## Option 1: Install CKAN through Docker (recommended)
+
+We will follow the [Docker Compose steps for CKAN](https://github.com/ckan/ckan-docker/blob/master/README.md).
+
+### Install WSL
+
+To install Docker, we must install the WSL (Windows Subsystem for Linux),
+as follows:
+  - follow https://learn.microsoft.com/en-us/windows/wsl/install
+  - open CMD window and execute:
+    - set the version of WSL to 2
+      ```
+        wsl --set-default-version 2
+      ```
+    - see list of all Linux distribution names
+      ```
+        wsl --list --online
+      ```
+    - now install Ubuntu
+      ```
+        wsl --install --distribution "Ubuntu-24.04"
+      ```
+      
+      ![wsl install1](./images/wsl-install1.png)
+      
+  - reboot machine
+  - you should see a progress bar for installing Ubuntu
+  - when asked to create a new user, enter:
+    ```
+      username: odis
+      password: odis
+    ```
+  - to run: goto Start menu, choose "WSL"
+    - CMD window should open with an `odis@` prompt
+  - to check the Ubuntu version, run:
+    ```
+      lsb_release -a
+      
+         Distributor ID: Ubuntu
+         Description:    Ubuntu 24.04 LTS
+         Release:        24.04
+         Codename:       noble
+    ```
+    
+    ![wsl install2](./images/wsl-install2.png)
+    
+### Install Docker Engine
+
+We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
+
+- assuming you are still at the `odis@` prompt, but if not:
+  - goto Start menu, choose "WSL"
+  - CMD window should open with an `odis@` prompt
+- execute the following, to update your Ubuntu packages
+  ```
+    sudo apt update
+    sudo apt upgrade
+  ```
+- remove conflicking packages
+  ```
+    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  ```
+- setup Docker's `apt` repository
+  ```
+    # Add Docker's official GPG key:
+    sudo apt-get update
+    sudo apt-get install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+    # Add the repository to Apt sources:
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+      sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt-get update
+  ```
+- now install the Docker packages
+  ```
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  ```
+  if successful, the response should contain the message `Hello from Docker!`.
+  
+  ![docker install1](./images/docker-install1.png)
+  
+  you can also try a `docker version` command
+  
+  ![docker install2](./images/docker-install2.png)
+  
+### Clone the ckan-docker repository locally
+
+- assuming you are still at the `odis@` prompt, but if not:
+  - goto Start menu, choose "WSL"
+  - CMD window should open with an `odis@` prompt
+- execute the following, to clone the `ckan-docker` repo locally
+  ```
+    git clone https://github.com/ckan/ckan-docker.git ckan-docker-git-master
+  ```
+
+  ![git install1](./images/git-install1.png)
+  
+### Install (build and run) CKAN plus dependencies
+
+- execute `cd ckan-docker-git-master`
+- make a copy the the `.env` file for our needs
+  ```
+    cp .env.example .env
+  ```
+- you can optionally change the .env values for your needs, such as
+  for the admin user/password
+  ```
+    #use vi to open the .env file
+    vi .env
+    #make your changes, then save with the command
+    :wq
+  ```
+  
+  ![env install1](./images/env-install1.png)
+  
+- build the Docker images
+  ```
+    docker compose build
+  ```
+  you should see a response that states `Service ckan: Built`
+  
+  ![build install1](./images/build-install1.png)
+  
+- start the Docker containers
+  ```
+    docker compose up -d
+  ```
+  you should see a response that states that 6 containers are `Healthy`
+  
+  ![compose install1](./images/compose-install1.png)
+  
+### Goto CKAN's landing page
+
+Now you are ready to open your CKAN instance in your web browser.
+
+- in FireFox or Chrome, goto: https://localhost:8443/
+
+  ![ckan wsl install1](./images/ckan-wsl-install1.png)
+
+## Option 2: Install CKAN & dependencies manually
+
+### Install PostgreSQL
 
 PostgreSQL is a popular Open Source database, that will store tables leveraged by
 CKAN.  It also has a very strong spatial engine, PostGIS.  We will now install both 
@@ -70,7 +217,7 @@ PostgreSQL and PostGIS, as follows:
 
   ![PG install8](./images/pg-install8.png)
 
-## Install Python
+### Install Python
 
 CKAN 2.11 (the latest release as of writing this document) supports Python versions 
 3.9 to 3.12. This document will explain how to install Python 3.12, as follows:
@@ -109,7 +256,7 @@ later in this document.
     
     ![Python install3](./images/python-install3.png)
 
-## Install Git
+### Install Git
 
 We will use git to "checkout" (which means to get locally) the latest changes in 
 software that is required for CKAN (as often the released code contains errors, that 
@@ -146,14 +293,14 @@ are also other visual tools that you can install instead, such as
 
   ![Git install6](./images/git-windows6.png)
 
-## Create a working directory
+### Create a working directory
 
 Using Windows File Explorer, create a new folder named "working" at the 
 `C:/` drive root, so you have the existing path `C:/working`
 
 ![File Explorer](./images/working-folder.png)
 
-## Create virtual environment in Python
+### Create virtual environment in Python
 
 We will use a `venv` virtual environment in Python, to make sure that 
 the installation does not conflict with others on your server.  Open 
@@ -170,7 +317,7 @@ You should now see a prompt that looks like the following:
 You can also execute `deactivate` to exit that `ckan-venv` virtual environment, 
 and then execute `C:\working\ckan-venv\Scripts\activate` to reactivate.
 
-## Upgrade pip
+### Upgrade pip
 
 Open a CMD window, and make sure that your `ckan-venv` is activated, and then 
 upgrade pip as follows:
@@ -178,7 +325,7 @@ upgrade pip as follows:
 python -m pip install --upgrade pip
 ```
 
-## Checkout the CKAN source code and build CKAN
+### Checkout the CKAN source code and build CKAN
 
 We will use git to get the latest source code direct from the CKAN
 repository on GitHub, and then build CKAN inside the `ckan-venv` virtual 
@@ -199,7 +346,7 @@ You can now try to a test, to see the usage, such as:
 
 ![CKAN install2](./images/ckan-install2.png)
 
-## Add PostgreSQL utils to PATH
+### Add PostgreSQL utils to PATH
 
 We will need to run various PostgreSQL tools from the commandline, so we need 
 to make sure that they are found on the `PATH` environment variable on your
@@ -225,7 +372,7 @@ server.  To set the system PATH, execute the following:
 
   ![PG env4](./images/pg-env4.png)
 
-## Create the ckan database
+### Create the ckan database
 
 We will now create a user profile in `ckanuser` PostgreSQL.  Open a CMD window 
 and execute:
@@ -245,7 +392,7 @@ createdb -U postgres -p 5432 -O ckanuser ckandb -E utf-8
   password: postgres
 ```
 
-## Install the PostGIS extension in ckandb
+### Install the PostGIS extension in ckandb
 
 You likely will need spatial tables inside the `ckandb` database, so it 
 is recommended to enable the PostGIS extension, by executing in your 
@@ -272,7 +419,7 @@ Again execute to list all tables (you should see more tables now) : `\d <enter>`
 
 to quit, execute: `\q <enter>`
 
-## Generate config file for CKAN
+### Generate config file for CKAN
 
 We will run the built `ckan` tool to generate a config file for CKAN.  Open a 
 CMD window and execute:
@@ -307,7 +454,7 @@ and set the following:
 Using Windows File Explorer, then create a new `data` folder inside 
 `C:\working\ckan-site`
 
-## Install Java JRE
+### Install Java JRE
 
 Several tools for CKAN require that we install Java, as follows:
 
@@ -327,14 +474,14 @@ Several tools for CKAN require that we install Java, as follows:
         
       ![OpenJDK install2](./images/openjdk-install2.png)
 
-## Install Strawberry Perl
+### Install Strawberry Perl
 
 - download: https://strawberryperl.com/
 - use MSI installer
 - leave defaults as-is
 - test in new CMD window, executing: `perl --version`
 
-## Install Solr
+### Install Solr
 
 CKAN leverages Solr for its fast indexing/searches.  To install Solr
 execute the following in a CMD window:
@@ -440,7 +587,7 @@ bin\solr.cmd stop -p 8983
         }
   ```
 
-## Install Redis
+### Install Redis
 
 To install Redis (required for CKAN), we must install the WSL (Windows Subsystem for Linux),
 as follows:
@@ -452,7 +599,7 @@ as follows:
       ```
     - now install Ubuntu
       ```
-        wsl --install --enable-wsl1 --distribution "Ubuntu-24.04 LTS"
+        wsl --install --enable-wsl2 --distribution "Ubuntu-24.04 LTS"
       ```
       
       ![redis install1](./images/redis-install1.png)
@@ -519,7 +666,7 @@ as follows:
            
            ![redis install3](./images/redis-install3.png)     
   
-## Create the CKAN database tables
+### Create the CKAN database tables
 
 - open new CMD window, and execute:
 ```
@@ -540,7 +687,7 @@ as follows:
 
   ![CKAN install tables2](./images/ckan-install-tables2.png)
 
-## Add CKAN user
+### Add CKAN user
 
 We will create an initial user `admin` for CKAN, with full
 `sysadmin` powers, to manage the catalogue.  Open a CMD window and 
@@ -561,7 +708,7 @@ ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
   ```
 - you should see a message of "Added admin as sysadmin"
 
-## Run CKAN
+### Run CKAN
 
 We can use the internal "development server" to serve CKAN, as follows:
 
