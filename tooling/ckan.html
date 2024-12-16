@@ -444,6 +444,12 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-ckan-docker-repository-locally">Clone the ckan-docker repository locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-build-and-run-ckan-plus-dependencies">Install (build and run) CKAN plus dependencies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goto-ckan-s-landing-page">Goto CKAN’s landing page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-portainer-recommended-to-manage-containers">Install Portainer (Recommended) to manage containers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-portainer-server">Setup Portainer Server</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-the-portainer-server">Login to the Portainer Server</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-your-containers-with-portainer">Manage your containers with Portainer</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-install-ckan-dependencies-manually">Option 2: Install CKAN &amp; dependencies manually</a><ul class="nav section-nav flex-column">
@@ -669,6 +675,12 @@ for the admin user/password</p>
 <p>you should see a response that states that 6 containers are <code class="docutils literal notranslate"><span class="pre">Healthy</span></code></p>
 <p><img alt="compose install1" src="../_images/compose-install1.png" /></p>
 </li>
+<li><p>check status of containers by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span>
+</pre></div>
+</div>
+<p><img alt="compose install2" src="../_images/compose-install2.png" /></p>
+</li>
 </ul>
 </section>
 <section id="goto-ckan-s-landing-page">
@@ -677,6 +689,75 @@ for the admin user/password</p>
 <ul>
 <li><p>in FireFox or Chrome, goto: <a class="reference external" href="https://localhost:8443/">https://localhost:8443/</a></p>
 <p><img alt="ckan wsl install1" src="../_images/ckan-wsl-install1.png" /></p>
+</li>
+</ul>
+</section>
+<section id="install-portainer-recommended-to-manage-containers">
+<h3>Install Portainer (Recommended) to manage containers<a class="headerlink" href="#install-portainer-recommended-to-manage-containers" title="Link to this heading">#</a></h3>
+<p>Portainer offers a user-friendly interface to manage the CKAN containers.
+We will follow the <a class="reference external" href="https://docs.portainer.io/start/install-ce/server/docker/wsl">Portainer installation steps</a>
+for WSL.</p>
+<section id="setup-portainer-server">
+<h4>Setup Portainer Server<a class="headerlink" href="#setup-portainer-server" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute the following, to create the volume that Portainer Server
+will use to store its database:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">volume</span> <span class="n">create</span> <span class="n">portainer_data</span>
+</pre></div>
+</div>
+</li>
+<li><p>then download and install the Portainer Server container:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8000</span><span class="p">:</span><span class="mi">8000</span> <span class="o">-</span><span class="n">p</span> <span class="mi">9443</span><span class="p">:</span><span class="mi">9443</span> <span class="o">--</span><span class="n">name</span> <span class="n">portainer</span> <span class="o">--</span><span class="n">restart</span><span class="o">=</span><span class="n">always</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">sock</span> <span class="o">-</span><span class="n">v</span> <span class="n">portainer_data</span><span class="p">:</span><span class="o">/</span><span class="n">data</span> <span class="n">portainer</span><span class="o">/</span><span class="n">portainer</span><span class="o">-</span><span class="n">ce</span><span class="p">:</span><span class="mf">2.21.4</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check that the Portainer Server container has started by executing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span>
+</pre></div>
+</div>
+<p><img alt="portainer install1" src="../_images/portainer-install1.png" /></p>
+<p>You should see a <code class="docutils literal notranslate"><span class="pre">portainer</span></code> line with the <code class="docutils literal notranslate"><span class="pre">Status</span></code> reporting <code class="docutils literal notranslate"><span class="pre">Up</span> <span class="pre">for</span> <span class="pre">xxx</span> <span class="pre">minutes</span></code></p>
+</li>
+</ul>
+</section>
+</section>
+<section id="login-to-the-portainer-server">
+<h3>Login to the Portainer Server<a class="headerlink" href="#login-to-the-portainer-server" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>you can now login at <a class="reference external" href="https://localhost:9443">https://localhost:9443</a></p>
+<ul>
+<li><p>if you receive a message of <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Portainer</span> <span class="pre">instance</span> <span class="pre">timed</span> <span class="pre">out</span> <span class="pre">for</span> <span class="pre">security</span> <span class="pre">purposes</span></code>,
+this occurs when you do not login within 5 minutes of performing the initial
+setup.  You can execute the following (which will give you another 5 minutes
+to complete the initial setup):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">stop</span> <span class="n">portainer</span>
+<span class="n">docker</span> <span class="n">start</span> <span class="n">portainer</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>you should now see a page where you can create a user.  Be sure to create a unique
+password and then click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">user</span></code>.  You may wish to disable the <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">collection</span> <span class="pre">of</span> <span class="pre">anonymous</span> <span class="pre">statistics</span></code>.</p>
+<p><img alt="portainer install2" src="../_images/portainer-install2.png" /></p>
+</li>
+<li><p>you should now see a <code class="docutils literal notranslate"><span class="pre">Weclome</span> <span class="pre">to</span> <span class="pre">Portainer</span></code> page, and then you can click the <code class="docutils literal notranslate"><span class="pre">Get</span>&#160; <span class="pre">Started</span></code> button, to start using Portainer.</p>
+<p><img alt="portainer install3" src="../_images/portainer-install3.png" /></p>
+</li>
+</ul>
+</section>
+<section id="manage-your-containers-with-portainer">
+<h3>Manage your containers with Portainer<a class="headerlink" href="#manage-your-containers-with-portainer" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>in the left panel, click on <code class="docutils literal notranslate"><span class="pre">Containers</span></code> to then see a list of your CKAN containers,
+and then interact with them if need be (stop/start/restart etc.).</p>
+<p><img alt="portainer install4" src="../_images/portainer-install4.png" /></p>
 </li>
 </ul>
 </section>
@@ -1131,7 +1212,7 @@ control.</p>
 </li>
 <li><p>to run: goto Start menu, choose “WSL”</p>
 <ul class="simple">
-<li><p>CMD window should open with an odis&#64; prompt</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
 </ul>
 </li>
 <li><p>to check the Ubuntu version, execute:</p>
@@ -1342,6 +1423,12 @@ execute:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-the-ckan-docker-repository-locally">Clone the ckan-docker repository locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-build-and-run-ckan-plus-dependencies">Install (build and run) CKAN plus dependencies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goto-ckan-s-landing-page">Goto CKAN’s landing page</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-portainer-recommended-to-manage-containers">Install Portainer (Recommended) to manage containers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-portainer-server">Setup Portainer Server</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-the-portainer-server">Login to the Portainer Server</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-your-containers-with-portainer">Manage your containers with Portainer</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-install-ckan-dependencies-manually">Option 2: Install CKAN &amp; dependencies manually</a><ul class="nav section-nav flex-column">
