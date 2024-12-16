@@ -216,7 +216,7 @@ for WSL.
   
   You should see a `portainer` line with the `Status` reporting `Up for xxx minutes`
   
-### Login to the Portainer Server
+#### Login to the Portainer Server
 
 - you can now login at https://localhost:9443
   - if you receive a message of `Your Portainer instance timed out for security purposes`,
@@ -233,12 +233,12 @@ for WSL.
   
   ![portainer install2](./images/portainer-install2.png)
   
-- you should now see a `Weclome to Portainer` page, and then you can click the `Get 
+- you should now see a `Weclome to Portainer` page, and then you can click the `Get
   Started` button, to start using Portainer.
   
   ![portainer install3](./images/portainer-install3.png)
   
-### Manage your containers with Portainer
+#### Manage your containers with Portainer
   
 - in the left panel, click on `Containers` to then see a list of your CKAN containers, 
   and then interact with them if need be (stop/start/restart etc.).
