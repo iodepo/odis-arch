@@ -233,7 +233,7 @@ for WSL.
   
   ![portainer install2](./images/portainer-install2.png)
   
-- you should now see a `Weclome to Portainer` page, and then you can click the `Get
+- you should now see a `Welcome to Portainer` page, and then you can click the `Get
   Started` button, to start using Portainer.
   
   ![portainer install3](./images/portainer-install3.png)
