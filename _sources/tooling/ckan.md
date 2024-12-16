@@ -218,7 +218,7 @@ for WSL.
   
 #### Login to the Portainer Server
 
-- you can now login at https://localhost:9443
+- you can now login using your web browser at https://localhost:9443
   - if you receive a message of `Your Portainer instance timed out for security purposes`,
     this occurs when you do not login within 5 minutes of performing the initial 
     setup.  You can execute the following (which will give you another 5 minutes 
