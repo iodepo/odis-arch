@@ -535,8 +535,17 @@ as follows:</p>
 <li><p>you should see a progress bar for installing Ubuntu</p></li>
 <li><p>when asked to create a new user, enter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">username</span><span class="p">:</span> <span class="n">odis</span>
-  <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+  <span class="n">password</span><span class="p">:</span> <span class="n">yourpassword</span>
 </pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The WSL user has a lot of power (they have sudo/super-user permissions);
+it is strongly recommended that users change <code class="docutils literal notranslate"><span class="pre">yourpassword</span></code> to a secure
+and unique password for this account and keep hold of it in a password
+manager. That way if someone manages to hack CKAN and gain remote code
+execution capabilities, it won’t be so easy for them to gain super-user
+control.</p>
 </div>
 </li>
 <li><p>to run: goto Start menu, choose “WSL”</p>
