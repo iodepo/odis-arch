@@ -514,17 +514,17 @@ as follows:</p>
 <li><p>open CMD window and execute:</p>
 <ul>
 <li><p>set the version of WSL to 2</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">version</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">version</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </li>
 <li><p>see list of all Linux distribution names</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
 </pre></div>
 </div>
 </li>
 <li><p>now install Ubuntu</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04&quot;</span>
 </pre></div>
 </div>
 <p><img alt="wsl install1" src="../_images/wsl-install1.png" /></p>
@@ -553,13 +553,15 @@ control.</p>
 <li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
 </ul>
 </li>
-<li><p>to check the Ubuntu version, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
-  
-     <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
-     <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
-     <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
-     <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
+<li><p>to check the Ubuntu version, execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>which should return:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
+    <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
+    <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
+    <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
 </pre></div>
 </div>
 <p><img alt="wsl install2" src="../_images/wsl-install2.png" /></p>
@@ -577,35 +579,35 @@ control.</p>
 </ul>
 </li>
 <li><p>execute the following, to update your Ubuntu packages</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
-  <span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
 </pre></div>
 </div>
 </li>
 <li><p>remove conflicking packages</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 </pre></div>
 </div>
 </li>
 <li><p>setup Docker’s <code class="docutils literal notranslate"><span class="pre">apt</span></code> repository</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  # Add Docker&#39;s official GPG key:
-  sudo apt-get update
-  sudo apt-get install ca-certificates curl
-  sudo install -m 0755 -d /etc/apt/keyrings
-  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-  sudo chmod a+r /etc/apt/keyrings/docker.asc
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add Docker&#39;s official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-  # Add the repository to Apt sources:
-  echo \
-    &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
-    sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-  sudo apt-get update
+# Add the repository to Apt sources:
+echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+sudo apt-get update
 </pre></div>
 </div>
 </li>
 <li><p>now install the Docker packages</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span> <span class="n">docker</span><span class="o">-</span><span class="n">buildx</span><span class="o">-</span><span class="n">plugin</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">-</span><span class="n">plugin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span> <span class="n">docker</span><span class="o">-</span><span class="n">buildx</span><span class="o">-</span><span class="n">plugin</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">-</span><span class="n">plugin</span>
 </pre></div>
 </div>
 <p>if successful, the response should contain the message <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">from</span> <span class="pre">Docker!</span></code>.</p>
@@ -625,7 +627,7 @@ control.</p>
 </ul>
 </li>
 <li><p>execute the following, to clone the <code class="docutils literal notranslate"><span class="pre">ckan-docker</span></code> repo locally</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">.</span><span class="n">git</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">.</span><span class="n">git</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span>
 </pre></div>
 </div>
 <p><img alt="git install1" src="../_images/git-install1.png" /></p>
@@ -637,31 +639,31 @@ control.</p>
 <ul>
 <li><p>execute <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ckan-docker-git-master</span></code></p></li>
 <li><p>make a copy the the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file for our needs</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">cp</span> <span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">example</span> <span class="o">.</span><span class="n">env</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">example</span> <span class="o">.</span><span class="n">env</span>
 </pre></div>
 </div>
 </li>
 <li><p>you can optionally change the .env values for your needs, such as
 for the admin user/password</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="c1">#use vi to open the .env file</span>
-  <span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
-  <span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
-    <span class="c1">#then edit the desired lines</span>
-  <span class="c1">#then save with the command</span>
-  <span class="p">:</span><span class="n">wq</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the .env file</span>
+<span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
+<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+  <span class="c1">#then edit the desired lines</span>
+<span class="c1">#then save with the command</span>
+<span class="p">:</span><span class="n">wq</span>
 </pre></div>
 </div>
 <p><img alt="env install1" src="../_images/env-install1.png" /></p>
 </li>
 <li><p>build the Docker images</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">docker</span> <span class="n">compose</span> <span class="n">build</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">build</span>
 </pre></div>
 </div>
 <p>you should see a response that states <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">ckan:</span> <span class="pre">Built</span></code></p>
 <p><img alt="build install1" src="../_images/build-install1.png" /></p>
 </li>
 <li><p>start the Docker containers</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
 </pre></div>
 </div>
 <p>you should see a response that states that 6 containers are <code class="docutils literal notranslate"><span class="pre">Healthy</span></code></p>
@@ -755,7 +757,7 @@ and choose the <code class="docutils literal notranslate"><span class="pre">C:/P
 <p><img alt="CMD as administrator" src="tooling/images/cmd-admin1.png" /></p>
 </li>
 <li><p>at the command prompt, type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>python<span class="w"> </span>--version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
 </pre></div>
 </div>
 <p><img alt="Python install3" src="../_images/python-install3.png" /></p>
@@ -810,9 +812,9 @@ are also other visual tools that you can install instead, such as
 <p>We will use a <code class="docutils literal notranslate"><span class="pre">venv</span></code> virtual environment in Python, to make sure that
 the installation does not conflict with others on your server.  Open
 a CMD window, and execute the following to create a new <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
-<span class="w">  </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>ckan-venv
-<span class="w">  </span>C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>ckan-venv
+C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
 </pre></div>
 </div>
 <p>You should now see a prompt that looks like the following:</p>
@@ -833,13 +835,13 @@ upgrade pip as follows:</p>
 <p>We will use git to get the latest source code direct from the CKAN
 repository on GitHub, and then build CKAN inside the <code class="docutils literal notranslate"><span class="pre">ckan-venv</span></code> virtual
 environment.  Open a CMD window, and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
-<span class="w">  </span>C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ckan/ckan.git<span class="w"> </span>ckan-git-master
-<span class="w">  </span><span class="nb">cd</span><span class="w"> </span>ckan-git-master
-<span class="w">  </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<span class="w">  </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>python-magic-bin
-<span class="w">  </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
+C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ckan/ckan.git<span class="w"> </span>ckan-git-master
+<span class="nb">cd</span><span class="w"> </span>ckan-git-master
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>python-magic-bin
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </pre></div>
 </div>
 <p><img alt="CKAN install1" src="../_images/ckan-install1.png" /></p>
@@ -874,18 +876,21 @@ button</p>
 <h3>Create the ckan database<a class="headerlink" href="#create-the-ckan-database" title="Link to this heading">#</a></h3>
 <p>We will now create a user profile in <code class="docutils literal notranslate"><span class="pre">ckanuser</span></code> PostgreSQL.  Open a CMD window
 and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>createuser<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-s<span class="w"> </span>-D<span class="w"> </span>-r<span class="w"> </span>-P<span class="w"> </span>ckanuser
-<span class="w">    </span>enter<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>new<span class="w"> </span>role:<span class="w"> </span>odis
-<span class="w">    </span>enter<span class="w"> </span>it<span class="w"> </span>again:<span class="w"> </span>odis
-<span class="w">    </span>password:<span class="w"> </span>postgres
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>createuser<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-s<span class="w"> </span>-D<span class="w"> </span>-r<span class="w"> </span>-P<span class="w"> </span>ckanuser
+</pre></div>
+</div>
+<p>then enter the following responses:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>enter<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>new<span class="w"> </span>role:<span class="w"> </span>odis
+enter<span class="w"> </span>it<span class="w"> </span>again:<span class="w"> </span>odis
+password:<span class="w"> </span>postgres
 </pre></div>
 </div>
 <p>We will now create a new database <code class="docutils literal notranslate"><span class="pre">ckandb</span></code> in PostgreSQL.  In your CMD window
 execute:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>createdb<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-O<span class="w"> </span>ckanuser<span class="w"> </span>ckandb<span class="w"> </span>-E<span class="w"> </span>utf-8
-<span class="w">  </span>password:<span class="w"> </span>postgres
 </pre></div>
 </div>
+<p>For the password enter <code class="docutils literal notranslate"><span class="pre">postgres</span></code></p>
 </section>
 <section id="install-the-postgis-extension-in-ckandb">
 <h3>Install the PostGIS extension in ckandb<a class="headerlink" href="#install-the-postgis-extension-in-ckandb" title="Link to this heading">#</a></h3>
@@ -893,16 +898,16 @@ execute:</p>
 is recommended to enable the PostGIS extension, by executing in your
 CMD window as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>psql<span class="w"> </span>-U<span class="w"> </span>ckanuser<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span><span class="w"> </span>-d<span class="w"> </span>ckandb
-<span class="w">  </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>ckanuser:<span class="w"> </span>odis
 </pre></div>
 </div>
+<p>For the password enter <code class="docutils literal notranslate"><span class="pre">odis</span></code></p>
 <p>You should now be at a prompt like <code class="docutils literal notranslate"><span class="pre">ckandb=&gt;</span></code></p>
 <p>Then execute to list all tables: <code class="docutils literal notranslate"><span class="pre">\d</span> <span class="pre">&lt;enter&gt;</span></code>
 You should see a response as <code class="docutils literal notranslate"><span class="pre">Did</span> <span class="pre">not</span> <span class="pre">find</span> <span class="pre">any</span> <span class="pre">relations</span></code></p>
 <p>Next execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>CREATE<span class="w"> </span>EXTENSION<span class="w"> </span>postgis<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
-<span class="w">  </span>CREATE<span class="w"> </span>EXTENSION<span class="w"> </span>postgis_topology<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
-<span class="w">  </span>ALTER<span class="w"> </span>DATABASE<span class="w"> </span>ckandb<span class="w"> </span>SET<span class="w"> </span>client_min_messages<span class="w"> </span>TO<span class="w"> </span>WARNING<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CREATE<span class="w"> </span>EXTENSION<span class="w"> </span>postgis<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
+CREATE<span class="w"> </span>EXTENSION<span class="w"> </span>postgis_topology<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
+ALTER<span class="w"> </span>DATABASE<span class="w"> </span>ckandb<span class="w"> </span>SET<span class="w"> </span>client_min_messages<span class="w"> </span>TO<span class="w"> </span>WARNING<span class="p">;</span><span class="w">  </span>&lt;enter&gt;
 </pre></div>
 </div>
 <p>Again execute to list all tables (you should see more tables now) : <code class="docutils literal notranslate"><span class="pre">\d</span> <span class="pre">&lt;enter&gt;</span></code></p>
@@ -913,11 +918,11 @@ You should see a response as <code class="docutils literal notranslate"><span cl
 <h3>Generate config file for CKAN<a class="headerlink" href="#generate-config-file-for-ckan" title="Link to this heading">#</a></h3>
 <p>We will run the built <code class="docutils literal notranslate"><span class="pre">ckan</span></code> tool to generate a config file for CKAN.  Open a
 CMD window and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
-<span class="w">  </span>C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-<span class="w">  </span>mkdir<span class="w"> </span>ckan-site
-<span class="w">  </span><span class="nb">cd</span><span class="w"> </span>ckan-site
-<span class="w">  </span>ckan<span class="w"> </span>generate<span class="w"> </span>config<span class="w"> </span>ckan.ini
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
+C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+mkdir<span class="w"> </span>ckan-site
+<span class="nb">cd</span><span class="w"> </span>ckan-site
+ckan<span class="w"> </span>generate<span class="w"> </span>config<span class="w"> </span>ckan.ini
 </pre></div>
 </div>
 <p>Now open in Notepad++: <code class="docutils literal notranslate"><span class="pre">C:\working\ckan-site\ckan.ini</span></code>
@@ -980,12 +985,12 @@ and set the following:</p>
 <h3>Install Solr<a class="headerlink" href="#install-solr" title="Link to this heading">#</a></h3>
 <p>CKAN leverages Solr for its fast indexing/searches.  To install Solr
 execute the following in a CMD window:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
-<span class="w">  </span>C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">  </span>
-<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/apache/solr.git<span class="w"> </span>solr-git-main
-<span class="w">  </span><span class="nb">cd</span><span class="w"> </span>solr-git-main
-<span class="w">  </span>gradlew<span class="w"> </span>dev
-<span class="w">  </span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking<span class="se">\s</span>olr-git-main<span class="se">\s</span>olr<span class="se">\p</span>ackaging<span class="se">\b</span>uild<span class="se">\d</span>ev
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking
+C:<span class="se">\w</span>orking<span class="se">\c</span>kan-venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">  </span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/apache/solr.git<span class="w"> </span>solr-git-main
+<span class="nb">cd</span><span class="w"> </span>solr-git-main
+gradlew<span class="w"> </span>dev
+<span class="nb">cd</span><span class="w"> </span>C:<span class="se">\w</span>orking<span class="se">\s</span>olr-git-main<span class="se">\s</span>olr<span class="se">\p</span>ackaging<span class="se">\b</span>uild<span class="se">\d</span>ev
 </pre></div>
 </div>
 <p><img alt="Solr install1" src="../_images/solr-install1.png" /></p>
@@ -1014,10 +1019,10 @@ execute the following in a CMD window:</p>
 <ul class="simple">
 <li><p>now create a new <code class="docutils literal notranslate"><span class="pre">ckan</span></code> Solr core</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="nb">bin</span>\<span class="n">solr</span><span class="o">.</span><span class="n">cmd</span> <span class="n">create</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span>
-     <span class="s2">&quot;Created new core &#39;ckan&#39;&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span>\<span class="n">solr</span><span class="o">.</span><span class="n">cmd</span> <span class="n">create</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span>
 </pre></div>
 </div>
+<p>which should return: <code class="docutils literal notranslate"><span class="pre">Created</span> <span class="pre">new</span> <span class="pre">core</span> <span class="pre">'ckan'</span></code></p>
 <ul class="simple">
 <li><p>now stop Solr</p></li>
 </ul>
@@ -1030,7 +1035,7 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 <li><p>delete the file <code class="docutils literal notranslate"><span class="pre">managed-schema.xml</span></code> in <code class="docutils literal notranslate"><span class="pre">C:\working\solr-git-main\solr\packaging\build\dev\server\solr\ckan\conf</span></code></p></li>
 <li><p>now start Solr</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="nb">bin</span>\<span class="n">solr</span><span class="o">.</span><span class="n">cmd</span> <span class="n">start</span> <span class="o">--</span><span class="n">user</span><span class="o">-</span><span class="n">managed</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8983</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">bin</span>\<span class="n">solr</span><span class="o">.</span><span class="n">cmd</span> <span class="n">start</span> <span class="o">--</span><span class="n">user</span><span class="o">-</span><span class="n">managed</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8983</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1043,7 +1048,7 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 <p><img alt="Solr install4" src="../_images/solr-install4.png" /></p>
 <ul>
 <li><p>you can also check the status of the core at the commandline, by executing:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8983</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">cores</span><span class="o">/</span><span class="n">ckan</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">GET</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8983</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">cores</span><span class="o">/</span><span class="n">ckan</span>
 </pre></div>
 </div>
 </li>
@@ -1095,12 +1100,12 @@ as follows:</p>
 <li><p>open CMD window and execute:</p>
 <ul>
 <li><p>see list of all Linux distribution names</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="nb">list</span> <span class="o">--</span><span class="n">online</span>
 </pre></div>
 </div>
 </li>
 <li><p>now install Ubuntu</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl2</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl2</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
 </pre></div>
 </div>
 <p><img alt="redis install1" src="../_images/redis-install1.png" /></p>
@@ -1110,9 +1115,18 @@ as follows:</p>
 <li><p>reboot machine</p></li>
 <li><p>you should see a progress bar for installing Ubuntu</p></li>
 <li><p>when asked to create a new user, enter:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">username</span><span class="p">:</span> <span class="n">odis</span>
-  <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="p">:</span> <span class="n">odis</span>
+<span class="n">password</span><span class="p">:</span> <span class="n">yourpassword</span>
 </pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The WSL user has a lot of power (they have sudo/super-user permissions);
+it is strongly recommended that users change <code class="docutils literal notranslate"><span class="pre">yourpassword</span></code> to a secure
+and unique password for this account and keep hold of it in a password
+manager. That way if someone manages to hack CKAN and gain remote code
+execution capabilities, it won’t be so easy for them to gain super-user
+control.</p>
 </div>
 </li>
 <li><p>to run: goto Start menu, choose “WSL”</p>
@@ -1120,13 +1134,15 @@ as follows:</p>
 <li><p>CMD window should open with an odis&#64; prompt</p></li>
 </ul>
 </li>
-<li><p>to check the Ubuntu version, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
-  
-     <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
-     <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
-     <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
-     <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
+<li><p>to check the Ubuntu version, execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsb_release</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>which should return:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Distributor</span> <span class="n">ID</span><span class="p">:</span> <span class="n">Ubuntu</span>
+    <span class="n">Description</span><span class="p">:</span>    <span class="n">Ubuntu</span> <span class="mf">24.04</span> <span class="n">LTS</span>
+    <span class="n">Release</span><span class="p">:</span>        <span class="mf">24.04</span>
+    <span class="n">Codename</span><span class="p">:</span>       <span class="n">noble</span>
 </pre></div>
 </div>
 <p><img alt="redis install2" src="../_images/redis-install2.png" /></p>
@@ -1134,35 +1150,35 @@ as follows:</p>
 <li><p>install the redis package</p>
 <ul>
 <li><p>(follow steps at <a class="reference external" href="https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/">https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
-  <span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">list</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
+<span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">list</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
 </pre></div>
 </div>
 </li>
 <li><p>if error “Failed to take /etc/passwd lock: Invalid argument”, execute:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span>
-  <span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">f</span> <span class="n">install</span>
-  <span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span><span class="o">/*</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span>
-  <span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
-  <span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
-  <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span>
+<span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">f</span> <span class="n">install</span>
+<span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span><span class="o">/*</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
+<span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info_silent</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dpkg</span><span class="o">/</span><span class="n">info</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
 </pre></div>
 </div>
 </li>
 <li><p>start the redis server</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sudo</span> <span class="n">service</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="n">start</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="n">start</span>
 </pre></div>
 </div>
 </li>
 <li><p>test it by running:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">redis</span><span class="o">-</span><span class="n">cli</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span>
 </pre></div>
 </div>
 <ul>
@@ -1190,9 +1206,9 @@ as follows:</p>
 <ul class="simple">
 <li><p>open new CMD window, and execute:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
-  <span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
-  <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">db</span> <span class="n">init</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
+<span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
+<span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">db</span> <span class="n">init</span>
 </pre></div>
 </div>
 <ul>
@@ -1200,10 +1216,10 @@ as follows:</p>
 <p><img alt="CKAN install tables1" src="../_images/ckan-install-tables1.png" /></p>
 </li>
 <li><p>test with psql command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
-    <span class="n">password</span><span class="p">:</span> <span class="n">odis</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
 </pre></div>
 </div>
+<p>for password enter <code class="docutils literal notranslate"><span class="pre">odis</span></code></p>
 </li>
 <li><p>you should see 32 rows of tables</p>
 <p><img alt="CKAN install tables2" src="../_images/ckan-install-tables2.png" /></p>
@@ -1218,13 +1234,13 @@ execute:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span>
 <span class="n">C</span><span class="p">:</span>\<span class="n">working</span>\<span class="n">ckan</span><span class="o">-</span><span class="n">venv</span>\<span class="n">Scripts</span>\<span class="n">activate</span>
 <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">user</span> <span class="n">add</span> <span class="n">admin</span> <span class="n">email</span><span class="o">=</span><span class="n">info</span><span class="nd">@gatewaygeomatics</span><span class="o">.</span><span class="n">com</span>
-  <span class="n">password</span><span class="p">:</span> <span class="n">odisckan</span>
 </pre></div>
 </div>
+<p>for password enter <code class="docutils literal notranslate"><span class="pre">odisckan</span></code></p>
 <p><img alt="CKAN home" src="../_images/ckan-create-user.png" /></p>
 <ul>
 <li><p>then promote the “admin” user to sysadmin</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">sysadmin</span> <span class="n">add</span> <span class="n">admin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ckan</span> <span class="o">-</span><span class="n">c</span> <span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">working</span><span class="o">/</span><span class="n">ckan</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span> <span class="n">sysadmin</span> <span class="n">add</span> <span class="n">admin</span>
 </pre></div>
 </div>
 </li>
