@@ -92,11 +92,11 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   sudo apt update
   sudo apt upgrade
   ```
-- remove conflicking packages
+- execute the following, to remove conflicking packages
   ```
   for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
   ```
-- setup Docker's `apt` repository
+- execute the following, to setup Docker's `apt` repository
   ```
   # Add Docker's official GPG key:
   sudo apt-get update
@@ -112,7 +112,7 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
   sudo apt-get update
   ```
-- now install the Docker packages
+- now install the Docker packages by executing:
   ```
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   ```

@@ -590,12 +590,12 @@ control.</p>
 </pre></div>
 </div>
 </li>
-<li><p>remove conflicking packages</p>
+<li><p>execute the following, to remove conflicking packages</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 </pre></div>
 </div>
 </li>
-<li><p>setup Docker’s <code class="docutils literal notranslate"><span class="pre">apt</span></code> repository</p>
+<li><p>execute the following, to setup Docker’s <code class="docutils literal notranslate"><span class="pre">apt</span></code> repository</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add Docker&#39;s official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -612,7 +612,7 @@ sudo apt-get update
 </pre></div>
 </div>
 </li>
-<li><p>now install the Docker packages</p>
+<li><p>now install the Docker packages by executing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">cli</span> <span class="n">containerd</span><span class="o">.</span><span class="n">io</span> <span class="n">docker</span><span class="o">-</span><span class="n">buildx</span><span class="o">-</span><span class="n">plugin</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">-</span><span class="n">plugin</span>
 </pre></div>
 </div>
