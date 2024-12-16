@@ -36,15 +36,15 @@ as follows:
   - open CMD window and execute:
     - set the version of WSL to 2
       ```
-        wsl --set-default-version 2
+      wsl --set-default-version 2
       ```
     - see list of all Linux distribution names
       ```
-        wsl --list --online
+      wsl --list --online
       ```
     - now install Ubuntu
       ```
-        wsl --install --distribution "Ubuntu-24.04"
+      wsl --install --distribution "Ubuntu-24.04"
       ```
       
       ![wsl install1](./images/wsl-install1.png)
@@ -66,14 +66,16 @@ as follows:
     ```
   - to run: goto Start menu, choose "WSL"
     - CMD window should open with an `odis@` prompt
-  - to check the Ubuntu version, run:
+  - to check the Ubuntu version, execute: 
     ```
-      lsb_release -a
-      
-         Distributor ID: Ubuntu
-         Description:    Ubuntu 24.04 LTS
-         Release:        24.04
-         Codename:       noble
+    lsb_release -a
+    ```
+    which should return:
+    ```
+        Distributor ID: Ubuntu
+        Description:    Ubuntu 24.04 LTS
+        Release:        24.04
+        Codename:       noble
     ```
     
     ![wsl install2](./images/wsl-install2.png)
@@ -87,32 +89,32 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   - CMD window should open with an `odis@` prompt
 - execute the following, to update your Ubuntu packages
   ```
-    sudo apt update
-    sudo apt upgrade
+  sudo apt update
+  sudo apt upgrade
   ```
 - remove conflicking packages
   ```
-    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
   ```
 - setup Docker's `apt` repository
   ```
-    # Add Docker's official GPG key:
-    sudo apt-get update
-    sudo apt-get install ca-certificates curl
-    sudo install -m 0755 -d /etc/apt/keyrings
-    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-    sudo chmod a+r /etc/apt/keyrings/docker.asc
+  # Add Docker's official GPG key:
+  sudo apt-get update
+  sudo apt-get install ca-certificates curl
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-    # Add the repository to Apt sources:
-    echo \
-      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-      sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-    sudo apt-get update
+  # Add the repository to Apt sources:
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update
   ```
 - now install the Docker packages
   ```
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   ```
   if successful, the response should contain the message `Hello from Docker!`.
   
@@ -129,7 +131,7 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   - CMD window should open with an `odis@` prompt
 - execute the following, to clone the `ckan-docker` repo locally
   ```
-    git clone https://github.com/ckan/ckan-docker.git ckan-docker-git-master
+  git clone https://github.com/ckan/ckan-docker.git ckan-docker-git-master
   ```
 
   ![git install1](./images/git-install1.png)
@@ -139,24 +141,24 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
 - execute `cd ckan-docker-git-master`
 - make a copy the the `.env` file for our needs
   ```
-    cp .env.example .env
+  cp .env.example .env
   ```
 - you can optionally change the .env values for your needs, such as
   for the admin user/password
   ```
-    #use vi to open the .env file
-    vi .env
-    #to make your changes, first press your "i" key (for INSERT mode), and
-      #then edit the desired lines
-    #then save with the command
-    :wq
+  #use vi to open the .env file
+  vi .env
+  #to make your changes, first press your "i" key (for INSERT mode), and
+    #then edit the desired lines
+  #then save with the command
+  :wq
   ```
   
   ![env install1](./images/env-install1.png)
   
 - build the Docker images
   ```
-    docker compose build
+  docker compose build
   ```
   you should see a response that states `Service ckan: Built`
   
@@ -164,7 +166,7 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   
 - start the Docker containers
   ```
-    docker compose up -d
+  docker compose up -d
   ```
   you should see a response that states that 6 containers are `Healthy`
   
@@ -261,7 +263,7 @@ later in this document.
     
   - at the command prompt, type: 
     ```bash
-      python --version
+    python --version
     ```
     
     ![Python install3](./images/python-install3.png)
@@ -316,9 +318,9 @@ We will use a `venv` virtual environment in Python, to make sure that
 the installation does not conflict with others on your server.  Open 
 a CMD window, and execute the following to create a new `ckan-venv` environment:
 ```bash
-  cd C:\working
-  python -m venv ckan-venv
-  C:\working\ckan-venv\Scripts\activate
+cd C:\working
+python -m venv ckan-venv
+C:\working\ckan-venv\Scripts\activate
 ```
 You should now see a prompt that looks like the following:
 
@@ -341,13 +343,13 @@ We will use git to get the latest source code direct from the CKAN
 repository on GitHub, and then build CKAN inside the `ckan-venv` virtual 
 environment.  Open a CMD window, and execute:
 ```bash
-  cd C:\working
-  C:\working\ckan-venv\Scripts\activate
-  git clone https://github.com/ckan/ckan.git ckan-git-master
-  cd ckan-git-master
-  python -m pip install --upgrade -r requirements.txt
-  python -m pip install python-magic-bin
-  python -m pip install -e .
+cd C:\working
+C:\working\ckan-venv\Scripts\activate
+git clone https://github.com/ckan/ckan.git ckan-git-master
+cd ckan-git-master
+python -m pip install --upgrade -r requirements.txt
+python -m pip install python-magic-bin
+python -m pip install -e .
 ```
 
 ![CKAN install1](./images/ckan-install1.png)
@@ -388,10 +390,13 @@ We will now create a user profile in `ckanuser` PostgreSQL.  Open a CMD window
 and execute:
 
 ```bash
-  createuser -U postgres -p 5432 -s -D -r -P ckanuser
-    enter password for new role: odis
-    enter it again: odis
-    password: postgres
+createuser -U postgres -p 5432 -s -D -r -P ckanuser
+```
+then enter the following responses:
+```bash
+enter password for new role: odis
+enter it again: odis
+password: postgres
 ```
 
 We will now create a new database `ckandb` in PostgreSQL.  In your CMD window
@@ -399,8 +404,8 @@ execute:
 
 ```bash
 createdb -U postgres -p 5432 -O ckanuser ckandb -E utf-8
-  password: postgres
 ```
+For the password enter `postgres`
 
 ### Install the PostGIS extension in ckandb
 
@@ -410,8 +415,9 @@ CMD window as follows:
 
 ```bash
 psql -U ckanuser -p 5432 -d ckandb
-  password for ckanuser: odis
 ```
+For the password enter `odis`
+
 You should now be at a prompt like `ckandb=>`
 
 Then execute to list all tables: `\d <enter>`
@@ -419,9 +425,9 @@ You should see a response as `Did not find any relations`
 
 Next execute:
 ```bash
-  CREATE EXTENSION postgis;  <enter>
-  CREATE EXTENSION postgis_topology;  <enter>
-  ALTER DATABASE ckandb SET client_min_messages TO WARNING;  <enter>
+CREATE EXTENSION postgis;  <enter>
+CREATE EXTENSION postgis_topology;  <enter>
+ALTER DATABASE ckandb SET client_min_messages TO WARNING;  <enter>
 ```
 Again execute to list all tables (you should see more tables now) : `\d <enter>`
 
@@ -435,11 +441,11 @@ We will run the built `ckan` tool to generate a config file for CKAN.  Open a
 CMD window and execute:
 
 ```bash
-  cd C:\working
-  C:\working\ckan-venv\Scripts\activate
-  mkdir ckan-site
-  cd ckan-site
-  ckan generate config ckan.ini
+cd C:\working
+C:\working\ckan-venv\Scripts\activate
+mkdir ckan-site
+cd ckan-site
+ckan generate config ckan.ini
 ```
 
 Now open in Notepad++: `C:\working\ckan-site\ckan.ini`
@@ -497,12 +503,12 @@ CKAN leverages Solr for its fast indexing/searches.  To install Solr
 execute the following in a CMD window:
 
 ```bash
-  cd C:\working
-  C:\working\ckan-venv\Scripts\activate  
-  git clone https://github.com/apache/solr.git solr-git-main
-  cd solr-git-main
-  gradlew dev
-  cd C:\working\solr-git-main\solr\packaging\build\dev
+cd C:\working
+C:\working\ckan-venv\Scripts\activate  
+git clone https://github.com/apache/solr.git solr-git-main
+cd solr-git-main
+gradlew dev
+cd C:\working\solr-git-main\solr\packaging\build\dev
 ```
 
 ![Solr install1](./images/solr-install1.png)
@@ -533,9 +539,9 @@ execute the following in a CMD window:
 ```
 - now create a new `ckan` Solr core
 ```
-  bin\solr.cmd create -c ckan
-     "Created new core 'ckan'"
+bin\solr.cmd create -c ckan
 ```
+which should return: `Created new core 'ckan'`
      
 - now stop Solr
 ```
@@ -547,7 +553,7 @@ bin\solr.cmd stop -p 8983
 
 - now start Solr
 ```
-  bin\solr.cmd start --user-managed -p 8983
+bin\solr.cmd start --user-managed -p 8983
 ```
 - in your web browser, check the `ckan` core
   - http://localhost:8983/solr/#/ckan/core-overview
@@ -557,7 +563,7 @@ bin\solr.cmd stop -p 8983
 - you can also check the status of the core at the commandline, by executing:
 
   ```
-    curl -X GET http://localhost:8983/api/cores/ckan
+  curl -X GET http://localhost:8983/api/cores/ckan
   ```
 - which should give a response such as:
   
@@ -605,11 +611,11 @@ as follows:
   - open CMD window and execute:
     - see list of all Linux distribution names
       ```
-        wsl --list --online
+      wsl --list --online
       ```
     - now install Ubuntu
       ```
-        wsl --install --enable-wsl2 --distribution "Ubuntu-24.04 LTS"
+      wsl --install --enable-wsl2 --distribution "Ubuntu-24.04 LTS"
       ```
       
       ![redis install1](./images/redis-install1.png)
@@ -618,19 +624,29 @@ as follows:
   - you should see a progress bar for installing Ubuntu
   - when asked to create a new user, enter:
     ```
-      username: odis
-      password: odis
+    username: odis
+    password: yourpassword
+    ```
+    ```{caution}
+    The WSL user has a lot of power (they have sudo/super-user permissions); 
+    it is strongly recommended that users change `yourpassword` to a secure 
+    and unique password for this account and keep hold of it in a password 
+    manager. That way if someone manages to hack CKAN and gain remote code 
+    execution capabilities, it won't be so easy for them to gain super-user 
+    control.
     ```
   - to run: goto Start menu, choose "WSL"
     - CMD window should open with an odis@ prompt
-  - to check the Ubuntu version, run:
+  - to check the Ubuntu version, execute:
     ```
-      lsb_release -a
-      
-         Distributor ID: Ubuntu
-         Description:    Ubuntu 24.04 LTS
-         Release:        24.04
-         Codename:       noble
+    lsb_release -a
+    ```
+    which should return:
+    ```
+        Distributor ID: Ubuntu
+        Description:    Ubuntu 24.04 LTS
+        Release:        24.04
+        Codename:       noble
     ```
     
     ![redis install2](./images/redis-install2.png) 
@@ -638,32 +654,32 @@ as follows:
    - install the redis package
      - (follow steps at https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/
        ```
-         curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-         echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-         sudo apt-get update
-         sudo apt-get upgrade
-         sudo apt-get install redis
+       curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+       echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+       sudo apt-get update
+       sudo apt-get upgrade
+       sudo apt-get install redis
        ```
      - if error "Failed to take /etc/passwd lock: Invalid argument", execute:
        ```
-         sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
-         sudo mkdir /var/lib/dpkg/info
-         sudo apt-get update
-         sudo apt-get -f install
-         sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
-         sudo rm -rf /var/lib/dpkg/info
-         sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
-         sudo apt-get update
-         sudo apt-get upgrade
-         sudo apt-get install redis
+       sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_silent
+       sudo mkdir /var/lib/dpkg/info
+       sudo apt-get update
+       sudo apt-get -f install
+       sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_silent
+       sudo rm -rf /var/lib/dpkg/info
+       sudo mv /var/lib/dpkg/info_silent /var/lib/dpkg/info
+       sudo apt-get update
+       sudo apt-get upgrade
+       sudo apt-get install redis
        ```
      - start the redis server
        ```
-         sudo service redis-server start
+       sudo service redis-server start
        ```
      - test it by running: 
        ```
-         redis-cli
+       redis-cli
        ```
        - which should bring you to a prompt of `127.0.0.1:6379>`, so then type
          `ping <enter>`
@@ -680,9 +696,9 @@ as follows:
 
 - open new CMD window, and execute:
 ```
-  C:\working\ckan-venv\Scripts\activate
-  cd C:\working\ckan-site
-  ckan -c ckan.ini db init
+C:\working\ckan-venv\Scripts\activate
+cd C:\working\ckan-site
+ckan -c ckan.ini db init
 ```
 - you should see a green message: "Upgrading DB: SUCCESS"
 
@@ -690,9 +706,10 @@ as follows:
   
 - test with psql command:
   ```
-    psql -U ckanuser -p 5432 -d ckandb -c "\d"
-      password: odis
+  psql -U ckanuser -p 5432 -d ckandb -c "\d"
   ```
+  for password enter `odis`
+  
 - you should see 32 rows of tables
 
   ![CKAN install tables2](./images/ckan-install-tables2.png)
@@ -707,14 +724,14 @@ execute:
 cd C:/working/ckan-site
 C:\working\ckan-venv\Scripts\activate
 ckan -c ckan.ini user add admin email=info@gatewaygeomatics.com
-  password: odisckan
 ```
+for password enter `odisckan`
 
 ![CKAN home](./images/ckan-create-user.png)
 
 - then promote the "admin" user to sysadmin
   ```
-    ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
+  ckan -c C:/working/ckan-site/ckan.ini sysadmin add admin
   ```
 - you should see a message of "Added admin as sysadmin"
 
