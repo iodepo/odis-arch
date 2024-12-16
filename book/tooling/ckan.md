@@ -54,7 +54,15 @@ as follows:
   - when asked to create a new user, enter:
     ```
       username: odis
-      password: odis
+      password: yourpassword
+    ```
+    ```{caution}
+    The WSL user has a lot of power (they have sudo/super-user permissions); 
+    it is strongly recommended that users change `yourpassword` to a secure 
+    and unique password for this account and keep hold of it in a password 
+    manager. That way if someone manages to hack CKAN and gain remote code 
+    execution capabilities, it won't be so easy for them to gain super-user 
+    control.
     ```
   - to run: goto Start menu, choose "WSL"
     - CMD window should open with an `odis@` prompt
