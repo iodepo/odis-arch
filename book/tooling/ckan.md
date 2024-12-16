@@ -172,6 +172,13 @@ We will follow the steps [Install Docker Engine on Ubuntu](https://docs.docker.c
   
   ![compose install1](./images/compose-install1.png)
   
+- check status of containers by executing:
+  ```
+  docker ps
+  ```
+  
+  ![compose install2](./images/compose-install2.png)
+  
 ### Goto CKAN's landing page
 
 Now you are ready to open your CKAN instance in your web browser.
@@ -179,7 +186,65 @@ Now you are ready to open your CKAN instance in your web browser.
 - in FireFox or Chrome, goto: https://localhost:8443/
 
   ![ckan wsl install1](./images/ckan-wsl-install1.png)
+  
+### Install Portainer (Recommended) to manage containers
 
+Portainer offers a user-friendly interface to manage the CKAN containers.
+We will follow the [Portainer installation steps](https://docs.portainer.io/start/install-ce/server/docker/wsl) 
+for WSL.
+
+#### Setup Portainer Server
+
+- assuming you are still at the `odis@` prompt, but if not:
+  - goto Start menu, choose "WSL"
+  - CMD window should open with an `odis@` prompt
+- execute the following, to create the volume that Portainer Server 
+  will use to store its database:
+  ```
+  docker volume create portainer_data
+  ```
+- then download and install the Portainer Server container:
+  ```
+  docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.4
+  ```
+- Check that the Portainer Server container has started by executing:
+  ```
+  docker ps
+  ```
+  
+  ![portainer install1](./images/portainer-install1.png)
+  
+  You should see a `portainer` line with the `Status` reporting `Up for xxx minutes`
+  
+### Login to the Portainer Server
+
+- you can now login at https://localhost:9443
+  - if you receive a message of `Your Portainer instance timed out for security purposes`,
+    this occurs when you do not login within 5 minutes of performing the initial 
+    setup.  You can execute the following (which will give you another 5 minutes 
+    to complete the initial setup):
+    ```
+    docker stop portainer
+    docker start portainer
+    ```
+- you should now see a page where you can create a user.  Be sure to create a unique 
+  password and then click `Create user`.  You may wish to disable the `Allow collection
+  of anonymous statistics`.
+  
+  ![portainer install2](./images/portainer-install2.png)
+  
+- you should now see a `Weclome to Portainer` page, and then you can click the `Get 
+  Started` button, to start using Portainer.
+  
+  ![portainer install3](./images/portainer-install3.png)
+  
+### Manage your containers with Portainer
+  
+- in the left panel, click on `Containers` to then see a list of your CKAN containers, 
+  and then interact with them if need be (stop/start/restart etc.).
+  
+  ![portainer install4](./images/portainer-install4.png)
+  
 ## Option 2: Install CKAN & dependencies manually
 
 ### Install PostgreSQL
@@ -636,7 +701,7 @@ as follows:
     control.
     ```
   - to run: goto Start menu, choose "WSL"
-    - CMD window should open with an odis@ prompt
+    - CMD window should open with an `odis@` prompt
   - to check the Ubuntu version, execute:
     ```
     lsb_release -a
