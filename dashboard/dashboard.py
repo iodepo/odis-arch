@@ -62,7 +62,7 @@ duckdbConnFilterByOrg = duckdb.connect()
 
 st.set_page_config(
     page_title="ODIS Dashboard",
-    page_icon="https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png",
+    page_icon="https://book.odis.org/_static/ODIS-logo-192x192.png",
     layout="wide",
     initial_sidebar_state="expanded", ###or "collapsed"
     menu_items={
@@ -73,7 +73,7 @@ st.set_page_config(
 )
 
 #logo
-st.logo("https://oceaninfohub.org/wp-content/uploads/2020/11/logo-only_OIH_EPS-CMYK-100x100.png", link="https://oceaninfohub.org/")
+st.logo("https://book.odis.org/_static/ODIS-logo-192x192.png", link="https://odis.org/")
 
 # dashboard title
 st.title("ODIS Dashboard")
