@@ -779,7 +779,23 @@ sources:
     headless: false
     dateadded: 2023-10-12
     cron: 0 10 * * 0 
-    active: true    
+    active: true
+  #
+  # Ocean Notarised Digital Assets (also referred to as "Universal Plastic")
+  # 
+  - name: onda
+    propername: Ocean Notarised Digital Assets (ONDA)
+    catalogue: https://unesco.universalplastic.io/
+    domain: https://universalplastic.io/
+    logo: https://universalplastic.io/wp-content/uploads/2024/08/logo-oscuro.png
+    pid: https://catalogue.odis.org/view/3320
+    sourcetype: sitemap
+    url: https://unesco.universalplastic.io/unesco/sitemap.xml
+    changefreq: monthly 
+    backend: Custom  
+    headless: false
+    dateadded: 2024-11-05
+    active: true
   #
   # Pacific Data Hub
   #
@@ -882,24 +898,7 @@ sources:
     backend: CKAN  
     headless: false
     dateadded: 2024-01-22
-    active: true
-  #
-  # Universal Plastic
-  # 
-  - name: universalplastic
-    propername: Universal Plastic Waste Collections
-    catalogue: https://universalplastic.io/nuestra-app-informe-esg/
-    domain: https://universalplastic.io/
-    logo: https://universalplastic.io/wp-content/uploads/2024/08/logo-oscuro.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/universalplastic
-    sourcetype: sitemap
-    url: https://unesco.universalplastic.io/unesco/sitemap.xml
-    changefreq: monthly 
-    backend: Custom  
-    headless: false
-    dateadded: 2024-11-05
-    active: true     
+    active: true    
   #
   # WIO Symphony
   # 
