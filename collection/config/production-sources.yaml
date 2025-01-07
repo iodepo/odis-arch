@@ -746,6 +746,22 @@ sources:
     cron: 0 11 * * 0 
     active: true
   #
+  # Ocean Notarised Digital Assets (also referred to as "Universal Plastic")
+  # 
+  - name: onda
+    propername: Ocean Notarised Digital Assets (ONDA)
+    catalogue: https://unesco.universalplastic.io/
+    domain: https://universalplastic.io/
+    logo: https://universalplastic.io/wp-content/uploads/2024/08/logo-oscuro.png
+    pid: https://catalogue.odis.org/view/3320
+    sourcetype: sitemap
+    url: https://unesco.universalplastic.io/unesco/sitemap.xml
+    changefreq: monthly 
+    backend: Custom  
+    headless: false
+    dateadded: 2024-11-05
+    active: true    
+  #
   # Aquatic Sciences and Fisheries Abstracts (OpenASFA)
   #
   - name: openasfa
@@ -779,22 +795,6 @@ sources:
     headless: false
     dateadded: 2023-10-12
     cron: 0 10 * * 0 
-    active: true
-  #
-  # Ocean Notarised Digital Assets (also referred to as "Universal Plastic")
-  # 
-  - name: onda
-    propername: Ocean Notarised Digital Assets (ONDA)
-    catalogue: https://unesco.universalplastic.io/
-    domain: https://universalplastic.io/
-    logo: https://universalplastic.io/wp-content/uploads/2024/08/logo-oscuro.png
-    pid: https://catalogue.odis.org/view/3320
-    sourcetype: sitemap
-    url: https://unesco.universalplastic.io/unesco/sitemap.xml
-    changefreq: monthly 
-    backend: Custom  
-    headless: false
-    dateadded: 2024-11-05
     active: true
   #
   # Pacific Data Hub
