@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/phytoplankton.json",
+    "name": "monitoring of harmful phytoplankton",
+    "description": "    The Phytoplankton Monitoring Program has as its essential role the detection and enumeration of phytoplankton species and especially those defined as toxic and capable of inducing contamination risks in the shellfish production zone.",
+    "url": "http://www.instm.agrinet.tn/",
+    "keywords": [
+        "phytoplankton"
+    ],
+    "measurementTechnique": "Microscopic observation of harmful algae",
+    "temporalCoverage": "1995/2025",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "26.88 -1.88 48 31.11"
+        },
+        "name": "central Mediterranean Region",
+        "description": "central Mediterranean Region"
+    },
+  "publisher": {
+    "@type": "Organization",
+    "legalName": "National Institute of Sea Sciences and Technologies",
+    "name": "INSTM",
+    "url": "http://www.instm.agrinet.tn/ ",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "234 Main St.",
+      "addressLocality": "Anytown",
+      "addressRegion": "ST",
+      "postalCode": "12345",
+      "addressCountry": "Tunisia"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "ResearchProject",
+  "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/ferrybox-project.json",
+  "legalName": "Tunisian FerryBox project",
+  "name": "Tunisian FerryBox project",
+  "url": " http://www.instm.agrinet.tn/",
+  "description": "The Tunisian FerryBox project is an initiative that’s targeting water masse tracking and measuring. It is materialized by a set of sensors that are implemented in Carthage ferry, at 5 meters depth. It is measuring, for each minute of the ferry’s trip, several parameters (Temperature, Salinity, Dissolved oxygen, Turbidity, pH…) The first launch of FerryBox data collecting campaigns was on 2016.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "http://www.instm.agrinet.tn/images/s5_logo.png"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "geo": {
+        "@type": "GeoShape",
+        "box": "26.88 -1.88 48 31.11"
+      },
+      "name": "central Mediterranean Region",
+      "description": "central Mediterranean Region"
+    }
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "legalName": "National Institute of Sea Sciences and Technologies",
+    "name": "INSTM",
+    "url": "http://www.instm.agrinet.tn/ ",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "234 Main St.",
+      "addressLocality": "Anytown",
+      "addressRegion": "ST",
+      "postalCode": "12345",
+      "addressCountry": "Tunisia"
+    }
+  }
+}
