@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/realtime-phytoplankton.json",
+    "name": "Real-time monitoring of phytoplankton",
+    "description": "High frequency data of phytoplankton acquired used an automated flow cytometer",
+    "url": "http://www.instm.agrinet.tn/",
+    "keywords": [
+        "phytoplankton"
+    ],
+    "measurementTechnique": "Automated flow cytometer",
+    "temporalCoverage": "2016/2025",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "26.88 -1.88 48 31.11"
+        },
+        "name": "central Mediterranean Region",
+        "description": "central Mediterranean Region"
+    },
+  "publisher": {
+    "@type": "Organization",
+    "legalName": "National Institute of Sea Sciences and Technologies",
+    "name": "INSTM",
+    "url": "http://www.instm.agrinet.tn/ ",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "234 Main St.",
+      "addressLocality": "Anytown",
+      "addressRegion": "ST",
+      "postalCode": "12345",
+      "addressCountry": "Tunisia"
+    }
+  }
+}
