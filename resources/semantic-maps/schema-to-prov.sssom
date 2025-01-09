@@ -20,7 +20,7 @@
 subject_id	subject_label	object_id	object_label	predicate_id	comment	mapping_justification	author_id
 schema:Thing	Thing	prov:Entity	Entity	skos:closeMatch	These terms are usually interchangeable.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
 schema:Action	Action	prov:Activity	Activity	skos:closeMatch	While not exact semantic matches, these classes are interchangeable in many applications.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
-schema:Person	Person	prov:Agent	Agent	skos:narrowMatch	One can specify that a Person is an agent by using it as the value of the schema:agent property.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
+schema:Person	Person	prov:Agent	Agent	skos:broadMatch	One can specify that a Person is an agent by using it as the value of the schema:agent property.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
 schema:Organization	Organization	prov:Agent	Agent	skos:narrowMatch	One can specify that an Organization is an agent by using it as the value of the schema:agent property.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
 schema:Thing	Thing	prov:Agent	Agent	skos:relatedMatch	Other things, aside from schema:Person or schema:Organization instances, can be prov:Agents (such as machines, AIs, etc). The semantic relation is weaker here, as schema:Things also include processual entities, which cannot be agents.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
 schema:agent	agent	prov:wasAssociatedWith	wasAssociatedWith	skos:closeMatch	In PROV, an Activity is associated with an agent, which matches the identification of a schema:agent in an Action type.	semapv:ManualMappingCuration	https://orcid.org/0000-0002-4366-3088
