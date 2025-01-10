@@ -378,6 +378,57 @@ sources:
     cron: 0 9 * * 0 
     active: true
   #
+  # INSTM FerryBox
+  #
+  - name: instmferrybox
+    propername: Tunisian FerryBox Project
+    catalogue:  http://www.instm.agrinet.tn/
+    domain:  http://www.instm.agrinet.tn/
+    logo: http://www.instm.agrinet.tn/images/s5_logo.png
+    pid: https://catalogue.odis.org/view/3316
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-ferrybox.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2025-01-10
+    cron: 0 9 * * 0 
+    active: true
+  #
+  # INSTM Monitoring of phytoplankton
+  #
+  - name: instmphytoplankton
+    propername: Tunisian Monitoring of harmful phytoplankton
+    catalogue:  http://www.instm.agrinet.tn/
+    domain:  http://www.instm.agrinet.tn/
+    logo: http://www.instm.agrinet.tn/images/s5_logo.png
+    pid: https://catalogue.odis.org/view/3314
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-phytoplankton.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2025-01-10
+    cron: 0 9 * * 0 
+    active: true     
+  #
+  # INSTM Real-time monitoring of phytoplankton
+  #
+  - name: instmrealtimephytoplankton
+    propername: Tunisian Real-time monitoring of phytoplankton
+    catalogue:  http://www.instm.agrinet.tn/
+    domain:  http://www.instm.agrinet.tn/
+    logo: http://www.instm.agrinet.tn/images/s5_logo.png
+    pid: https://catalogue.odis.org/view/3315
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-realtime-phytoplankton.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2025-01-10
+    cron: 0 9 * * 0 
+    active: true        
+  #
   # INVEMAR Documents
   #
   - name: invemardocuments
