@@ -1,0 +1,62 @@
+shape: sequence_diagram
+
+classes: {
+coreclass: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                     font-size: 18
+                    fill: lightgreen
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+      actionclass: {
+    width: 150
+    height: 100
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightblue
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+propclass: {
+    width: 100
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightyellow
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+prodclass: {
+    width: 150
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: honeydew
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+}
+
+*.class: actionclass
+
+
+provider -> gleaner: harvesting process
+gleaner -> oss: results of harvest \n are sent to object store
+triplestore: RDF graph \n qlever
+gleaner -> triplestore: successful indexing products \n are loaded to triplestore
+triplestore -> etl: ETL process starts \n by query to triplestore
+etl -> oss
+
+solr: text index \n solr
+etl -> solr
+
+solr <- webui
+oss <- dashboard
+triplestore <- dashboard
