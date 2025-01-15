@@ -1,5 +1,6 @@
-# ODIS / OIH Architecture  DRAFT
+# ODIS / OIH Architecture  
 
+> DRAFT
 
 ## About
 
@@ -13,7 +14,7 @@ there is nice cheat sheet to start with at: https://d2lang.com/tour/cheat-sheet
 
 The command to compile and monitor in a browser the image I use is:
 
-```json
+```bash
 d2 -h workstation.lan -p 4449 --layout elk -t 5 --watch ./sequence.d2 ./sequence.png
 ```
 
@@ -34,12 +35,14 @@ activities.
 ### High level
 
 An overview of the systems architecture showing the major concepts and conceptual framework.
+I need to fix the overlay of the descriptive text on the Partners and Community elements.  
 
 ![highlevel.png](images/highlevel.png)
 
 ### Deployment
 
-Physical deployment elements.  Each box represents a Docker container run for deployment.
+Physical deployment elements.  Each box represents a Docker container run for deployment and 
+the communication links.  In our case, these are really all just http(s) calls.  
 The small boxes inside "dagster" represent containers that dagster invokes and removes to 
 perform workflow tasks.  Note the router may be run as a system level tasks and not container.  
 
