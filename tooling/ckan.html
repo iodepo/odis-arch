@@ -455,6 +455,22 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-your-containers-with-portainer">Manage your containers with Portainer</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dcat-extension-for-json-ld-support">Install DCAT extension for JSON-LD Support</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-dockerfile-to-install-the-ckanext-dcat-extension">Edit the Dockerfile to install the ckanext-dcat extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-env-file-to-load-the-extensions">Edit the .env file to load the Extensions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuild-the-containers">Rebuild the containers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-status">Check the status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-ckan-container-through-commandline">Connect to the CKAN container through commandline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vi-on-the-ckan-container">Install VI on the CKAN container</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-ckan-template">Modify the CKAN template</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-troubleshooting">Docker Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-logs">Check Logs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#restart-container">Restart container</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-all-containers">Remove all containers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-install-ckan-dependencies-manually">Option 2: Install CKAN &amp; dependencies manually</a><ul class="nav section-nav flex-column">
@@ -667,7 +683,7 @@ for the admin user/password</p>
 <p><img alt="env install1" src="../_images/env-install1.png" /></p>
 </li>
 <li><p>build the Docker images</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">build</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">build</span>
 </pre></div>
 </div>
 <p>you should see a response that states <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">ckan:</span> <span class="pre">Built</span></code></p>
@@ -762,6 +778,233 @@ password and then click <code class="docutils literal notranslate"><span class="
 <li><p>in the left panel, click on <code class="docutils literal notranslate"><span class="pre">Containers</span></code> to then see a list of your CKAN containers,
 and then interact with them if need be (stop/start/restart etc.).</p>
 <p><img alt="portainer install4" src="../_images/portainer-install4.png" /></p>
+</li>
+</ul>
+</section>
+</section>
+<section id="install-dcat-extension-for-json-ld-support">
+<h3>Install DCAT extension for JSON-LD Support<a class="headerlink" href="#install-dcat-extension-for-json-ld-support" title="Link to this heading">#</a></h3>
+<p>We will follow the Docker compose <a class="reference external" href="https://github.com/ckan/ckan-docker/blob/master/README.md">README</a> for CKAN.</p>
+<section id="edit-the-dockerfile-to-install-the-ckanext-dcat-extension">
+<h4>Edit the Dockerfile to install the ckanext-dcat extension<a class="headerlink" href="#edit-the-dockerfile-to-install-the-ckanext-dcat-extension" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ckan-docker-git-master</span></code></p></li>
+<li><p>now use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to add in the required section for the ckanext-dcat plugin into
+the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the Dockerfile</span>
+<span class="n">vi</span> <span class="n">ckan</span><span class="o">/</span><span class="n">Dockerfile</span>
+<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+  <span class="c1">#then edit the desired lines</span>
+<span class="c1">#then save with the command</span>
+<span class="p">:</span><span class="n">wq</span>
+</pre></div>
+</div>
+<ul>
+<li><p>around line#6, paste the following into the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### prevent permissions errors when installing ckanext-dcat extension</span>
+<span class="n">USER</span> <span class="n">root</span>
+
+<span class="c1">### DCAT ###</span>
+<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;git+https://github.com/ckan/ckanext-dcat.git@v2.1.0#egg=ckanext-dcat&#39;</span>  <span class="o">&amp;&amp;</span> \
+     <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">dcat</span><span class="o">/</span><span class="n">v2</span><span class="mf">.1.0</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+<li><p>save the file</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="edit-the-env-file-to-load-the-extensions">
+<h4>Edit the .env file to load the Extensions<a class="headerlink" href="#edit-the-env-file-to-load-the-extensions" title="Link to this heading">#</a></h4>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">ckan-docker-git-master</span></code> directory, use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to edit the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file
+to add the <code class="docutils literal notranslate"><span class="pre">dcat</span></code> and <code class="docutils literal notranslate"><span class="pre">structured_data</span></code> plugins, as follows:</p>
+<ul>
+<li><p>open the .env file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
+</pre></div>
+</div>
+</li>
+<li><p>around line#69, change the <code class="docutils literal notranslate"><span class="pre">CKAN__PLUGINS</span></code> line to add the 2 extensions, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">&quot;image_view text_view datatables_view datastore datapusher envvars dcat structured_data&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>save the file</p></li>
+</ul>
+</section>
+<section id="rebuild-the-containers">
+<h4>Rebuild the containers<a class="headerlink" href="#rebuild-the-containers" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>build the Docker images</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>you should see a line mentioning the <code class="docutils literal notranslate"><span class="pre">RUN</span> <span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-e</span></code> command that
+we defined in the Dockerfile.</p>
+<p><img alt="dcat install1" src="../_images/dcat-install1.png" /></p>
+</li>
+<li><p>start the Docker containers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="check-the-status">
+<h4>Check the status<a class="headerlink" href="#check-the-status" title="Link to this heading">#</a></h4>
+<p>We can use the CKAN API to check if the new plugins were loaded succefully.</p>
+<ul>
+<li><p>using the <a class="reference external" href="https://www.mozilla.org/en-CA/firefox/new/">Firefox</a> browser (which
+displays the JSON results nicely), goto: <a class="reference external" href="https://localhost:8443/api/action/status_show">https://localhost:8443/api/action/status_show</a></p></li>
+<li><p>you should see a list of extensions that include both <code class="docutils literal notranslate"><span class="pre">dcat</span></code> and
+<code class="docutils literal notranslate"><span class="pre">structured_data</span></code>, such as:</p>
+<p><img alt="build install2" src="../_images/dcat-install2.png" /></p>
+</li>
+</ul>
+</section>
+<section id="connect-to-the-ckan-container-through-commandline">
+<h4>Connect to the CKAN container through commandline<a class="headerlink" href="#connect-to-the-ckan-container-through-commandline" title="Link to this heading">#</a></h4>
+<p>You may need to connect to the CKAN container through the commandline, which
+can be done through the following steps:</p>
+<ul>
+<li><p>you will need to get the exact name of the CKAN container, which is easiest
+to see through Portainer.</p>
+<p><img alt="ckan connect1" src="../_images/ckan-connect1.png" /></p>
+<p>You can see above that the container name is <code class="docutils literal notranslate"><span class="pre">ckan-docker-git-master-ckan-1</span></code>.</p>
+</li>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute the following, to connect to the CKAN container (replace “ckan-docker-git-master-ckan-1” with your container name) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;export TERM=xterm; exec bash&quot;</span>
+</pre></div>
+</div>
+<p>Your prompt should change to something like <code class="docutils literal notranslate"><span class="pre">ckan&#64;af2e2e3ac57f</span></code>.  If you then
+execute <code class="docutils literal notranslate"><span class="pre">pwd</span></code> you can see that you are in the <code class="docutils literal notranslate"><span class="pre">/srv/app/</span></code> directory, on the CKAN
+container.</p>
+<p><img alt="ckan connect2" src="../_images/ckan-connect2.png" /></p>
+</li>
+</ul>
+</section>
+<section id="install-vi-on-the-ckan-container">
+<h4>Install VI on the CKAN container<a class="headerlink" href="#install-vi-on-the-ckan-container" title="Link to this heading">#</a></h4>
+<p>If you get a <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code> error when trying to open a file with <code class="docutils literal notranslate"><span class="pre">vi</span></code>
+on the ckan container, you will have to first connect as root, and then install
+<code class="docutils literal notranslate"><span class="pre">vim</span></code>, as follows:</p>
+<ul>
+<li><p>execute the following, to connect to the CKAN container as root (replace “ckan-docker-git-master-ckan-1” with your container name) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+<li><p>now update your local packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+</pre></div>
+</div>
+</li>
+<li><p>finally install <code class="docutils literal notranslate"><span class="pre">vim</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">vim</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Then retry your <code class="docutils literal notranslate"><span class="pre">vi</span> </code>command.</p>
+</section>
+<section id="modify-the-ckan-template">
+<h4>Modify the CKAN template<a class="headerlink" href="#modify-the-ckan-template" title="Link to this heading">#</a></h4>
+<p>Once connected to the CKAN container (see previous step), you can edit
+the <code class="docutils literal notranslate"><span class="pre">read_base.html</span></code> Jinja2 template files, to add a JSON-LD block,
+as follows:</p>
+<ul>
+<li><p>now use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to edit the <code class="docutils literal notranslate"><span class="pre">read_base.html</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="n">src</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">package</span><span class="o">/</span><span class="n">read_base</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>in the <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">head_extras</span> <span class="pre">-%}</span></code> section, around line#13, paste
+the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">structured_data</span> <span class="o">%</span><span class="p">}</span>
+  <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="o">&gt;</span>
+
+  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>save the file, and <code class="docutils literal notranslate"><span class="pre">exit</span></code> the container</p></li>
+<li><p>back on your host machine, restart the CKAN container</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">restart</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>if you have added a Dataset, now if you right-click on the dataset’s
+main page (that url would be something like <a class="reference external" href="https://localhost:8443/dataset/point-test">https://localhost:8443/dataset/point-test</a> )
+you should see a <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">type=&quot;application/ld+json&quot;&gt;</span></code> section inside
+the page source (which is the embedded JSON-LD, that is required by ODIS).</p></li>
+</ul>
+</section>
+</section>
+<section id="docker-troubleshooting">
+<h3>Docker Troubleshooting<a class="headerlink" href="#docker-troubleshooting" title="Link to this heading">#</a></h3>
+<section id="check-logs">
+<h4>Check Logs<a class="headerlink" href="#check-logs" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>you can check logs through the commandline, passing the name of the container,
+such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">logs</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>alternatively you can use Portainer to check the logs of a container, just
+click on the little file icon beside the container name, such as:</p>
+<p><img alt="logs" src="../_images/logs.png" /></p>
+</li>
+</ul>
+</section>
+<section id="restart-container">
+<h4>Restart container<a class="headerlink" href="#restart-container" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>you can restart a container through the commandline, passing the name of the
+container, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">restart</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>alternatively you can use Portainer to restart container, just
+select the container on the left, and then click the <code class="docutils literal notranslate"><span class="pre">Restart</span></code> button above,
+such as:</p>
+<p><img alt="restart" src="../_images/restart.png" /></p>
+</li>
+</ul>
+</section>
+<section id="remove-all-containers">
+<h4>Remove all containers<a class="headerlink" href="#remove-all-containers" title="Link to this heading">#</a></h4>
+<p>Sometimes you might want to start over, so you can execute the following to
+delete all Docker containers and cache.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This will remove all existing containers, even those that are running.</p>
+</div>
+<ul>
+<li><p>remove all containers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo docker rm -f $(sudo docker ps -a -q)
+</pre></div>
+</div>
+</li>
+<li><p>remove cache:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">system</span> <span class="n">prune</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -1432,6 +1675,22 @@ execute:</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-portainer-server">Setup Portainer Server</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#login-to-the-portainer-server">Login to the Portainer Server</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-your-containers-with-portainer">Manage your containers with Portainer</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dcat-extension-for-json-ld-support">Install DCAT extension for JSON-LD Support</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-dockerfile-to-install-the-ckanext-dcat-extension">Edit the Dockerfile to install the ckanext-dcat extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-env-file-to-load-the-extensions">Edit the .env file to load the Extensions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rebuild-the-containers">Rebuild the containers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-status">Check the status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-ckan-container-through-commandline">Connect to the CKAN container through commandline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vi-on-the-ckan-container">Install VI on the CKAN container</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-ckan-template">Modify the CKAN template</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-troubleshooting">Docker Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-logs">Check Logs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#restart-container">Restart container</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-all-containers">Remove all containers</a></li>
 </ul>
 </li>
 </ul>
