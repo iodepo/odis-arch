@@ -401,7 +401,105 @@ as follows:
 - if you have added a Dataset, now if you right-click on the dataset's 
   main page (that url would be something like https://localhost:8443/dataset/point-test )
   you should see a `<script type="application/ld+json">` section inside
-  the page source (which is the embedded JSON-LD, that is required by ODIS).
+  the page source (which is the embedded JSON-LD, that is required by ODIS),
+  similar to the following snippet:
+  ```json
+    {
+        "@context": {
+            "brick": "https://brickschema.org/schema/Brick#",
+            "csvw": "http://www.w3.org/ns/csvw#",
+            "dc": "http://purl.org/dc/elements/1.1/",
+            "dcam": "http://purl.org/dc/dcam/",
+            "dcat": "http://www.w3.org/ns/dcat#",
+            "dcmitype": "http://purl.org/dc/dcmitype/",
+            "dcterms": "http://purl.org/dc/terms/",
+            "doap": "http://usefulinc.com/ns/doap#",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "odrl": "http://www.w3.org/ns/odrl/2/",
+            "org": "http://www.w3.org/ns/org#",
+            "owl": "http://www.w3.org/2002/07/owl#",
+            "prof": "http://www.w3.org/ns/dx/prof/",
+            "prov": "http://www.w3.org/ns/prov#",
+            "qb": "http://purl.org/linked-data/cube#",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "schema": "http://schema.org/",
+            "sh": "http://www.w3.org/ns/shacl#",
+            "skos": "http://www.w3.org/2004/02/skos/core#",
+            "sosa": "http://www.w3.org/ns/sosa/",
+            "ssn": "http://www.w3.org/ns/ssn/",
+            "time": "http://www.w3.org/2006/time#",
+            "vann": "http://purl.org/vocab/vann/",
+            "void": "http://rdfs.org/ns/void#",
+            "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+            "xsd": "http://www.w3.org/2001/XMLSchema#"
+        },
+        "@graph": [
+            {
+                "@id": "https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595",
+                "@type": "schema:Dataset",
+                "schema:creator": {
+                    "@id": "https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814"
+                },
+                "schema:dateModified": "2025-01-17T19:20:38.929522",
+                "schema:datePublished": "2025-01-17T19:20:10.193510",
+                "schema:distribution": {
+                    "@id": "https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed"
+                },
+                "schema:includedInDataCatalog": {
+                    "@id": "_:N327f3587332f414ca7f4844b454cffe9"
+                },
+                "schema:license": "http://www.opendefinition.org/licenses/cc-by-sa",
+                "schema:name": "Point test",
+                "schema:publisher": {
+                    "@id": "https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814"
+                },
+                "schema:url": "https://localhost:8443/dataset/point-test"
+            },
+            {
+                "@id": "_:N327f3587332f414ca7f4844b454cffe9",
+                "@type": "schema:DataCatalog",
+                "schema:description": "",
+                "schema:name": "CKAN",
+                "schema:url": "https://localhost:8443"
+            },
+            {
+                "@id": "https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814",
+                "@type": "schema:Organization",
+                "schema:contactPoint": [
+                    {
+                        "@id": "_:N8f3eab00d6a7479d889d86e1cdba9894"
+                    },
+                    {
+                        "@id": "_:N55713fa9e8ff489aa8ea185298b1344e"
+                    }
+                ],
+                "schema:name": "OIH"
+            },
+            {
+                "@id": "_:N8f3eab00d6a7479d889d86e1cdba9894",
+                "@type": "schema:ContactPoint",
+                "schema:contactType": "customer service",
+                "schema:url": "https://localhost:8443"
+            },
+            {
+                "@id": "_:N55713fa9e8ff489aa8ea185298b1344e",
+                "@type": "schema:ContactPoint",
+                "schema:contactType": "customer service",
+                "schema:url": "https://localhost:8443"
+            },
+            {
+                "@id": "https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed",
+                "@type": "schema:DataDownload",
+                "schema:contentSize": 57,
+                "schema:encodingFormat": "JSON",
+                "schema:name": "point.json",
+                "schema:url": "https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed/download/point.json"
+            }
+        ]
+    }  
+  ```
   
 ### Docker Troubleshooting
 
