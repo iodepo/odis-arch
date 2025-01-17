@@ -265,16 +265,16 @@ We will follow the Docker compose [README](https://github.com/ckan/ckan-docker/b
   #then save with the command
   :wq
   ```
-  - around line#6, paste the following into the `Dockerfile`:
-    ```
-    ### prevent permissions errors when installing ckanext-dcat extension
-    USER root
+- around line#6, paste the following into the `Dockerfile`:
+  ```
+  ### prevent permissions errors when installing ckanext-dcat extension
+  USER root
 
-    ### DCAT ###
-    RUN  pip3 install -e 'git+https://github.com/ckan/ckanext-dcat.git@v2.1.0#egg=ckanext-dcat'  && \
-         pip3 install -r https://raw.githubusercontent.com/ckan/ckanext-dcat/v2.1.0/requirements.txt
-    ```
-  - save the file
+  ### DCAT ###
+  RUN  pip3 install -e 'git+https://github.com/ckan/ckanext-dcat.git@v2.1.0#egg=ckanext-dcat'  && \
+       pip3 install -r https://raw.githubusercontent.com/ckan/ckanext-dcat/v2.1.0/requirements.txt
+  ```
+- save the file
   
 #### Edit the .env file to load the Extensions
 
@@ -324,7 +324,7 @@ We can use the CKAN API to check if the new plugins were loaded succefully.
 
 #### Connect to the CKAN container through commandline
 
-You may need to connect to the CKAN container through the commandline, which
+You will need to connect to the CKAN container through the commandline, which
 can be done through the following steps:
 
 - you will need to get the exact name of the CKAN container, which is easiest
