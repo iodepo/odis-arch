@@ -247,7 +247,9 @@ for WSL.
   
 ### Install DCAT extension for JSON-LD Support
 
-We will follow the Docker compose [README](https://github.com/ckan/ckan-docker/blob/master/README.md) for CKAN.
+We will follow the Docker compose [README](https://github.com/ckan/ckan-docker/blob/master/README.md) for CKAN, 
+as well as the [ckanext-dcat](https://extensions.ckan.org/extension/dcat/#structured-data-and-google-dataset-search-indexing) 
+extension notes.
 
 #### Edit the Dockerfile to install the ckanext-dcat extension
 
