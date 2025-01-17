@@ -950,7 +950,106 @@ the following:</p>
 <li><p>if you have added a Dataset, now if you right-click on the dataset’s
 main page (that url would be something like <a class="reference external" href="https://localhost:8443/dataset/point-test">https://localhost:8443/dataset/point-test</a> )
 you should see a <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">type=&quot;application/ld+json&quot;&gt;</span></code> section inside
-the page source (which is the embedded JSON-LD, that is required by ODIS).</p></li>
+the page source (which is the embedded JSON-LD, that is required by ODIS),
+similar to the following snippet:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;brick&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://brickschema.org/schema/Brick#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;csvw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/csvw#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;dc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/elements/1.1/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;dcam&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcam/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;dcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/dcat#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;dcmitype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcmitype/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;dcterms&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/terms/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;doap&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://usefulinc.com/ns/doap#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;foaf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://xmlns.com/foaf/0.1/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;geo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;odrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/odrl/2/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/org#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;owl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2002/07/owl#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;prof&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/dx/prof/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;prov&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;qb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/linked-data/cube#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;rdf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;rdfs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2000/01/rdf-schema#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://schema.org/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;skos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2004/02/skos/core#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;sosa&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/sosa/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;ssn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/ssn/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2006/time#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;vann&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/vocab/vann/&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;void&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://rdfs.org/ns/void#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;wgs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos#&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;@graph&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:Dataset&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:creator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">&quot;schema:dateModified&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-17T19:20:38.929522&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:datePublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-17T19:20:10.193510&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:distribution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed&quot;</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">&quot;schema:includedInDataCatalog&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N327f3587332f414ca7f4844b454cffe9&quot;</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">&quot;schema:license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opendefinition.org/licenses/cc-by-sa&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point test&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span>
+<span class="w">              </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/point-test&quot;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N327f3587332f414ca7f4844b454cffe9&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:DataCatalog&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CKAN&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:Organization&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:contactPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                      </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N8f3eab00d6a7479d889d86e1cdba9894&quot;</span>
+<span class="w">                  </span><span class="p">},</span>
+<span class="w">                  </span><span class="p">{</span>
+<span class="w">                      </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N55713fa9e8ff489aa8ea185298b1344e&quot;</span>
+<span class="w">                  </span><span class="p">}</span>
+<span class="w">              </span><span class="p">],</span>
+<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OIH&quot;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N8f3eab00d6a7479d889d86e1cdba9894&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:ContactPoint&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:contactType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer service&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N55713fa9e8ff489aa8ea185298b1344e&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:ContactPoint&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:contactType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer service&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">          </span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:DataDownload&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:contentSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;point.json&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed/download/point.json&quot;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span><span class="w">  </span>
+</pre></div>
+</div>
+</li>
 </ul>
 </section>
 </section>
