@@ -635,7 +635,8 @@ There are several environment variables that can be set in the `ckan.ini` file,
 such as how often the sitemap is auto-generated.  See the full list of possible
 settings [here](https://github.com/datopian/ckanext-sitemap?tab=readme-ov-file#configuration).
 
-At the minimum, you should likely set the `autorenew` to `true`, as follows:
+At the minimum, you should likely set the variable `autorenew` to `true`, 
+as follows:
 
 - on the `CKAN` container, edit the `ckan.ini` file
   ```
