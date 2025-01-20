@@ -506,7 +506,7 @@ as follows:
 ### Generate a sitemap for your CKAN instance
 
 A sitemap is required to allow ODIS to locate and harvest your 
-CKAN catalogue.  We implement the [ckanext-sitemap](https://github.com/datopian/ckanext-sitemap) 
+CKAN catalogue.  We will implement the [ckanext-sitemap](https://github.com/datopian/ckanext-sitemap) 
 extension, as follows.
 
 #### Edit the Dockerfile to install the ckanext-sitemap extension
