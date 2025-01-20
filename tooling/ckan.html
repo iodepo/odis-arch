@@ -465,6 +465,16 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-ckan-template">Modify the CKAN template</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-a-sitemap-for-your-ckan-instance">Generate a sitemap for your CKAN instance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-dockerfile-to-install-the-ckanext-sitemap-extension">Edit the Dockerfile to install the ckanext-sitemap extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-env-file-to-load-the-extension">Edit the .env file to load the Extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rebuild the containers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check the status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-ckan-container-and-generate-the-sitemap">Connect to the CKAN container and Generate the sitemap</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-sitemap">View the sitemap</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-sitemap-extension">Configure the sitemap extension</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-troubleshooting">Docker Troubleshooting</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-logs">Check Logs</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#restart-container">Restart container</a></li>
@@ -859,7 +869,7 @@ we defined in the Dockerfile.</p>
 </section>
 <section id="check-the-status">
 <h4>Check the status<a class="headerlink" href="#check-the-status" title="Link to this heading">#</a></h4>
-<p>We can use the CKAN API to check if the new plugins were loaded succefully.</p>
+<p>We can use the CKAN API to check if the new plugins were loaded successfully.</p>
 <ul>
 <li><p>using the <a class="reference external" href="https://www.mozilla.org/en-CA/firefox/new/">Firefox</a> browser (which
 displays the JSON results nicely), goto: <a class="reference external" href="https://localhost:8443/api/action/status_show">https://localhost:8443/api/action/status_show</a></p></li>
@@ -1050,6 +1060,169 @@ similar to the following snippet:</p>
 </pre></div>
 </div>
 </li>
+</ul>
+</section>
+</section>
+<section id="generate-a-sitemap-for-your-ckan-instance">
+<h3>Generate a sitemap for your CKAN instance<a class="headerlink" href="#generate-a-sitemap-for-your-ckan-instance" title="Link to this heading">#</a></h3>
+<p>A sitemap is required to allow ODIS to locate and harvest your
+CKAN catalogue.  We implement the <a class="reference external" href="https://github.com/datopian/ckanext-sitemap">ckanext-sitemap</a>
+extension, as follows.</p>
+<section id="edit-the-dockerfile-to-install-the-ckanext-sitemap-extension">
+<h4>Edit the Dockerfile to install the ckanext-sitemap extension<a class="headerlink" href="#edit-the-dockerfile-to-install-the-ckanext-sitemap-extension" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>assuming you are still at the <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt, but if not:</p>
+<ul class="simple">
+<li><p>goto Start menu, choose “WSL”</p></li>
+<li><p>CMD window should open with an <code class="docutils literal notranslate"><span class="pre">odis&#64;</span></code> prompt</p></li>
+</ul>
+</li>
+<li><p>execute <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ckan-docker-git-master</span></code></p></li>
+<li><p>now use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to add in the required section for the ckanext-dcat plugin into
+the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the Dockerfile</span>
+<span class="n">vi</span> <span class="n">ckan</span><span class="o">/</span><span class="n">Dockerfile</span>
+<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+  <span class="c1">#then edit the desired lines</span>
+<span class="c1">#then save with the command</span>
+<span class="p">:</span><span class="n">wq</span>
+</pre></div>
+</div>
+</li>
+<li><p>around line#6 (after the DCAT section) paste the following into the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### SITEMAP ###</span>
+<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;git+https://github.com/datopian/ckanext-sitemap.git@master#egg=ckanext-sitemap&#39;</span>  <span class="o">&amp;&amp;</span> \
+     <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">datopian</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+<li><p>save the file</p></li>
+</ul>
+</section>
+<section id="edit-the-env-file-to-load-the-extension">
+<h4>Edit the .env file to load the Extension<a class="headerlink" href="#edit-the-env-file-to-load-the-extension" title="Link to this heading">#</a></h4>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">ckan-docker-git-master</span></code> directory, use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to edit the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file
+to add the <code class="docutils literal notranslate"><span class="pre">dcat</span></code> and <code class="docutils literal notranslate"><span class="pre">structured_data</span></code> plugins, as follows:</p>
+<ul>
+<li><p>open the .env file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
+</pre></div>
+</div>
+</li>
+<li><p>around line#69, change the <code class="docutils literal notranslate"><span class="pre">CKAN__PLUGINS</span></code> line to add the <code class="docutils literal notranslate"><span class="pre">sitemap</span></code> extension, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">&quot;image_view text_view datatables_view datastore datapusher envvars dcat structured_data sitemap&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>save the file</p></li>
+</ul>
+</section>
+<section id="id1">
+<h4>Rebuild the containers<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<ul>
+<li><p>build the Docker images</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="o">-</span><span class="n">f</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>start the Docker containers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id2">
+<h4>Check the status<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>We can use the CKAN API to check if the new plugin was loaded successfully.</p>
+<ul>
+<li><p>using the <a class="reference external" href="https://www.mozilla.org/en-CA/firefox/new/">Firefox</a> browser (which
+displays the JSON results nicely), goto: <a class="reference external" href="https://localhost:8443/api/action/status_show">https://localhost:8443/api/action/status_show</a></p></li>
+<li><p>you should see a list of extensions that includes <code class="docutils literal notranslate"><span class="pre">sitemap</span></code>, such as:</p>
+<p><img alt="sitemap install1" src="../_images/sitemap-install1.png" /></p>
+</li>
+</ul>
+</section>
+<section id="connect-to-the-ckan-container-and-generate-the-sitemap">
+<h4>Connect to the CKAN container and Generate the sitemap<a class="headerlink" href="#connect-to-the-ckan-container-and-generate-the-sitemap" title="Link to this heading">#</a></h4>
+<p>The sitemap extension requires us to run a command on the CKAN container to
+generate the sitemap, so we must connect to the container, as follows:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As there could be a permissions issue when generating (and writing) the sitemap
+to the folder, we will connect as <code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+</div>
+<ul>
+<li><p>execute the following, to connect to the CKAN container (replace “ckan-docker-git-master-ckan-1” with your container name) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;export TERM=xterm; exec bash&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>in that default <code class="docutils literal notranslate"><span class="pre">/srv/app/</span></code> directory, we can run the command to generate the
+sitemap:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ckan</span> <span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span> <span class="n">generate</span>
+</pre></div>
+</div>
+<p><img alt="sitemap install2" src="../_images/sitemap-install2.png" /></p>
+</li>
+<li><p>the sitemap will be created in the following folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span><span class="o">/</span><span class="n">ckanext</span><span class="o">/</span><span class="n">sitemap</span><span class="o">/</span><span class="n">public</span>
+</pre></div>
+</div>
+</li>
+<li><p>we need to modify the permissions of the folder where the sitemap was generated
+(especially for when it will be auto-generated later), by executing the
+following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">ckan</span><span class="p">:</span><span class="n">ckan</span><span class="o">-</span><span class="n">sys</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span><span class="o">/</span><span class="n">ckanext</span><span class="o">/</span><span class="n">sitemap</span><span class="o">/</span><span class="n">public</span><span class="o">/</span>
+<span class="n">chmod</span> <span class="o">-</span><span class="n">R</span> <span class="mi">775</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span><span class="o">/</span><span class="n">ckanext</span><span class="o">/</span><span class="n">sitemap</span><span class="o">/</span><span class="n">public</span><span class="o">/</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="view-the-sitemap">
+<h4>View the sitemap<a class="headerlink" href="#view-the-sitemap" title="Link to this heading">#</a></h4>
+<p>The sitemap will be visible in your browser now, at the root of your
+instance, such as: <a class="reference external" href="https://localhost:8443/sitemap_index.xml">https://localhost:8443/sitemap_index.xml</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can learn more about sitemaps in the <a class="reference external" href="https://book.odis.org/publishing/publishing.html#sitemap-xml">Publishing section</a>
+of the ODIS Book.</p>
+</div>
+<ul>
+<li><p>note that the extension has generated a sitemap index (usually a list of
+individual sitemaps), so you can copy the <code class="docutils literal notranslate"><span class="pre">&lt;loc&gt;</span></code> url and open it in a new tab,
+to view the actual sitemap, such as <a class="reference external" href="https://localhost:8443/sitemap-0.xml">https://localhost:8443/sitemap-0.xml</a></p></li>
+<li><p>you should see a list of <code class="docutils literal notranslate"><span class="pre">&lt;url&gt;</span></code> values for your catalogue, including your
+test dataset record, such as:</p>
+<p><img alt="sitemap install3" src="../_images/sitemap-install3.png" /></p>
+</li>
+</ul>
+</section>
+<section id="configure-the-sitemap-extension">
+<h4>Configure the sitemap extension<a class="headerlink" href="#configure-the-sitemap-extension" title="Link to this heading">#</a></h4>
+<p>There are several environment variables that can be set in the <code class="docutils literal notranslate"><span class="pre">ckan.ini</span></code> file,
+such as how often the sitemap is auto-generated.  See the full list of possible
+settings <a class="reference external" href="https://github.com/datopian/ckanext-sitemap?tab=readme-ov-file#configuration">here</a>.</p>
+<p>At the minimum, you should likely set the <code class="docutils literal notranslate"><span class="pre">autorenew</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>, as follows:</p>
+<ul>
+<li><p>on the <code class="docutils literal notranslate"><span class="pre">CKAN</span></code> container, edit the <code class="docutils literal notranslate"><span class="pre">ckan.ini</span></code> file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">ckan</span><span class="o">.</span><span class="n">ini</span>
+</pre></div>
+</div>
+</li>
+<li><p>insert the following at the bottom of the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ckanext</span><span class="o">.</span><span class="n">sitemap</span><span class="o">.</span><span class="n">autorenew</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+<li><p>now <code class="docutils literal notranslate"><span class="pre">exit</span></code> the CKAN container, and restart it, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">restart</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p>now your sitemap will be regenerated, if the sitemap link is visited and
+the sitemap is older than 8 hours.</p></li>
 </ul>
 </section>
 </section>
@@ -1784,6 +1957,16 @@ execute:</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-ckan-container-through-commandline">Connect to the CKAN container through commandline</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vi-on-the-ckan-container">Install VI on the CKAN container</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-the-ckan-template">Modify the CKAN template</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-a-sitemap-for-your-ckan-instance">Generate a sitemap for your CKAN instance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-dockerfile-to-install-the-ckanext-sitemap-extension">Edit the Dockerfile to install the ckanext-sitemap extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-the-env-file-to-load-the-extension">Edit the .env file to load the Extension</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Rebuild the containers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check the status</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-ckan-container-and-generate-the-sitemap">Connect to the CKAN container and Generate the sitemap</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-sitemap">View the sitemap</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-sitemap-extension">Configure the sitemap extension</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-troubleshooting">Docker Troubleshooting</a><ul class="nav section-nav flex-column">

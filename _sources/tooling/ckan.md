@@ -314,7 +314,7 @@ to add the `dcat` and `structured_data` plugins, as follows:
   
 #### Check the status
 
-We can use the CKAN API to check if the new plugins were loaded succefully.
+We can use the CKAN API to check if the new plugins were loaded successfully.
 
 - using the [Firefox](https://www.mozilla.org/en-CA/firefox/new/) browser (which
   displays the JSON results nicely), goto: https://localhost:8443/api/action/status_show
@@ -503,6 +503,158 @@ as follows:
     }  
   ```
   
+### Generate a sitemap for your CKAN instance
+
+A sitemap is required to allow ODIS to locate and harvest your 
+CKAN catalogue.  We implement the [ckanext-sitemap](https://github.com/datopian/ckanext-sitemap) 
+extension, as follows.
+
+#### Edit the Dockerfile to install the ckanext-sitemap extension
+
+- assuming you are still at the `odis@` prompt, but if not:
+  - goto Start menu, choose "WSL"
+  - CMD window should open with an `odis@` prompt
+- execute `cd ckan-docker-git-master`
+- now use `vi` to add in the required section for the ckanext-dcat plugin into
+  the `Dockerfile` :
+  ```
+  #use vi to open the Dockerfile
+  vi ckan/Dockerfile
+  #to make your changes, first press your "i" key (for INSERT mode), and
+    #then edit the desired lines
+  #then save with the command
+  :wq
+  ```
+- around line#6 (after the DCAT section) paste the following into the `Dockerfile`:
+  ```
+  ### SITEMAP ###
+  RUN  pip3 install -e 'git+https://github.com/datopian/ckanext-sitemap.git@master#egg=ckanext-sitemap'  && \
+       pip3 install -r https://raw.githubusercontent.com/datopian/ckanext-sitemap/refs/heads/master/requirements.txt
+  ```
+- save the file
+  
+#### Edit the .env file to load the Extension
+
+Inside the `ckan-docker-git-master` directory, use `vi` to edit the `.env` file
+to add the `dcat` and `structured_data` plugins, as follows:
+
+- open the .env file:
+
+  ```
+  vi .env
+  ```
+- around line#69, change the `CKAN__PLUGINS` line to add the `sitemap` extension, such as:
+
+  ```
+  CKAN__PLUGINS="image_view text_view datatables_view datastore datapusher envvars dcat structured_data sitemap"
+  ```
+  
+- save the file
+  
+#### Rebuild the containers
+
+- build the Docker images
+  ```
+  docker compose -f docker-compose.yml build
+  ```
+  
+- start the Docker containers
+  ```
+  docker compose up -d
+  ```
+  
+#### Check the status
+
+We can use the CKAN API to check if the new plugin was loaded successfully.
+
+- using the [Firefox](https://www.mozilla.org/en-CA/firefox/new/) browser (which
+  displays the JSON results nicely), goto: https://localhost:8443/api/action/status_show
+  
+- you should see a list of extensions that includes `sitemap`, such as:
+  
+  ![sitemap install1](./images/sitemap-install1.png)
+  
+#### Connect to the CKAN container and Generate the sitemap
+
+The sitemap extension requires us to run a command on the CKAN container to 
+generate the sitemap, so we must connect to the container, as follows:
+
+```{note}
+As there could be a permissions issue when generating (and writing) the sitemap 
+to the folder, we will connect as `root`.
+```
+
+- execute the following, to connect to the CKAN container (replace "ckan-docker-git-master-ckan-1" with your container name) :
+  ```
+  docker exec -u root -it ckan-docker-git-master-ckan-1 /bin/bash -c "export TERM=xterm; exec bash"
+  ```
+  
+- in that default `/srv/app/` directory, we can run the command to generate the 
+  sitemap:
+  ```
+  ckan ckanext-sitemap generate
+  ```
+  
+  ![sitemap install2](./images/sitemap-install2.png)
+
+- the sitemap will be created in the following folder:
+  ```
+  /srv/app/src/ckanext-sitemap/ckanext/sitemap/public
+  ```
+  
+- we need to modify the permissions of the folder where the sitemap was generated
+  (especially for when it will be auto-generated later), by executing the
+  following commands:
+  ```
+  chown -R ckan:ckan-sys /srv/app/src/ckanext-sitemap/ckanext/sitemap/public/
+  chmod -R 775 /srv/app/src/ckanext-sitemap/ckanext/sitemap/public/
+  ```    
+
+#### View the sitemap
+
+The sitemap will be visible in your browser now, at the root of your
+instance, such as: https://localhost:8443/sitemap_index.xml
+
+```{tip}
+You can learn more about sitemaps in the [Publishing section](https://book.odis.org/publishing/publishing.html#sitemap-xml) 
+of the ODIS Book.
+```
+
+- note that the extension has generated a sitemap index (usually a list of 
+  individual sitemaps), so you can copy the `<loc>` url and open it in a new tab, 
+  to view the actual sitemap, such as https://localhost:8443/sitemap-0.xml
+  
+- you should see a list of `<url>` values for your catalogue, including your
+  test dataset record, such as:
+  
+  ![sitemap install3](./images/sitemap-install3.png)
+  
+#### Configure the sitemap extension
+
+There are several environment variables that can be set in the `ckan.ini` file,
+such as how often the sitemap is auto-generated.  See the full list of possible
+settings [here](https://github.com/datopian/ckanext-sitemap?tab=readme-ov-file#configuration).
+
+At the minimum, you should likely set the `autorenew` to `true`, as follows:
+
+- on the `CKAN` container, edit the `ckan.ini` file
+  ```
+  vi /srv/app/ckan.ini
+  ```
+  
+- insert the following at the bottom of the file:
+  ```
+  ckanext.sitemap.autorenew = True
+  ```
+  
+- now `exit` the CKAN container, and restart it, such as:
+  ```
+  docker restart ckan-docker-git-master-ckan-1
+  ```
+  
+- now your sitemap will be regenerated, if the sitemap link is visited and
+  the sitemap is older than 8 hours.
+
 ### Docker Troubleshooting
 
 #### Check Logs
