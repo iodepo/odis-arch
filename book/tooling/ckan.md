@@ -624,7 +624,7 @@ of the ODIS Book.
   individual sitemaps), so you can copy the `<loc>` url and open it in a new tab, 
   to view the actual sitemap, such as https://localhost:8443/sitemap-0.xml
   
-- you should see a list of `<url>` values for your catalogue, including your
+- you should now see a list of `<loc>` values for your catalogue, including your
   test dataset record, such as:
   
   ![sitemap install3](./images/sitemap-install3.png)
