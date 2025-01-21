@@ -661,7 +661,7 @@ as follows:
 ODIS will use your entry in the [ODIS Catalogue](https://catalogue.odis.org/) 
 ("ODISCat") to find and harvest your sitemap.  Be sure to go through the quick 
 steps in the [Getting Started with ODIS](https://book.odis.org/gettingStarted.html) 
-section of the ODIS Book, to make sure that your entry is created properly.
+section of the ODIS Book, to make sure that your ODISCat entry is created properly.
 
 ### Docker Troubleshooting
 
