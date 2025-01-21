@@ -1,0 +1,46 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?s ?type ?name ?description ?url ?keywords
+   ?headline  ?sameAs ?license ?citation
+    ?dateCreated ?dateModified ?datePublished ?includedInDataCatalog ?temporalCoverage
+    ?includedInDataCatalog ?contentURL ?region ?provider ?publisher ?creator
+
+WHERE {
+    ?s rdf:type schema:Dataset .
+    ?s schema:name ?name .
+    ?s schema:description ?description .
+    ?s schema:url ?url .
+
+    OPTIONAL { ?s schema:keywords ?keywords . }
+    OPTIONAL { ?s schema:creator ?creator . }
+    OPTIONAL { ?s schema:includedInDataCatalog ?includedInDataCatalog . }
+
+    OPTIONAL { ?s schema:dateCreated ?dateCreated }
+    OPTIONAL { ?s schema:dateModified ?dateModified }
+    OPTIONAL { ?s schema:datePublished ?datePublished }
+
+    OPTIONAL { ?s schema:headline ?headline . }
+    OPTIONAL { ?s schema:temporalCoverage ?temporalCoverage . }
+
+    OPTIONAL { ?s schema:sameAs ?sameAs . }
+    OPTIONAL { ?s schema:license ?license . }
+    OPTIONAL { ?s schema:citation ?citation . }
+    OPTIONAL { ?s schema:includedInDataCatalog ?includedInDataCatalog . }
+    OPTIONAL {
+        ?s schema:distribution ?distribution .
+        ?distribution schema:contentUrl ?contentURL .
+    }
+    OPTIONAL { ?s schema:region ?region . }
+    OPTIONAL { ?s schema:provider ?provider . }
+    OPTIONAL { ?s schema:publisher ?publisher . }
+    OPTIONAL { ?s schema:temporalCoverage ?temporalCoverage }
+    OPTIONAL { ?s schema:dataModified ?dataModified }
+    OPTIONAL { ?s schema:datePublished ?datePublished }
+
+    FILTER (isLiteral(?keywords))
+}
+limit 10000

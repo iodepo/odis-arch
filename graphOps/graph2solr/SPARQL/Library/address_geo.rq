@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+
+SELECT (?s as ?id) ?type ?address ?addressCountry ?country
+WHERE {
+    ?s rdf:type ?type .
+    FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                         schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                         schema:CourseInstance, schema:Event, schema:Vehicle )
+    )
+    FILTER (isIRI(?s))
+    OPTIONAL {
+        ?s schema:nationality ?nat .
+        ?nat a schema:Country .
+        ?nat schema:name ?country .
+    }
+    OPTIONAL {
+        ?s schema:spatialCoverage ?sc .
+        ?sc a schema:Place .
+        ?sc schema:geo ?geo .
+        OPTIONAL {
+            ?geo schema:address ?address .
+        }
+        OPTIONAL {
+            ?geo schema:addressCountry ?addressCountry .
+        }
+    }
+}

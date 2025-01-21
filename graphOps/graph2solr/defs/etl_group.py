@@ -25,7 +25,7 @@ def group_mode(source, sink):
     # column_names = [col[1] for col in columns]
 
     # Read the SPARQL query from a file
-    with open("./SPARQL/duckdbSQLFull.sql", "r") as file:
+    with open("./SPARQL/duckdbSQL.sql", "r") as file:
         query = file.read()
 
     df = conn.execute(query).fetchdf()

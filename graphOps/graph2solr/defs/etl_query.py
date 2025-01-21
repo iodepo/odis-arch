@@ -11,8 +11,6 @@ def query_mode(source, sink, query, table):
     print(f"Query mode: Processing data from {source} to {sink}")
     # Add query-specific logic here
 
-    # Need to pass in (minimum): URL, SPARQL file, output table name
-
     url = source
     params = {
         "timeout": "600s",

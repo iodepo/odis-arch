@@ -1,10 +1,19 @@
 # SOLR Ops
 
-* Need to work on the spatial conversion to support both Solr and WIS2
-  * look at the DuckOps_wis2.py
+
+## TODO:
+
+- [ ] entity resolution and linking
+- [ ] building graphs (graphml) from lance
+- [ ] get h3 cells calculated
+- [ ] load in the JSON-LD source (or propose alternative), read from object store to lance
+- [ ] provider info from URI (later from prov)
+- [ ] keyword processing to graphml
+- [x] move the spatial and temporal updates to the export section, not the query section.   Do it right before the export to JSON-L
+
+
 * Ref: /home/fils/scratch/qleverflow/configs/TESTnq
 * Ref: /home/fils/scratch/solr/solr-8.11.2
-
 
 addup.py  should be able to do add[bulk] and update
 ref: https://claude.ai/chat/9fe1c04f-7d90-465a-98a2-34b237ed7e42
@@ -92,3 +101,20 @@ python graph2solr.py batch --source "./stores/solrInputFiles/sparql_results_grou
 * I can either select first in SQL or limit 1 in SPARQL for things like datePublished and dateModified (since they
   don't seem to be things that can be lists)
 * Note, imposing the dtype in the graph is better than alignment after the fact from an AI readiness point of view
+* Can get mutlityped elements like: "list_type":["Dataset,PropertyValue"],  Do we need a special search for PropertyValue?
+* sometimes ID is NONE (how?)  should we drop those?  I gues it's a case where the triples have no id, but then it would be a blank node I would assume
+* Might be able to do a group by in the SPARQL?
+
+Are they using things like:
+
+```
+<dynamicField name="*_i" type="int" indexed="true" stored="true"/>
+<dynamicField name="*_s" type="string" indexed="true" stored="true"/>
+```
+
+
+
+```text
+I don't see any changes in v8, but it of course crashes the front-end (no geometry types, keywords single string, etc.). Also, note that json_source is also required for the front-end (used on the results page).  Please also change indexed_id to index_id.         Now for the good news.  I changed your v8, to fix those problems mentioned here, for 1 record (same ISA record I test with all the time), and loaded it into Solr with our old schema (that schema just defines the geometry types, and sets all other fields as dynamic) and bingo, the front-end works (first load, and also the resulting results page).  Great!   Here is the fixed JSONL that you can change your script to generate exactly to: https://gatewaygeomatics.com/dl/odis/isa-single-record-2025-01-14-fixed.jsonl (and I find it useful to always compare to the original JSONLD for that record: https://gatewaygeomatics.com/dl/odis/isa-single-record.jsonld ). thanks again.
+
+```
