@@ -4,7 +4,7 @@
 
 ## About
 
-This page presents various views into the OIDS / OIH architecture.
+This page presents various views into the IODE architecture that gathers metadata from all partners in the ODIS Federation. These assets are used to create a merged graph to provide comprehensive overviews, products, and services. These synthesised assets are used to supply downstream systems such as the Ocean InfoHub (OIH).
 
 ## Building the images
 
