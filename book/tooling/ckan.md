@@ -658,7 +658,7 @@ as follows:
   
 #### Create an entry in the ODIS Catalogue and point to sitemap
 
-ODIS will use your entry in the [ODIS Catalogue](https://catalogue.odis.org/( 
+ODIS will use your entry in the [ODIS Catalogue](https://catalogue.odis.org/) 
 ("ODISCat") to find and harvest your sitemap.  Be sure to go through the quick 
 steps in the [Getting Started with ODIS](https://book.odis.org/gettingStarted.html) 
 section of the ODIS Book, to make sure that your entry is created properly.
