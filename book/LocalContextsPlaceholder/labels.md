@@ -6,7 +6,7 @@ The [Local Contexts Labels](https://localcontexts.org/labels/) are tools for Ind
 There are two categories of Labels that are used within the Hub: Traditional Knowledge (TK) Labels and Biocultural (BC) Labels. The **Traditional Knowledge (TK) Labels** identify and clarify community-specific rules and responsibilities regarding access and future use of traditional knowledge. The **Biocultural (BC) Labels** define community expectations about the appropriate use of biocultural collections and data.
 
 ```{warning}
-Although there may be similar fields used for multiple Labels, each Label should still be represented as the text for that Label may have different indications or restrictions that should be acknowledged.
+Although there may be similar fields used for multiple Labels, each Label should still be represented because the text for that Label may have different indications or restrictions that should be included.
 ```
 
 ## Example: Local Contexts Label Graph
@@ -23,8 +23,9 @@ In addition to the mappings below, the Label records can also be added to `usage
 
 | Label Type | usageInfo | ethicsPolicy | publishingPrinciples |
 | --- | :---: |  :---: | :---: |
-| TK Attribution Label | X |  | X |
-| TK Clan Label | X | X | X |
+| TK Attribution | X |  | X |
+| TK Clan | X | X | X |
+| TK Family | X | X | X |
 | TK Multiple Communities | X | X | X |
 | TK Community Voice |  |  |  |
 | TK Creative | X |  | X |
@@ -52,6 +53,10 @@ In addition to the mappings below, the Label records can also be added to `usage
 | BC Open to Commercialization | X |  | X |
 | BC Outreach | X |  | X |
 | BC Non-Commercial | X |  | X |
+
+```{note}
+For any community that would like to be contacted regarding a dataset, in addition to adding the appropriate labels, the community can add [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage).
+```
 
 ## Example: Community Agent Graph
 The only required information here is `type` and `name`. All other fields are optional and should be added by the Community. We are using [schema.org/Organization](https://schema.org/Organization) for this type. Any of the properties of Organization seen there are valid to use in such a record.
@@ -81,12 +86,12 @@ The only required information here is `type` and `name`. All other fields are op
 ```
 ```{note}
 Organization used here just as a way to represent an Indigenous community. In this case the following definition is used:
-    Community: Local Contexts uses “community” to inclusively refer to Indigenous Peoples around the world who may be organized and self-governed as Nations, First Nations, Tribes, Confederations, Land Councils, and similar collective groups with ancestral ties to the lands and natural resources where they live, occupy, or from which they have been displaced. For more information, visit our [Community FAQ section](https://localcontexts.org/support/frequently-asked-questions/#communities).
+    Community: Local Contexts uses “community” to inclusively refer to Indigenous Peoples around the world who may be organized and self-governed as a Nation, First Nation, Tribe, Confederation, Land Council, or similar collective group with ancestral ties to the lands and natural resources where they live, occupy, or from which they have been displaced. For more information, visit our [Community FAQ section](https://localcontexts.org/support/frequently-asked-questions/#communities).
 ```
 
 ## Traditional Knowledge (TK) Labels
 
-### TK Attribution <!-- Done -->
+### TK Attribution
 Added to the dataset.
 
 ```json
@@ -104,7 +109,7 @@ Added to the dataset.
 See also:  [TK Attribution](https://localcontexts.org/label/tk-attribution/)
 ```
 
-### TK Clan, TK Family and TK Multiple Communities <!-- Done* -->
+### TK Clan, TK Family and TK Multiple Communities
 <!-- PL wants to check if we can map agents in order based on a dedicated description of their role https://www.w3.org/TR/json-ld/#sets-and-lists -->
 Added to the dataset.
 
@@ -133,7 +138,7 @@ For [schema.org/agent](https://schema.org/agent), see Community Agent for additi
 See also:  [TK Clan](https://localcontexts.org/label/tk-clan/), [TK Family](https://localcontexts.org/label/tk-family/), or [TK Multiple Communities](https://localcontexts.org/label/tk-multiple-communities/)
 ```
 
-### TK Community Voice <!-- Done -->
+### TK Community Voice
 Added to the Local Contexts Project metadata.
 
 ```json
@@ -190,7 +195,7 @@ Added to the Local Contexts Project metadata.
 See also:  [TK Community Voice](https://localcontexts.org/label/tk-community-voice/)
 ```
 
-### TK Creative <!-- Done -->
+### TK Creative
 Added to the dataset.
 
 ```json
@@ -207,7 +212,7 @@ Added to the dataset.
 See also:  [TK Creative](https://localcontexts.org/label/tk-creative/)
 ```
 
-### TK Verified <!-- Review -->
+### TK Verified
 This Label will be added in two places.
 
 Added to the dataset.
@@ -264,7 +269,7 @@ Added to the Local Contexts Project metadata.
 See also:  [TK Verified](https://localcontexts.org/label/tk-verified/)
 ```
 
-### TK Non-Verified <!-- Review -->
+### TK Non-Verified
 Added to the dataset.
 
 ```json
@@ -286,7 +291,7 @@ Added to the dataset.
 See also:  [TK Non-Verified](https://localcontexts.org/label/tk-non-verified/)
 ```
 
-### TK Seasonal <!-- Review -->
+### TK Seasonal
 Added to a dataset.
 
 ```json
@@ -337,7 +342,7 @@ The `agent` property here should be included if this action should only be done 
 See also:  [TK Seasonal](https://localcontexts.org/label/tk-seasonal/)
 ```
 
-### TK Woman General <!-- Done -->
+### TK Woman General
 Added to the dataset.
 
 ```json
@@ -354,7 +359,7 @@ Added to the dataset.
 See also:  [TK Woman General](https://localcontexts.org/label/tk-women-general/)
 ```
 
-### TK Woman Restricted <!-- Done -->
+### TK Woman Restricted
 Added to the dataset.
 
 ```json
@@ -375,7 +380,7 @@ Added to the dataset.
 See also:  [TK Woman Restricted](https://localcontexts.org/label/tk-women-restricted/)
 ```
 
-### TK Men General <!-- Done -->
+### TK Men General
 Added to the dataset.
 
 ```json
@@ -392,7 +397,7 @@ Added to the dataset.
 See also:  [TK Men General](https://localcontexts.org/label/tk-men-general/)
 ```
 
-### TK Men Restricted <!-- Done -->
+### TK Men Restricted
 Added to the dataset.
 
 ```json
@@ -413,12 +418,15 @@ Added to the dataset.
 See also:  [TK Men Restricted](https://localcontexts.org/label/tk-men-restricted/)
 ```
 
-### TK Culturally Sensitive <!-- Review -->
+### TK Culturally Sensitive
 Added to the dataset.
 
 ```json
 {
     ...
+    "usageInfo": {
+        *include Label Mapping*
+    },
     "conditionsOfAccess": "Customized Label Title: Customized Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels"
 }
 ```
@@ -427,7 +435,7 @@ Added to the dataset.
 See also:  [TK Culturally Sensitive](https://localcontexts.org/label/tk-culturally-sensitive/)
 ```
 
-### TK Secret/Sacred <!-- Review -->
+### TK Secret/Sacred
 Added to the dataset.
 
 ```json
@@ -445,7 +453,7 @@ Added to the dataset.
 See also:  [TK Secret/Sacred](https://localcontexts.org/label/tk-secret-sacred/)
 ```
 
-### TK Open to Commercialization <!-- Review -->
+### TK Open to Commercialization
 Added to the dataset.
 
 ```json
@@ -500,7 +508,7 @@ Any additional fields available to [schema.org/Offer](https://schema.org/Offer) 
 See also:  [TK Open to Commercialization](https://localcontexts.org/label/tk-commercial/)
 ```
 
-### TK Non-Commercial <!-- Review -->
+### TK Non-Commercial
 Added to the dataset.
 
 ```json
@@ -519,7 +527,7 @@ Added to the dataset.
 See also:  [TK Non-Commercial](https://localcontexts.org/label/tk-non-commercial/)
 ```
 
-### TK Community Use Only <!-- Review -->
+### TK Community Use Only
 Added to the dataset.
 
 ```json
@@ -537,7 +545,7 @@ Added to the dataset.
 See also:  [TK Community Use Only](https://localcontexts.org/label/tk-community-use-only/)
 ```
 
-### TK Outreach <!-- Review -->
+### TK Outreach
 Added to the dataset.
 
 ```json
@@ -557,7 +565,7 @@ Added to the dataset.
 See also:  [TK Outreach](https://localcontexts.org/label/tk-outreach/)
 ```
 
-### TK Open to Collaboration <!-- Review -->
+### TK Open to Collaboration
 Added to the dataset.
 
 ```json
@@ -611,13 +619,22 @@ See also:  [TK Open to Collaboration](https://localcontexts.org/label/tk-open-to
 ## Biocultural (BC) Labels
 
 ### BC Provenance
+This Label can be applied to the dataset as indicated below, but the metadata record should include complete [Prov](https://book.odis.org/indexing/prov/index.html) information as much as possible including spatial coverage, events in which created this dataset is well described, when and where this dataset was collected, etc.
 
+```json
+{
+    ...
+    "usageInfo": {
+        *include Label Mapping*
+    },
+}
+```
 
 ```{seealso}
 See also:  [BC Provenance](https://localcontexts.org/label/bc-provenance/)
 ```
 
-### BC Multiple Communities and BC Clan <!-- Done* -->
+### BC Multiple Communities and BC Clan
 Added to the dataset.
 
 ```json
@@ -646,27 +663,72 @@ See also:  [BC Multiple Communities](https://localcontexts.org/label/bc-multiple
 ```
 
 ### BC Consent Verified
+Added to dataset.
 
+```json
+{
+    ...
+    "license": {
+        *include Label Mapping*
+    },
+    "usageInfo": {
+        *include Label Mapping*
+    },
+    "conditionsOfAccess": "Customized Label Title: Customized Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
+}
+```
+
+Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage) should be added by the community to ensure that the community can provide consent for this dataset and any derived works. The dataset must link back to the Project and/or the community that applied this Label.
 
 ```{seealso}
 See also:  [BC Consent Verified](https://localcontexts.org/label/bc-consent-verified/)
 ```
 
 ### BC Consent Non-Verified
+Added to the dataset.
 
+```json
+{
+    ...
+    "hasCertification": {
+        "@type": "Certification",
+        "issuedBy": {
+            "@type": "Organization",
+            "name": "Example Community Name"
+        },
+        "certificationStatus": "CertificationInactive",
+        *include Label Mapping*
+    }
+}
+```
 
 ```{seealso}
 See also:  [BC Consent Non-Verified](https://localcontexts.org/label/bc-consent-non-verified/)
 ```
 
 ### BC Research Use
+Added to dataset.
 
+```json
+{
+    ...
+    "license": {
+        *include Label Mapping*
+    },
+    "usageInfo": {
+        *include Label Mapping*
+    },
+    "conditionsOfAccess": "Customized Label Title: Customized Label text. https://localcontextshub.org/projects/00000000-00000000-00000000-00000000#labels",
+}
+```
+
+Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage) should be added by the community to ensure that the community can provide consent for this dataset and any derived works. The dataset must link back to the Project and/or the community that applied this Label.
 
 ```{seealso}
 See also:  [BC Research Use](https://localcontexts.org/label/bc-research-use/)
 ```
 
-### BC Open to Collaboration <!-- Review -->
+### BC Open to Collaboration
 Added to the dataset.
 
 ```json
@@ -699,7 +761,7 @@ Any additional fields available to [schema.org/Offer](https://schema.org/Offer) 
 See also:  [BC Open to Collaboration](https://localcontexts.org/label/bc-open-to-collaboration/)
 ```
 
-### BC Open to Commercialization <!-- Review -->
+### BC Open to Commercialization
 Added to the dataset.
 
 ```json
@@ -754,7 +816,7 @@ Any additional fields available to [schema.org/Offer](https://schema.org/Offer) 
 See also:  [BC Open to Commercialization](https://localcontexts.org/label/bc-open-to-commercialization/)
 ```
 
-### BC Outreach <!-- Review -->
+### BC Outreach
 Added to the dataset.
 
 ```json
@@ -774,7 +836,7 @@ Added to the dataset.
 See also:  [BC Outreach](https://localcontexts.org/label/bc-outreach/)
 ```
 
-### BC Non-Commercial <!-- Review -->
+### BC Non-Commercial
 Added to the dataset.
 
 ```json

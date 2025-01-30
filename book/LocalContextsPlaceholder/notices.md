@@ -1,7 +1,7 @@
 # Local Contexts Notices
 
 ## About
-The [Local Contexts Notices](https://localcontexts.org/notices/) are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests in collections and data.  The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority. They activate researcher and institutional responsibility to identify potential Indigenous rights and interests in historical and future collections, also operationalizing the CARE Principles.
+The [Local Contexts Notices](https://localcontexts.org/notices/) are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests in collections and data.  The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority. They activate researcher and institutional responsibility to identify potential Indigenous rights and interests in historical and future collections, also operationalizing the CARE Principles for Indigenous Data Governance.
 
 There are two categories of Notices that are used within the Hub: Engagement and Disclosure Notices.
 
@@ -80,8 +80,14 @@ Any additional fields available to [schema.org/Offer](https://schema.org/Offer) 
 
 ## Disclosure Notices
 
-### Traditional Knowledge (TK) Notice
+### Traditional Knowledge (TK) Notice and Biocultural (BC) Notice
+When including these Notices on a dataset, the Local Contexts Notice Graph should be placed within [schema.org/publishingPrinciples](https://schema.org/publishingPrinciples).
 
-### Biocultural (BC) Notice
+When including these Notices within [schema.org/Organization](https://schema.org/Organization), the Local Contexts Notice Graph should be placed within [schema.org/ethicsPolicy](https://schema.org/ethicsPolicy).
 
 ### Attribution Incomplete Notice
+When including this Notice as an invitation for communities to engage, the Local Contexts Notice Graph should be placed within [schema.org/publishingPrinciples](https://schema.org/publishingPrinciples).
+
+When including this Notice on a dataset, the Local Contexts Notice Graph should be placed within [schema.org/publishingPrinciples](https://schema.org/publishingPrinciples).
+
+When including this Notice within [schema.org/Organization](https://schema.org/Organization), the Local Contexts Notice Graph should be placed within [schema.org/ethicsPolicy](https://schema.org/ethicsPolicy).
