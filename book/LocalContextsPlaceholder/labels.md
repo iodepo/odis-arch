@@ -14,7 +14,7 @@ The following graph represents a basic record we might use for a Local Contexts 
 
 As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks for this type. Any of the properties of Label seen there are valid to use in such a record.
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/CreativeWork/graphs/local-contexts-label.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/creativeWork/graphs/localContexts-label.json
 :linenos:
 ```
 Label records should be added to a base dataset's metadata or to a Local Contexts Project metadata. Each Label below will indicate what section(s) that Label's record should be added to.
@@ -147,7 +147,7 @@ Added to the Local Contexts Project metadata.
         "@vocab": "https://schema.org/"
     },
     "@type": "Project",
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "name": "Example Project Title",
     "foundingDate": "2024-09-23T15:00:00.000Z",
     "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
@@ -238,7 +238,7 @@ Added to the Local Contexts Project metadata.
         "@vocab": "https://schema.org/"
     },
     "@type": "Project",
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "name": "Example Project Title",
     "foundingDate": "2024-09-23T15:00:00.000Z",
     "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",

@@ -8,7 +8,7 @@ The following graph represents a basic record we might use for a Local Contexts 
 
 As Ocean InfoHub is leveraging Schema.org we are using [schema.org/Project](https://schema.org/Project) for this type. Any of the properties of Project seen there are valid to use in such a record.
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/local-contexts-project-example.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/localContexts-project-example.json
 :linenos:
 ```
 ```{note}
@@ -24,7 +24,7 @@ When a Project is created in the Local Contexts Hub, it will automatically be as
         "@vocab": "https://schema.org/"
     },
     "@type": "Project",
-    "@id": "https://example.org/id/XYZ",
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
     "name": "Example Project Title",
     "foundingDate": "2024-09-23T15:00:00.000Z",
     "url": "https://localcontextshub.org/projects/00000000-00000000-00000000-00000000",
