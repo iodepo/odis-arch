@@ -2,7 +2,7 @@
 
 ## Intro
 
-![graphOps](./docs/graphOps.png)
+![graphOps](docs/graphOps.png)
 
 ## ODIS / OIH Workflows
 
