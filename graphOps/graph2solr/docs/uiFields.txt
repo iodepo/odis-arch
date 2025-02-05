@@ -1,0 +1,61 @@
+term in solr schema	type
+
+id	string
+type	string
+name	string list
+txt_region	string list
+txt_name	string list
+txt_keywords	string list
+description	string
+txt_description	string list
+txt_distribution	string list
+txt_url	string list
+txt_temporalCoverage	string list
+geom_type	string
+has_geom	boolean
+the_geom	geom
+geom_area	double
+geom_length	double
+geojson_point	string
+geojson_geom	string
+txt_variableMeasured	string list
+id_provider	string list
+txt_provider	string list
+keys	string list
+json_source	string
+index_id	string
+indexed_ts	date
+txt_sameAs	string list
+txt_license	string list
+txt_citation	string list
+txt_version
+id_includedInDataCatalog	string list
+txt_temporalCoverage
+txt_memberOf	string list
+txt_parentOrganization	string
+txt_knowsAbout	string list
+txt_affiliation
+txt_additionalProperty	string list
+txt_category	string
+txt_vehicleConfiguration	string
+txt_vehicleSpecialUsage	string
+txt_jobTitle	string
+txt_knowsAbout	string list
+txt_knowsLanguage	string list
+txt_nationality	string list
+txt_author	string list
+txt_educationalCredentialAwarded	string list
+txt_hasCourseInstance	string list
+txt_location
+txt_areaServed
+dt_startDate	date
+dt_endDate	date
+n_startYear	date
+n_endYear	date
+
+filteredgeom': 'first',
+
+centroid': 'first',
+length': 'first',
+area': 'first',
+wkt': 'first',

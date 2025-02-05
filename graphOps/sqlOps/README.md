@@ -6,7 +6,7 @@ The SQL queries to build out the products for OIH UI, Dashboard, and WIS2
 
 ## Issues
 
-getting results like 
+getting results like
 
 ```None, POLYGON ((-68.404076 48.495015, -68.404076 48.551067, -68.502725 48.551067, -68.502725 48.495```
 
@@ -49,3 +49,8 @@ References:
 * https://docs.ogc.org/DRAFTS/20-004.html#clause-crawlable-catalog
 
 
+## WCMP
+
+```
+pywcmp ets validate wis2Example_orig2diff.json
+```

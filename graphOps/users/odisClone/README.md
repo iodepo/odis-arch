@@ -129,3 +129,4 @@ WHERE {
 SPARQL examples can be found in [ODIS-IN SPARQL](https://github.com/iodepo/odis-in/tree/master/SPARQL)
 
 See [GleanerIO Archetype Tooling documentation](https://github.com/gleanerio/archetype/blob/master/docs/tooling.md)
+

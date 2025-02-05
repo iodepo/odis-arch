@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+
+SELECT (?s as ?id) ?type ?time ?temporalCoverage ?dateModified ?datePublished
+WHERE {
+    ?s rdf:type ?type .
+    FILTER (?type IN (schema:ResearchProject, schema:Project, schema:Organization,
+                         schema:Dataset, schema:CreativeWork, schema:Person, schema:Map, schema:Course,
+                         schema:CourseInstance, schema:Event, schema:Vehicle )
+    )
+
+    OPTIONAL { ?s schema:temporalCoverage ?temporalCoverage }
+    OPTIONAL { ?s schema:dataModified ?dataModified }
+    OPTIONAL { ?s schema:datePublished ?datePublished }
+}

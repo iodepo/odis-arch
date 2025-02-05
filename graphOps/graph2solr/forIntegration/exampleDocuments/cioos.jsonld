@@ -1,0 +1,279 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_8022dcdfa59e1835058bb7b744c156f3",
+      "@type": "DataDownload",
+      "contentUrl": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport_succes_restaurations_2012_grain_de_sable.pdf",
+      "description": "J'y mets mon grain de sable ! Citizen mobilization project. Review of the success of restoration in dune environments (2009-2011).",
+      "encodingFormat": "PDF",
+      "name": "Rapport_succes_restaurations_2012_Grain_de_sable.pdf",
+      "url": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport_succes_restaurations_2012_grain_de_sable.pdf"
+    },
+    {
+      "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_df22d29adc6c75b12142a3dd3cb78940",
+      "@type": "DataDownload",
+      "contentUrl": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/plan-restauration_grain_de_sable.pdf",
+      "description": "J'y mets mon grain de sable ! Presentation to partners (2010) of the sand dune restoration plan for 2011-2012.",
+      "encodingFormat": "PDF",
+      "name": "Plan restauration_Grain_de_sable.pdf",
+      "url": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/plan-restauration_grain_de_sable.pdf"
+    },
+    {
+      "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_77822ea8d655b415c738c51dbe450902",
+      "@type": "DataDownload",
+      "contentUrl": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport-final_2009-2010_grain_de_sable.pdf",
+      "description": "J'y mets mon grain de sable ! Final report.",
+      "encodingFormat": "PDF",
+      "name": "rapport-final_2009-2010_grain_de_sable.pdf",
+      "url": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport-final_2009-2010_grain_de_sable.pdf"
+    },
+    {
+      "@id": "https://ogsl.ca",
+      "@type": "Organization",
+      "legalName": "St. Lawrence Global Observatory",
+      "logo": [
+        {
+          "@language": "en",
+          "@value": "https://ogsl.ca/wp_ogsl/logo_partenaires/OGSL_Logo.png"
+        },
+        {
+          "@language": "fr",
+          "@value": "https://ogsl.ca/wp_ogsl/logo_partenaires/OGSL_Logo.png"
+        }
+      ],
+      "name": "slgo",
+      "url": "https://ogsl.ca"
+    },
+    {
+      "@id": "_:N4002e976815c45a59fb82cc0629a287a",
+      "@type": "Place",
+      "geo": {
+        "@id": "_:N05538c531aa04807a63a57a5a0ead2e0"
+      }
+    },
+    {
+      "@id": "_:N05538c531aa04807a63a57a5a0ead2e0",
+      "@type": "GeoShape",
+      "polygon": "{'type': 'Polygon', 'coordinates': [[[-60.8734899, 47.9806584], [-62.4610937, 47.9806584], [-62.4610937, 46.9241249], [-60.8734899, 46.9241249], [-60.8734899, 47.9806584]]]}"
+    },
+    {
+      "@id": "https://catalogue.cioos.ca/organization/b9a157db-ac56-4a28-aee9-899a35f463c6",
+      "@type": "Organization",
+      "contactPoint": {
+        "@id": "_:N2f0948324657465ab1c91cec9c45235d"
+      },
+      "name": "St. Lawrence Global Observatory"
+    },
+    {
+      "@id": "_:N2f0948324657465ab1c91cec9c45235d",
+      "@type": "ContactPoint",
+      "contactType": "Publisher",
+      "url": "https://ogsl.ca"
+    },
+    {
+      "@id": "https://catalogue.cioos.ca",
+      "@type": "DataCatalog",
+      "description": "",
+      "name": "CIOOS/SIOOC",
+      "url": "https://catalogue.cioos.ca"
+    },
+    {
+      "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1.jsonld",
+      "@type": "Dataset",
+      "creator": {
+        "@id": "_:N1b52a726e9f44be18036f7b2b95a6232"
+      },
+      "dateModified": "2023-10-27T16:27:40.722351",
+      "datePublished": "2023-10-27T16:27:40.722347",
+      "dcat:contactPoint": [
+        {
+          "@id": "_:N85df828189164a018501bbd4b8439cff"
+        },
+        {
+          "@id": "_:Na916a7b3156c444396766e63c39840a8"
+        }
+      ],
+      "description": [
+        {
+          "@language": "fr",
+          "@value": "Entre 2009 et 2011, le projet « J’y mets mon grain de sable », un vaste projet de renforcement des dunes visant à atténuer l’érosion des côtes basses sablonneuses dans les secteurs les plus névralgiques de l’archipel, a été mené par l’équipe d’Attention FragÎles, en collaboration avec différents partenaires. Ce projet a également permis de dresser un premier portrait de l’érosion dunaire sur une grande partie des plages des îles de la Madeleine. \n\nQuatre méthodes ont été utilisées pour piéger le sable et ainsi reconstruire la dune : installation de fascines, de ganivelles, plantation d’Ammophile à ligule courte, installation de tapis végétal. Des groupes de citoyens et de jeunes des écoles ont été mobilisés pour ce projet. En 2009-2010, 82 sites ont été restaurés avec l’aide de 225 personnes, et en 2010-2011, 107 sites l’ont été avec la participation de 144 personnes. Enfin, pour promouvoir les sites rebâtis par la communauté et inviter les visiteurs et Madelinots à prendre soin des dunes, six panneaux d’interprétation furent installés aux abords des plages. La brochure « Lutter ensemble contre l’érosion », réalisée en 2010, fut aussi distribuée aux participants. En 2011-2012, un suivi de ces restaurations a été effectué, 105 sites du projet ont été visités et un bilan sur le succès de restauration en milieu dunaire a été dressé. \n\nCe bilan a permis de constater que dès la première année de mise en place, on observait un rehaussement du niveau de sable de plus de 30 cm sur les structures dans environ 80% des cas. Après 2 ans de fonctionnalité, on a pu observer un enfouissement des structures sur une hauteur de 50 à 70 cm dans plus de 60 % des sites restaurés. Ce rapport a donc mis en relief l’efficacité des capteurs de sables dans une optique de restauration dunaire."
+        },
+        {
+          "@language": "en",
+          "@value": "Between 2009 and 2011, the « J’y mets mon grain de sable » project, a vast dune reinforcement project aimed at mitigating the erosion of low sandy coasts in the most sensitive areas of the archipelago, was carried out by the Attention FragÎles team in collaboration with various partners. The project also helped to create the first overview of dune erosion on the Islands’ beaches. \n\nFour methods were used to trap the sand and rebuild the dune: building weirs and sand fences, planting American marram grass, and adding groundcover plants. Groups of citizens and schoolchildren were mobilized for this project. In 2009-2010, 82 sites were restored with the help of 225 people, with an additional 107 sites in 2010-2011, thanks to 144 participants. Finally, six interpretation panels were installed near the beaches to promote the sites rebuilt by the community and invite visitors and locals to take care of the dunes. The brochure \"Fighting erosion together,\" produced in 2010, was also distributed to the participants. In 2011-2012, a follow-up of these restorations was carried out, 105 project sites were visited, and a report on the success of restoration in the dune environment was drawn up. \n\nThis report showed that from the first year of installation, we observed a rise in the level of sand of more than 30 cm on the structures in about 80% of cases. After two years of operation, it was possible to observe a burial of the structures to a height of 50 to 70 cm in more than 60% of the restored sites. This report has therefore highlighted the effectiveness of sand traps with a view to dune restoration."
+        }
+      ],
+      "distribution": [
+        {
+          "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_df22d29adc6c75b12142a3dd3cb78940"
+        },
+        {
+          "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_77822ea8d655b415c738c51dbe450902"
+        },
+        {
+          "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_ae89f561817962d9a6d3d60b1a084d69"
+        },
+        {
+          "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_8022dcdfa59e1835058bb7b744c156f3"
+        }
+      ],
+      "identifier": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1",
+      "includedInDataCatalog": [
+        {
+          "@id": "https://catalogue.ogsl.ca"
+        },
+        {
+          "@id": "https://catalogue.cioos.ca"
+        }
+      ],
+      "keywords": [
+        {
+          "@language": "en",
+          "@value": "other"
+        },
+        {
+          "@language": "fr",
+          "@value": "restauration de plage"
+        },
+        {
+          "@language": "fr",
+          "@value": "Oceans"
+        },
+        {
+          "@language": "en",
+          "@value": "coastal erosion"
+        },
+        {
+          "@language": "fr",
+          "@value": "érosion côtière"
+        },
+        {
+          "@language": "en",
+          "@value": "beach restoration"
+        },
+        {
+          "@language": "en",
+          "@value": "shoreline protection"
+        },
+        {
+          "@language": "fr",
+          "@value": "Autre"
+        },
+        {
+          "@language": "fr",
+          "@value": "protection des côtes"
+        }
+      ],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "name": [
+        {
+          "@language": "en",
+          "@value": "« J’y mets mon grain de sable » Project - Dune Restoration on the Magdalen Islands (2009-2011)"
+        },
+        {
+          "@language": "fr",
+          "@value": "Projet « J’y mets mon grain de sable » - Restauration dunaire Îles-de-la-Madeleine (2009-2011)"
+        }
+      ],
+      "provider": {
+        "@id": "https://ogsl.ca"
+      },
+      "publisher": {
+        "@id": "https://catalogue.cioos.ca/organization/b9a157db-ac56-4a28-aee9-899a35f463c6"
+      },
+      "spatialCoverage": {
+        "@id": "_:N2a2d3577be4d41ccb430325b6d7d5151"
+      },
+      "temporalCoverage": "2009-01-01/2011-12-31",
+      "url": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1",
+      "variableMeasured": {
+        "@id": "_:N8fcc53638dd8463dbe0bb6cf8bc5d657"
+      },
+      "version": "2023-10-17"
+    },
+    {
+      "@id": "_:N85df828189164a018501bbd4b8439cff",
+      "@type": "http://www.w3.org/2006/vcard/ns#Organization",
+      "http://www.w3.org/2006/vcard/ns#fn": "Attention FragÎles",
+      "http://www.w3.org/2006/vcard/ns#hasEmail": "mailto:",
+      "http://www.w3.org/2006/vcard/ns#role": "['custodian', 'distributor', 'originator', 'owner']"
+    },
+    {
+      "@id": "_:Na916a7b3156c444396766e63c39840a8",
+      "@type": "http://www.w3.org/2006/vcard/ns#Individual",
+      "http://www.w3.org/2006/vcard/ns#fn": "Marie-Ève, Giroux",
+      "http://www.w3.org/2006/vcard/ns#hasEmail": "mailto:action@attentionfragiles.org",
+      "http://www.w3.org/2006/vcard/ns#org": "Attention FragÎles",
+      "http://www.w3.org/2006/vcard/ns#role": "pointOfContact"
+    },
+    {
+      "@id": "_:N8fcc53638dd8463dbe0bb6cf8bc5d657",
+      "@type": "PropertyValue",
+      "name": "Other"
+    },
+    {
+      "@id": "_:N2a2d3577be4d41ccb430325b6d7d5151",
+      "@type": "Place",
+      "geo": {
+        "@id": "_:Nf307f7ad194f4b7aa2353dcdb071dbae"
+      }
+    },
+    {
+      "@id": "_:Nf307f7ad194f4b7aa2353dcdb071dbae",
+      "@type": "GeoShape",
+      "box": "46.9241249 -62.4610937 47.9806584 -60.8734899"
+    },
+    {
+      "@id": "_:N1b52a726e9f44be18036f7b2b95a6232",
+      "@type": "Organization",
+      "name": "Attention FragÎles",
+      "sameAs": ""
+    },
+    {
+      "@id": "https://catalogue.cioos.ca/dataset/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/resource/ca-cioos-resource_ae89f561817962d9a6d3d60b1a084d69",
+      "@type": "DataDownload",
+      "contentUrl": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport_habitat-faunique_2010-2011_grain_de_sable.pdf",
+      "description": "J'y mets mon grain de sable ! Mobilization project - phase II. Discovering wildlife habitats, Final Report.",
+      "encodingFormat": "PDF",
+      "name": "rapport_habitat-faunique_2010-2011_grain_de_sable.pdf",
+      "url": "https://catalogue.ogsl.ca/data/attention-fragiles/ca-cioos_2a3b59bb-7f82-4e1b-8ead-67372c1b08c1/rapport_habitat-faunique_2010-2011_grain_de_sable.pdf"
+    },
+    {
+      "@id": "https://catalogue.ogsl.ca",
+      "@type": "DataCatalog",
+      "description": "",
+      "name": "OGSL/SLGO",
+      "url": "https://catalogue.ogsl.ca"
+    }
+  ]
+}
+          

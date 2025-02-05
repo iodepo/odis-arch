@@ -19,34 +19,34 @@ from io import BytesIO
 #     return d
 
 
-def get_bytes(source):
+def get_bytes(source, ssl):
     url, bucket, obj = parse_s3_url(source)
 
     sk = os.getenv("MINIO_SECRET_KEY")
     ak = os.getenv("MINIO_ACCESS_KEY")
 
-    # Create client with access and secret key.
-    mc = Minio(url, ak, sk, secure=False)
+    # Create a client with access and secret key.
+    mc = Minio(url, ak, sk, secure=ssl)
     data = mc.get_object(bucket, obj)
     d = data.read()
 
     return d
 
 
-def reads3url(source):
+def reads3url(source, ssl):
     url, bucket, obj = parse_s3_url(source)
 
     sk = os.getenv("MINIO_SECRET_KEY")
     ak = os.getenv("MINIO_ACCESS_KEY")
 
-    # Create client with access and secret key.
-    mc = Minio(url, ak, sk, secure=False)
-    d = read_object_to_string(mc, bucket, obj)
+    # Create a client with access and secret key.
+    mc = Minio(url, ak, sk, secure=ssl)
+    d = read_object_to_string(mc, bucket, obj, ssl)
 
     return d
 
 
-def read_object_to_string(mc, bucket_name, object_name):
+def read_object_to_string(mc, bucket_name, object_name, ssl):
     try:
         data = mc.get_object(bucket_name, object_name)
         data_str = data.read().decode('utf-8')
@@ -68,7 +68,7 @@ def parse_s3_url(s3_url):
     return server_url, bucket_name, object_path
 
 
-def get_object(target):
+def get_object(target, ssl):
     # it's an S3 based object
     print("Reading object from minio")
 
@@ -76,8 +76,8 @@ def get_object(target):
     ak = os.getenv("MINIO_ACCESS_KEY")
     srv, bkt, obj = parse_s3_url(target)
 
-    # Create client with access and secret key.
-    mc = Minio(srv, ak, sk, secure=False)
+    # Create a client with access and secret key.
+    mc = Minio(srv, ak, sk, secure=ssl)
 
     try:
         data = mc.get_object(bkt, obj)

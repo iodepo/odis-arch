@@ -1,0 +1,80 @@
+direction: right
+
+classes: {
+coreclass: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                     font-size: 18
+                    fill: lightgreen
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+      actionclass: {
+    width: 250
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightblue
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+propclass: {
+    width: 100
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightyellow
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+prodclass: {
+    width: 150
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: honeydew
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+}
+
+*.class: actionclass
+
+dagster: {
+    gleaner
+    nabu
+    etl
+    *.class: prodclass
+
+}
+triplestore: qlever \n triplestore
+solr
+webui
+oss: object store
+dashboard
+router
+
+dagster.gleaner -> oss: http
+
+dagster.etl <- triplestore: http
+dagster.etl -> oss: http
+dagster.etl -> solr: http
+
+solr <- webui: http
+triplestore <- dashboard: http
+oss <- dashboard: http
+
+webui <-> router : http
+oss <-> router: http
+triplestore <-> router: http
+dashboard <-> router: http
+
+#router -> net: http
+#net: Internet
+#net.shape: cloud
+# net.class: coreclass

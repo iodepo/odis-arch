@@ -1,0 +1,84 @@
+direction: right
+
+
+classes: {
+    coreclass: {
+        width: 400
+        height: 150
+                   style: {
+                        stroke-width: 1
+                        font-size: 26
+                        fill: "#44C7B1"
+                        shadow: false
+                        border-radius: 0
+                   }
+          }
+    propclass: {
+        width: 200
+        height: 75
+                   style: {
+                         stroke-width: 1
+                         font-size: 26
+                         fill: honeydew
+                        shadow: false
+                        border-radius: 0
+                   }
+          }
+    coreclassspan: {
+        width: 400
+                   style: {
+                        stroke-width: 1
+                        fill: "#FFE4A7"
+                        shadow: false
+                        border-radius: 0
+                   }
+          }
+    propclassspan: {
+        width: 200
+        height: 75
+                   style: {
+                         stroke-width: 1
+                         font-size: 26
+                         fill: "#D5B369"
+                        shadow: false
+                        border-radius: 0
+                   }
+          }
+}
+
+*.class: propclass
+
+rdf: RDF Triplestore
+solr: SOLR
+wis2: WIS2 GeoJSON
+
+
+q: query
+g: group
+a: Wide format \n optimization
+j: JSONL export
+b: batch loader
+
+w: WIS2 etl
+2rdf: Graph \n augmentation
+
+rdf -> q
+ q -> g: Table \n (query results)
+
+  g ->  a : Table \n (group results)
+   a ->  j : Table \n (augment results)
+   j -> b: SOLR JSONL
+   b -> solr: Solr API
+
+2rdf -> 2rdf: Table \n (augment results)
+
+rdf <- 2rdf: SPARQL
+
+w -> w : Table \n (augment results)
+w -> wis2: GeoJSON
+
+
+2rdf.class: propclassspan
+w.class: propclassspan
+
+

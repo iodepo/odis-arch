@@ -9,7 +9,6 @@ import warnings
 # Suppress FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-
 consoleCode = """CREATE TABLE base (id VARCHAR, type VARCHAR, name VARCHAR, url VARCHAR, description VARCHAR, headline VARCHAR, g VARCHAR );
 CREATE TABLE dataset (id VARCHAR, type VARCHAR, sameAs VARCHAR, license VARCHAR, citation VARCHAR, keyword VARCHAR, includedInDataCatalog VARCHAR, distribution VARCHAR, region VARCHAR, provider VARCHAR, publisher VARCHAR, creator VARCHAR);
 CREATE TABLE sup_time (id VARCHAR, type VARCHAR, time VARCHAR, temporalCoverage VARCHAR, dateModified VARCHAR, datePublished VARCHAR, );
@@ -65,8 +64,11 @@ duckdb.install_extension("httpfs")
 
 # Instantiate the DuckDB connection
 con = duckdb.connect()
-con.execute(consoleCode)  # load from url
 
+# Load
+con.execute(consoleCode)
+
+# Query
 df = con.execute(sql).fetchdf()
 
 # print(df.info())
@@ -84,7 +86,8 @@ gdf = gpd.GeoDataFrame(df_geomtrue, geometry='geometry')
 # TODO put in the H3 grid cell generation here
 
 # export to json  ERROR does not work for WIS2 since I need to add in some elements for WIS2
-gdf.to_file('wis2.geojson', driver='GeoJSON', orient='records', lines=True)
+# gdf.to_file('wis2.geojson', driver='GeoJSON', orient='records', lines=True)
+gdf.to_file('wis2.geojson', driver='GeoJSON')
 
 ## TODO move def to external file
 def wis2mods(file_path, identifier, link):
@@ -114,4 +117,3 @@ for idx, row in gdf.iterrows():
 
 # save to pandas (should be geopandas?)
 df.to_parquet('wis2.parquet')
-

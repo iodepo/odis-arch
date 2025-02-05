@@ -1,22 +1,5 @@
 # Master Data Product 
 
-## TODO
-
-* [ ] Add the columns "completeness" and "accreditation" to the products  
-
-### Temporal
-
-The temporal coverage all comes from the "temporalCoverage".   We get the 
-start, end dates and start end years from processing the temporalCoverage.    Need
-to put this into the python time package and pull these and augment the temporal parquet
-
-###  Geometry
-
-Need to do apply the spatial functions to the filteredgeom
-
-Need to apply Jeff's transforms
-
-
 ## About
 
 This is a quick start for code to generate a "Master Data Product" from a 
@@ -24,30 +7,35 @@ provided OIH Release graph.  The graph needs to be in NQuads format and follow
 the guidance from the OIH Book to express resources that align with the 
 queries used.
 
-
-
 ## Code
 
+* mdp.py
+  * Master data processing code
 * mdp_v2.py
   * Updated mdp using PyOxigraph and better processing
-* oih_engine.py
-  * Leverages the above and loops through the queries and sources to make products
+* runner.sh
+  * Leverages the above mdp_v2.py command and loops through the queries and sources to make products
 * oih_processSpatial.py
-  * flesh out the spatial elements
+  * compute the spatial elements into Solr ready format
 * oih_processTemporal.py
-  * flesh out the temporal elements
-
+  * compute the temporal elements into Solr ready format
 
 
 * mdp.py
   * Original MDP, still more comprehensive in terms of pre-processing the data
 * Morgue/objectProcessor.sh
-  * BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_v2.py
+  * a BASH shell script to loop on items to make products from mdp, like oih_producer.py for mdp_v2.py
 
 
+## Workflow and Commands
 
 
-## Commands (new)
+If you are using s3:// then you need to set the environment variables that follow.
+
+```bash
+❯ export MINIO_ACCESS_KEY=YOUR_ACCESS_KEY_HERE 
+❯ export MINIO_SECRET_KEY=YOUR_SECRET_KEY_HERE
+```
 
 Indexing via the scheduling system for ODIS places the resulting summoned documents into 
 the buckets _gleaner.oih/summoned/PARTNER_ with the generated graphs being placed in 
@@ -59,31 +47,59 @@ the last item is the time stamp of the time the snapshot was made.
 From these graphs in the latest prefix, we can generate the resulting products via
 
 ```bash
- python mdp_v2.py  --source "s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/18042024/cioos_release.nq"  --query "./queries/baseQuery.rq"  --output  "s3://ossapi.oceaninfohub.org/commons/OIH-PROD/18042024/cioos.parquet"
+ python mdp_v2.py  --ssl False  \
+  --source "s3://ossapi.oceaninfohub.org/commons/ODIS-KG-MAIN/latest/africaioc_release.nq"  \
+  --query "./queries/baseQuery.rq"  \
+  --output  "s3://ossapi.oceaninfohub.org/commons/OIH-PROD/latest/africaioc_baseQuery.parquet" 
 ```
 
 This both pulls from the ODIS object store and pushed the results back to the object store.  
 
-The code _oih_producer.py_ is used to apply all queries to all objects in a given prefix.  
+The script _runner.sh_ is used to apply all queries to all objects in a given prefix.
+So, for example:
+
+```bash
+./runner.sh obis
+```
+
+Will run all the SPARQL queries across the various data types, like Person, Dataset, etc.
+Note that this script is coded with specific paths for testing.  It also requires authentification
+if being used against ODIS resources.
+
+## Spatial and Temporal Augmenting
+
+The spatial and temporal elements of the graph need to be translated, in some cases, to align 
+with expectations for the generation of products. In particular, for products that work 
+with the Solr index and also for export into spatial formats like GeoJSON for groups like WMO/WIS2. 
 
 
+```bash
+ python3 oih_processSpatial.py --ssl False --source s3://ossapi.oceaninfohub.org/commons/OIH-PROD/latest/obis_sup_geo.parquet --output s3://ossapi.oceaninfohub.org/commons/OIH-PROD/latest/obis_sup_geo_modified.parquet
+ ```
 
-## DuckDB
+```bash
+ python3 oih_processTemporal.py --ssl False --source s3://ossapi.oceaninfohub.org/commons/OIH-PROD/latest/obis_sup_temporal.parquet --output s3://ossapi.oceaninfohub.org/commons/OIH-PROD/latest/obis_sup_temporal_modified.parquet
+ ```
+
+
+## sqlOps:  Generating the Solr input products
 
 DuckDB is used to query the products and generate pandas dataframes that are converted to JSON.
 
 These are located in the ODIS-IN repository SQL directory. 
 
+# DEPRECATED: The following section is deprecated.
+
 
 ## Quickstart
 
-> NOTE:  This program can take several minutes to run.  While it does attempt to provide
+> NOTE: This program can take several minutes to run.  While it does attempt to provide
 > feedback on progress, this can be slow also as it can only increment on query completion.
 > Also, some of the dataframe transforms can be lengthy too.  
 
 An example command will be like:
 
-> NOTE:  A run for a graph the size of CIOOS takes around 4 to 5 minutes
+> NOTE: A run for a graph the size of CIOOS takes around 4 to 5 minutes
 
 ```Bash
  python mdp.py  --source "s3://nas.local:49153/public/graphs/test1/africaioc_release.nq"  --output  "s3://nas.local:49153/public/assets/test1/testjan30.parquet"
@@ -122,7 +138,7 @@ python mdp2Solr.py --source ./output/cioos.parquet --outputdir ./output/solr
 
 ## Testing with Oxigraph
 
-To test of the queries directly we want to be able to load up the RDF into Oxigraph (or your favorite triplestore) 
+To test of the queries directly, we want to be able to load up the RDF into Oxigraph (or your favorite triplestore) 
 and test our queries there directly.
 
 

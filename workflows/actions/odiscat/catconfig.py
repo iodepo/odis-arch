@@ -47,22 +47,22 @@ minio:
   ssl:
   bucket: oih
 gleaner:
-  runid: oih # this will be the bucket the output is placed in...
-  summon: true # do we want to visit the web sites and pull down the files
+  runid: oih 
+  summon: true  
   mill: false
 context:
   cache: true
 contextmaps:
 - prefix: "https://schema.org/"
-  file: "./assets/jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+  file: "./assets/jsonldcontext.json" 
 - prefix: "http://schema.org/"
-  file: "./assets/jsonldcontext.json"  # wget http://schema.org/docs/jsonldcontext.jsonld
+  file: "./assets/jsonldcontext.json"  
 summoner:
-  after: ""      # "21 May 20 10:00 UTC"
-  mode: full  # full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing
+  after: ""     
+  mode: full   
   threads: 5
-  delay:  # milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1)
-  headless: http://0.0.0.0:9222  # URL for headless see docs/headless
+  delay: 
+  headless: http://0.0.0.0:9222  
 millers:
   graph: false
 """
@@ -311,7 +311,7 @@ def main():
 
     # Save cleaned dictionary to a YAML file
     with open('gleanerconfig.yaml', 'w') as file:
-        yaml.dump(cleaned_dict, file, sort_keys=False, default_flow_style=False)
+        file.write(cleaned_dict)
 
 
 if __name__ == "__main__":

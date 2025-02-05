@@ -1,0 +1,154 @@
+direction: right
+
+classes: {
+coreclass: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                     font-size: 18
+                    fill: lightgreen
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+      actionclass: {
+                width: 200
+                height: 100
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightblue
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+propclass: {
+    width: 200
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightyellow
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+prodclass: {
+    width: 210
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: honeydew
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+}
+
+### resources section
+
+partners: JSON-LD files \n from partners
+partners.shape: Circle
+config: config files from \n git & odiscat
+config.shape: Circle
+gleaner: Gleaner
+etl_odis: ODIS ETL \n ODIS Configs
+etl: ODIS ETL \n OIH Configs
+
+oss: ODIS Object Store {
+    jsonld: JSON-LD files\n from partners
+    nq: RDF (nq)\n one per partner
+     jsonld.shape: Circle
+    nq.shape: Circle
+    jsonld.class: propclass
+    nq.class: propclass
+
+    jsonld -> nq: gleaner
+}
+
+sparql_odis: ODIS SPARQL \nendpoint
+sparql: OIH SPARQL \nendpoint
+odisprod: ODIS Products
+oihprod: OIH Products
+solr: OIH SOLR
+validator: SHACL Validator
+
+partners.class: propclass
+config.class: propclass
+gleaner.class: actionclass
+validator.class: actionclass
+sparql_odis.class: actionclass
+sparql.class: actionclass
+etl_odis.class: actionclass
+etl.class: actionclass
+solr.class: actionclass
+
+odisprod: {
+    csv: ODIS csv files \n one per partner
+    parquet: ODIS parquet files \n one per partner
+    csv.shape: Circle
+    parquet.shape: Circle
+    csv.class: prodclass
+    parquet.class: prodclass
+}
+
+oihprod: {
+   csv: OIH csv files \n one per partner
+    parquet: OIH parquet files \n one per partner
+    valreport: Validation Report \n SHACL RDF
+    csv.shape: Circle
+    parquet.shape: Circle
+    valreport.shape: Circle
+    csv.class: prodclass
+    parquet.class: prodclass
+    valreport.class: prodclass
+}
+
+sys: System System Interop {
+    wis2: WIS2 Products
+    nfra: AquaNFRA
+    west: WESR
+    *.class: actionclass
+}
+
+dash: Dashboard {
+  dashpy: Dashboard.py
+  streamlit: Streamlit UI
+
+  dashpy <-> streamlit
+
+      *.class: actionclass
+
+}
+
+oihprod.valreport -> dash.streamlit: used by (SPARQL)
+sparql_odis -> dash.streamlit: used by (SPARQL)
+odisprod.parquet -> dash.streamlit: via DuckDB (SQL)
+
+wmowis2: WIS2
+wmowis2.shape: cloud
+
+
+### connection section
+
+partners -> gleaner
+config -> gleaner
+
+gleaner -> oss.jsonld
+
+oss.nq -> sparql: gleaner + schema alignment
+oss.nq -> sparql_odis: gleaner
+
+oss.nq -> validator -> oihprod.valreport
+
+sparql -> etl
+sparql_odis -> etl_odis
+
+etl_odis -> odisprod.csv
+etl_odis -> odisprod.parquet
+
+etl -> oihprod.csv
+etl -> oihprod.parquet
+etl -> solr
+
+oihprod.parquet -> sys.wis2
+sys.wis2 -> wmowis2
