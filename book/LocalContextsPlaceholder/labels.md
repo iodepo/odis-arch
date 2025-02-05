@@ -1,9 +1,21 @@
 # Local Contexts Labels
 
 ## About
-The [Local Contexts Labels](https://localcontexts.org/labels/) are tools for Indigenous communities and local organizations. Developed through sustained partnership and testing within Indigenous communities across multiple countries, the Labels allow communities to express local and specific conditions for sharing and engaging in future research and relationships in ways that are consistent with already existing community rules, governance, and protocols for using, sharing, and circulating knowledge and data. The Labels provide a practical application of the CARE Principles for Indigenous Data Governance. By establishing Indigenous cultural authority, the Labels clarify Indigenous and local community rights, interests, and relationships to collections and/or data.
+The [Local Contexts Labels](https://localcontexts.org/labels/) are tools for Indigenous
+communities and local organizations. Developed through sustained partnership and testing
+within Indigenous communities across multiple countries, the Labels allow communities
+to express local and specific conditions for sharing and engaging in future research
+and relationships in ways that are consistent with already existing community rules,
+governance, and protocols for using, sharing, and circulating knowledge and data. The
+Labels provide a practical application of the CARE Principles for Indigenous Data Governance.
+By establishing Indigenous cultural authority, the Labels clarify Indigenous and local
+community rights, interests, and relationships to collections and/or data.
 
-There are two categories of Labels that are used within the Hub: Traditional Knowledge (TK) Labels and Biocultural (BC) Labels. The **Traditional Knowledge (TK) Labels** identify and clarify community-specific rules and responsibilities regarding access and future use of traditional knowledge. The **Biocultural (BC) Labels** define community expectations about the appropriate use of biocultural collections and data.
+There are two categories of Labels that are used within the Hub: Traditional Knowledge
+(TK) Labels and Biocultural (BC) Labels. The **Traditional Knowledge (TK) Labels**
+identify and clarify community-specific rules and responsibilities regarding access
+and future use of traditional knowledge. The **Biocultural (BC) Labels** define community
+expectations about the appropriate use of biocultural collections and data.
 
 ```{warning}
 Although there may be similar fields used for multiple Labels, each Label should still be represented because the text for that Label may have different indications or restrictions that should be included.
@@ -12,14 +24,19 @@ Although there may be similar fields used for multiple Labels, each Label should
 ## Example: Local Contexts Label Graph
 The following graph represents a basic record we might use for a Local Contexts Label.
 
-As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks for this type. Any of the properties of Label seen there are valid to use in such a record.
+As Ocean InfoHub is leveraging Schema.org we are using schema.org/CreativeWorks for this
+type. Any of the properties of Label seen there are valid to use in such a record.
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/CreativeWork/graphs/local-contexts-label.json
 :linenos:
 ```
-Label records should be added to a base dataset's metadata or to a Local Contexts Project metadata. Each Label below will indicate what section(s) that Label's record should be added to.
+Label records should be added to a base dataset's metadata or to a Local Contexts
+Project metadata. Each Label below will indicate what section(s) that Label's record
+should be added to.
 
-In addition to the mappings below, the Label records can also be added to `usageInfo`, `ethicsPolicy`, or `publishingPrinciples` fields based on when or how the data was gathered, used, or shared.
+In addition to the mappings below, the Label records can also be added to `usageInfo`,
+`ethicsPolicy`, or `publishingPrinciples` fields based on when or how the data was
+gathered, used, or shared.
 
 | Label Type | usageInfo | ethicsPolicy | publishingPrinciples |
 | --- | :---: |  :---: | :---: |
@@ -55,11 +72,14 @@ In addition to the mappings below, the Label records can also be added to `usage
 | BC Non-Commercial | X |  | X |
 
 ```{note}
-For any community that would like to be contacted regarding a dataset, in addition to adding the appropriate labels, the community can add [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage).
+For any community that would like to be contacted regarding a dataset, in addition to adding the appropriate Labels, the community can add [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage).
 ```
 
 ## Example: Community Agent Graph
-The only required information here is `type` and `name`. All other fields are optional and should be added by the Community. We are using [schema.org/Organization](https://schema.org/Organization) for this type. Any of the properties of Organization seen there are valid to use in such a record.
+The only required information here is `type` and `name`. All other fields are optional
+and should be added by the Community. We are using [schema.org/Organization](https://schema.org/Organization)
+for this type. Any of the properties of Organization seen there are valid to use in
+such a record.
 
 ```json
 {
@@ -86,7 +106,8 @@ The only required information here is `type` and `name`. All other fields are op
 ```
 ```{note}
 Organization used here just as a way to represent an Indigenous community. In this case the following definition is used:
-    Community: Local Contexts uses “community” to inclusively refer to Indigenous Peoples around the world who may be organized and self-governed as a Nation, First Nation, Tribe, Confederation, Land Council, or similar collective group with ancestral ties to the lands and natural resources where they live, occupy, or from which they have been displaced. For more information, visit our [Community FAQ section](https://localcontexts.org/support/frequently-asked-questions/#communities).
+    Community: Local Contexts uses “community” to inclusively refer to Indigenous Peoples around the world who may be organized and self-governed as a Nation, First Nation, Tribe, Confederation, Land Council, or similar collective group with ancestral ties to the lands and natural resources where they live, occupy,
+    or from which they have been displaced. For more information, visit Local Contexts' [Community FAQ section](https://localcontexts.org/support/frequently-asked-questions/#communities).
 ```
 
 ## Traditional Knowledge (TK) Labels
@@ -110,7 +131,8 @@ See also:  [TK Attribution](https://localcontexts.org/label/tk-attribution/)
 ```
 
 ### TK Clan, TK Family and TK Multiple Communities
-<!-- PL wants to check if we can map agents in order based on a dedicated description of their role https://www.w3.org/TR/json-ld/#sets-and-lists -->
+<!-- PL wants to check if we can map agents in order based on a dedicated description
+of their role https://www.w3.org/TR/json-ld/#sets-and-lists -->
 Added to the dataset.
 
 ```json
@@ -130,7 +152,8 @@ Added to the dataset.
 }
 ```
 
-For the TK Multiple Communities Label, the `agent` property should be included for all communities added to the Label.
+For the TK Multiple Communities Label, the `agent` property should be included for all
+communities added to the Label.
 
 ```{seealso}
 For [schema.org/agent](https://schema.org/agent), see Community Agent for additional optional information.
@@ -307,7 +330,9 @@ Added to a dataset.
 }
 ```
 
-Added to a thing. As Ocean InfoHub is leveraging Schema.org we are using [schema.org/Thing](https://schema.org/Thing) for this type. Any of the properties of Thing seen there are valid to use in such a record.
+Added to a thing. As Ocean InfoHub is leveraging Schema.org we are using
+[schema.org/Thing](https://schema.org/Thing) for this type. Any of the properties of
+Thing seen there are valid to use in such a record.
 
 ```json
 {
@@ -336,7 +361,11 @@ Added to a thing. As Ocean InfoHub is leveraging Schema.org we are using [schema
     }
 }
 ```
-The `agent` property here should be included if this action should only be done or performed by a community or other group/individual. The use of `startTime`, `endTime`, and `location` are optional. These are meant to represent the time of year or location of when and where the associated item can be used. This is determined by the Community applying the Labels.
+The `agent` property here should be included if this action should only be done or
+performed by a community or other group/individual. The use of `startTime`, `endTime`,
+and `location` are optional. These are meant to represent the time of year or location
+of when and where the associated item can be used. This is determined by the Community
+applying the Labels.
 
 ```{seealso}
 See also:  [TK Seasonal](https://localcontexts.org/label/tk-seasonal/)
@@ -498,11 +527,21 @@ Added to the dataset.
     }
 }
 ```
-The use of `category`, `eligibleCustomerType`, `eligibleRegion`, and `ineligibleRegion` are optional. The use of [`category`](https://schema.org/category) should be based on the type of thing the Label is being applied on. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is a specific entity that the community is open to negotiating with. The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or [`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is a specific location or region that the community is or is not open to negotiating with.
+The use of `category`, `eligibleCustomerType`, `eligibleRegion`, and `ineligibleRegion`
+are optional. The use of [`category`](https://schema.org/category) should be based on the
+type of thing the Label is being applied on. The use of
+[`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there
+is a specific entity that the community is open to negotiating with. The use of
+[`eligibleRegion`](https://schema.org/eligibleRegion) or
+[`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there
+is a specific location or region that the community is or is not open to negotiating with.
 
-These are meant to specify the type of data, item, etc. that the Label is being applied to and, thus, will be the thing that the community is requesting negotiations for commercial opportunities.
+These are meant to specify the type of data, item, etc. that the Label is being applied
+to and, thus, will be the thing that the community is requesting negotiations for
+commercial opportunities.
 
-Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be added to `offers`.
+Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can
+be added to `offers`.
 
 ```{seealso}
 See also:  [TK Open to Commercialization](https://localcontexts.org/label/tk-commercial/)
@@ -606,11 +645,24 @@ Added to the dataset.
     }
 }
 ```
-Only the `type` and `offerBy` sections are required. The rest of the fields are optional. The use of [`category`](https://schema.org/category) should be based on offer being provided (in this case, collaboration). This can be edited to better match whatever the community is offering. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is a specific entity that the community is open to negotiating with. The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or [`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is a specific location or region that the community is or is not open to negotiating with. The use of [`validFrom`](https://schema.org/validFrom) and/or [`validThrough`](https://schema.org/validThrough) should be set if there is a timeframe when the community is interested in collaborating with others.
+Only the `type` and `offerBy` sections are required. The rest of the fields are optional.
+The use of [`category`](https://schema.org/category) should be based on offer being
+provided (in this case, collaboration). This can be edited to better match whatever
+the community is offering. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType)
+should be if there is a specific entity that the community is open to negotiating with.
+The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or
+[`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is
+a specific location or region that the community is or is not open to negotiating with.
+The use of [`validFrom`](https://schema.org/validFrom) and/or
+[`validThrough`](https://schema.org/validThrough) should be set if there is a timeframe
+when the community is interested in collaborating with others.
 
-These are meant to specify the type of data, item, etc. that the Label is being applied to and, thus, will be the thing that the community is requesting negotiations for commercial opportunities.
+These are meant to specify the type of data, item, etc. that the Label is being applied
+to and, thus, will be the thing that the community is requesting negotiations for
+commercial opportunities.
 
-Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be added to `offers`.
+Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be
+added to `offers`.
 
 ```{seealso}
 See also:  [TK Open to Collaboration](https://localcontexts.org/label/tk-open-to-collaboration/)
@@ -619,7 +671,10 @@ See also:  [TK Open to Collaboration](https://localcontexts.org/label/tk-open-to
 ## Biocultural (BC) Labels
 
 ### BC Provenance
-This Label can be applied to the dataset as indicated below, but the metadata record should include complete [Prov](https://book.odis.org/indexing/prov/index.html) information as much as possible including spatial coverage, events in which created this dataset is well described, when and where this dataset was collected, etc.
+This Label can be applied to the dataset as indicated below, but the metadata record
+should include complete [Prov](https://book.odis.org/indexing/prov/index.html) information
+as much as possible including spatial coverage, events in which created this dataset is
+well described, when and where this dataset was collected, etc.
 
 ```json
 {
@@ -654,7 +709,8 @@ Added to the dataset.
 }
 ```
 
-For the BC Multiple Communities Label, the `agent` property should be included for all communities added to the Label.
+For the BC Multiple Communities Label, the `agent` property should be included for all
+communities added to the Label.
 
 ```{seealso}
 For [schema.org/agent](https://schema.org/agent), see Community Agent for additional optional information.
@@ -678,7 +734,10 @@ Added to dataset.
 }
 ```
 
-Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage) should be added by the community to ensure that the community can provide consent for this dataset and any derived works. The dataset must link back to the Project and/or the community that applied this Label.
+Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage)
+should be added by the community to ensure that the community can provide consent for this
+dataset and any derived works. The dataset must link back to the Project and/or the
+community that applied this Label.
 
 ```{seealso}
 See also:  [BC Consent Verified](https://localcontexts.org/label/bc-consent-verified/)
@@ -722,7 +781,10 @@ Added to dataset.
 }
 ```
 
-Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage) should be added by the community to ensure that the community can provide consent for this dataset and any derived works. The dataset must link back to the Project and/or the community that applied this Label.
+Within the Label object, [schema.org/acquireLicensePage](https://schema.org/acquireLicensePage)
+should be added by the community to ensure that the community can provide consent for
+this dataset and any derived works. The dataset must link back to the Project and/or
+the community that applied this Label.
 
 ```{seealso}
 See also:  [BC Research Use](https://localcontexts.org/label/bc-research-use/)
@@ -751,11 +813,24 @@ Added to the dataset.
     }
 }
 ```
-Only the `type` and `offerBy` sections are required. The rest of the fields are optional. The use of [`category`](https://schema.org/category) should be based on offer being provided (in this case, collaboration). This can be edited to better match whatever the community is offering. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is a specific entity that the community is open to negotiating with. The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or [`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is a specific location or region that the community is or is not open to negotiating with. The use of [`validFrom`](https://schema.org/validFrom) and/or [`validThrough`](https://schema.org/validThrough) should be set if there is a timeframe when the community is interested in collaborating with others.
+Only the `type` and `offerBy` sections are required. The rest of the fields are optional.
+The use of [`category`](https://schema.org/category) should be based on offer being
+provided (in this case, collaboration). This can be edited to better match whatever
+the community is offering. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType)
+should be if there is a specific entity that the community is open to negotiating with.
+The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or
+[`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there
+is a specific location or region that the community is or is not open to negotiating
+with. The use of [`validFrom`](https://schema.org/validFrom) and/or
+[`validThrough`](https://schema.org/validThrough) should be set if there is a timeframe
+when the community is interested in collaborating with others.
 
-These are meant to specify the type of data, item, etc. that the Label is being applied to and, thus, will be the thing that the community is requesting negotiations for commercial opportunities.
+These are meant to specify the type of data, item, etc. that the Label is being applied
+to and, thus, will be the thing that the community is requesting negotiations for
+commercial opportunities.
 
-Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be added to `offers`.
+Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can
+be added to `offers`.
 
 ```{seealso}
 See also:  [BC Open to Collaboration](https://localcontexts.org/label/bc-open-to-collaboration/)
@@ -806,11 +881,21 @@ Added to the dataset.
     }
 }
 ```
-The use of `category`, `eligibleCustomerType`, `eligibleRegion`, and `ineligibleRegion` are optional. The use of [`category`](https://schema.org/category) should be based on the type of thing the Label is being applied on. The use of [`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is a specific entity that the community is open to negotiating with. The use of [`eligibleRegion`](https://schema.org/eligibleRegion) or [`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there is a specific location or region that the community is or is not open to negotiating with.
+The use of `category`, `eligibleCustomerType`, `eligibleRegion`, and `ineligibleRegion`
+are optional. The use of [`category`](https://schema.org/category) should be based on the
+type of thing the Label is being applied on. The use of
+[`eligibleCustomerType`](https://schema.org/eligibleCustomerType) should be if there is
+a specific entity that the community is open to negotiating with. The use of
+[`eligibleRegion`](https://schema.org/eligibleRegion) or
+[`ineligibleRegion`](https://schema.org/ineligibleRegion) should be based on if there
+is a specific location or region that the community is or is not open to negotiating with.
 
-These are meant to specify the type of data, item, etc. that the Label is being applied to and, thus, will be the thing that the community is requesting negotiations for commercial opportunities.
+These are meant to specify the type of data, item, etc. that the Label is being applied
+to and, thus, will be the thing that the community is requesting negotiations for
+commercial opportunities.
 
-Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can be added to `offers`.
+Any additional fields available to [schema.org/Offer](https://schema.org/Offer) can
+be added to `offers`.
 
 ```{seealso}
 See also:  [BC Open to Commercialization](https://localcontexts.org/label/bc-open-to-commercialization/)

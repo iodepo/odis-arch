@@ -1,12 +1,17 @@
 # Local Contexts Projects
 
 ## About
-On the [Local Contexts Hub](https://localcontextshub.org), we use the term "Local Contexts Projects" to describe the context where Labels or Notices are being applied. Examples of Local Contexts Projects include: a website, university syllabus, dissertation, publication, dataset, museum exhibition, archival record, item in a collection, library database, photography collection, voucher specimen, or metadata about a record.
+On the [Local Contexts Hub](https://localcontextshub.org), the term "Local Contexts
+Projects" is used to describe the context where Labels or Notices are being applied.
+Examples of Local Contexts Projects include: a website, university syllabus, dissertation,
+publication, dataset, museum exhibition, archival record, item in a collection, library
+database, photography collection, voucher specimen, or metadata about a record.
 
 ## Example: Local Contexts Project Graph
 The following graph represents a basic record we might use for a Local Contexts Project.
 
-As Ocean InfoHub is leveraging Schema.org we are using [schema.org/Project](https://schema.org/Project) for this type. Any of the properties of Project seen there are valid to use in such a record.
+As Ocean InfoHub is leveraging Schema.org, we are using [schema.org/Project](https://schema.org/Project)
+for this type. Any of the properties of Project seen there are valid to use in such a record.
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/local-contexts-project-example.json
 :linenos:
@@ -16,7 +21,11 @@ Additional properties can be added to this graph depending on the Labels or Noti
 ```
 
 ### Details: Identifier(s)
-When a Project is created in the Local Contexts Hub, it will automatically be assigned a UUID. This is the first identifier that is required to be included with the Project information. When creating an LC Project, there are three other external IDs that can be added to a Project's metadata: Provider's ID, DOI and GUID. These external IDs are optional.
+When a Project is created in the Local Contexts Hub, it will automatically be assigned
+a UUID. This is the first identifier that is required to be included with the Project
+information. When creating an LC Project, there are three other external IDs that can
+be added to a Project's metadata: Provider's ID, DOI and GUID. These external IDs are
+optional.
 
 ```json
 {
@@ -70,9 +79,12 @@ The contact person for a Local Contexts Project.
 ```
 
 ### Details: Geographic Metadata (WIP)
-The geographic metadata for a Local Contexts Project. This is currently being added to the Local Contexts Hub. Subject to change.
+The geographic metadata for a Local Contexts Project. This is currently being added
+to the Local Contexts Hub. Subject to change.
 ```{note}
-Keep in mind that some geographical information may be sensitive. Always confirm with Indigenous communities first before sharing. As an alternative, the restricted metadata block can be used in collaboration with Indigenous communities.
+Keep in mind that some geographical information may be sensitive. Always confirm with
+Indigenous communities first before sharing. As an alternative, the restricted metadata
+block can be used in collaboration with Indigenous communities.
 ```
 
 ```json
