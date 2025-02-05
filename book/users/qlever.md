@@ -5,7 +5,7 @@
 This document describes the use of [qlever-control](https://github.com/ad-freiburg/qlever-control)
 to work with the ODIS-OIH graph.
 
-The pre-requisist for using this approach include python and docker.  Once statisfied you
+The pre-requisite for using this approach include python and docker.  Once statisfied you
 will need to:
 
 ```bash
