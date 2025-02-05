@@ -1,0 +1,61 @@
+# Implementing CARE Principles for Indigenous Data
+
+## Introduction
+[Local Contexts](https://localcontexts.org/) was founded to support Indigenous
+data sovereignty and cultural authority. Core to Local Contexts are
+[Indigenous data sovereignty](https://nni.arizona.edu/our-work/research-policy-analysis/indigenous-data-sovereignty-governance), the
+[CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care),
+and ethical and reciprocal partnerships.
+
+Local Contexts is focused on increasing Indigenous involvement in data governance
+through the integration of Indigenous values into data systems. Local Contexts offers
+digital strategies for Indigenous communities, institutions, and researchers through
+the Traditional Knowledge (TK) & Biocultural (BC) Labels and Notices. Together they
+function as a practical mechanism to advance aspirations for Indigenous data sovereignty
+and Indigenous innovation.
+
+In an increasingly complex legal, social, and cultural environment, the TK and BC
+Labels offer Indigenous communities a tool to add cultural and historical context
+and cultural authority to cultural heritage content in their own local digital heritage
+archives as well as in digital archives, libraries, museums, and other digital repositories
+globally.
+
+The primary objectives of Local Contexts are to enhance and legitimize locally based
+decision-making and Indigenous governance frameworks for determining ownership, access,
+and culturally appropriate conditions for sharing historical, contemporary, and future
+collections of cultural heritage and Indigenous data. Local Contexts is focused on
+increasing Indigenous involvement in data governance through the integration of Indigenous
+values into data systems. Local Contexts offers digital strategies for Indigenous
+communities, cultural institutions and researchers through the Labels and Notices.
+Together they function as a practical mechanism to advance aspirations for Indigenous
+data sovereignty and Indigenous innovation.
+
+## About
+Local Contexts developed the Traditional Knowledge (TK) and Biocultural (BC) Labels
+that provide Indigenous data governance guidance. Indigenous and local communities
+can reinforce rights with the Labels. Local Contexts developed the Engagement, Disclosure,
+and Collections Care Notices as a strategy for institutions, organizations, and researchers
+to disclose Indigenous interests and rights. The connection between Notices and Labels
+are represented by the creation of Local Contexts Projects. Future initiatives should
+follow the mapping guidelines set here.
+
+The Labels and Notices are extra-legal, educational strategies focused on provenance,
+protocols, and permissions that connect people and places to knowledge and data.
+Together, the Labels and Notices function to advance aspirations for Indigenous data
+sovereignty and Indigenous innovation.
+
+## Label or Notice Verification
+When displaying Local Contexts Labels or Notices, the Label or Notice icon should
+always be displayed prominently on public-facing websites, digital collection pages,
+publications, etc. Ideally the Notice and Label title, icon, and text should all be
+visible. If it is not possible to display all three, they must be easily accessible
+via a modal or hyperlink. Review the Local Contexts
+[Traditional Knowledge/Biocultural Labels](https://localcontexts.org/wp-content/uploads/2023/08/TK-and-BC-Labels-Usage-and-Style-Guide.pdf) or
+[Engagement and Disclosure  Notices](https://localcontexts.org/wp-content/uploads/2023/08/Engagement-and-Disclosure-Notices-Usage-and-Style-Guide.pdf) usage guides for more
+information.
+
+The Project ID or the Project URL should always be displayed with the Labels or
+Notices as a way to link back to the original record. This offers a connection back
+to the original Project in case there are issues with the metadata such as outdated
+or conflicting information. By linking back to the Project page, the Label or Notice
+information can be verified by users.
