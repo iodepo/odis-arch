@@ -1,0 +1,80 @@
+direction: right
+
+classes: {
+coreclass: {
+    width: 200
+               style: {
+                     stroke-width: 0
+                     font-size: 18
+                    fill: lightgreen
+                    shadow: true
+                    border-radius: 5
+               }
+      }
+      actionclass: {
+    width: 150
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightblue
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+propclass: {
+    width: 250
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: lightyellow
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+prodclass: {
+    width: 125
+               style: {
+                     stroke-width: 1
+                     font-size: 18
+                     fill: honeydew
+                    shadow: false
+                    border-radius: 0
+               }
+      }
+}
+
+graph.class: prodclass
+prod.class: prodclass
+ui.class: prodclass
+sys.class: prodclass
+
+partners: Partners
+partners.shape: Person
+
+prod: Products
+graph: Graph
+ui: OIH UI \n Dahsboard
+sys: Systems
+
+community: Community
+community.shape: Person
+
+
+cloud: Internet\n Standards
+cloud.shape: cloud
+
+odis: ODIS Systems
+odis.shape: stored_data
+
+partners -> cloud -> odis
+
+odis -> partners: feedback and validation
+
+
+odis -> graph -> prod
+odis.class: actionclass
+
+graph <-> community
+prod -> ui
+prod <-> community
+prod -> sys

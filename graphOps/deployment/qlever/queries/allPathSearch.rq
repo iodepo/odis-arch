@@ -1,0 +1,26 @@
+PREFIX pathSearch: <https://qlever.cs.uni-freiburg.de/pathSearch/>
+
+
+SELECT ?start ?pred ?end ?source ?path ?edge ?target WHERE {
+
+  SERVICE pathSearch: {
+    _:path pathSearch:algorithm pathSearch:allPaths ;
+           pathSearch:source ?source ;
+           pathSearch:target ?target ;
+		   pathSearch:edgeProperty ?pred ;
+
+           pathSearch:pathColumn ?path ;
+           pathSearch:edgeColumn ?edge ;
+           pathSearch:start ?start ;
+           pathSearch:end ?end ;
+
+
+    {
+      SELECT * WHERE {
+        ?start ?pred ?end .
+		
+      }
+    }
+  }
+}
+

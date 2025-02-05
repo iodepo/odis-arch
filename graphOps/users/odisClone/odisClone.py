@@ -18,13 +18,13 @@ def main():
     download_parser.add_argument("--outputdir", type=str, help="Output directory")
     download_parser.set_defaults(func=modeDownload)
 
-
     load_parser = subparsers.add_parser('load')
     load_parser.add_argument("--sourcedir", type=str, help="Source file/URL")
     load_parser.set_defaults(func=modeLoad)
 
     args = parser.parse_args()
     args.func(args)
+
 
 def modeLoad(args):
     # Load to Minio
@@ -38,7 +38,7 @@ def modeLoad(args):
         d = f2bs(fp)
         mimetype = "text/x-nquads"
         headers = {'Content-Type': mimetype}
-        url="http://localhost:7878/store"
+        url = "http://localhost:7878/store"
         r = response = requests.post(url, data=d, headers=headers)
         # r = post_data(url="http://localhost:7878/store",
         #               mimetype="Content-Type:text/x-nquads",
@@ -47,7 +47,6 @@ def modeLoad(args):
 
 
 def modeDownload(args):
-
     if args.source is None:
         print("Error: the --source argument is required")
         sys.exit(1)
@@ -57,8 +56,13 @@ def modeDownload(args):
         sys.exit(1)
 
     source = args.source  ## TODO  implement this
-    client = Minio("ossapi.oceaninfohub.org:80", secure=False)  # Create client with anonymous access.
-    urls = publicurls(client, "commons", "OIH-KG/21022024/nt")
+    # client = Minio("ossapi.oceaninfohub.org:80", secure=False)  # Create client with anonymous access.
+    # urls = publicurls(client, "commons", "OIH-KG/21022024/nt")
+    client = Minio("ossapi.oceaninfohub.org:80",
+                   access_key=os.getenv('MINIO_ACCESS_KEY'),
+                   secret_key=os.getenv('MINIO_SECRET_KEY'),
+                   secure=False)  # Create client with anonymous access.
+    urls = publicurls(client, "gleaner-dev", "graphs/latest")
 
     directory_path = args.outputdir
 
@@ -69,18 +73,20 @@ def modeDownload(args):
 
     with ThreadPoolExecutor() as executor:
         for url in urls:
-            if "_prov" not in url:
-                executor.submit(download_file, url)
+            # if "_prov" not in url:
+            executor.submit(download_file, url)
 
 
 def f2bs(filename):
     with open(filename, 'r') as file:
         return file.read()
 
+
 def post_data(url, mimetype, data):
     headers = {'Content-Type': mimetype}
     response = requests.post(url, files=data, headers=headers)
     return response
+
 
 def publicurls(client, bucket, prefix):
     urls = []
@@ -90,10 +96,11 @@ def publicurls(client, bucket, prefix):
 
         if result.size > 0:  # how to tell if an objet   obj.is_public  ?????
             url = client.presigned_get_object(bucket, obj.object_name)
-            # print(f"Public URL for object: {url}")
+            print(f"Public URL for object: {url}")
             urls.append(url)
 
     return urls
+
 
 def download_file(url):
     """Downloads a remote file and handles potential errors."""
@@ -102,18 +109,21 @@ def download_file(url):
         response.raise_for_status()  # Raise exception for error codes
 
         filename = url.split("/")[-1]
-        local_filename = f"./data/{filename.replace('.nq', '.nt')}"  # Convert extension
+        result = filename.split('?', 1)[0]
+
+        print(result)
+
+        # local_filename = f"./data/{result.replace('.nq', '.nt')}"  # Convert extension
+        local_filename = f"./data/{result}"
 
         with open(local_filename, "wb") as f:
             for chunk in response.iter_content(chunk_size=1024):  # Download in chunks
                 f.write(chunk)
 
-        print(f"Downloaded: {filename}")
+        print(f"Downloaded: {result}")
 
     except requests.exceptions.RequestException as e:
         print(f"Download failed for {url}: {e}")
-
-
 
 
 if __name__ == '__main__':

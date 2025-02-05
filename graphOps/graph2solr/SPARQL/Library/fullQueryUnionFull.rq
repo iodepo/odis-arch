@@ -1,0 +1,333 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+
+SELECT DISTINCT (?s as ?id) ?g ?type ?name ?description ?keywords
+    ?contenturl ?courseName ?url
+    ?location ?iritype ?courseName ?wkt ?geom ?lat ?long ?place_name
+    ?temporalCoverage ?datePublished ?dateModified
+    ?sameAs ?citation ?license ?version ?includedInDataCatalog ?memberOf
+    ?parentOrganization ?knowsAbout ?affiliation ?category
+    ?vehicleConfiguration ?vehicleSpecialUsage
+    ?jobTitle ?knowsLanguage ?educationalCredentialAwarded ?author
+    ?hasCourseInstance ?location ?areaServed ?startDate ?endDate
+
+WHERE {
+    {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:name ?name .
+            ?s schema:description ?description .
+            BIND(REPLACE(STR(?iritype), "https://schema.org/", "") AS ?type)
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s schema:keywords ?keywords .
+            FILTER (!isIRI(?keywords) && !isBlank(?keywords))
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s schema:distribution ?distribution .
+            ?distribution schema:contentUrl ?contenturl .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s schema:keywords ?irikeywords .
+            ?irikeywords a schema:DefinedTerm .
+            ?irikeywords schema:name ?keywords .
+            FILTER (isIRI(?irikeywords))
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:DataCatalog .
+            ?s schema:keywords ?keywords .
+            FILTER (!isIRI(?keywords) && !isBlank(?keywords))
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:DataCatalog .
+            ?s schema:keywords ?irikeywords .
+            ?irikeywords a schema:DefinedTerm .
+            ?irikeywords schema:name ?keywords .
+            FILTER (isIRI(?irikeywords))
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:url ?url .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:hasCourseInstance ?hasCourseInstance .
+            ?hasCourseInstance schema:name ?courseName
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:location ?location .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:address ?address .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Course .
+            ?s schema:hasCourseInstance ?hasCourseInstance .
+            ?hasCourseInstance schema:name ?courseName
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:spatialCoverage ?sc .
+            ?sc a schema:Place .
+            ?sc schema:name ?place_name .
+            FILTER (!isIRI(?place_name)) .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s schema:spatialCoverage ?sc .
+            ?sc a schema:Place .
+            ?sc schema:latitude ?lat .
+            ?sc schema:longitude ?long .
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s schema:spatialCoverage ?sc .
+            ?sc a schema:Place .
+            ?sc schema:geo ?geo .
+            ?geo a ?geotype .
+            ?geo ?geompred ?geom .
+            FILTER (!isIRI(?geom))
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:Dataset .
+            ?s geosparql:hasGeometry ?hasgeom .
+            ?hasgeom geosparql:asWKT ?wkt
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type schema:DataCatalog .
+            ?s schema:spatialCoverage ?sc .
+            ?sc a schema:Place .
+            ?sc schema:latitude ?lat .
+            ?sc schema:longitude ?long .
+        }
+    } UNION {
+        SELECT ?s ?geom
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:DataCatalog .
+                ?s schema:spatialCoverage ?sc .
+                ?sc a schema:Place .
+                ?sc schema:geo ?geo .
+                ?geo a ?geotype .
+                ?geo ?geompred ?geom .
+                FILTER (!isIRI(?geom))
+            }
+        }
+    } UNION {
+        SELECT ?s ?wkt
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:DataCatalog .
+                ?s geosparql:hasGeometry ?hasgeom .
+                ?hasgeom geosparql:asWKT ?wkt
+            }
+        }
+    } UNION {
+        graph ?g {
+            ?s rdf:type ?iritype .
+            ?s schema:temporalCoverage ?temporalCoverage .
+        }
+    } UNION {
+        SELECT ?s ?dateModified
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:dateModified ?dateModified
+            }
+        }
+        LIMIT 1
+    } UNION {
+        SELECT ?s ?datePublished
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:datePublished ?datePublished .
+            }
+        }
+        LIMIT 1
+    } UNION {
+        SELECT ?s ?sameAs
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:sameAs ?sameAs .
+            }
+        }
+    } UNION {
+        SELECT ?s ?license
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Dataset .
+                ?s schema:license ?license .
+            }
+        }
+    } UNION {
+        SELECT ?s ?citation
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Dataset .
+                ?s schema:citation ?citation .
+            }
+        }
+    } UNION {
+        SELECT ?s ?version
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Dataset .
+                ?s schema:version ?version .
+            }
+        }
+    } UNION {
+        SELECT ?s ?includedInDataCatalog
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Dataset .
+                ?s schema:includedInDataCatalog ?includedInDataCatalog .
+            }
+        }
+    } UNION {
+        SELECT ?s ?memberOf
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:memberOf ?memberOf .
+            }
+        }
+    } UNION {
+        SELECT ?s ?parentOrganization
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Organization .
+                ?s schema:parentOrganization ?parentOrganization .
+            }
+        }
+    } UNION {
+        SELECT ?s ?knowsAbout
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:knowsAbout ?knowsAbout .
+            }
+        }
+    } UNION {
+        SELECT ?s ?affiliation
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:affiliation ?affiliation .
+            }
+        }
+    } UNION {
+        SELECT ?s ?category
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:category ?category .
+            }
+        }
+    } UNION {
+        SELECT ?s ?vehicleConfiguration
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Vehicle .
+                ?s schema:vehicleConfiguration ?vehicleConfiguration .
+            }
+        }
+    } UNION {
+        SELECT ?s ?vehicleSpecialUsage
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Vehicle .
+                ?s schema:vehicleSpecialUsage ?vehicleSpecialUsage .
+            }
+        }
+    } UNION {
+        SELECT ?s ?jobTitle
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:jobTitle ?jobTitle .
+            }
+        }
+    } UNION {
+        SELECT ?s ?knowsLanguage
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:knowsLanguage ?knowsLanguage .
+            }
+        }
+    } UNION {
+        SELECT ?s ?educationalCredentialAwarded
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Person .
+                ?s schema:educationalCredentialAwarded ?educationalCredentialAwarded .
+            }
+        }
+    } UNION {
+        SELECT ?s ?author
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:author ?author .
+            }
+        }
+    } UNION {
+        SELECT ?s ?hasCourseInstance
+        WHERE {
+            graph ?g {
+                ?s rdf:type schema:Course .
+                ?s schema:hasCourseInstance ?hasCourseInstance .
+            }
+        }
+    } UNION {
+        SELECT ?s ?areaServed
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:areaServed ?areaServed .
+            }
+        }
+    } UNION {
+        SELECT ?s ?startDate
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:startDate ?startDate .
+            }
+        }
+    } UNION {
+        SELECT ?s ?endDate
+        WHERE {
+            graph ?g {
+                ?s rdf:type ?iritype .
+                ?s schema:endDate ?endDate .
+            }
+        }
+    }
+}

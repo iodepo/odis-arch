@@ -31,6 +31,7 @@ def popper(input):
 def contextAlignment(input):
     # lines = input.decode().split('\n')  # Split input into separate lines  HTTP source
     # lines = input.split('\n')  # Split input into separate lines
+
     if isinstance(input, bytes):
         lines = input.decode().split('\n')
     else:

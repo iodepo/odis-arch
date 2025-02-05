@@ -8,7 +8,6 @@ PREFIX schema: <https://schema.org/>
 SELECT DISTINCT (?s as ?id)  ?type ?name ?url ?description ?headline ?g
 WHERE {
       graph ?g {
-
          ?s rdf:type ?type .
         OPTIONAL { ?s schema:name ?name . }
         OPTIONAL { ?s schema:description ?description . }
