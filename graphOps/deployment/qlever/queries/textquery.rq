@@ -1,0 +1,11 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+
+
+SELECT ?a TEXT(?t) SCORE(?t) WHERE {
+    ?a <is-a> <Dataset> .
+    ?t ql:contains-entity ?a .
+    ?t ql:contains-word "depth"
+}
+ORDER BY DESC(SCORE(?t))
+

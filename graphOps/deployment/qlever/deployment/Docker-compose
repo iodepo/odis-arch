@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  triplestore:
+    image: docker.io/adfreiburg/qlever:latest
+    environment:
+        PORT: 7019
+        ACCESS_TOKEN: ${data:NAME}_7643543846_6dMISzlPrD7i
+        MEMORY_FOR_QUERIES: 25G
+        CACHE_MAX_SIZE: 20G
+        TIMEOUT: 240s
+    ports:
+      - 7019:7019
+    volumes:
+      - ${GLEANER_GRAPH}:/var/lib/blazegraph

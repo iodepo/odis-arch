@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+
+
+SELECT ?predicate (COUNT(?predicate) as ?count) WHERE {
+  ?x a schema:Dataset .
+  ?x ql:has-predicate ?predicate
+}
+GROUP BY ?predicate
+ORDER BY DESC(?count)
