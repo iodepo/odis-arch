@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4f561cc4-0594-11ed-9ccf-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4f561cc4-0594-11ed-9ccf-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.1715022639577 -4.74991632786077, 39.1715022639577 -1.73608069834103, 41.5007106390158 -1.73608069834103, 41.5007106390158 -4.74991632786077, 39.1715022639577 -4.74991632786077))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "REQUIRED: A brief narrative summary of the data set.",
     "keywords": "",
     "name": "mangroves",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.74991632786077 39.1715022639577 -1.73608069834103 41.5007106390158"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ake_mangrove"
 }

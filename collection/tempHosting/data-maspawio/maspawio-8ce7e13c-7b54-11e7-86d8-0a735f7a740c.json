@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-8ce7e13c-7b54-11e7-86d8-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-8ce7e13c-7b54-11e7-86d8-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.2019941334225 -25.6002807611482, 34.2019941334225 -10.1639776043829, 50.0361352004792 -10.1639776043829, 50.0361352004792 -25.6002807611482, 34.2019941334225 -25.6002807611482))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This coverage includes arcs, polygons and polygon labels that describe U.S. Geological Survey defined geologic provinces of the Africa.  Each province has a set of geologic characteristics distinguishing it from surrounding provinces.  These characteristics may include the dominant lithologies, the age of the strata, and the structural style. Some provinces include multiple genetically-related basins. Offshore province boundaries are generally defined by the 2000 meter bathymetric contour, but where appropriate are defined by the 4000 meter bathymetric contour. In some cases province boundaries are delineated by political boundaries, as in the case of The United States and Canada, because United States petroleum resources were assessed separately by the U.S. Geological Survey.  Provinces are classified as either Priority or Boutique.  A priority province is one of 76 non-U.S. geologic provinces defined by the U.S. Geological Survey that together contain 95 percent of the world's non-U.S. known petroleum volume.  All priority provinces were analyzed for undiscovered petroleum-resources.   A boutique province is a geologic province, other than a priority province, as defined by  the U.S. Geological Survey, considered for petroleum-resource assessment.  Boutique provinces can be chosen for a variety of geologic, political, technical and geographic reasons. Resource-assessments are conducted by scientists of the U.S Geological Survey's World Petroleum Assessment 2000 by means of a combination of Petroleum System analysis based on available geologic information, and statistical analysis of production and exploration information. Total petroleum systems are defined in provinces considered for assessment analysis. Total petroleum systems are subdivided into Assessment Units.  Assessment results from the analysis of assessment units and total petroleum systems are aggregated and allocated to geologic provinces. Summary results are presented as attributes of this coverage.",
     "keywords": [
         "geology",
@@ -26,5 +15,12 @@
         "Mozambique"
     ],
     "name": "Coastal Geologic Provinces of Mozambique channel region",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-25.6002807611482 34.2019941334225 -10.1639776043829 50.0361352004792"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Acoastal_geological_provinces_of_the_moz_channel_"
 }

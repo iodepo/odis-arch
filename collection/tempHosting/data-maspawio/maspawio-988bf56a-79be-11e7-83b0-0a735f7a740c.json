@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-988bf56a-79be-11e7-83b0-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-988bf56a-79be-11e7-83b0-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.0041666666667 -26.9958333333333, 34.0041666666667 -7.00416666666668, 51.9607368225687 -7.00416666666668, 51.9607368225687 -26.9958333333333, 34.0041666666667 -26.9958333333333))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This vector data shape-file shows the characteristics of ocean depth/topography. The contour lines were derived from GEBCO 2014 raster at an interval of 500 meters.",
     "keywords": [
         "depth",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Mozambique Channel Depth Contours",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.9958333333333 34.0041666666667 -7.00416666666668 51.9607368225687"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amoz_channel_depth_contours"
 }

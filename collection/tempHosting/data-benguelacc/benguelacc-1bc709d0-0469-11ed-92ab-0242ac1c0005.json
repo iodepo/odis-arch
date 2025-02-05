@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-1bc709d0-0469-11ed-92ab-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-1bc709d0-0469-11ed-92ab-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8,19983768463135 -17,2501811981201, 8,19983768463135 -5,88454723358154, 11,75648021698 -5,88454723358154, 11,75648021698 -17,2501811981201, 8,19983768463135 -17,2501811981201))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Descrição Zona Econômica Exclusiva (ZEE) é uma distância de 200 milhas náuticas (cerca de 370 quilômetros) a partir da costa, que vai além das águas territoriais, distante 12 milhas ou 22 quilômetros da costa. Nesta faixa cada país costeiro tem prioridade para a utilização e proteção dos recursos naturais do mar. Além da exploração e gestão dos recursos naturais, o país costeiro exercerá nesta zona a jurisdição no que concerne ao estabelecimento e utilização de ilhas artificiais, instalações e estruturas e investigação científica marinha.\nAngola detém uma Zona Econômica Exclusiva com extensão de 518.433 Km².Método- Shapefile fornecido",
+    "keywords": [
+        "ZEE",
+        "Angola"
+    ],
+    "name": "AGO Zona Economica Exclusiva 2022",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.2501811981201 8.19983768463135 -5.88454723358154 11.75648021698"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_ZEE",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_ZEE",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_ZEE"
 }

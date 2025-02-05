@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-a389c8f2-045d-11eb-83fc-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-a389c8f2-045d-11eb-83fc-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,4432411193848 10,7581310272217, -61,4432411193848 10,7628650665283, -61,4362754821777 10,7628650665283, -61,4362754821777 10,7581310272217, -61,4432411193848 10,7581310272217))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Faecal contamination of recreational waters is of major public health concern and therefore continuous monitoring of water quality is essential. The microbial water quality and physio– chemical parameters at the popular Maracas Beach, Trinidad were measured using multiple microbial indicators to determine faecal contamination levels and identify possible sources of pollution. The indicators chosen for this study were Escherichia coli, enterococci and faecal coliform and water samples were collected at five nearshore locations during the months of February/March  2017 (dry season) and July/August 2016 (wet season) at varying tidal periods.",
     "keywords": [
         "bathing beach water quality",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_Maracas_Bathing_Beach_Water_Quality_2016-2017",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,7581310272217 -61,4432411193848 10,7628650665283 -61,4362754821777"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:maracas"
 }

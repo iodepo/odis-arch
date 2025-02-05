@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-2b28fe1e-ad15-11e9-82ae-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-2b28fe1e-ad15-11e9-82ae-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.4450073242188 -4.72041702270502, 38.4450073242188 -3.56451416015625, 39.6445846557618 -3.56451416015625, 39.6445846557618 -4.72041702270502, 38.4450073242188 -4.72041702270502))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "kwale county wards Shapefile shows the lowest delineation of administrative units of Kale County.",
     "keywords": [
         "Sub-county",
@@ -24,5 +13,12 @@
         "Kenya"
     ],
     "name": "kwale county wards",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.72041702270502 38.4450073242188 -3.56451416015625 39.6445846557618"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_county_wards"
 }

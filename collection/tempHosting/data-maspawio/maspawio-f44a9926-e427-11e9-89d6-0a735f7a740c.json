@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-f44a9926-e427-11e9-89d6-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-f44a9926-e427-11e9-89d6-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.44124909225758 -4.717082945149985, 38.44124909225758 -3.5670829497536944, 39.641249087451854 -3.5670829497536944, 39.641249087451854 -4.717082945149985, 38.44124909225758 -4.717082945149985))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This raster data shows the projected human population density for Kwale county for 2020.  The data was derived from the worldPop archive ( i.e. https://www.worldpop.org) at 1km spatial resolution.",
     "keywords": [
         "population",
@@ -23,5 +12,12 @@
         "Kenya"
     ],
     "name": "Projected human population density (Kwale 2020)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.717082945149985 38.44124909225758 -3.5670829497536944 39.641249087451854"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_ppp_2020_adj_v2"
 }

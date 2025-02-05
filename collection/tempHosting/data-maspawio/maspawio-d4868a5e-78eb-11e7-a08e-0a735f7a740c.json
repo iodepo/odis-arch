@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-d4868a5e-78eb-11e7-a08e-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-d4868a5e-78eb-11e7-a08e-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.0 -26.0, 34.0 -10.000000000000007, 49.99999999999999 -10.000000000000007, 49.99999999999999 -26.0, 34.0 -26.0))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Mozambique Channel bathymetric data set is a derived product from the General Bathymetric Chart of the Ocean (GEBCO).This data was retrieved and processed by CORDIO EA under the MOZALINK project to produce gridded bathymetric raster data  that illustrates  the Mozambique Channels' ocean depth characteristics in meters.",
     "keywords": [
         "bathymetry",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Mozambique Channel bathymetry meters",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.0 34.0 -10.000000000000007 49.99999999999999"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amozambique_channel_bathymetry_meters"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-ce86f6ad-cc6b-4db0-a90b-52ad190f1d1d.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-ce86f6ad-cc6b-4db0-a90b-52ad190f1d1d.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-91.1155342808385 8.70000003481348, -91.1155342808385 30.5089543068907, -55.8232931611244 30.5089543068907, -55.8232931611244 8.70000003481348, -91.1155342808385 8.70000003481348))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Hurricane and Tropical Storm paths and data for the Caribbean.",
     "keywords": [
         "hazards",
@@ -23,5 +12,12 @@
         "Caribbean"
     ],
     "name": "Hurricane and Tropical Storm Paths, Caribbean, 1945- 2001",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.70000003481348 -91.1155342808385 30.5089543068907 -55.8232931611244"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:car_hurricanes_1945_2001_wgs84"
 }

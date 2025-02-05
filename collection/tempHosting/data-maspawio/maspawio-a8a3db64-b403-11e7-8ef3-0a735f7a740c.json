@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-a8a3db64-b403-11e7-8ef3-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-a8a3db64-b403-11e7-8ef3-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((16.4580200000001 -34.8351399999999, 16.4580200000001 11.989306, 63.5185056567417 11.989306, 63.5185056567417 -34.8351399999999, 16.4580200000001 -34.8351399999999))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WIO Coastal districts layer is a merged layer of national level administration 2 data/shape file  retrieved form GADM database of Global Administrative Areas (GADM ) website. \nLevel  2  administration are  smaller units of administration  often referred to as districts.",
     "keywords": [
         "administrative boundary",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "WIO Coastal districts",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-34.8351399999999 16.4580200000001 11.989306 63.5185056567417"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_coastal_districts"
 }

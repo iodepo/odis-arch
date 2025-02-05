@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-da2d25ac-0453-11eb-8d9a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-da2d25ac-0453-11eb-8d9a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-60.849724517550364 11.16205832207508, -60.849724517550364 11.19344927753044, -60.8157096444583 11.19344927753044, -60.8157096444583 11.16205832207508, -60.849724517550364 11.16205832207508))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A broad classification of the benthic habitats that exists  at the Buccoo Reef in Tobago.",
     "keywords": [
         "benthic",
@@ -26,5 +15,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Tobago_Buccoo_Reef_broad_benthic_habitat_classification",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11.16205832207508 -60.849724517550364 11.19344927753044 -60.8157096444583"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_tto_tobago_buccoo_reef_broad_benthic_habit"
 }

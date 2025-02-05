@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-3b46e058-88a6-11ec-bbf1-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-3b46e058-88a6-11ec-bbf1-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((0.0 0.0, 0.0 -1.0, -1.0 -1.0, -1.0 0.0, 0.0 0.0))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This resource shows spatial polygons of CORAL reefs of the Western Indian Ocean Ecoregions produced through a collaborative engagement process with regional reef ecologists/biologists from the WIO. In total, 11 ecoregions were derived for the assessment of the vulnerability of Coral in the WIO based on the Red List of Ecosystem approach i.e., RED LIST OF ECOSYSTEMS ASSESSMENT 2020.  Each polygon illustrates a unique ecoregion with unique attributes for each of the criteria used and score. The color shows the overall score for each of the ecoregion. An additional (12th) polygon (demarcated with a square polygon of the WIO  boundary limits) has been included to illustrate the overall score for the WIO region as a whole.  Further illustrations are provided on this story map here https://arcg.is/00q4b9 else the fulll study is  available here: https://www.nature.com/articles/s41893-021-00817-0",
     "keywords": [
         "WIO",
@@ -22,5 +11,12 @@
         "rle"
     ],
     "name": "WIO Coral Reefs Ecoregions RLE 2020",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "0.0 0.0 -1.0 -1.0"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aredlist_corals_ecoregions_cordio"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-4ca3b468-0448-11eb-9acc-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-4ca3b468-0448-11eb-9acc-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71.84701890061861 17.556105143639833, -71.84701890061861 19.917018520454256, -68.41941539558536 19.917018520454256, -68.41941539558536 17.556105143639833, -71.84701890061861 17.556105143639833))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "La importancia de las cuevas en la República\nDominicana radica en tres aspectos fundamentales: El\ninterés hídrico, por la abundancia del agua que corre\nsubterráneamente; el interés biológico, por ser el\nhábitat de las 18 especies de murciélagos reportadas\nen el país, y la cantidad de familias, géneros y especies\nque se desarrollan en ellas; el interés histórico-cultural\ny por sus abundantes vestigios de restos de culturas\naborígenes.",
     "keywords": [
         "cuevas",
@@ -22,5 +11,12 @@
         "Dominican Republic"
     ],
     "name": "TV_DOM_Cuevas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17.556105143639833 -71.84701890061861 19.917018520454256 -68.41941539558536"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:cuevas"
 }

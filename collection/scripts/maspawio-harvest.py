@@ -3,14 +3,16 @@
 """
 Purpose: Standalone script to generate individual JSON-LD files
          and a master RDF document, live, from CSW endpoint
-         
+
 Usage:   python maspawio-harvest.py
 
 Output:  saves a new JSON-LD file, for each catalogue record 
          exposed through the OGC:CSW service, and also a
          .RDF resource file.
          
-Requires: Python 3.x
+Requires: - Python 3.x
+          - must first execute:
+            python -m pip install -r requirements-maspawio-harvest.txt
 
 Notes:
 
@@ -24,12 +26,12 @@ Notes:
 # define common variables
 CSW_ENDPOINT = "http://maspawio.net/catalogue/csw"
 CSW_ENDPOINT_TIMEOUT = 60 #seconds
-PATH_TO_DATA_FOLDER = "./data-maspawio/"
+PATH_TO_DATA_FOLDER = "../tempHosting/data-maspawio/"
 NEW_RDF_FILENAME = "maspawio-catalogue.rdf"
 HOSTNAME = "http://maspawio.net"
 LOGFILE = "maspawio-harvest.log"
-SHORTNAME = "maspawio" #must be hyphen
-ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/"
+SHORTNAME = "maspawio" #must not contain spaces, but can contain hyphen
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/"
 
 """
 #########################
@@ -42,8 +44,6 @@ from pyld import jsonld
 import os, sys, io, uuid
 from owslib.csw import CatalogueServiceWeb
 from owslib.fes import SortBy, SortProperty
-import ssl
-import pandas as pd
 import kglab
 import logging
 
@@ -51,13 +51,6 @@ import logging
 logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG,  
                     format="%(asctime)s;%(levelname)s;%(message)s",  
                     datefmt="%Y-%m-%d %H:%M", filemode = "w")
-
-# generate a Context for each connection
-# disable SSL for now
-
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
 
 # prepare namespace
 
@@ -141,7 +134,7 @@ while stop == 0:
             #id
             id = csw.records[rec].identifier
             logging.info("record id: %s", id)
-
+            
             #description
             description = csw.records[rec].identification.abstract #ISO
             #description = csw.records[rec].abstract #DublinCore
@@ -159,7 +152,17 @@ while stop == 0:
             maxx = csw.records[rec].identification.bbox.maxx
             maxy = csw.records[rec].identification.bbox.maxy
 
-            poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+            #poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+
+            #schema.org expects lat long (Y X) coordinate order
+            boxCoords = str("""{} {} {} {}""".format(miny, minx, maxy, maxx))
+            print("    GeoShape:Box: " + boxCoords)
+            spatialCov = {}
+            spatialCov["@type"] = "https://schema.org/Place"
+            geo = {}
+            geo["@type"] = "https://schema.org/GeoShape"
+            geo["https://schema.org/box"] = boxCoords 
+            spatialCov["https://schema.org/geo"] = geo
 
             data = {}
 
@@ -177,19 +180,7 @@ while stop == 0:
             data["https://schema.org/description"] = description
             data["https://schema.org/url"] = url
 
-            aswkt = {}
-            aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
-            aswkt["@value"] = poly
-
-            crs = {}
-            crs["@id"] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-
-            hg = {}
-            hg["@type"] = "http://www.opengis.net/ont/sf#Polygon" 
-            hg["http://www.opengis.net/ont/geosparql#asWKT"] = aswkt
-            hg["http://www.opengis.net/ont/geosparql#crs"] = crs
-
-            data["http://www.opengis.net/ont/geosparql#hasGeometry"] = hg
+            data["https://schema.org/spatialCoverage"] = spatialCov 
 
             # keyword(s) loop
             k = ""
@@ -212,7 +203,7 @@ while stop == 0:
             k_list = k.split(",")
             data["https://schema.org/keywords"] = k_list
     
-            context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
+            context = {"@vocab": "https://schema.org/"}
             compacted = jsonld.compact(data, context)
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.

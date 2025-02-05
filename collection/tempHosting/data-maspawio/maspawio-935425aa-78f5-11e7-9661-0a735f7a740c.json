@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-935425aa-78f5-11e7-9661-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-935425aa-78f5-11e7-9661-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.201994133459074 -29.132088365679813, 34.201994133459074 -9.336829437261658, 50.7534921450356 -9.336829437261658, 50.7534921450356 -29.132088365679813, 34.201994133459074 -29.132088365679813))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Mozambique Channel Sediment thickness is derived  from the digital total-sediment-thickness database for the world's oceans. The data  illustrates areas with low, minimum and high sediment deposition/thickness.",
     "keywords": [
         "sediments",
@@ -28,5 +17,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Mozambique Channel Sediment thickness",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.132088365679813 34.201994133459074 -9.336829437261658 50.7534921450356"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amozambique_channel_sediment_thickness"
 }

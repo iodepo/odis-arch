@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-7cf94f7e-e428-11e9-be34-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-7cf94f7e-e428-11e9-be34-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.4451388890294 -4.72041666650788, 38.4451388890294 -3.56458333316671, 39.6445833334636 -3.56458333316671, 39.6445833334636 -4.72041666650788, 38.4451388890294 -4.72041666650788))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This resource shows the latest void-filled version of the Shuttle Radar Topography Mission (SRTM) digital elevation model for Kwale county at a spatial resolution of 30 meters. Here, the data has been modeled to illustrates areas that are below 30 meters i.e. areas prone to sea-level rise, etc.",
     "keywords": [
         "model",
@@ -25,5 +14,12 @@
         "Kenya"
     ],
     "name": "Digital Elevation Model (30 m)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.72041666650788 38.4451388890294 -3.56458333316671 39.6445833334636"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Asrtm_30m_dem"
 }

@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-c66b1a0c-6888-11ec-b345-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-c66b1a0c-6888-11ec-b345-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((15.1549777984619 -26.6417236328125, 15.1549777984619 -26.6167182922363, 15.1663703918457 -26.6167182922363, 15.1663703918457 -26.6417236328125, 15.1549777984619 -26.6417236328125))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The DAWF regularly conducts water quality and quantity monitoring throughout the Namibian coastline to ascertain the quality of effluent being discharged into the Atlantic Ocean. Parameters monitored include ammonia, nitrate, dissolved oxygen and dissolved solids.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Industrial effluent discharge points (south)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.6417236328125 15.1549777984619 -26.6167182922363 15.1663703918457"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_WA_effluent_discharge_south_DWA_2020"
 }

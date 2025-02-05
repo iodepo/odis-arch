@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-fc1aad14-0378-11eb-b756-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-fc1aad14-0378-11eb-b756-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parties that have ratified/acceded the London Convention (1972) or the London Protocol (1996), or both the Convention and Protocol, in the Americas as of March 2020.\n\nThe Convention on the Prevention of Marine Pollution by Dumping of Wastes and Other Matter, 1972 as Amended (London Convention), was adopted in quadruplicate at London, Mexico City, Moscow and Washington on 29 December 1972 and entered into force on 30 August 1975. \n\nThe 1996 Protocol to the Convention on the Prevention of Marine Pollution by Dumping of Wastes and Other Matter (London Protocol) was adopted in London on 7 November 1996 and entered into force on 24 March 2006. This Protocol will supersede the Convention as between Contracting Parties to this Protocol which are also Parties to the Convention.",
     "keywords": [
         "1 Marine Environment",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: London Convention/Protocol Ratification Status",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_londonconventionprotocol_geonode"
 }

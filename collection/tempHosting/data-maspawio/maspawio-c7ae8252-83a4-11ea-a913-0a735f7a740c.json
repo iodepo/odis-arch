@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-c7ae8252-83a4-11ea-a913-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-c7ae8252-83a4-11ea-a913-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.6036 -27.9267, 32.6036 -1.704116667, 63.47391667 -1.704116667, 63.47391667 -27.9267, 32.6036 -27.9267))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the spatial distribution of WIO GCRMN monitoring sites. The attribute table shows the first and most recent monitoring period/year. The recent year attribute is used to categorise the locations. Contact Mishal Gudka mgudka@cordioea.net for more information about this resource.",
     "keywords": [
         "GCRMN",
@@ -34,5 +23,12 @@
         "Tanzania"
     ],
     "name": "WIO GCRMN Benthic Monitoring Sites (April 2020)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.9267 32.6036 -1.704116667 63.47391667"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_gcrmn_benthic_monitoring_sites_years_apr_2020"
 }

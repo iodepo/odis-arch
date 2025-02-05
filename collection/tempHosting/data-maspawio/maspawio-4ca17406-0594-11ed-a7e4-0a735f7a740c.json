@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4ca17406-0594-11ed-a7e4-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4ca17406-0594-11ed-a7e4-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((33.90958786 -4.72041702, 33.90958786 5.06116581, 41.92621613 5.06116581, 41.92621613 -4.72041702, 33.90958786 -4.72041702))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": "",
     "name": "ke_counties",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.72041702 33.90958786 5.06116581 41.92621613"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ake_counties"
 }

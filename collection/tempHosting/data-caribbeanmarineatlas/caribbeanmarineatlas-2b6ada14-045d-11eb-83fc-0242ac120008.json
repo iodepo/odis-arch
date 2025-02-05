@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2b6ada14-045d-11eb-83fc-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2b6ada14-045d-11eb-83fc-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,9301490783691 10,0437383651733, -61,9301490783691 10,8443746566772, -60,9090843200684 10,8443746566772, -60,9090843200684 10,0437383651733, -61,9301490783691 10,0437383651733))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The coastal areas of Trinidad have been classified into categories based on morphology and their vulnerability to spilled oil. The index used in this report combines geological and biological sensitivities to oil spill impacts. The least sensitive to long term oil spill damage is 1, and the most sensitive is 10.",
     "keywords": [
         "coastline type",
@@ -29,5 +18,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_coastline_type_oil_spill_environmental_vulnerability_index_1984",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0437383651733 -61,9301490783691 10,8443746566772 -60,9090843200684"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_trinidad_coastline_type"
 }

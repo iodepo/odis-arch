@@ -1,9 +1,10 @@
 from pyld import jsonld
 import graphviz
+from rdflib.namespace import split_uri
 
 API_ROOT = 'https://schema.org/'
 
-def short_name(value, max_length=20):
+def short_name(value, max_length=25):
     """
     Convert an RDF value (given as a dictionary) to a reasonable label.
     """

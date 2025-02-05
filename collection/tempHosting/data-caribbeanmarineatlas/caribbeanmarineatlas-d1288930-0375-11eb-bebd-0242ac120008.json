@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-d1288930-0375-11eb-bebd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-d1288930-0375-11eb-bebd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-178,216567993164 -55,902229309082, -178,216567993164 83,1138763427734, -34,7929153442383 83,1138763427734, -34,7929153442383 -55,902229309082, -178,216567993164 -55,902229309082))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Project: \"Implementation of the Strategic Action Program of the Gulf of Mexico Large Marine Ecosystem\" (Gulf of Mexico LME - SAP) is a five-year binational initiative between Mexico and the United States of America (partner countries), entrusted for its implementation to the United Nations Industrial Development Organization (UNIDO).  Project start date was 21 October 2016. Project objective is to improve water quality, rehabilitate the coastal and marine ecosystems, and avoid depletion of marine resources of the Gulf of Mexico Large Marine Ecosystem.",
     "keywords": [
         "3 Regional Coordination",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: Gulf of Mexico LME - Strategic Action Programme (SAP)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-55,902229309082 -178,216567993164 83,1138763427734 -34,7929153442383"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mea_gulfofmexicolme_sap_geonode"
 }

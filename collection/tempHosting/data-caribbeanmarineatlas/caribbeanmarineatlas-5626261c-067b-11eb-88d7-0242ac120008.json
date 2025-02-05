@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-5626261c-067b-11eb-88d7-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-5626261c-067b-11eb-88d7-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.65117832770458 13.043586998436048, -59.65117832770458 13.337050147813157, -59.41911038449006 13.337050147813157, -59.41911038449006 13.043586998436048, -59.65117832770458 13.043586998436048))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset shows groundwater protection zones digitized from Barbados Water Authority 1:50000 maps, located around the island c.a 1998",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Ground Water Protection Zones - 1997-1:10000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.043586998436048 -59.65117832770458 13.337050147813157 -59.41911038449006"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:ground_water_zones_wgs842"
 }

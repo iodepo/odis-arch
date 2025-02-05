@@ -1,0 +1,42 @@
+#publish the book when a Push is made on GitHub, by merging
+# master into the publication branch (which will then trigger the
+# deploy-book.yml action)
+
+name: "Publish on Push to GitHub"
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+    
+    - name: Set Git config
+      run: |
+        git config --global user.email "github-actions@example.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Update odis-in submodule
+      run: |      
+          git pull --recurse-submodules
+          git submodule update --remote --recursive
+          git commit -am "Auto-update submodule" && git push || echo "No changes to commit"       
+    
+    - name: Merge master into publication
+      run: |      
+          git fetch --unshallow
+          git checkout publication
+          git pull
+          git merge master -m "Auto-merge master back to publication"
+          git push
+

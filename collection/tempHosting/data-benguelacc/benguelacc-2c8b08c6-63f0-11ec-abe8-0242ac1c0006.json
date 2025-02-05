@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-2c8b08c6-63f0-11ec-abe8-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-2c8b08c6-63f0-11ec-abe8-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.459552140912974 -28.952906539610662, 11.459552140912974 -17.255033839593825, 18.772535270585788 -17.255033839593825, 18.772535270585788 -28.952906539610662, 11.459552140912974 -28.952906539610662))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Spatial allocation of mining licences within the Namibian ocean space.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR  Active mining licences (Sept 2020)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.952906539610662 11.459552140912974 -17.255033839593825 18.772535270585788"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_GREE_mining_licence_Sept2020"
 }

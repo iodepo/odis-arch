@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-6b3e55be-632d-11ec-99dd-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-6b3e55be-632d-11ec-99dd-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7014856338501 -28.6604957580566, 11.7014856338501 -17.2431449890137, 16.4535465240479 -17.2431449890137, 16.4535465240479 -28.6604957580566, 11.7014856338501 -28.6604957580566))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Areas permitted for shore-based recreational fishing and boat-based line fishing (as per Gazette 2657) were redrawn in 2020 by the MARISMA project.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Areas permitted for shore-based recreational fishing and boat-based line fishing",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.6604957580566 11.7014856338501 -17.2431449890137 16.4535465240479"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_FISH_prohibited_permitted_recreationa"
 }

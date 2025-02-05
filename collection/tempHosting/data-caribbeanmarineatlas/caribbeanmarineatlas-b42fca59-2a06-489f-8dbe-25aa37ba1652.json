@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-b42fca59-2a06-489f-8dbe-25aa37ba1652.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-b42fca59-2a06-489f-8dbe-25aa37ba1652.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179.99998856633965 -88.99999992186417, -179.99998856633965 88.99999992186417, 179.99998856633965 88.99999992186417, 179.99998856633965 -88.99999992186417, -179.99998856633965 -88.99999992186417))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Light Gray Canvas Base",
     "keywords": [
         "ArcGIS REST MapServer",
@@ -28,5 +17,12 @@
         "Kiribati"
     ],
     "name": "Light Gray Canvas Base",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-88.99999992186417 -179.99998856633965 88.99999992186417 179.99998856633965"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpsservicesarcgisonlinecomarcgisrestservicescanvasworld_light_gray_basemapserver:0-light-gray-canvas-base"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-369a06f8-625d-11ec-8943-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-369a06f8-625d-11ec-8943-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((13.7344369888306 -24.5075435638428, 13.7344369888306 -21.3312187194824, 14.6161508560181 -21.3312187194824, 14.6161508560181 -24.5075435638428, 13.7344369888306 -24.5075435638428))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Kob spawning areas along the Namibian coast.\nDATA SOURCE: Mendelsohn J, Jarvis A, Roberts C and Robertson T. 2002. Atlas of Namibia: A portrait of the land and its people. David Philip Publishers, Cape Town, South Africa.\nMETHODS: Adapted from a map provided by the Geological Survey of Namibia for the Atlas of Namibia. http://www.the-eis.com/",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Kob spawning areas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-24.5075435638428 13.7344369888306 -21.3312187194824 14.6161508560181"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_FISH_kob_spawning_area1"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-d2cababc-63c6-11ec-9d0d-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-d2cababc-63c6-11ec-9d0d-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.33216857910156 -30.3360424041748, 8.33216857910156 -17.2495994567871, 16.1740665435791 -17.2495994567871, 16.1740665435791 -30.3360424041748, 8.33216857910156 -30.3360424041748))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Ecological Support Areas (ESA) are regarded as second priority areas after the EBSAs.\nEBSA methodology uses Systematic Conservation Planning as a spatial\nprioritisation tool that supports decision-making about actions (usually with limited\nresources) that optimise benefits for biodiversity at the least cost to society. The\nmethodology is documented in MARISMA EBSA Workstream, 2020. Ecologically or\nBiologically Significant Marine Areas in the Benguela Current Large Marine Ecosystem:\nDescriptions, status assessment and management recommendations for new and\nrevised EBSAs in Namibia, Technical Report. MARISMA Project. Namibia.",
     "keywords": [
         "Biodiversity",
@@ -24,5 +13,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Ecological Support Areas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-30.3360424041748 8.33216857910156 -17.2495994567871 16.1740665435791"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_Eco_Support_Areas"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-8e4ed808-066d-11eb-914d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-8e4ed808-066d-11eb-914d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.65105589374047 13.044795180654534, -59.65105589374047 13.335132054140221, -59.42007757946718 13.335132054140221, -59.42007757946718 13.044795180654534, -59.65105589374047 13.044795180654534))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Parish boundaries and coastline for Barbados as digitized from Lands and Surveys Department survey maps which  were created using 1982 aerial photography. The source maps varied in scale from 1:1250 to 1:5000 (higher resolution in urban areas) and were digitised by Bell Canada under contract from Bartel. The original coordinate system of the survey maps was Barbados 1938 grid (BNG). The island is currently divided into 11 parishes",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Administrative Districts- 2000 - 1:5000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.044795180654534 -59.65105589374047 13.335132054140221 -59.42007757946718"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:parish_1"
 }

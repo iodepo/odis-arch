@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-3f33796e-0676-11eb-9b6a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-3f33796e-0676-11eb-9b6a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((310186,78125 1774686,0, 310186,78125 2044537,375, 453438,0 2044537,375, 453438,0 1774686,0, 310186,78125 1774686,0))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Digital protected area polygon data was created using the legal descritpions of the boundaries as published on the Government Gazette Statutory Instruments (legal decrees).\n\nCoastal Reserves 2014: Produced in 2014 by Land Information Centre/CZMAI with a preferential scale of 1:100,000.  With a national coverage in polygon format",
     "keywords": [
         "areas",
@@ -24,5 +13,12 @@
         "Belize"
     ],
     "name": "TM_BELIZE_Coastal protected areas_100.000_2014",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1774686,0 310186,78125 2044537,375 453438,0"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:coastal_reserves_2014"
 }

@@ -112,7 +112,7 @@ metadata catalogues over the web.
 
 The first step towards joining ODIS is to generate metadata about your digital 
 holdings as JSON-LD files, using schema.org Types and properties. Guidelines 
-on how to shape these files is available [here](https://book.oceaninfohub.org/foundation/foundation.html), and we provide 
+on how to shape these files is available [here](https://book.odis.org/foundation/foundation.html), and we provide 
 a library of examples in the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) repository, 
 and templates in this book to help nodes shape their submissions. Note, however, 
 that any valid [schema.org](https://schema.org/) Type can be used to share metadata 
@@ -219,14 +219,20 @@ reindex your holdings. Possible values are: `always`, `hourly`, `daily`, `weekly
 `yearly`, `never`.  Here is a snippet from a sitemap:
 :
 
-```html
-  <url>
-    <loc>
-      https://dataportal.leibniz-zmt.de/oih/dataset_18288.html
-    </loc>
-    <lastmod>2023-12-12</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
+```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+     <url>
+       <loc>https://example.org/landingpage1</loc>
+       <lastmod>2024-06-10</lastmod>
+       <changefreq>monthly</changefreq>
+     </url>
+     <url>
+       <loc>https://example.org/landingpage2</loc>
+       <lastmod>2024-01-31</lastmod>
+       <changefreq>monthly</changefreq>
+     </url>  
+   </urlset> 
 ```
 
 ```{tip} 
@@ -261,7 +267,7 @@ on GitHub, to file any issues or questions for the ODIS team.
 
 ### How do I see my records, after completing my ODISCat entry?
 
-The ODIS [Dashboard](http://dashboard.oceaninfohub.org/) can be used to monitor your node 
+The ODIS [Dashboard](http://dashboard.odis.org/) can be used to monitor your node 
 inside the ODIS graph.
 
 In terms of seeing your records in the results of the ODIS front-end [search](https://odis.org): 
@@ -270,7 +276,7 @@ and display of your records in the search results.
 
 ### Where are JSON-LD examples that I can use?
 
-The ODIS [Book](https://book.oceaninfohub.org/thematics/index.html) has good 
+The ODIS [Book](https://book.odis.org/thematics/index.html) has good 
 examples of each of the ODIS patterns of JSON-LD.  Another excellent resource is 
 the [odis-in](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics) 
 repository where all of the JSON-LD templates often drafted together with partners are stored,
@@ -281,14 +287,14 @@ there.
 
 Yes, the SPARQL endpoint for ODIS is: http://graph.oceaninfohub.org/blazegraph/namespace/oih/sparql
 
-You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.oceaninfohub.org/users/sparql.html). 
+You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.odis.org/users/sparql.html). 
 An interface such as [Yasgui](https://yasgui.triply.cc/) can be used to generate your queries.
 
 ### Does ODIS have a JSON endpoint?
 
 A JSON endpoint is in discussion for ODIS.  ODIS does have Parquet files that are 
 automatically generated for each node (you can get the url for that Parquet file
-by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http://dashboard.oceaninfohub.org/).
+by selecting a node in the "ODIS Node Summary" section of the [Dashboard](http://dashboard.odis.org/).
 
 ### How often does ODIS index my records?
 

@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-bba62ed4-1406-11ed-92e7-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-bba62ed4-1406-11ed-92e7-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,6345224380493 -12,3662576675415, 11,6345224380493 -6,10887145996094, 13,6927051544189 -6,10887145996094, 13,6927051544189 -12,3662576675415, 11,6345224380493 -12,3662576675415))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Espécies Aquáticas.Método- Vectorização das Informações Contida no Relatório.",
+    "keywords": [
+        "Peixe",
+        "Angola"
+    ],
+    "name": "AGO Dentex Angolensis 2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-12.3662576675415 11.6345224380493 -6.10887145996094 13.6927051544189"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_NOR_DAT_DENTEX_ANGOLENSIS",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_NOR_DAT_DENTEX_ANGOLENSIS",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_NOR_DAT_DENTEX_ANGOLENSIS"
 }

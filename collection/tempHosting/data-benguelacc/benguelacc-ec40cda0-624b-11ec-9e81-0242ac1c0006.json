@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-ec40cda0-624b-11ec-9e81-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-ec40cda0-624b-11ec-9e81-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.4899997711182 -27.959587097168, 14.4899997711182 -24.4860057830811, 15.6900005340576 -24.4860057830811, 15.6900005340576 -27.959587097168, 14.4899997711182 -27.959587097168))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Namibian Islands and Marine Reserve consists of all islands, marine resources and marine areas as described in the Government Gazette of the Republic of Namibia, 16 February 2009. This layer only includes the outer borders of the entire Marine Reserve as well as the line fish and rock lobster sanctuaries, not the islands and\nislets.\nDATA SOURCE: Government Gazette 4210, February 2009.\nMETHODS: Shapefile created from gazetted coordinates.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Namibian Islands' Marine Protected Area (NIMPA)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.959587097168 14.4899997711182 -24.4860057830811 15.6900005340576"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NIMPA"
 }

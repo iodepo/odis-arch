@@ -16,7 +16,7 @@ are two potential early important deliverables that can foster early engagement 
 both the user and community spheres. 
 
 
-* [The Book](https://book.oceaninfohub.org/)
+* [The Book](https://book.odis.org/)
 * [Search](https://search.oceaninfohub.org/)
 * [Dashboard](http://catalogue.gatewaygeo.ca:8501/odis/dashboard/)
 * [SPARQL endpoint](http://graph.oceaninfohub.org/blazegraph/#splash)

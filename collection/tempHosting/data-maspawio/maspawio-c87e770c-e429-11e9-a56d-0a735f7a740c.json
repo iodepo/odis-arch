@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-c87e770c-e429-11e9-a56d-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-c87e770c-e429-11e9-a56d-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.323800002 -4.74625999999995, 39.323800002 -3.93793999999997, 39.6441100000001 -3.93793999999997, 39.6441100000001 -4.74625999999995, 39.323800002 -4.74625999999995))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "These polygon vector files show the area/s designated and effectively managed to protect marine ecosystems, processes, habitats, and species within the coastal extent of Kwale county. This vector data was derived from the World Database of Protected Area.",
     "keywords": [
         "protection",
@@ -24,5 +13,12 @@
         "Kenya"
     ],
     "name": "Kwale Marine Protected Area",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.74625999999995 39.323800002 -3.93793999999997 39.6441100000001"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amarine_protected_area"
 }

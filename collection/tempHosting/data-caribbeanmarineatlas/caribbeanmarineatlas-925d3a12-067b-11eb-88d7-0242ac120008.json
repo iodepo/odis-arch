@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-925d3a12-067b-11eb-88d7-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-925d3a12-067b-11eb-88d7-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59,6529693603516 13,0179996490479, -59,6529693603516 13,3570508956909, -59,4172477722168 13,3570508956909, -59,4172477722168 13,0179996490479, -59,6529693603516 13,0179996490479))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset displays existing oceangraphic and meteorological station locations located around the island of Barbados. These stations are categorised into three categories. These are Acoustic Wave and Current Profilers, Sea Level Stations and Directional Wave Buoys.   This data was provided by the Coastal Zone Management Unit of Barbados ca.2017.",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Barbados"
     ],
     "name": "TM-BRB_Oceanographic and Meteorological Stations-2017",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13,0179996490479 -59,6529693603516 13,3570508956909 -59,4172477722168"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:locations_2"
 }

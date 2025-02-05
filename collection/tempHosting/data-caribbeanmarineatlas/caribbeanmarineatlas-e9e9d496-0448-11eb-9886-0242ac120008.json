@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e9e9d496-0448-11eb-9886-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e9e9d496-0448-11eb-9886-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-175,418304443359 -35,2583503723145, -175,418304443359 27,376823425293, 179,994018554688 27,376823425293, 179,994018554688 -35,2583503723145, -175,418304443359 -35,2583503723145))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "UNEP-WCMC (1999). Global distribution of sea turtle feeding sites (ver. 1.1). Cambridge (UK): UNEP World Conservation Monitoring Centre. URL: http://data.unep-wcmc.org/datasets/21\n\nThis dataset shows the known locations of sea turtle feeding sites, for five of the seven species: hawksbill turtle (Eretmochelys imbricata), leatherback turtle (Dermochelys coriacea), green turtle (Chelonia mydas), loggerhead turtle (Caretta caretta), and olive ridley turtle (Lepidochelys olivacea).",
     "keywords": [
         "_14_001_wcmc006_turtlefeeding1999_v1_1",
@@ -30,5 +19,12 @@
         "Global"
     ],
     "name": "TV_Global Distribution of Sea Turtle Feeding Sites (1999)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-35,2583503723145 -175,418304443359 27,376823425293 179,994018554688"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a__14_001_wcmc006_turtlefeeding1999_v1_1"
 }

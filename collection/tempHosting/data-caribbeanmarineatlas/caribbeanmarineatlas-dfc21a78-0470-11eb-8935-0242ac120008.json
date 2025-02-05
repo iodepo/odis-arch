@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-dfc21a78-0470-11eb-8935-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-dfc21a78-0470-11eb-8935-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-120,850006103516 3,88333320617676, -120,850006103516 35,9166679382324, -52,2666664123535 35,9166679382324, -52,2666664123535 3,88333320617676, -120,850006103516 3,88333320617676))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Puertos en la región del CARIBE (de WPI, 2018)\n22 de Marzo del 2018 (Fechas de Descarga de https://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)\n\nA partir de World Port Index.\nThe World Port Index (Pub 150) contains the location and physical characteristics of, and the facilities and services offered by major ports and terminals world-wide (approximately 3700 entries), in a tabular format. Entries are organized geographically, in accordance with the diagrams located in the front of the publication.\n\nSHP generado en CENDO / IIO / UABC (2018), Sergio Larios. slarios@uabc.edu.mx",
     "keywords": [
         "Caribbean Port Index",
@@ -28,5 +17,12 @@
         "Venezuela (Bolivarian Republic of)"
     ],
     "name": "TM - CARIBBEAN - Port index - 2018",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "3,88333320617676 -120,850006103516 35,9166679382324 -52,2666664123535"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_caribbean_port_index_2018_200000"
 }

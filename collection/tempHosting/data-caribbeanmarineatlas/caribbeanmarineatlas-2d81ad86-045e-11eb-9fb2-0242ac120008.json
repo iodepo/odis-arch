@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2d81ad86-045e-11eb-9fb2-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2d81ad86-045e-11eb-9fb2-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,9302444458008 10,0434656143188, -61,9302444458008 10,8442497253418, -60,9096374511719 10,8442497253418, -60,9096374511719 10,0434656143188, -61,9302444458008 10,0434656143188))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Watersheds of Trinidad",
     "keywords": [
         "drainage basin",
@@ -29,5 +18,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_watersheds_of_Trinidad",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,0434656143188 -61,9302444458008 10,8442497253418 -60,9096374511719"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_trinidad_watersheds_of_trinidad1"
 }

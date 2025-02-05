@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-5783da64-906e-11ea-a8da-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-5783da64-906e-11ea-a8da-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.079894853 -4.999583333, 39.079894853 -3.080416667, 39.999894853 -3.080416667, 39.999894853 -4.999583333, 39.079894853 -4.999583333))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This raster layer depicts low lying areas at risk of sea-level rise and coastal flooding. Intertidal and maximum spring high tide extents are shown in dark to cyan, to 4 m above Mean Low Water. Above this, high (4-6 m above MLW in red), moderate (6-7 m above MLW in yellow), and low (8-9 m above MLW in green).",
     "keywords": [
         "sea lvel rise",
         "county"
     ],
     "name": "Sea Level Rise vulnearbility",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.999583333 39.079894853 -3.080416667 39.999894853"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_kilifi_mombasa_slr_vulnearbility"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-c95dd8c2-6e04-11e7-874f-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-c95dd8c2-6e04-11e7-874f-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.50162907268171 -27.598370927318296, 32.50162907268171 12.340029072681705, 71.3564290726817 12.340029072681705, 71.3564290726817 -27.598370927318296, 32.50162907268171 -27.598370927318296))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WIO Ship traffic layer shows the density and route of ship traffic within the WIO region in 2014. The layer was derived through density calculation of Voluntary Observing Ship  (VOS) point data.",
     "keywords": [
         "shipping",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "WIO ship traffic 2014",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.598370927318296 32.50162907268171 12.340029072681705 71.3564290726817"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_ship_traffic_2014"
 }

@@ -1,26 +1,22 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-41b5ed5c-1407-11ed-9d24-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-41b5ed5c-1407-11ed-9d24-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,2335958480835 -12,3886842727661, 11,2335958480835 -6,25075197219849, 13,6451063156128 -6,25075197219849, 13,6451063156128 -12,3886842727661, 11,2335958480835 -12,3886842727661))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
-    "description": "No abstract provided",
+    "description": "Espécies Aquáticas. Método- Vectorização das Informações Contida no Relatório.",
     "keywords": [
         "AGO_OEM_NOR_DAT_MERLUCCIUS_POLLI",
         "features",
-        "Global"
+        "Angola"
     ],
-    "name": "AGO_OEM_NOR_DAT_MERLUCCIUS_POLLI",
+    "name": "AGO Merluccius Polli 2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-12.3886842727661 11.2335958480835 -6.25075197219849 13.6451063156128"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_NOR_DAT_MERLUCCIUS_POLLI"
 }

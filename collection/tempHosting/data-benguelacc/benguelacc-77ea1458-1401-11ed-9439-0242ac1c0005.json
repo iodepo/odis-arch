@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-77ea1458-1401-11ed-9439-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-77ea1458-1401-11ed-9439-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,8638191223145 -15,8016328811646, 11,8638191223145 -6,16677236557007, 13,9958343505859 -6,16677236557007, 13,9958343505859 -15,8016328811646, 11,8638191223145 -15,8016328811646))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Estrada Nacional .Método- Shapefile Baixado",
+    "keywords": [
+        "Estrada",
+        "Angola"
+    ],
+    "name": "AGO Estrada Nacional100 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-15.8016328811646 11.8638191223145 -6.16677236557007 13.9958343505859"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_TRANS_EN100",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_TRANS_EN100",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_TRANS_EN100"
 }

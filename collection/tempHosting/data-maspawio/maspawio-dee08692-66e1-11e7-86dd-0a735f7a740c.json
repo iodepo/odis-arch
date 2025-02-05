@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-dee08692-66e1-11e7-86dd-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-dee08692-66e1-11e7-86dd-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.9527 -26.07360176, 32.9527 -2.183833333, 55.64822 -2.183833333, 55.64822 -26.07360176, 32.9527 -26.07360176))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows live coral cover for selected sites and years i.e. 2014-2016 as reported through the WIO  GCRMN 2015-2016 process.",
     "keywords": [
         "coral cover",
@@ -33,5 +22,12 @@
         "South Africa"
     ],
     "name": "WIO GCRMN sites Live coral cover for selected years 2014-2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.07360176 32.9527 -2.183833333 55.64822"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_gcrmn_live_coral_cover_2014_2016"
 }

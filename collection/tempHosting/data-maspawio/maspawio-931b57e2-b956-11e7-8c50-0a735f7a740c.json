@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-931b57e2-b956-11e7-8c50-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-931b57e2-b956-11e7-8c50-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.1666984558105 -25.9167003631592, 34.1666984558105 -7.0, 52.7332992553711 -7.0, 52.7332992553711 -25.9167003631592, 34.1666984558105 -25.9167003631592))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This point vector  layer/data shows sighting location for various sharks species in the WIO . The layer also contains additional attributes  on depth at which  the sharks were observed as well as the water temperature and nitrates concentration at specific points.  The data is owned by iziko South African Museum - Shark Collection  research.",
     "keywords": [
         "shark sighting",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "Shark sighting  2006",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-25.9167003631592 34.1666984558105 -7.0 52.7332992553711"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Asharks_iziko_sa_museum_2006shp"
 }

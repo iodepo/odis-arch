@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-9cb06ad8-cf5c-11e7-b8a6-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-9cb06ad8-cf5c-11e7-b8a6-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.498664856000175 -27.51318020116595, 32.498664856000175 12.34367990835375, 71.55195923750537 12.34367990835375, 71.55195923750537 -27.51318020116595, 32.498664856000175 -27.51318020116595))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This coverage was derived from a study that assessed the biogeographic classification of the Western Indian Ocean (WIO) on the basis of the species diversity and distribution of reef-building corals. Twenty one locations were sampled between 2002 and 2011. Presence/absence of scleractinian corals was noted on SCUBA, with the aid of underwater digital photographs and reference publications for species identification. Sampling effort varied from 7 to 37 samples per location, with 15 to 45 minutes per dive allocated to species observations, depending on the logistics on each trip. Species presence/absence was analyzed using the Bray-Curtis similarity coefficient, followed by cluster analysis and multi-dimensional scaling. Total (asymptotic) species number per location was estimated using the Michaelis-Menten equation. Three hundred and sixty nine coral species were named with stable identifications and used for analysis. At the location level, estimated maximum species richness ranged from 297 (Nacala, Mozambique) to 174 (Farquhar, Seychelles). Locations in the northern Mozambique Channel had the highest diversity and similarity, forming a core region defined by its unique oceanography of variable meso-scale eddies that confer high connectivity within this region. A distinction between mainland and island fauna was not found; instead, diversity decreased radially from the northern Mozambique Channel. The Chagos archipelago was closely related to the northern Mozambique Channel region, and analysis of hard coral data in the IUCN Red List found Chagos to be more closely related to the WIO than to the Maldives, India and Sri Lanka. Diversity patterns were consistent with primary oceanographic drivers in the WIO, reflecting inflow of the South Equatorial Current, maintenance of high diversity in the northern Mozambique Channel, and export from this central region to the north and south, and to the Seychelles and Mascarene islands.",
     "keywords": [
         "WIO",
@@ -35,5 +24,12 @@
         "Tanzania"
     ],
     "name": "The Diversity and Bio-geography of Western Indian Ocean Reef Building Corals",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.51318020116595 32.498664856000175 12.34367990835375 71.55195923750537"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Adiversity_and_biogeography_of_western_indian_ocean_reef_building_corals"
 }

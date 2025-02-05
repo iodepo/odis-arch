@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-10bf78b4-9cf4-42dc-a601-0dabdc17fa7d.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-10bf78b4-9cf4-42dc-a601-0dabdc17fa7d.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.76631706929841 17.051076268671444, -61.76631706929841 17.14579302550874, -61.65953608451215 17.14579302550874, -61.65953608451215 17.051076268671444, -61.76631706929841 17.051076268671444))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset was created by Lesley Mitchell, an intern working with the Environmental Awareness Group in Antigua and Barbuda. This assignment was carried out under the BIOPAMA Caribbean Protected Areas Gateway project.",
     "keywords": [
         "features",
@@ -23,5 +12,12 @@
         "Antigua and Barbuda"
     ],
     "name": "NEMMA Landbird surveys",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17.051076268671444 -61.76631706929841 17.14579302550874 -61.65953608451215"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:landbird_pre2016"
 }

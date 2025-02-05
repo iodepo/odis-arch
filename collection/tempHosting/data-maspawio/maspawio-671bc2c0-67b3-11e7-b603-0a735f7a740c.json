@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-671bc2c0-67b3-11e7-b603-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-671bc2c0-67b3-11e7-b603-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((18.37499920655 -29.41666678895, 18.37499920655 9.591666388350003, 47.741665755750006 9.591666388350003, 47.741665755750006 -29.41666678895, 18.37499920655 -29.41666678895))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "layer shows the distribution of human population within major river basins of the WIO. Population estimate data was sourced from SEDAC at a higher resolution 1 km grid. A spatial query was performed by CORDIO EA to delineate  population layer  from global to local (Drainage basin) level.",
     "keywords": [
         "human",
@@ -35,5 +24,12 @@
         "South Africa"
     ],
     "name": "Human population count in major  WIO river basins  2015 estimate",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.41666678895 18.37499920655 9.591666388350003 47.741665755750006"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_2015_population_count_in_major_river_basin"
 }

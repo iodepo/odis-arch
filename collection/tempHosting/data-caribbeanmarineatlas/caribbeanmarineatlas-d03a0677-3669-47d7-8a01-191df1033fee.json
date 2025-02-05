@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-d03a0677-3669-47d7-8a01-191df1033fee.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-d03a0677-3669-47d7-8a01-191df1033fee.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-99.00100747375966 19.282935047368184, -99.00100747375966 36.11827443687474, -79.09370243483018 36.11827443687474, -79.09370243483018 19.282935047368184, -99.00100747375966 19.282935047368184))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "CMECS - Salinity subcomponent  - Fall",
     "keywords": [
         "Global",
@@ -25,5 +14,12 @@
         "Kiribati"
     ],
     "name": "CMECS - Salinity subcomponent  - Fall",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "19.282935047368184 -99.00100747375966 36.11827443687474 -79.09370243483018"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpsgisngdcnoaagovarcgisrestservicesgulfdataatlascmecs_salinitymapserver:0-cmecs-salinity-subcomponent-fall"
 }

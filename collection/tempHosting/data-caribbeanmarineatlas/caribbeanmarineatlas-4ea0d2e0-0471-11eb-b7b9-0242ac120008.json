@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-4ea0d2e0-0471-11eb-b7b9-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-4ea0d2e0-0471-11eb-b7b9-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-82.000008 9.334149999697601, -82.000008 14.985578999528109, -75.39707199999998 14.985578999528109, -75.39707199999998 9.334149999697601, -82.000008 9.334149999697601))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Las Áreas Marinas Protegidas o AMP’s, son zonas establecidas por Decreto o Ley para proteger, conservar, restaurar y preservar especies, hábitats y procesos ecológicos que han sido afectadas; así mismo, para regular las actividades productivas que garanticen que el mar siga siendo fuente de empleo y alimento para las personas.",
     "keywords": [
         "amp_1",
@@ -23,5 +12,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Áreas marinas protegidas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "9.334149999697601 -82.000008 14.985578999528109 -75.39707199999998"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:amp_1"
 }

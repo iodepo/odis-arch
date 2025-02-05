@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-12f7b510-0458-11eb-af2a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-12f7b510-0458-11eb-af2a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.663426540279566 10.680570640895445, -61.663426540279566 10.705217123816409, -61.606918316765494 10.705217123816409, -61.606918316765494 10.680570640895445, -61.663426540279566 10.680570640895445))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Heavy metal levels of the Ircinia Felix sp. (Stinker Sponge) was tested in sediments in 2003.  As part of an investigation of the heavy metal levels in sediment and interstitial waters, and their effect on community structure of marine soft-bottom benthos from Port of Spain to Chaguaramas. Metals tested included cadmium (Cd), chromium (Cr), copper (Cu), iron (Fe), nickel (Ni), lead (Pb) and zinc (Zn).",
     "keywords": [
         "_2002_felix",
@@ -32,5 +21,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_Chaguaramas_heavy_metal_contamination_of_I.felix_ 2001-2002",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.680570640895445 -61.663426540279566 10.705217123816409 -61.606918316765494"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:a__2002_felix"
 }

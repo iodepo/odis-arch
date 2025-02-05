@@ -100,7 +100,7 @@ thematic sections for more examples for a given thematic area.
 This example is from the [training and courses thematic
 section](https://github.com/iodepo/odis-arch/tree/master/book/thematics/training).  To view all the types
 being developed reference
-the [Thematic section](https://github.com/iodepo/odis-arch/tree/master/book/thematics).
+the [Thematic section](https://github.com/iodepo/odis-in/tree/master/dataGraphs/thematics).
 
 These JSON-LD documents leverage schema.org as the primary vocabulary.
 The examples in the thematic section provide examples for the various type.  
@@ -148,7 +148,7 @@ exposes a potential route a group might take to develop a usable tool. Such a
 tool might, for example, leverage the Electron app dev environment to evolve
 this approach in a more dedicated tool/manner.
 
-Use a JSON-LD document ([Example](https://github.com/iodepo/odis-arch/blob/master/book/thematics/sdg/graphs/creativework.json)) one could
+Using a JSON-LD document ([example](https://github.com/iodepo/odis-in/blob/master/dataGraphs/thematics/sdg/graphs/creativeWork.json)), one could
 load this into something like 
 the [JSONschema.net tool](https://jsonschema.net/).
 

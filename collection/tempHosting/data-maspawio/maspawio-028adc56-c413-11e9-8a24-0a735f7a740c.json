@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-028adc56-c413-11e9-8a24-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-028adc56-c413-11e9-8a24-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((40.5 -2.899999999999998, 40.5 -2.4800000000000018, 40.91 -2.4800000000000018, 40.91 -2.899999999999998, 40.5 -2.899999999999998))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This data shows high-resolution maps on fishing behavior and target resources of artisanal fishers in Kipini Kenya. The resource was developed using participatory mapping of fishing grounds using a handheld GPS mounted on selected fishing vessels. To access this resource, please contact innocentke@gmail.com or jmbugua@cordioea.net",
     "keywords": [
         "fishing",
@@ -23,5 +12,12 @@
         "Kenya"
     ],
     "name": "Fishing intensity Kipini",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-2.899999999999998 40.5 -2.4800000000000018 40.91"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akipini_fishing_intensity"
 }

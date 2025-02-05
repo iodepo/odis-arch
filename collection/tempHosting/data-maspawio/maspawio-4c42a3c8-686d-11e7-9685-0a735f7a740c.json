@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4c42a3c8-686d-11e7-9685-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4c42a3c8-686d-11e7-9685-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((17.95833254155 -34.83333343395, 17.95833254155 11.91666637905, 51.374999074550004 11.91666637905, 51.374999074550004 -34.83333343395, 17.95833254155 -34.83333343395))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the distribution of human population within a 100 Km buffer zone. \nHuman population count data from SEDAC (gpwV4) was used in delineation of vulnerable coastal communities along the coastal 100 km buffer strip.",
     "keywords": [
         "human",
@@ -35,5 +24,12 @@
         "South Africa"
     ],
     "name": "WIO Human population count (2015 estimate) within 100 km buffer",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-34.83333343395 17.95833254155 11.91666637905 51.374999074550004"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_2015_human_population_count_within_100km_buffer"
 }

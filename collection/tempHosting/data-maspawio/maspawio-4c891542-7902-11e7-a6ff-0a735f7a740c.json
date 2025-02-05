@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4c891542-7902-11e7-a6ff-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4c891542-7902-11e7-a6ff-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.201994133459074 -29.20794898453007, 34.201994133459074 -9.336829437261658, 50.678048029435395 -9.336829437261658, 50.678048029435395 -29.20794898453007, 34.201994133459074 -29.20794898453007))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Layer shows the crustal age in million years. This data gives an insights into the forces that have shaped the face of our planet. Forged and altered by volcanic and tectonic processes that are intimately linked to the deep earth,",
     "keywords": [
         "crustal age",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Crustal age of the Mozambique channel",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.20794898453007 34.201994133459074 -9.336829437261658 50.678048029435395"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amoz_channel_crustal_age"
 }

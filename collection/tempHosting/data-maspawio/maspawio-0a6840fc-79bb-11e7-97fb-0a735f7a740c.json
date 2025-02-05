@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-0a6840fc-79bb-11e7-97fb-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-0a6840fc-79bb-11e7-97fb-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((29.1411325076107 -29.6989089133599, 29.1411325076107 -0.76751222303551, 53.6924867060326 -0.76751222303551, 53.6924867060326 -29.6989089133599, 29.1411325076107 -29.6989089133599))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions. USERS PLEASE NOTE - shapefile does NOT accurately represent outer MEOW boundaries: As specified in the original publications, the boundaries in this shapefile have been extended out some 200 nautical miles from land (and this buffer is extended to include any additional marine areas less than 200metres in depth which lie beyond this distance). This outer boundary buffer is primarily drawn here to ease visibility of ecoregions in global and regional scale maps. Similarly the inland boundaries of the ecoregions extend far inland - a convention to ensure inclusion of any coastline and estuarine/lagoonal systems which may be derived from different map sources. As specified, the ecoregional classification relates primarily to coast and shelf biotas for which a 200m depth contour is a more accurate indicative boundary. It is therefore not an appropriate use of the data to calculate total ecoregion areas or generate other area or volumetric dependent statistics using these boundaries alone. A version of the shapefile cut to shelf areas will be released on this site by December 2007. TNC users please note: TNC has adopted the Marine Ecoregions of the World as our marine ecoregional boundaries, but in some cases around North America we are using older and slightly different boundaries for ecoregional planning. These other boundaries can be found in the marine ecoregional assessment layer directly below on this page. Download this data at: http://maps.tnc.org/",
     "keywords": [
         "marine_ecoregions",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Marine Ecoregions Of the World (MEOW)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.6989089133599 29.1411325076107 -0.76751222303551 53.6924867060326"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amarine_ecoregions"
 }

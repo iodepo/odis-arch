@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-ad3e3962-0455-11eb-9bab-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-ad3e3962-0455-11eb-9bab-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-87,8509902954102 18,1784915924072, -87,8509902954102 21,6451072692871, -86,7228469848633 21,6451072692871, -86,7228469848633 18,1784915924072, -87,8509902954102 18,1784915924072))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Cartografía de la ubicación y distribución de lechos de pasto marino del Caribe Mexicano. Combinación de la cartografía de cobertura bentónica de la CONABIO (2017) y de la cartografía de la Universidad Autónoma Metropolitana (UAM). Avances en la investigación científica que fue parcialmente financiado (zona norte) por parte de un proyecto con la Comisión para la Cooperación ambiental (CCA) para la formulación de políticas en materia de carbono azul en América del Norte.",
     "keywords": [
         "Arrecifes de coral",
@@ -29,5 +18,12 @@
         "Mexico"
     ],
     "name": "TV_MEX_Pastos marinos del Caribe Mexicano, 2017",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "18,1784915924072 -87,8509902954102 21,6451072692871 -86,7228469848633"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_mex_pastos_marinos_20170"
 }

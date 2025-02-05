@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-484945a0-0594-11ed-9da6-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-484945a0-0594-11ed-9da6-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.2639406598336 -4.7463834378454, 39.2639406598336 -1.63916771741623, 41.5889484514099 -1.63916771741623, 41.5889484514099 -4.7463834378454, 39.2639406598336 -4.7463834378454))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": "",
     "name": "ke_coral_reef_wcmc",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.7463834378454 39.2639406598336 -1.63916771741623 41.5889484514099"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ake_coral_reef_wcmc"
 }

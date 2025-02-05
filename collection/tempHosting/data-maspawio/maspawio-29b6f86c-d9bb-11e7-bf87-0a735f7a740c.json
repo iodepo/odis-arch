@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-29b6f86c-d9bb-11e7-bf87-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-29b6f86c-d9bb-11e7-bf87-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((27.4410206590001 -33.2880609599999, 27.4410206590001 12.415473036, 55.4127426146 12.415473036, 55.4127426146 -33.2880609599999, 27.4410206590001 -33.2880609599999))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset shows the regional (WIO) distribution of mangrove forests, derived from earth observation satellite imagery. The dataset was created using Global Land Survey (GLS) data and the Landsat\narchive. Approximately 1,000 Landsat scenes were interpreted using hybrid\nsupervised and unsupervised digital image classification techniques. See Giri et al.(2011) for full details.",
     "keywords": [
         "blue carbon",
@@ -36,5 +25,12 @@
         "Tanzania"
     ],
     "name": "WIO Mangroves",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-33.2880609599999 27.4410206590001 12.415473036 55.4127426146"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amangroves"
 }

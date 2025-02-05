@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1e97f2b6-0455-11eb-9e32-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1e97f2b6-0455-11eb-9e32-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-113,695838928223 14,5344181060791, -113,695838928223 29,34716796875, -86,7251434326172 29,34716796875, -86,7251434326172 14,5344181060791, -113,695838928223 14,5344181060791))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El mapa representa la distribución y extensión de la cobertura de los manglares en México para el año 2015, obtenido a partir de un método de clasificación interdependiente, basado en el mapa de uso del suelo y vegetación de la zona costera asociada a los manglares de México. Se utilizaron en total 198 imágenes satelitáles, principalmente SPOT 5; por falta de disponibilidad completa para el año 2015 de este tipo de imágenes, fue necesario también usar del último trimestre de 2014 (125 en total para este año), algunas SPOT 6, SPOT 7 y RapidEye.",
     "keywords": [
         "Biodiversidad",
@@ -26,5 +15,12 @@
         "Mexico"
     ],
     "name": "TV_MEX_Manglares en México - 2015",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "14,5344181060791 -113,695838928223 29,34716796875 -86,7251434326172"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:mx_man15gw0"
 }

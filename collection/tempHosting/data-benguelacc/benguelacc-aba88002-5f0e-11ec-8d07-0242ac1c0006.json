@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-aba88002-5f0e-11ec-8d07-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-aba88002-5f0e-11ec-8d07-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.2924194335938 -28.5292701721191, 14.2924194335938 -22.1173191070557, 16.4248313903809 -22.1173191070557, 16.4248313903809 -28.5292701721191, 14.2924194335938 -28.5292701721191))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Towns along the coast of Namibia.\nThe position and names of towns were collected from Atlas of Namibia + colour orthophotos.\nReference: De Cauwer, V. 2007. Mapping of the BCLME shoreline, shallow water and marine habitats. Final report for the BCLME project BEP/BAC/03/02",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Coastal Towns",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.5292701721191 14.2924194335938 -22.1173191070557 16.4248313903809"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_coastal_settlements"
 }

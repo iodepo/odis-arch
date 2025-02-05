@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-f6e7db3c-0684-11eb-877c-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-f6e7db3c-0684-11eb-877c-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.94566230149861 6.644590581823647, -77.94566230149861 12.455985162963044, -71.10733603151714 12.455985162963044, -71.10733603151714 6.644590581823647, -77.94566230149861 6.644590581823647))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Propuesta metodológica para realizar la caracterización de las coberturas naturales y antropizadas presentes en el territorio colombiano.\nIDEAM, 2010. Leyenda Nacional de Coberturas de la Tierra. Metodología CORINE Land Cover adaptada para\nColombia Escala 1:100.000. Instituto de Hidrología, Meteorología y Estudios Ambientales. Bogotá, D. C., 72p.\nLas coberturas de la tierra proporcionan información fundamental para diversos procesos nacionales como los mapas de ecosistemas, conflictos de uso del territorio, ordenación de cuencas y del territorio, seguimiento a la deforestación de los bosques, y los inventarios forestales, sólo por citar algunos",
     "keywords": [
         "Colombia",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Cobertura Corine Land Cover adaptada para Colombia-2010-100.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "6.644590581823647 -77.94566230149861 12.455985162963044 -71.10733603151714"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:corinelandcover1"
 }

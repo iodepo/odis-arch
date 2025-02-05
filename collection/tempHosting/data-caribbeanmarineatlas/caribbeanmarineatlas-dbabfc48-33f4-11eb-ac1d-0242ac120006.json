@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-dbabfc48-33f4-11eb-ac1d-0242ac120006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-dbabfc48-33f4-11eb-ac1d-0242ac120006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-180,0 -58,4242057800293, -180,0 88,5313110351562, 179,775939941406 88,5313110351562, 179,775939941406 -58,4242057800293, -180,0 -58,4242057800293))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "<p>A base layer with states/governments and large marine ecosystems (LMEs).</p>",
     "keywords": [
         "3 Regional Coordination",
         "Caribbean"
     ],
     "name": "CLME: Basemap",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-58,4242057800293 -180,0 88,5313110351562 179,775939941406"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:basemap_withlmes_geonode_100"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-1d5ad9b4-045e-11eb-aa7d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-1d5ad9b4-045e-11eb-aa7d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61,9046897888184 10,1301116943359, -61,9046897888184 10,6751260757446, -61,4600563049316 10,6751260757446, -61,4600563049316 10,1301116943359, -61,9046897888184 10,1301116943359))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This datasets presents a geochemical assessment for trace metals in coastal sediments of the Gulf of Paria. The total trace metal concentrations of aluminum, copper and lead, iron, manganese, cadmium, nickel, zinc, chromium, mercury,  and absorbed or adsorbed petroleum hydrocarbon (AAPH) in the sediments and the clay-enriched sediments of the Gulf of Paria Trinidad is presented.",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Saint-Martin (French part)"
     ],
     "name": "TV_TTO_Trinidad_Trace_metals_in_Gulf_of_Paria_1998",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10,1301116943359 -61,9046897888184 10,6751260757446 -61,4600563049316"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tv_trinidad_trace_metals_in_gulf_of_paria_199"
 }

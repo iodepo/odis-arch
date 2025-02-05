@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-23c2d76a-0383-11eb-ab42-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-23c2d76a-0383-11eb-ab42-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-109,870948791504 -20,5141201019287, -109,870948791504 27,9185657501221, -28,836404800415 27,9185657501221, -28,836404800415 -20,5141201019287, -109,870948791504 -20,5141201019287))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer (zip file) shows the coverage of the coral reefs in the Wider Caribbean Region (2009 estimations). The coral reef habitat lies within the \"Coral  reef sub-ecosystem\" which also hosts mangroves and seagrasses. This sub-ecosystem receives special attention in the CLME+ SAP due to the importance of the spiny lobster and queen conch fisheries for local livelihoods.",
     "keywords": [
         "4 Coral Subecosystem",
@@ -23,5 +12,12 @@
         "Americas"
     ],
     "name": "CLME: TV_WCR_Subecosystems_Coral_reefs (D)_20171204_noscale",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-20,5141201019287 -109,870948791504 27,9185657501221 -28,836404800415"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:coral_reefs2"
 }

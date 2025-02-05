@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-636c2328-8408-11e8-b3cd-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-636c2328-8408-11e8-b3cd-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.902851835344 -14.7422595073703, 38.902851835344 -5.56846607414997, 50.2919149134426 -5.56846607414997, 50.2919149134426 -14.7422595073703, 38.902851835344 -14.7422595073703))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": "",
     "name": "ms_wio_sites_30km_buffer",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-14.7422595073703 38.902851835344 -5.56846607414997 50.2919149134426"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ams_wio_sites_30km_buffer"
 }

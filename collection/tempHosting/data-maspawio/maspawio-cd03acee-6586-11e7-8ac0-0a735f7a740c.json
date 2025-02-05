@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-cd03acee-6586-11e7-8ac0-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-cd03acee-6586-11e7-8ac0-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.726611 -27.414917, 32.726611 -1.704116667, 63.47391667 -1.704116667, 63.47391667 -27.414917, 32.726611 -27.414917))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the distribution of reef monitoring stations and sites for which data is included in the GCRMN report, across the Western Indian Ocean.",
     "keywords": [
         "coral reef",
@@ -35,5 +24,12 @@
         "South Africa"
     ],
     "name": "WIO GCRMN reef monitoring stations",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.414917 32.726611 -1.704116667 63.47391667"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Areef_survey_staion_01_03_17"
 }

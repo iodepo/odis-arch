@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-967694da-e427-11e9-90ff-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-967694da-e427-11e9-90ff-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.2016206590001 -4.67796096099995, 39.2016206590001 -4.00446095999996, 39.6495206600001 -4.00446095999996, 39.6495206600001 -4.67796096099995, 39.2016206590001 -4.67796096099995))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset shows the distribution of mangrove forests in Kwale (2010)  derived from the Global Land Survey (GLS) data and the Landsat archive. Approximately 1,000 Landsat scenes were interpreted using hybrid\nsupervised and unsupervised digital image classification techniques. See Giri et al. (2011) for full details.",
     "keywords": [
         "mangrove",
@@ -23,5 +12,12 @@
         "Kenya"
     ],
     "name": "kwale mangrove extent (2010)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.67796096099995 39.2016206590001 -4.00446095999996 39.6495206600001"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_mangrove_extent"
 }

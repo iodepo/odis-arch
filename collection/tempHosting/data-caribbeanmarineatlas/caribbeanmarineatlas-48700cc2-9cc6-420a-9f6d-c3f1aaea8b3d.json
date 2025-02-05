@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-48700cc2-9cc6-420a-9f6d-c3f1aaea8b3d.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-48700cc2-9cc6-420a-9f6d-c3f1aaea8b3d.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-175.33742564675288 -38.88625850363257, -175.33742564675288 42.68201305072134, 179.90322958978268 42.68201305072134, 179.90322958978268 -38.88625850363257, -175.33742564675288 -38.88625850363257))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Mangrove biomass (tonnes per hectare)",
     "keywords": [
         "Global",
@@ -25,5 +14,12 @@
         "Kiribati"
     ],
     "name": "Mangrove biomass (tonnes per hectare)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-38.88625850363257 -175.33742564675288 42.68201305072134 179.90322958978268"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpec2-54-204-216-109compute-1amazonawscom6080arcgisrestservicesmarinetnc_001_globalmangrovebiomass2014mapserver:0-mangrove-biomass-tonnes-per-hectare"
 }

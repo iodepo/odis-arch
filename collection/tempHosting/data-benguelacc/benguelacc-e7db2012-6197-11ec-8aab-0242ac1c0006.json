@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-e7db2012-6197-11ec-8aab-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-e7db2012-6197-11ec-8aab-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((14.4291296005249 -26.0007591247559, 14.4291296005249 -23.306001663208, 16.0155010223389 -23.306001663208, 16.0155010223389 -26.0007591247559, 14.4291296005249 -26.0007591247559))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "World Heritage Site Namib Sand Sea\nUNEP-WCMC and IUCN (2020), Protected \nPlanet: The World Database on\nProtected Areas (WDPA) [Online], September 2020, Cambridge, UK: UNEP- WCMC and IUCN. Available at: www.protectedplanet.net.",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR World Heritage Site Namib Sand Sea",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.0007591247559 14.4291296005249 -23.306001663208 16.0155010223389"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_world_heritage_Namib_Sand_Sea"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-eae0a89a-687c-11e7-b1aa-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-eae0a89a-687c-11e7-b1aa-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((16.45833254755 -34.83333343395, 16.45833254755 11.983333045450003, 63.499999026050006 11.983333045450003, 63.499999026050006 -34.83333343395, 16.45833254755 -34.83333343395))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the distribution of human population within the WIO countries.\nGridded Human Population count (global) 2015 estimate data was used to derive WIO national human population grids. The grids are derived at 1 Km spatial resolution.",
     "keywords": [
         "human",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "National human population count in the WIO",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-34.83333343395 16.45833254755 11.983333045450003 63.499999026050006"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ahuman_population_count_in_the_wio_2015_estimate"
 }

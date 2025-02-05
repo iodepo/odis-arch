@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e0ccb4d6-0683-11eb-a4dd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e0ccb4d6-0683-11eb-a4dd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-79.247131 1.4083289999535715, -79.247131 12.571822999598622, -71.084351 12.571822999598622, -71.084351 1.4083289999535715, -79.247131 1.4083289999535715))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Describe la clasificación de fondos sedimentarios en el Caribe Colombiano\n\nContiene:\n-Arenas lodosas litobioclástica\n-Arenas litobioclásticas\n-Arenas lodosas litoclásticas\n-Arenas litoclásticas\n\nINVEMAR – TNC – CI – UAESPNN. 2009. Informe Tecnico: Planificacion ecorregional para la conservacion in situ de la biodiversidad marina y costera en el Caribe y Pacifico continental colombiano. Alonso, D., Ramirez, L. F., Segura- Quintero, C., Castillo-Torres, P., Diaz, J.M., Walschburger, T. y N. Arango. Serie de Documentos Generales No. 41. Santa Marta. 106p + Anexos.",
     "keywords": [
         "Colombia",
@@ -25,5 +14,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Fondos moviles de grano grueso no carbonatados",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1.4083289999535715 -79.247131 12.571822999598622 -71.084351"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:fondos_moviles_de_grano_grueso_no_carbonatado"
 }

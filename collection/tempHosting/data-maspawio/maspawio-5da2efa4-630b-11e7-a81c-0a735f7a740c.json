@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-5da2efa4-630b-11e7-a81c-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-5da2efa4-630b-11e7-a81c-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-25.3605575561524 -46.9697265625001, -25.3605575561524 37.3404121398925, 63.4957580566406 37.3404121398925, 63.4957580566406 -46.9697265625001, -25.3605575561524 -46.9697265625001))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the African Countries",
     "keywords": [
         "africa",
@@ -22,5 +11,12 @@
         "Africa"
     ],
     "name": "African Countries",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-46.9697265625001 -25.3605575561524 37.3404121398925 63.4957580566406"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aafricancountries"
 }

@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-be4f43a4-7203-11e8-8dd7-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-be4f43a4-7203-11e8-8dd7-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.867106640559 -27.0173701471146, 32.867106640559 12.9389764622939, 72.7374771162759 12.9389764622939, 72.7374771162759 -27.0173701471146, 32.867106640559 -27.0173701471146))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": "",
     "name": "wio_reef_by_coastal_development_threat",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-27.0173701471146 32.867106640559 12.9389764622939 72.7374771162759"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_reef_by_coastal_development_threat"
 }

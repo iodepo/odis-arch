@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-5b385402-e0ab-11e7-842d-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-5b385402-e0ab-11e7-842d-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((35.96087646484375 -17.30950927734375, 35.96087646484375 -7.412902832031249, 49.71752929687499 -7.412902832031249, 49.71752929687499 -17.30950927734375, 35.96087646484375 -17.30950927734375))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This coverage shows digital elevation model of the NMC region. The data was derived from Consortium for Spatial Information (CGIAR-CSI) archive as single tiles that were seamlessly combined and clipped to the NMC region extent.\nThe coverage has also been styled to illustrate elevation up-to 100 meter thereby depicting low lying areas of the NMC.\\\nJarvis, A., H.I. Reuter, A. Nelson, E. Guevara, 2008, Hole-filled SRTM for the globe Version 4, available from the CGIAR-CSI SRTM 90m Database (http://srtm.csi.cgiar.org).",
     "keywords": [
         "NMCi",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Northern Mozambique 90 meter DEM",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.30950927734375 35.96087646484375 -7.412902832031249 49.71752929687499"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3A_90m_dem"
 }

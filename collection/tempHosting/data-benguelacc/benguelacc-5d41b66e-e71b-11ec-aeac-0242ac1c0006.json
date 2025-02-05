@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-5d41b66e-e71b-11ec-aeac-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-5d41b66e-e71b-11ec-aeac-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.641861996291713 -18.105003314512683, 11.641861996291713 -4.293597438621827, 24.362327600695224 -4.293597438621827, 24.362327600695224 -18.105003314512683, 11.641861996291713 -18.105003314512683))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Fonte: Ministério da administração do\nterritório",
     "keywords": [
         "AGO_OEM_BASE_PROV",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "AGO_OEM_BASE_PROV",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-18.105003314512683 11.641861996291713 -4.293597438621827 24.362327600695224"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_PROV"
 }

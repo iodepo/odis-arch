@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-506353c4-14bb-11ea-a4ee-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-506353c4-14bb-11ea-a4ee-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.2097947475056 -4.67081930587567, 39.2097947475056 -4.09411486877568, 39.6424676131647 -4.09411486877568, 39.6424676131647 -4.67081930587567, 39.2097947475056 -4.67081930587567))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Kwale County Coastal ward roads vector lines show the distribution of different road types (Paved/not paved) within seven selected coastal wards in Kwale county.  Data were derived from world Bank archive https://datacatalog.worldbank.org/dataset/kenya-roads and clipped to the region of interest (Coastal wards) by CORDIO.",
     "keywords": "roads",
     "name": "Kwale County Coastal ward roads",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.67081930587567 39.2097947475056 -4.09411486877568 39.6424676131647"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_coastal_wards_roads_wri"
 }

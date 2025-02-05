@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-3339cdca-5a75-11e8-a0da-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-3339cdca-5a75-11e8-a0da-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((40.6913526267 -2.4824234606, 40.6913526267 -1.6555906817, 41.5788494593 -1.6555906817, 41.5788494593 -2.4824234606, 40.6913526267 -2.4824234606))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "High-resolution coastline layer. This is a demo layer for illustration of Geonode Remote service capabilities.",
     "keywords": [
         "features",
         "kenya_coast_line"
     ],
     "name": "kenya_coast_line",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-2.4824234606 40.6913526267 -1.6555906817 41.5788494593"
+        }
+    },
     "url": "http://maspawio.net/layers/ICRAF%3Akenya_coast_line"
 }

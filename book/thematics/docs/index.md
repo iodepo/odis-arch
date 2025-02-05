@@ -33,7 +33,7 @@ guidance and other creative works.  Due to this OIH will focus on a generic exam
 of [schema.org/CreativeWork](https://schema.org/CreativeWork) and then provide examples
 for more focused creative work examples.
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json
 :linenos:
 ```
 
@@ -49,7 +49,7 @@ currentdir = os.path.dirname(os.path.abspath(''))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
-with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 context = {
@@ -81,7 +81,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 
-with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -129,7 +129,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -176,7 +176,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {
@@ -218,7 +218,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 from lib import jbutils
 
-with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativework.json") as dgraph:
+with open("../../../odis-in/dataGraphs/thematics/docs/graphs/creativeWork.json") as dgraph:
     doc = json.load(dgraph)
 
 frame = {

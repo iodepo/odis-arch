@@ -37,7 +37,7 @@ from pyld import jsonld
 S3_BUCKET_NAME = "noaa-wod-pds"
 OUTPUT_FOLDER = "./output/" #must exist
 LOGFILE = OUTPUT_FOLDER + "wod-parsed.log" #will get created
-URL_BASEPATH_WHERE_JSONLD_FILES_WILL_LIVE_LATER = "https://raw.githubusercontent.com/your-repo/"
+URL_BASEPATH_WHERE_JSONLD_FILES_WILL_LIVE_LATER = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-wod/"
 FILESIZE_THRESHOLD = 400000 #(in KB) if greater, then download file instead of processing in memory.  Default is 400 MB
 
 #log to a file

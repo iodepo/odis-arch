@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-49945dd2-6deb-11e7-9b3d-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-49945dd2-6deb-11e7-9b3d-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((32.567 -25.974617829324, 32.567 11.5732464678107, 57.511158210866 11.5732464678107, 57.511158210866 -25.974617829324, 32.567 -25.974617829324))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WIO under sea cables under sea cable landing station  layer has been derived from Greg's global cable map which attempts to consolidate all the available information about the undersea communications infrastructure. The initial data was harvested from Wikipedia, and further information was gathered by simply googling and transcribing as much data as possible into a useful format, namely a rich geocoded format.",
     "keywords": [
         "station",
@@ -36,5 +25,12 @@
         "South Africa"
     ],
     "name": "Under sea cable landing station",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-25.974617829324 32.567 11.5732464678107 57.511158210866"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Acable_landing_station"
 }

@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-4f03a822-67b5-11ec-acb9-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-4f03a822-67b5-11ec-acb9-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((15.1558418273926 -26.6017169952393, 15.1558418273926 -26.5939350128174, 15.1641263961792 -26.5939350128174, 15.1641263961792 -26.6017169952393, 15.1558418273926 -26.6017169952393))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Areas delineated for mariculture",
     "keywords": [
         "Current Status Report",
         "Namibia"
     ],
     "name": "NAM CSR Mariculture areas in Lüderitz",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.6017169952393 15.1558418273926 -26.5939350128174 15.1641263961792"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_MARI_mariculture_areas_LUD"
 }

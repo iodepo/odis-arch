@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4ada3a5e-6deb-11e7-874f-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4ada3a5e-6deb-11e7-874f-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((31.4835705080237 -28.8906189448001, 31.4835705080237 12.7767940479383, 72.7161217431605 12.7767940479383, 72.7161217431605 -28.8906189448001, 31.4835705080237 -28.8906189448001))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WIO under sea cables  layer has been derived from Greg's global cable map which attempts to consolidate all the available information about the undersea communications infrastructure. The initial data was harvested from Wikipedia, and further information was gathered by simply googling and transcribing as much data as possible into a useful format, namely a rich geocoded format.",
     "keywords": [
         "communication",
@@ -36,5 +25,12 @@
         "South Africa"
     ],
     "name": "WIO undersea cables",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.8906189448001 31.4835705080237 12.7767940479383 72.7161217431605"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aundersea_cables"
 }

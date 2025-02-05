@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-c9368f56-9ee1-11e8-a5fd-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-c9368f56-9ee1-11e8-a5fd-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((33.9999991440 -19.1166668301, 33.9999991440 0.3053331699, 56.6979991440 0.3053331699, 56.6979991440 -19.1166668301, 33.9999991440 -19.1166668301))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Excel workbook with various spatial outputs and citation. The workbook contains human populations data-set across different scale i.e. National, population within coastal districts and within 100km buffer. Other products contained include, habitat factsheet",
     "keywords": "",
     "name": "Spatial outputs_Pop_EEZ Area",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-19.1166668301 33.9999991440 0.3053331699 56.6979991440"
+        }
+    },
     "url": "http://maspawio.net/documents/359"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-5c5aac70-6182-11ec-a394-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-5c5aac70-6182-11ec-a394-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11.7367706298828 -28.9695911407471, 11.7367706298828 -16.9637126922607, 25.2621803283691 -16.9637126922607, 25.2621803283691 -28.9695911407471, 11.7367706298828 -28.9695911407471))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Gazetted constituency boundaries as per the Delimitation Commission of 2013.\nDATA SOURCE: Ministry of Land Reform, available via NSDI.\nMETHODS: Boundaries captured by the Delimitation Commission in 2013, constituencies were dissolved into regions",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR (Regional) Administrative Boundaries",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.9695911407471 11.7367706298828 -16.9637126922607 25.2621803283691"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_BASE_ADMIN_region_boundaries_20140"
 }

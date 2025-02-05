@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-b50114d4-0468-11ed-b05f-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-b50114d4-0468-11ed-b05f-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8,96749114990234 -13,5556106567383, 8,96749114990234 -7,80633878707886, 13,4952220916748 -7,80633878707886, 13,4952220916748 -13,5556106567383, 8,96749114990234 -13,5556106567383))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Ordenamento do Espaço Marinho.Método-Digitalização da Cordenação.",
+    "keywords": [
+        "OEM",
+        "Angola"
+    ],
+    "name": "AGO Ordenamento do Espaço Marinho 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-13.5556106567383 8.96749114990234 -7.80633878707886 13.4952220916748"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_OEM",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_OEM",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_OEM"
 }

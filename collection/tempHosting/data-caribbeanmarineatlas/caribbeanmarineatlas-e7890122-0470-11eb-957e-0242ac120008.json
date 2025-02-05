@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e7890122-0470-11eb-957e-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e7890122-0470-11eb-957e-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.232857 8.075176999737206, -77.232857 12.44825999960231, -71.66467999999999 12.44825999960231, -71.66467999999999 8.075176999737206, -77.232857 8.075176999737206))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Litoral rocoso con una morfología dominada por la presencia de acantilados \n\nINVEMAR. Programa holandés de asistencia para estudios en cambio climático NCCSAP: Colombia. Definición de la vulnerabilidad de los sistemas bio-geofísicos y socioeconómicos debido a un cambio en el nivel del mar en la zona costera colombiana (Caribe continental, Caribe insular y Pacífico) y medidas para su adaptación. Vides, M. Editor.  Instituto de Investigaciones Marinas y Costeras \"José Benito Vives de Andréis\". Santa Marta. 2003.",
     "keywords": [
         "acantilados",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM - COLOMBIA - Acantilados - 2003",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.075176999737206 -77.232857 12.44825999960231 -71.66467999999999"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:acantilados"
 }

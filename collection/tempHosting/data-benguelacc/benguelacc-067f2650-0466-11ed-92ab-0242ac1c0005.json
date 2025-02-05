@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-067f2650-0466-11ed-92ab-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-067f2650-0466-11ed-92ab-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((8.087270538239027 -17.29562017624149, 8.087270538239027 -5.884547598165719, 10.153178390369302 -5.884547598165719, 10.153178390369302 -17.29562017624149, 8.087270538239027 -17.29562017624149))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Descrição-Milhas Náuticas.Método - Digitalização das Informações com Base na Lei.",
+    "keywords": [
+        "Nauticas",
+        "Angola"
+    ],
+    "name": "AGO 200MN 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.29562017624149 8.087270538239027 -5.884547598165719 10.153178390369302"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_BASE_200MN",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_BASE_200MN",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_BASE_200MN"
 }

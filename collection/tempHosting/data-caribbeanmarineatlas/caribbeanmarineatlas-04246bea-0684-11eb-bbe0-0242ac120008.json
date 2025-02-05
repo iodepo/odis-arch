@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-04246bea-0684-11eb-bbe0-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-04246bea-0684-11eb-bbe0-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76.972321 8.875095999711979, -76.972321 12.017497999615234, -74.118126 12.017497999615234, -74.118126 8.875095999711979, -76.972321 8.875095999711979))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Este shape es el resultado de una integracion de varios procesos de analisis espacial, a partir de interpretacion de datos batimetricos y modelamiento de terreno,con un proceso de sintesis de clasificacion de unidades\n\nCONVENIO INTERADMINISTRATIVO No 57 DE 2013 ENTRE EL MADS Y EL INVEMAR: ELEMENTOS TÉCNICOS Y GENERACIÓN DE CAPACIDAD PARA EL ORDENAMIENTO, CONSERVACIÓN Y MANEJO DE LOS ESPACIOS Y RECURSOS MARINOS, COSTEROS E INSULARES DE COLOMBIA.\nCódigo: ACT-VAR-001-013",
     "keywords": [
         "features",
@@ -24,5 +13,12 @@
         "Global"
     ],
     "name": "TM-COLOMBIA-Geomorfología de fondos profundos-2013-100.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "8.875095999711979 -76.972321 12.017497999615234 -74.118126"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:geomofondosprofundos"
 }

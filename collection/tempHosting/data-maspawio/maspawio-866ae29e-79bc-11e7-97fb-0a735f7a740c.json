@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-866ae29e-79bc-11e7-97fb-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-866ae29e-79bc-11e7-97fb-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.0 -21.916667, 39.0 -10.333333, 47.75 -10.333333, 47.75 -21.916667, 39.0 -21.916667))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the location of underwater mountains that rise hundreds or thousands of feet from the seafloor in the WIO region. This layer was retrieved from the  World Conservation  Monitoring Centre as vector points",
     "keywords": [
         "seamounts",
@@ -27,5 +16,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Under sea features",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-21.916667 39.0 -10.333333 47.75"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aunder_sea_features"
 }

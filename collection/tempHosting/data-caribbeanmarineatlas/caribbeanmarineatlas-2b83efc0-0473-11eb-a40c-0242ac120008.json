@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2b83efc0-0473-11eb-a40c-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2b83efc0-0473-11eb-a40c-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-81.735321 1.4094089999535357, -81.735321 13.393747999574265, -71.286842 13.393747999574265, -71.286842 1.4094089999535357, -81.735321 1.4094089999535357))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "El Sistema de Información para la Gestión de los Manglares de Colombia (SIGMA), es un proyecto ambicioso de carácter nacional e interinstitucional, que pretende fomentar el conocimiento del ecosistema de manglar en el país, así como contribuir a la toma de decisiones a través de la generación de reportes basados en cuatro temáticas básicas a saber: Estado de los bosques; Presiones; Bienes y Servicios y Gestión.",
     "keywords": [
         "Bosque de manglar",
@@ -26,5 +15,12 @@
         "Colombia"
     ],
     "name": "tm_col_manglar",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "1.4094089999535357 -81.735321 13.393747999574265 -71.286842"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_col_manglar1"
 }

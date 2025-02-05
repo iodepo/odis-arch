@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2b130530-0685-11eb-bbe0-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2b130530-0685-11eb-bbe0-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.386436 7.616277999751776, -77.386436 12.584160999598254, -70.903664 12.584160999598254, -70.903664 7.616277999751776, -77.386436 7.616277999751776))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Proyecto: “Especies, ensamblajes y paisajes de los bloques marinos sujetos a exploración de hidrocarburos”  desarrollado por el INVEMAR en asocio con la Agencia Nacional de Hidrocarburos.\nCítese como: INVEMAR-ANH, 2008. Especies, ensamblajes y paisajes de los bloques marinos sujetos a exploración de hidrocarburos. Editores. Informe técnico final, Santa Marta, 461p + Anexos.",
     "keywords": [
         "Colombia",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Sitios prioritarios para la conservación-2008-100.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.616277999751776 -77.386436 12.584160999598254 -70.903664"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:invemarsitiosprioritarios0"
 }

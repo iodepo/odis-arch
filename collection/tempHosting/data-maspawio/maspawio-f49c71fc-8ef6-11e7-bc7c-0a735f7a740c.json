@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-f49c71fc-8ef6-11e7-bc7c-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-f49c71fc-8ef6-11e7-bc7c-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((29.958354999999997 -40.026192000000755, 29.958354999999997 6.038707999999907, 74.98200500000064 6.038707999999907, 74.98200500000064 -40.026192000000755, 29.958354999999997 -40.026192000000755))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Layer shows seasonal mean for the SON season. Monthly SST mean data spanning from 2002 was retrieved from Environmental Research Division's Data Access Program website and binned and used to calculate Seasonal Mean SST.",
     "keywords": [
         "Seasonal SST",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "June, July, August  SST mean 2003-2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-40.026192000000755 29.958354999999997 6.038707999999907 74.98200500000064"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Ajja_2003_2016"
 }

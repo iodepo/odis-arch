@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-f8983746-bbbf-11e7-8c50-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-f8983746-bbbf-11e7-8c50-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((27.4 -43.6, 27.4 26.800000000000004, 80.19999999999999 26.800000000000004, 80.19999999999999 -43.6, 27.4 -43.6))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Ocean bathymetry raster layer shows variability of WIO  Ocean depth characteristic in meters. The data was derived fro the Gridded  bathymetric chat of the ocean (GEBCO 2014)",
     "keywords": [
         "bathymetry",
@@ -34,5 +23,12 @@
         "South Africa"
     ],
     "name": "Ocean Bathymetry",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-43.6 27.4 26.800000000000004 80.19999999999999"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Agebco2014_27_4__43_6_80_2_26_8_30sec_geotiff"
 }

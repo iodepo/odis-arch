@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-654901c6-0448-11eb-877a-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-654901c6-0448-11eb-877a-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-71.81745043489641 17.536195281996065, -71.81745043489641 19.94004273379919, -68.31875706476636 19.94004273379919, -68.31875706476636 17.536195281996065, -71.81745043489641 17.536195281996065))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Population at coastal municipalities 2002",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Dominican Republic"
     ],
     "name": "TV_DOM_dom_population_coastal_municipalities_2002",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17.536195281996065 -71.81745043489641 19.94004273379919 -68.31875706476636"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:tm_dom_population_coastal_municipalities_2002"
 }

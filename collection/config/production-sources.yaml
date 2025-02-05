@@ -111,10 +111,9 @@ sources:
     catalogue: https://geodata.benguelacc.org/
     domain: https://www.benguelacc.org/
     logo: https://static.tildacdn.com/tild3263-3132-4937-a166-373963646533/Skjermbilde_2020-12-.png
-    #missing ODISCat entry
-    pid: https://oceaninfohub.org/.well-known/org/benguelacc
-    sourcetype: sitegraph
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-simple-graph.json
+    pid: https://catalogue.odis.org/view/3313
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/sitemap.xml
     changefreq:
     backend: GeoNode
     headless: false
@@ -156,6 +155,24 @@ sources:
     cron: 0 7 * * 0 
     active: true
   #
+  # California Cooperative Oceanic Fisheries Investigations 
+  #
+  - name: calcofi
+    propername: California Cooperative Oceanic Fisheries Investigations (CalCOFI)
+    catalogue: https://calcofi.org/data/
+    domain: https://calcofi.org/
+    logo: https://calcofi.org/wp-content/uploads/2021/03/cropped-calcofirose_512_favicon.png
+    #missing ODISCat entry
+    pid: https://oceaninfohub.org/.well-known/org/calcofi
+    sourcetype: sitemap
+    url: https://calcofi.io/workflows/datasets/sitemap.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-10-22
+    cron: 0 2 * * 0
+    active: true
+  #
   # Caribbean Marine Atlas catalogue
   #
   - name: caribbeanmarineatlas
@@ -164,8 +181,8 @@ sources:
     domain: https://www.caribbeanmarineatlas.net/
     logo: https://www.caribbeanmarineatlas.net/static/cma2/landing_page/images/logotipo_CMA_2019.svg
     pid: https://catalogue.odis.org/view/616
-    sourcetype: sitegraph
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/sitemap.xml
     changefreq:
     backend: GeoNode
     headless: false
@@ -476,6 +493,23 @@ sources:
     active: true
     cron: 0 15 * * 0
   #
+  # International Seabed Authority
+  #
+  - name: isa
+    propername: International Seabed Authority (ISA)
+    catalogue: https://data.isa.org.jm/
+    domain: https://www.isa.org.jm/
+    logo: https://data.isa.org.jm/static/img/logo.png
+    pid: https://catalogue.odis.org/view/893
+    sourcetype: sitemap
+    url: https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml
+    changefreq:
+    backend: Custom
+    headless: false
+    dateadded: 2024-10-22
+    active: true
+    cron: 0 15 * * 0    
+  #
   # MARCO-BOLO
   #
   - name: marcobolo
@@ -537,8 +571,8 @@ sources:
     domain: https://cordioea.net/
     logo: https://cordioea.net/wp-content/uploads/2022/11/CORDIO-Pastel-Logo-Defringed.png
     pid: https://catalogue.odis.org/view/351
-    sourcetype: sitegraph
-    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/sitemap.xml
     changefreq:
     backend: GeoNode
     headless: false
@@ -827,6 +861,23 @@ sources:
     dateadded: 2023-03-06
     cron: 0 14 * * 0    
     active: true
+  #
+  # Space Physics Archive (NASA-Helio)
+  # 
+  - name: spase
+    propername: Space Physics Archive Search and Extract (SPASE)
+    catalogue: https://spase-group.org/
+    domain: https://spase-group.org/
+    logo: https://hdrl.gsfc.nasa.gov/SPASE.png
+    pid: https://catalogue.odis.org/view/3310
+    sourcetype: sitemap
+    url: https://raw.githubusercontent.com/lechatpito/NASA-ODIS-Examples/main/sitemap.xml
+    changefreq: as needed  
+    backend: custom  
+    headless: false
+    dateadded: 2024-09-12
+    cron: 0 14 * * 0    
+    active: true    
   #
   # UNEP Data Catalogue (also referred to as "WESR" or "GEMS Ocean")
   # 

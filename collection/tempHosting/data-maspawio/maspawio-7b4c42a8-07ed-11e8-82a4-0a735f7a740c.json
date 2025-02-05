@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-7b4c42a8-07ed-11e8-82a4-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-7b4c42a8-07ed-11e8-82a4-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((30.0734768868489 -31.2227794124399, 30.0734768868489 11.6835277504054, 51.2585487505245 11.6835277504054, 51.2585487505245 -31.2227794124399, 30.0734768868489 -31.2227794124399))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "WIO  high resolution coastline vector layer (line) show s the approximate  boundary between land and sea. The layer was derived by CORDIO EA  from the GSHHS shorelines dataset used by GMT, the Generic Mapping Tools.",
     "keywords": [
         "coast line",
@@ -33,5 +22,12 @@
         "Tanzania"
     ],
     "name": "WIO high resolution coast line",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-31.2227794124399 30.0734768868489 11.6835277504054 51.2585487505245"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_highresolution_coast_line"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-ba019c30-8f04-11e7-9175-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-ba019c30-8f04-11e7-9175-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((29.9583550000 -40.0261920000, 29.9583550000 6.0387080000, 74.9820050000 6.0387080000, 74.9820050000 -40.0261920000, 29.9583550000 -40.0261920000))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Seasonal sea surface climatology (2002-2016) and anomalies (2016) for the Mozambique channel region coverd by the Mozalink project. Seasons are DJF, MAM, JJA and SON.",
     "keywords": [
         "Seasonal SST",
@@ -28,5 +17,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Sea Surface Temperature (SST) 2002-2016: Seasonal means and 2016 anomalies",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-40.0261920000 29.9583550000 6.0387080000 74.9820050000"
+        }
+    },
     "url": "http://maspawio.net/documents/82"
 }

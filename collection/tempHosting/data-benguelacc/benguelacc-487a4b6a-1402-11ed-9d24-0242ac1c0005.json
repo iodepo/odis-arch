@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-487a4b6a-1402-11ed-9d24-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-487a4b6a-1402-11ed-9d24-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((9,08037948608398 -17,2505397796631, 9,08037948608398 -5,02650260925293, 13,8652963638306 -5,02650260925293, 13,8652963638306 -17,2505397796631, 9,08037948608398 -17,2505397796631))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Blocos Petrolíferos. Método- Georreferenciação do Mapa e posterior vectorização dos dados importantes.",
+    "keywords": [
+        "Petroleo",
+        "Angola"
+    ],
+    "name": "AGO Blocos Petroliferos 2021",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.2505397796631 9.08037948608398 -5.02650260925293 13.8652963638306"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_PET_BLOCOS",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_PET_BLOCOS",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_PET_BLOCOS"
 }

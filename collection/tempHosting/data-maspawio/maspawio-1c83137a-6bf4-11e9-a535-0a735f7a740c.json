@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-1c83137a-6bf4-11e9-a535-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-1c83137a-6bf4-11e9-a535-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.2192993198078 -4.80338311214086, 39.2192993198078 -1.57493041890365, 41.7576549477177 -1.57493041890365, 41.7576549477177 -4.80338311214086, 39.2192993198078 -4.80338311214086))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Kenya continental shelf layer is a GIS vector polygon showing the extended area of  Kenya continental shelf (btn 0 -200-meter depth contour) in a square kilometer.  This layer was derived from the General Bathymetric Chart of the OCean (GEBCO) 2019 through spatial extraction of pixel with a depth range between 0 meters-200meters. All spatial analysis and delineation of the final product were performed by CORDIO East Africa.",
     "keywords": [
         "Shelf_sea",
@@ -25,5 +14,12 @@
         "Kenya"
     ],
     "name": "Kenya continental shelf",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.80338311214086 39.2192993198078 -1.57493041890365 41.7576549477177"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akenya_continental_shelf_2019"
 }

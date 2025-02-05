@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-c3d54db6-d5bc-11e7-b9ca-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-c3d54db6-d5bc-11e7-b9ca-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((20.4789547026975 -49.5210382389234, 20.4789547026975 9.08173175731491, 133.154325708665 9.08173175731491, 133.154325708665 -49.5210382389234, 20.4789547026975 -49.5210382389234))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This vector polygon shows the classification of EBSAs in the South and Western Indian Ocean region. The attribute describes areas of critical biological or ecological importance, but with no prescription about management.",
     "keywords": [
         "WIO",
@@ -36,5 +25,12 @@
         "Tanzania"
     ],
     "name": "CBD Southern Indian Ocean described EBSAs",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-49.5210382389234 20.4789547026975 9.08173175731491 133.154325708665"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Acbd_sio_described_ebsas"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-e7320c90-045d-11eb-aa7d-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-e7320c90-045d-11eb-aa7d-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-61.47173171526628 10.273356661350824, -61.47173171526628 10.30317740185948, -61.45451199385417 10.30317740185948, -61.45451199385417 10.273356661350824, -61.47173171526628 10.273356661350824))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Institute of Marine Affairs (IMA) investigated the bathing beach water quality at Kings Wharf, San Fernando during the wet season (April/May) 2015 and dry season (August/September) 2017. Physical parameters (pH, dissolved oxygen, temperature and salinity), as well as microbiological parameters (enterococci, Escherichia coli and faecal coliform) were collected and analysed. Four sampling stations along the coast at Kings Wharf S1-S4 (bathing beach area) and four point source stations (S5-S8) that impact Kings Wharf were selected.",
     "keywords": [
         "bathing beach water quality",
@@ -24,5 +13,12 @@
         "Trinidad and Tobago"
     ],
     "name": "TV_TTO_Trinidad_San Fernando_Bathing_Beach_Water_Quality_Physical_Parameters_2018",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "10.273356661350824 -61.47173171526628 10.30317740185948 -61.45451199385417"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:phys_1"
 }

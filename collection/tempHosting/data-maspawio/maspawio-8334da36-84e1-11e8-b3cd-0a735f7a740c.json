@@ -1,25 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-8334da36-84e1-11e8-b3cd-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-8334da36-84e1-11e8-b3cd-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.44500732 -4.72041702, 38.44500732 -2.3092041, 40.24152756 -2.3092041, 40.24152756 -4.72041702, 38.44500732 -4.72041702))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Vector file showing coastal counties where EKLA project was conducted in Kenya.  The counties include Kwale, Kilif and Mombasa",
     "keywords": [
         "county",
         "EKLA"
     ],
     "name": "EKLA study area - counties-kwale kilifi & mombasa",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.72041702 38.44500732 -2.3092041 40.24152756"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aekla_counties_kwale_kilifi_mombasa"
 }

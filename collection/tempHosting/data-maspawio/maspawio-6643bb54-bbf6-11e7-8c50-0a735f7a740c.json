@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-6643bb54-bbf6-11e7-8c50-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-6643bb54-bbf6-11e7-8c50-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((41.01296667 -2.2158, 41.01296667 -1.828320986, 41.44495499 -1.828320986, 41.44495499 -2.2158, 41.01296667 -2.2158))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This vector coverage shows in-water survey sites from CORDIO 2015 field excursions of Pate Kiunga Seascape in the northern coast of Kenya. The attributes of this coverage shows the total number of coral genera recorded per site.",
     "keywords": [
         "Pate Kiunga seascape",
@@ -22,5 +11,12 @@
         "Tanzania"
     ],
     "name": "Pate Kiunga Coral Genus survey 2015",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-2.2158 41.01296667 -1.828320986 41.44495499"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Alamu_kiunga_2015_coral_genus"
 }

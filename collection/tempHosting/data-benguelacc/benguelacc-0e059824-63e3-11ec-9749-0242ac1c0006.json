@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-0e059824-63e3-11ec-9749-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-0e059824-63e3-11ec-9749-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((13.9971132278442 -28.6291255950928, 13.9971132278442 -21.8108005523682, 16.4478759765625 -21.8108005523682, 16.4478759765625 -28.6291255950928, 13.9971132278442 -28.6291255950928))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Important bird areas along the Namibian coast. IBAs are selected according to a set of criteria (standards) determined by BirdLife International (www.birdlife.org).\nDATA SOURCE: BirdLife International, 2020. Important Bird and Biodiversity Area (IBA)\ndigital boundaries: September 2020 version. BirdLife International, Cambridge, UK.\nMETHODS: Shapefile created along the coastline of Namibia where IBAs are adjacent",
     "keywords": [
         "Biodiversity",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Important bird areas",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-28.6291255950928 13.9971132278442 -21.8108005523682 16.4478759765625"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_Marine_Imp_Bird_Areas_coast"
 }

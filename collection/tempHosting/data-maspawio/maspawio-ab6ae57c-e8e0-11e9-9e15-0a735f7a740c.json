@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-ab6ae57c-e8e0-11e9-9e15-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-ab6ae57c-e8e0-11e9-9e15-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.33752175326991 -4.724454848866075, 39.33752175326991 -4.708044064457563, 39.354938099162766 -4.708044064457563, 39.354938099162766 -4.724454848866075, 39.33752175326991 -4.724454848866075))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "REQUIRED: A brief narrative summary of the data set.",
     "keywords": "",
     "name": "snorkelling site",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.724454848866075 39.33752175326991 -4.708044064457563 39.354938099162766"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Asnorkering_site"
 }

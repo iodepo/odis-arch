@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-9171949e-0465-11eb-a0ba-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-9171949e-0465-11eb-a0ba-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-59.65139454364162 13.04362204943372, -59.65139454364162 13.337051849955797, -59.41916891667847 13.337051849955797, -59.41916891667847 13.04362204943372, -59.65139454364162 13.04362204943372))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This dataset shows Land use classification based on ground truthed aerial photogaphy. They are approximately five classifications. This data was provided by the Coastal Zone Management Unit of Barbados ca.1997.",
     "keywords": [
         "features",
@@ -25,5 +14,12 @@
         "Barbados"
     ],
     "name": "BM-BRB_Land Use Classification - 1997-1:10000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "13.04362204943372 -59.65139454364162 13.337051849955797 -59.41916891667847"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:land_use_wgs_84"
 }

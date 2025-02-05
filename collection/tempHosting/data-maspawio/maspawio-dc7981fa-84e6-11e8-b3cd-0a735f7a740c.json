@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-dc7981fa-84e6-11e8-b3cd-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-dc7981fa-84e6-11e8-b3cd-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.44500732 -4.720417019999999, 38.44500732 -2.3092041, 40.24152756 -2.3092041, 40.24152756 -4.720417019999999, 38.44500732 -4.720417019999999))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Coverage shows a  raster data  derived from the Shuttle Radar Topography Mission (SRTM) digital elevation model (DEM) data set at 30 meter cell size. The data set contains shaded relief surface that enables the user to display continuous surface of elevation.",
     "keywords": "DEM",
     "name": "Digital Elevation Model",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.720417019999999 38.44500732 -2.3092041 40.24152756"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aekla_dem_kwale_kilifi_mombasa"
 }

@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-43c8e0d8-1400-11ed-9439-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-43c8e0d8-1400-11ed-9439-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((12,0151033401489 -11,0532064437866, 12,0151033401489 -5,03137969970703, 14,0409498214722 -5,03137969970703, 14,0409498214722 -11,0532064437866, 12,0151033401489 -11,0532064437866))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Descrição- Este conjunto de dados mostra a distribuição global de mangais, e foi produzido como uma iniciativa conjunta da International Tropical Timber Organização (ITTO) Organização para Alimentação e Agricultura das Nações Unidas (FAO). O financiamento principal foi fornecido pela ITTO por meio de uma concessão de projecto do governo japonês; o projecto foi implementado pelo ISME.Método- O conjunto de dados foi criado principalmente a partir de imagens de satélite processadas em UNEP-WCMC ou FAO. Para vários países, existente (WCMC-012 (1997)) ou dados recentemente disponíveis (vetor) foram incorporados. A metodologia é detalhada no capítulo 3 de Spalding et al. (2010), que é distribuído com o conjunto de dados (\"WCMC-011-AtlasMangrove2010- Methodology.pdf \").",
+    "keywords": [
+        "Mangais",
+        "Angola"
+    ],
+    "name": "AGO Mangais 2003",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-11.0532064437866 12.0151033401489 -5.03137969970703 14.0409498214722"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_AMB_MANGAIS",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_AMB_MANGAIS",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_AMB_MANGAIS"
 }

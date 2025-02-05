@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-3ec59328-6880-11e7-b1aa-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-3ec59328-6880-11e7-b1aa-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((40.9613300603653 -2.20520803916645, 40.9613300603653 -1.73608069834103, 41.5007106390159 -1.73608069834103, 41.5007106390159 -2.20520803916645, 40.9613300603653 -2.20520803916645))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the extent of mangrove cover of Pate Kiunga seascape in 2000. The cover map was developed by CORDIO EA through Landsat Image classification under the International Centre for Research in Agroforestry (ICRAF)-led project funded by the Inter-Governmental Authority on Development (IGAD).\nThe project aimed to link the use and benefit of these natural resources to the local people, as well as better understand the drivers and pressures of biodiversity loss to improve management measures.",
     "keywords": [
         "Pate",
@@ -25,5 +14,12 @@
         "Kenya"
     ],
     "name": "Pate-kiunga Mangrove extent 2000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-2.20520803916645 40.9613300603653 -1.73608069834103 41.5007106390159"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Apate_kiunga_mangrove_extent_2000"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2e03a6de-0449-11eb-a840-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2e03a6de-0449-11eb-a840-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-78,3692321777344 17,7058296203613, -78,3692321777344 18,5245723724365, -76,1832809448242 18,5245723724365, -76,1832809448242 17,7058296203613, -78,3692321777344 17,7058296203613))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Data was created under the Jamaican Coastal Project in 1997. The output of the project, A Coastal Atlas of Jamaica, was prepared by the Natural Resources Conservation Authority (NRCA) and Uppsala University, Sweden.",
     "keywords": [
         "CMA2",
@@ -23,5 +12,12 @@
         "Jamaica"
     ],
     "name": "TV_JAM_ESI 2005: Air Quality",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "17,7058296203613 -78,3692321777344 18,5245723724365 -76,1832809448242"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:watshed_2"
 }

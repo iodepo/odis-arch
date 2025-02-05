@@ -1,22 +1,18 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-52ab0154-83b0-11ea-a913-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-52ab0154-83b0-11ea-a913-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((13.3348945790003 -38.1600366839999, 13.3348945790003 13.4975393650003, 67.0408895620002 13.4975393650003, 67.0408895620002 -38.1600366839999, 13.3348945790003 -38.1600366839999))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "No abstract provided",
     "keywords": "eez",
     "name": "WIO Exclusive Economic Zone (EEZ)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-38.1600366839999 13.3348945790003 13.4975393650003 67.0408895620002"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aexclusive_economic_zone_eez"
 }

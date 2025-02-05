@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-28b106e0-ad15-11e9-966e-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-28b106e0-ad15-11e9-966e-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((38.44500732 -4.72041702, 38.44500732 -3.56451416, 39.64458466 -3.56451416, 39.64458466 -4.72041702, 38.44500732 -4.72041702))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Shapefile showing the external boundaries Kwale County.",
     "keywords": [
         "boundary",
@@ -24,5 +13,12 @@
         "Kenya"
     ],
     "name": "kwale County admin boundary",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.72041702 38.44500732 -3.56451416 39.64458466"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Akwale_county"
 }

@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-e608b154-cdef-11e7-bc57-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-e608b154-cdef-11e7-bc57-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((42.54773333 11.50426667, 42.54773333 12.22221667, 43.42325 12.22221667, 43.42325 11.50426667, 42.54773333 11.50426667))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This spatial coverage includes vector points and point labels that describe CORDIO and PRAREV in-water survey sites of the broader Djibouti Seascape. Each site has a set of fish and benthic community variables  distinguishing it from the surrounding sites. These characteristics include site name, functional group, total  fish biomass (kg/ha) and total fish abundance (individuals/ha).",
     "keywords": [
         "Djibouti",
@@ -25,5 +14,12 @@
         "Djibouti"
     ],
     "name": "Djibouti 2014 and 2016 Total  Fish Abundance (individuals/ha)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11.50426667 42.54773333 12.22221667 43.42325"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Adjibouti_2014_2016_fish_abundance_and_biomass_values"
 }

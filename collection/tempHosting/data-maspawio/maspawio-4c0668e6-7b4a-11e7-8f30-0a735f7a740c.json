@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-4c0668e6-7b4a-11e7-8f30-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-4c0668e6-7b4a-11e7-8f30-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((31.3062989995992 -26.8686949998743, 31.3062989995992 -3.71263799974383, 63.5034709999867 -3.71263799974383, 63.5034709999867 -26.8686949998743, 31.3062989995992 -26.8686949998743))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Distribution of Mariculture values in the NMC region layer/data shows the distribution of Mariculutre value and benefits accrued annually from primary utilisation of the ocean.  Mariculture value data was derived from the study \"Understanding and Valuing the Marine Ecosystem Services of the Northern Mozambique Channel \" by Paulo A.L.D. Nunes and Andrea Ghermandi. This study aimed to understand and value the coastal and marine ecosystem services in the Northern Mozambique Channel region (NMC).",
     "keywords": [
         "mariculture",
@@ -31,5 +20,12 @@
         "United Republic of Tanzania"
     ],
     "name": "Distribution of Mariculture values in the NMC region",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-26.8686949998743 31.3062989995992 -3.71263799974383 63.5034709999867"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Amariculture_values_in_the_nmc_region"
 }

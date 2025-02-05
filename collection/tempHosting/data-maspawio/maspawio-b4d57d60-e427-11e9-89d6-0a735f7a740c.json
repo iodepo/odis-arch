@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-b4d57d60-e427-11e9-89d6-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-b4d57d60-e427-11e9-89d6-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((39.210472 -4.85202599999997, 39.210472 -3.95411199999995, 39.771919 -3.95411199999995, 39.771919 -4.85202599999997, 39.210472 -4.85202599999997))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Kwale reefs at risk show the spatial location of reefs categorized by their threat levels with integrated threats emanating from coastal development, population, pollution, and overfishing.",
     "keywords": [
         "coral",
@@ -23,5 +12,12 @@
         "Kenya"
     ],
     "name": "Kwale reef at risk (Integrated local Threats)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-4.85202599999997 39.210472 -3.95411199999995 39.771919"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Areefs_at_risk_by_integrated_local_threats"
 }

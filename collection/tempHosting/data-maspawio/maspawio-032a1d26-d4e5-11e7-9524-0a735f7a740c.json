@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-032a1d26-d4e5-11e7-9524-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-032a1d26-d4e5-11e7-9524-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((40.458759594707196 -11.274668553927912, 40.458759594707196 -10.58445333930988, 40.74266261873406 -10.58445333930988, 40.74266261873406 -11.274668553927912, 40.458759594707196 -11.274668553927912))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This raster data illustrates site/project level evaluation of marine habitats of Lalane and Quiwia in the Quirimbas Archipelago, Mozambique.\nThe output was produced by an independent project, but using layers collated for MOZALINK module activities.\nData collection and processing involved supervised image classification based Landsat-8 OLI Sensor data at 30-meter resolution utilizing the Blue, Green and Red Spectral bands for interpretation. \nGround control points were collected through collaborative work between Coastal Ocean Research for Development in the Indian Ocean (CORDIO EA), AMA and the Conselho Comunitário de Pesca (CCPs) of Quiwia and Lalane. \nAll image processing/analysis was conducted using QGIS Semi-Automatic Classification plugin to derive a benthic habitat data layer.",
     "keywords": [
         "benthic habitat",
@@ -24,5 +13,12 @@
         "Mozambique"
     ],
     "name": "Quiwia Lalane habitat classification",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-11.274668553927912 40.458759594707196 -10.58445333930988 40.74266261873406"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Aquiwia_lalane_habitat_classification"
 }

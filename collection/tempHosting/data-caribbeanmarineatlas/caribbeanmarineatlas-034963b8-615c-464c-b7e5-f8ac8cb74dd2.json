@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-034963b8-615c-464c-b7e5-f8ac8cb74dd2.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-034963b8-615c-464c-b7e5-f8ac8cb74dd2.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-175,083333 -34,7332076405, -175,083333 27,2890055555, 179,946697863241 27,2890055555, 179,946697863241 -34,7332076405, -175,083333 -34,7332076405))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "GD-PAME assessments for the ACP region taken from the UNEP-WCMC download CSV file on 14/11/2018.",
     "keywords": [
         "acp_assessments",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "acp_assessments",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-34,7332076405 -175,083333 27,2890055555 179,946697863241"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:acp_assessments"
 }

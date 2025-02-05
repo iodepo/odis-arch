@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-2cffb894-0684-11eb-a4dd-0242ac120008.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-2cffb894-0684-11eb-a4dd-0242ac120008.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-77.340302 7.901082999742727, -77.340302 12.5390509995996, -71.559387 12.5390509995996, -71.559387 7.901082999742727, -77.340302 7.901082999742727))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Capa de caladeros de pesca artesanal agregada que muestra la distribución espacial de la intensidad de pesca (faenas/mn2), la cual es un indicador de la ubicación de caladeros de pesca. \n\n\nRUEDA, M., D. MARMOL, E. VILORIA, O.DONCEL, F. RICO- MEJIA, L. GARCIA Y A. GIRON. 2010. Identificación, ubicación y extensión de caladeros de pesca artesanal e industrial en el territorio marino-costero de Colombia. INVEMAR, INCODER, AGENCIA NACIONAL DE HIDROCARBUROS-ANH. Santa Marta. 99p +Anexos.\n4_Convenio 023 2009",
     "keywords": [
         "Colombia",
@@ -24,5 +13,12 @@
         "Colombia"
     ],
     "name": "TM-COLOMBIA-Pesca Artesanal Agregada-2010-100.000",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "7.901082999742727 -77.340302 12.5390509995996 -71.559387"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/cma_geonode_data:geonode:pesca_artesanal_agregada"
 }

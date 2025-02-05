@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-056e5965-08d0-497e-8ee5-ab7520410dc9.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-056e5965-08d0-497e-8ee5-ab7520410dc9.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-180.0 -85.47, -180.0 86.92, 180.0 86.92, 180.0 -85.47, -180.0 -85.47))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "The Marine Ecoregions of the World, MEOW, is a biogeographic classification of the world's coasts and shelves. It is the first ever comprehensive marine classification system with clearly defined boundaries and definitions and was developed to closely link to existing regional systems. The ecoregions nest within the broader biogeographic tiers of Realms and Provinces. \nMEOW represents broad-scale patterns of species and communities in the ocean, and was designed as a tool for planning conservation across a range of scales and assessing conservation efforts and gaps worldwide. The current system focuses on coast and shelf areas (as this is where the majority of human activity and conservation action is focused) and does not consider realms in pelagic or deep benthic environment. It is hoped that parallel but distinct systems for pelagic and deep benthic biotas will be devised in the near future. \nThe project was led by The Nature Conservancy (TNC) and the World Wildlife Fund (WWF), with broad input from a working group representing key NGO, academic and intergovernmental conservation partners. \n(source: http://www.worldwildlife.org/science/ecoregions/marine/item1266.html)",
     "keywords": [
         "features",
@@ -22,5 +11,12 @@
         "Global"
     ],
     "name": "Marine Ecoregions of the World, provinces (coastline)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-85.47 -180.0 86.92 180.0"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeovlizbegeoserverowsservicewmsversion111requestgetcapabilities:Ecoregions:provinces"
 }

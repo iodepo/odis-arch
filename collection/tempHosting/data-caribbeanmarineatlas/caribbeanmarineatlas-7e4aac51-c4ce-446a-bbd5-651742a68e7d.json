@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-7e4aac51-c4ce-446a-bbd5-651742a68e7d.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-7e4aac51-c4ce-446a-bbd5-651742a68e7d.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-76,3657595709435 21,1591161334254, -76,3657595709435 24,7749192648693, -72,268794708231 24,7749192648693, -72,268794708231 21,1591161334254, -76,3657595709435 21,1591161334254))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Seamount geomorphic layer for the Bahamas",
     "keywords": [
         "bahamas_seamounts",
@@ -23,5 +12,12 @@
         "Bahamas"
     ],
     "name": "Bahamas Seamounts Geomorphic",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "21,1591161334254 -76,3657595709435 24,7749192648693 -72,268794708231"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpgeonode-rrisbiopamaorggeoserverows:geonode:bahamas_seamounts"
 }

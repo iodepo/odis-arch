@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-64e173be-bbf6-11e7-87d7-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-64e173be-bbf6-11e7-87d7-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((42.5385 11.493115, 42.5385 11.961101, 43.320049 11.961101, 43.320049 11.493115, 42.5385 11.493115))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This vector coverage shows in-water survey sites from CORDIO 2014 field excursions in the Red Sea Gulf of Aden Seascape in Djibouti. The attributes of this coverage shows  mean number of coral recruits (<10 cm) per meter  square.",
     "keywords": [
         "Djibouti",
@@ -24,5 +13,12 @@
         "Djibouti"
     ],
     "name": "Djibouti Coral recruitment 2014",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "11.493115 42.5385 11.961101 43.320049"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Adjibouti_2014_coral_recruit"
 }

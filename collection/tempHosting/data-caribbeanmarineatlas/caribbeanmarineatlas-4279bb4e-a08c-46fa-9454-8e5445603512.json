@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-caribbeanmarineatlas/caribbeanmarineatlas-4279bb4e-a08c-46fa-9454-8e5445603512.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-4279bb4e-a08c-46fa-9454-8e5445603512.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((-179.843999980008 -17.220999974836843, -179.843999980008 74.50700000012392, 179.89200001991048 74.50700000012392, 179.89200001991048 -17.220999974836843, -179.843999980008 -17.220999974836843))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Wind Speed and Direction",
     "keywords": [
         "ArcGIS REST MapServer",
@@ -28,5 +17,12 @@
         "Kiribati"
     ],
     "name": "Wind Speed and Direction",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-17.220999974836843 -179.843999980008 74.50700000012392 179.89200001991048"
+        }
+    },
     "url": "https://www.caribbeanmarineatlas.net/layers/httpscoastnoaagovarcgisrestservicesoceanreportingtoolwindspeedanddirectionmapserver:0-wind-speed-and-direction"
 }

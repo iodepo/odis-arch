@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-maspawio/maspawio-52433800-bbba-11e7-95cc-0a735f7a740c.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-52433800-bbba-11e7-95cc-0a735f7a740c.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((34.2019941334591 -29.1320883656798, 34.2019941334591 -3.5420404608004, 62.4847783212863 -3.5420404608004, 62.4847783212863 -29.1320883656798, 34.2019941334591 -29.1320883656798))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "This layer shows the location and designation of potential marine heritage sites in the WIO . This vector layer was adopted from the study \"Assessing potential World Heritage marine sites in the Western Indian Ocean\"",
     "keywords": [
         "marine",
@@ -35,5 +24,12 @@
         "South Africa"
     ],
     "name": "WIO Potential Marine Heritage Sites",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-29.1320883656798 34.2019941334591 -3.5420404608004 62.4847783212863"
+        }
+    },
     "url": "http://maspawio.net/layers/geonode%3Awio_potential_marine_heritage"
 }

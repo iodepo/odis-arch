@@ -1,26 +1,21 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-819436d6-1407-11ed-ba29-0242ac1c0005.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-819436d6-1407-11ed-ba29-0242ac1c0005.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((11,3860025405884 -8,86730289459229, 11,3860025405884 -6,22924089431763, 13,0812463760376 -6,22924089431763, 13,0812463760376 -8,86730289459229, 11,3860025405884 -8,86730289459229))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    "description": "Espécies Aquáticas. Método- Vectorização das Informações Contida no Relatório.",
+    "keywords": [
+        "Peixe",
+        "Angola"
+    ],
+    "name": "AGO Parapenaeus Longirostris 2016",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-8.86730289459229 11.3860025405884 -6.22924089431763 13.0812463760376"
         }
     },
-    "description": "No abstract provided",
-    "keywords": [
-        "AGO_OEM_NOR_DAT_PARAPENAEUS_LONGIROSTRIS",
-        "features",
-        "Global"
-    ],
-    "name": "AGO_OEM_NOR_DAT_PARAPENAEUS_LONGIROSTRIS",
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:AGO_OEM_NOR_DAT_PARAPENAEUS_LONGIROSTRIS"
 }

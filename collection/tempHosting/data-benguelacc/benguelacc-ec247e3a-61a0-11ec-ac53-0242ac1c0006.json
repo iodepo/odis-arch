@@ -1,20 +1,9 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "geosparql": "http://www.opengis.net/ont/geosparql#"
+        "@vocab": "https://schema.org/"
     },
-    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/schema-dev-jm/code/notebooks/Exploration/data-benguelacc/benguelacc-ec247e3a-61a0-11ec-ac53-0242ac1c0006.json",
+    "@id": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/benguelacc-ec247e3a-61a0-11ec-ac53-0242ac1c0006.json",
     "@type": "Dataset",
-    "geosparql:hasGeometry": {
-        "@type": "http://www.opengis.net/ont/sf#Polygon",
-        "geosparql:asWKT": {
-            "@type": "geosparql:wktLiteral",
-            "@value": "POLYGON((13.6324701309204 -23.2397346496582, 13.6324701309204 -21.001033782959, 14.9628753662109 -21.001033782959, 14.9628753662109 -23.2397346496582, 13.6324701309204 -23.2397346496582))"
-        },
-        "geosparql:crs": {
-            "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
-    },
     "description": "Dorob National Park.\nDATA SOURCE: MET, 2012. Namibia’s Coast: ocean riches and desert treasure. Authors: Robertson T., Jarvis A., Mendelsohn J and Swart R. Department of Environmental Affairs, Ministry of Environment and Tourism, Windhoek, Namibia.\nMETHODS: Created based on government gazettes. Where possible, boundaries were created from coordinates provided in the gazettes. Where landmarks had no specific coordinates, other shapefiles were used (e.g. farms shapefile, rivers shapefile, 1:250000 maps etc.).",
     "keywords": [
         "Current Status Report",
@@ -22,5 +11,12 @@
         "Namibia"
     ],
     "name": "NAM CSR Dorob National Park",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "-23.2397346496582 13.6324701309204 -21.001033782959 14.9628753662109"
+        }
+    },
     "url": "https://geodata.benguelacc.org/layers/geonode_deploy_data:geonode:NAM_CSR_ENV_national_park_Dorob_National_Park"
 }

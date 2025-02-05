@@ -29,7 +29,7 @@ NEW_RDF_FILENAME = "acma-catalogue.rdf"
 HOSTNAME = "https://acma.africanmarineatlas.org"
 LOGFILE = "acma-harvest.log"
 SHORTNAME = "acma" #must be hyphen
-ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/collection/tempHosting/data-acma/"
+ID_URL_BASE = "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma/"
 
 """
 #########################
@@ -42,7 +42,6 @@ from pyld import jsonld
 import os, sys, io, uuid
 from owslib.csw import CatalogueServiceWeb
 from owslib.fes import SortBy, SortProperty
-import ssl
 import kglab
 import logging
 
@@ -50,13 +49,6 @@ import logging
 logging.basicConfig(filename=LOGFILE, encoding="utf-8", level=logging.DEBUG,  
                     format="%(asctime)s;%(levelname)s;%(message)s",  
                     datefmt="%Y-%m-%d %H:%M", filemode = "w")
-
-# generate a Context for each connection
-# disable SSL for now
-
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
 
 # prepare namespace
 
@@ -158,7 +150,17 @@ while stop == 0:
             maxx = csw.records[rec].identification.bbox.maxx
             maxy = csw.records[rec].identification.bbox.maxy
 
-            poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+            #poly = str("""POLYGON(({} {}, {} {}, {} {}, {} {}, {} {}))""".format(minx, miny, minx, maxy, maxx, maxy, maxx, miny, minx, miny))
+
+            #schema.org expects lat long (Y X) coordinate order
+            boxCoords = str("""{} {} {} {}""".format(miny, minx, maxy, maxx))
+            print("    GeoShape:Box: " + boxCoords)
+            spatialCov = {}
+            spatialCov["@type"] = "https://schema.org/Place"
+            geo = {}
+            geo["@type"] = "https://schema.org/GeoShape"
+            geo["https://schema.org/box"] = boxCoords 
+            spatialCov["https://schema.org/geo"] = geo
 
             data = {}
 
@@ -176,19 +178,7 @@ while stop == 0:
             data["https://schema.org/description"] = description
             data["https://schema.org/url"] = url
 
-            aswkt = {}
-            aswkt["@type"] = "http://www.opengis.net/ont/geosparql#wktLiteral"
-            aswkt["@value"] = poly
-
-            crs = {}
-            crs["@id"] = "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-
-            hg = {}
-            hg["@type"] = "http://www.opengis.net/ont/sf#Polygon" 
-            hg["http://www.opengis.net/ont/geosparql#asWKT"] = aswkt
-            hg["http://www.opengis.net/ont/geosparql#crs"] = crs
-
-            data["http://www.opengis.net/ont/geosparql#hasGeometry"] = hg
+            data["https://schema.org/spatialCoverage"] = spatialCov 
 
             # keyword(s) loop
             k = ""
@@ -211,7 +201,7 @@ while stop == 0:
             k_list = k.split(",")
             data["https://schema.org/keywords"] = k_list
     
-            context = {"@vocab": "https://schema.org/", "geosparql": "http://www.opengis.net/ont/geosparql#"}
+            context = {"@vocab": "https://schema.org/"}
             compacted = jsonld.compact(data, context)
 
             # need sha hash for the "compacted" var and then also generate the prov for this record.
