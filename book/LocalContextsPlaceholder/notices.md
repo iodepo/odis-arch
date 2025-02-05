@@ -34,7 +34,7 @@ The following graph represents a basic record we might use for a Local Contexts 
 As Ocean InfoHub is leveraging Schema.org, we are using schema.org/CreativeWorks for this
 type. Any of the properties of Label seen there are valid to use in such a record.
 
-```{literalinclude} ../../../odis-in/dataGraphs/thematics/CreativeWork/graphs/local-contexts-notice.json
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/creativeWork/graphs/localContexts-label.json
 :linenos:
 ```
 
