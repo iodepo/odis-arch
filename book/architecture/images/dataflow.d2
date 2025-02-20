@@ -71,6 +71,8 @@ odisprod: ODIS Products
 oihprod: OIH Products
 solr: OIH SOLR
 validator: SHACL Validator
+feapi: Frontend API \ proxy
+ui: OIH Web UI
 
 partners.class: propclass
 config.class: propclass
@@ -81,6 +83,8 @@ sparql.class: actionclass
 etl_odis.class: actionclass
 etl.class: actionclass
 solr.class: actionclass
+feapi.class: actionclass
+ui.class: actionclass
 
 odisprod: {
     csv: ODIS csv files \n one per partner
@@ -149,6 +153,10 @@ etl_odis -> odisprod.parquet
 etl -> oihprod.csv
 etl -> oihprod.parquet
 etl -> solr
+
+solr -> feapi
+feapi -> ui
+
 
 oihprod.parquet -> sys.wis2
 sys.wis2 -> wmowis2

@@ -45,15 +45,16 @@ prodclass: {
 
 *.class: actionclass
 
-dagster: {
+dagster: Dagster {
     gleaner
-    nabu
+    nabdu
     etl
     *.class: prodclass
 
 }
-triplestore: qlever \n triplestore
+triplestore: Qlever \n triplestore
 solr
+feapi: Frontend API \n proxy
 webui
 oss: object store
 dashboard
@@ -68,6 +69,9 @@ dagster.etl -> solr: http
 solr <- webui: http
 triplestore <- dashboard: http
 oss <- dashboard: http
+
+solr <-> feapi
+feapi <-> webui
 
 webui <-> router : http
 oss <-> router: http
