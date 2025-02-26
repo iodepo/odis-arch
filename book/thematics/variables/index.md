@@ -15,8 +15,95 @@ execution:
 # Essential Ocean Variables
 
 This section details initial documentation of approaches for describing elements of a 
-[schema:Dataset](https://schema.org/Dataset) with a focus on approaches supporting Essential 
-Ocean Variables.   
+[schema:Dataset](https://schema.org/Dataset) or [schema:Organization](https://schema.org/Organization) 
+with a focus on approaches supporting Essential Ocean Variables (EOVs).   
+
+Organizations, institutions, or projects conducting long-term monitoring (≥5 years) of EOVs are 
+visible in the [GOOS BioEco Portal](https://bioeco.goosocean.org/),
+which connects to ODIS. Registering an entry that describes your organization, project,
+or program to ODIS will ensure it also becomes visible in the BioEco Portal. 
+
+If you need assistance creating the necessary JSON-LD schema for an organization, the 
+[Metadata Submission Tool](https://eovmetadata.obis.org/) developed by OBIS under 
+the [BioEcoOcean](https://bioecoocean.org/) project is available 
+for use. Note that datasets published to OBIS are automatically connected 
+to ODIS and do not require additional JSON-LD schema to be generated.
+
+Use the EOV dataset schema to describe data sources that are not published in OBIS.
+
+Jump to
+* [EOV Organizations](#eov-organizations)
+* [EOV Datasets](#eov-datasets)
+
+## EOV Organizations
+
+Organizations, projects, or programs conducting EOV monitoring can leverage the 
+[Projects](../projects/index.md) schema with sub-type [ResearchProject](https://schema.org/ResearchProject).
+
+Additional blocks that can be included in this schema for projects supporting EOVs
+are outlined below, along with key differences and explanations for certain blocks.
+
+```json
+"foundingDate": "2000-10-01",
+"dissolutionDate": "2005-10-01",
+"publishingPrinciples": [
+  {
+    "@type": "CreativeWork",
+    "url": "https://s3-ap-southeast-2.amazonaws.com/content.aodn.org.au/Documents/IMOS/Conventions/IMOS_Data_Policy.pdf",
+    "name": "IMOS Data Policy",
+    "description": "The IMOS Data Policy offers IMOS facilities a guide to managing and delivering data for publication in the AODN infrastructure."
+  }
+],
+"areaServed": [
+  "geosparql:hasGeometry": {
+          "@type": "http://www.opengis.net/ont/sf#Point",
+          "geosparql:asWKT": {
+              "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+              "@value": "POINT(-76 -18)"
+          },
+          "geosparql:crs": {
+              "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+          }
+      }
+]
+```
+
+### foundingDate and dissolutionDate
+
+These fields can be used to represent the lifespan of the monitoring program or project. Use 
+foundingDate to indicate when the project began, and dissolutionDate for the end 
+date. If the project is ongoing, simply omit the dissolutionDate field.
+
+### publishingPrinciples
+
+As detailed in the [Linking to Principles: publishing principles](https://book.odis.org/thematics/sdg/index.html#publishingprinciples) 
+section, this property can connect an Organization to a related 
+policy or principle, either through CreativeWork or URL. This link is 
+useful for grouping resources based on shared principles or policies, 
+e.g. FAIR priciples.
+
+For EOV work, use this field to provide links to the organization’s publishing 
+principles, data policies, or similar documents.
+
+### areaServed 
+
+As dicussed in the [Spatial Geometry](https://book.odis.org/thematics/spatial/index.html)
+section, it is recommend to use geoJSON to specify polygons instead 
+of the [schema:geo](https://schema.org/geo) property.
+
+Note that [schema:areaServed](https://schema.org/areaServed) is preferred over 
+[schema:spatialCoverage](https://schema.org/spatialCoverage). The key distinction is:
+
+* areaServed refers to the intended geographical scope of a program or project
+* spatialCoverage refers to the actual locations where work has been conducted, making it more appropriate for describing datasets.
+
+### Full Project 
+
+```{literalinclude} ../../../odis-in/dataGraphs/thematics/projects/graphs/proj.json
+:linenos:
+```
+
+## EOV Datasets
 
 A rough description of these links leveraging pseudo schema.org terms follows with a detailed
 and valid data graph as an example after that.  
@@ -35,8 +122,9 @@ The image above details out some of the key points to be encoded.  These include
 * Connections to the event measured and potential associated instruments
 * Spatial coverage
 * Temporal coverage
+* Connections to the Organization responsible for generating the dataset [to be added]
 
-The valid data graph follows the reference section and details follow that.  The highlighted lines
+The valid data graph follows the reference section and details follow that. The highlighted lines
 in the data graph represented the detailed sections.   
 
 ## References:
@@ -66,15 +154,23 @@ at:  [License chapter](../license/index.md)
 ## keywords
 
 As keywords are an important cross-cutting item there is a separate section on keywords
-at:  [Keywords chapter](../terms/list.md)
+at:  [Keywords chapter](../terms/list.md). 
+
+For keywords relating to EOVs, note that [ENVO](https://sites.google.com/site/environmentontology/) 
+serves as an official source for Defined Terms, Other vocabulary collections you may consider
+include the [BODC NERC Vocabulary Server](https://vocab.nerc.ac.uk/search_nvs/).
 
 ## variableMeasured
 
-A key section detailing approaches to describing variables.  This property expects either of text or
+A key section detailing approaches to describing variables measured. This property expects either of text or
 the more detailed [schema:PropertyValue](https://schema.org/PropertyValue).
 
+It is recommended to use the sub-property [measurementTechnique](https://schema.org/measurementTechnique) 
+to include links to the specific protocols used to measured the variable. It can be populated both
+as a sub-property of variableMeasured and as its own block, detailed below.
+
 ```{note}
-There can be multiple links in the proertyID property.  Preference should be given to those with semantic descriptions.
+There can be multiple links in the propertyID property.  Preference should be given to those with semantic descriptions.
 ```
 
 ```{note}
@@ -321,7 +417,8 @@ jbutils.show_graph(framed)
 
 ## temporalCoverage
 
-Representation of temporal coverage follows [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) patterns.  ESIP Science on Schema
+Representation of temporal coverage follows [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) patterns 
+(e.g. YYYY-MM-DDThh:mm:ss).  ESIP Science on Schema
 as has patterns for Deep Time (geologic time) patterns.  
 
 ```{seealso}
