@@ -63,7 +63,9 @@ Share [this personal example](./docs/section4/pid_application.md) of what a grap
 
 We can note that there are many ways to _deploy_.  You might be using 
 a system like CKAN or others that have it built in.  In that case 
-deployment is really framework configuration
+deployment is really framework configuration.
+
+[See software table](./docs/section5/software.md)
 
 For example, [this search](https://oceaninfohub.org/results/Dataset?search_text=ocean+temperature&page=0)  returns a top hit from a test
 we are doing for ERDDAP.  
@@ -72,22 +74,18 @@ Focus first on the deployment of the JSON-LD into the HTML pages and some of the
 
 * show an HTML page with JSON-LD in it from the OIH partners
 * show loading the page URL into validator.schema.org
-* show that there are [browser extensions](https://chromewebstore.google.com/search/schema%20) Also note I don't use these, you don't need them.  
+* show that there are [browser extensions](https://chromewebstore.google.com/search/schema%20) Also note I don't use these, you don't need them.
 
-### Demo sequence
+Talk also about why you might be doing a site graph or why you might be developing an API 
 
-1) go to search.oceaninfohub.org and search on "ocean biodiversity"
-2) the second result should be from OBIS "Coral Reef Evaluation..."
-3) View the page  ([this one in my search](https://obis.org/dataset/aaacf13e-a138-4b75-ba78-0b5136649365))
-4) View source and search for "ld+json", the mimetype for JSON-LD and review the code in page. 
-5) Also put the URL into https://validator.schema.org
-6) BONUS:  Scroll down and point out their use of Ocean Expert IDs in the markup
+### Optional (depends on time)
 
+> use archetype repo for this if done
 
+1) show putting documents into a github repo
+2) generate a sitemap for them, put the sitemap at the repo
 
-Talk also about why you might be doing a site graph  or why you might be developing an API 
-
-## Section 6 (Indexing)
+## Section 6 (Indexing & Use)
 
 > In the time available this really has to be a "watch me do it"
 
@@ -97,8 +95,24 @@ a range of open source approaches.
 We will run an index, view the resulting data collected and 
 do a simple query.
 
-> Do this from the archetype repo and use my local S3?
+> Run this from the archetype repo and use my local S3?
 
+I will do this with a small set from a provider first, but if we can do it from the github repo we can do that too.
+
+Index and load into Qlever and do some basic SPARQL searches.  
+
+### Demo sequence for indexing
+
+
+
+### Demo sequence for search
+
+1) go to search.oceaninfohub.org and search on "ocean biodiversity"  ([link to the search](https://oceaninfohub.org/results/Dataset?search_text=ocean+biodiversity&page=0))
+2) the second result should be from OBIS "Coral Reef Evaluation..."
+3) View the page  ([this one in my search](https://obis.org/dataset/aaacf13e-a138-4b75-ba78-0b5136649365))
+4) View source and search for "ld+json", the mimetype for JSON-LD and review the code in page. 
+5) Also put the URL into https://validator.schema.org
+6) BONUS:  Scroll down and point out their use of Ocean Expert IDs in the markup
 
 ## Section 7 (Value)
 
