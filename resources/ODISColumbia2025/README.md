@@ -1,6 +1,10 @@
 # Columbia Meeting Outline
 **March 11th, 2025 (Tuesday: 90-minute session)**
 
+This 90-minute workshop at the Columbia Meeting will provide a practical overview of the Ocean Data and Information System (ODIS) and its implementation using JSON-LD, focusing on enabling data discoverability and interoperability. We will begin by outlining the core principles of ODIS, emphasizing standards-based, low-friction methods, and then delve into the foundational architecture of JSON-LD for creating machine-readable linked data. 
+
+Participants will learn the authoring process for data graphs and sitemaps, explore the importance of persistent identifiers (PIDs), and discover various deployment strategies for publishing JSON-LD data on the web. We will also demonstrate indexing and querying techniques using tools like Gleaner and SPARQL, and showcase simple user interfaces. Finally, we will highlight the value proposition of using JSON-LD for improved data discoverability and machine understanding, concluding with a question and answer session.
+
 ## Ocean Data and Information System (ODIS) WS
 
 ### Agenda
@@ -155,21 +159,7 @@ This section shows how to leverage schema.org and JSON-LD for effective web cont
 
 ---
 
-## Why Do This This Way (Architecture Focus)?
+## Why this way (Architecture Focus)?
 - **Low friction**
 - **Standards-based** (consumed by many clients)
 - **AI-ready** (e.g., Croissant, CDIF, ODIS, Google Dataset)
-
-### Example Flow
-1. Author JSON-LD (leverage Rustpad?)
-2. Validate with [validator.schema.org](https://validator.schema.org) (introduce SHACL)
-3. Visualize with [jsoncrack.com](https://jsoncrack.com)
-4. Use PIDs (Ocean Expert, DOI, @id in graphs)
-5. Discuss required vs. recommended fields (e.g., Dataset: Distribution, Spatial)
-6. Load to GitHub page with sitemap.xml
-7. Discuss deployment (sitemap, sitegraph) and tool support (CKAN, ERDDAP)
-8. Index with Gleaner or convert to .nq
-9. Demonstrate SPARQL via Qlever
-10. Optional: Show spatial data (e.g., marine regions)
-11. Simple search with OIH UI
-12. End with Value Proposition (INSPIRE, OHDSI, CODATA)
