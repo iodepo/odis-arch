@@ -88,26 +88,27 @@ material in the [Gleaner Archetype](https://github.com/gleanerio/archetype) repo
 
 ### Demo sequence for indexing
 
-```bash
-cliGleaner.sh -a docker -cfg gleanerconfig_columbia.yaml --source edmo
-```
-
 Requirements
 * docker
 * gleaner cli
 * minio (s3 store)
 * headless instance (if needed)
 
+Gleaner (to index)
+```bash
+cliGleaner.sh -a docker -cfg gleanerconfig_columbia.yaml --source edmo
+```
 
-We will run an index, view the resulting data collected and 
-do a simple query.
-
-> Run this from the archetype repo and use local s3
+Nabu (to load)
+```bash
+ cliNabu.sh -a docker release --cfg nabuconfig.yaml --prefix summoned/edmo
+ ```
 
 I will do this with a small set from a provider first, but if we can do it from the GitHub repository, we can do that too.
 
 Index and load into Qlever and do some basic SPARQL searches.  
 
+> Share the docker compose file that sets all these up.
 
 ### Demo sequence for search
 
