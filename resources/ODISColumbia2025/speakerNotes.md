@@ -78,31 +78,35 @@ Focus first on the deployment of the JSON-LD into the HTML pages and some of the
 
 Talk also about why you might be doing a site graph or why you might be developing an API 
 
-### Optional (depends on time)
-
-> use archetype repo for this if done
-
 1) show putting documents into a github repo
 2) generate a sitemap for them, put the sitemap at the repo
 
 ## Section 6 (Indexing & Use)
 
-> In the time available this really has to be a "watch me do it"
+Here we will show the indexing of a resource leveraging the 
+material in the [Gleaner Archetype](https://github.com/gleanerio/archetype) repo.  
 
-That said, it is important to show this can run on simple hardware with
-a range of open source approaches.  
+### Demo sequence for indexing
+
+```bash
+cliGleaner.sh -a docker -cfg gleanerconfig_columbia.yaml --source edmo
+```
+
+Requirements
+* docker
+* gleaner cli
+* minio (s3 store)
+* headless instance (if needed)
+
 
 We will run an index, view the resulting data collected and 
 do a simple query.
 
-> Run this from the archetype repo and use my local S3?
+> Run this from the archetype repo and use local s3
 
-I will do this with a small set from a provider first, but if we can do it from the github repo we can do that too.
+I will do this with a small set from a provider first, but if we can do it from the GitHub repository, we can do that too.
 
 Index and load into Qlever and do some basic SPARQL searches.  
-
-### Demo sequence for indexing
-
 
 
 ### Demo sequence for search
@@ -116,7 +120,8 @@ Index and load into Qlever and do some basic SPARQL searches.
 
 ## Section 7 (Value)
 
-This really is just a summary time.  Things to note:
+We can review the topics to this point to highlight some 
+of the value propositions. 
 
 1) commodity approach
 2) an approach that addresses many users (see below)
@@ -132,5 +137,3 @@ This really is just a summary time.  Things to note:
 
 
 ## Questions
-
-Any and all welcome...  
