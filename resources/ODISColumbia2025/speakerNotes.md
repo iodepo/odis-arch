@@ -1,4 +1,15 @@
-# Speaker Notes
+# Session Notes
+
+This workshop provides a comprehensive introduction to implementing and utilizing structured data for enhanced data discovery and interoperability. 
+
+We will begin by establishing the fundamental principles, exploring the OIDS Book structure and QuickStart, and contrasting this approach with existing data dissemination methods like OAI-PMH. Moving into foundational concepts, we will delve into JSON-LD, emphasizing its role as a serialization of the RDF data model, and cover essential elements like context, fields, and keywords using examples from ESIP's Science on Schema.org tutorials. 
+
+Practical authoring techniques will be demonstrated, including validation and editing of JSON-LD documents. Unique identifiers (IDs) will be discussed, highlighting their importance in federated systems and referencing prominent examples like ORCID and ROR. 
+
+We will then cover deployment strategies, showcasing how JSON-LD can be embedded in HTML pages and integrated into existing systems, followed by a demonstration of indexing and searching using tools like Gleaner and Qlever. 
+
+Finally, we will explore the value propositions of this approach, emphasizing its commodity nature, broad applicability, and foundational role in AI and other data-driven workflows, culminating in a question and answer session.
+
 
 ## Section 1 (Principles)
 
@@ -137,4 +148,5 @@ of the value propositions.
 - [CODATA CDIF](https://cdif.codata.org/)
 
 
-## Questions
+## Question time
+
