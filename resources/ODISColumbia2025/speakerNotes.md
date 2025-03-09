@@ -2,7 +2,7 @@
 
 This workshop provides a comprehensive introduction to implementing and utilizing structured data for enhanced data discovery and interoperability. 
 
-We will begin by establishing the fundamental principles, exploring the OIDS Book structure and QuickStart, and contrasting this approach with existing data dissemination methods like OAI-PMH. Moving into foundational concepts, we will delve into JSON-LD, emphasizing its role as a serialization of the RDF data model, and cover essential elements like context, fields, and keywords using examples from ESIP's Science on Schema.org tutorials. 
+We will begin by establishing the fundamental principles, exploring the OIDS Book structure and QuickStart, and contrasting this approach with existing data dissemination methods like OAI-PMH. Moving into foundational concepts, we will delve into JSON-LD, emphasizing its role as an effective serialization of the RDF data model, and cover essential elements like context, fields, and keywords using examples from ESIP's Science on Schema.org tutorials. 
 
 Practical authoring techniques will be demonstrated, including validation and editing of JSON-LD documents. Unique identifiers (IDs) will be discussed, highlighting their importance in federated systems and referencing prominent examples like ORCID and ROR. 
 
@@ -14,8 +14,8 @@ Finally, we will explore the value propositions of this approach, emphasizing it
 ## Section 1 (Principles)
 
 1) Walk through the OIDS Book and discuss its structure
-1) Review the QuickStart
-2) Discuss this approach in terms of the data on the web best practices and also contrast with things like OAI-PMH where separate infrastructure is needed
+2) Review the [QuickStart](https://book.odis.org/gettingStarted.html)
+3) Discuss this approach in terms of the [data on the web best practices](https://www.w3.org/TR/dwbp/) and also contrast with things like OAI-PMH where separate infrastructure is needed.
 
 ## Sections 2 (Foundations)
 
@@ -29,11 +29,17 @@ Here we will introduce JSON-LD
 2) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/02_basic-fields.md
 3) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/03_keywords.md
 
-We can then put [basic1.json](./docs/section2/basic1.json) into [JSON Crack](https://jsoncrack.com) and show it.
+We can then put [basic1.json](./docs/section2/basic1.json) 
+or [odisBookExample.json](./docs/section2/odisBookExample.json) into [JSON Crack](https://jsoncrack.com) and show it.
 
 Then put it into [JSON-LD Playground](https://json-ld.org/playground/).
 
 Show the official JSON-LD site at [JSON-LD Official Site](https://json-ld.org/)
+
+Optional:
+
+* Show framing with [var frame](./docs/section2/variableMeasuredFrame.json)
+* discuss expanding the context with things like GeoSPARQL with examples from [Spatial Geometry](https://book.odis.org/thematics/spatial/index.html).
 
 > If people want more mention the talk by Pierre-Antoine
 
