@@ -35,7 +35,7 @@ These principles enable data that is **findable, accessible, interoperable, and 
 ### Resources
 - [ODIS Book](https://book.odis.org/index.html) - Comprehensive overview
 - [ODIS Quickstart](https://book.odis.org/gettingStarted.html) - Practical guide to implementing these principles
-- [W3C Data on the Web Best Practices](https://www.w3.org/TR/dwbp/) - Foundational reference for high-quality structured data
+- [W3C Data on the Web Best Practices—](https://www.w3.org/TR/dwbp/)Foundational reference for high-quality structured data
 
 **Functional Goal**: Describe the fundamental principles and practical methods for publishing standards-based structured metadata on the web, focusing on JSON-LD and schema.org.
 
@@ -110,7 +110,7 @@ Functional Goal: Describe various deployment strategies for JSON-LD structured d
 
 
 ### Resources
-- Tools document  
+- [Tools and Software reference](./docs/section5/software.md)
 - GitHub + sitemap
 
 ---
@@ -121,11 +121,6 @@ Building upon the core value of schema.org and structured data—enhanced discov
 
 The ability to query and access structured data through user interfaces empowers researchers, data analysts, and other users to extract valuable insights, enabling the creation of user-friendly applications. We will demonstrate the process of indexing and querying JSON-LD documents, including those created during this authoring session, and introduce query approaches for the graph. Example user interfaces will highlight how to present this data in an easy-to-understand format, showcasing how these techniques enable efficient data retrieval and exploration for diverse applications.
 
-
-### Resources
-- Gleaner
-- Qlever indexing/query process
-- UI examples
 
 ---
 
