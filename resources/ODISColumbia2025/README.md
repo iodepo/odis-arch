@@ -24,11 +24,11 @@ Participants will learn the authoring process for data graphs and sitemaps, expl
 ---
 
 ## Principles and Overview of the Approach
-This section explores the fundamental principles guiding the creation and publication of structured metadata, aligning with the vision of a standardized and interoperable web. We emphasize **standards-based, low-friction methods**, as exemplified by the ODIS Quickstart documentation and informed by core web standards. ODIS provides a real-world example of implementing **schema.org** in a distributed environment.
+This section explores the fundamental principles that guide the creation and publication of structured metadata, aligning with the broader vision of a standardized and interoperable web. We will emphasize standards-based, low-friction methods, as exemplified by the ODIS Quickstart documentation, and informed by core web standards. ODIS provides a real world example of how to implement schema.org in a distributed environment. We will examine the core philosophies of using open web standards, and the low friction methods of implementation, that are used to create interoperable web data. These principles facilitate the creation of data that is easily discoverable, accessible, interoperable, and reusable, fostering a more connected and data-driven web. By adopting low-friction methods, we can lower the barrier to entry for publishing structured data, encouraging wider adoption and contribution. 
 
-We will examine:
-- Core philosophies of open web standards
-- Low-friction implementation methods for interoperable web data
+The ODIS Quickstart (https://book.odis.org/gettingStarted.html) provides a practical guide to implementing these principles, while the ODIS Book (https://book.odis.org/index.html) offers a more comprehensive overview. The W3C's Data on the Web Best Practices (https://www.w3.org/TR/dwbp/) serve as a foundational reference for creating high-quality structured data.
+
+Functional Goal: Describe the fundamental principles and practical methods for publishing standards-based structured metadata on the web, with a focus on JSON-LD and schema.org.
 
 These principles enable data that is **findable, accessible, interoperable, and reusable**, fostering a connected, data-driven web. Low-friction methods lower the barrier to entry for publishing structured data, encouraging broader adoption.
 
@@ -42,19 +42,16 @@ These principles enable data that is **findable, accessible, interoperable, and 
 ---
 
 ## Introduction to Foundational Architecture with JSON-LD
-In an interconnected world, **machine-readable data** is key to seamless information exchange and intelligent applications. **JSON-LD** provides a lightweight, flexible way to represent linked data on the web, a cornerstone of the Semantic Web. It enables data to be understood by both humans and machines, improving interoperability and supporting data-driven applications.
 
-This section introduces:
-- Fundamental concepts of JSON-LD
-- How it creates a data graph for linked data
-- Context, keywords, compacted/expanded views, RDF conversion, and framing
+In today's interconnected world, making data machine-readable is crucial for enabling seamless information exchange and building intelligent applications. JSON-LD plays a pivotal role in achieving this, by providing a lightweight and flexible way to represent linked data on the web. JSON-LD is a key technology that enables the creation of linked data, a cornerstone of the Semantic Web. It allows us to represent data in a way that can be easily understood and processed by both humans and machines, improving data interoperability and enabling data-driven applications.
+
+This section will introduce the fundamental concepts of JSON-LD, demonstrating how it creates a data graph that can be used to create linked data. We will cover the context, key words, compacted and expanded views, and conversion to RDF. We will also show how framing can be used to shape the data.
 
 ### Resources
-- [ESIP Tutorials](https://github.com/ESIPFed/science-on-schema.org/tree/main/tutorials/esip-summer-mtg-2022)
-- [JSON Crack](https://jsoncrack.com)
-- [JSON-LD Playground](https://json-ld.org/playground/)
-- [JSON-LD Official Site](https://json-ld.org/)
-- [W3C Talk on JSON-LD](https://www.w3.org/Talks/2021/09-20-ddi-cdi/?full#1)
+* [JSON-LD Playground](https://json-ld.org/playground/)
+* [JSON-LD Official Site](https://json-ld.org/)
+* https://www.w3.org/Talks/2021/09-20-ddi-cdi/?full#1
+* [ESIP Tutorials](https://github.com/ESIPFed/science-on-schema.org/tree/main/tutorials/esip-summer-mtg-2022)
 
 
 ---
