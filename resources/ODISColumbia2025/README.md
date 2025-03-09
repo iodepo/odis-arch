@@ -80,7 +80,7 @@ Learn to create, validate, and publish structured data, including sitemaps. More
 This section examines the critical role of **Persistent Identifiers (PIDs)** in enhancing reliability and discoverability of structured data. PIDs ensure enduring accessibility and unambiguous identification, mitigating link rot and maintaining data integrity.
 
 We’ll cover:
-- Types of PIDs (e.g., ORCID for researchers, DOI for documents, ROR for organizations)
+- Types of PIDs (e.g., OceanExpert IDs or ORCIDs for researchers, DOI for documents, ROR for organizations)
 - Integration with JSON-LD for interconnected data graphs
 - Enhancing data provenance and semantic interoperability
 
