@@ -57,14 +57,13 @@ This section will introduce the fundamental concepts of JSON-LD, demonstrating h
 ---
 
 ## Authoring Process for Data Graphs and Sitemaps
-This section guides you through making your website’s data understandable to search engines and applications using **JSON-LD**. We’ll cover:
-1. Describing data with JSON-LD (like labeling information)
-2. Validating your work for accuracy
-3. Creating a sitemap for search engines to index your content
 
-**Example**: For a website about books, use JSON-LD to specify titles, authors, and descriptions for search engines.
+This section will show you how to  make your website's data more understandable to search engines and other applications, by guiding you through the process of creating structured data using JSON-LD. First, we'll show you how to describe your data in a way that search engines can understand. Think of it as adding labels to your information. Then, we'll show you how to check your work, to make sure everything is correct. Finally, we'll create a map of your website and data, so search engines can easily find and index your content. For example, if you have a website with information about datasets, you can use JSON-LD to tell search engines the title, author, and description of each dataset.
 
-Learn to create, validate, and publish structured data, including sitemaps. More details are in the ODIS Book.
+Learn how to create structured data using JSON-LD, check it for accuracy, and help search engines find your website and data. We will also discuss how to publish your data, including creating sitemaps of your website and data for search engines. The ODIS Book has more information about this process.
+
+
+
 
 ### Resources
 - [Rustpad](https://rustpad.io/#vertPY)
@@ -77,14 +76,21 @@ Learn to create, validate, and publish structured data, including sitemaps. More
 ---
 
 ## Identifiers and Graph IDs
-This section examines the critical role of **Persistent Identifiers (PIDs)** in enhancing reliability and discoverability of structured data. PIDs ensure enduring accessibility and unambiguous identification, mitigating link rot and maintaining data integrity.
+
+This section examines the critical role of Persistent Identifiers (PIDs) in strengthening the reliability and discoverability of structured data. It elucidates the necessity of PIDs in establishing robust and interconnected information networks on the web, and their synergistic relationship with schema.org and JSON-LD.
+
+PIDs function as immutable digital identifiers, ensuring enduring accessibility and unambiguous identification of entities, even in the event of changes to associated URLs or metadata. In the context of structured data, PIDs mitigate the risk of link rot and maintain data integrity.
+
 
 We’ll cover:
 - Types of PIDs (e.g., OceanExpert IDs or ORCIDs for researchers, DOI for documents, ROR for organizations)
 - Integration with JSON-LD for interconnected data graphs
 - Enhancing data provenance and semantic interoperability
 
-**Functional Goal**: Explore common PIDs and their importance (leverage NIH graphs/images).
+The integration of PIDs within structured data contributes to the establishment of a trustworthy and verifiable web of data. By providing stable references, PIDs enhance data discoverability and facilitate the identification of related information. The documentation will present examples of PID implementation within JSON-LD, and provide guidance on the selection of appropriate PID types for diverse data entities
+
+
+**Functional Goal**: Explore common PIDs and their importance.
 
 ### Resources
 - [ODIS Variables](https://book.odis.org/thematics/variables/index.html)
@@ -95,44 +101,42 @@ We’ll cover:
 ---
 
 ## Deployment Strategies
-This section explores strategies for deploying **JSON-LD structured data** in various web architectures, enabling seamless integration with existing systems. We’ll examine:
-- Embedding JSON-LD in HTML pages
-- Delivering via API endpoints
-- Dynamic creation by data services (e.g., ERDDAP, CKAN, pygeoapi)
 
-Choosing a strategy depends on data volume, update frequency, and audience. Static deployment suits stable datasets; APIs suit dynamic data.
+This section explores diverse strategies for deploying JSON-LD structured data within various web architecture paradigms, enabling seamless integration with existing systems and workflows. We will examine strategies for deploying JSON-LD within both traditional web architectures, and within data service architectures. We will show how JSON-LD can be embedded into HTML pages, delivered via API endpoints, and created dynamically by data services. Data services like ERDDAP, CKAN and pygeoapi are increasingly capable of automatically generating and exposing JSON-LD metadata, facilitating data discovery and interoperability. We will examine how tools like ERDDAP and pygeoapi are able to create JSON-LD dynamically, and show how web frameworks can be used to embed JSON-LD into web pages.
 
-**Functional Goal**: Describe deployment strategies for JSON-LD in web architectures and data services, demonstrating tool integration.
+Choosing the appropriate deployment strategy depends on factors such as data volume, update frequency, and target audience. Static website deployment is ideal for stable datasets, while API endpoints are suitable for dynamic data that requires real-time access. Data services that expose JSON-LD make it easy for other systems to consume the data.
+
+Functional Goal: Describe various deployment strategies for JSON-LD structured data in web architectures and data services, and demonstrate how to leverage tools for seamless integration
+
 
 ### Resources
-- Tools document (TBD)
+- Tools document  
 - GitHub + sitemap
 
 ---
 
 ## Indexing and User Interfaces
-This section demonstrates how to index and query **JSON-LD data** for enhanced discoverability and interoperability. Indexing makes data searchable; querying enables complex analysis. Tools like **Gleaner** harvest/index data, while **SPARQL** retrieves specific info.
 
-We’ll show:
-- Indexing/querying JSON-LD from this session
-- Example UIs for presenting data clearly
+Building upon the core value of schema.org and structured data—enhanced discoverability and interoperability—this section demonstrates how to effectively index and query JSON-LD data to unlock its full potential. Indexing makes structured data searchable, enabling efficient retrieval of relevant information, while querying allows for complex data exploration and analysis. Tools like Gleaner are used to harvest and index JSON-LD data, creating searchable repositories, and SPARQL, a powerful query language, allows users to retrieve specific information.
+
+The ability to query and access structured data through user interfaces empowers researchers, data analysts, and other users to extract valuable insights, enabling the creation of user-friendly applications. We will demonstrate the process of indexing and querying JSON-LD documents, including those created during this authoring session, and introduce query approaches for the graph. Example user interfaces will highlight how to present this data in an easy-to-understand format, showcasing how these techniques enable efficient data retrieval and exploration for diverse applications.
+
 
 ### Resources
-- Gleaner (bash/python examples)
-- [Gleaner Archetype](https://github.com/gleanerio/archetype)
+- Gleaner
 - Qlever indexing/query process
 - UI examples
 
 ---
 
 ## Value Proposition
-**Schema.org** standardizes structured data on the web, improving discoverability, interoperability, and machine understanding. Benefits include:
-- Richer search results and visibility for search engines
-- Better SEO and UX for website owners
-- More relevant results for users
-- Support for FAIR data principles
 
-This section shows how to leverage schema.org and JSON-LD for effective web content.
+Schema.org is a collaborative effort to create and maintain a standardized vocabulary for structured data on the web. By implementing schema.org, website owners can provide search engines and other applications with a clearer understanding of their content, leading to improved discoverability, interoperability, and machine understanding.
+
+For search engines, this translates to richer search results, increased visibility, and more relevant traffic. For website owners, it means improved SEO and enhanced user experience. Users benefit from more informative and relevant search results. Furthermore, the use of schema.org promotes FAIR data principles, making web data more findable, accessible, interoperable, and reusable.
+
+This section will demonstrate how to leverage schema.org and structured data, particularly through JSON-LD, to improve the effectiveness of web content and enable better data exchange. We will provide practical examples and guidance on implementing schema.org to achieve these goals.
+
 
 ### Resources
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
@@ -141,6 +145,13 @@ This section shows how to leverage schema.org and JSON-LD for effective web cont
 - [ML Commons](https://mlcommons.org/working-groups/data/croissant/)
 - [Go FAIR](https://www.go-fair.org/)
 - [CODATA CDIF](https://cdif.codata.org/)
+
+
+## Why this way (Architecture Focus)?
+- **Low friction**
+- **Standards-based** (consumed by many clients)
+- **AI-ready** (e.g., Croissant, CDIF, ODIS, Google Dataset)
+
 
 ---
 
@@ -155,8 +166,3 @@ This section shows how to leverage schema.org and JSON-LD for effective web cont
 | **Evaluation**                                     | Evaluate quality/impact of schema.org descriptions; compare with ISO 115, OAI-PMH                |
 
 ---
-
-## Why this way (Architecture Focus)?
-- **Low friction**
-- **Standards-based** (consumed by many clients)
-- **AI-ready** (e.g., Croissant, CDIF, ODIS, Google Dataset)
