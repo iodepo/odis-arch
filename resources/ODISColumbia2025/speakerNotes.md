@@ -36,12 +36,7 @@ Then put it into [JSON-LD Playground](https://json-ld.org/playground/).
 
 Show the official JSON-LD site at [JSON-LD Official Site](https://json-ld.org/)
 
-Optional:
-
-* Show framing with [variable frame](./docs/section2/variableMeasuredFrame.json)
-* discuss expanding the context with things like GeoSPARQL with examples from [Spatial Geometry](https://book.odis.org/thematics/spatial/index.html).
-
-> If people want more mention the talk by Pierre-Antoine
+> If people want more, mention the material at https://json-ld.org/learn.html 
 
 ## Section 3 (Authoring)
 
@@ -51,16 +46,29 @@ JSON-LD and maybe some basic validation.
 We can leverage rust pad.  https://rustpad.io/#IODPOIH
 
 1) Load up an example JSON-LD document from the ODIS book.  Pull the example from: https://book.odis.org/thematics/dataset/index.html or from the [GitHub repo examples.](https://github.com/iodepo/odis-arch/tree/master/resources/ODISColumbia2025/docs/section2)
-2) Load it to the shared rust pad
+2) Load it to the shared rust pad https://rustpad.io/#IODPOIH
 3) Load it to https://validator.schema.org/
 4) Load it to https://json-ld.org/playground/
 
-Discuss the various elements like time, space and licensing and show editing the JSON-LD with these elements
+Discuss the various elements like time, space and licensing and show editing the JSON-LD with these elements.  Reference the book for these elements.  
+
+Optional:
+
+* Validation with SHACL at https://shacl.org/playground/ 
+  * Start with the data graph in [JSON Crack](https://jsoncrack.com/editor) to show the visual overview
+* Show framing with [variable frame](./docs/section3/variableMeasuredFrame.json)
+* discuss expanding the context with things like GeoSPARQL with examples from [Spatial Geometry](https://book.odis.org/thematics/spatial/index.html).
+
 
 ## Section 4 (IDs)
 
-Discuss the concept of unique IDs.  Note their use in places like 
-people, bio-diversity, etc.   
+
+Discuss the concept of unique IDs.  
+
+Note their use in places like people, bio-diversity, etc. and their 
+value in a federated data system.  
+
+Share [this personal example](./docs/section4/pid_application.md) of what a graph looks like with and without PIDs for people. 
 
 Share:
 * https://orcid.org/
@@ -71,21 +79,18 @@ Share:
 > Note they can also use domain-specific IDs and even their own IDs.  There are 
 > different use cases for all of them.
 
-Share [this personal example](./docs/section4/pid_application.md) of what a graph looks like with and without PIDs for people. 
+
 
 > Note that this is not a session on PIDs and that such a topic can be a whole
 > session in itself.   However, it is a valuable part of a data management approach, especially in a federated system. 
 
 ## Section 5 (Deployment)
 
-There are many ways to _deploy_.  You might be using 
-a system like CKAN or others that have it built in.  In that case,  
-deployment is really framework configuration.
+There are many ways to _deploy_.  You might be using a system like CKAN or others that have it built in.  In that case, deployment is really framework configuration.
 
 [See software table](./docs/section5/software.md)
 
-For example, [this search](https://oceaninfohub.org/results/Dataset?search_text=ocean+temperature&page=0)  returns a top hit from a test
-we are doing for ERDDAP [example result](https://osmc.noaa.gov/erddap/tabledap/pmelTaoDySst.html).  
+For example, [this search](https://oceaninfohub.org/results/Dataset?search_text=ocean+temperature&page=0)  returns a top hit from a test we are doing for ERDDAP [demo result](https://osmc.noaa.gov/erddap/tabledap/pmelTaoDySst.html).  
 
 ### metadata resources 
 
@@ -95,9 +100,9 @@ Focus first on the deployment of the JSON-LD into the HTML pages and some of the
 * show loading the page URL into [validator.schema.org](https://validator.schema.org/) or the  [direct link](https://validator.schema.org/#url=https%3A%2F%2Fobis.org%2Fdataset%2Faaacf13e-a138-4b75-ba78-0b5136649365)
 * show that there are [browser extensions](https://chromewebstore.google.com/search/schema%20) Also note I don't use these, you don't need them.
 
-### sitemaps and sitegraphs
+### sitemaps and site graphs
 
-Resources are expressed using a sitemap ([sitemaps.org](https://sitemaps.org)) and then can be registered in the [IOC Ocean Data and Information System](https://catalogue.odis.org/).  It is also possible to [publish a full graph](https://book.odis.org/indexing/graphpub.html) of holdings if publishing using the web architecture approach is not available. 
+Resources are expressed using a sitemap ([sitemaps.org](https://sitemaps.org)) and then can be registered in the ODIS Catalogue [IOC Ocean Data and Information System](https://catalogue.odis.org/).  It is also possible to [publish a full graph](https://book.odis.org/indexing/graphpub.html) of holdings if publishing using the web architecture approach is not available. 
 
 
 
