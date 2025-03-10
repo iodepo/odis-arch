@@ -142,11 +142,6 @@ This section will demonstrate how to leverage schema.org and structured data, pa
 - [CODATA CDIF](https://cdif.codata.org/)
 
 
-## Why this way (Architecture Focus)?
-- **Low friction**
-- **Standards-based** (consumed by many clients)
-- **AI-ready** (e.g., Croissant, CDIF, ODIS, Google Dataset)
-
 
 ---
 
