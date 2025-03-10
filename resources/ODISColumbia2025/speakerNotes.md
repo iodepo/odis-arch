@@ -87,14 +87,21 @@ deployment is really framework configuration.
 For example, [this search](https://oceaninfohub.org/results/Dataset?search_text=ocean+temperature&page=0)  returns a top hit from a test
 we are doing for ERDDAP [example result](https://osmc.noaa.gov/erddap/tabledap/pmelTaoDySst.html).  
 
+### metadata resources 
+
 Focus first on the deployment of the JSON-LD into the HTML pages and some of the reasons we do this.  
 
 * show an HTML page with JSON-LD in it from the OIH partners [example from OBIS](https://obis.org/dataset/aaacf13e-a138-4b75-ba78-0b5136649365)
 * show loading the page URL into [validator.schema.org](https://validator.schema.org/) or the  [direct link](https://validator.schema.org/#url=https%3A%2F%2Fobis.org%2Fdataset%2Faaacf13e-a138-4b75-ba78-0b5136649365)
 * show that there are [browser extensions](https://chromewebstore.google.com/search/schema%20) Also note I don't use these, you don't need them.
 
-Talk also about why you might be doing a site graph or why you might be developing an API 
+### sitemaps and sitegraphs
 
+Resources are expressed using a sitemap ([sitemaps.org](https://sitemaps.org)) and then can be registered in the [IOC Ocean Data and Information System](https://catalogue.odis.org/).  It is also possible to [publish a full graph](https://book.odis.org/indexing/graphpub.html) of holdings if publishing using the web architecture approach is not available. 
+
+
+
+Optional: 
 1) put the JSON-LD into a GitHub repo
 2) generate a sitemap for them, put the sitemap at the repo
 
@@ -145,6 +152,8 @@ Index and load into Qlever and do some basic SPARQL searches.
 Search ([graph search](http://graph.oceaninfohub.org/blazegraph/#query)) and Resource Orgiented Architecture (ROA) based access ([example of S3 based object access](http://oss.oceaninfohub.org/browser/public))
 
 > [Example SPARQL query for use](./docs/section6/simpleSparql.rq)
+> 
+> [Example visualization from graph](https://github.com/iodepo/odis-arch/tree/master/graphOps/users/graphVisualization)
 
 
 ## Section 7 (Value)
