@@ -106,9 +106,20 @@ Resources are expressed using a sitemap ([sitemaps.org](https://sitemaps.org)) a
 
 
 
-Optional: 
+Pub test: 
 1) put the JSON-LD into a GitHub repo
 2) generate a sitemap for them, put the sitemap at the repo
+
+```bash
+➜  archetype git:(master) ✗ source .venv/bin/activate
+(archetype) ➜  archetype git:(master) ✗ cd bin
+(archetype) ➜  bin git:(master) ✗ python github_jsonld_sitemap.py
+usage: github_jsonld_sitemap.py [-h] [--token TOKEN] [--output OUTPUT] repo_url directory
+github_jsonld_sitemap.py: error: the following arguments are required: repo_url, directory
+
+python github_jsonld_sitemap.py "https://github.com/iodepo/odis-arch"  "/resources/ODISColumbia2025/indexTarget"
+```
+
 
 ## Section 6 (Indexing & Use)
 
