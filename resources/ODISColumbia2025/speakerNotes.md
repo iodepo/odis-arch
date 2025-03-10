@@ -168,13 +168,26 @@ mc ls homelab/gleaner/summoned/demo
 Nabu (to load)
 ```bash
 cliNabu.sh -a docker --cfg nabuconfig.yaml prefix summoned/demo --endpoint demo
+
+ cliNabu.sh  -a docker release --cfg nabuconfig.yaml --prefix summoned/demo
+ 
+ cliNabu.sh -a docker object --cfg nabuconfig.yaml graphs/latest/demo_release.nq --endpoint demo
  ```
 
-We can also show the EDMO indexing as well as GitHub based if needed.
+we can test this with the SPARQL 
 
-Index and load into Qlever and do some basic SPARQL searches.  
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-> Share the docker compose file that sets all these up.
+SELECT * WHERE {
+  graph ?g {
+  ?sub ?pred ?obj .
+  }
+} LIMIT 10
+```
+
+> We can also show the EDMO indexing as well as GitHub based if there is time.
 
 ### Demo sequence for search
 
