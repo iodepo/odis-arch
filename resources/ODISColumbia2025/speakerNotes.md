@@ -95,7 +95,7 @@ Focus first on the deployment of the JSON-LD into the HTML pages and some of the
 * show loading the page URL into [validator.schema.org](https://validator.schema.org/) or the  [direct link](https://validator.schema.org/#url=https%3A%2F%2Fobis.org%2Fdataset%2Faaacf13e-a138-4b75-ba78-0b5136649365)
 * show that there are [browser extensions](https://chromewebstore.google.com/search/schema%20) Also note I don't use these, you don't need them.
 
-### sitemaps and sitegraphs
+### sitemaps and site graphs
 
 Resources are expressed using a sitemap ([sitemaps.org](https://sitemaps.org)) and then can be registered in the [IOC Ocean Data and Information System](https://catalogue.odis.org/).  It is also possible to [publish a full graph](https://book.odis.org/indexing/graphpub.html) of holdings if publishing using the web architecture approach is not available. 
 
