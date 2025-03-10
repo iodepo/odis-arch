@@ -30,7 +30,10 @@ Here we will introduce JSON-LD
 3) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/03_keywords.md
 
 We can then put [basic1.json](./docs/section2/basic1.json) 
-or [odisBookExample.json](./docs/section2/odisBookExample.json) into [JSON Crack](https://jsoncrack.com) and show it.
+or [odisBookExample.json](./docs/section2/odisBookExample.json) into [JSON Crack](https://jsoncrack.com) and show it.  
+
+> Note that this is a tree view of a graph.  You can 
+> see [the graph here](./images/odisBookExample.png).
 
 Then put it into [JSON-LD Playground](https://json-ld.org/playground/).
 
@@ -120,6 +123,13 @@ github_jsonld_sitemap.py: error: the following arguments are required: repo_url,
 python github_jsonld_sitemap.py "https://github.com/iodepo/odis-arch"  "/resources/ODISColumbia2025/indexTarget"
 ```
 
+So the resulting sitemap.xml file is located at:
+
+```bash
+https://raw.githubusercontent.com/iodepo/odis-arch/refs/heads/master/resources/ODISColumbia2025/sitemap.xml
+```
+
+
 
 ## Section 6 (Indexing & Use)
 
@@ -141,16 +151,26 @@ Architecture elements
 * gleaner cli from [Gleaner Archetype](https://github.com/gleanerio/archetype) 
 
 Gleaner (to index)
+
+Clone the [Gleaner/Archetype](https://github.com/gleanerio/archetype) repo.  
+
+Start in that directory
+
 ```bash
-cliGleaner.sh -a docker -cfg gleanerconfig_columbia.yaml --source edmo
+export PATH="$PWD/bin:$PATH"
+
+cliGleaner.sh -a docker -cfg gleanerconfig_columbia.yaml --source demo
+
+mc ls homelab/gleaner/summoned/demo
 ```
+
 
 Nabu (to load)
 ```bash
- cliNabu.sh -a docker release --cfg nabuconfig.yaml --prefix summoned/edmo
+cliNabu.sh -a docker --cfg nabuconfig.yaml prefix summoned/demo --endpoint demo
  ```
 
-I will do this with a small set from a provider first, but if we can do it from the GitHub repository, we can do that too.
+We can also show the EDMO indexing as well as GitHub based if needed.
 
 Index and load into Qlever and do some basic SPARQL searches.  
 
