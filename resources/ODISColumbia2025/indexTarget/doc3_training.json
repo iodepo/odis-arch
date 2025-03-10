@@ -1,12 +1,6 @@
 {
     "@context": {
-        "@vocab": "https://schema.org/",
-        "endDate": {
-            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-        },
-        "startDate": {
-            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-        }
+        "@vocab": "https://schema.org/"
     },
     "@id": "https://example.org/permanentUrlToThisJsonDoc3",
     "@type": "Course",
@@ -17,7 +11,6 @@
     "provider": {
         "@type": "Organization",
         "name": "Example University",
-        "@id": "https://grid.ac/institutes/grid.475727.4",
         "description": "UN Department of Economic and Social Affairs Sustainable Development"
     },
     "hasCourseInstance": [
@@ -36,7 +29,6 @@
                 "telephone": "(425) 123-4567",
                 "url": "http://www.janedoe.com",
                 "identifier": {
-                    "@id": "ID_value_string",
                     "@type": "PropertyValue",
                     "propertyID": "This can be text or URL for an ID like ORCID",
                     "url": "https://foo.org/linkToPropertyIDPage",
