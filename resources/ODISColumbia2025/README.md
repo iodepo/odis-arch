@@ -14,8 +14,8 @@ Participants will learn the authoring process for data graphs and sitemaps, expl
 | Introduction to foundational architecture with JSON-LD | 10   | Explains the underlying structure and machine-readable capabilities of JSON-LD for creating linked data |
 | Authoring process for data graphs and sitemaps | 20   | Guides learners through practical steps of creating JSON-LD markup, validating it, and generating sitemaps for web publishing |
 | Identifiers and graph IDs            | 10   | Focuses on the importance of persistent identifiers (PIDs) and their role                  |
-| Deployment strategies                | 20   | Covers how to publish JSON-LD data on the web, including GitHub page deployment and tools supporting JSON-LD integration |
-| Indexing and User interfaces         | 10   | Demonstrates indexing JSON-LD data for search/retrieval using tools like Gleaner and SPARQL, and showcases simple UIs |
+| Deployment strategies                | 15   | Covers how to publish JSON-LD data on the web, including GitHub page deployment and tools supporting JSON-LD integration |
+| Indexing and User interfaces         | 15   | Demonstrates indexing JSON-LD data for search/retrieval using tools like Gleaner and SPARQL, and showcases simple UIs |
 | Value Proposition                    | 5    | Highlights benefits of using JSON-LD for improving data discoverability, interoperability, and machine understanding |
 | Questions                            | 10   |                                                                                             |
 
