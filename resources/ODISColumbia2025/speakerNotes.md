@@ -215,6 +215,7 @@ of the value propositions.
 - **Low friction** web architecture and commodity infrastructure help address scale and sustainability 
 - **Standards-based** wide range of [tools and clients](https://github.com/gleanerio/archetype/blob/master/docs/tooling.md) 
 - **AI-ready** (e.g., Croissant, CDIF, ODIS, Google Dataset, etc.)
+- **Cloud Native** Parquet in object stores (S3 based)
 
 
 ### Resources
