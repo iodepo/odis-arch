@@ -1,8 +1,12 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema:  <https://schema.org/>
+
 SELECT * WHERE {
-  ?s rdf:type <https://schema.org/Dataset> .
-  ?s <https://schema.org/description> ?description .
-  ?s <https://schema.org/name> ?name .
-  ?s <https://schema.org/url> ?url .
+    graph ?g {
+      ?s rdf:type schema:Dataset .
+      ?s schema:description ?description .
+      ?s schema:name ?name .
+      ?s schema:url ?url .
+    }
 }
 
