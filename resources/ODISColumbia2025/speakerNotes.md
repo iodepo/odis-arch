@@ -19,25 +19,25 @@ Finally, we will explore the value propositions of this approach, emphasizing it
 
 ## Sections 2 (Foundations)
 
-Here we will introduce JSON-LD
+Here we will introduce JSON-LD.  The best source of information on JSON-LD is the official JSON-LD site at [JSON-LD Official Site](https://json-ld.org/).
 
 > note that it is a serialisation of the RDF data model (a graph model)
 
  Start with context, fields and keywords from ESIP
  
 1) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/01_json-ld-context-type.md
+   2) [Schema.org for Developers](https://schema.org/docs/developers.html)
+   3) A more complex example of context can be seen in the [spatial example](./docs/section2/spatialIOptions.json)
 2) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/02_basic-fields.md
 3) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/03_keywords.md
+   4) https://book.odis.org/thematics/variables/index.html
 
 We can then put [basic1.json](./docs/section2/basic1.json) 
 or [odisBookExample.json](./docs/section2/odisBookExample.json) into [JSON Crack](https://jsoncrack.com) and show it.  
 
-> Note that this is a tree view of a graph.  You can 
-> see [the graph here](./images/odisBookExample.png).
+> Note that the playground view is a tree view of a graph.  You can view a graph view at: [vizOfDataset.png](images/vizOfDataset.png).
 
-Then put it into [JSON-LD Playground](https://json-ld.org/playground/).
 
-Show the official JSON-LD site at [JSON-LD Official Site](https://json-ld.org/)
 
 > If people want more, mention the material at https://json-ld.org/learn.html 
 
@@ -51,7 +51,9 @@ We can leverage rust pad.  https://rustpad.io/#IODPOIH
 1) Load up an example JSON-LD document from the ODIS book.  Pull the example from: https://book.odis.org/thematics/dataset/index.html or from the [GitHub repo examples.](https://github.com/iodepo/odis-arch/tree/master/resources/ODISColumbia2025/docs/section2)
 2) Load it to the shared rust pad https://rustpad.io/#IODPOIH
 3) Load it to https://validator.schema.org/
-4) Load it to https://json-ld.org/playground/
+4) Load it to  [JSON-LD Playground](https://json-ld.org/playground/).
+
+
 
 Discuss the various elements like time, space and licensing and show editing the JSON-LD with these elements.  Reference the book for these elements.  
 
