@@ -26,11 +26,11 @@ Here we will introduce JSON-LD.  The best source of information on JSON-LD is th
  Start with context, fields and keywords from ESIP
  
 1) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/01_json-ld-context-type.md
-   2) [Schema.org for Developers](https://schema.org/docs/developers.html)
-   3) A more complex example of context can be seen in the [spatial example](./docs/section2/spatialIOptions.json)
+    * [Schema.org for Developers](https://schema.org/docs/developers.html)
+    * A more complex example of context can be seen in the [spatial example](./docs/section2/spatialIOptions.json)
 2) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/02_basic-fields.md
 3) https://github.com/ESIPFed/science-on-schema.org/blob/main/tutorials/esip-summer-mtg-2022/03_keywords.md
-   4) https://book.odis.org/thematics/variables/index.html
+    * https://book.odis.org/thematics/variables/index.html
 
 We can then put [basic1.json](./docs/section2/basic1.json) 
 or [odisBookExample.json](./docs/section2/odisBookExample.json) into [JSON Crack](https://jsoncrack.com) and show it.  
