@@ -198,9 +198,9 @@ SELECT * WHERE {
 3) View the page  ([this one in my search](https://obis.org/dataset/aaacf13e-a138-4b75-ba78-0b5136649365))
 4) View source and search for __ld+json__, the mimetype for JSON-LD and review the code in page. 
 5) Also put the URL into https://validator.schema.org
-6) BONUS:  Scroll down and point out their use of Ocean Expert IDs in the markup
+6) BONUS: Scroll down and point out their use of Ocean Expert IDs in the markup
 
-Search ([graph search](http://graph.oceaninfohub.org/blazegraph/#query)) and Resource Orgiented Architecture (ROA) based access ([example of S3 based object access](http://oss.oceaninfohub.org/browser/public))
+Search ([graph search](http://graph.oceaninfohub.org/blazegraph/#query)) and Resource Orgiented Architecture (ROA) based access ([example of S3 based object access](http://oss.oceaninfohub.org/browser/public)) as being developed for system to system integration.  
 
 > [Example SPARQL query for use](./docs/section6/simpleSparql.rq)
 > 
@@ -218,6 +218,13 @@ of the value propositions.
 - **Cloud Native** Parquet in object stores (S3 based)
 - **FAIR** These approaches facilitate alignment to FAIR principles 
 
+Publishing resources in this manner also can provide impact to data provider, either an individual, organization or community.  
+
+* Increased Visibility and Citation Potential
+* Compliance with Funder, Institutional or other Mandates
+* Contributions to AI and Machine Learning Research to extend Reach and Citation 
+* Preservation of Metadata References 
+* Professional Development, Skill Building and Reputation 
 
 ### Resources
 - [Google Dataset Search](https://datasetsearch.research.google.com/)
