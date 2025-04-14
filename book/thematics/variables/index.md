@@ -15,30 +15,43 @@ execution:
 # Essential Ocean Variables
 
 This section details initial documentation of approaches for describing elements of a 
-[schema:Dataset](https://schema.org/Dataset) or [schema:Organization](https://schema.org/Organization) 
+[schema:Dataset](https://schema.org/Dataset), [schema:Project](https://schema.org/Project), or [schema:Organization](https://schema.org/Organization) 
 with a focus on approaches supporting Essential Ocean Variables (EOVs).   
 
-Organizations, institutions, or projects conducting long-term monitoring (≥5 years) of EOVs are 
-visible in the [GOOS BioEco Portal](https://bioeco.goosocean.org/),
-which connects to ODIS. Registering an entry that describes your organization, project,
-or program to ODIS will ensure it also becomes visible in the BioEco Portal. 
+It is best if both the datasets and the "data producers" (any project, programme, organization, etc. doing
+EOV monitoring) are visible in ODIS. By following the guidance outlined here, datasets and their producers
+can be linked together by metadata.
 
-If you need assistance creating the necessary JSON-LD schema for an organization, the 
-[Metadata Submission Tool](https://eovmetadata.obis.org/) developed by OBIS under 
-the [BioEcoOcean](https://bioecoocean.org/) project is available 
-for use. Note that datasets published to OBIS are automatically connected 
-to ODIS and do not require additional JSON-LD schema to be generated.
-
-Use the EOV dataset schema to describe data sources that are not published in OBIS.
+Specific guidance for BioEco EOV data and metadata is outlined below.
 
 Jump to
+* [BioEco EOVs](#bioeco-eovs)
 * [EOV Organizations](#eov-organizations)
 * [EOV Datasets](#eov-datasets)
 
-## EOV Organizations
+## BioEco EOVs
 
-Organizations, projects, or programs conducting EOV monitoring can leverage the 
-[Projects](../projects/index.md) schema with sub-type [ResearchProject](https://schema.org/ResearchProject).
+Organizations, institutions, or projects ("data producers") conducting long-term monitoring (≥5 years) of BioEco EOVs are 
+visible in the [GOOS BioEco Portal](https://bioeco.goosocean.org/),
+which harvests metadata from ODIS. Registering an entry that describes your data producer in ODIS 
+will ensure it also becomes visible in the GOOS BioEco Portal, as long as EOVs are used as keywords.
+
+If you need assistance creating the necessary JSON-LD schema for a data producer, the 
+[EOV Metadata Submission Tool](https://eovmetadata.obis.org/) developed by OBIS under 
+the [BioEcoOcean](https://bioecoocean.org/) project is available 
+for use. No technical knowledge is needed to use this tool, but users may also export JSON-LD
+metadata if desired.
+
+Note that datasets published to [OBIS](https://obis.org/) are automatically visible 
+in ODIS and do not require additional JSON-LD schema to be generated. OBIS dataset landing
+pages have JSON-LD scripts embedded in them. 
+
+Use the EOV dataset schema below to describe data sources that are not published in OBIS.
+
+## EOV Data Producers (Organizations, Projects, Programmes)
+
+Organizations, projects, or programs conducting EOV monitoring are considered EOV "data producers"
+and can leverage the [Projects](../projects/index.md) schema with sub-type [ResearchProject](https://schema.org/ResearchProject).
 
 Additional blocks that can be included in this schema for projects supporting EOVs
 are outlined below, along with key differences and explanations for certain blocks.
