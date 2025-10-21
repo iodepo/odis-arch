@@ -1,6 +1,6 @@
 # Implementing CARE Principles for Indigenous Data
 
-## Introduction
+## Introduction to Local Contexts
 [Local Contexts](https://localcontexts.org/) was founded to support Indigenous
 data sovereignty and cultural authority. Core to Local Contexts are
 [Indigenous data sovereignty](https://nni.arizona.edu/our-work/research-policy-analysis/indigenous-data-sovereignty-governance), the
@@ -30,10 +30,12 @@ communities, cultural institutions and researchers through the Labels and Notice
 Together they function as a practical mechanism to advance aspirations for Indigenous
 data sovereignty and Indigenous innovation.
 
-## About
+## About Traditional Knowledge / Biocultural Labels and Notices
 Local Contexts developed the Traditional Knowledge (TK) and Biocultural (BC) Labels
 that provide Indigenous data governance guidance. Indigenous and local communities
-can reinforce rights with the Labels. Local Contexts developed the Engagement, Disclosure,
+can reinforce rights with the Labels. 
+
+Further, Local Contexts developed the Engagement, Disclosure,
 and Collections Care Notices as a strategy for institutions, organizations, and researchers
 to disclose Indigenous interests and rights. The connection between Notices and Labels
 are represented by the creation of Local Contexts Projects. Future initiatives should
@@ -44,8 +46,9 @@ protocols, and permissions that connect people and places to knowledge and data.
 Together, the Labels and Notices function to advance aspirations for Indigenous data
 sovereignty and Indigenous innovation.
 
-## Label or Notice Verification
-When displaying Local Contexts Labels or Notices, the Label or Notice icon should
+## Label or Notice Display and Verification
+
+When displaying Local Contexts Labels or Notices in graphical formats, the Label or Notice icon should
 always be displayed prominently on public-facing websites, digital collection pages,
 publications, etc. Ideally the Notice and Label title, icon, and text should all be
 visible. If it is not possible to display all three, they must be easily accessible
@@ -54,7 +57,9 @@ via a modal or hyperlink. Review the Local Contexts
 [Engagement and Disclosure  Notices](https://localcontexts.org/wp-content/uploads/2023/08/Engagement-and-Disclosure-Notices-Usage-and-Style-Guide.pdf) usage guides for more
 information.
 
-The Project ID or the Project URL should always be displayed with the Labels or
+In the JSON-LD/schema.org representations of the Labels and Notices specified here, note the use of the `image` property. this property can be used to link code-based representations of the Labels and Notices to their icons and other media. Please review the code examples in the ODIS Book for examples and recommendations.
+
+The corresponding Local Contexts Project ID or the Project URL should always be displayed with the Labels or
 Notices as a way to link back to the original record. This offers a connection back
 to the original Project in case there are issues with the metadata such as outdated
 or conflicting information. By linking back to the Project page, the Label or Notice
