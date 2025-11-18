@@ -142,16 +142,16 @@ The key schema.org Type to use is [Action](https://schema.org/Action), which map
     "agent": {
         "@type":"Person",
         "familyName": "Dakkar",
-        "alternateName": "Captain Nemo"
+        "alternateName": "Captain Nemo",
         "honorificPrefix": "Prince"
     },
     "identifier": "nautilus-sampling-event:00252229",
     "actionStatus": "CompletedActionStatus",
-    "instrument": "Nautilus sampling array"
+    "instrument": "Nautilus sampling array",
     "object": "Intact Fulton's cowrie (Cypraea fultoni) shell",
     "result": "nautilus-sample:00713668",
     "startTime": "1848-11-17T14:42:10Z",
-    "endTime": "1848-11-17T14:46:13Z",
+    "endTime": "1848-11-17T14:46:13Z"
 }
 
 ```
