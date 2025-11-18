@@ -15,7 +15,7 @@ The most basic provenance chain is a very short one: it should tell you where so
 * Document "Guide to sampling sea salps" was published by Salps & Salps Publishing House.
 * Sensor "Temp-O-Matic Sea Surface Temperature" was manufactured by "O-Matic Inc".
 
-A minimal JSON-LD/schema.org representation of the Dataset example above would look like:
+A (very) minimal JSON-LD/schema.org representation of the Dataset example above would need a JSON record about the dataset, and another JSON record about the Action that created it:
 
 ```json
 {
@@ -23,19 +23,33 @@ A minimal JSON-LD/schema.org representation of the Dataset example above would l
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/T363.json",
     "name": "Dummy temperature dataset",
-    "identifier": "T363",
-     "potentialAction": {
-        "@type": "CreateAction",
-        "name": "Temperature measurement",
-        "actionStatus": "CompletedActionStatus",
-        "instrument": "Temp-O-Matic Sea Surface Temperature sensor"
-        }
+    "identifier": "T363"
 }
+
 ```
 
-This encodes that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some action using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument. 
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "CreateAction",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Creation-of-T363.json",
+    "name": "Temperature measurement M363",
+    "identifier": "M363",
+    "actionStatus": "CompletedActionStatus",
+    "instrument": "Temp-O-Matic Sea Surface Temperature sensor"
+    "result": {
+        "@type": "Dataset",
+        "@id": "https://registry.org/permanentUrlToThisJsonDoc/T363.json"
+     }
+}
+
+```
+
+These two JSON records express that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some completed action (with identifier M363) using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument. The [result](https://schema.org/result) property in the Action links the Dataset to the Action. The `@id` JSON keyword saves us some typing, as it would expand to everything in the Dataset record (assuming both records are available on the Web). 
 
 Let's try a minimal example for the document example. We could, as we did for dataset, talk about the CreateAction for the document, but since we're talking about the publisher as the "origin" of the document, we can be more compact:
 
@@ -86,20 +100,36 @@ These most basic chains are useful, but are rarely sufficient. Most people (or o
   * The weather or other key environmental conditions at the time of sampling
   * Any known sources of error or bias
 
+In the next sections, we'll demonstrate how to go about the above, nothing how this aligns with the well-known and widely used PROV model for provenance tracking.
 
 # The PROV model
+
+The [PROV Model](https://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/prov-dm-issue-450.html) is a widely 
 
 At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
 
 If there are semantics/properties that are not expressible in schema.org, then semantics/terms from the PROV-O ontology can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. speaking two languages in the same conversation unnecessarily).
 
-# Core ODIS patterns for expressing provenance
+The central PROV terms (known as [Starting Point terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-starting-point-terms)) are summarised in this diagram:
+<img width="1775" height="1067" alt="image" src="https://github.com/user-attachments/assets/84b520d7-3d82-4bf4-a1ef-862255d81be4" />
+
+PROV also has a set of [Expanded Terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-expanded-terms), which are also quite expressible in schema.org:
+<img width="1729" height="957" alt="image" src="https://github.com/user-attachments/assets/0069ebd3-febf-4f4a-a582-8adc3d2c7389" />
+
+
+
+
+# Core JSON-LD/schema.org patterns for expressing provenance
 
 As expressed in the PROV model, the core of a provenance chain comprise the things we're talking about and the things that happened to them. 
 
 ## The main Thing and its origin story
 
+Start with the beginning and end/current point 
+
 ## Events 
+
+Using additionType for Events
 
 For large-scale planned actions or for unplanned events (natural formation)
 
@@ -110,14 +140,19 @@ Relationship between Events and Actions by space-time overlap and sharing of par
 ## The Actions
 
 An Action can be many things: a sampling event, and observation event, a modelling run, an analytical routine, 
-
+Using additionalType for Actions
 
 
 ## Breaking down the Actions with HowTos
 
 Once you have an action like "sampling of deep-sea sediment"
+Using additionalTypes with Actions.
 
 SOSA actuation and changing parameters during an experiment
+
+## Linking to Datasets and other Creative Works
+
+Note on variable-by-variable provenance, need for variable by variable `@id`s 
 
 # Enriching a provenance chain with context
 
