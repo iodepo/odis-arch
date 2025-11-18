@@ -11,14 +11,13 @@ kernelspec:
 execution:
   allow_errors: true
 ---
-# Prov
+# Tracking provenance in ODIS
 
-## About
+## Introduction
 
-This is the start of some discussion on issues around prov tracking in OIH.
-This may take two paths.  One would be the prov tracking indexers might do
-and the other prov that providers would encode to provide specific prov
-the community requests.
+Provenance tells us where something came from, and what happened to it on the way. Accurately tracking provenance has always been essential to building trust in any object (e.g. Is the antique I have at home genuine? Has the evidence used in a court case been handled in a secure chain of custody?). Provenance in digital (meta)data management is no different, and the more clearly and completely your (meta)data's provenance is documented, the more third parties will be able to (re)use it and trust it.
+
+Here, we provide some guidance on how to encode provenance information in JSON-LD/schema.org, for discovery across the ODIS Federation and its users. 
 
 ## Gleaner Prov
 
