@@ -114,7 +114,10 @@ In the next sections, we'll demonstrate how to go about the above, noting how th
 
 The [PROV Model](https://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/prov-dm-issue-450.html) is a widely used model for encoding provenance information. We align the guidance here to this model as far as possible. At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
 
-If there are PROV-aligned semantics/properties that are not expressible in schema.org, then semantics/terms from the [PROV-O ontology](https://www.w3.org/TR/2013/REC-prov-o-20130430/) can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. like speaking two languages in the same conversation unnecessarily).
+> [!WARNING]
+> If there are PROV-aligned semantics/properties that are not expressible in schema.org, then semantics/terms from the [PROV-O ontology](https://www.w3.org/TR/2013/REC-prov-o-20130430/) can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. like speaking two languages in the same conversation unnecessarily).
+>
+> Many PROV properties/relations like wasRevisionOf can/should be expressed by dedicated Actions in schema.org (e.g. a Revision Action), where the action can be described fully rather than adding the PROV-O property as a less informative short-cut.
 
 The central PROV terms (known as [Starting Point terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-starting-point-terms)) are summarised in this diagram:
 <img width="1775" height="1067" alt="image" src="https://github.com/user-attachments/assets/84b520d7-3d82-4bf4-a1ef-862255d81be4" />
