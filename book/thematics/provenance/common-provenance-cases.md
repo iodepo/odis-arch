@@ -15,6 +15,67 @@ The most basic provenance chain is a very short one: it should tell you where so
 * Document "Guide to sampling sea salps" was published by Salps & Salps Publishing House.
 * Sensor "Temp-O-Matic Sea Surface Temperature" was manufactured by "O-Matic Inc".
 
+A minimal JSON-LD/schema.org representation of the Dataset example above would look like:
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Dataset",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "Dummy temperature dataset",
+    "identifier": "T363",
+     "potentialAction": {
+        "@type": "CreateAction",
+        "name": "Temperature measurement",
+        "actionStatus": "CompletedActionStatus",
+        "instrument": "Temp-O-Matic Sea Surface Temperature sensor"
+        }
+}
+```
+
+This encodes that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some action using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument. 
+
+Let's try a minimal example for the document example. We could, as we did for dataset, talk about the CreateAction for the document, but since we're talking about the publisher as the "origin" of the document, we can be more compact:
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Document",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "Guide to sampling sea salps",
+    "identifier": "978-1-56619-909-4",
+     "publisher": {
+        "@type": "Organization",
+        "name": "Salps & Salps Publishing House",
+        "address": "Salp street 32, Salpsville 42622, Republic of Salpia"
+        }
+}
+```
+
+Let's try a minimal example for the sensor, in which we use the schema.org [Product](https://schema.org/Product) type (useful for all manufactured products). As before, we could include a CreateAction and use properties from Action, but we can be more compact using the [manufacturer](https://schema.org/manufacturer) property:
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Product",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "name": "Temp-O-Matic Sea Surface Temperature",
+    "identifier": "978-1-56619-909-4",
+     "manufacturer": {
+        "@type": "Organization",
+        "name": "O-Matic Inc",
+        "address": "O-Matic alley 3-6, Matictown 4367, Duchy of O-Matica"
+        }
+}
+```
+
+
 These most basic chains are useful, but are rarely sufficient. Most people (or other agents) usually need more information to confidently understand how to approach and interact with the Thing you're interested in. A more useful basic provenance chain would include:
 * Information about the event (planned or unplanned) that created the Thing you're interested in, or something that it was derived from, including:
   * Who or what was involved in the event
@@ -42,6 +103,10 @@ As expressed in the PROV model, the core of a provenance chain comprise the thin
 
 For large-scale planned actions or for unplanned events (natural formation)
 
+recordedAt
+
+Relationship between Events and Actions by space-time overlap and sharing of participants 
+
 ## The Actions
 
 An Action can be many things: a sampling event, and observation event, a modelling run, an analytical routine, 
@@ -52,6 +117,7 @@ An Action can be many things: a sampling event, and observation event, a modelli
 
 Once you have an action like "sampling of deep-sea sediment"
 
+SOSA actuation and changing parameters during an experiment
 
 # Enriching a provenance chain with context
 
@@ -67,7 +133,7 @@ Some aligned to CDIF cases
 
 ## Sample Collection 
 
-Both material and statistical samples 
+Both material and statistical samples, including statistical sampling from an existing dataset as well as the creation of a sample dataset from measuring material things
 
 ## Sample processing / analysis
 
