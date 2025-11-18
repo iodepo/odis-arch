@@ -15,7 +15,9 @@ The most basic provenance chain is a very short one: it should tell you where so
 * Document "Guide to sampling sea salps" was published by Salps & Salps Publishing House.
 * Sensor "Temp-O-Matic Sea Surface Temperature" was manufactured by "O-Matic Inc".
 
-A (very) minimal JSON-LD/schema.org representation of the Dataset example above would need a JSON record about the dataset, and another JSON record about the Action that created it:
+A (very) minimal JSON-LD/schema.org representation of the Dataset example above would need a JSON record about the Dataset itself, and another JSON record about the Action that created it.
+
+Here's the minimal JSON-LD/schema.org about the Dataset:
 
 ```json
 {
@@ -30,6 +32,8 @@ A (very) minimal JSON-LD/schema.org representation of the Dataset example above 
 
 ```
 
+And here's the JSON-LD/schema.org about the Action that created it:
+
 ```json
 {
    "@context": {
@@ -41,7 +45,8 @@ A (very) minimal JSON-LD/schema.org representation of the Dataset example above 
     "identifier": "M363",
     "actionStatus": "CompletedActionStatus",
     "instrument": "Temp-O-Matic Sea Surface Temperature sensor"
-    "result": {
+    "object": "surface seawater",
+     "result": {
         "@type": "Dataset",
         "@id": "https://registry.org/permanentUrlToThisJsonDoc/T363.json"
      }
@@ -49,9 +54,11 @@ A (very) minimal JSON-LD/schema.org representation of the Dataset example above 
 
 ```
 
-These two JSON records express that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some completed action (with identifier M363) using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument. The [result](https://schema.org/result) property in the Action links the Dataset to the Action. The `@id` JSON keyword saves us some typing, as it would expand to everything in the Dataset record (assuming both records are available on the Web). 
+> **_NOTE:_** An Action can have many results (~ outputs) and objects (~ inputs/things the action was performed on), and can be more or less precisely scoped (e.g. we could split the measurement action above into the physical measurement and the data generation). The choice of how "granular" to be depends on each application scenario and resources available, but generally more detail is helpful for later reusability.
 
-Let's try a minimal example for the document example. We could, as we did for dataset, talk about the CreateAction for the document, but since we're talking about the publisher as the "origin" of the document, we can be more compact:
+These two JSON records express that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some completed action (with identifier M363) using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument on some seawater. The [result](https://schema.org/result) property in the Action links the Dataset to the Action. The `@id` JSON keyword saves us some typing, as it would expand to everything in the Dataset record (assuming both records are available on the Web). 
+
+Let's try a minimal example for a document. We could, as we did for dataset, talk about the CreateAction for the document, but since we're talking about the publisher as the "origin" of the document, we can be more compact:
 
 ```json
 {
@@ -90,7 +97,7 @@ Let's try a minimal example for the sensor, in which we use the schema.org [Prod
 ```
 
 
-These most basic chains are useful, but are rarely sufficient. Most people (or other agents) usually need more information to confidently understand how to approach and interact with the Thing you're interested in. A more useful basic provenance chain would include:
+These most basic chains are useful, **but are rarely sufficient**. Most people (or other agents) usually need more information to confidently understand how to approach and interact with the Thing you're interested in. A more useful basic provenance chain would include:
 * Information about the event (planned or unplanned) that created the Thing you're interested in, or something that it was derived from, including:
   * Who or what was involved in the event
   * What actions were performed that impacted or influenced the Thing or its precursor(s)
@@ -100,15 +107,13 @@ These most basic chains are useful, but are rarely sufficient. Most people (or o
   * The weather or other key environmental conditions at the time of sampling
   * Any known sources of error or bias
 
-In the next sections, we'll demonstrate how to go about the above, nothing how this aligns with the well-known and widely used PROV model for provenance tracking.
+In the next sections, we'll demonstrate how to go about the above, noting how this aligns with the well-known and widely used PROV model for provenance tracking.
 
 # The PROV model
 
-The [PROV Model](https://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/prov-dm-issue-450.html) is a widely 
+The [PROV Model](https://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/prov-dm-issue-450.html) is a widely used model for encoding provenance information. We align the guidance here to this model as far as possible. At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
 
-At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
-
-If there are semantics/properties that are not expressible in schema.org, then semantics/terms from the PROV-O ontology can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. speaking two languages in the same conversation unnecessarily).
+If there are PROV-aligned semantics/properties that are not expressible in schema.org, then semantics/terms from the [PROV-O ontology](https://www.w3.org/TR/2013/REC-prov-o-20130430/) can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. like speaking two languages in the same conversation unnecessarily).
 
 The central PROV terms (known as [Starting Point terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-starting-point-terms)) are summarised in this diagram:
 <img width="1775" height="1067" alt="image" src="https://github.com/user-attachments/assets/84b520d7-3d82-4bf4-a1ef-862255d81be4" />
@@ -116,8 +121,7 @@ The central PROV terms (known as [Starting Point terms](https://www.w3.org/TR/20
 PROV also has a set of [Expanded Terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-expanded-terms), which are also quite expressible in schema.org:
 <img width="1729" height="957" alt="image" src="https://github.com/user-attachments/assets/0069ebd3-febf-4f4a-a582-8adc3d2c7389" />
 
-
-
+While other extensions exist, we'll be focusing on aligning our schema.org to these sets of terms. A mapping between schema.org properties and Types to PROV terms is available in the [SSSOM](https://mapping-commons.github.io/sssom/) format, [here](https://github.com/iodepo/odis-arch/blob/master/resources/semantic-maps/schema-to-prov.sssom). 
 
 # Core JSON-LD/schema.org patterns for expressing provenance
 
