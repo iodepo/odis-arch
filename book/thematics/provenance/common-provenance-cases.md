@@ -133,15 +133,14 @@ As expressed in the Starting Point terms of PROV model, the core of a provenance
 
 The key schema.org Type to use is [Action](https://schema.org/Action), which maps tightly to PROV:Activity. As we see in the example below, we can use use an Action (or its sub-Types) to express the Starting Point PROV model:
 
-```
-
+```json
 {
    "@context": {
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
     "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
-    "name": "Collection of rare seashell",
+    "name": "Collection of rare seashell by the Nautilus sampling array",
     "agent": {
         "@type":"Person",
         "familyName": "Dakkar",
@@ -166,14 +165,13 @@ This minimal code expresses a schema:Action (prov:Activity) performed by a schem
 
 Next, let's add another action to describe processing that sampled seashell for archiving in the Nautilus' specimen collection:
 
-```
-
+```json
 {
    "@context": {
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252230.json",
     "name": "Incorporation of Nautilus Sample 00713668 into the Nautilus Specimen Archive",
     "agent": {
         "@type":"Person",
@@ -209,14 +207,13 @@ The JSON-LD/schema.org example above expresses that Captain Nemo, with the help 
 
 The examples above describe the provenance of physical objects. Let's create another Action to express how a Dataset was created from the entity, once it was sampled. As above, we'll use the `object` and `result` properties to connect Actions to each other, as well as their inputs and outputs:
 
-```
-
+```json
 {
    "@context": {
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
     "name": "3D scanning of nautilus-collection-item:00515643",
     "agent": {
         "@type":"Person",
@@ -242,13 +239,53 @@ The examples above describe the provenance of physical objects. Let's create ano
 This record states (among other things) that 3D Scanning Action was performed upon the Collection Item generated in the previous Action. The result of that Action is a Dataset with a unique and persistent identifier. As we saw in the first set of examples, one can have a separate JSON record for the Dataset, rather than embedding it in an Action record. In that case, it would need an `@id` to identify it such that it can be found and correctly placed as the value of `result`.  
 
 
-## The main Thing and its origin story
+## Where to start a provenance chain
 
-Start with the beginning and end/current point 
+A common concern is where to start a provenance chain. There's no hard and fast answer to this, but - generally - it is wise to capture actions and events (see below) a few steps before your main entity of interest was created.
+
+In the examples above, let's say our main entity of interest was the Dataset (nautilus-3D-scan:02545642). Capturing the sampling action and the archiving actions that preceded the scanning action would be very helpful in understanding where the 3D scan dataset came from and what the data is about, along with providing information to explain any bias/errors such as artifacts introduced by the sealing and cleaning instruments used during archiving.
+
+Thus, do try to start provenance chains a few steps before data or information assets are created, to help others understand what that data or information is actually representing.
 
 ## Events 
 
-Using additionType for Events
+Sometimes, it wasn't a planned Action with an agent (i.e. sometihng with agency, will, or volition) that led to the creation of a prov:Entity or schema:Thing. Instead, a natural or non-anthropogenic event like a cyclone or tsunami could explain the provenance of some Thing that a Dataset describes. 
+
+Schema.org has an [Event](https://schema.org/Event) Type that can be useful here, despite its original purpose to describe things like rock concerts or art exhibitions. Let's set up an example to describe the provenance of a Dataset describing the damage done by a tsunami.
+
+First, we describe the tsunami as an event:
+
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Action",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "name": "3D scanning of nautilus-collection-item:00515643",
+    "agent": {
+        "@type":"Person",
+        "givenName": "Pierre",
+        "familyName": "Aronnax",
+        "honorificPrefix": "Professor"
+    },
+    "identifier": "nautilus-scanning-event:02552891",
+    "actionStatus": "CompletedActionStatus",
+    "instrument": "Nautilus 3D scanning chamber",
+    "object": "nautilus-collection-item:00515643",
+    "result": {
+        "@type": "Dataset",
+        "identifer": "nautilus-3D-scan:02545642",
+        "name": "3D Scane of Nautilus Collection Item 00515643"
+    },
+    "startTime": "1848-11-17T15:39:04Z",
+    "endTime": "1848-11-17T15:50:19Z"
+}
+
+
+```
+
+
 
 For large-scale planned actions or for unplanned events (natural formation)
 
@@ -277,7 +314,13 @@ Note on variable-by-variable provenance, need for variable by variable `@id`s
 
 ## Using additionalTypes
 
+For Actions, Events, Observation, Sampling
+
+should be valid for an rdf:Type, like an owl:Class but not a skos:Concept
+
 ## Filling out properties
+
+Use instrument example
 
 ## Using additionalProperties
 
