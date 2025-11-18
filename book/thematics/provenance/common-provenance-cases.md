@@ -28,7 +28,7 @@ These most basic chains are useful, but are rarely sufficient. Most people (or o
 
 # The PROV model
 
-At the time of writing, the 2013 specification of [PROV Model]([url](http://www.w3.org/TR/2013/REC-prov-dm-20130430/)) is the most current. A permalink to the latest version is available [here]([url](http://www.w3.org/TR/prov-dm/)).
+At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
 
 If there are semantics/properties that are not expressible in schema.org, then semantics/terms from the PROV-O ontology can be used. **However, this should be done only when absolutely necessary**, as this introduces another semantic context and can reduce interoperability (i.e. speaking two languages in the same conversation unnecessarily).
 
