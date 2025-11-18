@@ -38,6 +38,10 @@ As expressed in the PROV model, the core of a provenance chain comprise the thin
 
 ## The main Thing and its origin story
 
+## Events 
+
+For large-scale planned actions or for unplanned events (natural formation)
+
 ## The Actions
 
 An Action can be many things: a sampling event, and observation event, a modelling run, an analytical routine, 
