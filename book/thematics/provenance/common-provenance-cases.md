@@ -412,7 +412,7 @@ One could be even more explicit, using a "sub-Event" and the `recordedIn` proper
 ```
 This rendition links the identifiers of the dataset to the Events, strengthening the links between these records with unambiguous context.
 
-
+Unfortunately, schema.org doesn't seem to have a compact way of linking Actions to Events (e.g. like an "embeddedIn" or a process equivalent of "partOf"). Please see the "Using additional properties" section, below, for some possible approaches.
 
 
 # Enriching a provenance chain with context
@@ -479,6 +479,8 @@ Use instrument example
 ## Using additionalProperties
 
 The core chain and the decorations 
+
+Add RO relations for process-centric causal semantics.
 
 Each domain and discipline will have different requirements, but the general principle is that the metadata contextualising the provenance chain should allow understanding and reproducibility.
 
