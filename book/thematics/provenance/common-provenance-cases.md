@@ -333,8 +333,8 @@ Occasionally, one would want to explicitly declare the roles of things like agen
       "familyName": "Aronnax",
       "honorificPrefix": "Professor"
     },
-    "startDate": "1848-08-01,
-    "endDate": "1849-04-25,
+    "startDate": "1979",
+    "endDate": "1992",
     "roleName": "Nautilus guest scientist"
   },
   "identifier": "nautilus-scanning-event:02552891",
@@ -343,11 +343,11 @@ Occasionally, one would want to explicitly declare the roles of things like agen
     "@type": "Role",
     "instrument": {
       "@type": "Product",
-      "name": "Nautilus 3D scanning chamber"
+      "name": "Flamecraft X3266"
     },
     "startDate": "1848-11-17T15:39:04Z",
     "endDate": "1848-11-17T15:50:19Z",
-    "roleName": "structured light scanning system"
+    "roleName": "temperature sensor"
   },
   "object": "nautilus-collection-item:00515643",
   "result": {
