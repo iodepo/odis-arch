@@ -153,7 +153,7 @@ The key schema.org Type to use is [Action](https://schema.org/Action), which map
     "identifier": "nautilus-sampling-event:00252229",
     "actionStatus": "CompletedActionStatus",
     "location": {
-        "@type": "Place,
+        "@type": "Place",
         "name": "Pollux Tablemount",
         "latitude": "25.75",
         "longitude": "147.8333"
@@ -248,6 +248,103 @@ The examples above describe the provenance of physical objects. Let's create ano
 
 This record states (among other things) that 3D Scanning Action was performed upon the Collection Item generated in the previous Action. The result of that Action is a Dataset with a unique and persistent identifier, which is about the Collection Item. As we saw in the first set of examples, one can have a separate JSON record for the Dataset, rather than embedding it in an Action record. In that case, it would need an `@id` to identify it such that it can be found and correctly placed as the value of `result`.  
 
+## Breaking down the Actions with HowTos
+
+Ideally, a provenance record wouldn't just note that an Action occurred, but also how it occurred (i.e. what exact steps were taken to perform that Action). This information is very valuable for reproducibility and clear understanding of how things like datasets or samples came to be in the state they are.
+
+The schema:`Action` Type offers a property called `actionProcess` where one can add a `HowTo` Type to log the steps taken to perform an Action. As with any Type, one can host these `HowTo`s and even their `HowToStep`s as stand-alone records with their own identifiers and `@id` values, to make reuse easier. To keep things more readable here, we'll skip this step. 
+
+Let's examine a case expanding the 3D-scanning Action, above. Look for the `actionProcess` value, and :
+
+> [!NOTE]
+> Arrays in JSON - like the array of steps below - preserve their order, and the position of an object in an array is its position in that order.
+
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Action",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "name": "3D scanning of nautilus-collection-item:00515643",
+    "agent": {
+        "@type":"Person",
+        "givenName": "Pierre",
+        "familyName": "Aronnax",
+        "honorificPrefix": "Professor"
+    },
+    "identifier": "nautilus-scanning-event:02552891",
+    "actionStatus": "CompletedActionStatus",
+    "instrument": "Nautilus 3D scanning chamber",
+    "object": "nautilus-collection-item:00515643",
+    "result": {
+        "@type": "Dataset",
+        "identifier": "nautilus-3D-scan:02545642",
+        "name": "3D Scan of Nautilus Collection Item 00515643",
+        "about": "nautilus-collection-item:00515643"
+    },
+    "startTime": "1848-11-17T15:39:04Z",
+    "endTime": "1848-11-17T15:50:19Z".
+    "actionProcess" {
+        "@type": "HowTo",
+        "name": "How to 3D scan a seashell with the Nautilus 3D scanning chamber",
+        "estimatedCost": "20 Pounds Sterling and 40 shillings",
+        "performTime": "T2H30M",
+        "prepTime": "T30M",
+        "supply": [
+            "ambergris",
+            "blank Amethyst data slate"
+        ],
+        "tool": [
+            "",
+            "",
+            "",
+            ""
+        ]
+        "yield": "Amethyst data slate with 3D scan data",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Initialisation of the Nautilus 3D scanning chamber",
+                "description": "Add three grains of ambergris to the device's brass thurible"
+            },
+             {
+                "@type": "HowToStep",
+                "name": "Sample loading",
+                "description": "Place the object to be scanned in the copper casket ornamented with krakens at the centre of the chamber"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Shelter or depart",
+                "description": "Shelter behind at least 4 inches of cinnabar-coated lead during the operation of the machine. Alternatively, leave the scanning laboratory entirely - the scanning requires no supervision."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Scanning",
+                "description": "The chamber will scan the sample by eldritch means. Scanning is complete when the copper casket ornamented with Krakens opens."
+            },
+                        {
+                "@type": "HowToStep",
+                "name": "Sample retrieval",
+                "description": "Retrieve the sample from the copper casket ornamented with Krakens opens. Return to secure archiving or storage as needed."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Data slate retrieval",
+                "description": "The chamber will scan the sample by eldritch means. Scanning is complete when the copper casket ornamented with Krakens opens."
+            },
+    
+            
+        ],
+    }
+}
+
+```
+
+
+
+SOSA actuation and changing parameters during an experiment
+
 
 ## Where to start a provenance chain
 
@@ -285,7 +382,7 @@ To help express these, schema.org offers an [Event](https://schema.org/Event) Ty
 
 Note that the start date and end date of this Event contain the sampling event, and the location of the die off and the sampling event are the same. This allows matching these records with a spatial or temporal query, and the contextualisation of the Action with the Event.
 
-If one could be even more explicit, using a "sub-Event":
+One could be even more explicit, using a "sub-Event" and the `recordedIn` property to state that the 3D scan dataset records a part of this Event where the biomass of an individual Cypraea fultoni organism was deposited on the seafloor:
 
 ```json
 {
@@ -307,35 +404,16 @@ If one could be even more explicit, using a "sub-Event":
     "subEvent": {
         "@type": "Event",
         "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259998.json",
-        "name": "Death of organism obtained as nautilus-sample:00713668",
+        "name": "Posthumous deposition of biomass of Cypraea fultoni individual obtained as nautilus-sample:00713668",
         "identifier": "ecosystem-event:02265544345",
-        "": ""
+        "recordedIn": "nautilus-3D-scan:02545642"
     }
 }
 ```
-
-For large-scale planned actions or for unplanned events (natural formation)
-
-recordedAt
-
-Relationship between Events and Actions by space-time overlap and sharing of participants 
-
-## The Actions
-
-An Action can be many things: a sampling event, and observation event, a modelling run, an analytical routine, 
-Using additionalType for Actions
+This rendition links the identifiers of the dataset to the Events, strengthening the links between these records with unambiguous context.
 
 
-## Breaking down the Actions with HowTos
 
-Once you have an action like "sampling of deep-sea sediment"
-Using additionalTypes with Actions.
-
-SOSA actuation and changing parameters during an experiment
-
-## Linking to Datasets and other Creative Works
-
-Note on variable-by-variable provenance, need for variable by variable `@id`s 
 
 # Enriching a provenance chain with context
 
