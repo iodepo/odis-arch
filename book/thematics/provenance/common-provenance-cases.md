@@ -249,7 +249,7 @@ Events or processes that _preceded_ the first intentional event are also importa
 
 ## Events 
 
-Sometimes, unplanned Actions without an agent (i.e. sometihng with agency, will, or volition) that led to the creation of a prov:Entity or schema:Thing. Instead, a natural or non-anthropogenic event like a cyclone or tsunami could explain the provenance of some Thing that a Dataset describes. 
+Sometimes, unplanned processes that don't or may not have an agent (i.e. sometihng with agency, will, or volition) can affect the provenance of a prov:Entity or schema:Thing. For example, consider the impacts of a natural or non-anthropogenic event like a cyclone or tsunami, equipment malfunctioning, or the natural degradation of a sample.
 
 Schema.org has an [Event](https://schema.org/Event) Type that can be useful here, despite its original purpose to describe things like rock concerts or art exhibitions. Let's set up an example to describe the provenance of a Dataset describing the damage done by a tsunami.
 
