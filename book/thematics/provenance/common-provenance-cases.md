@@ -284,8 +284,8 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
         "about": "nautilus-collection-item:00515643"
     },
     "startTime": "1848-11-17T15:39:04Z",
-    "endTime": "1848-11-17T15:50:19Z".
-    "actionProcess" {
+    "endTime": "1848-11-17T15:50:19Z",
+    "actionProcess": {
         "@type": "HowTo",
         "name": "How to 3D scan a seashell with the Nautilus 3D scanning chamber",
         "estimatedCost": "20 Pounds Sterling and 40 shillings",
@@ -296,11 +296,11 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
             "blank Amethyst data slate"
         ],
         "tool": [
-            "",
-            "",
-            "",
-            ""
-        ]
+            "asbestos gloves",
+            "kelp-leather apron",
+            "topaz protective goggles",
+            "soda-lime gas mask"
+        ],
         "yield": "Amethyst data slate with 3D scan data",
         "step": [
             {
@@ -331,14 +331,12 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
             {
                 "@type": "HowToStep",
                 "name": "Data slate retrieval",
-                "description": "The chamber will scan the sample by eldritch means. Scanning is complete when the copper casket ornamented with Krakens opens."
-            },
-    
+                "description": "Approach the alcove ornamented with hippocampi in rampant pose. An amethyst data slate will emerge. Wait for it to cool and retrieve it. Your 3D scan is examinable with the Nautilus holographicum."
+            }
             
-        ],
+        ]
     }
 }
-
 ```
 
 
