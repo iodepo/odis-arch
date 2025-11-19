@@ -112,6 +112,10 @@ In the next sections, we'll demonstrate how to go about the above, noting how th
 
 # The PROV model
 
+> [!NOTE]
+> For developers and digital practitioners, a mapping between schema.org properties and Types to PROV terms is available in the [SSSOM](https://mapping-commons.github.io/sssom/) format, [here](https://github.com/iodepo/odis-arch/blob/master/resources/semantic-maps/schema-to-prov.sssom). 
+
+
 The [PROV Model](https://dvcs.w3.org/hg/prov/raw-file/default/model/working-copy/prov-dm-issue-450.html) is a widely used model for encoding provenance information. We align the guidance here to this model as far as possible. At the time of writing, the 2013 specification of [PROV Model](http://www.w3.org/TR/2013/REC-prov-dm-20130430/) is the most current. A permalink to the latest version is available [here](http://www.w3.org/TR/prov-dm/).
 
 > [!WARNING]
@@ -125,8 +129,7 @@ The central PROV terms (known as [Starting Point terms](https://www.w3.org/TR/20
 PROV also has a set of [Expanded Terms](https://www.w3.org/TR/2013/REC-prov-o-20130430/#description-expanded-terms), which are also quite expressible in schema.org:
 <img width="1729" height="957" alt="image" src="https://github.com/user-attachments/assets/0069ebd3-febf-4f4a-a582-8adc3d2c7389" />
 
-While other extensions exist, we'll be focusing on aligning our schema.org to these sets of terms. A mapping between schema.org properties and Types to PROV terms is available in the [SSSOM](https://mapping-commons.github.io/sssom/) format, [here](https://github.com/iodepo/odis-arch/blob/master/resources/semantic-maps/schema-to-prov.sssom). 
-
+While other extensions exist, we'll be focusing on aligning our schema.org to these sets of terms. 
 # Core JSON-LD/schema.org patterns for expressing provenance
 
 As expressed in the Starting Point terms of PROV model, the core of a provenance chain comprise the things we're talking about (Entities), the things that happened to them (Activities), and who or what performed these Activities (Agents). 
@@ -149,6 +152,12 @@ The key schema.org Type to use is [Action](https://schema.org/Action), which map
     },
     "identifier": "nautilus-sampling-event:00252229",
     "actionStatus": "CompletedActionStatus",
+    "location": {
+        "@type": "Place,
+        "name": "Pollux Tablemount",
+        "latitude": "25.75",
+        "longitude": "147.8333"
+    },
     "instrument": "Nautilus sampling array",
     "object": "Intact Fulton's cowrie (Cypraea fultoni) shell",
     "result": "nautilus-sample:00713668",
@@ -228,7 +237,8 @@ The examples above describe the provenance of physical objects. Let's create ano
     "result": {
         "@type": "Dataset",
         "identifier": "nautilus-3D-scan:02545642",
-        "name": "3D Scane of Nautilus Collection Item 00515643"
+        "name": "3D Scan of Nautilus Collection Item 00515643",
+        "about": "nautilus-collection-item:00515643"
     },
     "startTime": "1848-11-17T15:39:04Z",
     "endTime": "1848-11-17T15:50:19Z"
@@ -236,56 +246,73 @@ The examples above describe the provenance of physical objects. Let's create ano
 
 ```
 
-This record states (among other things) that 3D Scanning Action was performed upon the Collection Item generated in the previous Action. The result of that Action is a Dataset with a unique and persistent identifier. As we saw in the first set of examples, one can have a separate JSON record for the Dataset, rather than embedding it in an Action record. In that case, it would need an `@id` to identify it such that it can be found and correctly placed as the value of `result`.  
+This record states (among other things) that 3D Scanning Action was performed upon the Collection Item generated in the previous Action. The result of that Action is a Dataset with a unique and persistent identifier, which is about the Collection Item. As we saw in the first set of examples, one can have a separate JSON record for the Dataset, rather than embedding it in an Action record. In that case, it would need an `@id` to identify it such that it can be found and correctly placed as the value of `result`.  
 
 
 ## Where to start a provenance chain
 
-A common concern is where to _start_ a provenance chain. There's no hard and fast answer to this, but - generally - one would start the chain where the first intentional action was taken by an agent upon some entity/Thing that either is the Thing one is interested in, or was an important precursor of that Thing.
+A common concern is where to _start_ a provenance chain. There's no hard and fast answer to this, but - generally - one would start the main provenance chain where the first intentional action was taken by an agent upon some entity/Thing that either is the Thing one is interested in, or was an important precursor of that Thing.
 
 In the examples above, let's say our main entity of interest was the Dataset (nautilus-3D-scan:02545642). Capturing the sampling action and the archiving actions that preceded the scanning action would be very helpful in understanding where the 3D scan dataset came from and what the data is about, along with providing information to explain any bias/errors such as artifacts introduced by the sealing and cleaning instruments used during archiving. Thus, the provenance chain of the dataset would start with the sampling of the shell the dataset is about.
 
-Events or processes that _preceded_ the first intentional event are also important to contextualise the intentional actions along a provenance chain. For more on this, see the section, below, on "Enriching a provenance chain with context".
+Events or processes that _preceded_ the first intentional event are also important to contextualise the intentional actions along a provenance chain. Adding a few of these to a provenance chain can be very important to help communicate _why_ the first intentional action was taken in the first place. For more on this, see the section, below, on "Enriching a provenance chain with context".
 
 ## Events 
 
-Sometimes, unplanned processes that don't or may not have an agent (i.e. sometihng with agency, will, or volition) can affect the provenance of a prov:Entity or schema:Thing. For example, consider the impacts of a natural or non-anthropogenic event like a cyclone or tsunami, equipment malfunctioning, or the natural degradation of a sample.
+Sometimes, unplanned processes that don't or may not have an agent (i.e. sometihng with agency, will, or volition) can affect the provenance of a prov:Entity or schema:Thing. For example, consider the impact of a natural or unplanned event like a cyclone or tsunami, equipment malfunctioning, or the degradation of a sample over time.
 
-Schema.org has an [Event](https://schema.org/Event) Type that can be useful here, despite its original purpose to describe things like rock concerts or art exhibitions. Let's set up an example to describe the provenance of a Dataset describing the damage done by a tsunami.
-
-First, we describe the tsunami as an event:
+To help express these, schema.org offers an [Event](https://schema.org/Event) Type. Despite its original purpose to describe things like rock concerts or art exhibitions, this type can be used along a chain of Actions to record important occurrences that influenced the Thing you're interested in. Let's set up a basic example to describe an Event that made Captain Nemo decide to sample that seashell:
 
 ```json
 {
    "@context": {
         "@vocab": "https://schema.org/"
     },
-    "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
-    "name": "3D scanning of nautilus-collection-item:00515643",
-    "agent": {
-        "@type":"Person",
-        "givenName": "Pierre",
-        "familyName": "Aronnax",
-        "honorificPrefix": "Professor"
+    "@type": "Event",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "name": "Mass gathering and die off of Cypraea fultoni population",
+    "identifier": "ecosystem-event:02265544332",
+    "location": {
+        "@type": "Place",
+        "name": "Pollux Tablemount",
+        "latitude": "25.75",
+        "longitude": "147.8333"
     },
-    "identifier": "nautilus-scanning-event:02552891",
-    "actionStatus": "CompletedActionStatus",
-    "instrument": "Nautilus 3D scanning chamber",
-    "object": "nautilus-collection-item:00515643",
-    "result": {
-        "@type": "Dataset",
-        "identifier": "nautilus-3D-scan:02545642",
-        "name": "3D Scane of Nautilus Collection Item 00515643"
-    },
-    "startTime": "1848-11-17T15:39:04Z",
-    "endTime": "1848-11-17T15:50:19Z"
+    "startDate": "1848-09-17",
+    "endDate": "1848-18-17"
 }
-
-
 ```
 
+Note that the start date and end date of this Event contain the sampling event, and the location of the die off and the sampling event are the same. This allows matching these records with a spatial or temporal query, and the contextualisation of the Action with the Event.
 
+If one could be even more explicit, using a "sub-Event":
+
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Event",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "name": "Mass gathering and die off of Cypraea fultoni population",
+    "identifier": "ecosystem-event:02265544332",
+    "location": {
+        "@type": "Place",
+        "name": "Pollux Tablemount",
+        "latitude": "25.75",
+        "longitude": "147.8333"
+    },
+    "startDate": "1848-09-17",
+    "endDate": "1848-18-17",
+    "subEvent": {
+        "@type": "Event",
+        "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259998.json",
+        "name": "Death of organism obtained as nautilus-sample:00713668",
+        "identifier": "ecosystem-event:02265544345",
+        "": ""
+    }
+}
+```
 
 For large-scale planned actions or for unplanned events (natural formation)
 
