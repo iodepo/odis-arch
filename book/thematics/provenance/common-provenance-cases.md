@@ -227,7 +227,7 @@ The examples above describe the provenance of physical objects. Let's create ano
     "object": "nautilus-collection-item:00515643",
     "result": {
         "@type": "Dataset",
-        "identifer": "nautilus-3D-scan:02545642",
+        "identifier": "nautilus-3D-scan:02545642",
         "name": "3D Scane of Nautilus Collection Item 00515643"
     },
     "startTime": "1848-11-17T15:39:04Z",
@@ -241,15 +241,15 @@ This record states (among other things) that 3D Scanning Action was performed up
 
 ## Where to start a provenance chain
 
-A common concern is where to start a provenance chain. There's no hard and fast answer to this, but - generally - it is wise to capture actions and events (see below) a few steps before your main entity of interest was created.
+A common concern is where to _start_ a provenance chain. There's no hard and fast answer to this, but - generally - one would start the chain where the first intentional action was taken by an agent upon some entity/Thing that either is the Thing one is interested in, or was an important precursor of that Thing.
 
-In the examples above, let's say our main entity of interest was the Dataset (nautilus-3D-scan:02545642). Capturing the sampling action and the archiving actions that preceded the scanning action would be very helpful in understanding where the 3D scan dataset came from and what the data is about, along with providing information to explain any bias/errors such as artifacts introduced by the sealing and cleaning instruments used during archiving.
+In the examples above, let's say our main entity of interest was the Dataset (nautilus-3D-scan:02545642). Capturing the sampling action and the archiving actions that preceded the scanning action would be very helpful in understanding where the 3D scan dataset came from and what the data is about, along with providing information to explain any bias/errors such as artifacts introduced by the sealing and cleaning instruments used during archiving. Thus, the provenance chain of the dataset would start with the sampling of the shell the dataset is about.
 
-Thus, do try to start provenance chains a few steps before data or information assets are created, to help others understand what that data or information is actually representing.
+Events or processes that _preceded_ the first intentional event are also important to contextualise the intentional actions along a provenance chain. For more on this, see the section, below, on "Enriching a provenance chain with context".
 
 ## Events 
 
-Sometimes, it wasn't a planned Action with an agent (i.e. sometihng with agency, will, or volition) that led to the creation of a prov:Entity or schema:Thing. Instead, a natural or non-anthropogenic event like a cyclone or tsunami could explain the provenance of some Thing that a Dataset describes. 
+Sometimes, unplanned Actions without an agent (i.e. sometihng with agency, will, or volition) that led to the creation of a prov:Entity or schema:Thing. Instead, a natural or non-anthropogenic event like a cyclone or tsunami could explain the provenance of some Thing that a Dataset describes. 
 
 Schema.org has an [Event](https://schema.org/Event) Type that can be useful here, despite its original purpose to describe things like rock concerts or art exhibitions. Let's set up an example to describe the provenance of a Dataset describing the damage done by a tsunami.
 
@@ -275,7 +275,7 @@ First, we describe the tsunami as an event:
     "object": "nautilus-collection-item:00515643",
     "result": {
         "@type": "Dataset",
-        "identifer": "nautilus-3D-scan:02545642",
+        "identifier": "nautilus-3D-scan:02545642",
         "name": "3D Scane of Nautilus Collection Item 00515643"
     },
     "startTime": "1848-11-17T15:39:04Z",
@@ -311,6 +311,55 @@ SOSA actuation and changing parameters during an experiment
 Note on variable-by-variable provenance, need for variable by variable `@id`s 
 
 # Enriching a provenance chain with context
+
+# Adding Roles
+
+Occasionally, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like `agent`:
+
+```json
+
+{
+  "@context": {
+    "@vocab": "https://schema.org/"
+  },
+  "@type": "Action",
+  "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+  "name": "3D scanning of nautilus-collection-item:00515643",
+  "agent": {
+    "@type": "Role",
+    "agent": {
+      "@type": "Person",
+      "givenName": "Pierre",
+      "familyName": "Aronnax",
+      "honorificPrefix": "Professor"
+    },
+    "startDate": "1848-08-01,
+    "endDate": "1849-04-25,
+    "roleName": "Nautilus guest scientist"
+  },
+  "identifier": "nautilus-scanning-event:02552891",
+  "actionStatus": "CompletedActionStatus",
+  "instrument": {
+    "@type": "Role",
+    "instrument": {
+      "@type": "Product",
+      "name": "Nautilus 3D scanning chamber"
+    },
+    "startDate": "1848-11-17T15:39:04Z",
+    "endDate": "1848-11-17T15:50:19Z",
+    "roleName": "structured light scanning system"
+  },
+  "object": "nautilus-collection-item:00515643",
+  "result": {
+    "@type": "Dataset",
+    "identifier": "nautilus-3D-scan:02545642",
+    "name": "3D Scane of Nautilus Collection Item 00515643"
+  },
+  "startTime": "1848-11-17T15:39:04Z",
+  "endTime": "1848-11-17T15:50:19Z"
+}
+```
+
 
 ## Using additionalTypes
 
@@ -399,7 +448,7 @@ Instrument
             },
         "model": {
             "@type": "ProductModel",
-            "identifer": "http://vocab.nerc.ac.uk/collection/L22/current/TOOL0022/",
+            "identifier": "http://vocab.nerc.ac.uk/collection/L22/current/TOOL0022/",
             "name": "Sea-Bird SBE 37 MicroCat IM-CT with optional pressure (submersible) CTD sensor series"
         },
             "serialNumber": "SN-998877",
