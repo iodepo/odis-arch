@@ -167,7 +167,7 @@ The key schema.org Type to use is [Action](https://schema.org/Action), which map
 
 ```
 
-This minimal code expresses a schema:Action (prov:Activity) performed by a schema:agent (prov:Agent) which used (prov:used) the "Nautilus sampling array" to collect an intact Fulton's cowrie shell (schema:object), with a schema:result of a sample in the Nautilus extensive collection (i.e. the result prov:wasGeneratedBy the Action). The start and end time of the action are also recorded.
+This minimal code expresses a schema:Action (prov:Activity) performed by a schema:agent (prov:Agent) which used (prov:used) the "Nautilus sampling array" to collect an intact Fulton's cowrie shell (schema:object) at a specific place (prov:atLocation/Location) and time (prov:generatedAtTime), with a schema:result of a sample in the Nautilus extensive collection (i.e. the result prov:wasGeneratedBy the Action). The start and end time of the action are also recorded.
 
 > [!NOTE]
 > Naturally, one can and should use schema.org Types as values for each property (like `instrument`, `object` and `result`) to add more metadata or link to full records of these entities. The examples here are very terse.
@@ -470,14 +470,34 @@ The basic provenance chains we've seen provide the core "trace" of a Thing's pro
 
 We've already "decorated" the provenance chains described above with more information (e.g. information on agents), but there's likely much more to say. Below, we'll provide some general suggestions on how to enrich your provenance chain.
 
+
+
 ## Filling out properties
 
-The easiest way to add rich context to 
+The easiest way to add rich context to a provenance chain in schema.org is simply to fill in as many properties on the Types you use. Ideally, those properties will be filled in by dedicated objects (i.e. Types, like `@Person` above) rather than just text, so more structured metadata is available to improve discovery, description, and (re)use.
+
+For example:
+
+```json
+  "agent": {
+        "@type":"Person",
+        "familyName": "Dakkar",
+        "alternateName": "Captain Nemo",
+        "honorificPrefix": "Prince"
+    }
+```
+
+is much better than:
+
+
+```json
+  "agent": "Captain Nemo"
+```
 
 
 ## Adding Roles
 
-Occasionally, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like `agent`:
+Often, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like `agent`:
 
 ```json
 
@@ -506,7 +526,7 @@ Occasionally, one would want to explicitly declare the roles of things like agen
     "@type": "Role",
     "instrument": {
       "@type": "Product",
-      "name": "Flamecraft X3266"
+      "name": "Nautilus 3D scanning chamber"
     },
     "startDate": "1848-11-17T15:39:04Z",
     "endDate": "1848-11-17T15:50:19Z",
@@ -523,6 +543,74 @@ Occasionally, one would want to explicitly declare the roles of things like agen
 }
 ```
 
+If one would like to be even more FAIR and machine-actionable, you could use a `DefinedTerm` from an ontology to further qualify the categories of instruments or occupations of people when the metadata was recorded. Here's an example using the Occupation Ontology from the OBO Foundry and Library to describe the job title of Pierre Aronnax, and a term from a fictional ontology for the category of the instrument used:
+
+```json
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Action",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "name": "3D scanning of nautilus-collection-item:00515643",
+    "agent": {
+        "@type": "Role",
+        "agent": {
+            "@type": "Person",
+            "givenName": "Pierre",
+            "familyName": "Aronnax",
+            "honorificPrefix": "Professor",
+            "jobTitle": [
+                {
+                    "@type": "DefinedTerm",
+                    "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
+                    "termCode": "OCCO:19200000",
+                    "url": "http://purl.obolibrary.org/obo/OCCO_19200000",
+                    "name": "physical scientist"
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
+                    "termCode": "OCCO:19100000",
+                    "url": "http://purl.obolibrary.org/obo/OCCO_19100000",
+                    "name": "life scientist"
+                }
+            ]
+        },
+        "startDate": "1848-01",
+        "endDate": "1849-12",
+        "roleName": "Nautilus guest scientist"
+    },
+    "identifier": "nautilus-scanning-event:02552891",
+    "actionStatus": "CompletedActionStatus",
+    "instrument": {
+        "@type": "Role",
+        "instrument": {
+            "@type": "Product",
+            "name": "Nautilus 3D scanning chamber",
+            "category": {
+                "@type": "DefinedTerm",
+                "inDefinedTermSet": "http://nautilus-ontologies.org/nautilusMachines.owl",
+                "termCode": "NautilusOnt:2929260",
+                "url": "http://purl.obolibrary.org/obo/NautilusOnt:2929260",
+                "name": "Three-dimensional scanning apparatus"
+            }
+        },
+        "startDate": "1848-11-17T15:39:04Z",
+        "endDate": "1848-11-17T15:50:19Z",
+        "roleName": "temperature sensor"
+    },
+    "object": "nautilus-collection-item:00515643",
+    "result": {
+        "@type": "Dataset",
+        "identifier": "nautilus-3D-scan:02545642",
+        "name": "3D Scan of Nautilus Collection Item 00515643"
+    },
+    "startTime": "1848-11-17T15:39:04Z",
+    "endTime": "1848-11-17T15:50:19Z"
+}
+
+```
 
 ## Using additionalTypes
 
@@ -542,7 +630,6 @@ Add RO relations for process-centric causal semantics.
 wasGeneratedBy, `output of` `input of` 
 
 Each domain and discipline will have different requirements, but the general principle is that the metadata contextualising the provenance chain should allow understanding and reproducibility.
-
 
 
 # Adapting Actions 
@@ -576,6 +663,10 @@ potentialAction
 
 
 ## Claims / assertions
+
+prov:invalidatedAtTime / wasInvalidatedBy
+
+
 ## Quality and quality control
 of data or other assets
 
@@ -632,10 +723,5 @@ Instrument
             ]
             }
 ```
-
-
-## Notes on Agents
-
-Human, software, instrument / machine agent and their roles 
 
  
