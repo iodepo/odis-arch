@@ -315,6 +315,11 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
             },
             {
                 "@type": "HowToStep",
+                "name": "Configuration of the scanning process",
+                "description": "Approach the luminous display panel bordered by red coral. Speak clearly and deferentially to explain how the scanning should proceed. The Nautilus difference engine will configure the chamber to account for your preferences. Should there be uncertainties, the difference engine shall ask you for further clarification."
+            },
+            {
+                "@type": "HowToStep",
                 "name": "Shelter or depart",
                 "description": "Shelter behind at least 4 inches of cinnabar-coated lead during the operation of the machine. Alternatively, leave the scanning laboratory entirely - the scanning requires no supervision."
             },
@@ -340,19 +345,22 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
 ```
 
 
+## Where to start and end a provenance chain
 
-SOSA actuation and changing parameters during an experiment
-
-
-## Where to start a provenance chain
-
+### Starting a provenance chain
 A common concern is where to _start_ a provenance chain. There's no hard and fast answer to this, but - generally - one would start the main provenance chain where the first intentional action was taken by an agent upon some entity/Thing that either is the Thing one is interested in, or was an important precursor of that Thing.
 
 In the examples above, let's say our main entity of interest was the Dataset (nautilus-3D-scan:02545642). Capturing the sampling action and the archiving actions that preceded the scanning action would be very helpful in understanding where the 3D scan dataset came from and what the data is about, along with providing information to explain any bias/errors such as artifacts introduced by the sealing and cleaning instruments used during archiving. Thus, the provenance chain of the dataset would start with the sampling of the shell the dataset is about.
 
 Events or processes that _preceded_ the first intentional event are also important to contextualise the intentional actions along a provenance chain. Adding a few of these to a provenance chain can be very important to help communicate _why_ the first intentional action was taken in the first place. For more on this, see the section, below, on "Enriching a provenance chain with context".
 
+### Ending a provenance chain
+
+potentialAction (also Actions that have the appropriate `actionStatus` and link back to the Thing you're interested in in the `object` property.
+
 ## Events 
+
+### Representing an event
 
 Sometimes, unplanned processes that don't or may not have an agent (i.e. sometihng with agency, will, or volition) can affect the provenance of a prov:Entity or schema:Thing. For example, consider the impact of a natural or unplanned event like a cyclone or tsunami, equipment malfunctioning, or the degradation of a sample over time.
 
@@ -408,14 +416,66 @@ One could be even more explicit, using a "sub-Event" and the `recordedIn` proper
     }
 }
 ```
-This rendition links the identifiers of the dataset to the Events, strengthening the links between these records with unambiguous context.
+
+This rendition links the identifiers of the dataset to the Events more explicitly, using `recordedIn` to link the dataset to the event, strengthening the links between these records with unambiguous context. That being said, the `recordedIn` property is quite "fuzzy", and doesn't precisely describe the relationship of most datasets
 
 Unfortunately, schema.org doesn't seem to have a compact way of linking Actions to Events (e.g. like an "embeddedIn" or a process equivalent of "partOf"). Please see the "Using additional properties" section, below, for some possible approaches.
+
+### Embedding Actions within Events
+
+There's a clever way to embed an Action in an Event (i.e. that an Action occurred within an Event) by double-typing an object under `subEvent`. By multi-typing a JSON-LD object, one can use properties from both types. See an example below:
+
+> [!WARNING]
+> When multi-typing an object, **it's important that the Types used makes sense together.** Events and Actions are compatible (conceptually, an Event can also be an Action), but one wouldn't type something as both an Action and a Person, or a Vehicle and a Project.
+> 
+> **Please don't add a Type to an object just because it allows you to use a property from another Type that you think is convenient.** The types **must** make sense together.
+
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Event",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "name": "Mass gathering and die off of Cypraea fultoni population",
+    "identifier": "ecosystem-event:02265544332",
+    "location": {
+        "@type": "Place",
+        "name": "Pollux Tablemount",
+        "latitude": "25.75",
+        "longitude": "147.8333"
+    },
+    "startDate": "1848-09-17",
+    "endDate": "1848-18-17",
+    "subEvent": {
+        "@type": ["Event", "Action"],
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
+    "name": "Collection of rare seashell by the Nautilus sampling array",
+    "agent": {
+        "@type":"Person",
+        "familyName": "Dakkar",
+        "alternateName": "Captain Nemo",
+        "honorificPrefix": "Prince"
+    },
+    "identifier": "nautilus-sampling-event:00252229",
+    "actionStatus": "CompletedActionStatus"
+    }
+}
+```
 
 
 # Enriching a provenance chain with context
 
-# Adding Roles
+The basic provenance chains we've seen provide the core "trace" of a Thing's provenance. Naturally, there's a lot more information that most people would like about the links in that chain. 
+
+We've already "decorated" the provenance chains described above with more information (e.g. information on agents), but there's likely much more to say. Below, we'll provide some general suggestions on how to enrich your provenance chain.
+
+## Filling out properties
+
+The easiest way to add rich context to 
+
+
+## Adding Roles
 
 Occasionally, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like `agent`:
 
@@ -436,8 +496,8 @@ Occasionally, one would want to explicitly declare the roles of things like agen
       "familyName": "Aronnax",
       "honorificPrefix": "Professor"
     },
-    "startDate": "1979",
-    "endDate": "1992",
+    "startDate": "1848-01",
+    "endDate": "1849-12",
     "roleName": "Nautilus guest scientist"
   },
   "identifier": "nautilus-scanning-event:02552891",
@@ -466,13 +526,12 @@ Occasionally, one would want to explicitly declare the roles of things like agen
 
 ## Using additionalTypes
 
+As we've seen above, 
+
 For Actions, Events, Observation, Sampling
 
 should be valid for an rdf:Type, like an owl:Class but not a skos:Concept
 
-## Filling out properties
-
-Use instrument example
 
 ## Using additionalProperties
 
@@ -480,15 +539,13 @@ The core chain and the decorations
 
 Add RO relations for process-centric causal semantics.
 
+wasGeneratedBy, `output of` `input of` 
+
 Each domain and discipline will have different requirements, but the general principle is that the metadata contextualising the provenance chain should allow understanding and reproducibility.
 
 
-# Examples of common provenance patterns
 
-Some aligned to CDIF cases 
-
-
-## Sample Collection 
+# Adapting Actions 
 
 Both material and statistical samples, including statistical sampling from an existing dataset as well as the creation of a sample dataset from measuring material things
 
@@ -509,7 +566,11 @@ The start of the isBasedOn chain
 ## Data processing
 Including subsetting and reformatting / new semantic markup of data
 
+potentialAction
+
 ## Data validation
+
+potentialAction
 
 ## Data Analysis
 
