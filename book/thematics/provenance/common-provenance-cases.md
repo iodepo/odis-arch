@@ -582,7 +582,7 @@ Often, one would want to explicitly declare the roles of things like agents, esp
 }
 ```
 
-If one would like to be even more FAIR and machine-actionable, you could use a `DefinedTerm` from an ontology to further qualify the categories of instruments or occupations of people when the metadata was recorded. Here's an example using the Occupation Ontology from the OBO Foundry and Library to describe the job title of Pierre Aronnax, and a term from a fictional ontology for the category of the instrument used:
+If one would like to be even more FAIR and machine-actionable, you could use a `DefinedTerm` from an ontology to further qualify the categories of instruments or occupations of people when the metadata was recorded. Here's an example using the Occupation Ontology from the OBO Foundry and Library to describe the occupation of Pierre Aronnax, and a term from a fictional ontology for the category of the instrument used:
 
 ```json
 {
@@ -599,22 +599,25 @@ If one would like to be even more FAIR and machine-actionable, you could use a `
             "givenName": "Pierre",
             "familyName": "Aronnax",
             "honorificPrefix": "Professor",
-            "jobTitle": [
-                {
-                    "@type": "DefinedTerm",
-                    "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
-                    "termCode": "OCCO:19200000",
-                    "url": "http://purl.obolibrary.org/obo/OCCO_19200000",
-                    "name": "physical scientist"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
-                    "termCode": "OCCO:19100000",
-                    "url": "http://purl.obolibrary.org/obo/OCCO_19100000",
-                    "name": "life scientist"
-                }
-            ]
+            "hasOccupation": {
+                "@type": "Occupation",
+                "occupationalCategory": [
+                    {
+                        "@type": "CategoryCode",
+                        "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
+                        "termCode": "OCCO:19200000",
+                        "url": "http://purl.obolibrary.org/obo/OCCO_19200000",
+                        "name": "physical scientist"
+                    },
+                    {
+                        "@type": "CategoryCode",
+                        "inDefinedTermSet": "http://purl.obolibrary.org/obo/occo.owl",
+                        "termCode": "OCCO:19100000",
+                        "url": "http://purl.obolibrary.org/obo/OCCO_19100000",
+                        "name": "life scientist"
+                    }
+                ]
+            }
         },
         "startDate": "1848-01",
         "endDate": "1849-12",
