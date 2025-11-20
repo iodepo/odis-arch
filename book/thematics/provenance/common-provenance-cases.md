@@ -306,7 +306,12 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
             {
                 "@type": "HowToStep",
                 "name": "Initialisation of the Nautilus 3D scanning chamber",
-                "description": "Add three grains of ambergris to the device's brass thurible"
+                "description": "Add three grains of ambergris to the device's brass thurible",
+                "subjectOf": {
+                    "@type": "VideoObject",
+                    "name": "Videographic guide to the initialisation of the Nautilus 3D scanning chamber",
+                    "contentUrl": "https://nautilus.org/video-archive/26623.video"
+                    }
             },
              {
                 "@type": "HowToStep",
@@ -344,6 +349,7 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
 }
 ```
 
+One can add as many `HowToStep`s as are needed, and use them to link out to any other documentation, multimedia, or other resources that can help someone perform a method. You'll notice in the first `HowToStep` above, a link to a `VideoObject` was included as an example. You can use the `subjectOf` property on any `HowToStep` to link to one or more supporting resources.
 
 ## Where to start and end a provenance chain
 
@@ -356,7 +362,40 @@ Events or processes that _preceded_ the first intentional event are also importa
 
 ### Ending a provenance chain
 
-potentialAction (also Actions that have the appropriate `actionStatus` and link back to the Thing you're interested in in the `object` property.
+The most obvious place to end a provenance chain is at the current state of a Thing. However, one could also add some metadata to express what some agent should or could do to the Thing in the future. 
+
+The schema.org `potentialAction` property can be used on any `Thing` to express what _could_ be done to that `Thing` in the future or what is currently happening to that thing. Here's a terse example: 
+
+```json
+{
+   "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Thing",
+    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252230.json",
+    "name": "Incorporation of Nautilus Sample 00713668 into the Nautilus Specimen Archive",
+    "identifier": "nautilus-collection-item:00515643",
+    "potentialAction": [
+        {
+            "@type": "Action",
+            "name": "Transfer to the Laboratory at Centre of the Earth",
+            "actionStatus": "PotentialActionStatus",
+            "description": "The LatCotE possesses advanced X-ray technology, which may be used to further investigate the cause of the mass die off recorded in ecosystem-event:0226554433"
+        },
+        {
+            "@type": "Action",
+            "name": "Disinfection by periodic UV pulses",
+            "actionStatus": "ActiveActionStatus",
+            "description": "Specimen nautilus-collection-item:0051564 is subject to disinfection by UV from pulsed-xenon lamps with a peak emission near 230 nm at 8,000 μJ/cm^2",
+            "url": "https://nautilus.org/methods/26263.txt"
+        }
+    ]
+    
+}
+
+```
+
+In this example, the two actions described are the potential tranfer of the specimen to another laboratory for a specific test, and an ongoing action of periodic disinfection of the sample by periodic pulses of UV light (with a URL to a full method). This is an elegant way to end a provenance chain, which can help users understand what's happening to a Thing at the moment, and what people thing should happen to it. The latter can be used for matchmaking (i.e. matching agents with specified capacities to the things they can work on).
 
 ## Events 
 
