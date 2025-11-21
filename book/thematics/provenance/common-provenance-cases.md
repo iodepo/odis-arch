@@ -236,6 +236,7 @@ The examples above describe the provenance of physical objects. Let's create ano
     "object": "nautilus-collection-item:00515643",
     "result": {
         "@type": "Dataset",
+        "@id": "https://nautilus.verne/identifiers/Dataset-015481461"
         "identifier": "nautilus-3D-scan:02545642",
         "name": "3D Scan of Nautilus Collection Item 00515643",
         "about": "nautilus-collection-item:00515643"
@@ -650,7 +651,7 @@ If one would like to be even more FAIR and machine-actionable, you could use a `
             "name": "Nautilus 3D scanning chamber",
             "category": {
                 "@type": "DefinedTerm",
-                "inDefinedTermSet": "http://nautilus-ontologies.org/nautilusMachines.owl",
+                "inDefinedTermSet": "http://nautilus.verne/ontologies/nautilusMachines.owl",
                 "termCode": "NautilusOnt:2929260",
                 "url": "http://purl.obolibrary.org/obo/NautilusOnt:2929260",
                 "name": "Three-dimensional scanning apparatus"
@@ -672,12 +673,54 @@ If one would like to be even more FAIR and machine-actionable, you could use a `
 
 ```
 
-# Quality assertions and other Claims 
+# Claims - quality, assessments, and other declarations along a provenance chain
 
-## Quality and quality control
-of data or other assets
+Often, people or other agents assert their opinions, evaluation results, or other claims about a Thing as it journeys through Actions. The schema.org Type `Claim` (which is a sub-Type of `CreativeWork`, just like `Dataset`) can be used to capture these, and also to associate multiple assertions from different sources/agents to a Thing. 
 
-Adding quality control actions and their outcomes as Claims 
+> [!NOTE]
+> Like most `Thing`s in schema.org, the `Action` that created a `Claim` (like a quality control process) can - and probably should - be described in its own JSON-LD record. This would help show the provenance of the `Claim` itself, which is usually essential information to evaluate its validity or usefulness. Using `Action` properties like `actionProcess` (shown above), one can express or link to the methods and procedures that were used to arrive at the `Claim`.
+
+## Claims
+
+Let's look at an example of a claim regarding the quality of Dataset-015481461 (described above). This time, rather than repeating content, we'll use the `@id` keyword to point to JSON files hosted on a fictional server. Recall that if these resolve to a valid JSON-LD object or set of objects stored in a file, the `@id` reference would "expand" to match their content. 
+
+```json
+
+   {
+        "@context": {
+            "@vocab": "https://schema.org/"
+        },
+        "@type": "Claim",
+        "@id": "https://nautilus.verne/identifiers/Claim-000000323.json",
+        "identifier": "Claim-000000323",
+        "url": "https://nautilus.verne/identifiers/Claim-000000323.txt",
+        "abstract": "A quality control result of 'Excellent' resulted from the execution of standard operating procedure X4632 on Dataset-015481461",
+        "appearance": {
+            "@type": "AudioObject",
+            "@id": "https://nautilus.verne/identifiers/voice-log-000220337.json",
+            "name": "Quality control department audio log 000220337"
+        },
+        "about": {
+            "@id": "https://nautilus.verne/identifiers/Dataset-015481461.json"
+        },
+        "author": {
+            "@id": "https://nautilus.verne/identifiers/Person-00000122.json"
+        },
+        "additionalProperty": {
+            "@type": "PropertyValue",
+            "propertyId": "",
+            "name":
+            "value": 
+        
+        }
+    }
+```
+
+Above, we added that a specific person made a claim about Dataset-015481461, and an abstract property indicates the summary of that claim. The full claim is available by following the `url` property. We also note that the claim appears in an audio recording taken by the quality control department of the Nautilus.
+
+## Claim reviews
+
+ `ClaimReview` `itemReviewed` `Claim`  
 
 
 # Expanding schema.org with other semantic resources
@@ -687,7 +730,7 @@ Adding quality control actions and their outcomes as Claims
 As we've seen above in the "Embedding Actions within Events" section, one can multi-type a JSON-LD object. If (and only if) your chosen semantic context (in our case, schema.org) doesn't have a Type you need, or only offers a very general type, you can bring in an additional type from another semantic resource.
 
 > [!WARNING]
-> Be very careful when using external semantic resources as `@type`s. If you're JSON object is meant to represent a physical thing like a specific physical, particular instance of a sensor, you should not use a SKOS concept as a value of `@type`, as this would suggest you're actually talking about a concept of the sensor, rather than about the physical sensor itself. You can use an OWL Class (whose instances represent physical things, rather than concepts about those things) from a more formal ontology like SOSA, like [SOSA:Sensor](http://www.w3.org/ns/sosa/).
+> Be very careful when using external semantic resources as `@type`s. For example, if your JSON object is meant to represent a physical thing like a specific physical, particular instance of a sensor, you should probably not use a SKOS concept as a value of `@type`, as this would suggest you're actually talking about a description of meaning, rather than about a real-world entity. You can use an OWL Class (whose instances represent physical things, rather than concepts about those things, and which has more rigid/clear interpretations) from a more formal ontology like SOSA, like [SOSA:Sensor](http://www.w3.org/ns/sosa/).
 
 Let's use this to express that a schema.org `Product` is also a SOSA `Sensor`
 
