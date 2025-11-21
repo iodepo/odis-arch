@@ -686,7 +686,7 @@ Adding quality control actions and their outcomes as Claims
 
 As we've seen above in the "Embedding Actions within Events" section, one can multi-type a JSON-LD object. If (and only if) your chosen semantic context (in our case, schema.org) doesn't have a Type you need, or only offers a very general type, you can bring in an additional type from another semantic resource.
 
-> ![WARNING]
+> [!WARNING]
 > Be very careful when using external semantic resources as `@type`s. If you're JSON object is meant to represent a physical thing like a specific physical, particular instance of a sensor, you should not use a SKOS concept as a value of `@type`, as this would suggest you're actually talking about a concept of the sensor, rather than about the physical sensor itself. You can use an OWL Class (whose instances represent physical things, rather than concepts about those things) from a more formal ontology like SOSA, like [SOSA:Sensor](http://www.w3.org/ns/sosa/).
 
 Let's use this to express that a schema.org `Product` is also a SOSA `Sensor`
@@ -767,7 +767,7 @@ potentialAction
 ## Data Analysis
 
 
-# Claims / assertions
+# Other things to think about
 
 prov:invalidatedAtTime / wasInvalidatedBy
 Other CDIF cases to capture
