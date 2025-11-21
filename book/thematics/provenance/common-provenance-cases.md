@@ -25,7 +25,7 @@ Here's the minimal JSON-LD/schema.org about the Dataset:
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/T363.json",
+    "@id": "https://nautilus.verne/identifiers/T363.json",
     "name": "Dummy temperature dataset",
     "identifier": "T363"
 }
@@ -40,7 +40,7 @@ And here's the JSON-LD/schema.org about the Action that created it:
         "@vocab": "https://schema.org/"
     },
     "@type": "CreateAction",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Creation-of-T363.json",
+    "@id": "https://nautilus.verne/identifiers/Creation-of-T363.json",
     "name": "Temperature measurement M363",
     "identifier": "M363",
     "actionStatus": "CompletedActionStatus",
@@ -48,7 +48,7 @@ And here's the JSON-LD/schema.org about the Action that created it:
     "object": "surface seawater",
      "result": {
         "@type": "Dataset",
-        "@id": "https://registry.org/permanentUrlToThisJsonDoc/T363.json"
+        "@id": "https://nautilus.verne/identifiers/T363.json"
      }
 }
 
@@ -67,7 +67,7 @@ Let's try a minimal example for a book. We could, as we did for dataset, talk ab
         "@vocab": "https://schema.org/"
     },
     "@type": "Book",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "@id": "https://nautilus.verne/identifiers",
     "name": "Guide to sampling sea salps",
     "identifier": "ISBN-13:978-1-56619-909-4",
      "publisher": {
@@ -86,7 +86,7 @@ Let's try a minimal example for the sensor, in which we use the schema.org [Prod
         "@vocab": "https://schema.org/"
     },
     "@type": "Product",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc",
+    "@id": "https://nautilus.verne/identifiers",
     "name": "Temp-O-Matic Sea Surface Temperature",
     "identifier": "978-1-56619-909-4",
      "manufacturer": {
@@ -142,7 +142,7 @@ The key schema.org Type to use is [Action](https://schema.org/Action), which map
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252229.json",
     "name": "Collection of rare seashell by the Nautilus sampling array",
     "agent": {
         "@type":"Person",
@@ -180,7 +180,7 @@ Next, let's add another action to describe processing that sampled seashell for 
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252230.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252230.json",
     "name": "Incorporation of Nautilus Sample 00713668 into the Nautilus Specimen Archive",
     "agent": {
         "@type":"Person",
@@ -222,7 +222,7 @@ The examples above describe the provenance of physical objects. Let's create ano
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
     "name": "3D scanning of nautilus-collection-item:00515643",
     "agent": {
         "@type":"Person",
@@ -265,7 +265,7 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
     "name": "3D scanning of nautilus-collection-item:00515643",
     "agent": {
         "@type":"Person",
@@ -310,7 +310,7 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
                 "subjectOf": {
                     "@type": "VideoObject",
                     "name": "Videographic guide to the initialisation of the Nautilus 3D scanning chamber",
-                    "contentUrl": "https://nautilus.org/video-archive/26623.video"
+                    "contentUrl": "https://nautilus.verne/video-archive/26623.video"
                     }
             },
              {
@@ -362,7 +362,7 @@ Events or processes that _preceded_ the first intentional event are also importa
 
 ### Ending a provenance chain
 
-The most obvious place to end a provenance chain is at the current state of a Thing. However, one could also add some metadata to express what some agent should or could do to the Thing in the future. 
+The most obvious place to end a provenance chain is at the current state of a Thing. However, one could also add some metadata to express what some agent should or could do to the Thing in the future, or what is currently happening to the Thing.
 
 The schema.org `potentialAction` property can be used on any `Thing` to express what _could_ be done to that `Thing` in the future or what is currently happening to that thing. Here's a terse example: 
 
@@ -372,7 +372,7 @@ The schema.org `potentialAction` property can be used on any `Thing` to express 
         "@vocab": "https://schema.org/"
     },
     "@type": "Thing",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252230.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252230.json",
     "name": "Incorporation of Nautilus Sample 00713668 into the Nautilus Specimen Archive",
     "identifier": "nautilus-collection-item:00515643",
     "potentialAction": [
@@ -387,7 +387,7 @@ The schema.org `potentialAction` property can be used on any `Thing` to express 
             "name": "Disinfection by periodic UV pulses",
             "actionStatus": "ActiveActionStatus",
             "description": "Specimen nautilus-collection-item:0051564 is subject to disinfection by UV from pulsed-xenon lamps with a peak emission near 230 nm at 8,000 μJ/cm^2",
-            "url": "https://nautilus.org/methods/26263.txt"
+            "url": "https://nautilus.verne/methods/26263.txt"
         }
     ]
     
@@ -411,7 +411,7 @@ To help express these, schema.org offers an [Event](https://schema.org/Event) Ty
         "@vocab": "https://schema.org/"
     },
     "@type": "Event",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "@id": "https://nautilus.verne/identifiers/Event-01259994.json",
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
     "location": {
@@ -435,7 +435,7 @@ One could be even more explicit, using a "sub-Event" and the `recordedIn` proper
         "@vocab": "https://schema.org/"
     },
     "@type": "Event",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "@id": "https://nautilus.verne/identifiers/Event-01259994.json",
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
     "location": {
@@ -448,7 +448,7 @@ One could be even more explicit, using a "sub-Event" and the `recordedIn` proper
     "endDate": "1848-18-17",
     "subEvent": {
         "@type": "Event",
-        "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259998.json",
+        "@id": "https://nautilus.verne/identifiers/Event-01259998.json",
         "name": "Posthumous deposition of biomass of Cypraea fultoni individual obtained as nautilus-sample:00713668",
         "identifier": "ecosystem-event:02265544345",
         "recordedIn": "nautilus-3D-scan:02545642"
@@ -475,7 +475,7 @@ There's a clever way to embed an Action in an Event (i.e. that an Action occurre
         "@vocab": "https://schema.org/"
     },
     "@type": "Event",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Event-01259994.json",
+    "@id": "https://nautilus.verne/identifiers/Event-01259994.json",
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
     "location": {
@@ -488,7 +488,7 @@ There's a clever way to embed an Action in an Event (i.e. that an Action occurre
     "endDate": "1848-18-17",
     "subEvent": {
         "@type": ["Event", "Action"],
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252229.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252229.json",
     "name": "Collection of rare seashell by the Nautilus sampling array",
     "agent": {
         "@type":"Person",
@@ -533,10 +533,28 @@ is much better than:
   "agent": "Captain Nemo"
 ```
 
+Of course, if you had a stand-alone JSON-LD object or file with a resolvable `@id` to represent Captain Nemo, one could also do:
+
+```json
+   "agent": { "@id": "https://nautilus.verne/identifiers/Person-00000001.json" }
+```
+
+That would point to:
+```json
+  "agent": {
+        "@id": "https://nautilus.verne/identifiers/Person-00000001.json",
+        "@type":"Person",
+        "familyName": "Dakkar",
+        "alternateName": "Captain Nemo",
+        "honorificPrefix": "Prince"
+    }
+```
+
+
 
 ## Adding Roles
 
-Often, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like `agent`:
+Often, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like (but certainly not limited to) `agent` and `instrument`:
 
 ```json
 
@@ -545,7 +563,7 @@ Often, one would want to explicitly declare the roles of things like agents, esp
     "@vocab": "https://schema.org/"
   },
   "@type": "Action",
-  "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+  "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
   "name": "3D scanning of nautilus-collection-item:00515643",
   "agent": {
     "@type": "Role",
@@ -590,7 +608,7 @@ If one would like to be even more FAIR and machine-actionable, you could use a `
         "@vocab": "https://schema.org/"
     },
     "@type": "Action",
-    "@id": "https://registry.org/permanentUrlToThisJsonDoc/Action-00252231.json",
+    "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
     "name": "3D scanning of nautilus-collection-item:00515643",
     "agent": {
         "@type": "Role",
@@ -654,16 +672,58 @@ If one would like to be even more FAIR and machine-actionable, you could use a `
 
 ```
 
+# Quality assertions and other Claims 
+
+## Quality and quality control
+of data or other assets
+
+Adding quality control actions and their outcomes as Claims 
+
+
+# Expanding schema.org with other semantic resources
+
 ## Using additionalTypes
 
-As we've seen above, 
+As we've seen above in the "Embedding Actions within Events" section, one can multi-type a JSON-LD object. If (and only if) your chosen semantic context (in our case, schema.org) doesn't have a Type you need, or only offers a very general type, you can bring in an additional type from another semantic resource.
 
-For Actions, Events, Observation, Sampling
+> ![WARNING]
+> Be very careful when using external semantic resources as `@type`s. If you're JSON object is meant to represent a physical thing like a specific physical, particular instance of a sensor, you should not use a SKOS concept as a value of `@type`, as this would suggest you're actually talking about a concept of the sensor, rather than about the physical sensor itself. You can use an OWL Class (whose instances represent physical things, rather than concepts about those things) from a more formal ontology like SOSA, like [SOSA:Sensor](http://www.w3.org/ns/sosa/).
 
-should be valid for an rdf:Type, like an owl:Class but not a skos:Concept
+Let's use this to express that a schema.org `Product` is also a SOSA `Sensor`
 
 
-## Using additionalProperties
+```
+{
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "sosa": "http://www.w3.org/ns/sosa/"
+    },
+    "@type": [
+        "Product",
+        "sosa:Sensor"
+    ],
+    "name": "underway aether flucutation sensor"
+}
+    
+```
+
+One could do something similar, with a less direct / softer assertion of the second type (which may prevent errors in some software that is unable to handle semantic subtleties), using schema.org's `additionalProperty` property:
+
+
+```
+{
+    "@context": {
+        "@vocab": "https://schema.org/"
+    },
+    "@type": "Product",
+    "additionalType": "http://www.w3.org/ns/sosa/Sensor",
+ 	"name": "underway aether flucutation sensor"
+}
+
+```
+
+
+## Using additionalProperties for more complex provenance chains
 
 The core chain and the decorations 
 
@@ -674,26 +734,29 @@ wasGeneratedBy, `output of` `input of`
 Each domain and discipline will have different requirements, but the general principle is that the metadata contextualising the provenance chain should allow understanding and reproducibility.
 
 
-# Adapting Actions 
+# Advanced provenance 
 
-Both material and statistical samples, including statistical sampling from an existing dataset as well as the creation of a sample dataset from measuring material things
+## Highly granular provenance 
 
-## Sample processing / analysis
+### Variable-level provenance 
+variableMeasured - individual variable-by-variable provenance 
 
-## Observation
+### breaking up Datasets and other creative works
+
+
+# Further examples
+
+Above, we have some basic examples for observation, sample processing, and data generation. Below, we'll add some more basic examples for other common activities:
 
 ## Model / analytical output
 
 With CreativeWork as source
 
-## Data production
-
-The start of the isBasedOn chain
-
 ## Data harvest
 
 ## Data processing
 Including subsetting and reformatting / new semantic markup of data
+The start of the isBasedOn chain
 
 potentialAction
 
@@ -704,25 +767,9 @@ potentialAction
 ## Data Analysis
 
 
-## Claims / assertions
+# Claims / assertions
 
 prov:invalidatedAtTime / wasInvalidatedBy
-
-
-## Quality and quality control
-of data or other assets
-
-Adding quality control actions and their outcomes as Claims 
-
-# Advanced provenance 
-
-## Highly granular provenance 
-
-### Variable-level provenance 
-variableMeasured - individual variable-by-variable provenance 
-
-### breaking up Datasets and other creative works
-
 Other CDIF cases to capture
 Experiment
 Hypothesis
@@ -732,38 +779,3 @@ Configuration
 Instrument
 * use sosa for the additionalType and then something like NERC SKOS for keywords?
 
-```json
-{
-     "@context": {
-        "@vocab": "https://schema.org/"
- },
-            "@type": "Product",
-            "@id": "https://urlToThisJson.org/sea-bird-SBE.json/",
-            "name": "SeaTemp 5000 Sensor",
-            "description": "High precision sea surface temperature sensor.",
-            "manufacturer": {
-              "@type": "Organization",
-              "name": "SensorCorp"
-            },
-        "model": {
-            "@type": "ProductModel",
-            "identifier": "http://vocab.nerc.ac.uk/collection/L22/current/TOOL0022/",
-            "name": "Sea-Bird SBE 37 MicroCat IM-CT with optional pressure (submersible) CTD sensor series"
-        },
-            "serialNumber": "SN-998877",
-            "additionalProperty": [
-              {
-                "@type": "PropertyValue",
-                "name": "accuracy",
-                "value": "+/- 0.01 K"
-              },
-              {
-                "@type": "PropertyValue",
-                "name": "precision",
-                "value": "0.005 K"
-              }
-            ]
-            }
-```
-
- 
