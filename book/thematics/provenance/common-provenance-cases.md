@@ -253,7 +253,7 @@ Next, let's add another action to describe processing that sampled seashell for 
     ],
     "object": {  "@id": "https://nautilus.verne/identifiers/nautilus-sample-00713668.json" },
     "result": {
-        TODO
+       "TODO
         "nautilus-collection-item:00515643",
         },
     "startTime": "1848-11-17T14:42:10Z",
