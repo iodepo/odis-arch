@@ -8,6 +8,13 @@ For datasets, documents, software, products, or anything else described by the J
 
 In this section, we provide guidelines on 1) how to express the basic provenance of a thing and 2) how to add context to that basic provenance to increase reusability, reproducibility, and add value to a digital asset.
 
+# Why should you care about provenance?
+
+Just like in the example above, unless you have information about a thing's origin and what happened to it before you encountered it, you can't really verify its qualities or claims about it. Is it authentic? Who can you contact to verify any quality flags on it? How was it modified along its lifetime? Is it "fit for (your) purpose"? 
+
+Without a clear provenance chain, (re)using data can be perilous. In science, data of unknown provenance can lead to inaccurate or corrupted results. In advising decision makers, policy developers, or the public, they can be misleading and compromise trust. As the volume and variety of data flowing through organisations continues to grow, and data products and services weave together ever more datasets and streams, it is no longer viable to contact individuals or organisations to explain the origin and lifecycle of data: this information must be linked to or bundled with subject data.
+
+
 # Basic provenance chains
 
 The most basic provenance chain is a very short one: it should tell you where some "Thing" you're interest in originally came from. For example:
