@@ -604,6 +604,8 @@ That would point to:
 
 ## Adding Roles
 
+The roles that a person, product, or other Thing assumes during an Action also provide improtant context. Roles can and do change over the life time of a Thing, and are dependent on how it participates in a given process. Roles are give us insight into how organisations, people, or other agents understood and used or interacted with Things during an Action. 
+
 Often, one would want to explicitly declare the roles of things like agents, especially if there are many participating in an Action. The Schema.org [Role](https://schema.org/Role) Type allows us to express roles within properties like (but certainly not limited to) `agent` and `instrument`:
 
 ```json
