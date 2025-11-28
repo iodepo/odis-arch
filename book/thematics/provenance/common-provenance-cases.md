@@ -32,7 +32,7 @@ Here's the minimal JSON-LD/schema.org about the Dataset:
         "@vocab": "https://schema.org/"
     },
     "@type": "Dataset",
-    "@id": "https://nautilus.verne/identifiers/T363.json",
+    "@id": "https://myOrganisation.example/identifiers/T363.json",
     "name": "Dummy temperature dataset",
     "identifier": "T363"
 }
@@ -47,7 +47,6 @@ And here's the JSON-LD/schema.org about the Action that created it:
         "@vocab": "https://schema.org/"
     },
     "@type": "CreateAction",
-    "@id": "https://nautilus.verne/identifiers/Creation-of-T363.json",
     "name": "Temperature measurement M363",
     "identifier": "M363",
     "actionStatus": "CompletedActionStatus",
@@ -55,7 +54,7 @@ And here's the JSON-LD/schema.org about the Action that created it:
     "object": "surface seawater",
      "result": {
         "@type": "Dataset",
-        "@id": "https://nautilus.verne/identifiers/T363.json"
+        "@id": "https://myOrganisation.example/identifiers/T363.json"
      }
 }
 
@@ -64,7 +63,7 @@ And here's the JSON-LD/schema.org about the Action that created it:
 > [!NOTE]
 > An Action can have many results (~ outputs) and objects (~ inputs/things the action was performed on), and can be more or less precisely scoped (e.g. we could split the measurement action above into the physical measurement and the data generation). The choice of how "granular" to be depends on each application scenario and resources available, but generally more detail is helpful for later reusability.
 
-These two JSON records express that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some completed action (with identifier M363) using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument on some seawater. The [result](https://schema.org/result) property in the Action links the Dataset to the Action. The `@id` JSON keyword saves us some typing, as it would expand to everything in the Dataset record (assuming both records are available on the Web). 
+These two JSON records express that a dataset called "Dummy temperature dataset" with identifier "T363" was created by some completed action (with identifier M363) using a "Temp-O-Matic Sea Surface Temperatur sensor" as an instrument on some seawater. The [result](https://schema.org/result) property in the Action links the Dataset to the Action. The `@id` JSON keyword saves us some typing, as it would expand to everything in the Dataset record (assuming both records are available on the Web or similar network). 
 
 Let's try a minimal example for a book. We could, as we did for dataset, create a JSON-LD record/object about the CreateAction for the book and then link it to a JSON-LD record/object about the book itself, but since we're talking about a publisher and author as the "origin" of the document, we can be more compact using some schema.org properties:
 
@@ -74,7 +73,6 @@ Let's try a minimal example for a book. We could, as we did for dataset, create 
         "@vocab": "https://schema.org/"
     },
     "@type": "Book",
-    "@id": "https://nautilus.verne/identifiers",
     "name": "Guide to sampling sea salps",
     "identifier": "ISBN-13:978-1-56619-909-4",
     "author": "S.R. Salpian",
@@ -94,7 +92,6 @@ Let's try a minimal example for the sensor, in which we use the schema.org [Prod
         "@vocab": "https://schema.org/"
     },
     "@type": "Product",
-    "@id": "https://nautilus.verne/identifiers",
     "name": "Temp-O-Matic Sea Surface Temperature",
     "identifier": "978-1-56619-909-4",
      "manufacturer": {
@@ -171,7 +168,9 @@ Now, let's replace some of those literal values with typed JSON-LD objects. This
 > [!NOTE]
 > We'll stick to using JSON objects (the things in braces / curly brackets), shown in the next example, for key entities used often in the rest of this document. When you see just the `@id` of an object somewhere, that means that the entire object it references (including all the properties) will be placed there.
 >
-> Note that the expansion of `@id`s **relies on the files they reference being available on a network like the Web**. If they cannot be found, they can't be expanded, once again underscoring the importance of persistent identifiers and URLs, as well as long-term hosting solutions. 
+> The values we're using for `@id`s on this page often contain some semantics (i.e. the world "sample" appears in an `@id` for a sample). This is only to ease reading: in general, identifiers should not contain information themselves, but point to something that does. For example, a meaningless identifier like "25321ke561" is generally better than one like "sample-15-Monday". There are many reasons for this, including the occasional need to rename or correct (meta)data that overlaps with the identifier value (which should never be changed once released).
+>
+> Note that the expansion of `@id`s **relies on the files they reference being available on a network like the Web**. If they cannot be found, they cannot be expanded, once again underscoring the importance of persistent identifiers and URLs, as well as long-term hosting and access solutions. 
 
 
 ```json
@@ -199,16 +198,16 @@ Now, let's replace some of those literal values with typed JSON-LD objects. This
         "longitude": "147.8333"
     },
     "instrument": {
-        "@id": "https://nautilus.verne/identifiers/Manifest-item-00002634.json",
+        "@id": "https://nautilus.verne/identifiers/nautilus-equipment-00002634.json",
         "@type": "Product",
         "name": "Nautilus sampling array",
-        "identifier": "Manifest-item-00002634"
+        "identifier": "nautilus-equipment-00002634"
     },
     "object": "Intact Fulton's cowrie (Cypraea fultoni) shell",
     "result": {
         "@id": "https://nautilus.verne/identifiers/nautilus-sample-00713668.json",
         "@type": "Product",
-        "name": "Sample 00713668"
+        "name": "Sample 00713668",
         "identifier": "nautilus-sample:00713668",
         "material": ["calcium carbonate", "biomass"]
     },
@@ -224,7 +223,7 @@ This minimal example expresses a schema:Action (prov:Activity) performed by a sc
 > Note that we're using the schema.org Type `Product` to type the sample object (i.e. a product of a sampling action). The `Product` Type offers many useful properties for samples, including those describing its size, weight, composition, and relation to other samples typed as products. See the section on using additionalTypes, below, for guidance on how to add more specific types like [material sample](http://purl.obolibrary.org/obo/OBI_0000747), an OWL class from the Ontology for Biomedical Investigations.
 
 
-Next, let's add another action to describe processing that sampled seashell for archiving in the Nautilus' specimen collection. Remember that we'll just use the `@id`s of JSON objects we've described before, to save space and focus on new material:
+Next, let's add another action to describe processing that sampled seashell for archiving in the Nautilus' specimen collection. Remember that we'll just use the `@id`s of JSON objects we've described above, to save space and focus on new material:
 
 ```json
 {
@@ -253,8 +252,10 @@ Next, let's add another action to describe processing that sampled seashell for 
     ],
     "object": {  "@id": "https://nautilus.verne/identifiers/nautilus-sample-00713668.json" },
     "result": {
-       "TODO
-        "nautilus-collection-item:00515643",
+        "@type": "Product",
+        "@id": "https://nautilus.verne/identifiers/nautilus-collection-item-00515643.json",
+        "identifier": "nautilus-collection-item:00515643",
+        "name": "An prepared specimen of an intact Fulton's cowrie (Cypraea fultoni) shell"
         },
     "startTime": "1848-11-17T14:42:10Z",
     "endTime": "1848-11-17T14:46:13Z"
@@ -281,13 +282,13 @@ The examples above describe the provenance of physical objects. Let's create ano
     "identifier": "nautilus-scanning-event:02552891",
     "actionStatus": "CompletedActionStatus",
     "instrument": "Nautilus 3D scanning chamber",
-    "object": "nautilus-collection-item:00515643",
+    "object": { "@id": "https://nautilus.verne/identifiers/nautilus-collection-item-00515643.json" },
     "result": {
         "@type": "Dataset",
         "@id": "https://nautilus.verne/identifiers/Dataset-015481461",
         "identifier": "nautilus-3D-scan:02545642",
         "name": "3D Scan of Nautilus Collection Item 00515643",
-        "about": "nautilus-collection-item:00515643"
+        "about": { "@id": "https://nautilus.verne/identifiers/nautilus-collection-item-00515643.json" }
     },
     "startTime": "1848-11-17T15:39:04Z",
     "endTime": "1848-11-17T15:50:19Z"
@@ -319,13 +320,7 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
     "@type": "Action",
     "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
     "name": "3D scanning of nautilus-collection-item:00515643",
-    "agent": {
-        "@id": "https://nautilus.verne/identifiers/Person-00000562.json",
-        "@type":"Person",
-        "givenName": "Pierre",
-        "familyName": "Aronnax",
-        "honorificPrefix": "Professor"
-    },
+    "agent": { "@id": "https://nautilus.verne/identifiers/Person-00000562.json" },
     "identifier": "nautilus-scanning-event:02552891",
     "actionStatus": "CompletedActionStatus",
     "instrument": "Nautilus 3D scanning chamber",
@@ -340,7 +335,8 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
     "startTime": "1848-11-17T15:39:04Z",
     "endTime": "1848-11-17T15:50:19Z",
     "actionProcess": {
-        "@type": "HowTo",
+       	"@id":"https://nautilus.verne/identifiers/Protocol-00006215",
+      	"@type": "HowTo",
         "name": "How to 3D scan a seashell with the Nautilus 3D scanning chamber",
         "estimatedCost": "20 Pounds Sterling and 40 shillings",
         "performTime": "T2H30M",
@@ -358,42 +354,50 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
         "yield": "Amethyst data slate with 3D scan data",
         "step": [
             {
-                "@type": "HowToStep",
+                       	"@id":"https://nautilus.verne/identifiers/Protocol-step-00015209",
+              	"@type": "HowToStep",
                 "name": "Initialisation of the Nautilus 3D scanning chamber",
                 "description": "Add three grains of ambergris to the device's brass thurible",
                 "subjectOf": {
+                  "@id": "https://wwww.nautilus.verne/identifiers/Video-00002167",
                     "@type": "VideoObject",
                     "name": "Videographic guide to the initialisation of the Nautilus 3D scanning chamber",
                     "contentUrl": "https://nautilus.verne/video-archive/26623.video"
                     }
             },
              {
+                "@id":"https://nautilus.verne/identifiers/Protocol-step-00015210",
                 "@type": "HowToStep",
                 "name": "Sample loading",
                 "description": "Place the object to be scanned in the copper casket ornamented with krakens at the centre of the chamber"
             },
             {
-                "@type": "HowToStep",
+                "@id":"https://nautilus.verne/identifiers/Protocol-step-00015211",
+              "@type": "HowToStep",
                 "name": "Configuration of the scanning process",
                 "description": "Approach the luminous display panel bordered by red coral. Speak clearly and deferentially to explain how the scanning should proceed. The Nautilus difference engine will configure the chamber to account for your preferences. Should there be uncertainties, the difference engine shall ask you for further clarification."
             },
             {
+                "@id":"https://nautilus.verne/identifiers/Protocol-step-00015212",
                 "@type": "HowToStep",
                 "name": "Shelter or depart",
                 "description": "Shelter behind at least 4 inches of cinnabar-coated lead during the operation of the machine. Alternatively, leave the scanning laboratory entirely - the scanning requires no supervision."
             },
             {
-                "@type": "HowToStep",
+                "@id":"https://nautilus.verne/identifiers/Protocol-step-00015213",
+              "@type": "HowToStep",
                 "name": "Scanning",
                 "description": "The chamber will scan the sample by eldritch means. Scanning is complete when the copper casket ornamented with Krakens opens."
             },
                         {
-                "@type": "HowToStep",
+                "@id":"https://nautilus.verne/identifiers/Protocol-step-00015214",
+                          "@type": "HowToStep",
                 "name": "Sample retrieval",
                 "description": "Retrieve the sample from the copper casket ornamented with Krakens opens. Return to secure archiving or storage as needed."
             },
             {
-                "@type": "HowToStep",
+              "@id":"https://nautilus.verne/identifiers/Protocol-step-00015215",  
+              "@type": "HowToStep",
                 "name": "Data slate retrieval",
                 "description": "Approach the alcove ornamented with hippocampi in rampant pose. An amethyst data slate will emerge. Wait for it to cool and retrieve it. Your 3D scan is examinable with the Nautilus holographicum."
             }
@@ -403,7 +407,7 @@ Let's examine a case expanding the 3D-scanning Action, above. Look for the `acti
 }
 ```
 
-One can add as many `HowToStep`s as are needed, and use them to link out to any other documentation, multimedia, or other resources that can help someone perform a method. You'll notice in the first `HowToStep` above, a link to a `VideoObject` was included as an example. You can use the `subjectOf` property on any `HowToStep` to link to one or more supporting resources.
+One can add as many `HowToStep`s as are needed, and use them to link out to any other documentation, multimedia, or other resources that can help someone perform a method. You'll notice in the first `HowToStep` above, a link to a `VideoObject` was included as an example. You can use the `subjectOf` property on any `HowToStep` to link to one or more supporting resources. Also note, since we used `@id`s for each `HowToStep`, we can reuse these individually, in other protocols/methods or other assets.
 
 ## Where to start and end a provenance chain
 
@@ -431,12 +435,14 @@ The schema.org `potentialAction` property can be used on any `Thing` to express 
     "identifier": "nautilus-collection-item:00515643",
     "potentialAction": [
         {
+            "@id": "https://nautilus.verne/identifiers/Action-00252231.json",
             "@type": "Action",
             "name": "Transfer to the Laboratory at Centre of the Earth",
             "actionStatus": "PotentialActionStatus",
             "description": "The LatCotE possesses advanced X-ray technology, which may be used to further investigate the cause of the mass die off recorded in ecosystem-event:0226554433"
         },
         {
+            "@id": "https://nautilus.verne/identifiers/Action-00252232.json",
             "@type": "Action",
             "name": "Disinfection by periodic UV pulses",
             "actionStatus": "ActiveActionStatus",
@@ -468,12 +474,7 @@ To help express these, schema.org offers an [Event](https://schema.org/Event) Ty
     "@id": "https://nautilus.verne/identifiers/Event-01259994.json",
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
-    "location": {
-        "@type": "Place",
-        "name": "Pollux Tablemount",
-        "latitude": "25.75",
-        "longitude": "147.8333"
-    },
+    "location": { "@id": "https://nautilus.verne/identifiers/location-00075663.json" },
     "startDate": "1848-09-17",
     "endDate": "1848-18-17"
 }
@@ -492,11 +493,7 @@ One could be even more explicit, using a "sub-Event" and the `recordedIn` proper
     "@id": "https://nautilus.verne/identifiers/Event-01259994.json",
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
-    "location": {
-        "@type": "Place",
-        "name": "Pollux Tablemount",
-        "latitude": "25.75",
-        "longitude": "147.8333"
+    "location": {  "@id": "https://nautilus.verne/identifiers/location-00075663.json"
     },
     "startDate": "1848-09-17",
     "endDate": "1848-18-17",
@@ -533,10 +530,7 @@ There's a clever way to embed an Action in an Event (i.e. that an Action occurre
     "name": "Mass gathering and die off of Cypraea fultoni population",
     "identifier": "ecosystem-event:02265544332",
     "location": {
-        "@type": "Place",
-        "name": "Pollux Tablemount",
-        "latitude": "25.75",
-        "longitude": "147.8333"
+       "@id": "https://nautilus.verne/identifiers/location-00075663.json"
     },
     "startDate": "1848-09-17",
     "endDate": "1848-18-17",
