@@ -872,6 +872,7 @@ Hypothesis
 Sample (material and statistical samples)
 Method
 Configuration
+Calibration (link to ocean carbon work https://github.com/iodepo/ocean-carbon-metadata-exchange/issues/8)
 Instrument
 * use sosa for the additionalType and then something like NERC SKOS for keywords?
 
