@@ -20,7 +20,7 @@ as long as they credit the original authors for the original creation.
 - [Google Drive folder](https://drive.google.com/drive/u/0/folders/1QGKYq_zYqJyfrokcJuvRENK06EX_UuzP)
 - [Architecture documentation document](https://docs.google.com/document/d/1jWG6CwZN-ffKhF4IUFTvjb22iiYKtw8ZOqJkaVlTwqM/edit)
 - [The IOC Ocean InfoHub - DEVELOPMENT OF AN IOC CLEARING HOUSE MECHANISM FOR THE TRANSFER OF MARINE TECHNOLOGY POWERED BY A PROOF-OF-CONCEPT ODIS ARCHITECTURE](https://oceanexpert.org/document/26476)
-- [Workshop on data sharing between UN agencies as a contribution to the UN decace of ocean science for sustainable development: 5.3 ODIS](https://oceanexpert.org/document/26728)
+- [Workshop on data sharing between UN agencies as a contribution to the UN decade of ocean science for sustainable development: 5.3 ODIS](https://oceanexpert.org/document/26728)
 
 ## Resources
 ### Zotero group
