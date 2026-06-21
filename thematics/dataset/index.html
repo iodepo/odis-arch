@@ -724,20 +724,28 @@ frames and SHACL shapes are kept in a discrete location.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Map&quot;,
-    &quot;identifier&quot;: {
-        &quot;@id&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/doi&quot;,
-        &quot;url&quot;: &quot;https://doi.org/10.5066/F7VX0DMQ&quot;,
-        &quot;value&quot;: &quot;doi:10.5066/F7VX0DMQ&quot;
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/5ab754c70b8552de1b9cd8d1db146d15b39574e7d90c6b50382a990efc6eff49.svg" src="../../_images/5ab754c70b8552de1b9cd8d1db146d15b39574e7d90c6b50382a990efc6eff49.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">39</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">39</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>

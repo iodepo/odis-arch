@@ -915,20 +915,16 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
     },
     &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
     &quot;@type&quot;: &quot;Person&quot;,
-    &quot;knowsAbout&quot;: [
-        &quot;Invasive species in brackish water&quot;,
-        &quot;https://www.wikidata.org/wiki/Q183368&quot;,
-        {
-            &quot;@id&quot;: &quot;https://example.org/id/course/x&quot;,
-            &quot;@type&quot;: &quot;Course&quot;,
-            &quot;description&quot;: &quot;In this course ...&quot;,
-            &quot;url&quot;: &quot;URL to the course&quot;
-        }
-    ]
+    &quot;knowsAbout&quot;: {
+        &quot;@id&quot;: &quot;https://example.org/id/course/x&quot;,
+        &quot;@type&quot;: &quot;Course&quot;,
+        &quot;description&quot;: &quot;In this course ...&quot;,
+        &quot;url&quot;: &quot;URL to the course&quot;
+    }
 }
 </pre></div>
 </div>
-<img alt="../../_images/fbb92a064306f453f516ff99987e80c84f12f03b8157cc8e688365ce2b4ce536.svg" src="../../_images/fbb92a064306f453f516ff99987e80c84f12f03b8157cc8e688365ce2b4ce536.svg" />
+<img alt="../../_images/e7e8122cd33d70b95f26595d7f84631477156ed498c3fa0ca62e295e1eb7f38e.svg" src="../../_images/e7e8122cd33d70b95f26595d7f84631477156ed498c3fa0ca62e295e1eb7f38e.svg" />
 </div>
 </div>
 </section>
@@ -1086,20 +1082,28 @@ a resource.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://index.example.org/id/org/x&quot;,
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;identifier&quot;: {
-        &quot;@id&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;,
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
-        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/1726a6958c6586fe23fe208af50b3d51ef644fb66ceda5d67ddd225b6e3e517d.svg" src="../../_images/1726a6958c6586fe23fe208af50b3d51ef644fb66ceda5d67ddd225b6e3e517d.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>

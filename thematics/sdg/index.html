@@ -714,20 +714,28 @@ context of the range of subjectOf.   Reference thematic type <a class="reference
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;subjectOf&quot;: {
-        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
-        &quot;@type&quot;: &quot;CreativeWork&quot;,
-        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
-        &quot;name&quot;: &quot;UNSD SDG indicator code:C140c01&quot;,
-        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/8ad831bceedd0d330ad9a7136c8ca0ea0458038041d9639a134cdfd93de8113d.svg" src="../../_images/8ad831bceedd0d330ad9a7136c8ca0ea0458038041d9639a134cdfd93de8113d.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -801,29 +809,28 @@ use cases where resources can be grouped based on their connection to those prin
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;publishingPrinciples&quot;: [
-        {
-            &quot;@id&quot;: &quot;https://sdgs.un.org/goals/goal14&quot;,
-            &quot;@type&quot;: &quot;CreativeWork&quot;,
-            &quot;description&quot;: &quot;Conserve and sustainably use the oceans, seas and marine resources for sustainable development&quot;,
-            &quot;name&quot;: &quot;Sustainable Development Goal 14&quot;,
-            &quot;url&quot;: &quot;https://sdgs.un.org/goals/goal14&quot;
-        },
-        {
-            &quot;@id&quot;: &quot;https://dx.doi.org/10.1038/sdata.2016.18&quot;,
-            &quot;@type&quot;: &quot;CreativeWork&quot;,
-            &quot;description&quot;: &quot;FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship.&quot;,
-            &quot;name&quot;: &quot;FAIR data principles&quot;,
-            &quot;url&quot;: &quot;https://www.nature.com/articles/sdata201618&quot;
-        }
-    ]
+    }
 }
 </pre></div>
 </div>
-<img alt="../../_images/5b24a80b0f53f601add0662c383017739cb358df4a2ccdaa6b6c0b25dbabbeb1.svg" src="../../_images/5b24a80b0f53f601add0662c383017739cb358df4a2ccdaa6b6c0b25dbabbeb1.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -972,20 +979,28 @@ cite or reference another creative work.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;CreativeWork&quot;,
-    &quot;citation&quot;: {
-        &quot;@id&quot;: &quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;,
-        &quot;@type&quot;: &quot;CreativeWork&quot;,
-        &quot;description&quot;: &quot;Number of countries making progress ... the oceans and their resources&quot;,
-        &quot;name&quot;: &quot;UNSD SDG indicator code:C140c01&quot;,
-        &quot;url&quot;: &quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/291337ec8dfa8db58fd75428e3d3a4e5e6b8d8edb619a18886c5e53ae961af73.svg" src="../../_images/291337ec8dfa8db58fd75428e3d3a4e5e6b8d8edb619a18886c5e53ae961af73.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>

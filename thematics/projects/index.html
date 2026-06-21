@@ -591,23 +591,28 @@ has a sub-type of <a class="reference external" href="https://schema.org/Researc
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;ResearchProject&quot;,
-    &quot;description&quot;: &quot;Repo description ... &quot;,
-    &quot;identifier&quot;: {
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
-        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
-    },
-    &quot;legalName&quot;: &quot;Example Data Repository&quot;,
-    &quot;name&quot;: &quot;ExDaRepo&quot;,
-    &quot;url&quot;: &quot;https://www.example-data-repository.org&quot;
+    }
 }
 </pre></div>
 </div>
-<img alt="../../_images/31539e64af7fb1a425040efab575fda41b8de1b32ae42fb408f164c50966d19b.svg" src="../../_images/31539e64af7fb1a425040efab575fda41b8de1b32ae42fb408f164c50966d19b.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">39</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">39</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <section id="details-identifier">
@@ -664,19 +669,28 @@ a resource.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
     &quot;@context&quot;: {
         &quot;@vocab&quot;: &quot;https://schema.org/&quot;
-    },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;ResearchProject&quot;,
-    &quot;identifier&quot;: {
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;UN Department of Economic and Social Affairs Sustainable Development&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/grid&quot;,
-        &quot;url&quot;: &quot;https://grid.ac/institutes/grid.475727.4&quot;
     }
 }
 </pre></div>
 </div>
-<img alt="../../_images/47a31312afe7a612c19c92cce565c33e5b9fcb3e10b58a1fe1998c1c91fe5b0d.svg" src="../../_images/47a31312afe7a612c19c92cce565c33e5b9fcb3e10b58a1fe1998c1c91fe5b0d.svg" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">34</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">jd</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">framed</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="nb">print</span><span class="p">(</span><span class="n">jd</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">34</span> <span class="n">jbutils</span><span class="o">.</span><span class="n">show_graph</span><span class="p">(</span><span class="n">framed</span><span class="p">)</span>
+
+<span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
+
+<span class="ne">KeyError</span>: &#39;@default&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
