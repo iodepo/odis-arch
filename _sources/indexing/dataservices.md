@@ -11,12 +11,12 @@ An S3 compliant object store supporting S3 APIs including S3Select.  For open so
 
 ## Gleaner Data Services (DS)
 
-If you wish to work with a triplestore and wish to use the default app used by OIH
+If you wish to work with a triplestore and wish to use the default app used by ODIS
 you can use the compose file that sets up the Gleaner Data Services environment.  
 
 This adds the Blazegraph triplestore to the configuration along with the object store. 
 
-The details of the OIH data services are found in the
+The details of the ODIS data services are found in the
  [Data Services](dataservices.md) section.
 
 ```{figure} ./images/gleaner2.png

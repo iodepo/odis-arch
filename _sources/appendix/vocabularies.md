@@ -9,7 +9,7 @@ Many such resources can be found by searching at [BARTOC.org](https://bartoc.org
 or the [UNESCO Thesaurus](http://vocabularies.unesco.org/browser/thesaurus/en/).
 
 Note, at present this is an exploration and there is not yet a recommendation
-for use in OIH.  
+for use in ODIS.  
 
 ## List
 

@@ -35,8 +35,8 @@ Any of the properties of Person seen there are valid to use in such a record.
 
 While publishers are free to use as many elements as they wish, our goal 
 with this documentation is provide a simple example that address some of the search
-and discovery goals of OIH along with those properties most useful in the linking 
-of resources between OIH participants.   
+and discovery goals of ODIS along with those properties most useful in the linking 
+of resources between ODIS participants.   
 
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json
@@ -120,7 +120,7 @@ jbutils.show_graph(framed)
 
 Nationality provide connections to languages a person is
 connected with.  The property, [schema.org/nationality](https://schema.org/nationality),
-is used to present that.  In the OIH we need to state what the semantics of 
+is used to present that.  In the ODIS we need to state what the semantics of 
 nationality are for our use case. 
 
 
@@ -288,7 +288,7 @@ providers (publishers).   The Person type is show connected simply on a type and
 id.  This provides the cleanest connection.  If a member is added by type and id, as 
 in the case of the "Organization A" link, there is the problem of additional triples
 being added.  Here, the name and description properties are going to add triples to the
-OIH KG.  In so doing, we run the risk or adding potentially un-authoritative information.
+ODIS KG.  In so doing, we run the risk or adding potentially un-authoritative information.
 The aggregator doesn't know if triples here are or are not provided by an actor
 authoritative for those properties.  This could be addresses with framing or validation 
 workflows, or ignored.  The prov elements stored could be leveraged to later track

@@ -29,13 +29,13 @@ The [JSON-LD](https://json-ld.org) website has some detailed material and videos
 their [documentation section](https://json-ld.org/learn.html).
 
 The material here is just a brief introduction.   For this page we will be using
-a simplified version of a CreativeWork document. All the types used by OIH are defined
+a simplified version of a CreativeWork document. All the types used by ODIS are defined
 by Schema.org types.  In this case it is [CreativeWork](https://schema.org/CreativeWork).
 
 At the Schema.org site you will find extensive details on what the various types mean and 
-the full range of their properties. For OIH we are defining only a few of these properties 
+the full range of their properties. For ODIS we are defining only a few of these properties 
 as of interest in the [Thematic section](../thematics/index.md).  You are free to use additional
-properties to describe your resources.  It will not cause any issues, however, the OIH interfaces
+properties to describe your resources.  It will not cause any issues, however, the ODIS interfaces
 may not leverage them.  However, if you feel others would, or you use them yourself, it's encouraged
 to add them.  
 
@@ -99,7 +99,7 @@ The context part of this document is highlighted below.
 
 ```{note}
 This @context section will be the same for all
-the documents described in OIH documentation with the exception of the spatial patterns.  
+the documents described in ODIS documentation with the exception of the spatial patterns.  
 ```
 
 
@@ -180,7 +180,7 @@ types will be all lower case.  So, CreateWork, as a type, starts with a upper ca
 a property on the CreateWork type, starts with a lower case n.  
 ```
 
-For OIH these type for the various thematic profiles are defined in the documentation for the types.  
+For ODIS these type for the various thematic profiles are defined in the documentation for the types.  
 
 
 ### Other properties
@@ -192,13 +192,13 @@ At this point we can return to look at the other properties for our type.
 :linenos:
 ```
 
-As noted, we are using Schema.org type for OIH.  In this case, as mentioned,
+As noted, we are using Schema.org type for ODIS.  In this case, as mentioned,
 this is type  [CreativeWork](https://schema.org/CreativeWork).  So any of the properties 
-seen at the Schema.org site can be used.   The key properties of value to the OIH implementation can then 
+seen at the Schema.org site can be used.   The key properties of value to the ODIS implementation can then 
 be found, for this type, in the [Documents thematic type](../thematics/docs/index.md).
 
-For the OIH implementation, we will use the following properties as core properties we 
-want all OIH documents to have.  These include:
+For the ODIS implementation, we will use the following properties as core properties we 
+want all ODIS documents to have.  These include:
 
 > name:  The name of the document or item being described
 > 

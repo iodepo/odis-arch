@@ -247,7 +247,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../users/sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/sparql.html">ODIS SPARQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../users/apis.html">APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
@@ -493,7 +493,7 @@ document.write(`
 <section id="about">
 <h2>About<a class="headerlink" href="#about" title="Link to this heading">#</a></h2>
 <p>This page describes the publishing process for structured data
-on the web approach OIH will use.</p>
+on the web approach ODIS will use.</p>
 <p>Note many software packages you are using might already
 implement this approach.  See the section:
 <em>Existing support in software</em> at the bottom of this document.</p>
@@ -504,11 +504,11 @@ implement this approach.  See the section:
 </div>
 <section id="architecture-implementation">
 <h3>Architecture Implementation<a class="headerlink" href="#architecture-implementation" title="Link to this heading">#</a></h3>
-<p>The Ocean Info Hub (OIH) will leverage structured data on the web and web
+<p>The Ocean Info Hub (ODIS) will leverage structured data on the web and web
 architecture patterns to expose metadata about resources of interest to the
 community.  The primary tasks include:</p>
 <ul>
-<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS OIH
+<li><p>Authoring JSON-LD documents (<a class="reference external" href="https://json-ld.org/">https://json-ld.org/</a>) aligned with ODIS ODIS
 guidance to express the structured metadata for a resource.  This step will
 require experience with using the existing metadata resources within an
 organization.  So any necessary skills needed to access or query existing
@@ -528,12 +528,12 @@ guidance at <a class="reference external" href="https://www.sitemaps.org/">https
 element as described at <a class="reference external" href="https://www.sitemaps.org/protocol.html">https://www.sitemaps.org/protocol.html</a> which should
 indicate the date the resource metadata was last updated and published to the
 web.</p></li>
-<li><p>The process of aligning the JSON-LD is iterative at this stage as the OIH
+<li><p>The process of aligning the JSON-LD is iterative at this stage as the ODIS
 profile is evolved.  To aid this we can leverage existing validation tools
 including JSONSchema, W3C SPARQL and more to communicate structure changes.
 These tools exist and need only be implemented using knowledge of command
 line environments.  The results will then indicate revisions needed in the
-JSON-LD.  OIH will provide the necessary templates for the tools to use
+JSON-LD.  ODIS will provide the necessary templates for the tools to use
 against the authored JSON-LD documents.</p></li>
 </ul>
 <p>Information on the sources, standards and vocabularies to be used can be found
@@ -541,7 +541,7 @@ at: <a class="github reference external" href="https://github.com/iodepo/odis-ar
 </section>
 <section id="including-json-ld-in-your-resource-page">
 <h3>Including JSON-LD in your resource page<a class="headerlink" href="#including-json-ld-in-your-resource-page" title="Link to this heading">#</a></h3>
-<p>To provide detailed and semantically described details on a resource, OIH uses
+<p>To provide detailed and semantically described details on a resource, ODIS uses
 a <a class="reference external" href="https://json-ld.org/">JSON-LD</a> snippet or <em>data graph</em>.  This small document
 provides details on the resource.  It can also express any explicate
 connections to other resources an author may wish to express.  The semantic
@@ -594,7 +594,7 @@ exploring approaches for JSON-LD data graphs.  It will catch basic errors of
 syntax and use.  Note, it will not catch semantic issues such as using
 properties on types that are out of range.  Tools like the <a class="reference external" href="https://search.google.com/structured-data/testing-tool">Structured Data
 Testing Tool</a> are
-better at that.  Also the documents and validation material created here OIH
+better at that.  Also the documents and validation material created here ODIS
 will also allow for that sort of testing and feedback.</p>
 <p>Providers may also wish to provide content negotiation for type application/ld+json
 for these resources. Some indexers,  like Gleaner, will attempt to negotiate for
@@ -606,7 +606,7 @@ the specific serialization and this will likely lighten the load on the servers 
 will be developed. Note, this validation does not limit what can be in the graphs.<br />
 Rather, it simply provides insight on to how well a given graph can be
 leveraged for a specific application.  For this project, the application will
-be the OIH search portal.</p>
+be the ODIS search portal.</p>
 <p>Some initial development work for this can be found in the
 <a class="reference internal" href="../validation/index.html"><span class="std std-doc">validation directory</span></a></p>
 <section id="validation-tools-and-references">
@@ -746,7 +746,7 @@ storage for the objects and the resulting graph.  These resources are
 then ready for use in search and other functions.</p>
 <p>Moving left to right we can review the image.</p>
 <ol class="arabic simple">
-<li><p>Providers are engaged in the process of developing the OIH example
+<li><p>Providers are engaged in the process of developing the ODIS example
 documents.  These provide a <em>profile</em> to follow to represent the semantic
 metadata.  Note, these are not limiters, simply guidance on minimum and
 recommend elements to address the functional goals of the OIH portal.</p></li>

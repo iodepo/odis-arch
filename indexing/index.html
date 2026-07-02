@@ -247,7 +247,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../users/sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/sparql.html">ODIS SPARQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../users/apis.html">APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
@@ -479,7 +479,7 @@ document.write(`
 <h1>Aggregator<a class="headerlink" href="#aggregator" title="Link to this heading">#</a></h1>
 <section id="intoduction">
 <h2>Intoduction<a class="headerlink" href="#intoduction" title="Link to this heading">#</a></h2>
-<p>This section introduces the OIH approach to indexing. Currently,  OIH is
+<p>This section introduces the ODIS approach to indexing. Currently,  ODIS is
 using the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner">Gleaner</a> software to do the indexing and leverages the Gleaner IO
 <a class="reference external" href="https://github.com/gleanerio/gleaner-compose">gleaner-compose</a> Docker
 Compose files for the server side architecture.  For more information on Docker Compose files visit the
@@ -502,7 +502,7 @@ you may run fewer than this.</p>
 <li><p>Chrome Headless: In cases where providers place the JSON-LD documents into the pages with Javascript, we need to render the page before
 reading and accessing the DOM.  This is done using Chrome Headless</p></li>
 <li><p>Graph database:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
-queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For OIH we
+queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For ODIS we
 use the <a class="reference external" href="https://github.com/blazegraph/database">Blazgraph triplestore</a>.</p></li>
 <li><p>Router: If we wish to deploy this setup onto the net, we will route to route all the services through a single domain.  To do this network routing
 we use <a class="reference external" href="https://traefik.io/">Traefik</a>.  This router is not required for local use and alternative routers like <a class="reference external" href="https://caddyserver.com/">Caffdy</a>
@@ -544,7 +544,7 @@ can be hosted elsewhere and simply call to the index in compliance with CORS set
 </section>
 <section id="alternatives">
 <h3>Alternatives<a class="headerlink" href="#alternatives" title="Link to this heading">#</a></h3>
-<p>Note, the Gleaner ecosystem is not a requirement.  OIH follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the <a class="reference internal" href="alternatives.html"><span class="std std-doc">Alternative Approaches</span></a> section for more on this.</p>
+<p>Note, the Gleaner ecosystem is not a requirement.  ODIS follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the <a class="reference internal" href="alternatives.html"><span class="std std-doc">Alternative Approaches</span></a> section for more on this.</p>
 <p>What follows is a bit more detail on the setup used by Gleaner.  Experienced users will
 see where they can swap out elements for their own preference.  Like a different
 triplestore, or wish to leverage a commercial object store?  Simply modify the architecture
@@ -554,16 +554,16 @@ to do so.</p>
 <section id="odis-catalog-as-index-source">
 <h2>ODIS Catalog as Index Source<a class="headerlink" href="#odis-catalog-as-index-source" title="Link to this heading">#</a></h2>
 <p>Before we discuss indexing source a key question is what source will be indexed.
-OIH is not a web crawl in that it doesn’t move from source to source based on
+ODIS is not a web crawl in that it doesn’t move from source to source based on
 the content of those sources.</p>
-<p>Rather, the OIH index is based on a list of sources selected ahead of time.  At
+<p>Rather, the ODIS index is based on a list of sources selected ahead of time.  At
 this time that set of sources if based on those partners engaged in the
-development phase of OIH.  As the work moves to a more routine operation
+development phase of ODIS.  As the work moves to a more routine operation
 the sources will come from the <a class="reference external" href="https://catalogue.odis.org/">ODIS Catalog</a>.</p>
 <p>The ODIS Catalog will then act as a curated source of domains for inclusion
 in the Ocean InfoHub.   This will provide a level of curation and vetted of sources
 and ensure sources are aware of the technical requirements for inclusion in the
-OIH index.</p>
+ODIS index.</p>
 </section>
 </section>
 

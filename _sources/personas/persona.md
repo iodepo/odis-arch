@@ -2,18 +2,18 @@
 
 ## About 
 
-During the design process of the Ocean InfoHub (OIH), many of the design approached leverage three
-personas that help define the various archetypes of people who engage with OIH.  It should not be assumed
+During the design process of the Ocean InfoHub (ODIS), many of the design approached leverage three
+personas that help define the various archetypes of people who engage with ODIS.  It should not be assumed
 these scope all the potential persona or that a person or organization scope only one.  It is quite possible
 to many.   These are simply design approaches representing potential models or characters.   They 
-are tools used in the design process of OIH.
+are tools used in the design process of ODIS.
 
 ````{grid}
 
 ```{grid-item}
 ![](../images/personna.svg) 
 
-Publisher: A key persona whose activities are covered in detail in [Publishing patterns for OIH](../publishing/publishing.md)
+Publisher: A key persona whose activities are covered in detail in [Publishing patterns for ODIS](../publishing/publishing.md)
 ```
 
 ```{grid-item}
@@ -34,7 +34,7 @@ the web for discovery or tools such as Jupyter for analytics and visualization.
 
 ## Persona: Publisher
 
-In OIH the Publisher is engaged authoring the JSON-LD documents and publishing them 
+In ODIS the Publisher is engaged authoring the JSON-LD documents and publishing them 
 to the web.  This persona is focused on describing and presenting structured data on the web
 to aid in the discovery and use the resources they manage. 
  Details on this persona can be found in the [Publisher](../publishing/publishing.md) section.  
@@ -43,12 +43,12 @@ profiles described in the [Thematic Patterns](../thematics/index.md).
 
 ## Persona: Aggregator
 
-In OIH the Aggregator is a person or organization who is indexing resources on the 
+In ODIS the Aggregator is a person or organization who is indexing resources on the 
 web using the structured data on the web patterns described in this documentation.  
 Their goal is to efficiently and effectively index the resources exposed by the Publisher 
 persona and generate usable indexes.  Further, they would work to expose these indexes in 
 a manner that is usable by the User persona.
-Details on the approach used by OIH and potential alternatives can be found in the 
+Details on the approach used by ODIS and potential alternatives can be found in the 
 [Aggregator](../indexing/index.md) section.
 
 ## Persona: User

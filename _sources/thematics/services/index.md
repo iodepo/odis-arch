@@ -17,7 +17,7 @@ execution:
 ## About 
 
 This section will provide information on the service type.  This is not 
-one of the main OIH types.  However, we will provide guidance here on describing
+one of the main ODIS types.  However, we will provide guidance here on describing
 services using schema.org.
 
 It should be noted that this might be a simple link to an OpenAPI or some 

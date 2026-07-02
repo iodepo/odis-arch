@@ -2,7 +2,7 @@
 
 ## Options
 
-While [Gleaner](https://gleaner.io/) will be used during initial OIH development it is not
+While [Gleaner](https://gleaner.io/) will be used during initial ODIS development it is not
 the only or required approach.   The web architecture foundation means there are many other tools that
 can be used and might be leveraged in a production environment including:
 

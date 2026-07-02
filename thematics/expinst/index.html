@@ -247,7 +247,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../../users/sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users/sparql.html">ODIS SPARQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../users/apis.html">APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
@@ -547,8 +547,8 @@ using <a class="reference external" href="https://schema.org/Person">schema.org/
 Any of the properties of Person seen there are valid to use in such a record.</p>
 <p>While publishers are free to use as many elements as they wish, our goal
 with this documentation is provide a simple example that address some of the search
-and discovery goals of OIH along with those properties most useful in the linking
-of resources between OIH participants.</p>
+and discovery goals of ODIS along with those properties most useful in the linking
+of resources between ODIS participants.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
 <span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
 <span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
@@ -709,7 +709,7 @@ a resource.</p>
 <h3>Details: nationality<a class="headerlink" href="#details-nationality" title="Link to this heading">#</a></h3>
 <p>Nationality provide connections to languages a person is
 connected with.  The property, <a class="reference external" href="https://schema.org/nationality">schema.org/nationality</a>,
-is used to present that.  In the OIH we need to state what the semantics of
+is used to present that.  In the ODIS we need to state what the semantics of
 nationality are for our use case.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -985,7 +985,7 @@ providers (publishers).   The Person type is show connected simply on a type and
 id.  This provides the cleanest connection.  If a member is added by type and id, as
 in the case of the “Organization A” link, there is the problem of additional triples
 being added.  Here, the name and description properties are going to add triples to the
-OIH KG.  In so doing, we run the risk or adding potentially un-authoritative information.
+ODIS KG.  In so doing, we run the risk or adding potentially un-authoritative information.
 The aggregator doesn’t know if triples here are or are not provided by an actor
 authoritative for those properties.  This could be addresses with framing or validation
 workflows, or ignored.  The prov elements stored could be leveraged to later track

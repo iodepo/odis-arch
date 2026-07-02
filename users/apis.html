@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Appendix" href="../appendix/index.html" />
-    <link rel="prev" title="OIH SPARQL" href="sparql.html" />
+    <link rel="prev" title="ODIS SPARQL" href="sparql.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -247,7 +247,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="sparql.html">OIH SPARQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparql.html">ODIS SPARQL</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">APIs</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
@@ -485,7 +485,7 @@ To do this you can visit a web based query interface as discussed in other secti
 <p>One approach to this RESTful approach is to use the
 <a class="reference external" href="https://www.w3.org/TR/2013/REC-sparql11-http-rdf-update-20130321/">SPARQL 1.1 Graph Store HTTP Protocol</a>.
 This is a simple HTTP protocol that allows you to query the graph using SPARQL and obtain the results in JSON.</p>
-<p>The OIH triplestore exposes the graph following this pattern for queries.</p>
+<p>The ODIS triplestore exposes the graph following this pattern for queries.</p>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
@@ -578,7 +578,7 @@ axios library (<a class="reference external" href="https://axios-http.com/">http
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">OIH SPARQL</p>
+        <p class="prev-next-title">ODIS SPARQL</p>
       </div>
     </a>
     <a class="right-next"
