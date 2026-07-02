@@ -20,7 +20,7 @@ Make sure the command ```qlever``` is now in your PATH variable.  You may need
 to modify your path variable to ensure it is.
 
 First, create a working directory for the ODIS graph to live in on your system.
-Call this anything you wish, here I will use ```odis-oih-graph```.
+Call this anything you wish, here I will use ```odis-graph```.
 
 Then change directory, cd, into that new directory and run the
 following commands from there.
