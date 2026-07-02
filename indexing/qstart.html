@@ -497,35 +497,39 @@ document.write(`
 <p><img alt="compose options" src="../_images/composeOptions.png" /></p>
 <section id="gleaner-app">
 <h2>Gleaner (app)<a class="headerlink" href="#gleaner-app" title="Link to this heading">#</a></h2>
-<p>The Gleaner applications performs the retrieval and loading of JSON-LD documents
-from the web following structured data on the web patterns.  Gleaner is available for Linux, Mac OS X and Windows.</p>
-<p>While Gleaner is a stand alone app, it needs to interact with
-an object store to support data storage and other operations.  These dependencies are met within the
-Gleaner Indexing Services or Data Service Docker compose files.</p>
+<p>The Gleaner applications performs the retrieval and loading of JSON-LD documents from the web,
+following structured data on the web patterns.<br />
+Gleaner is available for Linux, Mac OS X and Windows.</p>
+<p>While Gleaner is a stand alone app, it needs to interact with an object store to support data storage and other operations.
+These dependencies are met within the Gleaner Indexing Services or Data Service Docker compose files.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This documentation is in development.  The primary testing environments are Linux and other UNIX based platforms
-such as Mac OS X.   If you are on Windows, there may be some issues.  If you can use a Linux subsystem on Windows,
-you may experience better results.  We will test with Windows eventually and update documentation as needed.</p>
+<p>This documentation is in development.<br />
+The primary testing environments are Linux and other UNIX based platformssuch as Mac OS X.<br />
+If you are on Windows, there may be some issues.<br />
+If you can use a Linux subsystem on Windows, you may experience better results.<br />
+We will test with Windows eventually and update documentation as needed.</p>
 </div>
 <section id="quick-start-steps">
 <h3>Quick Start steps<a class="headerlink" href="#quick-start-steps" title="Link to this heading">#</a></h3>
-<p>This quick start guide is focused on setting up and testing Gleaner in a local environnement.  It is similar to
-how you might run Gleaner in a production environment but lacks the routing and other features likely desired for
-such a situation.</p>
+<p>This quick start guide is focused on setting up and testing Gleaner in a local environment.<br />
+It is similar to how you might run Gleaner in a production environment
+but lacks the routing and other features likely desired for such a situation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This documentation assumes a basic understanding of Docker and experience with basic Docker activities like
-starting and stopping containers.  It also assumes an understanding of using a command line interface and
-editing configuration files in the YAML format.</p>
+<p>This documentation assumes a basic understanding of Docker
+and experience with basic Docker activities like starting and stopping containers.<br />
+It also assumes an understanding of using a command line interface
+and editing configuration files in the YAML format.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<p>From this point down, the documentation will attempt to put all commands
-you should issue in this admonition style box.</p>
+<p>From this point down,
+the documentation will attempt to put all commands you should issue in this admonition style box.</p>
 </div>
-<p>In the end, this is the table of applications and config files you will need.  In this guide we will go through
-downloading, setting them up and running Gleaner to index documents from the web.</p>
+<p>In the end, this is the table of applications and config files you will need.<br />
+In this guide we will go through downloading, setting them up
+and running Gleaner to index documents from the web.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Required Applications and Their Config Files</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
@@ -548,9 +552,11 @@ downloading, setting them up and running Gleaner to index documents from the web
 </div>
 <section id="grab-gleaner-and-the-support-files-we-need">
 <h4>Grab Gleaner and the support files we need<a class="headerlink" href="#grab-gleaner-and-the-support-files-we-need" title="Link to this heading">#</a></h4>
-<p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file
-template.  To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
-and pick the release <em>Ocean InfoHubdev rc1</em>.  Under the <em>Assets</em> drop down you should see the files we need.  Get:</p>
+<p>We will need to get the Gleaner binary for your platform and also the Gleaner configuration file template.<br />
+To do this, visit the <a class="reference external" href="https://github.com/earthcubearchitecture-project418/gleaner/releases">Gleaner Releases page </a>
+and pick the release <em>Ocean InfoHubdev rc1</em>.<br />
+Under the <em>Assets</em> drop down you should see the files we need.</p>
+<p>Get:</p>
 <ul class="simple">
 <li><p>Gleaner for your platform</p></li>
 <li><p>Gleaner config template: template_v2.0.yaml</p></li>
@@ -569,19 +575,20 @@ curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can download these with any tool you wish or through the browser.  Above we downloaded used the command
-line curl tool.  For GitHub, be sure to add the -L to inform curl to follow redirects to the object to download.</p>
+<p>You can download these with any tool you wish or through the browser.<br />
+Above we downloaded using the commandline curl tool.<br />
+For GitHub, be sure to add the -L to inform curl to follow redirects to the object to download.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
-<p>You may need to change the permission on your gleaner file to ensure it can be run.   On Linux this would
-look something like the following.</p>
+<p>You may need to change the permission on your gleaner file to ensure it can be run.<br />
+On Linux this would look like the following.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>gleaner
 </pre></div>
 </div>
 </div>
-<p>We then need to visit <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> to pull down the
-appropriate JSON-LD context.  For this work we will want to pull down the <em>schemaorg-current-https</em> in JSON-LD format.<br />
+<p>We then need to visit <a class="reference external" href="https://schema.org/docs/developers.html">Schema.org for Developers</a> to pull down the appropriate JSON-LD context.<br />
+For this work we will want to pull down the <em>schemaorg-current-https</em> in JSON-LD format.<br />
 It also should work to do something similar to the following:</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
@@ -592,37 +599,37 @@ It also should work to do something similar to the following:</p>
 </section>
 <section id="about-the-compose-file-s">
 <h4>About the compose file(s)<a class="headerlink" href="#about-the-compose-file-s" title="Link to this heading">#</a></h4>
-<p>The above steps have collected the resources for the indexer.   We now want to set up the services that
-Gleaner will use to perform the indexing.  To do that we use Docker or an appropriate run time alternative like
-Podman or others.   For this example, we will assume you are using the Docker client.</p>
-<p>As noted, a basic understanding of Docker and the ability to issue Docker cli commands to start and stop
-containers is required. If you are new do Docker, we recommend you visit and read:
-<a class="reference external" href="https://www.docker.com/get-started">Get Started with Docker</a>.</p>
-<p>We need to select the type of services we wish to run.  The various versions of these Docker compose
-file can be found in the <a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.</p>
+<p>The above steps have collected the resources for the indexer.<br />
+We now want to set up the services that Gleaner will use to perform the indexing.<br />
+To do that we use Docker or an appropriate run time alternative like Podman or others.<br />
+For this example, we will assume you are using the Docker client.</p>
+<p>As noted, a basic understanding of Docker
+and the ability to issue Docker cli commands to start and stop containers is required.
+If you are new do Docker, we recommend you visit and read: <a class="reference external" href="https://www.docker.com/get-started">Get Started with Docker</a>.</p>
+<p>We need to select the type of services we wish to run.<br />
+The various versions of these Docker compose file can be found in the <a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.</p>
 <p>Why pick one over the other?</p>
 <blockquote>
-<div><p>Choose Gleaner IS if you simply wish to retrieve the JSON-LD into a data warehouse to use in your own workflows</p>
+<div><p>Choose Gleaner IS if you simply wish to retrieve the JSON-LD into a data warehouse to use in your own workflows.</p>
 </div></blockquote>
 <blockquote>
 <div><p>Choose Gleaner DS if you wish to build out a graph and want to use the default contains used by Gleaner.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We wont look at this file in detail here since there will hopefully be no
-required edits.  You can see the file in detail in the Index Services
-section.</p>
+<p>We won’t look at this file in detail here since there will hopefully be norequired edits.<br />
+You can see the file in detail in the Index Services section.</p>
 </div>
 </section>
 <section id="edit-environment-variables-setup-script">
 <h4>Edit environment variables setup script<a class="headerlink" href="#edit-environment-variables-setup-script" title="Link to this heading">#</a></h4>
-<p>We have Docker and the appropriate compose file.  The compose files require a set of environment variables
-to be populated to provide the local hosts information needed to run.  You can set these yourself or
-use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
+<p>We have Docker and the appropriate compose file.<br />
+The compose files require a set of environment variables to be populated
+to provide the local hosts information needed to run.<br />
+You can set these yourself or use or reference the <a class="reference external" href="http://setenv.sh">setenv.sh</a> file in the Gleaner-compose repository in the<br />
 <a class="reference external" href="https://github.com/gleanerio/gleaner-compose/tree/master/deployment">Gleaner-compose deployment directory</a>.
-You may also need to visit information about permissions at
-<a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Post-installation steps for Linux</a> if you are
-having permission issues.</p>
+You may also need to visit information about permissions at <a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Post-installation steps for Linux</a>
+if you are having permission issues.</p>
 <p>Let’s take a look at the script.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>#!/bin/bash
 <span class="linenos"> 2</span>
@@ -637,8 +644,8 @@ having permission issues.</p>
 <span class="linenos">11</span>export GLEANER_GRAPH=${GLEANER_BASE}/datavol/graph
 </pre></div>
 </div>
-<p>You may wish to edit file to work better with your environment.  By default it will attempt to
-use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
+<p>You may wish to edit this file to work better with your environment.<br />
+By default it will attempt to use localhost to resolve with and host local runtime data in a /tmp/gleaner directory.</p>
 </section>
 <section id="spin-up-the-containers">
 <h4>Spin up the containers<a class="headerlink" href="#spin-up-the-containers" title="Link to this heading">#</a></h4>
@@ -673,10 +680,10 @@ ca08c24963a0<span class="w">        </span>minio/minio:latest<span class="w">   
 </section>
 <section id="edit-gleaner-config-file">
 <h4>Edit Gleaner config file<a class="headerlink" href="#edit-gleaner-config-file" title="Link to this heading">#</a></h4>
-<p>We have all the files we need and we have our support services running.  The next and
-final step is to edit our Gleaner configuration file.  This will let Gleaner know
-the location of the support services, the JSON-LD context file and the locations
-of the resources we wish to index.</p>
+<p>We have all the files we need and we have our support services running.<br />
+The next and final step is to edit our Gleaner configuration file.<br />
+This will let Gleaner know the location of the support services, the JSON-LD context file
+and the locations of the resources we wish to index.</p>
 <p>Let’s take a look at the full configuration file first and then break down each section.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">---</span>
 <span class="linenos"> 2</span><span class="n">minio</span><span class="p">:</span>
@@ -757,10 +764,10 @@ of the resources we wish to index.</p>
 <span class="linenos">7</span>  <span class="n">bucket</span><span class="p">:</span> <span class="n">gleaner</span>
 </pre></div>
 </div>
-<p>The minio section defines the IP and port of the object store.  For this case, we are
-using minio and these are the IP and port from our docker compose steps above.  Note,
-if you were to use Ceph or AWS S3, this section is still labeled minio.  You simply
-need to update the property values.</p>
+<p>The minio section defines the IP and port of the object store.<br />
+For this case, we are using minio and these are the IP and port from our docker compose steps above.<br />
+Note, if you were to use Ceph or AWS S3, this section is still labeled minio.<br />
+You simply need to update the property values.</p>
 </section>
 <section id="gleaner">
 <h5>Gleaner<a class="headerlink" href="#gleaner" title="Link to this heading">#</a></h5>
@@ -864,8 +871,9 @@ need to update the property values.</p>
 </section>
 <section id="run-gleaner">
 <h4>Run gleaner<a class="headerlink" href="#run-gleaner" title="Link to this heading">#</a></h4>
-<p>For this example we are going to run Gleaner directly.  In a deployed instance you may
-run Gleaner via a script or cron style service.  We will document that elsewhere.</p>
+<p>For this example we are going to run Gleaner directly.
+In a deployed instance you may run Gleaner via a script or cron style service.<br />
+We will document that elsewhere.</p>
 <p>We can do a quick test of the setup.</p>
 <div class="tip admonition">
 <p class="admonition-title">Command</p>
@@ -882,21 +890,21 @@ run Gleaner via a script or cron style service.  We will document that elsewhere
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Leave the suffix like .yaml off the name of the config file.  The config system can also read
-json and other formats.  So simply leave the suffix off and let the config code inspect the
-contents.</p>
+<p>Leave the suffix like .yaml off the name of the config file.<br />
+The config system can also read json and other formats.<br />
+So simply leave the suffix off and let the config code inspect the contents.</p>
 </div>
 </section>
 </section>
 <section id="load-results-to-a-graph-and-test">
 <h3>Load results to a graph and test<a class="headerlink" href="#load-results-to-a-graph-and-test" title="Link to this heading">#</a></h3>
-<p>You have set up the server environment and Gleaner and done your run.  Things look good
-but you don’t have a graph you can work with yet.    You need to load the JSON-LD into
-the triplestore in order to start playing.</p>
+<p>You have set up the server environment and Gleaner and done your run.<br />
+Things look good but you don’t have a graph you can work with yet.<br />
+You need to load the JSON-LD into the triplestore in order to start playing.</p>
 <section id="minio-object-store">
 <h4>Minio Object store<a class="headerlink" href="#minio-object-store" title="Link to this heading">#</a></h4>
-<p>To view the object store you could use your browser and point it on the default minio
-port at 9000.  This typically something like localhost:9000.</p>
+<p>To view the object store you could use your browser and point it on the default minio port at 9000.<br />
+This typically is something like <a class="reference external" href="http://localhost:9000">http://localhost:9000</a>.</p>
 <p>If you wish to continue to use the command line you can use the Minio client at
 <a class="reference external" href="https://docs.min.io/docs/minio-client-quickstart-guide.html">Minio Client Quickstart guide</a>.</p>
 <p>Once you have it installed and working, you can write an entry for our object store with:</p>
@@ -909,10 +917,9 @@ port at 9000.  This typically something like localhost:9000.</p>
 </section>
 <section id="load-triplestore">
 <h4>Load Triplestore<a class="headerlink" href="#load-triplestore" title="Link to this heading">#</a></h4>
-<p>We now want to load these objects, which are JSON-LD files holding RDF based graph
-data, into a graph database.  We use the term, triplestore, to define a graph database
-designed to work with the RDF data model and provide SPARQL query support over that
-graph data.</p>
+<p>We now want to load these objects, which are JSON-LD files holding RDF based graph data, into a graph database.<br />
+We use the term ‘’triplestore’’ to define a graph database designed to work with the RDF data model
+and provide SPARQL query support over that graph data.</p>
 <ul class="simple">
 <li><p>Simple script loading</p></li>
 <li><p>Nabu</p></li>
@@ -923,8 +930,7 @@ graph data.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p>The following are some reference which may provide more information on the various
-technologies used in this approach.</p>
+<p>The following are some reference which may provide more information on the various technologies used in this approach.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data">Google: Understanding how structured data works</a></p></li>
 <li><p><a class="reference external" href="https://arxiv.org/abs/2006.06894">Google Dataset Search By the Numbers</a></p></li>
