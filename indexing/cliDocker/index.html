@@ -610,13 +610,13 @@ is in your PATH variable.</p>
 that you can use as well but it will be more difficult to use with the following scripts due
 to container isolation.</p>
 <p>To man an entry in the mc config use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="n">alias</span> <span class="nb">set</span> <span class="n">oih</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">9000</span> <span class="n">worldsbestaccesskey</span> <span class="n">worldsbestsecretkey</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="n">alias</span> <span class="nb">set</span> <span class="n">odis</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">9000</span> <span class="n">worldsbestaccesskey</span> <span class="n">worldsbestsecretkey</span>
 </pre></div>
 </div>
-<p>We should now be able to list our object store.  We have set it up using the alias <em>oih</em>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~/</span><span class="n">clidocker</span><span class="c1"># mc ls oih</span>
+<p>We should now be able to list our object store.  We have set it up using the alias <em>odis</em>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~/</span><span class="n">clidocker</span><span class="c1"># mc ls odis</span>
 <span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">15</span> <span class="mi">14</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">20</span> <span class="n">UTC</span><span class="p">]</span>     <span class="mi">0</span><span class="n">B</span> <span class="n">gleaner</span><span class="o">/</span>
-<span class="n">user</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~/</span><span class="n">clidocker</span><span class="c1"># mc ls oih/gleaner</span>
+<span class="n">user</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~/</span><span class="n">clidocker</span><span class="c1"># mc ls odis/gleaner</span>
 <span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span> <span class="mi">13</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span><span class="p">]</span>     <span class="mi">0</span><span class="n">B</span> <span class="n">milled</span><span class="o">/</span>
 <span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span> <span class="mi">13</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span><span class="p">]</span>     <span class="mi">0</span><span class="n">B</span> <span class="n">orgs</span><span class="o">/</span>
 <span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span> <span class="mi">13</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span><span class="p">]</span>     <span class="mi">0</span><span class="n">B</span> <span class="n">prov</span><span class="o">/</span>
@@ -636,14 +636,14 @@ chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>m
 </div>
 <p>The content we need to load into the triplestore needs to be in RDF for Blazegraph.  We also need
 to tell the triplestore how we have encoded that RDF.   If look in the object store at</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="n">ls</span> <span class="n">oih</span><span class="o">/</span><span class="n">gleaner</span><span class="o">/</span><span class="n">milled</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mc</span> <span class="n">ls</span> <span class="n">odis</span><span class="o">/</span><span class="n">gleaner</span><span class="o">/</span><span class="n">milled</span>
 <span class="p">[</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">19</span> <span class="mi">13</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">52</span> <span class="n">UTC</span><span class="p">]</span>     <span class="mi">0</span><span class="n">B</span> <span class="n">samplesearth</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>We should see a bucket that is holding the RDF data converted from the JSON-LD.  Let’s use this
 in our test.   We can pass this path to the <a class="reference external" href="http://minio2blaze.sh">minio2blaze.sh</a> script.  This script will go looking
 for the mc command we installed above, so be sure it is in a PATH location that script can see.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">minio2blaze</span><span class="o">.</span><span class="n">sh</span> <span class="n">oih</span><span class="o">/</span><span class="n">gleaner</span><span class="o">/</span><span class="n">milled</span><span class="o">/</span><span class="n">samplesearth</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">minio2blaze</span><span class="o">.</span><span class="n">sh</span> <span class="n">odis</span><span class="o">/</span><span class="n">gleaner</span><span class="o">/</span><span class="n">milled</span><span class="o">/</span><span class="n">samplesearth</span>
 <span class="o">...</span>   <span class="n">lots</span> <span class="n">of</span> <span class="n">results</span> <span class="n">removed</span> 
 </pre></div>
 </div>

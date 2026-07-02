@@ -161,15 +161,15 @@ to container isolation.
 To man an entry in the mc config use:
 
 ```
-mc alias set oih  http://localhost:9000 worldsbestaccesskey worldsbestsecretkey
+mc alias set odis  http://localhost:9000 worldsbestaccesskey worldsbestsecretkey
 ```
 
-We should now be able to list our object store.  We have set it up using the alias _oih_.
+We should now be able to list our object store.  We have set it up using the alias _odis_.
 
 ```
-user@ubuntu:~/clidocker# mc ls oih
+user@ubuntu:~/clidocker# mc ls odis
 [2021-08-15 14:31:20 UTC]     0B gleaner/
-user@ubuntu:~/clidocker# mc ls oih/gleaner
+user@ubuntu:~/clidocker# mc ls odis/gleaner
 [2021-08-19 13:36:04 UTC]     0B milled/
 [2021-08-19 13:36:04 UTC]     0B orgs/
 [2021-08-19 13:36:04 UTC]     0B prov/
@@ -195,7 +195,7 @@ The content we need to load into the triplestore needs to be in RDF for Blazegra
 to tell the triplestore how we have encoded that RDF.   If look in the object store at
 
 ```
-mc ls oih/gleaner/milled
+mc ls odis/gleaner/milled
 [2021-08-19 13:26:52 UTC]     0B samplesearth/
 ```
 
@@ -204,7 +204,7 @@ in our test.   We can pass this path to the minio2blaze.sh script.  This script 
 for the mc command we installed above, so be sure it is in a PATH location that script can see.  
 
 ```
-./minio2blaze.sh oih/gleaner/milled/samplesearth
+./minio2blaze.sh odis/gleaner/milled/samplesearth
 ...   lots of results removed 
 ```
 
