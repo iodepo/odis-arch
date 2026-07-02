@@ -29,7 +29,7 @@ Google Data Set Search and provides guidance to developers to facilitate this.
 
 ## Web architecture approach
 
-OIH is focused on leveraging the web architecture as the foundation for this
+ODIS is focused on leveraging the web architecture as the foundation for this
 approach.  There are several key reasons for this vs approaches like OAI-PMH or
 others.
 
@@ -96,15 +96,15 @@ It is arguably not the best or most accurate communications strategy.  It can
 
 ## Intellectual Merit
 
-OIH leverages structured data on the web patterns in the form of 
+ODIS leverages structured data on the web patterns in the form of 
 Schema.org and JSON-LD encoding.  This means that much of what is done
-to address OIH implementation by providers also is available both to existing
+to address ODIS implementation by providers also is available both to existing
 commercial indexing approaches as well as emerging community practices  
 
 Additionally, both the publishing and indexing approaches are based
 on several web architecture patterns.  Meaning that existing organization skills
 are leveraged and staff experience is enhanced.   This helps to address both 
-the sustainability of the OIH connection and the efficiency of 
+the sustainability of the ODIS connection and the efficiency of 
 organizational operation.   
 
 ## Broader Impacts

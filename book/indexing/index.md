@@ -3,7 +3,7 @@
 ## Intoduction
 
 
-This section introduces the OIH approach to indexing. Currently,  OIH is 
+This section introduces the ODIS approach to indexing. Currently,  ODIS is 
 using the [Gleaner](https://github.com/earthcubearchitecture-project418/gleaner) software to do the indexing and leverages the Gleaner IO 
 [gleaner-compose](https://github.com/gleanerio/gleaner-compose) Docker 
 Compose files for the server side architecture.  For more information on Docker Compose files visit the 
@@ -28,7 +28,7 @@ The various compose options for Gleaner
 * Chrome Headless: In cases where providers place the JSON-LD documents into the pages with Javascript, we need to render the page before 
   reading and accessing the DOM.  This is done using Chrome Headless
 * Graph database:  Gleaner extracts JSON-LD documents from resources.  These JSON-LD documents are representations of the RDF data mode.  To
-  queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For OIH we
+  queries on them at scale, it easiest to load the triples into a compatible graph database.  Sometimes we call this a triplestore.  For ODIS we
   use the [Blazgraph triplestore](https://github.com/blazegraph/database).  
 * Router: If we wish to deploy this setup onto the net, we will route to route all the services through a single domain.  To do this network routing 
   we use [Traefik](https://traefik.io/).  This router is not required for local use and alternative routers like [Caffdy](https://caddyserver.com/) 
@@ -74,7 +74,7 @@ can be hosted elsewhere and simply call to the index in compliance with CORS set
 
 ### Alternatives
 
-Note, the Gleaner ecosystem is not a requirement.  OIH follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the [Alternative Approaches](alternatives.md) section for more on this.
+Note, the Gleaner ecosystem is not a requirement.  ODIS follows the structured data on the web and data on the web best practices patterns.  Being web architecture based, there are many open source tools and scripting solutions you might use.  You may wish to explore the [Alternative Approaches](alternatives.md) section for more on this.
 
 What follows is a bit more detail on the setup used by Gleaner.  Experienced users will 
 see where they can swap out elements for their own preference.  Like a different 
@@ -84,15 +84,15 @@ to do so.
 ## ODIS Catalog as Index Source
 
 Before we discuss indexing source a key question is what source will be indexed.
-OIH is not a web crawl in that it doesn't move from source to source based on 
+ODIS is not a web crawl in that it doesn't move from source to source based on 
 the content of those sources. 
 
-Rather, the OIH index is based on a list of sources selected ahead of time.  At
+Rather, the ODIS index is based on a list of sources selected ahead of time.  At
 this time that set of sources if based on those partners engaged in the 
-development phase of OIH.  As the work moves to a more routine operation 
+development phase of ODIS.  As the work moves to a more routine operation 
 the sources will come from the [ODIS Catalog](https://catalogue.odis.org/).  
 
 The ODIS Catalog will then act as a curated source of domains for inclusion 
 in the Ocean InfoHub.   This will provide a level of curation and vetted of sources
 and ensure sources are aware of the technical requirements for inclusion in the 
-OIH index.  
+ODIS index.  

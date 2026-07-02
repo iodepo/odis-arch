@@ -1,9 +1,9 @@
-# OIH Qlever Test Instance
+# ODIS Qlever Test Instance
 
 ## About
 
 This document describes the use of [qlever-control](https://github.com/ad-freiburg/qlever-control)
-to work with the ODIS-OIH graph.
+to work with the ODIS-ODIS graph.
 
 The pre-requisite for using this approach include python and docker.  Once statisfied you
 will need to:

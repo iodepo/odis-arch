@@ -140,7 +140,7 @@ Validation Result in MinCountConstraintComponent (http://www.w3.org/ns/shacl#Min
 
 ```
 
-[OIH Book Validation Information](https://book.oceaninfohub.org/validation/README.html)
+[ODIS Book Validation Information](https://book.oceaninfohub.org/validation/README.html)
 
 ## Query (SPARQL)
 
@@ -148,7 +148,7 @@ SPARQL is a query language that is used to retrieve and manipulate data stored
 in RDF graphs. RDF is a standard for representing information on the web in a
 way that allows it to be linked and interconnected with other data. 
 
-[OIH Book SPARQL Information](https://book.oceaninfohub.org/users/query.html)
+[ODIS Book SPARQL Information](https://book.oceaninfohub.org/users/query.html)
 
 [Notebook example](https://github.com/iodepo/odis-arch/blob/schema-dev-df/code/notebooks/demos/simpleSPARQL.ipynb)
 

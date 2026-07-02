@@ -101,7 +101,7 @@ to a CreativeWork or Event.
 
 
 ```{note}
-Recall that in the case of OIH types, the type CourseInstance or EducationEvent are both
+Recall that in the case of ODIS types, the type CourseInstance or EducationEvent are both
 subtype of Event.  Given that we can use subjectOf to connect a Thing to these types
 as well.  Also, Course is a subtype of CreativeWork, so we are good there too in the 
 context of the range of subjectOf.   Reference thematic type [Training](../training/index.md)

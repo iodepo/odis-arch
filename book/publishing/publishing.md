@@ -3,7 +3,7 @@
 ## About
 
 This page describes the publishing process for structured data 
-on the web approach OIH will use.  
+on the web approach ODIS will use.  
 
 Note many software packages you are using might already 
 implement this approach.  See the section: 
@@ -16,11 +16,11 @@ We also recommend reviewing the document:
 
 ### Architecture Implementation
 
-The Ocean Info Hub (OIH) will leverage structured data on the web and web
+The Ocean Info Hub (ODIS) will leverage structured data on the web and web
 architecture patterns to expose metadata about resources of interest to the
 community.  The primary tasks include:
 
-* Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS OIH
+* Authoring JSON-LD documents (https://json-ld.org/) aligned with ODIS ODIS
   guidance to express the structured metadata for a resource.  This step will
   require experience with using the existing metadata resources within an
   organization.  So any necessary skills needed to access or query existing
@@ -41,12 +41,12 @@ community.  The primary tasks include:
   element as described at https://www.sitemaps.org/protocol.html which should
   indicate the date the resource metadata was last updated and published to the
   web.  
-* The process of aligning the JSON-LD is iterative at this stage as the OIH
+* The process of aligning the JSON-LD is iterative at this stage as the ODIS
   profile is evolved.  To aid this we can leverage existing validation tools
   including JSONSchema, W3C SPARQL and more to communicate structure changes.
   These tools exist and need only be implemented using knowledge of command
   line environments.  The results will then indicate revisions needed in the
-  JSON-LD.  OIH will provide the necessary templates for the tools to use
+  JSON-LD.  ODIS will provide the necessary templates for the tools to use
   against the authored JSON-LD documents.  
 
 Information on the sources, standards and vocabularies to be used can be found
@@ -54,7 +54,7 @@ at: https://github.com/iodepo/odis-arch/tree/schema-dev/docs
 
 ### Including JSON-LD in your resource page
 
-To provide detailed and semantically described details on a resource, OIH uses
+To provide detailed and semantically described details on a resource, ODIS uses
 a [JSON-LD](https://json-ld.org/) snippet or _data graph_.  This small document
 provides details on the resource.  It can also express any explicate
 connections to other resources an author may wish to express.  The semantic
@@ -114,7 +114,7 @@ exploring approaches for JSON-LD data graphs.  It will catch basic errors of
 syntax and use.  Note, it will not catch semantic issues such as using
 properties on types that are out of range.  Tools like the [Structured Data
 Testing Tool](https://search.google.com/structured-data/testing-tool) are
-better at that.  Also the documents and validation material created here OIH
+better at that.  Also the documents and validation material created here ODIS
 will also allow for that sort of testing and feedback.  
 
 Providers may also wish to provide content negotiation for type application/ld+json 
@@ -127,7 +127,7 @@ To help facilitate the interconnection of resource, some application focused val
 will be developed. Note, this validation does not limit what can be in the graphs.  
 Rather, it simply provides insight on to how well a given graph can be
 leveraged for a specific application.  For this project, the application will
-be the OIH search portal.
+be the ODIS search portal.
 
 Some initial development work for this can be found in the
 [validation directory](../validation/index.md)
@@ -273,7 +273,7 @@ then ready for use in search and other functions.
 
 Moving left to right we can review the image.
 
-1. Providers are engaged in the process of developing the OIH example
+1. Providers are engaged in the process of developing the ODIS example
    documents.  These provide a _profile_ to follow to represent the semantic
    metadata.  Note, these are not limiters, simply guidance on minimum and
    recommend elements to address the functional goals of the OIH portal. 

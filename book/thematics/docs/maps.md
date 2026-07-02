@@ -22,7 +22,7 @@ Map: A map represented by a static file or document
 
 The schema.org type Map only offers one special property beyond
 the parent CreativeWork.  That is a [mapType](https://schema.org/mapType) which is an
-enumeration of types that do not apply to OIH use cases.  However, the use of the
+enumeration of types that do not apply to ODIS use cases.  However, the use of the
 Map typing itself may aid in narrowing search requests later to a specific creative work.
 
 Schema.org type Map is a subtype of CreativeWork. As such, we can all the approaches 

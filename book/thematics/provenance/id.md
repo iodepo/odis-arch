@@ -163,7 +163,7 @@ schema.org/provider
 > producer. Another party (a seller) may offer those services or goods on behalf
 > of the provider. A provider may also serve as the seller.
 
-For OIH this is the agent that is responsible for distributing the resource
+For ODIS this is the agent that is responsible for distributing the resource
 and the descriptive metadata.  That is, the provider actually runs and supports
 the services that presents the resource on the net or otherwise makes the 
 data available. 

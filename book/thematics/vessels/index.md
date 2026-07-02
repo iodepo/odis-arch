@@ -16,7 +16,7 @@ execution:
 
 ## About
 
-OIH is exploring how we might leverage schema.org to describe research vessels.  
+ODIS is exploring how we might leverage schema.org to describe research vessels.  
 Note that schema.org is a very broad vocabulary and as such specific concepts 
 like research vessel is not well aligned to current types.
 
@@ -52,7 +52,7 @@ type of Infrastructure that does not currently exist in Schema.org but could be
 proposed.
 
 Addressing the challenge of Observation Infrastructure, and
-potentially revisiting the current OIH type Vessel, may involve engagement with
+potentially revisiting the current ODIS type Vessel, may involve engagement with
 Schema.org itself, something they encourage. 
 
 ```{literalinclude} ../../../odis-in/dataGraphs/thematics/vessels/graphs/ship.json
