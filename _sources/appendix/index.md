@@ -2,7 +2,7 @@
 
 ## About
 
-A collection of items related to the OIH development.  Mostly related
+A collection of items related to the ODIS development.  Mostly related
 to examples around representing concepts in the graph such as
 date and time, language etc.
 
