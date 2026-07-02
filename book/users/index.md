@@ -3,7 +3,7 @@
 ## About
 
 The reference client is available at
- [search.oceaninfohub.org](https://search.oceaninfohub.org).  
+ [search.odis.org](https://search.odis.org).  
  
 
  ![](./images/oceans.png)
@@ -18,7 +18,7 @@ There you will see a button "Add" in the _Site Search_ section.
 
  ![](./images/managesearch.png)
 
-You can make an entry like: __https://search.oceaninfohub.org/results/?search_text=%s&page=0__
+You can make an entry like: __https://search.odis.org/results/?search_text=%s&page=0__
 
 The shortcut, here _odis_ can be used in the address bar to quickly invoke this search.
 
