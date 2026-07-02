@@ -2,7 +2,7 @@
 
 ## Intro
 
-OIH is an open source project, contributors are welcome.  Feel free to submit 
+ODIS is an open source project, contributors are welcome.  Feel free to submit 
 pull requests or reach out to the ODIS community to more formally join the community.
 
 ## Branching patterns
