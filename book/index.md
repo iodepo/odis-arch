@@ -38,29 +38,29 @@ ecosystem to adopt and implement.
 
 ## Guidance for the implementation of the ODIS-architecture
 
-OIH is providing guidance on the various stages of such an
+ODIS is providing guidance on the various stages of such an
 architecture including authoring, publishing, indexing and interfaces.
 
 The basics of this approach can be described as:
 
 * Providers publish HTML pages for a resource.  This may be a publication, course 
-  description, research instrument or other.   The core themes for OIH are described 
+  description, research instrument or other.   The core themes for ODIS are described 
   in the Authoring section below.
 * A HTML page then has a small JSON based snippet added to the HTML.  This is
   described in the Including JSON-LD in your resource page in the Publishing
   resource below. 
-* If you wish a resource to be included in the OIH index, then you need to
+* If you wish a resource to be included in the ODIS index, then you need to
   include it in a sitemap file.  This is a small XML document that lists links
   to the resources you wish to be part of the index.  This approach is shown in
   the sitemap.xml section of the Publishing resource.   
-* Once the above is done the publishing phase is over.  At this point, OIH or
-  other groups can now access and index your resources.   OIH is using some
+* Once the above is done the publishing phase is over.  At this point, ODIS or
+  other groups can now access and index your resources.   ODIS is using some
   existing software to index and generate the graph and expose a simple
   reference interface to them.  This software is open and available and others
   are free to implement the approach with other software.  Links to other
   software are at the repository.  
-* The OIH index/graph and a simple interface is current at a development site
-  and in a later phase of OIH a production interface will be developed.  
+* The ODIS index/graph and a simple interface is current at a development site
+  and in a later phase of ODIS a production interface will be developed.  
 
 ![image1](./images/intro1.png)
 
@@ -74,14 +74,14 @@ various resources published by the community and a shared graph of these
 resources.  That shared graph can be used by all members to link and discover
 across groups.  
 
-## Key links to the OIH GitHub repository
+## Key links to the ODIS GitHub repository
 
-Interested groups can review material addressing these stages at the OIH GitHub
+Interested groups can review material addressing these stages at the ODIS GitHub
 repository.  Links and descriptions of these stages are described below.  
 
 ### [Authoring Thematic Patterns](./thematics/index.md)
 
-The ODIS OIH is working across five major thematic areas; Experts and
+ODIS is working across five major thematic areas; Experts and
 Institutions, Documents, Projects, Training, Vessels.   Examples of these
 thematic concepts are being hosted and developed with input from the community.
 Additionally, methods for validation and simple tooling for authoring and
@@ -98,12 +98,12 @@ expressing hosted resources to the net.
 
 The architecture approach is open and standards based.  As such, many
 organizations will be able to leverage the authoring and publishing approaches
-above to index a providers resources.  OIH will be providing reference
+above to index a providers resources.  ODIS will be providing reference
 implementations of software that can generate the index.
 
 ### [Interfaces and Services](./users/index.md)
 
-During the development of the OIH a basic reference implementation for an
+During the development of the ODIS a basic reference implementation for an
 interface has been generated.  This is a development site meant to test and
 exercise the above elements.   It serves to demonstrate how others could also
 implement this approach and how future interfaces could be developed.  

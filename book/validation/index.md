@@ -3,7 +3,7 @@
 ## About
 
 This section contains some initial work on developing some validation
-approaches for OIH.  The focus initially is not on validating approaches with
+approaches for ODIS.  The focus initially is not on validating approaches with
 the full publishing guidance.  Rather the focuses is on the the "info hub" as a
 search application and develops validation to support that.
 

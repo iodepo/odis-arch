@@ -4,9 +4,9 @@
 
 During the early adopters meetings and in discussion with others an alternative publication pattern came up.  This is the pattern where it is not possible to update the web resources with the metadata content.  This may be due to access or technical issues.  Regardless, what was possible was to generate the metadata in bulk locally and make the resulting document available.
 
-This approach is not ideal since it is a non-standard pattern and makes the data and information more obscure to other users.  However, it is one the OIH architecture can adapt to and is preferable to the option of excluding those partners in this activity.  
+This approach is not ideal since it is a non-standard pattern and makes the data and information more obscure to other users.  However, it is one the ODIS architecture can adapt to and is preferable to the option of excluding those partners in this activity.  
 
-As such, we are making some changes to allow for this pattern.  This means documenting the published graph structure based on the existing thematic patterns and some updates in the indexing workflow to obtain and integrate these graphs into the OIH graph.  
+As such, we are making some changes to allow for this pattern.  This means documenting the published graph structure based on the existing thematic patterns and some updates in the indexing workflow to obtain and integrate these graphs into the ODIS graph.  
 
  ```{warning}
  Anti-pattern:
@@ -78,7 +78,7 @@ can be used.
 ```
 
 In the case of schema:Dataset one might use schema:DataCatlogue for the following approach.  However, 
-since OIH is addressing a wide range of types a more generic collection of Things or CreativeWorks 
+since ODIS is addressing a wide range of types a more generic collection of Things or CreativeWorks 
 approach is needed.
 
 ## Item Catalogue Page
@@ -98,5 +98,5 @@ to:
     2. in the case where IRI is or can be URL, do a validation of at least a 200 on it
 2. How do we publish this?
    1. entry in robots.txt (might be able due to reasons above?)
-   2. published and provided to OIH
+   2. published and provided to ODIS
 3. Need guidance on format and structure

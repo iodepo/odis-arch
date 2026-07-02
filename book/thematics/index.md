@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These thematic patterns are managed by OIH and the community to add in the discovery and use 
+These thematic patterns are managed by ODIS and the community to add in the discovery and use 
 of ocean related resources.  The patterns are simple examples of Schema.org types, with a focus
 on the properties and type relations of value to the Ocean InfoHub and the community it engages. 
 
@@ -44,7 +44,7 @@ describing their resources.
 6. [Identifier Patterns](./identifier/id.md)
 
 ```{seealso}
-For OIH the focus is on generic documents which can scope reports, data and other resources.
+For ODIS the focus is on generic documents which can scope reports, data and other resources.
 In those cases where the resources being described are of type Dataset you may wish to review
 patterns developed for GeoScience Datasets by the ESIP
 [Science on Schema](https://github.com/ESIPFed/science-on-schema.org/) community.

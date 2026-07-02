@@ -1,8 +1,8 @@
-# OIH Query
+# ODIS Query
 
 ## About
 
-This section describes both current OIH query in SPARQL and also the related SHACL shape 
+This section describes both current ODIS query in SPARQL and also the related SHACL shape 
 that can be used to validate a resources alignment to the query.
 
 

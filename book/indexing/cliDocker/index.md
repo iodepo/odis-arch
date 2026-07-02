@@ -77,7 +77,7 @@ f3a4197c42be        minio/minio:latest               "/usr/bin/docker-ent…"   
 At this point we should be able to do a run.  During the init process a 
 working config file was downloaded.   
 
-> Note:  This config file will change...  it's pointing to an OIH partner 
+> Note:  This config file will change...  it's pointing to an ODIS partner 
 > and I will not do that for the release.  I have a demo site I will use.  
 
 Next we need to setup our object for Gleaner.  Gleaner itself can do this 
