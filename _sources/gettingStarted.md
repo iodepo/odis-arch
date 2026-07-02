@@ -295,7 +295,7 @@ there.
 
 ### Does ODIS have a SPARQL endpoint?
 
-Yes, the SPARQL endpoint for ODIS is: http://graph.oceaninfohub.org/blazegraph/namespace/odis/sparql
+Yes, the SPARQL endpoint for ODIS is: http://graph.odis.org/blazegraph/namespace/odis/sparql
 
 You can find more help on how to use the ODIS SPARQL endpoint [here](https://book.odis.org/users/sparql.html). 
 An interface such as [Yasgui](https://yasgui.triply.cc/) can be used to generate your queries.
