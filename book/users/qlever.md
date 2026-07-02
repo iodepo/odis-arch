@@ -26,7 +26,7 @@ Then change directory, cd, into that new directory and run the
 following commands from there.
 
 ```bash
-wget http://ossapi.oceaninfohub.org/public/Qleverfile-odis
+wget http://ossapi.odis.org/public/Qleverfile-odis
 qlever -q Qleverfile-odis get-data         # Download the dataset
 qlever -q Qleverfile-odis index            # Build index data structures for this dataset
 qlever -q Qleverfile-odis start            # Start a QLever server using that index
