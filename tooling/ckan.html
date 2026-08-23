@@ -576,7 +576,7 @@ as follows:</p>
 </div>
 </li>
 <li><p>now install Ubuntu</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">"Ubuntu-24.04"</span>
 </pre></div>
 </div>
 <p><img alt="wsl install1" src="../_images/wsl-install1.png" /></p>
@@ -642,7 +642,7 @@ control.</p>
 </div>
 </li>
 <li><p>execute the following, to setup Docker’s <code class="docutils literal notranslate"><span class="pre">apt</span></code> repository</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add Docker&#39;s official GPG key:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -651,8 +651,8 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
 echo \
-  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;) stable&quot; | \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release &amp;&amp; echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 sudo apt-get update
 </pre></div>
@@ -699,7 +699,7 @@ sudo apt-get update
 for the admin user/password</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the .env file</span>
 <span class="n">vi</span> <span class="o">.</span><span class="n">env</span>
-<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+<span class="c1">#to make your changes, first press your "i" key (for INSERT mode), and</span>
   <span class="c1">#then edit the desired lines</span>
 <span class="c1">#then save with the command</span>
 <span class="p">:</span><span class="n">wq</span>
@@ -826,7 +826,7 @@ extension notes.</p>
 the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the Dockerfile</span>
 <span class="n">vi</span> <span class="n">ckan</span><span class="o">/</span><span class="n">Dockerfile</span>
-<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+<span class="c1">#to make your changes, first press your "i" key (for INSERT mode), and</span>
   <span class="c1">#then edit the desired lines</span>
 <span class="c1">#then save with the command</span>
 <span class="p">:</span><span class="n">wq</span>
@@ -838,7 +838,7 @@ the <code class="docutils literal notranslate"><span class="pre">Dockerfile</spa
 <span class="n">USER</span> <span class="n">root</span>
 
 <span class="c1">### DCAT ###</span>
-<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;git+https://github.com/ckan/ckanext-dcat.git@v2.1.0#egg=ckanext-dcat&#39;</span>  <span class="o">&amp;&amp;</span> \
+<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">'git+https://github.com/ckan/ckanext-dcat.git@v2.1.0#egg=ckanext-dcat'</span>  <span class="o">&amp;&amp;</span> \
      <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ckan</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">dcat</span><span class="o">/</span><span class="n">v2</span><span class="mf">.1.0</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
@@ -857,7 +857,7 @@ to add the <code class="docutils literal notranslate"><span class="pre">dcat</sp
 </div>
 </li>
 <li><p>around line#69, change the <code class="docutils literal notranslate"><span class="pre">CKAN__PLUGINS</span></code> line to add the 2 extensions, such as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">&quot;image_view text_view datatables_view datastore datapusher envvars dcat structured_data&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">"image_view text_view datatables_view datastore datapusher envvars dcat structured_data"</span>
 </pre></div>
 </div>
 </li>
@@ -911,7 +911,7 @@ to see through Portainer.</p>
 </ul>
 </li>
 <li><p>execute the following, to connect to the CKAN container (replace “ckan-docker-git-master-ckan-1” with your container name) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;export TERM=xterm; exec bash&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"export TERM=xterm; exec bash"</span>
 </pre></div>
 </div>
 <p>Your prompt should change to something like <code class="docutils literal notranslate"><span class="pre">ckan&#64;af2e2e3ac57f</span></code>.  If you then
@@ -959,7 +959,7 @@ as follows:</p>
 <li><p>in the <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">head_extras</span> <span class="pre">-%}</span></code> section, around line#13, paste
 the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">structured_data</span> <span class="o">%</span><span class="p">}</span>
-  <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;application/ld+json&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"application/ld+json"</span><span class="o">&gt;</span>
 
   <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
 <span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
@@ -978,97 +978,97 @@ you should see a <code class="docutils literal notranslate"><span class="pre">&l
 the page source (which is the embedded JSON-LD, that is required by ODIS),
 similar to the following snippet:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;brick&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://brickschema.org/schema/Brick#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;csvw&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/csvw#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;dc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/elements/1.1/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;dcam&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcam/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;dcat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/dcat#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;dcmitype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/dcmitype/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;dcterms&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/dc/terms/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;doap&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://usefulinc.com/ns/doap#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;foaf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://xmlns.com/foaf/0.1/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;geo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;odrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/odrl/2/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;org&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/org#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;owl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2002/07/owl#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;prof&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/dx/prof/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;prov&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;qb&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/linked-data/cube#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;rdf&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;rdfs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2000/01/rdf-schema#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;sh&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/shacl#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;skos&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2004/02/skos/core#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;sosa&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/sosa/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;ssn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/ns/ssn/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2006/time#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;vann&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://purl.org/vocab/vann/&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;void&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://rdfs.org/ns/void#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;wgs&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos#&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;xsd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span>
+<span class="w">      </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"brick"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://brickschema.org/schema/Brick#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"csvw"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/csvw#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"dc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/elements/1.1/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"dcam"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/dcam/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"dcat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/dcat#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"dcmitype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/dcmitype/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"dcterms"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/dc/terms/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"doap"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://usefulinc.com/ns/doap#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"foaf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xmlns.com/foaf/0.1/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"geo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"odrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/odrl/2/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"org"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/org#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"owl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2002/07/owl#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"prof"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/dx/prof/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"prov"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/prov#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"qb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/linked-data/cube#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"rdf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"rdfs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://schema.org/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"sh"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/shacl#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"skos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2004/02/skos/core#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"sosa"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/sosa/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"ssn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/ns/ssn/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2006/time#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"vann"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://purl.org/vocab/vann/"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"void"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://rdfs.org/ns/void#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"wgs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.w3.org/2003/01/geo/wgs84_pos#"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"xsd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#"</span>
 <span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;@graph&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="nt">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:Dataset&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:creator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:Dataset"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:creator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814"</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;schema:dateModified&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-17T19:20:38.929522&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:datePublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-01-17T19:20:10.193510&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:distribution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed&quot;</span>
+<span class="w">              </span><span class="nt">"schema:dateModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-01-17T19:20:38.929522"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-01-17T19:20:10.193510"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:distribution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed"</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;schema:includedInDataCatalog&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N327f3587332f414ca7f4844b454cffe9&quot;</span>
+<span class="w">              </span><span class="nt">"schema:includedInDataCatalog"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N327f3587332f414ca7f4844b454cffe9"</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;schema:license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opendefinition.org/licenses/cc-by-sa&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point test&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:publisher&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span>
+<span class="w">              </span><span class="nt">"schema:license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opendefinition.org/licenses/cc-by-sa"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point test"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:publisher"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814"</span>
 <span class="w">              </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/point-test&quot;</span>
+<span class="w">              </span><span class="nt">"schema:url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/dataset/point-test"</span>
 <span class="w">          </span><span class="p">},</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N327f3587332f414ca7f4844b454cffe9&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:DataCatalog&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CKAN&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N327f3587332f414ca7f4844b454cffe9"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:DataCatalog"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CKAN"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443"</span>
 <span class="w">          </span><span class="p">},</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:Organization&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:contactPoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/organization/e37afbc0-4270-4e26-ac15-036590485814"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:Organization"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:contactPoint"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">                  </span><span class="p">{</span>
-<span class="w">                      </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N8f3eab00d6a7479d889d86e1cdba9894&quot;</span>
+<span class="w">                      </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N8f3eab00d6a7479d889d86e1cdba9894"</span>
 <span class="w">                  </span><span class="p">},</span>
 <span class="w">                  </span><span class="p">{</span>
-<span class="w">                      </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N55713fa9e8ff489aa8ea185298b1344e&quot;</span>
+<span class="w">                      </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N55713fa9e8ff489aa8ea185298b1344e"</span>
 <span class="w">                  </span><span class="p">}</span>
 <span class="w">              </span><span class="p">],</span>
-<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OIH&quot;</span>
+<span class="w">              </span><span class="nt">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OIH"</span>
 <span class="w">          </span><span class="p">},</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N8f3eab00d6a7479d889d86e1cdba9894&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:ContactPoint&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:contactType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer service&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N8f3eab00d6a7479d889d86e1cdba9894"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:ContactPoint"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:contactType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer service"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443"</span>
 <span class="w">          </span><span class="p">},</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_:N55713fa9e8ff489aa8ea185298b1344e&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:ContactPoint&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:contactType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer service&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443&quot;</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_:N55713fa9e8ff489aa8ea185298b1344e"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:ContactPoint"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:contactType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer service"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443"</span>
 <span class="w">          </span><span class="p">},</span>
 <span class="w">          </span><span class="p">{</span>
-<span class="w">              </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schema:DataDownload&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:contentSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;point.json&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;schema:url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed/download/point.json&quot;</span>
+<span class="w">              </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"schema:DataDownload"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:contentSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:encodingFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JSON"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"point.json"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"schema:url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8443/dataset/2ac53087-e1b1-4301-9c85-6461f81cf595/resource/883a935f-02bf-4d96-9a40-02e8566ddbed/download/point.json"</span>
 <span class="w">          </span><span class="p">}</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">  </span><span class="p">}</span><span class="w">  </span>
@@ -1097,7 +1097,7 @@ extension, as follows.</p>
 the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#use vi to open the Dockerfile</span>
 <span class="n">vi</span> <span class="n">ckan</span><span class="o">/</span><span class="n">Dockerfile</span>
-<span class="c1">#to make your changes, first press your &quot;i&quot; key (for INSERT mode), and</span>
+<span class="c1">#to make your changes, first press your "i" key (for INSERT mode), and</span>
   <span class="c1">#then edit the desired lines</span>
 <span class="c1">#then save with the command</span>
 <span class="p">:</span><span class="n">wq</span>
@@ -1106,7 +1106,7 @@ the <code class="docutils literal notranslate"><span class="pre">Dockerfile</spa
 </li>
 <li><p>around line#6 (after the DCAT section) paste the following into the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### SITEMAP ###</span>
-<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;git+https://github.com/datopian/ckanext-sitemap.git@master#egg=ckanext-sitemap&#39;</span>  <span class="o">&amp;&amp;</span> \
+<span class="n">RUN</span>  <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s1">'git+https://github.com/datopian/ckanext-sitemap.git@master#egg=ckanext-sitemap'</span>  <span class="o">&amp;&amp;</span> \
      <span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">datopian</span><span class="o">/</span><span class="n">ckanext</span><span class="o">-</span><span class="n">sitemap</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
@@ -1125,7 +1125,7 @@ to add the <code class="docutils literal notranslate"><span class="pre">dcat</sp
 </div>
 </li>
 <li><p>around line#69, change the <code class="docutils literal notranslate"><span class="pre">CKAN__PLUGINS</span></code> line to add the <code class="docutils literal notranslate"><span class="pre">sitemap</span></code> extension, such as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">&quot;image_view text_view datatables_view datastore datapusher envvars dcat structured_data sitemap&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CKAN__PLUGINS</span><span class="o">=</span><span class="s2">"image_view text_view datatables_view datastore datapusher envvars dcat structured_data sitemap"</span>
 </pre></div>
 </div>
 </li>
@@ -1169,7 +1169,7 @@ to the folder, we will connect as <code class="docutils literal notranslate"><sp
 </div>
 <ul>
 <li><p>execute the following, to connect to the CKAN container (replace “ckan-docker-git-master-ckan-1” with your container name) :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;export TERM=xterm; exec bash&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">it</span> <span class="n">ckan</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="n">ckan</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"export TERM=xterm; exec bash"</span>
 </pre></div>
 </div>
 </li>
@@ -1633,11 +1633,11 @@ gradlew<span class="w"> </span>dev
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">Solr</span> <span class="n">process</span> <span class="mi">2360</span> <span class="n">running</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">8983</span>
         <span class="p">{</span>
-          <span class="s2">&quot;solr_home&quot;</span><span class="p">:</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">working</span><span class="se">\\</span><span class="s2">solr-git-main</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">packaging</span><span class="se">\\</span><span class="s2">build</span><span class="se">\\</span><span class="s2">dev</span><span class="se">\\</span><span class="s2">server</span><span class="se">\\</span><span class="s2">solr&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;10.0.0-SNAPSHOT bc0c226c8fe9c475e5e723355f729fd39ceaf30f [snapshot build, details omitted]&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;startTime&quot;</span><span class="p">:</span><span class="s2">&quot;Sat Nov 09 16:01:17 AST 2024&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;uptime&quot;</span><span class="p">:</span><span class="s2">&quot;0 days, 0 hours, 13 minutes, 19 seconds&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;memory&quot;</span><span class="p">:</span><span class="s2">&quot;115.4 MB (%22.5) of 512 MB&quot;</span><span class="p">}</span>
+          <span class="s2">"solr_home"</span><span class="p">:</span><span class="s2">"C:</span><span class="se">\\</span><span class="s2">working</span><span class="se">\\</span><span class="s2">solr-git-main</span><span class="se">\\</span><span class="s2">solr</span><span class="se">\\</span><span class="s2">packaging</span><span class="se">\\</span><span class="s2">build</span><span class="se">\\</span><span class="s2">dev</span><span class="se">\\</span><span class="s2">server</span><span class="se">\\</span><span class="s2">solr"</span><span class="p">,</span>
+          <span class="s2">"version"</span><span class="p">:</span><span class="s2">"10.0.0-SNAPSHOT bc0c226c8fe9c475e5e723355f729fd39ceaf30f [snapshot build, details omitted]"</span><span class="p">,</span>
+          <span class="s2">"startTime"</span><span class="p">:</span><span class="s2">"Sat Nov 09 16:01:17 AST 2024"</span><span class="p">,</span>
+          <span class="s2">"uptime"</span><span class="p">:</span><span class="s2">"0 days, 0 hours, 13 minutes, 19 seconds"</span><span class="p">,</span>
+          <span class="s2">"memory"</span><span class="p">:</span><span class="s2">"115.4 MB (%22.5) of 512 MB"</span><span class="p">}</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1678,34 +1678,34 @@ to <code class="docutils literal notranslate"><span class="pre">C:\working\solr-
 </li>
 <li><p>which should give a response such as:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;responseHeader&quot;</span><span class="p">:{</span>
-<span class="w">          </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;QTime&quot;</span><span class="p">:</span><span class="mi">4</span>
+<span class="w">        </span><span class="nt">"responseHeader"</span><span class="p">:{</span>
+<span class="w">          </span><span class="nt">"status"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"QTime"</span><span class="p">:</span><span class="mi">4</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;initFailures&quot;</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:{</span>
-<span class="w">          </span><span class="nt">&quot;ckan&quot;</span><span class="p">:{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;ckan&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;instanceDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;dataDir&quot;</span><span class="p">:</span><span class="s2">&quot;C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="s2">&quot;solrconfig.xml&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="s2">&quot;managed-schema.xml&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;startTime&quot;</span><span class="p">:</span><span class="s2">&quot;2024-11-09T20:33:09.309Z&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;uptime&quot;</span><span class="p">:</span><span class="mi">253492</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;index&quot;</span><span class="p">:{</span>
-<span class="w">              </span><span class="nt">&quot;numDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;maxDoc&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;deletedDocs&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;segmentCount&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;current&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;hasDeletions&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;directory&quot;</span><span class="p">:</span><span class="s2">&quot;org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@17a1916f; maxCacheMB=48.0 maxMergeSizeMB=4.0)&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;segmentsFile&quot;</span><span class="p">:</span><span class="s2">&quot;segments_1&quot;</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;segmentsFileSizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;userData&quot;</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
-<span class="w">              </span><span class="nt">&quot;sizeInBytes&quot;</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
-<span class="w">              </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="s2">&quot;69 bytes&quot;</span>
+<span class="w">        </span><span class="nt">"initFailures"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:{</span>
+<span class="w">          </span><span class="nt">"ckan"</span><span class="p">:{</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"ckan"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"instanceDir"</span><span class="p">:</span><span class="s2">"C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"dataDir"</span><span class="p">:</span><span class="s2">"C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"config"</span><span class="p">:</span><span class="s2">"solrconfig.xml"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"schema"</span><span class="p">:</span><span class="s2">"managed-schema.xml"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"startTime"</span><span class="p">:</span><span class="s2">"2024-11-09T20:33:09.309Z"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"uptime"</span><span class="p">:</span><span class="mi">253492</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"index"</span><span class="p">:{</span>
+<span class="w">              </span><span class="nt">"numDocs"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"maxDoc"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"deletedDocs"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"segmentCount"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"current"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"hasDeletions"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"directory"</span><span class="p">:</span><span class="s2">"org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@C:\\working\\solr-git-main\\solr\\packaging\\build\\dev\\server\\solr\\ckan\\data\\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@17a1916f; maxCacheMB=48.0 maxMergeSizeMB=4.0)"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"segmentsFile"</span><span class="p">:</span><span class="s2">"segments_1"</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"segmentsFileSizeInBytes"</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"userData"</span><span class="p">:{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">              </span><span class="nt">"sizeInBytes"</span><span class="p">:</span><span class="mi">69</span><span class="p">,</span>
+<span class="w">              </span><span class="nt">"size"</span><span class="p">:</span><span class="s2">"69 bytes"</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">          </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
@@ -1729,7 +1729,7 @@ as follows:</p>
 </div>
 </li>
 <li><p>now install Ubuntu</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl2</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">&quot;Ubuntu-24.04 LTS&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="n">install</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">wsl2</span> <span class="o">--</span><span class="n">distribution</span> <span class="s2">"Ubuntu-24.04 LTS"</span>
 </pre></div>
 </div>
 <p><img alt="redis install1" src="../_images/redis-install1.png" /></p>
@@ -1775,7 +1775,7 @@ control.</p>
 <ul>
 <li><p>(follow steps at <a class="reference external" href="https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/">https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">packages</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">keyring</span><span class="o">.</span><span class="n">gpg</span>
-<span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">list</span>
+<span class="n">echo</span> <span class="s2">"deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main"</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">list</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">upgrade</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">redis</span>
@@ -1840,7 +1840,7 @@ control.</p>
 <p><img alt="CKAN install tables1" src="../_images/ckan-install-tables1.png" /></p>
 </li>
 <li><p>test with psql command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;\d&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">ckanuser</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5432</span> <span class="o">-</span><span class="n">d</span> <span class="n">ckandb</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"\d"</span>
 </pre></div>
 </div>
 <p>for password enter <code class="docutils literal notranslate"><span class="pre">odis</span></code></p>

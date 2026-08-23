@@ -629,13 +629,13 @@ the additionalProperty parameter can be found <a class="reference external" href
 as they are accessible using standard web protocols. Many ODIS partners that
 have landing pages for their data sets or other digital assets choose to
 embed the JSON-LD inside the record’s HTML landing page, such as:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"application/ld+json"</span><span class="p">&gt;</span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;@context&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;@type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;@id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;https://incois.gov.in/essdp/ViewMetadata?fileid=524fd72e-6b2f-4025-94ea-361dce0e9165&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Role of Antarctic krills in the biogeochemical cycle in the Indian Ocean sector of Southern Ocean&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;The Antarctic krill is the largest euphausiid, widely distributed in the Southern Ocean...&quot;</span><span class="p">,</span><span class="w">   </span>
+<span class="w">    </span><span class="s2">"@context"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"@type"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"@id"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://incois.gov.in/essdp/ViewMetadata?fileid=524fd72e-6b2f-4025-94ea-361dce0e9165"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"Role of Antarctic krills in the biogeochemical cycle in the Indian Ocean sector of Southern Ocean"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"description"</span><span class="o">:</span><span class="w"> </span><span class="s2">"The Antarctic krill is the largest euphausiid, widely distributed in the Southern Ocean..."</span><span class="p">,</span><span class="w">   </span>
 <span class="w">    </span><span class="p">....</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -704,8 +704,8 @@ records in your sitemap to change - this will tell systems like ODIS how often t
 reindex your holdings. Possible values are: <code class="docutils literal notranslate"><span class="pre">always</span></code>, <code class="docutils literal notranslate"><span class="pre">hourly</span></code>, <code class="docutils literal notranslate"><span class="pre">daily</span></code>, <code class="docutils literal notranslate"><span class="pre">weekly</span></code>, <code class="docutils literal notranslate"><span class="pre">monthly</span></code>,
 <code class="docutils literal notranslate"><span class="pre">yearly</span></code>, <code class="docutils literal notranslate"><span class="pre">never</span></code>.  Here is a snippet from a sitemap:
 :</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="w">   </span><span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="w">   </span><span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://www.sitemaps.org/schemas/sitemap/0.9"</span><span class="nt">&gt;</span>
 <span class="w">     </span><span class="nt">&lt;url&gt;</span>
 <span class="w">       </span><span class="nt">&lt;loc&gt;</span>https://example.org/landingpage1<span class="nt">&lt;/loc&gt;</span>
 <span class="w">       </span><span class="nt">&lt;lastmod&gt;</span>2024-06-10<span class="nt">&lt;/lastmod&gt;</span>

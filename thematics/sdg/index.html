@@ -548,56 +548,56 @@ principles of the subject organization.</p>
 we will review here.  Namely the subjectOF and publishingPrinciples
 predicates.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 8</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"address"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PostalAddress"</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">"addressLocality"</span><span class="p">:</span> <span class="s2">"Paris, France"</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">"postalCode"</span><span class="p">:</span> <span class="s2">"F-75002"</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">"streetAddress"</span><span class="p">:</span> <span class="s2">"38 avenue de l'Opera"</span>
 <span class="linenos">12</span>    <span class="p">},</span>
-<span class="linenos">13</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
-<span class="linenos">14</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">13</span>    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"secretariat(at)example.org"</span><span class="p">,</span>
+<span class="linenos">14</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Organization X"</span><span class="p">,</span>
+<span class="linenos">15</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of org ..."</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="s2">"telephone"</span><span class="p">:</span> <span class="s2">"( 33 1) 42 68 53 00"</span><span class="p">,</span>
+<span class="linenos">17</span>    <span class="s2">"member"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos">18</span>        <span class="p">{</span>
-<span class="linenos">19</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
-<span class="linenos">21</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+<span class="linenos">19</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos">20</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Organization A"</span><span class="p">,</span>
+<span class="linenos">21</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Org A is a potential parent organization of Org X"</span>
 <span class="linenos">22</span>        <span class="p">}</span>
 <span class="linenos">23</span>    <span class="p">],</span>
-<span class="linenos">24</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">25</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
-<span class="linenos">26</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">27</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
-<span class="linenos">29</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos">24</span>    <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">25</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span><span class="p">,</span>
+<span class="linenos">26</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">27</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"UN Department of Economic and Social Affairs Sustainable Development"</span><span class="p">,</span>
+<span class="linenos">28</span>        <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://registry.identifiers.org/registry/grid"</span><span class="p">,</span>
+<span class="linenos">29</span>        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span>
 <span class="linenos">30</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos">31</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">32</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">33</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">34</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">35</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">36</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+<span class="hll"><span class="linenos">31</span>    <span class="s2">"subjectOf"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">32</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">33</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://purl.unep.org/sdg/SDGIO_00020173"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">34</span>        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">35</span>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"UNSD SDG indicator code:C140c01"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">36</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Number of countries making progress ... the oceans and their resources"</span>
 </span><span class="hll"><span class="linenos">37</span>    <span class="p">},</span>
-</span><span class="hll"><span class="linenos">38</span>    <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">38</span>    <span class="s2">"publishingPrinciples"</span><span class="p">:</span> <span class="p">[</span>
 </span><span class="hll"><span class="linenos">39</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">40</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">41</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sdgs.un.org/goals/goal14&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">42</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sdgs.un.org/goals/goal14&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">43</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sustainable Development Goal 14&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">44</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Conserve and sustainably use the oceans, seas and marine resources for sustainable development&quot;</span>
+</span><span class="hll"><span class="linenos">40</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">41</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://sdgs.un.org/goals/goal14"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">42</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://sdgs.un.org/goals/goal14"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">43</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Sustainable Development Goal 14"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">44</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Conserve and sustainably use the oceans, seas and marine resources for sustainable development"</span>
 </span><span class="hll"><span class="linenos">45</span>        <span class="p">},</span>
 </span><span class="hll"><span class="linenos">46</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">47</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">48</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dx.doi.org/10.1038/sdata.2016.18&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">49</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.nature.com/articles/sdata201618&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">50</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR data principles&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">51</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship.&quot;</span>
+</span><span class="hll"><span class="linenos">47</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">48</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://dx.doi.org/10.1038/sdata.2016.18"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">49</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://www.nature.com/articles/sdata201618"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">50</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"FAIR data principles"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">51</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"FAIR Principles definition as referenced from: Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship."</span>
 </span><span class="hll"><span class="linenos">52</span>        <span class="p">}</span>
 </span><span class="hll"><span class="linenos">53</span>    <span class="p">]</span>
 </span><span class="linenos">54</span><span class="p">}</span>
@@ -614,17 +614,17 @@ predicates.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -679,24 +679,24 @@ context of the range of subjectOf.   Reference thematic type <a class="reference
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@requireAll"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Organization"</span><span class="p">,</span>
+  <span class="s2">"subjectOf"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -712,8 +712,8 @@ context of the range of subjectOf.   Reference thematic type <a class="reference
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     }
 }
 </pre></div>
@@ -727,13 +727,13 @@ context of the range of subjectOf.   Reference thematic type <a class="reference
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>
@@ -774,24 +774,24 @@ use cases where resources can be grouped based on their connection to those prin
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/sdg/graphs/org.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;publishingPrinciples&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@requireAll"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Organization"</span><span class="p">,</span>
+  <span class="s2">"publishingPrinciples"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -807,8 +807,8 @@ use cases where resources can be grouped based on their connection to those prin
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     }
 }
 </pre></div>
@@ -822,13 +822,13 @@ use cases where resources can be grouped based on their connection to those prin
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>
@@ -848,29 +848,29 @@ as the <a class="reference external" href="https://www.undrr.org/publication/haz
 <a class="reference external" href="https://schema.org/subjectOf">subjectOf</a>
 connections carry a bit more semantic meaning.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>  <span class="p">},</span>
-<span class="linenos"> 5</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>  <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the resource to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>  <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">10</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>    <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/dataset/472032.tsv&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>    <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/tab-separated-values&quot;</span>
+<span class="linenos"> 5</span>  <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="linenos"> 6</span>  <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>  <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>  <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the resource to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">"distribution"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">10</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DataDownload"</span><span class="p">,</span>
+<span class="linenos">11</span>    <span class="s2">"contentUrl"</span><span class="p">:</span> <span class="s2">"https://www.sample-data-repository.org/dataset/472032.tsv"</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">"encodingFormat"</span><span class="p">:</span> <span class="s2">"text/tab-separated-values"</span>
 <span class="linenos">13</span>  <span class="p">},</span>
-<span class="hll"><span class="linenos">14</span>  <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">15</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">16</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;UNSD SDG indicator code:C140c01&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">19</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Number of countries making progress ... the oceans and their resources&quot;</span>
+<span class="hll"><span class="linenos">14</span>  <span class="s2">"citation"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">15</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">16</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://purl.unep.org/sdg/SDGIO_00020173"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">17</span>    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://www.ontobee.org/ontology/SDGIO?iri=http://purl.unep.org/sdg/SDGIO_00020173"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">18</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"UNSD SDG indicator code:C140c01"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Number of countries making progress ... the oceans and their resources"</span>
 </span><span class="hll"><span class="linenos">20</span>  <span class="p">},</span>
-</span><span class="linenos">21</span>  <span class="s2">&quot;maintainer&quot;</span> <span class="p">:</span> <span class="p">{</span>
-<span class="linenos">22</span>     <span class="s2">&quot;@type&quot;</span> <span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">23</span>     <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://ror.org/050bms902&quot;</span><span class="p">,</span>
-<span class="linenos">24</span>     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+</span><span class="linenos">21</span>  <span class="s2">"maintainer"</span> <span class="p">:</span> <span class="p">{</span>
+<span class="linenos">22</span>     <span class="s2">"@type"</span> <span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos">23</span>     <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://ror.org/050bms902"</span><span class="p">,</span>
+<span class="linenos">24</span>     <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"UN Department of Economic and Social Affairs Sustainable Development"</span>
 <span class="linenos">25</span>  <span class="p">}</span>
 <span class="linenos">26</span><span class="p">}</span>
 </pre></div>
@@ -886,16 +886,16 @@ connections carry a bit more semantic meaning.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -944,24 +944,24 @@ cite or reference another creative work.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/sdg/graphs/doc.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@requireAll"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"CreativeWork"</span><span class="p">,</span>
+  <span class="s2">"citation"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -977,8 +977,8 @@ cite or reference another creative work.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     }
 }
 </pre></div>
@@ -992,13 +992,13 @@ cite or reference another creative work.</p>
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>

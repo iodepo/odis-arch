@@ -488,29 +488,29 @@ This is a simple HTTP protocol that allows you to query the graph using SPARQL a
 <p>The ODIS triplestore exposes the graph following this pattern for queries.</p>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">'query=SELECT * { ?s ?p ?o } LIMIT 1'</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'Accept:application/sparql-results+json'</span>
 </pre></div>
 </div>
 <p>If run this from the command line we will get something like the following.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>✗<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">&#39;query=SELECT * { ?s ?p ?o } LIMIT 1&#39;</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Accept:application/sparql-results+json&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>✗<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://graph.collaborium.io/blazegraph/namespace/aquadocs/sparql<span class="w"> </span>--data-urlencode<span class="w"> </span><span class="s1">'query=SELECT * { ?s ?p ?o } LIMIT 1'</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'Accept:application/sparql-results+json'</span>
 
 <span class="o">{</span>
-<span class="w">  </span><span class="s2">&quot;head&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;vars&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;s&quot;</span>,<span class="w"> </span><span class="s2">&quot;p&quot;</span>,<span class="w"> </span><span class="s2">&quot;o&quot;</span><span class="w"> </span><span class="o">]</span>
+<span class="w">  </span><span class="s2">"head"</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">"vars"</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">"s"</span>,<span class="w"> </span><span class="s2">"p"</span>,<span class="w"> </span><span class="s2">"o"</span><span class="w"> </span><span class="o">]</span>
 <span class="w">  </span><span class="o">}</span>,
-<span class="w">  </span><span class="s2">&quot;results&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;bindings&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span>
-<span class="w">      </span><span class="s2">&quot;s&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;uri&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://hdl.handle.net/1834/10030&quot;</span>
+<span class="w">  </span><span class="s2">"results"</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="s2">"bindings"</span><span class="w"> </span>:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="s2">"s"</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"uri"</span>,
+<span class="w">        </span><span class="s2">"value"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"https://hdl.handle.net/1834/10030"</span>
 <span class="w">      </span><span class="o">}</span>,
-<span class="w">      </span><span class="s2">&quot;p&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;uri&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://schema.org/propertyID&quot;</span>
+<span class="w">      </span><span class="s2">"p"</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"uri"</span>,
+<span class="w">        </span><span class="s2">"value"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"https://schema.org/propertyID"</span>
 <span class="w">      </span><span class="o">}</span>,
-<span class="w">      </span><span class="s2">&quot;o&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;literal&quot;</span>,
-<span class="w">        </span><span class="s2">&quot;value&quot;</span><span class="w"> </span>:<span class="w"> </span><span class="s2">&quot;https://hdl.handle.net/&quot;</span>
+<span class="w">      </span><span class="s2">"o"</span><span class="w"> </span>:<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">"type"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"literal"</span>,
+<span class="w">        </span><span class="s2">"value"</span><span class="w"> </span>:<span class="w"> </span><span class="s2">"https://hdl.handle.net/"</span>
 <span class="w">      </span><span class="o">}</span>
 <span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="o">]</span>
 <span class="w">  </span><span class="o">}</span>
@@ -526,7 +526,7 @@ axios library (<a class="reference external" href="https://axios-http.com/">http
 <span class="w">      </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// handle success</span>
 <span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#container2&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#container2'</span><span class="p">);</span>
 <span class="w">        </span><span class="nx">render</span><span class="p">(</span><span class="nx">showresults</span><span class="p">(</span><span class="nx">response</span><span class="p">),</span><span class="w"> </span><span class="nx">el</span><span class="p">);</span>
 <span class="w">      </span><span class="p">})</span>
 <span class="w">      </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

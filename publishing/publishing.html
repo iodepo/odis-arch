@@ -518,7 +518,7 @@ tools/languages at the previous reference or through other means.</p></li>
 <li><p>Within the system architecture of the site, a JSON-LD document needs to be
 placed into the HTML DOM as a SCRIPT tag within the HEAD tag of each
 published resource.   The SCRIPT tag pattern is:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;</span><span class="nx">JSON_LD</span><span class="w"> </span><span class="nx">content</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"application/ld+json"</span><span class="p">&gt;</span><span class="nx">JSON_LD</span><span class="w"> </span><span class="nx">content</span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </li>
@@ -549,32 +549,32 @@ nature of the document also means that connections may later be discovered
 through graph queries.</p>
 <p>Pages will need a JSON-LD data graph placed in it via a typed script
 tag/element in the document head element like the following.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/ld+json&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"application/ld+json"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>An example data graph can be seen below.   However, check the various
 thematic sections for more examples for a given thematic area.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+<span class="w">    </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+<span class="w">        </span><span class="nt">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://foo.org/url/to/metadata/representation&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;In this course you will get an introduction to the main tools and ideas in the data scientist&#39;s toolbox...&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;hasCourseInstance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;courseMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">            </span><span class="s2">&quot;MOOC&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="s2">&quot;online&quot;</span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://foo.org/url/to/metadata/representation"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Course"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"In this course you will get an introduction to the main tools and ideas in the data scientist's toolbox..."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"hasCourseInstance"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CourseInstance"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"courseMode"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">"MOOC"</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">"online"</span>
 <span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2019-02-15&quot;</span>
+<span class="w">        </span><span class="nt">"endDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-03-21"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"startDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-02-15"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -700,8 +700,8 @@ reindex your holdings - possible values are: <code class="docutils literal notra
 Additionally, indexers may test ways to evaluate additions and
 removals from the sitemap URL set to manage new or removed resources.</p>
 <p>A sitemap file would look like the following.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;urlset</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://www.sitemaps.org/schemas/sitemap/0.9"</span><span class="nt">&gt;</span>
 <span class="w">   </span><span class="nt">&lt;url&gt;</span>
 <span class="w">      </span><span class="nt">&lt;loc&gt;</span>https://example.org/landingpage1<span class="nt">&lt;/loc&gt;</span>
 <span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2024-06-10<span class="nt">&lt;/lastmod&gt;</span>
@@ -721,8 +721,8 @@ removals from the sitemap URL set to manage new or removed resources.</p>
 multiple files of less than 50,000. You would link to these through
 a sitemap index, as follows.</p>
 </div>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;sitemapindex</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://www.sitemaps.org/schemas/sitemap/0.9&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;sitemapindex</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://www.sitemaps.org/schemas/sitemap/0.9"</span><span class="nt">&gt;</span>
 <span class="w">   </span><span class="nt">&lt;sitemap&gt;</span>
 <span class="w">      </span><span class="nt">&lt;loc&gt;</span>https://example.org/sitemap_a.xml<span class="nt">&lt;/loc&gt;</span>
 <span class="w">      </span><span class="nt">&lt;lastmod&gt;</span>2024-06-10<span class="nt">&lt;/lastmod&gt;</span>

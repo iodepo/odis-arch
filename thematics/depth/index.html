@@ -551,23 +551,23 @@ MULTIPOLYGON (((1 1, 1 3, 3 3, 3 1, 1 1)), ((4 3, 6 3, 6 1, 4 1, 4 3)))
 and an example with POINT ZM which includes both elevation and measurement.</p>
 <p>A simple point reference expressed in JSON-LD/schema.org:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;geosparql&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"geosparql"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#"</span><span class="w"> </span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;spatialCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;geo&quot;</span><span class="p">:</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data set name"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"spatialCoverage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"geo"</span><span class="p">:</span><span class="w">  </span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://marineregions.org/mrgid/4252/geometries?source=25&amp;attributeValue=16&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;an example POINT Z entry&quot;</span><span class="p">,</span><span class="w">  </span>
-<span class="w">                </span><span class="nt">&quot;geosparql:asWKT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT Z (30.5 75.2 125.8)&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geosparql:wktLiteral&quot;</span>
+<span class="w">                </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://marineregions.org/mrgid/4252/geometries?source=25&amp;attributeValue=16"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an example POINT Z entry"</span><span class="p">,</span><span class="w">  </span>
+<span class="w">                </span><span class="nt">"geosparql:asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT Z (30.5 75.2 125.8)"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geosparql:wktLiteral"</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span><span class="w"> </span>
 <span class="w">    </span><span class="p">}</span>
@@ -577,47 +577,47 @@ and an example with POINT ZM which includes both elevation and measurement.</p>
 <p>It should be noted that it is possible to represent multiple geo entries in various formats in order to align with
 potential downstream users.  An intentionally verbose example follows.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;geosparql&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"geosparql"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.opengis.net/ont/geosparql#"</span><span class="w"> </span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://example.org/dataset/X&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;spatialCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;geo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data set name"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.org/dataset/X"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"spatialCoverage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"geo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a basic POINT entry&quot;</span><span class="p">,</span><span class="w">  </span>
-<span class="w">                </span><span class="nt">&quot;geosparql:asWKT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT (30.5 75.2)&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geosparql:wktLiteral&quot;</span>
+<span class="w">                </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a basic POINT entry"</span><span class="p">,</span><span class="w">  </span>
+<span class="w">                </span><span class="nt">"geosparql:asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT (30.5 75.2)"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geosparql:wktLiteral"</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;an example POINT Z entry&quot;</span><span class="p">,</span><span class="w">  </span>
-<span class="w">                </span><span class="nt">&quot;geosparql:asWKT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT Z (30.5 75.2 125.8)&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geosparql:wktLiteral&quot;</span>
+<span class="w">                </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an example POINT Z entry"</span><span class="p">,</span><span class="w">  </span>
+<span class="w">                </span><span class="nt">"geosparql:asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT Z (30.5 75.2 125.8)"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geosparql:wktLiteral"</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;an example POINT M entry&quot;</span><span class="p">,</span><span class="w">  </span>
-<span class="w">                </span><span class="nt">&quot;geosparql:asWKT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT M (30.5 75.2 404.8)&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geosparql:wktLiteral&quot;</span>
+<span class="w">                </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an example POINT M entry"</span><span class="p">,</span><span class="w">  </span>
+<span class="w">                </span><span class="nt">"geosparql:asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT M (30.5 75.2 404.8)"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geosparql:wktLiteral"</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">},</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;an example POINT ZM entry&quot;</span><span class="p">,</span><span class="w">  </span>
-<span class="w">                </span><span class="nt">&quot;geosparql:asWKT&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT ZM (30.5 75.2 125.8 404.8)&quot;</span><span class="p">,</span>
-<span class="w">                    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geosparql:wktLiteral&quot;</span>
+<span class="w">                </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"an example POINT ZM entry"</span><span class="p">,</span><span class="w">  </span>
+<span class="w">                </span><span class="nt">"geosparql:asWKT"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POINT ZM (30.5 75.2 125.8 404.8)"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"geosparql:wktLiteral"</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">]</span>
@@ -632,21 +632,21 @@ potential downstream users.  An intentionally verbose example follows.</p>
 This property is valid for types <a class="reference external" href="https://schema.org/GeoCoordinates">https://schema.org/GeoCoordinates</a> and <a class="reference external" href="https://schema.org/GeoShape">https://schema.org/GeoShape</a>.</p>
 <p>An example for GeoCoordinate follows.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="w">    </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;spatialCoverage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;geo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoCoordinates&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Depth at a point&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;An example of expressing a depth as a negative elevation for type GeoCoordinates&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;elevation&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-1146</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;latitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">16.76203</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;longitude&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-25.10367</span>
+<span class="w">    </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Data set name"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"spatialCoverage"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Place"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"geo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeoCoordinates"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Depth at a point"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An example of expressing a depth as a negative elevation for type GeoCoordinates"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"elevation"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1146</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">16.76203</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">-25.10367</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -669,24 +669,24 @@ that can be associated with the resource described by a metadata set, there are 
 <p>In this case you can use a stanza in the value space of the <a class="reference external" href="http://schema.org">schema.org</a> <code class="docutils literal notranslate"><span class="pre">variableMeasured</span></code> property to describe or express the depth variables in your dataset.</p>
 <p>variable measured example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="w">  </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;variableMeasured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"variableMeasured"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;depth&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123.4&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;propertyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;measurementTechnique&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;description of technique used or link to full method&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;unitText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;unitCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;https://qudt.org/vocab/unit/M&quot;</span><span class="p">,</span>
-<span class="s2">&quot;https://vocab.nerc.ac.uk/collection/P06/current/ULAA/&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;http://dbpedia.org/resource/Metre&quot;</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"depth"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123.4"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"propertyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"measurementTechnique"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description of technique used or link to full method"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"unitText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"unitCode"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"https://qudt.org/vocab/unit/M"</span><span class="p">,</span>
+<span class="s2">"https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"http://dbpedia.org/resource/Metre"</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
@@ -696,24 +696,24 @@ that can be associated with the resource described by a metadata set, there are 
 <p>Note that in the above the type <a class="reference external" href="https://schema.org/PropertyValue">https://schema.org/PropertyValue</a> is presented with a value.  This is not necessary if the goal is to describe the variable, rather tham report its values. However, it is recommended that the range of depth values measured is reported. In the following example, the value has been replaced with the properties
 minValue and maxValue.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w">   </span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;@vocab&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="w">  </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"@vocab"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span>
 <span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;@id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;variableMeasured&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"variableMeasured"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;depth&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;minValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;34.4&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;maxValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123.4&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;propertyID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;measurementTechnique&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;description of technique used&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;unitText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;m&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;unitCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="s2">&quot;https://qudt.org/vocab/unit/M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;https://vocab.nerc.ac.uk/collection/P06/current/ULAA/&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;http://dbpedia.org/resource/Metre&quot;</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"depth"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Depth (spatial coordinate) relative to water surface in the water body. Definition: The distance of a sensor or sampling point below the sea surface"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"minValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34.4"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"maxValue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123.4"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"propertyID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://vocab.nerc.ac.uk/collection/P01/current/ADEPZZ01/"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"measurementTechnique"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description of technique used"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"unitText"</span><span class="p">:</span><span class="w"> </span><span class="s2">"m"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"unitCode"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"https://qudt.org/vocab/unit/M"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://vocab.nerc.ac.uk/collection/P06/current/ULAA/"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"http://dbpedia.org/resource/Metre"</span>
 <span class="w">      </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>

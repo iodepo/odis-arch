@@ -553,34 +553,34 @@ These are: <a class="reference external" href="https://schema.org/DefinedTerm">D
 <p>We can see the three different approaches here to defining keywords.  Here, <em>Region X</em> is a classic
 text keyword.  The other two are defined as a <a class="reference external" href="https://schema.org/DefinedTerm">DefinedTerm</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the map to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.sample-data-repository.org/creativework/map.pdf&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">11</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">13</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/doi&quot;</span><span class="p">,</span>
-<span class="linenos">14</span>        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;doi:10.5066/F7VX0DMQ&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://doi.org/10.5066/F7VX0DMQ&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Map"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the map to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://www.sample-data-repository.org/creativework/map.pdf"</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://doi.org/10.5066/F7VX0DMQ"</span><span class="p">,</span>
+<span class="linenos">12</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">13</span>        <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://registry.identifiers.org/registry/doi"</span><span class="p">,</span>
+<span class="linenos">14</span>        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"doi:10.5066/F7VX0DMQ"</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://doi.org/10.5066/F7VX0DMQ"</span>
 <span class="linenos">16</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos">17</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll"><span class="linenos">18</span>        <span class="s2">&quot;Region X&quot;</span><span class="p">,</span>
+<span class="hll"><span class="linenos">17</span>    <span class="s2">"keywords"</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">18</span>        <span class="s2">"Region X"</span><span class="p">,</span>
 </span><span class="hll"><span class="linenos">19</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">20</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/dcmitype/Image&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">21</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">22</span>            <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="s2">&quot;http://purl.org/dc/terms/DCMIType&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">23</span>            <span class="s2">&quot;termCode&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">24</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span>
+</span><span class="hll"><span class="linenos">20</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://purl.org/dc/dcmitype/Image"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTerm"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>            <span class="s2">"inDefinedTermSet"</span><span class="p">:</span> <span class="s2">"http://purl.org/dc/terms/DCMIType"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>            <span class="s2">"termCode"</span><span class="p">:</span> <span class="s2">"Image"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">24</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Image"</span>
 </span><span class="hll"><span class="linenos">25</span>        <span class="p">},</span>
 </span><span class="hll"><span class="linenos">26</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">29</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.wikidata.org/wiki/Q350134&quot;</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://www.wikidata.org/wiki/Q350134"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"URL"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://www.wikidata.org/wiki/Q350134"</span>
 </span><span class="hll"><span class="linenos">30</span>        <span class="p">}</span>
 </span><span class="hll"><span class="linenos">31</span>    <span class="p">]</span>
 </span><span class="linenos">32</span><span class="p">}</span>
@@ -600,24 +600,24 @@ text keyword.  The other two are defined as a <a class="reference external" href
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/terms/graphs/map.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Map&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@requireAll"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Map"</span><span class="p">,</span>
+  <span class="s2">"keywords"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -639,13 +639,13 @@ text keyword.  The other two are defined as a <a class="reference external" href
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>
@@ -656,14 +656,14 @@ text keyword.  The other two are defined as a <a class="reference external" href
 it doesn’t provide some of the benefits of the other two approaches.  For example, it doesn’t allow for terms to
 be dereferenced on the net or for connects in the graph to be made for common terms by their subject IRIs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;nitrous oxide&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Central Pacific&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;headspace equilibration&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;SRI Greenhouse Gas Monitoring Gas Chromatograph&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;CTD profiler&quot;</span><span class="p">,</span> 
-    <span class="s2">&quot;Gas Chromatograph&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
+  <span class="s2">"keywords"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"nitrous oxide"</span><span class="p">,</span> 
+    <span class="s2">"Central Pacific"</span><span class="p">,</span> 
+    <span class="s2">"headspace equilibration"</span><span class="p">,</span> 
+    <span class="s2">"SRI Greenhouse Gas Monitoring Gas Chromatograph"</span><span class="p">,</span> 
+    <span class="s2">"CTD profiler"</span><span class="p">,</span> 
+    <span class="s2">"Gas Chromatograph"</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -714,34 +714,34 @@ types in <a class="reference external" href="http://Schema.org">Schema.org</a>. 
 reference.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">[</span>
 <span class="linenos"> 2</span>        <span class="p">{</span>
-<span class="linenos"> 3</span>                <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 4</span>                        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 3</span>                <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 4</span>                        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 5</span>                <span class="p">}</span>
 <span class="linenos"> 6</span>        <span class="p">},</span>
 <span class="linenos"> 7</span>        <span class="p">{</span>
-<span class="linenos"> 8</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ballentine&#39;s Law Dictionary&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description of Ballentine&#39;s Law Dictionary Term Set&quot;</span>
+<span class="linenos"> 8</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTermSet"</span><span class="p">,</span>
+<span class="linenos"> 9</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://openjurist.org/dictionary/Ballentine"</span><span class="p">,</span>
+<span class="linenos">10</span>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Ballentine's Law Dictionary"</span><span class="p">,</span>
+<span class="linenos">11</span>                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A description of Ballentine's Law Dictionary Term Set"</span>
 <span class="linenos">12</span>        <span class="p">},</span>
 <span class="linenos">13</span>        <span class="p">{</span>
-<span class="linenos">14</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/calendar-year&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;calendar year&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The period from January 1st to December 31st, inclusive, of any year.&quot;</span><span class="p">,</span>
-<span class="linenos">18</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">19</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">14</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTerm"</span><span class="p">,</span>
+<span class="linenos">15</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://openjurist.org/dictionary/Ballentine/term/calendar-year"</span><span class="p">,</span>
+<span class="linenos">16</span>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"calendar year"</span><span class="p">,</span>
+<span class="linenos">17</span>                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"The period from January 1st to December 31st, inclusive, of any year."</span><span class="p">,</span>
+<span class="linenos">18</span>                <span class="s2">"inDefinedTermSet"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">19</span>                        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTermSet"</span><span class="p">,</span>
+<span class="linenos">20</span>                        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://openjurist.org/dictionary/Ballentine"</span>
 <span class="linenos">21</span>                <span class="p">}</span>
 <span class="linenos">22</span>        <span class="p">},</span>
 <span class="linenos">23</span>        <span class="p">{</span>
-<span class="linenos">24</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTerm&quot;</span><span class="p">,</span>
-<span class="linenos">25</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine/term/schema&quot;</span><span class="p">,</span>
-<span class="linenos">26</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;schema&quot;</span><span class="p">,</span>
-<span class="linenos">27</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A representation of a plan or theory in the form of an outline or model.&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>                <span class="s2">&quot;inDefinedTermSet&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">29</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DefinedTermSet&quot;</span><span class="p">,</span>
-<span class="linenos">30</span>                        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://openjurist.org/dictionary/Ballentine&quot;</span>
+<span class="linenos">24</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTerm"</span><span class="p">,</span>
+<span class="linenos">25</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://openjurist.org/dictionary/Ballentine/term/schema"</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"schema"</span><span class="p">,</span>
+<span class="linenos">27</span>                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A representation of a plan or theory in the form of an outline or model."</span><span class="p">,</span>
+<span class="linenos">28</span>                <span class="s2">"inDefinedTermSet"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">29</span>                        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DefinedTermSet"</span><span class="p">,</span>
+<span class="linenos">30</span>                        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://openjurist.org/dictionary/Ballentine"</span>
 <span class="linenos">31</span>                <span class="p">}</span>
 <span class="linenos">32</span>        <span class="p">}</span>
 <span class="linenos">33</span><span class="p">]</span>
@@ -761,16 +761,16 @@ reference.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/terms/graphs/map.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/terms/graphs/map.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>

@@ -550,54 +550,54 @@ with this documentation is provide a simple example that address some of the sea
 and discovery goals of ODIS along with those properties most useful in the linking
 of resources between ODIS participants.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>  <span class="p">},</span>
-<span class="hll"><span class="linenos"> 5</span>  <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 6</span>  <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 7</span>  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 8</span>  <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>  <span class="s2">&quot;workLocation&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-</span><span class="linenos">11</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;54 Ocean Drive, 23521 Ocean City, CountryName&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Place name&quot;</span>
+<span class="hll"><span class="linenos"> 5</span>  <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>  <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Person"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 7</span>  <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Jane Doe"</span><span class="p">,</span>
+</span><span class="linenos"> 8</span>  <span class="s2">"jobTitle"</span><span class="p">:</span> <span class="s2">"Professor"</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s2">"workLocation"</span><span class="p">:</span> <span class="p">{</span>
+<span class="hll"><span class="linenos">10</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Place"</span><span class="p">,</span>
+</span><span class="linenos">11</span>    <span class="s2">"address"</span><span class="p">:</span> <span class="s2">"54 Ocean Drive, 23521 Ocean City, CountryName"</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Place name"</span>
 <span class="linenos">13</span>  <span class="p">},</span>
-<span class="linenos">14</span>  <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>  <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>  <span class="s2">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">17</span>    <span class="s2">&quot;Invasive species in brackish water&quot;</span><span class="p">,</span>
-<span class="linenos">18</span>    <span class="s2">&quot;https://www.wikidata.org/wiki/Q183368&quot;</span><span class="p">,</span>
+<span class="linenos">14</span>  <span class="s2">"telephone"</span><span class="p">:</span> <span class="s2">"(425) 123-4567"</span><span class="p">,</span>
+<span class="linenos">15</span>  <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://www.janedoe.com"</span><span class="p">,</span>
+<span class="linenos">16</span>  <span class="s2">"knowsAbout"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">17</span>    <span class="s2">"Invasive species in brackish water"</span><span class="p">,</span>
+<span class="linenos">18</span>    <span class="s2">"https://www.wikidata.org/wiki/Q183368"</span><span class="p">,</span>
 <span class="linenos">19</span>    <span class="p">{</span>
-<span class="linenos">20</span>      <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/course/x&quot;</span><span class="p">,</span>
-<span class="linenos">21</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-<span class="linenos">22</span>      <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;In this course ...&quot;</span><span class="p">,</span>
-<span class="linenos">23</span>      <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;URL to the course&quot;</span>
+<span class="linenos">20</span>      <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/id/course/x"</span><span class="p">,</span>
+<span class="linenos">21</span>      <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Course"</span><span class="p">,</span>
+<span class="linenos">22</span>      <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"In this course ..."</span><span class="p">,</span>
+<span class="linenos">23</span>      <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"URL to the course"</span>
 <span class="linenos">24</span>    <span class="p">}</span>
 <span class="linenos">25</span>  <span class="p">],</span>
-<span class="linenos">26</span>  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="hll"><span class="linenos">27</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">29</span>    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/orcid&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">30</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">31</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of this record...&quot;</span>
+<span class="linenos">26</span>  <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+<span class="hll"><span class="linenos">27</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://orcid.org/0000-0002-2257-9127"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">29</span>    <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://registry.identifiers.org/registry/orcid"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">30</span>    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://orcid.org/0000-0002-2257-9127"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">31</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Optional description of this record..."</span>
 </span><span class="hll"><span class="linenos">32</span>  <span class="p">},</span>
-</span><span class="linenos">33</span>  <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">34</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span>
-<span class="linenos">35</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fiji&quot;</span><span class="p">,</span>
-<span class="linenos">36</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">37</span>      <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">38</span>      <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ISO 3166-1 alpha-2 code&quot;</span><span class="p">,</span>
-<span class="linenos">39</span>      <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;FJ&quot;</span><span class="p">,</span>
-<span class="linenos">40</span>      <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">41</span>        <span class="s2">&quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;</span><span class="p">,</span>
-<span class="linenos">42</span>        <span class="s2">&quot;ISO 3166-1:2020&quot;</span>
+</span><span class="linenos">33</span>  <span class="s2">"nationality"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">34</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Country"</span><span class="p">,</span>
+<span class="linenos">35</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Fiji"</span><span class="p">,</span>
+<span class="linenos">36</span>    <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">37</span>      <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">38</span>      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"ISO 3166-1 alpha-2 code"</span><span class="p">,</span>
+<span class="linenos">39</span>      <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"FJ"</span><span class="p">,</span>
+<span class="linenos">40</span>      <span class="s2">"propertyID"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">41</span>        <span class="s2">"https://unece.org/trade/cefact/unlocode-code-list-country-and-territory"</span><span class="p">,</span>
+<span class="linenos">42</span>        <span class="s2">"ISO 3166-1:2020"</span>
 <span class="linenos">43</span>      <span class="p">]</span>
 <span class="linenos">44</span>    <span class="p">}</span>
 <span class="linenos">45</span>  <span class="p">},</span>
-<span class="linenos">46</span>  <span class="s2">&quot;knowsLanguage&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">47</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Language&quot;</span><span class="p">,</span>
-<span class="linenos">48</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
-<span class="linenos">49</span>    <span class="s2">&quot;alternateName&quot;</span><span class="p">:</span> <span class="s2">&quot;es&quot;</span>
+<span class="linenos">46</span>  <span class="s2">"knowsLanguage"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">47</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Language"</span><span class="p">,</span>
+<span class="linenos">48</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Spanish"</span><span class="p">,</span>
+<span class="linenos">49</span>    <span class="s2">"alternateName"</span><span class="p">:</span> <span class="s2">"es"</span>
 <span class="linenos">50</span>  <span class="p">}</span>
 <span class="linenos">51</span><span class="p">}</span>
 </pre></div>
@@ -613,16 +613,16 @@ of resources between ODIS participants.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -654,23 +654,23 @@ a resource.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Person"</span><span class="p">,</span>
+  <span class="s2">"identifier"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -686,17 +686,17 @@ a resource.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Person&quot;,
-    &quot;identifier&quot;: {
-        &quot;@id&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;,
-        &quot;@type&quot;: &quot;PropertyValue&quot;,
-        &quot;description&quot;: &quot;Optional description of this record...&quot;,
-        &quot;propertyID&quot;: &quot;https://registry.identifiers.org/registry/orcid&quot;,
-        &quot;url&quot;: &quot;https://orcid.org/0000-0002-2257-9127&quot;
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
+    "@type": "Person",
+    "identifier": {
+        "@id": "https://orcid.org/0000-0002-2257-9127",
+        "@type": "PropertyValue",
+        "description": "Optional description of this record...",
+        "propertyID": "https://registry.identifiers.org/registry/orcid",
+        "url": "https://orcid.org/0000-0002-2257-9127"
     }
 }
 </pre></div>
@@ -725,23 +725,23 @@ nationality are for our use case.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;nationality&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Person"</span><span class="p">,</span>
+  <span class="s2">"nationality"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -757,23 +757,23 @@ nationality are for our use case.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Person&quot;,
-    &quot;nationality&quot;: {
-        &quot;@type&quot;: &quot;Country&quot;,
-        &quot;identifier&quot;: {
-            &quot;@type&quot;: &quot;PropertyValue&quot;,
-            &quot;name&quot;: &quot;ISO 3166-1 alpha-2 code&quot;,
-            &quot;propertyID&quot;: [
-                &quot;https://unece.org/trade/cefact/unlocode-code-list-country-and-territory&quot;,
-                &quot;ISO 3166-1:2020&quot;
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
+    "@type": "Person",
+    "nationality": {
+        "@type": "Country",
+        "identifier": {
+            "@type": "PropertyValue",
+            "name": "ISO 3166-1 alpha-2 code",
+            "propertyID": [
+                "https://unece.org/trade/cefact/unlocode-code-list-country-and-territory",
+                "ISO 3166-1:2020"
             ],
-            &quot;value&quot;: &quot;FJ&quot;
+            "value": "FJ"
         },
-        &quot;name&quot;: &quot;Fiji&quot;
+        "name": "Fiji"
     }
 }
 </pre></div>
@@ -810,23 +810,23 @@ array [] syntax.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;knowsLanguage&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Person"</span><span class="p">,</span>
+  <span class="s2">"knowsLanguage"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -842,15 +842,15 @@ array [] syntax.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Person&quot;,
-    &quot;knowsLanguage&quot;: {
-        &quot;@type&quot;: &quot;Language&quot;,
-        &quot;alternateName&quot;: &quot;es&quot;,
-        &quot;name&quot;: &quot;Spanish&quot;
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
+    "@type": "Person",
+    "knowsLanguage": {
+        "@type": "Language",
+        "alternateName": "es",
+        "name": "Spanish"
     }
 }
 </pre></div>
@@ -878,23 +878,23 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/person.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;knowsAbout&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Person"</span><span class="p">,</span>
+  <span class="s2">"knowsAbout"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -910,16 +910,16 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     },
-    &quot;@id&quot;: &quot;https://example.org/permanentUrlToThisJsonDoc&quot;,
-    &quot;@type&quot;: &quot;Person&quot;,
-    &quot;knowsAbout&quot;: {
-        &quot;@id&quot;: &quot;https://example.org/id/course/x&quot;,
-        &quot;@type&quot;: &quot;Course&quot;,
-        &quot;description&quot;: &quot;In this course ...&quot;,
-        &quot;url&quot;: &quot;URL to the course&quot;
+    "@id": "https://example.org/permanentUrlToThisJsonDoc",
+    "@type": "Person",
+    "knowsAbout": {
+        "@id": "https://example.org/id/course/x",
+        "@type": "Course",
+        "description": "In this course ...",
+        "url": "URL to the course"
     }
 }
 </pre></div>
@@ -934,45 +934,45 @@ can connect a Person or Organization to Text, URL or any Thing type.</p>
 <p>Here we have an example of an data graph for type <a class="reference external" href="https://schema.org/Organization">schema.org/Organization</a>.<br />
 For the identifier we are using the a GRID, but this could also be something like a ROR.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://index.example.org/id/org/x&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 8</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PostalAddress&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>        <span class="s2">&quot;addressLocality&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris, France&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>        <span class="s2">&quot;postalCode&quot;</span><span class="p">:</span> <span class="s2">&quot;F-75002&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>        <span class="s2">&quot;streetAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://index.example.org/id/org/x"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"address"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 8</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PostalAddress"</span><span class="p">,</span>
+<span class="linenos"> 9</span>        <span class="s2">"addressLocality"</span><span class="p">:</span> <span class="s2">"Paris, France"</span><span class="p">,</span>
+<span class="linenos">10</span>        <span class="s2">"postalCode"</span><span class="p">:</span> <span class="s2">"F-75002"</span><span class="p">,</span>
+<span class="linenos">11</span>        <span class="s2">"streetAddress"</span><span class="p">:</span> <span class="s2">"38 avenue de l'Opera"</span>
 <span class="linenos">12</span>    <span class="p">},</span>
-<span class="linenos">13</span>    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">14</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;38 avenue de l&#39;Opera, F-75002, Paris, France&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris&quot;</span>
+<span class="linenos">13</span>    <span class="s2">"location"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">14</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Place"</span><span class="p">,</span>
+<span class="linenos">15</span>        <span class="s2">"address"</span><span class="p">:</span> <span class="s2">"38 avenue de l'Opera, F-75002, Paris, France"</span><span class="p">,</span>
+<span class="linenos">16</span>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Paris"</span>
 <span class="linenos">17</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos">18</span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;secretariat(at)example.org&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">19</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization X&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">20</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of org ...&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">21</span>    <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;( 33 1) 42 68 53 00&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">22</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;member&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="hll"><span class="linenos">18</span>    <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"secretariat(at)example.org"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Organization X"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">20</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of org ..."</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">21</span>    <span class="s2">"telephone"</span><span class="p">:</span> <span class="s2">"( 33 1) 42 68 53 00"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">22</span>    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://example.org/"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">23</span>    <span class="s2">"member"</span><span class="p">:</span> <span class="p">[</span>
 </span><span class="hll"><span class="linenos">24</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">25</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/id/org/1&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">26</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">27</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization A&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Org A is a potential parent organization of Org X&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/id/org/1"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">27</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Organization A"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Org A is a potential parent organization of Org X"</span>
 </span><span class="hll"><span class="linenos">29</span>        <span class="p">},</span>
 </span><span class="linenos">30</span>        <span class="p">{</span>
-<span class="linenos">31</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://orcid.org/0000-0002-2257-9127&quot;</span><span class="p">,</span>
-<span class="linenos">32</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span>
+<span class="linenos">31</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://orcid.org/0000-0002-2257-9127"</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Person"</span>
 <span class="linenos">33</span>        <span class="p">}</span>
 <span class="linenos">34</span>    <span class="p">],</span>
-<span class="linenos">35</span>    <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">36</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
-<span class="linenos">37</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">38</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span><span class="p">,</span>
-<span class="linenos">39</span>        <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.identifiers.org/registry/grid&quot;</span><span class="p">,</span>
-<span class="linenos">40</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span>
+<span class="linenos">35</span>    <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">36</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span><span class="p">,</span>
+<span class="linenos">37</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">38</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"UN Department of Economic and Social Affairs Sustainable Development"</span><span class="p">,</span>
+<span class="linenos">39</span>        <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://registry.identifiers.org/registry/grid"</span><span class="p">,</span>
+<span class="linenos">40</span>        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span>
 <span class="linenos">41</span>    <span class="p">}</span>
 <span class="linenos">42</span><span class="p">}</span>
 </pre></div>
@@ -1005,16 +1005,16 @@ basic properties you can provide with confidence.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -1047,24 +1047,24 @@ a resource.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/expinst/graphs/organization.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@requireAll&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@requireAll"</span><span class="p">:</span> <span class="s2">"true"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"Organization"</span><span class="p">,</span>
+  <span class="s2">"identifier"</span><span class="p">:</span> <span class="s2">""</span>
 <span class="p">}</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -1080,8 +1080,8 @@ a resource.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     }
 }
 </pre></div>
@@ -1095,13 +1095,13 @@ a resource.</p>
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>

@@ -672,9 +672,9 @@ By default it will attempt to use localhost to resolve with and host local runti
 </div>
 <p>and see results similar to:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CONTAINER<span class="w"> </span>ID<span class="w">        </span>IMAGE<span class="w">                            </span>COMMAND<span class="w">                  </span>CREATED<span class="w">             </span>STATUS<span class="w">              </span>PORTS<span class="w">                    </span>NAMES
-c4b7097f5e06<span class="w">        </span>nawer/blazegraph<span class="w">                 </span><span class="s2">&quot;docker-entrypoint.s…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9999-&gt;9999/tcp<span class="w">   </span>test_triplestore_1
-ca08c24963a0<span class="w">        </span>minio/minio:latest<span class="w">               </span><span class="s2">&quot;/usr/bin/docker-ent…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9000-&gt;9000/tcp<span class="w">   </span>test_s3system_1
-24274eba0d34<span class="w">        </span>chromedp/headless-shell:latest<span class="w">   </span><span class="s2">&quot;/headless-shell/hea…&quot;</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9222-&gt;9222/tcp<span class="w">   </span>test_headless_1
+c4b7097f5e06<span class="w">        </span>nawer/blazegraph<span class="w">                 </span><span class="s2">"docker-entrypoint.s…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9999-&gt;9999/tcp<span class="w">   </span>test_triplestore_1
+ca08c24963a0<span class="w">        </span>minio/minio:latest<span class="w">               </span><span class="s2">"/usr/bin/docker-ent…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9000-&gt;9000/tcp<span class="w">   </span>test_s3system_1
+24274eba0d34<span class="w">        </span>chromedp/headless-shell:latest<span class="w">   </span><span class="s2">"/headless-shell/hea…"</span><span class="w">   </span><span class="m">8</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Up<span class="w"> </span><span class="m">7</span><span class="w"> </span>seconds<span class="w">        </span><span class="m">0</span>.0.0.0:9222-&gt;9222/tcp<span class="w">   </span>test_headless_1
 </pre></div>
 </div>
 </section>
@@ -700,12 +700,12 @@ and the locations of the resources we wish to index.</p>
 <span class="linenos">13</span><span class="n">context</span><span class="p">:</span>
 <span class="linenos">14</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">15</span><span class="n">contextmaps</span><span class="p">:</span>
-<span class="linenos">16</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos">17</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
-<span class="linenos">18</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
-<span class="linenos">19</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">16</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
+<span class="linenos">17</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">"./jsonldcontext.json"</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">18</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">"http://schema.org/"</span>
+<span class="linenos">19</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">"./jsonldcontext.json"</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
 <span class="linenos">20</span><span class="n">summoner</span><span class="p">:</span>
-<span class="linenos">21</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
+<span class="linenos">21</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">""</span>      <span class="c1"># "21 May 20 10:00 UTC"   </span>
 <span class="linenos">22</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
 <span class="linenos">23</span>  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
 <span class="linenos">24</span>  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>
@@ -789,10 +789,10 @@ You simply need to update the property values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">context</span><span class="p">:</span>
 <span class="linenos">2</span>  <span class="n">cache</span><span class="p">:</span> <span class="n">true</span>
 <span class="linenos">3</span><span class="n">contextmaps</span><span class="p">:</span>
-<span class="linenos">4</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
-<span class="linenos">5</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
-<span class="linenos">6</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">&quot;http://schema.org/&quot;</span>
-<span class="linenos">7</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">&quot;./jsonldcontext.json&quot;</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">4</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
+<span class="linenos">5</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">"./jsonldcontext.json"</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
+<span class="linenos">6</span><span class="o">-</span> <span class="n">prefix</span><span class="p">:</span> <span class="s2">"http://schema.org/"</span>
+<span class="linenos">7</span>  <span class="n">file</span><span class="p">:</span> <span class="s2">"./jsonldcontext.json"</span>  <span class="c1"># wget http://schema.org/docs/jsonldcontext.jsonld</span>
 </pre></div>
 </div>
 <p>Comments for the context sections</p>
@@ -800,7 +800,7 @@ You simply need to update the property values.</p>
 <section id="summoner-section">
 <h5>Summoner section<a class="headerlink" href="#summoner-section" title="Link to this heading">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">summoner</span><span class="p">:</span>
-<span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>      <span class="c1"># &quot;21 May 20 10:00 UTC&quot;   </span>
+<span class="linenos">2</span>  <span class="n">after</span><span class="p">:</span> <span class="s2">""</span>      <span class="c1"># "21 May 20 10:00 UTC"   </span>
 <span class="linenos">3</span>  <span class="n">mode</span><span class="p">:</span> <span class="n">full</span>  <span class="c1"># full || diff:  If diff compare what we have currently in gleaner to sitemap, get only new, delete missing</span>
 <span class="linenos">4</span>  <span class="n">threads</span><span class="p">:</span> <span class="mi">1</span>
 <span class="linenos">5</span>  <span class="n">delay</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># milliseconds (1000 = 1 second) to delay between calls (will FORCE threads to 1) </span>

@@ -524,12 +524,12 @@ guide refernece <a class="reference external" href="https://www.w3.org/TR/json-l
 extended in the context with a container language attribute notation.</p>
 <p>For example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;@value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span><span class="nt">&quot;@language&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;jobTitle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;telephone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.janedoe.com&quot;</span>
+<span class="w">  </span><span class="nt">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Person"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="nt">"@language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"jobTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Professor"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"telephone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(425) 123-4567"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.janedoe.com"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -540,17 +540,17 @@ at the [Online Browsing Platform (OBP)](<a class="reference external" href="http
 and <a class="reference external" href="https://www.iso.org/iso-3166-country-codes.html">Popular standards ISO 3166 Country Codes</a>.
 Additional use the 2-letter codes is demonstrated below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>      <span class="s2">&quot;vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/vocab/&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span>      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 5</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;vocab:label&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>        <span class="s2">&quot;@container&quot;</span><span class="p">:</span> <span class="s2">&quot;@language&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>      <span class="s2">"vocab"</span><span class="p">:</span> <span class="s2">"http://example.com/vocab/"</span><span class="p">,</span>
+<span class="linenos"> 4</span>      <span class="s2">"label"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 5</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"vocab:label"</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="s2">"@container"</span><span class="p">:</span> <span class="s2">"@language"</span>
 <span class="linenos"> 7</span>      <span class="p">}</span>
 <span class="linenos"> 8</span>    <span class="p">},</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com/queen&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>    <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">11</span>      <span class="s2">&quot;en&quot;</span><span class="p">:</span> <span class="s2">&quot;The Queen&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>      <span class="s2">&quot;de&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;Die Königin&quot;</span><span class="p">,</span> <span class="s2">&quot;Ihre Majestät&quot;</span> <span class="p">]</span>
+<span class="linenos"> 9</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://example.com/queen"</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">"label"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">11</span>      <span class="s2">"en"</span><span class="p">:</span> <span class="s2">"The Queen"</span><span class="p">,</span>
+<span class="linenos">12</span>      <span class="s2">"de"</span><span class="p">:</span> <span class="p">[</span> <span class="s2">"Die Königin"</span><span class="p">,</span> <span class="s2">"Ihre Majestät"</span> <span class="p">]</span>
 <span class="linenos">13</span>    <span class="p">}</span>
 <span class="linenos">14</span>  <span class="p">}</span>
 </pre></div>
@@ -566,17 +566,17 @@ Additional use the 2-letter codes is demonstrated below.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/languages/graphs/language.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/languages/graphs/language.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -590,23 +590,23 @@ Additional use the 2-letter codes is demonstrated below.</p>
 </div>
 </div>
 <p>In graph space the resulting triples from the above are:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">&quot;Die Königin&quot;</span><span class="nd">@de</span> <span class="o">.</span>
-<span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">&quot;Ihre Majestät&quot;</span><span class="nd">@de</span> <span class="o">.</span>
-<span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">&quot;The Queen&quot;</span><span class="nd">@en</span> <span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">"Die Königin"</span><span class="nd">@de</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">"Ihre Majestät"</span><span class="nd">@de</span> <span class="o">.</span>
+<span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">queen</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">label</span><span class="o">&gt;</span> <span class="s2">"The Queen"</span><span class="nd">@en</span> <span class="o">.</span>
 </pre></div>
 </div>
 <p>with language encoding attributes in place.  These can be used in
 searching and result filters.</p>
 <p>Note, this can cause issues in query space since the concept of</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Semua orang dilahirkan merdeka dan mempunyai martabat dan hak-hak yang sama. </span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"Semua orang dilahirkan merdeka dan mempunyai martabat dan hak-hak yang sama. </span>
 <span class="n">Mereka</span> <span class="n">dikaruniai</span> <span class="n">akal</span> <span class="n">dan</span> <span class="n">hati</span> <span class="n">nurani</span> <span class="n">dan</span> <span class="n">hendaknya</span> <span class="n">bergaul</span> <span class="n">satu</span> 
-<span class="n">sama</span> <span class="n">lain</span> <span class="n">dalam</span> <span class="n">semangat</span> <span class="n">persaudaraan</span><span class="o">.</span><span class="s2">&quot;</span>
+<span class="n">sama</span> <span class="n">lain</span> <span class="n">dalam</span> <span class="n">semangat</span> <span class="n">persaudaraan</span><span class="o">.</span><span class="s2">"</span>
 </pre></div>
 </div>
 <p>and</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Semua orang dilahirkan merdeka dan mempunyai martabat </span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">"Semua orang dilahirkan merdeka dan mempunyai martabat </span>
 <span class="n">dan</span> <span class="n">hak</span><span class="o">-</span><span class="n">hak</span> <span class="n">yang</span> <span class="n">sama</span><span class="o">.</span> <span class="n">Mereka</span> <span class="n">dikaruniai</span> <span class="n">akal</span> <span class="n">dan</span> <span class="n">hati</span> <span class="n">nurani</span> 
-<span class="n">dan</span> <span class="n">hendaknya</span> <span class="n">bergaul</span> <span class="n">satu</span> <span class="n">sama</span> <span class="n">lain</span> <span class="n">dalam</span> <span class="n">semangat</span> <span class="n">persaudaraan</span><span class="o">.</span><span class="s2">&quot;@id</span>
+<span class="n">dan</span> <span class="n">hendaknya</span> <span class="n">bergaul</span> <span class="n">satu</span> <span class="n">sama</span> <span class="n">lain</span> <span class="n">dalam</span> <span class="n">semangat</span> <span class="n">persaudaraan</span><span class="o">.</span><span class="s2">"@id</span>
 </pre></div>
 </div>
 <p>are different and so care must be taken the creation of the SPARQL
@@ -615,47 +615,47 @@ of language types.</p>
 <p>When trying to note the language of a distribution, the approach is a bit different.
 Here we are not noting the encoding of the literal value in a record. Rather, we are
 providing information about a remote resource.  So for example:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;distribution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;contentUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.example-data-repository.org/dataset/3300/data/larval-krill.tsv&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/tab-separated-values&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;datePublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2010-02-03&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;inLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;de&quot;</span><span class="w">	</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataDownload"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"contentUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.example-data-repository.org/dataset/3300/data/larval-krill.tsv"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"encodingFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/tab-separated-values"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-02-03"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"inLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de"</span><span class="w">	</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">],</span>
 </pre></div>
 </div>
 <p>The above snippet is using the <a class="reference external" href="http://schema.org/inLanguage">schema.org/inLanguage</a> property to note the resources is in German.</p>
 <p>Multiple distributions with multiple languages would look like</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;distribution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"distribution"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;contentUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.example-data-repository.org/dataset/3300/data/larval-krill_de.tsv&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/tab-separated-values&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;datePublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2010-02-03&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;inLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;de&quot;</span><span class="w">	</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataDownload"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"contentUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.example-data-repository.org/dataset/3300/data/larval-krill_de.tsv"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"encodingFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/tab-separated-values"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-02-03"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"inLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de"</span><span class="w">	</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">   </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;contentUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://www.example-data-repository.org/dataset/3300/data/larval-krill_en.tsv&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/tab-separated-values&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;datePublished&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2010-02-03&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;inLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="w">	</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DataDownload"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"contentUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.example-data-repository.org/dataset/3300/data/larval-krill_en.tsv"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"encodingFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/tab-separated-values"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"datePublished"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-02-03"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"inLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="w">	</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">],</span>
 </pre></div>
 </div>
 <p>There is also the <a class="reference external" href="http://schema.org/knowsLanguage">schema.org/knowsLanguage</a> for use on other types like Person and Organization.</p>
 <p>There you could use the short form like:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;knowsLanguage&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;de&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"knowsLanguage"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"de"</span>
 </pre></div>
 </div>
 <p>or a more detailed approach like:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;knowsLanguage&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Language&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;alternateName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;es&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"knowsLanguage"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Language"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spanish"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"alternateName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"es"</span>
 <span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>

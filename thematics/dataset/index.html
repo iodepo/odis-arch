@@ -536,100 +536,100 @@ guidance and other creative works.  Due to this ODIS will focus on a generic exa
 of <a class="reference external" href="https://schema.org/CreativeWork">schema.org/CreativeWork</a> and then provide examples
 for more focused creative work examples.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;A concise but descriptive name of the dataset&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An extended, free-text description of what&#39;s in the dataset, who created it, and other attributes&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://urlToTheDatasetOrLandingPage.org/&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>    <span class="s2">&quot;sameAs&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">11</span>        <span class="s2">&quot;http://alternativeUrlToTheDatasetOrLandingPage.org&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"A concise but descriptive name of the dataset"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An extended, free-text description of what's in the dataset, who created it, and other attributes"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://urlToTheDatasetOrLandingPage.org/"</span><span class="p">,</span>
+<span class="linenos">10</span>    <span class="s2">"sameAs"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">11</span>        <span class="s2">"http://alternativeUrlToTheDatasetOrLandingPage.org"</span>
 <span class="linenos">12</span>    <span class="p">],</span>
-<span class="linenos">13</span>    <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License&quot;</span><span class="p">,</span>
-<span class="linenos">14</span>    <span class="s2">&quot;citation&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">15</span>        <span class="s2">&quot;Citation to other work relevant to this dataset&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>        <span class="s2">&quot;Citation to other work relevant to this dataset&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>        <span class="s2">&quot;Citation to other work relevant to this dataset&quot;</span>
+<span class="linenos">13</span>    <span class="s2">"license"</span><span class="p">:</span> <span class="s2">"This work is licensed under a  Creative Commons Attribution (CC-BY) 4.0 License"</span><span class="p">,</span>
+<span class="linenos">14</span>    <span class="s2">"citation"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">15</span>        <span class="s2">"Citation to other work relevant to this dataset"</span><span class="p">,</span>
+<span class="linenos">16</span>        <span class="s2">"Citation to other work relevant to this dataset"</span><span class="p">,</span>
+<span class="linenos">17</span>        <span class="s2">"Citation to other work relevant to this dataset"</span>
 <span class="linenos">18</span>    <span class="p">],</span>
-<span class="linenos">19</span>    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-24T06:34:56.000Z&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">21</span>        <span class="s2">&quot;Keyword 1&quot;</span><span class="p">,</span>
-<span class="linenos">22</span>        <span class="s2">&quot;Keyword 2&quot;</span><span class="p">,</span>
-<span class="linenos">23</span>        <span class="s2">&quot;Keyword 3&quot;</span>
+<span class="linenos">19</span>    <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"2021-04-24T06:34:56.000Z"</span><span class="p">,</span>
+<span class="linenos">20</span>    <span class="s2">"keywords"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">21</span>        <span class="s2">"Keyword 1"</span><span class="p">,</span>
+<span class="linenos">22</span>        <span class="s2">"Keyword 2"</span><span class="p">,</span>
+<span class="linenos">23</span>        <span class="s2">"Keyword 3"</span>
 <span class="linenos">24</span>    <span class="p">],</span>
-<span class="linenos">25</span>    <span class="s2">&quot;measurementTechnique&quot;</span><span class="p">:</span> <span class="s2">&quot;The URL to or text about the methods, technique or technology used to generate this Dataset&quot;</span><span class="p">,</span>
-<span class="linenos">26</span>    <span class="s2">&quot;variableMeasured&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">25</span>    <span class="s2">"measurementTechnique"</span><span class="p">:</span> <span class="s2">"The URL to or text about the methods, technique or technology used to generate this Dataset"</span><span class="p">,</span>
+<span class="linenos">26</span>    <span class="s2">"variableMeasured"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos">27</span>        <span class="p">{</span>
-<span class="linenos">28</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">29</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of a variable in the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">30</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of this variable&quot;</span>
+<span class="linenos">28</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">29</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name of a variable in the dataset"</span><span class="p">,</span>
+<span class="linenos">30</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Extended description of this variable"</span>
 <span class="linenos">31</span>        <span class="p">},</span>
 <span class="linenos">32</span>        <span class="p">{</span>
-<span class="linenos">33</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">34</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name of a variable in the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">35</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ontology.org/uriToSemanticDescriptorOfThisVariable&quot;</span><span class="p">,</span>
-<span class="linenos">36</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of this variable?&quot;</span>
+<span class="linenos">33</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">34</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name of a variable in the dataset"</span><span class="p">,</span>
+<span class="linenos">35</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://ontology.org/uriToSemanticDescriptorOfThisVariable"</span><span class="p">,</span>
+<span class="linenos">36</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Extended description of this variable?"</span>
 <span class="linenos">37</span>        <span class="p">},</span>
 <span class="linenos">38</span>        <span class="p">{</span>
-<span class="linenos">39</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">40</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SamplingDeviceApertureSurfaceArea&quot;</span><span class="p">,</span>
-<span class="linenos">41</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ontology.org/uriToSemanticDescriptorOfThisVariable&quot;</span><span class="p">,</span>
-<span class="linenos">42</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of this variable&quot;</span>
+<span class="linenos">39</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">40</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"SamplingDeviceApertureSurfaceArea"</span><span class="p">,</span>
+<span class="linenos">41</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://ontology.org/uriToSemanticDescriptorOfThisVariable"</span><span class="p">,</span>
+<span class="linenos">42</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Extended description of this variable"</span>
 <span class="linenos">43</span>        <span class="p">}</span>
 <span class="linenos">44</span>    <span class="p">],</span>
-<span class="linenos">45</span>    <span class="s2">&quot;includedInDataCatalog&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">46</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registryOfCatalogs.org/permanentUrlIdentifiyingCatalog&quot;</span><span class="p">,</span>
-<span class="linenos">47</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataCatalog&quot;</span><span class="p">,</span>
-<span class="linenos">48</span>        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://urlOfDataCatalog.org&quot;</span>
+<span class="linenos">45</span>    <span class="s2">"includedInDataCatalog"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">46</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://registryOfCatalogs.org/permanentUrlIdentifiyingCatalog"</span><span class="p">,</span>
+<span class="linenos">47</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DataCatalog"</span><span class="p">,</span>
+<span class="linenos">48</span>        <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://urlOfDataCatalog.org"</span>
 <span class="linenos">49</span>    <span class="p">},</span>
-<span class="linenos">50</span>    <span class="s2">&quot;temporalCoverage&quot;</span><span class="p">:</span> <span class="s2">&quot;2007/2007&quot;</span><span class="p">,</span>
-<span class="linenos">51</span>    <span class="s2">&quot;distribution&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">52</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;DataDownload&quot;</span><span class="p">,</span>
-<span class="linenos">53</span>        <span class="s2">&quot;contentUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;http://urlToDirectDownloadOfThisDataset.org/&quot;</span><span class="p">,</span>
-<span class="linenos">54</span>        <span class="s2">&quot;encodingFormat&quot;</span><span class="p">:</span> <span class="s2">&quot;text/csv&quot;</span>
+<span class="linenos">50</span>    <span class="s2">"temporalCoverage"</span><span class="p">:</span> <span class="s2">"2007/2007"</span><span class="p">,</span>
+<span class="linenos">51</span>    <span class="s2">"distribution"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">52</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"DataDownload"</span><span class="p">,</span>
+<span class="linenos">53</span>        <span class="s2">"contentUrl"</span><span class="p">:</span> <span class="s2">"http://urlToDirectDownloadOfThisDataset.org/"</span><span class="p">,</span>
+<span class="linenos">54</span>        <span class="s2">"encodingFormat"</span><span class="p">:</span> <span class="s2">"text/csv"</span>
 <span class="linenos">55</span>    <span class="p">},</span>
-<span class="linenos">56</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">57</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="linenos">58</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">59</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-<span class="linenos">60</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;schema.org expects lat long (Y X) coordinate order&quot;</span><span class="p">,</span>
-<span class="linenos">61</span>            <span class="s2">&quot;polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014&quot;</span>
+<span class="linenos">56</span>    <span class="s2">"spatialCoverage"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">57</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Place"</span><span class="p">,</span>
+<span class="linenos">58</span>        <span class="s2">"geo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">59</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"GeoShape"</span><span class="p">,</span>
+<span class="linenos">60</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"schema.org expects lat long (Y X) coordinate order"</span><span class="p">,</span>
+<span class="linenos">61</span>            <span class="s2">"polygon"</span><span class="p">:</span> <span class="s2">"10.161667 142.014,18.033833 142.014,18.033833 147.997833,10.161667 147.997833,10.161667 142.014"</span>
 <span class="linenos">62</span>        <span class="p">},</span>
-<span class="linenos">63</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">64</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">65</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dbpedia.org/page/Spatial_reference_system&quot;</span><span class="p">,</span>
-<span class="linenos">66</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;</span>
+<span class="linenos">63</span>        <span class="s2">"additionalProperty"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">64</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">65</span>            <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://dbpedia.org/page/Spatial_reference_system"</span><span class="p">,</span>
+<span class="linenos">66</span>            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"https://www.w3.org/2003/01/geo/wgs84_pos"</span>
 <span class="linenos">67</span>        <span class="p">}</span>
 <span class="linenos">68</span>    <span class="p">},</span>
-<span class="linenos">69</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">69</span>    <span class="s2">"provider"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos">70</span>        <span class="p">{</span>
-<span class="linenos">71</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">72</span>            <span class="s2">&quot;legalName&quot;</span><span class="p">:</span> <span class="s2">&quot;Legal Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">73</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Other Name of Organisation which generated the dataset&quot;</span><span class="p">,</span>
-<span class="linenos">74</span>            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://organisationWebsite.org/&quot;</span>
+<span class="linenos">71</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos">72</span>            <span class="s2">"legalName"</span><span class="p">:</span> <span class="s2">"Legal Name of Organisation which generated the dataset"</span><span class="p">,</span>
+<span class="linenos">73</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Other Name of Organisation which generated the dataset"</span><span class="p">,</span>
+<span class="linenos">74</span>            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://organisationWebsite.org/"</span>
 <span class="linenos">75</span>        <span class="p">}</span>
 <span class="linenos">76</span>    <span class="p">],</span>
-<span class="linenos">77</span>    <span class="s2">&quot;subjectOf&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">78</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
-<span class="linenos">79</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Describe the event which is the subject of this dataset. For example, a cruise ID.&quot;</span><span class="p">,</span>
-<span class="linenos">80</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise and descriptive name of the Event&quot;</span><span class="p">,</span>
-<span class="linenos">81</span>        <span class="s2">&quot;potentialAction&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">82</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Action&quot;</span><span class="p">,</span>
-<span class="linenos">83</span>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast&quot;</span><span class="p">,</span>
-<span class="linenos">84</span>            <span class="s2">&quot;agent&quot;</span><span class="p">:</span> <span class="p">[</span>
-<span class="linenos">85</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span><span class="p">,</span>
-<span class="linenos">86</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span><span class="p">,</span>
-<span class="linenos">87</span>                <span class="s2">&quot;Name or permanent ID of person or thing that performed this action&quot;</span>
+<span class="linenos">77</span>    <span class="s2">"subjectOf"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">78</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Event"</span><span class="p">,</span>
+<span class="linenos">79</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Describe the event which is the subject of this dataset. For example, a cruise ID."</span><span class="p">,</span>
+<span class="linenos">80</span>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Concise and descriptive name of the Event"</span><span class="p">,</span>
+<span class="linenos">81</span>        <span class="s2">"potentialAction"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">82</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Action"</span><span class="p">,</span>
+<span class="linenos">83</span>            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Concise but descriptive name of action that was part of an Event. For example, the name of a CTD cast"</span><span class="p">,</span>
+<span class="linenos">84</span>            <span class="s2">"agent"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">85</span>                <span class="s2">"Name or permanent ID of person or thing that performed this action"</span><span class="p">,</span>
+<span class="linenos">86</span>                <span class="s2">"Name or permanent ID of person or thing that performed this action"</span><span class="p">,</span>
+<span class="linenos">87</span>                <span class="s2">"Name or permanent ID of person or thing that performed this action"</span>
 <span class="linenos">88</span>            <span class="p">],</span>
-<span class="linenos">89</span>            <span class="s2">&quot;startTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T14:45UTC&quot;</span><span class="p">,</span>
-<span class="linenos">90</span>            <span class="s2">&quot;endTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2007-03-11T15:42UTC&quot;</span><span class="p">,</span>
-<span class="linenos">91</span>            <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">92</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Thing&quot;</span><span class="p">,</span>
-<span class="linenos">93</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor&quot;</span><span class="p">,</span>
-<span class="linenos">94</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://ontology.org/uriToSemanticDescriptorOfThisInstrument&quot;</span><span class="p">,</span>
-<span class="linenos">95</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Extended description of the sampling instrument&quot;</span>
+<span class="linenos">89</span>            <span class="s2">"startTime"</span><span class="p">:</span> <span class="s2">"2007-03-11T14:45UTC"</span><span class="p">,</span>
+<span class="linenos">90</span>            <span class="s2">"endTime"</span><span class="p">:</span> <span class="s2">"2007-03-11T15:42UTC"</span><span class="p">,</span>
+<span class="linenos">91</span>            <span class="s2">"instrument"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">92</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Thing"</span><span class="p">,</span>
+<span class="linenos">93</span>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"The name of the instrument used in the action. For example, the specific model of a CTD, a glider, a moored sensor"</span><span class="p">,</span>
+<span class="linenos">94</span>                <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://ontology.org/uriToSemanticDescriptorOfThisInstrument"</span><span class="p">,</span>
+<span class="linenos">95</span>                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Extended description of the sampling instrument"</span>
 <span class="linenos">96</span>            <span class="p">}</span>
 <span class="linenos">97</span>        <span class="p">}</span>
 <span class="linenos">98</span>    <span class="p">}</span>
@@ -650,17 +650,17 @@ you are defining your spatialCoverage, in the GeoShape polygon or box parameters
 </div>
 <p>Using a bounding box for your spatialCoverage is recommended, as it is easy to query
 &amp; display downstream, such as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>    <span class="s2">&quot;spatialCoverage&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 2</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Place&quot;</span><span class="p">,</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;geo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="hll"><span class="linenos"> 4</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;GeoShape&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;schema.org expects lat long (Y X) coordinate order.  Box syntax is: miny minx maxy maxx&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 6</span>            <span class="s2">&quot;box&quot;</span><span class="p">:</span> <span class="s2">&quot;-90 -180 90 -180&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>    <span class="s2">"spatialCoverage"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 2</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Place"</span><span class="p">,</span>
+<span class="linenos"> 3</span>        <span class="s2">"geo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="hll"><span class="linenos"> 4</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"GeoShape"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"schema.org expects lat long (Y X) coordinate order.  Box syntax is: miny minx maxy maxx"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>            <span class="s2">"box"</span><span class="p">:</span> <span class="s2">"-90 -180 90 -180"</span>
 </span><span class="linenos"> 7</span>        <span class="p">},</span>
-<span class="linenos"> 8</span>        <span class="s2">&quot;additionalProperty&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 9</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>            <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;https://dbpedia.org/page/Spatial_reference_system&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.w3.org/2003/01/geo/wgs84_pos&quot;</span>
+<span class="linenos"> 8</span>        <span class="s2">"additionalProperty"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 9</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+<span class="linenos">10</span>            <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"https://dbpedia.org/page/Spatial_reference_system"</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"https://www.w3.org/2003/01/geo/wgs84_pos"</span>
 <span class="linenos">12</span>        <span class="p">}</span>
 <span class="linenos">13</span>    <span class="p">},</span>
 </pre></div>
@@ -679,7 +679,7 @@ frames and SHACL shapes are kept in a discrete location.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
-    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span><span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span><span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
     
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
@@ -687,26 +687,26 @@ frames and SHACL shapes are kept in a discrete location.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">urllib</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">contextlib</span>
 
-<span class="n">devnull</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">devnull</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">devnull</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span>
 <span class="n">contextlib</span><span class="o">.</span><span class="n">redirect_stderr</span><span class="p">(</span><span class="n">devnull</span><span class="p">)</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
  
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/iodepo/odis-in/master/dataGraphs/thematics/docs/graphs/map.json&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://raw.githubusercontent.com/iodepo/odis-in/master/dataGraphs/thematics/docs/graphs/map.json"</span>
 <span class="n">dgraph</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
-<span class="n">furl</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/iodepo/odis-in/master/frames/mapFrameID.json&quot;</span>
+<span class="n">furl</span> <span class="o">=</span> <span class="s2">"https://raw.githubusercontent.com/iodepo/odis-in/master/frames/mapFrameID.json"</span>
 <span class="n">fgraph</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">furl</span><span class="p">)</span>
 <span class="n">frame</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fgraph</span><span class="p">)</span>
 
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -722,8 +722,8 @@ frames and SHACL shapes are kept in a discrete location.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;
+    "@context": {
+        "@vocab": "https://schema.org/"
     }
 }
 </pre></div>
@@ -737,13 +737,13 @@ frames and SHACL shapes are kept in a discrete location.</p>
 
 <span class="nn">File ~/work/odis-arch/odis-arch/book/lib/jbutils.py:40,</span> in <span class="ni">show_graph</span><span class="nt">(doc, size)</span>
 <span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="k">def</span><span class="w"> </span><span class="nf">show_graph</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">&#39;@default&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">40</span>     <span class="n">rdf</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">doc</span><span class="p">)[</span><span class="s1">'@default'</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Digraph</span><span class="p">(</span><span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">'rankdir'</span><span class="p">:</span> <span class="s1">'LR'</span><span class="p">})</span>
 <span class="g g-Whitespace">     </span><span class="mi">42</span>     <span class="c1"># graph = graphviz.Digraph(</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={&#39;size&#39;: str(size), &#39;rankdir&#39;: &#39;LR&#39;}</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="c1">#     strict=False, graph_attr={'size': str(size), 'rankdir': 'LR'}</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="c1"># )</span>
 
-<span class="ne">KeyError</span>: &#39;@default&#39;
+<span class="ne">KeyError</span>: '@default'
 </pre></div>
 </div>
 </div>

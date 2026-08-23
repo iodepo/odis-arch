@@ -535,50 +535,50 @@ the the data graph ID, or in the absence of that the data graph URL or the
 referenced resources URL by gleaner, to another reference.  This may be
 an organization ID or a PID of the connected resource.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;rdf&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span>        <span class="s2">&quot;prov&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span><span class="p">,</span>
-<span class="linenos"> 5</span>        <span class="s2">&quot;rdfs&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2000/01/rdf-schema#&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"rdf"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="p">,</span>
+<span class="linenos"> 4</span>        <span class="s2">"prov"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/ns/prov#"</span><span class="p">,</span>
+<span class="linenos"> 5</span>        <span class="s2">"rdfs"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/2000/01/rdf-schema#"</span>
 <span class="linenos"> 6</span>    <span class="p">},</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;@graph&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 7</span>    <span class="s2">"@graph"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos"> 8</span>        <span class="p">{</span>
-<span class="linenos"> 9</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.re3data.org/repository/obis&quot;</span><span class="p">,</span>
-<span class="linenos">10</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;prov:Organization&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>            <span class="s2">&quot;rdf:name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ocean Biodiversity Information System&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>            <span class="s2">&quot;rdfs:seeAlso&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org&quot;</span>
+<span class="linenos"> 9</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://www.re3data.org/repository/obis"</span><span class="p">,</span>
+<span class="linenos">10</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"prov:Organization"</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">"rdf:name"</span><span class="p">:</span> <span class="s2">"Ocean Biodiversity Information System"</span><span class="p">,</span>
+<span class="linenos">12</span>            <span class="s2">"rdfs:seeAlso"</span><span class="p">:</span> <span class="s2">"https://obis.org"</span>
 <span class="linenos">13</span>        <span class="p">},</span>
 <span class="linenos">14</span>        <span class="p">{</span>
-<span class="linenos">15</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2&quot;</span><span class="p">,</span>
-<span class="linenos">16</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;prov:Entity&quot;</span><span class="p">,</span>
-<span class="linenos">17</span>            <span class="s2">&quot;prov:wasAttributedTo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">18</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.re3data.org/repository/obis&quot;</span>
+<span class="linenos">15</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"</span><span class="p">,</span>
+<span class="linenos">16</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"prov:Entity"</span><span class="p">,</span>
+<span class="linenos">17</span>            <span class="s2">"prov:wasAttributedTo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">18</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://www.re3data.org/repository/obis"</span>
 <span class="linenos">19</span>            <span class="p">},</span>
-<span class="linenos">20</span>            <span class="s2">&quot;prov:value&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2&quot;</span>
+<span class="linenos">20</span>            <span class="s2">"prov:value"</span><span class="p">:</span> <span class="s2">"https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"</span>
 <span class="linenos">21</span>        <span class="p">},</span>
 <span class="linenos">22</span>        <span class="p">{</span>
-<span class="linenos">23</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55&quot;</span><span class="p">,</span>
-<span class="linenos">24</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;prov:Collection&quot;</span><span class="p">,</span>
-<span class="linenos">25</span>            <span class="s2">&quot;prov:hadMember&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">26</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2&quot;</span>
+<span class="linenos">23</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55"</span><span class="p">,</span>
+<span class="linenos">24</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"prov:Collection"</span><span class="p">,</span>
+<span class="linenos">25</span>            <span class="s2">"prov:hadMember"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">26</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2"</span>
 <span class="linenos">27</span>            <span class="p">}</span>
 <span class="linenos">28</span>        <span class="p">},</span>
 <span class="linenos">29</span>        <span class="p">{</span>
-<span class="linenos">30</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55&quot;</span><span class="p">,</span>
-<span class="linenos">31</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;prov:Entity&quot;</span><span class="p">,</span>
-<span class="linenos">32</span>            <span class="s2">&quot;prov:value&quot;</span><span class="p">:</span> <span class="s2">&quot;7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld&quot;</span>
+<span class="linenos">30</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55"</span><span class="p">,</span>
+<span class="linenos">31</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"prov:Entity"</span><span class="p">,</span>
+<span class="linenos">32</span>            <span class="s2">"prov:value"</span><span class="p">:</span> <span class="s2">"7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld"</span>
 <span class="linenos">33</span>        <span class="p">},</span>
 <span class="linenos">34</span>        <span class="p">{</span>
-<span class="linenos">35</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55&quot;</span><span class="p">,</span>
-<span class="linenos">36</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;prov:Activity&quot;</span><span class="p">,</span>
-<span class="linenos">37</span>            <span class="s2">&quot;prov:endedAtTime&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">38</span>                <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-04-20&quot;</span><span class="p">,</span>
-<span class="linenos">39</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+<span class="linenos">35</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55"</span><span class="p">,</span>
+<span class="linenos">36</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"prov:Activity"</span><span class="p">,</span>
+<span class="linenos">37</span>            <span class="s2">"prov:endedAtTime"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">38</span>                <span class="s2">"@value"</span><span class="p">:</span> <span class="s2">"2021-04-20"</span><span class="p">,</span>
+<span class="linenos">39</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span>
 <span class="linenos">40</span>            <span class="p">},</span>
-<span class="linenos">41</span>            <span class="s2">&quot;prov:generated&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">42</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55&quot;</span>
+<span class="linenos">41</span>            <span class="s2">"prov:generated"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">42</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55"</span>
 <span class="linenos">43</span>            <span class="p">},</span>
-<span class="linenos">44</span>            <span class="s2">&quot;prov:used&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">45</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55&quot;</span>
+<span class="linenos">44</span>            <span class="s2">"prov:used"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">45</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55"</span>
 <span class="linenos">46</span>            <span class="p">}</span>
 <span class="linenos">47</span>        <span class="p">}</span>
 <span class="linenos">48</span>    <span class="p">]</span>
@@ -599,28 +599,28 @@ an organization ID or a PID of the connected resource.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/indexing/prov/graphs/gleaner.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/indexing/prov/graphs/gleaner.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;prov&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span><span class="p">},</span>
-  <span class="s2">&quot;@explicit&quot;</span><span class="p">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;@type&quot;</span><span class="p">:</span>     <span class="s2">&quot;prov:Activity&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;prov:generated&quot;</span><span class="p">:</span> <span class="p">{},</span>
-   <span class="s2">&quot;prov:endedAtTime&quot;</span><span class="p">:</span> <span class="p">{},</span>
-   <span class="s2">&quot;prov:used&quot;</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
+  <span class="s2">"prov"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/ns/prov#"</span><span class="p">},</span>
+  <span class="s2">"@explicit"</span><span class="p">:</span> <span class="s2">"false"</span><span class="p">,</span>
+  <span class="s2">"@type"</span><span class="p">:</span>     <span class="s2">"prov:Activity"</span><span class="p">,</span>
+   <span class="s2">"prov:generated"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"prov:endedAtTime"</span><span class="p">:</span> <span class="p">{},</span>
+   <span class="s2">"prov:used"</span><span class="p">:</span> <span class="p">{}</span>
 <span class="p">}</span>
 
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;prov&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span>
+  <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
+  <span class="s2">"prov"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/ns/prov#"</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -634,33 +634,33 @@ an organization ID or a PID of the connected resource.</p>
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{
-    &quot;@context&quot;: {
-        &quot;@vocab&quot;: &quot;https://schema.org/&quot;,
-        &quot;prov&quot;: &quot;http://www.w3.org/ns/prov#&quot;
+    "@context": {
+        "@vocab": "https://schema.org/",
+        "prov": "http://www.w3.org/ns/prov#"
     },
-    &quot;@id&quot;: &quot;https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55&quot;,
-    &quot;@type&quot;: &quot;prov:Activity&quot;,
-    &quot;prov:endedAtTime&quot;: {
-        &quot;@type&quot;: &quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;,
-        &quot;@value&quot;: &quot;2021-04-20&quot;
+    "@id": "https://gleaner.io/id/run/7c1eaa1aaed95861330109026c42e57a31ecae55",
+    "@type": "prov:Activity",
+    "prov:endedAtTime": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2021-04-20"
     },
-    &quot;prov:generated&quot;: {
-        &quot;@id&quot;: &quot;urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55&quot;,
-        &quot;@type&quot;: &quot;prov:Entity&quot;,
-        &quot;prov:value&quot;: &quot;7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld&quot;
+    "prov:generated": {
+        "@id": "urn:gleaner:milled:obis:7c1eaa1aaed95861330109026c42e57a31ecae55",
+        "@type": "prov:Entity",
+        "prov:value": "7c1eaa1aaed95861330109026c42e57a31ecae55.jsonld"
     },
-    &quot;prov:used&quot;: {
-        &quot;@id&quot;: &quot;https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55&quot;,
-        &quot;@type&quot;: &quot;prov:Collection&quot;,
-        &quot;prov:hadMember&quot;: {
-            &quot;@id&quot;: &quot;https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2&quot;,
-            &quot;@type&quot;: &quot;prov:Entity&quot;,
-            &quot;prov:value&quot;: &quot;https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2&quot;,
-            &quot;prov:wasAttributedTo&quot;: {
-                &quot;@id&quot;: &quot;https://www.re3data.org/repository/obis&quot;,
-                &quot;@type&quot;: &quot;prov:Organization&quot;,
-                &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#name&quot;: &quot;Ocean Biodiversity Information System&quot;,
-                &quot;http://www.w3.org/2000/01/rdf-schema#seeAlso&quot;: &quot;https://obis.org&quot;
+    "prov:used": {
+        "@id": "https://gleaner.io/id/collection/7c1eaa1aaed95861330109026c42e57a31ecae55",
+        "@type": "prov:Collection",
+        "prov:hadMember": {
+            "@id": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2",
+            "@type": "prov:Entity",
+            "prov:value": "https://obis.org/dataset/9381239f-3d64-48b4-80c9-b9ebb674edc2",
+            "prov:wasAttributedTo": {
+                "@id": "https://www.re3data.org/repository/obis",
+                "@type": "prov:Organization",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#name": "Ocean Biodiversity Information System",
+                "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://obis.org"
             }
         }
     }
@@ -675,80 +675,80 @@ an organization ID or a PID of the connected resource.</p>
 <p>This is a basic nanoprov example. Note, this is a draft and
 the ID connections and examples have not been made yet.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;gleaner&quot;</span><span class="p">:</span> <span class="s2">&quot;https://voc.gleaner.io/id/&quot;</span><span class="p">,</span>
-<span class="linenos"> 4</span>        <span class="s2">&quot;np&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.nanopub.org/nschema#&quot;</span><span class="p">,</span>
-<span class="linenos"> 5</span>        <span class="s2">&quot;prov&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/ns/prov#&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>        <span class="s2">&quot;xsd&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"gleaner"</span><span class="p">:</span> <span class="s2">"https://voc.gleaner.io/id/"</span><span class="p">,</span>
+<span class="linenos"> 4</span>        <span class="s2">"np"</span><span class="p">:</span> <span class="s2">"http://www.nanopub.org/nschema#"</span><span class="p">,</span>
+<span class="linenos"> 5</span>        <span class="s2">"prov"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/ns/prov#"</span><span class="p">,</span>
+<span class="linenos"> 6</span>        <span class="s2">"xsd"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/2001/XMLSchema#"</span>
 <span class="linenos"> 7</span>    <span class="p">},</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;@set&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos"> 8</span>    <span class="s2">"@set"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos"> 9</span>        <span class="p">{</span>
-<span class="linenos">10</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID&quot;</span><span class="p">,</span>
-<span class="linenos">11</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;np:NanoPublication&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>            <span class="s2">&quot;np:hasAssertion&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">13</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#assertion&quot;</span>
+<span class="linenos">10</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID"</span><span class="p">,</span>
+<span class="linenos">11</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"np:NanoPublication"</span><span class="p">,</span>
+<span class="linenos">12</span>            <span class="s2">"np:hasAssertion"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">13</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#assertion"</span>
 <span class="linenos">14</span>            <span class="p">},</span>
-<span class="linenos">15</span>            <span class="s2">&quot;np:hasProvenance&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">16</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#provenance&quot;</span>
+<span class="linenos">15</span>            <span class="s2">"np:hasProvenance"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">16</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#provenance"</span>
 <span class="linenos">17</span>            <span class="p">},</span>
-<span class="linenos">18</span>            <span class="s2">&quot;np:hasPublicationInfo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">19</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#pubInfo&quot;</span>
+<span class="linenos">18</span>            <span class="s2">"np:hasPublicationInfo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">19</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#pubInfo"</span>
 <span class="linenos">20</span>            <span class="p">}</span>
 <span class="linenos">21</span>        <span class="p">},</span>
 <span class="linenos">22</span>        <span class="p">{</span>
-<span class="linenos">23</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#assertion&quot;</span><span class="p">,</span>
-<span class="linenos">24</span>            <span class="s2">&quot;@graph&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">25</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSetURI&quot;</span><span class="p">,</span>
-<span class="linenos">26</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:Dataset&quot;</span><span class="p">,</span>
-<span class="linenos">27</span>                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is where you would put corrections or annotations&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>                <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">23</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#assertion"</span><span class="p">,</span>
+<span class="linenos">24</span>            <span class="s2">"@graph"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">25</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"DataSetURI"</span><span class="p">,</span>
+<span class="linenos">26</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"schema:Dataset"</span><span class="p">,</span>
+<span class="linenos">27</span>                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"This is where you would put corrections or annotations"</span><span class="p">,</span>
+<span class="linenos">28</span>                <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">[</span>
 <span class="linenos">29</span>                    <span class="p">{</span>
-<span class="linenos">30</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">31</span>                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GraphSHA&quot;</span><span class="p">,</span>
-<span class="linenos">32</span>                        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A SHA256 sha stamp on the harvested data graph from a URL&quot;</span><span class="p">,</span>
-<span class="linenos">33</span>                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;{{SHA256 HASH HERE}}&quot;</span>
+<span class="linenos">30</span>                        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"schema:PropertyValue"</span><span class="p">,</span>
+<span class="linenos">31</span>                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"GraphSHA"</span><span class="p">,</span>
+<span class="linenos">32</span>                        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"A SHA256 sha stamp on the harvested data graph from a URL"</span><span class="p">,</span>
+<span class="linenos">33</span>                        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"{{SHA256 HASH HERE}}"</span>
 <span class="linenos">34</span>                    <span class="p">},</span>
 <span class="linenos">35</span>                    <span class="p">{</span>
-<span class="linenos">36</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">37</span>                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ProviderID&quot;</span><span class="p">,</span>
-<span class="linenos">38</span>                        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The id provided with the data graph by the provider&quot;</span><span class="p">,</span>
-<span class="linenos">39</span>                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;{{re3 or URL noted in config}}&quot;</span>
+<span class="linenos">36</span>                        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"schema:PropertyValue"</span><span class="p">,</span>
+<span class="linenos">37</span>                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"ProviderID"</span><span class="p">,</span>
+<span class="linenos">38</span>                        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"The id provided with the data graph by the provider"</span><span class="p">,</span>
+<span class="linenos">39</span>                        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"{{re3 or URL noted in config}}"</span>
 <span class="linenos">40</span>                    <span class="p">},</span>
 <span class="linenos">41</span>                    <span class="p">{</span>
-<span class="linenos">42</span>                        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;schema:PropertyValue&quot;</span><span class="p">,</span>
-<span class="linenos">43</span>                        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;URL&quot;</span><span class="p">,</span>
-<span class="linenos">44</span>                        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The URL harvested by gleaner&quot;</span><span class="p">,</span>
-<span class="linenos">45</span>                        <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;{{The URL the JSON-LD came from}}&quot;</span>
+<span class="linenos">42</span>                        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"schema:PropertyValue"</span><span class="p">,</span>
+<span class="linenos">43</span>                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"URL"</span><span class="p">,</span>
+<span class="linenos">44</span>                        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"The URL harvested by gleaner"</span><span class="p">,</span>
+<span class="linenos">45</span>                        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"{{The URL the JSON-LD came from}}"</span>
 <span class="linenos">46</span>                    <span class="p">}</span>
 <span class="linenos">47</span>                <span class="p">]</span>
 <span class="linenos">48</span>            <span class="p">}</span>
 <span class="linenos">49</span>        <span class="p">},</span>
 <span class="linenos">50</span>        <span class="p">{</span>
-<span class="linenos">51</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#provenance&quot;</span><span class="p">,</span>
-<span class="linenos">52</span>            <span class="s2">&quot;@graph&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">53</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;URIforprovondataset&quot;</span><span class="p">,</span>
-<span class="linenos">54</span>                <span class="s2">&quot;prov:wasGeneratedAtTime&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">55</span>                    <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;dateDone&quot;</span><span class="p">,</span>
-<span class="linenos">56</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;xsd:dateTime&quot;</span>
+<span class="linenos">51</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#provenance"</span><span class="p">,</span>
+<span class="linenos">52</span>            <span class="s2">"@graph"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">53</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"URIforprovondataset"</span><span class="p">,</span>
+<span class="linenos">54</span>                <span class="s2">"prov:wasGeneratedAtTime"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">55</span>                    <span class="s2">"@value"</span><span class="p">:</span> <span class="s2">"dateDone"</span><span class="p">,</span>
+<span class="linenos">56</span>                    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"xsd:dateTime"</span>
 <span class="linenos">57</span>                <span class="p">},</span>
-<span class="linenos">58</span>                <span class="s2">&quot;prov:wasDerivedFrom&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">59</span>                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;IDHERE&quot;</span>
+<span class="linenos">58</span>                <span class="s2">"prov:wasDerivedFrom"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">59</span>                    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"IDHERE"</span>
 <span class="linenos">60</span>                <span class="p">},</span>
-<span class="linenos">61</span>                <span class="s2">&quot;prov:wasAttributedTo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">62</span>                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;IDHERE&quot;</span>
+<span class="linenos">61</span>                <span class="s2">"prov:wasAttributedTo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">62</span>                    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"IDHERE"</span>
 <span class="linenos">63</span>                <span class="p">}</span>
 <span class="linenos">64</span>            <span class="p">}</span>
 <span class="linenos">65</span>        <span class="p">},</span>
 <span class="linenos">66</span>        <span class="p">{</span>
-<span class="linenos">67</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:nanopub/XID#pubInfo&quot;</span><span class="p">,</span>
-<span class="linenos">68</span>            <span class="s2">&quot;@graph&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">69</span>                <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;IDHERE&quot;</span><span class="p">,</span>
-<span class="linenos">70</span>                <span class="s2">&quot;prov:wasAttributedTo&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">71</span>                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;gleaner:tool/gleaner&quot;</span>
+<span class="linenos">67</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:nanopub/XID#pubInfo"</span><span class="p">,</span>
+<span class="linenos">68</span>            <span class="s2">"@graph"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">69</span>                <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"IDHERE"</span><span class="p">,</span>
+<span class="linenos">70</span>                <span class="s2">"prov:wasAttributedTo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">71</span>                    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"gleaner:tool/gleaner"</span>
 <span class="linenos">72</span>                <span class="p">},</span>
-<span class="linenos">73</span>                <span class="s2">&quot;prov:generatedAtTime&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">74</span>                    <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-10-23T14:38:00Z&quot;</span><span class="p">,</span>
-<span class="linenos">75</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;xsd:dateTime&quot;</span>
+<span class="linenos">73</span>                <span class="s2">"prov:generatedAtTime"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">74</span>                    <span class="s2">"@value"</span><span class="p">:</span> <span class="s2">"2019-10-23T14:38:00Z"</span><span class="p">,</span>
+<span class="linenos">75</span>                    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"xsd:dateTime"</span>
 <span class="linenos">76</span>                <span class="p">}</span>
 <span class="linenos">77</span>            <span class="p">}</span>
 <span class="linenos">78</span>        <span class="p">}</span>
@@ -767,16 +767,16 @@ the ID connections and examples have not been made yet.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/indexing/prov/graphs/nanoprov.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/indexing/prov/graphs/nanoprov.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>

@@ -548,12 +548,12 @@ found in other sections of the ODIS documentation.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rdflib</span>
 
 <span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;../tooling/notebooks/data/oceanexperts_graph.ttl&quot;</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;ttl&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">"../tooling/notebooks/data/oceanexperts_graph.ttl"</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">"ttl"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N9656cde6c1054a4ba02f9bbcd09d17a8 (&lt;class &#39;rdflib.graph.Graph&#39;&gt;)&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Graph identifier=N9656cde6c1054a4ba02f9bbcd09d17a8 (&lt;class 'rdflib.graph.Graph'&gt;)&gt;
 </pre></div>
 </div>
 </div>
@@ -568,13 +568,13 @@ found in other sections of the ODIS documentation.</p>
 <p>You could also try these queries at: <a class="reference external" href="https://oceans.collaborium.io/sparql.html">https://oceans.collaborium.io/sparql.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">    SELECT ?s ?p ?o</span>
 <span class="s2">    WHERE {</span>
 <span class="s2">        ?s ?p ?o .</span>
 <span class="s2">    }</span>
 <span class="s2">    LIMIT 3</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 </pre></div>
 </div>
 </div>
@@ -593,15 +593,15 @@ found in other sections of the ODIS documentation.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;2014-06-02&#39;),
-                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/startDate&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb236&#39;)}
-ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39; Copenhagen Denmark &#39;),
-                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/address&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb496&#39;)}
-ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;Introduction to Ocean Data Management for Students of the Environment Group II&#39;),
-                   &#39;p&#39;: rdflib.term.URIRef(&#39;https://schema.org/name&#39;),
-                   &#39;s&#39;: rdflib.term.BNode(&#39;n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;)}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| row.asdict(): {'o': rdflib.term.Literal('2014-06-02'),
+                   'p': rdflib.term.URIRef('https://schema.org/startDate'),
+                   's': rdflib.term.BNode('n0dfe00a0174f48a7b9fb702b5f5b4ecdb236')}
+ic| row.asdict(): {'o': rdflib.term.Literal(' Copenhagen Denmark '),
+                   'p': rdflib.term.URIRef('https://schema.org/address'),
+                   's': rdflib.term.BNode('n0dfe00a0174f48a7b9fb702b5f5b4ecdb496')}
+ic| row.asdict(): {'o': rdflib.term.Literal('Introduction to Ocean Data Management for Students of the Environment Group II'),
+                   'p': rdflib.term.URIRef('https://schema.org/name'),
+                   's': rdflib.term.BNode('n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745')}
 </pre></div>
 </div>
 </div>
@@ -613,25 +613,25 @@ ic| row.asdict(): {&#39;o&#39;: rdflib.term.Literal(&#39;Introduction to Ocean D
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">s1</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;p&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
-    <span class="n">o</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"s"</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"p"</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">"o"</span><span class="p">]</span><span class="o">.</span><span class="n">n3</span><span class="p">()</span>
 
     <span class="n">ic</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb236&#39;
-    p: &#39;&lt;https://schema.org/startDate&gt;&#39;
-    o: &#39;&quot;2014-06-02&quot;&#39;
-ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb496&#39;
-    p: &#39;&lt;https://schema.org/address&gt;&#39;
-    o: &#39;&quot; Copenhagen Denmark &quot;&#39;
-ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
-    p: &#39;&lt;https://schema.org/name&gt;&#39;
-    o: (&#39;&quot;Introduction to Ocean Data Management for Students of the Environment Group &#39;
-        &#39;II&quot;&#39;)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ic| s: '_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb236'
+    p: '&lt;https://schema.org/startDate&gt;'
+    o: '"2014-06-02"'
+ic| s: '_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb496'
+    p: '&lt;https://schema.org/address&gt;'
+    o: '" Copenhagen Denmark "'
+ic| s: '_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745'
+    p: '&lt;https://schema.org/name&gt;'
+    o: ('"Introduction to Ocean Data Management for Students of the Environment Group '
+        'II"')
 </pre></div>
 </div>
 </div>
@@ -645,16 +645,16 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">kglab</span>
 
 <span class="n">namespaces</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;schema&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"schema"</span><span class="p">:</span>  <span class="s2">"https://schema.org/"</span><span class="p">,</span>
     <span class="p">}</span>
 
 <span class="n">kg</span> <span class="o">=</span> <span class="n">kglab</span><span class="o">.</span><span class="n">KnowledgeGraph</span><span class="p">(</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Demonstration Graph&quot;</span><span class="p">,</span>
-    <span class="n">base_uri</span> <span class="o">=</span> <span class="s2">&quot;https://odis.org/id/&quot;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"Demonstration Graph"</span><span class="p">,</span>
+    <span class="n">base_uri</span> <span class="o">=</span> <span class="s2">"https://odis.org/id/"</span><span class="p">,</span>
     <span class="n">namespaces</span> <span class="o">=</span> <span class="n">namespaces</span><span class="p">,</span>
     <span class="p">)</span>
 
-<span class="n">kg</span><span class="o">.</span><span class="n">load_rdf</span><span class="p">(</span><span class="s2">&quot;../tooling/notebooks/data/oceanexperts_graph.ttl&quot;</span><span class="p">)</span>
+<span class="n">kg</span><span class="o">.</span><span class="n">load_rdf</span><span class="p">(</span><span class="s2">"../tooling/notebooks/data/oceanexperts_graph.ttl"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -697,7 +697,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <p>Let’s do a query to see all the location names in our group for training.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">PREFIX schema: &lt;https://schema.org/&gt;</span>
 <span class="s2">SELECT DISTINCT ?locname</span>
 <span class="s2">  WHERE {</span>
@@ -705,7 +705,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <span class="s2">      ?s  &lt;https://schema.org/location&gt; ?location .</span>
 <span class="s2">      ?location schema:name ?locname .</span>
 <span class="s2">  }</span>
-<span class="s2">  &quot;&quot;&quot;</span>
+<span class="s2">  """</span>
 </pre></div>
 </div>
 </div>
@@ -713,7 +713,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"max_rows"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">kg</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -773,7 +773,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <p>The above is nice, but it doesn’t tell us much about the number of events in each location. We can modify our query to do this.  We can leverage the COUNT and GROUP BY capacity of SPARQL to do this.  We can then add in ORDER BY to sort the results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s3</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT DISTINCT ?locname (COUNT(?locname) AS ?count)</span>
 <span class="s2">  WHERE {</span>
 <span class="s2">      ?s rdf:type &lt;https://schema.org/Course&gt; .</span>
@@ -782,7 +782,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <span class="s2">  }</span>
 <span class="s2">  GROUP BY ?locname</span>
 <span class="s2">  ORDER BY DESC(?count)</span>
-<span class="s2">  &quot;&quot;&quot;</span>
+<span class="s2">  """</span>
 </pre></div>
 </div>
 </div>
@@ -790,7 +790,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"max_rows"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">kg</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">s3</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -865,16 +865,16 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <p>which in a SPARQL query would require that a hasCourseInstance property is not defined for the Course.  That is, Courses that have had no instances made yet.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s4</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s4</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT DISTINCT ?locname (COUNT(?locname) AS ?count)</span>
 <span class="s2">  WHERE {</span>
 <span class="s2">      ?s rdf:type &lt;https://schema.org/Course&gt; .</span>
 <span class="s2">      ?s  &lt;https://schema.org/location&gt; ?location .</span>
 <span class="s2">      ?location &lt;https://schema.org/name&gt; ?locname .</span>
-<span class="s2">      FILTER regex(?locname, &quot;.Peru.&quot;, &quot;i&quot;) .</span>
+<span class="s2">      FILTER regex(?locname, ".Peru.", "i") .</span>
 <span class="s2">  }</span>
 <span class="s2">  GROUP BY ?locname</span>
-<span class="s2">  &quot;&quot;&quot;</span>
+<span class="s2">  """</span>
 </pre></div>
 </div>
 </div>
@@ -882,7 +882,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"max_rows"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="n">df4</span> <span class="o">=</span> <span class="n">kg</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">s4</span><span class="p">)</span>
 <span class="n">df4</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -942,7 +942,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <p>Let’s look at the dates that are available in the graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s5</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s5</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">SELECT DISTINCT ?sdate (COUNT(?sdate) AS ?count)</span>
 <span class="s2">  WHERE {</span>
 <span class="s2">      ?s rdf:type &lt;https://schema.org/Course&gt; .</span>
@@ -950,7 +950,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <span class="s2">      ?instance  &lt;https://schema.org/startDate&gt; ?sdate .</span>
 <span class="s2">  }</span>
 <span class="s2">  GROUP BY ?sdate</span>
-<span class="s2">  &quot;&quot;&quot;</span>
+<span class="s2">  """</span>
 </pre></div>
 </div>
 </div>
@@ -958,7 +958,7 @@ ic| s: &#39;_:n0dfe00a0174f48a7b9fb702b5f5b4ecdb1745&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;max_rows&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"max_rows"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="n">df4</span> <span class="o">=</span> <span class="n">kg</span><span class="o">.</span><span class="n">query_as_df</span><span class="p">(</span><span class="n">s5</span><span class="p">)</span>
 <span class="n">df4</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># show some results</span>
@@ -1030,10 +1030,10 @@ a shared concept like <a class="reference external" href="https://schema.org/Cou
 goals among the participants.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">&quot;count&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span><span class="p">[</span><span class="s1">'count'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df4</span><span class="p">[</span><span class="s2">"count"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># convert count c to int</span>
 <span class="n">df4pd</span> <span class="o">=</span> <span class="n">df4</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>  <span class="c1"># convert cudf dataframe to pandas dataframe</span>
-<span class="n">df4pd</span><span class="p">[</span><span class="s1">&#39;sdate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df4pd</span><span class="p">[</span><span class="s1">&#39;sdate&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># convert date to datetime</span>
-<span class="n">courseByYear</span> <span class="o">=</span> <span class="n">df4pd</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;sdate&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="c1"># group by year</span>
+<span class="n">df4pd</span><span class="p">[</span><span class="s1">'sdate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df4pd</span><span class="p">[</span><span class="s1">'sdate'</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span>  <span class="c1"># convert date to datetime</span>
+<span class="n">courseByYear</span> <span class="o">=</span> <span class="n">df4pd</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">'sdate'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'Y'</span><span class="p">))</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="c1"># group by year</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">courseByYear</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">rot</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># plot</span>
 </pre></div>
 </div>

@@ -541,7 +541,7 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 </pre></div>
 </div>
 <p>– Break down the compose file here</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span>version: &#39;3&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span>version: '3'
 <span class="linenos">  2</span>
 <span class="linenos">  3</span># ${GLEANER_ADMIN_DOMAIN}
 <span class="linenos">  4</span># ${GLEANER_OSS_DOMAIN}
@@ -565,26 +565,26 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 <span class="linenos"> 22</span>    ports:
 <span class="linenos"> 23</span>      - 9999:9999
 <span class="linenos"> 24</span>    labels:
-<span class="linenos"> 25</span>      - &quot;traefik.enable=true&quot;
-<span class="linenos"> 26</span>      - &quot;traefik.http.routers.triplestore.entrypoints=http&quot;
-<span class="linenos"> 27</span>      - &quot;traefik.http.routers.triplestore.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)&quot;
-<span class="linenos"> 28</span>      - &quot;traefik.http.middlewares.triplestore-https-redirect.redirectscheme.scheme=https&quot;
-<span class="linenos"> 29</span>      - &quot;traefik.http.routers.triplestore.middlewares=triplestore-https-redirect&quot;
-<span class="linenos"> 30</span>      - &quot;traefik.http.routers.triplestore-secure.entrypoints=https&quot;
-<span class="linenos"> 31</span>      - &quot;traefik.http.routers.triplestore-secure.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)&quot;
-<span class="linenos"> 32</span>      - &quot;traefik.http.routers.triplestore-secure.tls=true&quot;
-<span class="linenos"> 33</span>      - &quot;traefik.http.routers.triplestore-secure.tls.certresolver=http&quot;
-<span class="linenos"> 34</span>      - &quot;traefik.http.routers.triplestore-secure.service=triplestore&quot;
-<span class="linenos"> 35</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST&quot;
-<span class="linenos"> 36</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolalloworigin=*&quot;
-<span class="linenos"> 37</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolmaxage=200&quot;
-<span class="linenos"> 38</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.addvaryheader=true&quot;
-<span class="linenos"> 39</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowcredentials=true&quot;
-<span class="linenos"> 40</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowheaders=Authorization,Origin,Content-Type,Accept&quot;
-<span class="linenos"> 41</span>      - &quot;traefik.http.middlewares.triplestore-secure.headers.customresponseheaders.Access-Control-Allow-Headers=Authorization,Origin,Content-Type,Accept&quot;
-<span class="linenos"> 42</span>      - &quot;traefik.http.routers.triplestore-secure.middlewares=triplestore-secure@docker&quot; 
-<span class="linenos"> 43</span>      - &quot;traefik.http.services.triplestore.loadbalancer.server.port=9999&quot;
-<span class="linenos"> 44</span>      - &quot;traefik.docker.network=traefik_default&quot;
+<span class="linenos"> 25</span>      - "traefik.enable=true"
+<span class="linenos"> 26</span>      - "traefik.http.routers.triplestore.entrypoints=http"
+<span class="linenos"> 27</span>      - "traefik.http.routers.triplestore.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)"
+<span class="linenos"> 28</span>      - "traefik.http.middlewares.triplestore-https-redirect.redirectscheme.scheme=https"
+<span class="linenos"> 29</span>      - "traefik.http.routers.triplestore.middlewares=triplestore-https-redirect"
+<span class="linenos"> 30</span>      - "traefik.http.routers.triplestore-secure.entrypoints=https"
+<span class="linenos"> 31</span>      - "traefik.http.routers.triplestore-secure.rule=Host(`${GLEANER_GRAPH_DOMAIN}`)"
+<span class="linenos"> 32</span>      - "traefik.http.routers.triplestore-secure.tls=true"
+<span class="linenos"> 33</span>      - "traefik.http.routers.triplestore-secure.tls.certresolver=http"
+<span class="linenos"> 34</span>      - "traefik.http.routers.triplestore-secure.service=triplestore"
+<span class="linenos"> 35</span>      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST"
+<span class="linenos"> 36</span>      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolalloworigin=*"
+<span class="linenos"> 37</span>      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolmaxage=200"
+<span class="linenos"> 38</span>      - "traefik.http.middlewares.triplestore-secure.headers.addvaryheader=true"
+<span class="linenos"> 39</span>      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowcredentials=true"
+<span class="linenos"> 40</span>      - "traefik.http.middlewares.triplestore-secure.headers.accesscontrolallowheaders=Authorization,Origin,Content-Type,Accept"
+<span class="linenos"> 41</span>      - "traefik.http.middlewares.triplestore-secure.headers.customresponseheaders.Access-Control-Allow-Headers=Authorization,Origin,Content-Type,Accept"
+<span class="linenos"> 42</span>      - "traefik.http.routers.triplestore-secure.middlewares=triplestore-secure@docker" 
+<span class="linenos"> 43</span>      - "traefik.http.services.triplestore.loadbalancer.server.port=9999"
+<span class="linenos"> 44</span>      - "traefik.docker.network=traefik_default"
 <span class="linenos"> 45</span>    volumes:
 <span class="linenos"> 46</span>      - ${GLEANER_GRAPH}:/var/lib/blazegraph
 <span class="linenos"> 47</span>    networks:
@@ -595,18 +595,18 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 <span class="linenos"> 52</span>    ports:
 <span class="linenos"> 53</span>      - 9000:9000
 <span class="linenos"> 54</span>    labels:
-<span class="linenos"> 55</span>      - &quot;traefik.enable=true&quot;
-<span class="linenos"> 56</span>      - &quot;traefik.http.routers.s3system.entrypoints=http&quot;
-<span class="linenos"> 57</span>      - &quot;traefik.http.routers.s3system.rule=Host(`${GLEANER_OSS_DOMAIN}`)&quot;
-<span class="linenos"> 58</span>      - &quot;traefik.http.middlewares.s3system-https-redirect.redirectscheme.scheme=https&quot;
-<span class="linenos"> 59</span>      - &quot;traefik.http.routers.s3system.middlewares=s3system-https-redirect&quot;
-<span class="linenos"> 60</span>      - &quot;traefik.http.routers.s3system-secure.entrypoints=https&quot;
-<span class="linenos"> 61</span>      - &quot;traefik.http.routers.s3system-secure.rule=Host(`${GLEANER_OSS_DOMAIN}`)&quot;
-<span class="linenos"> 62</span>      - &quot;traefik.http.routers.s3system-secure.tls=true&quot;
-<span class="linenos"> 63</span>      - &quot;traefik.http.routers.s3system-secure.tls.certresolver=http&quot;
-<span class="linenos"> 64</span>      - &quot;traefik.http.routers.s3system-secure.service=s3system&quot;
-<span class="linenos"> 65</span>      - &quot;traefik.http.services.s3system.loadbalancer.server.port=9000&quot;
-<span class="linenos"> 66</span>      - &quot;traefik.docker.network=traefik_default&quot;
+<span class="linenos"> 55</span>      - "traefik.enable=true"
+<span class="linenos"> 56</span>      - "traefik.http.routers.s3system.entrypoints=http"
+<span class="linenos"> 57</span>      - "traefik.http.routers.s3system.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
+<span class="linenos"> 58</span>      - "traefik.http.middlewares.s3system-https-redirect.redirectscheme.scheme=https"
+<span class="linenos"> 59</span>      - "traefik.http.routers.s3system.middlewares=s3system-https-redirect"
+<span class="linenos"> 60</span>      - "traefik.http.routers.s3system-secure.entrypoints=https"
+<span class="linenos"> 61</span>      - "traefik.http.routers.s3system-secure.rule=Host(`${GLEANER_OSS_DOMAIN}`)"
+<span class="linenos"> 62</span>      - "traefik.http.routers.s3system-secure.tls=true"
+<span class="linenos"> 63</span>      - "traefik.http.routers.s3system-secure.tls.certresolver=http"
+<span class="linenos"> 64</span>      - "traefik.http.routers.s3system-secure.service=s3system"
+<span class="linenos"> 65</span>      - "traefik.http.services.s3system.loadbalancer.server.port=9000"
+<span class="linenos"> 66</span>      - "traefik.docker.network=traefik_default"
 <span class="linenos"> 67</span>    volumes:
 <span class="linenos"> 68</span>      - ${GLEANER_OBJECTS}:/data
 <span class="linenos"> 69</span>    environment:
@@ -614,7 +614,7 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 <span class="linenos"> 71</span>      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
 <span class="linenos"> 72</span>    networks:
 <span class="linenos"> 73</span>      - traefik_default
-<span class="linenos"> 74</span>    command: [&quot;server&quot;, &quot;/data&quot;]
+<span class="linenos"> 74</span>    command: ["server", "/data"]
 <span class="linenos"> 75</span>
 <span class="linenos"> 76</span>  features:
 <span class="linenos"> 77</span>    image: fils/grow-general:latest
@@ -628,24 +628,24 @@ The Docker Compose file used to launch the Gleaner DS has a set of configurable 
 <span class="linenos"> 85</span>      - S3KEY=${MINIO_ACCESS_KEY}
 <span class="linenos"> 86</span>      - S3SECRET=${MINIO_SECRET_KEY}
 <span class="linenos"> 87</span>    labels:
-<span class="linenos"> 88</span>      - &quot;traefik.enable=true&quot;
-<span class="linenos"> 89</span>      - &quot;traefik.http.routers.features.entrypoints=http&quot;
-<span class="linenos"> 90</span>      - &quot;traefik.http.routers.features.rule=Host(`${GLEANER_WEB_DOMAIN}`, `${GLEANER_WEB2_DOMAIN}`)&quot;
-<span class="linenos"> 91</span>      - &quot;traefik.http.middlewares.features-https-redirect.redirectscheme.scheme=https&quot;
-<span class="linenos"> 92</span>      - &quot;traefik.http.routers.features.middlewares=features-https-redirect&quot;
-<span class="linenos"> 93</span>      - &quot;traefik.http.routers.features-secure.entrypoints=https&quot;
-<span class="linenos"> 94</span>      - &quot;traefik.http.routers.features-secure.rule=Host(`${GLEANER_WEB_DOMAIN}`,`${GLEANER_WEB2_DOMAIN}`)&quot;
-<span class="linenos"> 95</span>      - &quot;traefik.http.routers.features-secure.tls=true&quot;
-<span class="linenos"> 96</span>      - &quot;traefik.http.routers.features-secure.tls.certresolver=http&quot;
-<span class="linenos"> 97</span>      - &quot;traefik.http.routers.features-secure.service=features&quot;
-<span class="linenos"> 98</span>      - &quot;traefik.http.services.features.loadbalancer.server.port=8080&quot;
-<span class="linenos"> 99</span>      - &quot;traefik.docker.network=traefik_default&quot;
-<span class="linenos">100</span>      - &quot;traefik.http.middlewares.features.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST&quot;
-<span class="linenos">101</span>      - &quot;traefik.http.middlewares.features.headers.accesscontrolalloworigin=*&quot;
-<span class="linenos">102</span>      - &quot;traefik.http.middlewares.features.headers.accesscontrolmaxage=100&quot;
-<span class="linenos">103</span>      - &quot;traefik.http.middlewares.features.headers.addvaryheader=true&quot;
-<span class="linenos">104</span>      - &quot;traefik.http.middlewares.features-secure.headers.accesscontrolallowheaders=*&quot;
-<span class="linenos">105</span>      - &quot;traefik.http.middlewares.features-secure.headers.customresponseheaders.Access-Control-Allow-Headers=*&quot;
+<span class="linenos"> 88</span>      - "traefik.enable=true"
+<span class="linenos"> 89</span>      - "traefik.http.routers.features.entrypoints=http"
+<span class="linenos"> 90</span>      - "traefik.http.routers.features.rule=Host(`${GLEANER_WEB_DOMAIN}`, `${GLEANER_WEB2_DOMAIN}`)"
+<span class="linenos"> 91</span>      - "traefik.http.middlewares.features-https-redirect.redirectscheme.scheme=https"
+<span class="linenos"> 92</span>      - "traefik.http.routers.features.middlewares=features-https-redirect"
+<span class="linenos"> 93</span>      - "traefik.http.routers.features-secure.entrypoints=https"
+<span class="linenos"> 94</span>      - "traefik.http.routers.features-secure.rule=Host(`${GLEANER_WEB_DOMAIN}`,`${GLEANER_WEB2_DOMAIN}`)"
+<span class="linenos"> 95</span>      - "traefik.http.routers.features-secure.tls=true"
+<span class="linenos"> 96</span>      - "traefik.http.routers.features-secure.tls.certresolver=http"
+<span class="linenos"> 97</span>      - "traefik.http.routers.features-secure.service=features"
+<span class="linenos"> 98</span>      - "traefik.http.services.features.loadbalancer.server.port=8080"
+<span class="linenos"> 99</span>      - "traefik.docker.network=traefik_default"
+<span class="linenos">100</span>      - "traefik.http.middlewares.features.headers.accesscontrolallowmethods=GET,OPTIONS,PUT,POST"
+<span class="linenos">101</span>      - "traefik.http.middlewares.features.headers.accesscontrolalloworigin=*"
+<span class="linenos">102</span>      - "traefik.http.middlewares.features.headers.accesscontrolmaxage=100"
+<span class="linenos">103</span>      - "traefik.http.middlewares.features.headers.addvaryheader=true"
+<span class="linenos">104</span>      - "traefik.http.middlewares.features-secure.headers.accesscontrolallowheaders=*"
+<span class="linenos">105</span>      - "traefik.http.middlewares.features-secure.headers.customresponseheaders.Access-Control-Allow-Headers=*"
 <span class="linenos">106</span>    networks:
 <span class="linenos">107</span>      - traefik_default
 <span class="linenos">108</span>

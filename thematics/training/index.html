@@ -538,19 +538,19 @@ creative works which aims to build knowledge, competence or ability of learners.
 <p>A basic course might simply present the name and description of the course along
 with a few other key properties.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 7</span>    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos">10</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">12</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">13</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">14</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Course"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 7</span>    <span class="s2">"courseCode"</span><span class="p">:</span> <span class="s2">"SD100"</span><span class="p">,</span>
+</span><span class="linenos"> 8</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Structured Data"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An introduction to authoring JSON-LD documents for OIH"</span><span class="p">,</span>
+<span class="hll"><span class="linenos">10</span>    <span class="s2">"provider"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">11</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">12</span>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Example University"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">13</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">14</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"UN Department of Economic and Social Affairs Sustainable Development"</span>
 </span><span class="hll"><span class="linenos">15</span>    <span class="p">}</span>
 </span><span class="linenos">16</span><span class="p">}</span>
 </pre></div>
@@ -566,18 +566,18 @@ with a few other key properties.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
 
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/training/graphs/course2.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/training/graphs/course2.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -620,59 +620,59 @@ from <a class="reference external" href="https://schema.org/LearningResource">Le
 <p>We wont go into the details of each property here, but we will show a couple.</p>
 <p>The example below present two.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 4</span>        <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>        <span class="s2">"endDate"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 5</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span>
 </span><span class="hll"><span class="linenos"> 6</span>        <span class="p">},</span>
-</span><span class="hll"><span class="linenos"> 7</span>        <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 8</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2001/XMLSchema#dateTime&quot;</span>
+</span><span class="hll"><span class="linenos"> 7</span>        <span class="s2">"startDate"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 8</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"http://www.w3.org/2001/XMLSchema#dateTime"</span>
 </span><span class="hll"><span class="linenos"> 9</span>        <span class="p">}</span>
 </span><span class="linenos">10</span>    <span class="p">},</span>
-<span class="linenos">11</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos">12</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Course&quot;</span><span class="p">,</span>
-<span class="linenos">13</span>    <span class="s2">&quot;courseCode&quot;</span><span class="p">:</span> <span class="s2">&quot;SD100&quot;</span><span class="p">,</span>
-<span class="linenos">14</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Structured Data&quot;</span><span class="p">,</span>
-<span class="linenos">15</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An introduction to authoring JSON-LD documents for OIH&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos">16</span>    <span class="s2">&quot;teaches&quot;</span><span class="p">:</span> <span class="s2">&quot;JSON-LD&quot;</span><span class="p">,</span>
-</span><span class="linenos">17</span>    <span class="s2">&quot;provider&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos">18</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Organization&quot;</span><span class="p">,</span>
-<span class="linenos">19</span>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example University&quot;</span><span class="p">,</span>
-<span class="linenos">20</span>        <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://grid.ac/institutes/grid.475727.4&quot;</span><span class="p">,</span>
-<span class="linenos">21</span>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;UN Department of Economic and Social Affairs Sustainable Development&quot;</span>
+<span class="linenos">11</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos">12</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Course"</span><span class="p">,</span>
+<span class="linenos">13</span>    <span class="s2">"courseCode"</span><span class="p">:</span> <span class="s2">"SD100"</span><span class="p">,</span>
+<span class="linenos">14</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Structured Data"</span><span class="p">,</span>
+<span class="linenos">15</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"An introduction to authoring JSON-LD documents for OIH"</span><span class="p">,</span>
+<span class="hll"><span class="linenos">16</span>    <span class="s2">"teaches"</span><span class="p">:</span> <span class="s2">"JSON-LD"</span><span class="p">,</span>
+</span><span class="linenos">17</span>    <span class="s2">"provider"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos">18</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Organization"</span><span class="p">,</span>
+<span class="linenos">19</span>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Example University"</span><span class="p">,</span>
+<span class="linenos">20</span>        <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://grid.ac/institutes/grid.475727.4"</span><span class="p">,</span>
+<span class="linenos">21</span>        <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"UN Department of Economic and Social Affairs Sustainable Development"</span>
 <span class="linenos">22</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos">23</span>    <span class="s2">&quot;hasCourseInstance&quot;</span><span class="p">:</span> <span class="p">[</span>
+<span class="hll"><span class="linenos">23</span>    <span class="s2">"hasCourseInstance"</span><span class="p">:</span> <span class="p">[</span>
 </span><span class="hll"><span class="linenos">24</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">25</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">26</span>            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll"><span class="linenos">27</span>                <span class="s2">&quot;MOOC1&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">28</span>                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll"><span class="linenos">25</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CourseInstance"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">26</span>            <span class="s2">"courseMode"</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">27</span>                <span class="s2">"MOOC1"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">28</span>                <span class="s2">"online"</span>
 </span><span class="hll"><span class="linenos">29</span>            <span class="p">],</span>
-</span><span class="hll"><span class="linenos">30</span>            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-03-21&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">31</span>            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-02-15&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">32</span>            <span class="s2">&quot;attendee&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">33</span>                <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Person&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">34</span>                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane Doe&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">35</span>                <span class="s2">&quot;jobTitle&quot;</span><span class="p">:</span> <span class="s2">&quot;Professor&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">36</span>                <span class="s2">&quot;telephone&quot;</span><span class="p">:</span> <span class="s2">&quot;(425) 123-4567&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">37</span>                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.janedoe.com&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">38</span>                <span class="s2">&quot;identifier&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos">39</span>                    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;ID_value_string&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">40</span>                    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;PropertyValue&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">41</span>                    <span class="s2">&quot;propertyID&quot;</span><span class="p">:</span> <span class="s2">&quot;This can be text or URL for an ID like ORCID&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">42</span>                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://foo.org/linkToPropertyIDPage&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">43</span>                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Optional description of the ID&quot;</span>
+</span><span class="hll"><span class="linenos">30</span>            <span class="s2">"endDate"</span><span class="p">:</span> <span class="s2">"2019-03-21"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">31</span>            <span class="s2">"startDate"</span><span class="p">:</span> <span class="s2">"2019-02-15"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">32</span>            <span class="s2">"attendee"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">33</span>                <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Person"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">34</span>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Jane Doe"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">35</span>                <span class="s2">"jobTitle"</span><span class="p">:</span> <span class="s2">"Professor"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">36</span>                <span class="s2">"telephone"</span><span class="p">:</span> <span class="s2">"(425) 123-4567"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">37</span>                <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"http://www.janedoe.com"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">38</span>                <span class="s2">"identifier"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos">39</span>                    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"ID_value_string"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">40</span>                    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"PropertyValue"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">41</span>                    <span class="s2">"propertyID"</span><span class="p">:</span> <span class="s2">"This can be text or URL for an ID like ORCID"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">42</span>                    <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://foo.org/linkToPropertyIDPage"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">43</span>                    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Optional description of the ID"</span>
 </span><span class="hll"><span class="linenos">44</span>                <span class="p">}</span>
 </span><span class="hll"><span class="linenos">45</span>            <span class="p">}</span>
 </span><span class="hll"><span class="linenos">46</span>        <span class="p">},</span>
 </span><span class="hll"><span class="linenos">47</span>        <span class="p">{</span>
-</span><span class="hll"><span class="linenos">48</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CourseInstance&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">49</span>            <span class="s2">&quot;courseMode&quot;</span><span class="p">:</span> <span class="p">[</span>
-</span><span class="hll"><span class="linenos">50</span>                <span class="s2">&quot;MOOC2&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">51</span>                <span class="s2">&quot;online&quot;</span>
+</span><span class="hll"><span class="linenos">48</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CourseInstance"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">49</span>            <span class="s2">"courseMode"</span><span class="p">:</span> <span class="p">[</span>
+</span><span class="hll"><span class="linenos">50</span>                <span class="s2">"MOOC2"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">51</span>                <span class="s2">"online"</span>
 </span><span class="hll"><span class="linenos">52</span>            <span class="p">],</span>
-</span><span class="hll"><span class="linenos">53</span>            <span class="s2">&quot;endDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-05-21&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos">54</span>            <span class="s2">&quot;startDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-04-15&quot;</span>
+</span><span class="hll"><span class="linenos">53</span>            <span class="s2">"endDate"</span><span class="p">:</span> <span class="s2">"2019-05-21"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">54</span>            <span class="s2">"startDate"</span><span class="p">:</span> <span class="s2">"2019-04-15"</span>
 </span><span class="hll"><span class="linenos">55</span>        <span class="p">}</span>
 </span><span class="hll"><span class="linenos">56</span>    <span class="p">]</span>
 </span><span class="linenos">57</span><span class="p">}</span>
@@ -689,16 +689,16 @@ from <a class="reference external" href="https://schema.org/LearningResource">Le
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">parentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">currentdir</span><span class="p">)</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../../odis-in/dataGraphs/thematics/training/graphs/course1.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../../odis-in/dataGraphs/thematics/training/graphs/course1.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>

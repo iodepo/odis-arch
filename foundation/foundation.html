@@ -549,14 +549,14 @@ may not leverage them.  However, if you feel others would, or you use them yours
 to add them.</p>
 <p>We will use the following simple JSON-LD document to show the various features of the format.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 <span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -571,15 +571,15 @@ to add them.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyld</span><span class="w"> </span><span class="kn">import</span> <span class="n">jsonld</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">currentdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">''</span><span class="p">))</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">currentdir</span><span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lib</span><span class="w"> </span><span class="kn">import</span> <span class="n">jbutils</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../odis-in/dataGraphs/foundation/graphs/simple.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../../odis-in/dataGraphs/foundation/graphs/simple.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dgraph</span><span class="p">:</span>
     <span class="n">doc</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dgraph</span><span class="p">)</span>
 
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
+    <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="n">compacted</span> <span class="o">=</span> <span class="n">jsonld</span><span class="o">.</span><span class="n">compact</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -608,14 +608,14 @@ If you wish to dive into the details of the context check out the
 <a class="reference external" href="https://www.w3.org/TR/json-ld/#the-context">W3 JSON-LD 1.1 Recommendations Context section</a>.</p>
 <p>The context part of this document is highlighted below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="hll"><span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="hll"><span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="hll"><span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 </span><span class="hll"><span class="linenos"> 4</span>    <span class="p">},</span>
-</span><span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+</span><span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 <span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -631,21 +631,21 @@ Below we can see the addition of the geosparql context in line 4 and the use of 
 prefix and then the vocabulary namespace.  We could then use terms from that vocabulary in our document
 following the same prefix:term pattern.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>      <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 4</span>      <span class="s2">&quot;geosparql&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>      <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 4</span>      <span class="s2">"geosparql"</span><span class="p">:</span> <span class="s2">"http://www.opengis.net/ont/geosparql#"</span>
 </span><span class="linenos"> 5</span>    <span class="p">},</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;Dataset&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data set name&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;geosparql:hasGeometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">10</span>        <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/sf#Point&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos">11</span>        <span class="s2">&quot;geosparql:asWKT&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">12</span>            <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/ont/geosparql#wktLiteral&quot;</span><span class="p">,</span>
-<span class="linenos">13</span>            <span class="s2">&quot;@value&quot;</span><span class="p">:</span> <span class="s2">&quot;POINT(-76 -18)&quot;</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"Dataset"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Data set name"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 9</span>    <span class="s2">"geosparql:hasGeometry"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">10</span>        <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"http://www.opengis.net/ont/sf#Point"</span><span class="p">,</span>
+<span class="hll"><span class="linenos">11</span>        <span class="s2">"geosparql:asWKT"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">12</span>            <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"http://www.opengis.net/ont/geosparql#wktLiteral"</span><span class="p">,</span>
+<span class="linenos">13</span>            <span class="s2">"@value"</span><span class="p">:</span> <span class="s2">"POINT(-76 -18)"</span>
 <span class="linenos">14</span>        <span class="p">},</span>
-<span class="hll"><span class="linenos">15</span>        <span class="s2">&quot;geosparql:crs&quot;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class="linenos">16</span>            <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;</span>
+<span class="hll"><span class="linenos">15</span>        <span class="s2">"geosparql:crs"</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="linenos">16</span>            <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"http://www.opengis.net/def/crs/OGC/1.3/CRS84"</span>
 <span class="linenos">17</span>        <span class="p">}</span>
 <span class="linenos">18</span>    <span class="p">}</span>
 <span class="linenos">19</span><span class="p">}</span>
@@ -658,14 +658,14 @@ following the same prefix:term pattern.</p>
 <p>The next section we will discuss is the graph part of the document seen in lines 5-9 below.  This is where the properties and
 values of our resource are described.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+<span class="hll"><span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 </span><span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -674,14 +674,14 @@ document.</p>
 <section id="node-identifiers-id">
 <h3>Node identifiers (&#64;id)<a class="headerlink" href="#node-identifiers-id" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+</span><span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 <span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -711,14 +711,14 @@ of the record.</p>
 <section id="type-identifiers-type">
 <h3>Type identifiers (&#64;type)<a class="headerlink" href="#type-identifiers-type" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="hll"><span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-</span><span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-<span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-<span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+<span class="hll"><span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+</span><span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+<span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+<span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 <span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -735,14 +735,14 @@ a property on the CreateWork type, starts with a lower case n.</p>
 <h3>Other properties<a class="headerlink" href="#other-properties" title="Link to this heading">#</a></h3>
 <p>At this point we can return to look at the other properties for our type.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">{</span>
-<span class="linenos"> 2</span>    <span class="s2">&quot;@context&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="linenos"> 3</span>        <span class="s2">&quot;@vocab&quot;</span><span class="p">:</span> <span class="s2">&quot;https://schema.org/&quot;</span>
+<span class="linenos"> 2</span>    <span class="s2">"@context"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"@vocab"</span><span class="p">:</span> <span class="s2">"https://schema.org/"</span>
 <span class="linenos"> 4</span>    <span class="p">},</span>
-<span class="linenos"> 5</span>    <span class="s2">&quot;@type&quot;</span><span class="p">:</span> <span class="s2">&quot;CreativeWork&quot;</span><span class="p">,</span>
-<span class="linenos"> 6</span>    <span class="s2">&quot;@id&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org/permanentUrlToThisJsonDoc&quot;</span><span class="p">,</span>
-<span class="hll"><span class="linenos"> 7</span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Name or title of the document&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 8</span>    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Description of the creative work to aid in searching&quot;</span><span class="p">,</span>
-</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">&quot;url&quot;</span><span class="p">:</span>  <span class="s2">&quot;https://www.sample-data-repository.org/creativework/report.pdf&quot;</span>
+<span class="linenos"> 5</span>    <span class="s2">"@type"</span><span class="p">:</span> <span class="s2">"CreativeWork"</span><span class="p">,</span>
+<span class="linenos"> 6</span>    <span class="s2">"@id"</span><span class="p">:</span> <span class="s2">"https://example.org/permanentUrlToThisJsonDoc"</span><span class="p">,</span>
+<span class="hll"><span class="linenos"> 7</span>    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Name or title of the document"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 8</span>    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Description of the creative work to aid in searching"</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos"> 9</span>    <span class="s2">"url"</span><span class="p">:</span>  <span class="s2">"https://www.sample-data-repository.org/creativework/report.pdf"</span>
 </span><span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
